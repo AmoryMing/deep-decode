@@ -1,0 +1,283 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "create_sharing_doc_template.js",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L1",
+      "id": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "community": 0,
+      "norm_label": "create_sharing_doc_template.js"
+    },
+    {
+      "label": "h1()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L62",
+      "id": "create_sharing_doc_template_h1",
+      "community": 0,
+      "norm_label": "h1()"
+    },
+    {
+      "label": "h2()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L71",
+      "id": "create_sharing_doc_template_h2",
+      "community": 0,
+      "norm_label": "h2()"
+    },
+    {
+      "label": "h3()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L81",
+      "id": "create_sharing_doc_template_h3",
+      "community": 0,
+      "norm_label": "h3()"
+    },
+    {
+      "label": "p()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L90",
+      "id": "create_sharing_doc_template_p",
+      "community": 0,
+      "norm_label": "p()"
+    },
+    {
+      "label": "pb()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L99",
+      "id": "create_sharing_doc_template_pb",
+      "community": 0,
+      "norm_label": "pb()"
+    },
+    {
+      "label": "li()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L110",
+      "id": "create_sharing_doc_template_li",
+      "community": 0,
+      "norm_label": "li()"
+    },
+    {
+      "label": "q()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L123",
+      "id": "create_sharing_doc_template_q",
+      "community": 0,
+      "norm_label": "q()"
+    },
+    {
+      "label": "qt()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L135",
+      "id": "create_sharing_doc_template_qt",
+      "community": 0,
+      "norm_label": "qt()"
+    },
+    {
+      "label": "div()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L150",
+      "id": "create_sharing_doc_template_div",
+      "community": 0,
+      "norm_label": "div()"
+    },
+    {
+      "label": "sp()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L160",
+      "id": "create_sharing_doc_template_sp",
+      "community": 1,
+      "norm_label": "sp()"
+    },
+    {
+      "label": "img()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L170",
+      "id": "create_sharing_doc_template_img",
+      "community": 1,
+      "norm_label": "img()"
+    },
+    {
+      "label": "code()",
+      "file_type": "code",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L188",
+      "id": "create_sharing_doc_template_code",
+      "community": 0,
+      "norm_label": "code()"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_h1",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_h1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_h2",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_h2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_h3",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_h3",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_p",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_p",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_pb",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_pb",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L110",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_li",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_li",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_q",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_q",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_qt",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_qt",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L150",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_div",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_div",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L160",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_sp",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_sp",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_img",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_img",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_src": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "_tgt": "create_sharing_doc_template_code",
+      "source": "home_super_stuff_ai_force_stuff_muming_deep_decode_repo_skill_references_create_sharing_doc_template_js",
+      "target": "create_sharing_doc_template_code",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "/home/super/stuff_AI_force/stuff/muming/deep-decode-repo/skill-references/create_sharing_doc_template.js",
+      "source_location": "L175",
+      "weight": 1.0,
+      "_src": "create_sharing_doc_template_img",
+      "_tgt": "create_sharing_doc_template_sp",
+      "source": "create_sharing_doc_template_sp",
+      "target": "create_sharing_doc_template_img",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}

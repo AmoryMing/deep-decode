@@ -1,0 +1,35 @@
+# 历史备份
+*.bak
+*.bak.*
+
+# 大体积二进制（agent 不需要，自己跑出来即可）
+*.docx
+*.mp3
+*.wav
+*.mp4
+*.png
+*.jpg
+*.jpeg
+
+# Skill 运行时状态
+state/
+.omc/
+graphify-runs/
+
+# 依赖
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 编辑器
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# 临时
+*.log
+*.tmp
+.cache/
