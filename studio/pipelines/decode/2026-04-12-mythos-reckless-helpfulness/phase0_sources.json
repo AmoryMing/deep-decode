@@ -1,0 +1,70 @@
+{
+  "slug": "2026-04-12-mythos-reckless-helpfulness",
+  "title": "不是叛逆，是不守规矩 -- AI 对齐的第三种范式",
+  "primary_sources": [
+    {
+      "type": "pdf_report",
+      "title": "Alignment Risk Update: Claude Mythos Preview",
+      "url": "https://www.anthropic.com/claude-mythos-preview-risk-report",
+      "author": "Anthropic",
+      "date": "2026-04-07",
+      "pages_read": 60,
+      "status": "fully_read",
+      "key_sections": [
+        "1 Introduction (p.4): 4 core findings",
+        "2 Overview (p.5): threat model + risk summary table",
+        "3 Threat model (p.6-7): 6 risk pathways defined",
+        "5.1.3 Potential sources of misalignment (p.10): direct/emergent/pretraining/proxy/deceptive",
+        "5.2.3 Risks of Goodharting (p.14): 8% RL episodes technical error",
+        "5.3.1 Opaque reasoning (p.18-19): filler token reasoning",
+        "5.3.2 Secret keeping (p.20-21): SHADE-Arena 0%→3.8%",
+        "5.4.2 Alignment findings (p.26-27): mountaineering guide analogy + reckless measures + obfuscation",
+        "5.4.4 Model organism exercises (p.29-30): external-memory evasion strategy",
+        "6 Overall alignment risk assessment (p.43-44): reckless pattern described",
+        "8 Risk pathways (p.46-56): 6 pathways with Weak/Moderate ratings",
+        "9 Overall assessment (p.57): very low but higher than previous",
+        "10.2 Extrapolating to future models (p.58): risk mitigations must accelerate"
+      ]
+    },
+    {
+      "type": "blog",
+      "title": "Assessing Claude Mythos Preview's cybersecurity capabilities",
+      "url": "https://red.anthropic.com/2026/mythos-preview/",
+      "author": "Anthropic / Logan Graham",
+      "date": "2026-04-07",
+      "status": "fully_read"
+    },
+    {
+      "type": "web_page",
+      "title": "Project Glasswing: Securing critical software for the AI era",
+      "url": "https://www.anthropic.com/glasswing",
+      "author": "Anthropic",
+      "date": "2026-04-07",
+      "status": "fully_read"
+    }
+  ],
+  "secondary_sources": [
+    {
+      "title": "Anthropic Warns That 'Reckless' Claude Mythos Escaped a Sandbox",
+      "url": "https://futurism.com/artificial-intelligence/anthropic-claude-mythos-escaped-sandbox",
+      "type": "news"
+    },
+    {
+      "title": "Three reasons the Claude Mythos announcement was overblown",
+      "url": "https://garymarcus.substack.com/p/three-reasons-to-think-that-the-claude",
+      "author": "Gary Marcus",
+      "type": "critique"
+    },
+    {
+      "title": "Powell, Bessent discussed Anthropic's Mythos AI cyber threat with major U.S. banks",
+      "url": "https://www.cnbc.com/2026/04/10/powell-bessent-us-bank-ceos-anthropic-mythos-ai-cyber.html",
+      "type": "news"
+    }
+  ],
+  "screenshots": [
+    "screenshots/red_anthropic_blog.png",
+    "screenshots/risk_report_cover.png"
+  ],
+  "context_files_read": 0,
+  "note": "Primary source is the 60-page Alignment Risk Update PDF, fully read in-context. System Card (244 pages) was too large to fetch (>10MB) but is referenced extensively within the Risk Update."
+}

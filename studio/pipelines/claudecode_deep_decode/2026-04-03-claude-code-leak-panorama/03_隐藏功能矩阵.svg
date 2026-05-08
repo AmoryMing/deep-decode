@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs><style>text { font-family: PingFang SC, Inter, sans-serif; }</style></defs>
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">Feature Flags 里的产品路线图</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#999">35 编译时标志 / 120+ 隐藏环境变量 / 200+ 远程控制开关</text>
+
+  <!-- 2x2 Grid -->
+  <!-- Buddy -->
+  <rect x="40" y="80" width="350" height="160" rx="10" fill="#FFF" stroke="#4DB6AC" stroke-width="2"/>
+  <rect x="40" y="80" width="350" height="32" rx="10" fill="#4DB6AC"/>
+  <rect x="40" y="100" width="350" height="12" fill="#4DB6AC"/>
+  <text x="215" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">Buddy 电子宠物</text>
+  <text x="60" y="130" font-size="11" fill="#37352F">18 物种 / 5 稀有度 / 闪光1% / 5维属性</text>
+  <text x="60" y="150" font-size="11" fill="#37352F">用户 ID 哈希确定性生成，全球独一份</text>
+  <text x="60" y="170" font-size="11" fill="#37352F">String.fromCharCode() 躲内部扫描器</text>
+  <rect x="60" y="195" width="80" height="24" rx="4" fill="#E8F8F5"/>
+  <text x="100" y="212" text-anchor="middle" font-size="10" font-weight="bold" fill="#4DB6AC">情感连接</text>
+  <text x="155" y="212" font-size="10" fill="#999">计划 4月1-7日 上线</text>
+
+  <!-- KAIROS -->
+  <rect x="410" y="80" width="350" height="160" rx="10" fill="#FFF" stroke="#2383E2" stroke-width="2"/>
+  <rect x="410" y="80" width="350" height="32" rx="10" fill="#2383E2"/>
+  <rect x="410" y="100" width="350" height="12" fill="#2383E2"/>
+  <text x="585" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">KAIROS 后台 Daemon</text>
+  <text x="430" y="130" font-size="11" fill="#37352F">Tick 心跳 + SleepTool + 24h 冷却</text>
+  <text x="430" y="150" font-size="11" fill="#37352F">四阶段记忆整合: 定向-收集-整合-修剪</text>
+  <text x="430" y="170" font-size="11" fill="#37352F">Cron 定时任务 + PR 订阅 + MCP 唤醒</text>
+  <rect x="430" y="195" width="80" height="24" rx="4" fill="#E8F4FD"/>
+  <text x="470" y="212" text-anchor="middle" font-size="10" font-weight="bold" fill="#2383E2">自主运行</text>
+  <text x="525" y="212" font-size="10" fill="#999">7x24 常驻</text>
+
+  <!-- Undercover -->
+  <rect x="40" y="260" width="350" height="160" rx="10" fill="#FFF" stroke="#EB5757" stroke-width="2"/>
+  <rect x="40" y="260" width="350" height="32" rx="10" fill="#EB5757"/>
+  <rect x="40" y="280" width="350" height="12" fill="#EB5757"/>
+  <text x="215" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">Undercover Mode 隐身衣</text>
+  <text x="60" y="310" font-size="11" fill="#37352F">内部员工操作公开 GitHub 时自动激活</text>
+  <text x="60" y="330" font-size="11" fill="#37352F">抹除所有 AI 生成痕迹，要求"不暴露身份"</text>
+  <text x="60" y="350" font-size="11" fill="#EB5757" font-weight="bold">无强制关闭开关 -- 社区最大争议</text>
+  <rect x="60" y="370" width="80" height="24" rx="4" fill="#FDECEC"/>
+  <text x="100" y="387" text-anchor="middle" font-size="10" font-weight="bold" fill="#EB5757">市场渗透</text>
+
+  <!-- Anti-Distillation -->
+  <rect x="410" y="260" width="350" height="160" rx="10" fill="#FFF" stroke="#FFB020" stroke-width="2"/>
+  <rect x="410" y="260" width="350" height="32" rx="10" fill="#FFB020"/>
+  <rect x="410" y="280" width="350" height="12" fill="#FFB020"/>
+  <text x="585" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">Anti-Distillation 反蒸馏</text>
+  <text x="430" y="310" font-size="11" fill="#37352F">ANTI_DISTILLATION_CC flag 控制</text>
+  <text x="430" y="330" font-size="11" fill="#37352F">注入 fake_tools 毒化竞品训练数据</text>
+  <text x="430" y="350" font-size="11" fill="#37352F">decptive tool definitions 污染 API 流量</text>
+  <rect x="430" y="370" width="80" height="24" rx="4" fill="#FFF8E1"/>
+  <text x="470" y="387" text-anchor="middle" font-size="10" font-weight="bold" fill="#E6930A">竞争壁垒</text>
+
+  <!-- Evolution arrow -->
+  <text x="400" y="455" text-anchor="middle" font-size="11" fill="#999">进化链: 编程工具 → 长期助手(KAIROS) → AI同事(Coordinator) → AI伙伴(Buddy)</text>
+  <text x="400" y="472" text-anchor="middle" font-size="10" fill="#999">每个隐藏功能都有明确的产品意图: 情感 / 自主 / 渗透 / 壁垒</text>
+</svg>

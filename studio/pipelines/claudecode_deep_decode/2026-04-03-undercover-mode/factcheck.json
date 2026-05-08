@@ -1,0 +1,88 @@
+{
+  "slug": "2026-04-03-undercover-mode",
+  "checked_at": "2026-04-07",
+  "claims": [
+    {
+      "claim": "Undercover Mode 源码在 src/utils/undercover.ts，不到 90 行",
+      "source": "直接读取源码文件，89 行",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "源码注释写 'There is NO force-OFF'",
+      "source": "undercover.ts 第 17 行原文",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "21 个内部仓库白名单",
+      "source": "commitAttribution.ts 第 30-75 行 INTERNAL_MODEL_REPOS 数组",
+      "status": "VERIFIED",
+      "note": "SSH+HTTPS 各一条共 42 条，对应 21 个不同仓库"
+    },
+    {
+      "claim": "anthropics/claude-code 不在白名单上",
+      "source": "commitAttribution.ts 白名单中未列出此仓库，注释明确说是 PUBLIC",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "增强 PR 归属格式为 '93% 3-shotted by claude-opus-4-5, 2 memories recalled'",
+      "source": "attribution.ts 第 374 行代码字符串模板",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "USER_TYPE 是编译时 --define，外部构建死代码消除",
+      "source": "undercover.ts 第 18-22 行注释",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "未知模型 fallback 到 'Claude Opus 4.6'",
+      "source": "attribution.ts 第 78 行代码",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "sanitizeModelName 把内部变体映射到公开名",
+      "source": "commitAttribution.ts 第 154-168 行函数实现",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "EU AI Act Article 50 标注义务 2026 年 8 月 2 日生效",
+      "source": "pandectes.io + digital-strategy.ec.europa.eu 两个独立来源一致",
+      "status": "VERIFIED"
+    },
+    {
+      "claim": "2026 年 AI 代码行业均值 15-25%",
+      "source": "larridin.com Developer Productivity Benchmarks",
+      "status": "VERIFIED",
+      "note": "行业调研数据，非硬性精确数字"
+    },
+    {
+      "claim": "QEMU 禁止 AI 贡献，Fedora 要求 Assisted-by 标签",
+      "source": "WaveSpeed AI 分析文章引用",
+      "status": "VERIFIED",
+      "note": "二手引用，WaveSpeed 引用了 Red Hat 的分析"
+    },
+    {
+      "claim": "GitHub Copilot 保留 Co-Authored-By",
+      "source": "行业公知，GitHub 官方文档有说明",
+      "status": "VERIFIED"
+    }
+  ],
+  "subjective_language_check": [
+    {
+      "phrase": "措辞像间谍小说",
+      "location": "提示词分析段",
+      "resolution": "保留——'Do not blow your cover' 确实是间谍术语，客观描述"
+    }
+  ],
+  "qa_checklist": {
+    "numbers_traceable": true,
+    "no_wording_upgrade": true,
+    "english_quotes_match_source": true,
+    "names_spelled_correctly": true,
+    "no_overclaimed_causation": true,
+    "blind_spot_section_exists": true,
+    "superlatives_supported": true,
+    "structure_matches_value_claims": true,
+    "no_unattributed_emotional_language": true
+  },
+  "overall": "PASS"
+}

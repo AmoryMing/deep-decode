@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" text-anchor="middle" font-weight="700">前缀沉重架构：92% 缓存复用的秘密</text>
+
+  <!-- Main prompt bar visualization -->
+  <text x="50" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">每次 API 请求的 Token 构成</text>
+
+  <!-- Full bar -->
+  <rect x="50" y="95" width="700" height="50" rx="6" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Static prefix (large, cached) -->
+  <rect x="50" y="95" width="490" height="50" rx="6" fill="#2383E2" opacity="0.15"/>
+  <rect x="50" y="95" width="490" height="50" rx="6" fill="none" stroke="#2383E2" stroke-width="2"/>
+  <text x="295" y="117" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2383E2" text-anchor="middle" font-weight="600">静态前缀 (70%)</text>
+  <text x="295" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">工具定义 + 安全规则 + 行为准则 | 走缓存，$0.30/M tokens</text>
+
+  <!-- Dynamic boundary marker -->
+  <line x1="540" y1="85" x2="540" y2="155" stroke="#EB5757" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="540" y="78" font-family="Inter, PingFang SC, sans-serif" font-size="10" fill="#EB5757" text-anchor="middle">DYNAMIC_BOUNDARY</text>
+
+  <!-- Dynamic suffix (small) -->
+  <rect x="540" y="95" width="210" height="50" rx="6" fill="#FFB020" opacity="0.12"/>
+  <text x="645" y="117" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFB020" text-anchor="middle" font-weight="600">动态后缀 (30%)</text>
+  <text x="645" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">cwd + Git + 用户偏好</text>
+
+  <!-- Three design decisions -->
+  <text x="50" y="195" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" font-weight="600">三个让缓存命中 92% 的架构决策</text>
+
+  <!-- Decision 1 -->
+  <rect x="50" y="215" width="220" height="140" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="50" y="215" width="220" height="4" rx="2" fill="#2383E2"/>
+  <text x="70" y="245" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" font-weight="600">1. 工具排序固定</text>
+  <text x="70" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">工具定义按固定顺序排列</text>
+  <text x="70" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">保持字节级前缀稳定</text>
+  <text x="70" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">排序变 = 缓存全部作废</text>
+  <text x="70" y="345" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2">像编译器的 ABI 稳定性</text>
+
+  <!-- Decision 2 -->
+  <rect x="290" y="215" width="220" height="140" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="290" y="215" width="220" height="4" rx="2" fill="#4DB6AC"/>
+  <text x="310" y="245" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" font-weight="600">2. Fork 继承缓存</text>
+  <text x="310" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">子 Agent 继承父级上下文</text>
+  <text x="310" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">model='inherit' 不能换</text>
+  <text x="310" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">换模型 = 缓存归零</text>
+  <text x="310" y="345" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">共享前缀，只加后缀</text>
+
+  <!-- Decision 3 -->
+  <rect x="530" y="215" width="220" height="140" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="530" y="215" width="220" height="4" rx="2" fill="#FFB020"/>
+  <text x="550" y="245" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" font-weight="600">3. 预热阶段</text>
+  <text x="550" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">前几次 API 调用不做事</text>
+  <text x="550" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">只把工具列表推入缓存</text>
+  <text x="550" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">后续调用直接命中</text>
+  <text x="550" y="345" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFB020">像数据库的 warm-up query</text>
+
+  <!-- Cost comparison -->
+  <text x="50" y="395" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" font-weight="600">实测成本对比（LMCache, 92 次调用 / ~200 万 token）</text>
+
+  <!-- Without cache bar -->
+  <text x="50" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">无缓存</text>
+  <rect x="120" y="412" width="560" height="24" rx="4" fill="#EB5757" opacity="0.2"/>
+  <rect x="120" y="412" width="560" height="24" rx="4" fill="none" stroke="#EB5757" stroke-width="1"/>
+  <text x="690" y="429" font-family="Inter, PingFang SC, sans-serif" font-size="13" fill="#EB5757" text-anchor="start" font-weight="600">$6.00</text>
+
+  <!-- With cache bar -->
+  <text x="50" y="460" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">有缓存</text>
+  <rect x="120" y="447" width="108" height="24" rx="4" fill="#4DB6AC" opacity="0.3"/>
+  <rect x="120" y="447" width="108" height="24" rx="4" fill="none" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="238" y="464" font-family="Inter, PingFang SC, sans-serif" font-size="13" fill="#4DB6AC" text-anchor="start" font-weight="600">$1.15</text>
+
+  <!-- Savings badge -->
+  <rect x="310" y="447" width="120" height="24" rx="12" fill="#4DB6AC"/>
+  <text x="370" y="464" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">省 81%</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="505" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">缓存不是"加了个优化"，是整个架构的设计起点</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#37352F">Anthropic 的模型分级发布范式</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#787066">Model Tiering · 四层结构一次性解决"展示能力"与"监管克制"的矛盾</text>
+
+  <!-- Horizontal layered structure -->
+  <!-- Tier 0 -->
+  <g transform="translate(60, 100)">
+    <rect width="680" height="70" rx="8" fill="#F7F7F5" stroke="#E0DDD5"/>
+    <rect width="12" height="70" rx="8" fill="#9B8B72"/>
+    <text x="32" y="28" font-size="13" font-weight="700" fill="#787066">TIER 0 · 内部不发布</text>
+    <text x="32" y="50" font-size="14" fill="#37352F">未披露模型 · Anthropic RSP 框架中保留</text>
+    <text x="660" y="44" text-anchor="end" font-size="11" fill="#9B8B72">无公开案例</text>
+  </g>
+
+  <!-- Tier 1 -->
+  <g transform="translate(60, 182)">
+    <rect width="680" height="90" rx="8" fill="#1F1A14"/>
+    <rect width="12" height="90" rx="8" fill="#FFB020"/>
+    <text x="32" y="30" font-size="13" font-weight="700" fill="#FFB020">TIER 1 · 联盟限制发布</text>
+    <text x="32" y="54" font-size="16" font-weight="700" fill="#FFFFFF">Claude Mythos Preview</text>
+    <text x="32" y="76" font-size="12" fill="#D4C9B5">Project Glasswing · 11 家: AWS / Apple / Google / Microsoft / NVIDIA / JPM...</text>
+    <text x="660" y="54" text-anchor="end" font-size="22" font-weight="800" fill="#FFFFFF">93.9%</text>
+    <text x="660" y="72" text-anchor="end" font-size="10" fill="#D4C9B5">SWE-bench Verified</text>
+  </g>
+
+  <!-- Tier 2 -->
+  <g transform="translate(60, 284)">
+    <rect width="680" height="90" rx="8" fill="#E8F1FC" stroke="#2383E2" stroke-width="1.5"/>
+    <rect width="12" height="90" rx="8" fill="#2383E2"/>
+    <text x="32" y="30" font-size="13" font-weight="700" fill="#2383E2">TIER 2 · 公开商用</text>
+    <text x="32" y="54" font-size="16" font-weight="700" fill="#37352F">Claude Opus 4.7</text>
+    <text x="32" y="76" font-size="12" fill="#6B6052">差异化降能后公开发布 · API / Bedrock / Vertex / Foundry · $5 · $25 per M</text>
+    <text x="660" y="54" text-anchor="end" font-size="22" font-weight="800" fill="#2383E2">87.6%</text>
+    <text x="660" y="72" text-anchor="end" font-size="10" fill="#6B6052">SWE-bench Verified</text>
+  </g>
+
+  <!-- Tier 3 -->
+  <g transform="translate(60, 386)">
+    <rect width="680" height="70" rx="8" fill="#EDF6EF" stroke="#4DB6AC"/>
+    <rect width="12" height="70" rx="8" fill="#4DB6AC"/>
+    <text x="32" y="28" font-size="13" font-weight="700" fill="#2E7D6B">TIER 3 · 专业豁免</text>
+    <text x="32" y="50" font-size="14" fill="#37352F">Cyber Verification Program · 通过审核的安全研究者可解锁默认关闭能力</text>
+    <text x="660" y="44" text-anchor="end" font-size="11" fill="#2E7D6B">申请制准入</text>
+  </g>
+
+  <text x="400" y="494" text-anchor="middle" font-size="11" fill="#9B8B72">能力强弱 ↓ ， 可及性 ↑ ，风险治理从强制隔离过渡到条件解锁</text>
+</svg>

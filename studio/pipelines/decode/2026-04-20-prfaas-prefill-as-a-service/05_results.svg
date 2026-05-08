@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #FFFFFF; }
+    .h1 { font: 700 20px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .h2 { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .label { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .value { font: 700 16px Inter, 'PingFang SC', sans-serif; fill: #37352F; }
+    .desc { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #666; }
+    .tag { font: 500 11px 'PingFang SC', Inter, sans-serif; fill: #888; }
+    .section { font: 700 14px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .axis { stroke: #D0D0D0; stroke-width: 1; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="38">1T 模型实测：54% 吞吐提升，TTFT 砍半</text>
+  <text class="desc" x="40" y="60">论文 Table 6。测试集：Kimi 自家 1T 模型 (KDA:MLA 3:1)，SLO 40 tok/s</text>
+
+  <!-- Throughput section -->
+  <text class="section" x="40" y="100">吞吐 (relative)</text>
+
+  <!-- 基线 -->
+  <rect x="200" y="115" width="240" height="30" fill="#D5D5D5" rx="3"/>
+  <text class="label" x="190" y="135" text-anchor="end">同构基线 96×H20</text>
+  <text class="value" x="450" y="137">1.00x</text>
+
+  <!-- naive -->
+  <rect x="200" y="155" width="281" height="30" fill="#FFB020" rx="3"/>
+  <text class="label" x="190" y="175" text-anchor="end">naive 异构</text>
+  <text class="value" x="491" y="177">1.17x</text>
+  <text class="tag" x="491" y="193">+17%</text>
+
+  <!-- PrfaaS -->
+  <rect x="200" y="195" width="370" height="30" fill="#4DB6AC" rx="3"/>
+  <text class="label" x="190" y="215" text-anchor="end">PrfaaS 32×H200+64×H20</text>
+  <text class="value" x="580" y="217">1.54x</text>
+  <text class="tag" x="580" y="233" fill="#4DB6AC" font-weight="700">+54%</text>
+
+  <!-- TTFT section -->
+  <text class="section" x="40" y="270">Mean TTFT (秒)</text>
+
+  <rect x="200" y="285" width="222" height="24" fill="#D5D5D5" rx="3"/>
+  <text class="label" x="190" y="302" text-anchor="end">同构基线</text>
+  <text class="value" x="432" y="304">4.44s</text>
+
+  <rect x="200" y="315" width="111" height="24" fill="#4DB6AC" rx="3"/>
+  <text class="label" x="190" y="332" text-anchor="end">PrfaaS</text>
+  <text class="value" x="321" y="334">2.22s</text>
+  <text class="tag" x="321" y="350" fill="#4DB6AC" font-weight="700">-50%</text>
+
+  <!-- P90 TTFT -->
+  <text class="section" x="40" y="385">P90 TTFT (秒)</text>
+
+  <rect x="200" y="400" width="389" height="24" fill="#D5D5D5" rx="3"/>
+  <text class="label" x="190" y="417" text-anchor="end">同构基线</text>
+  <text class="value" x="599" y="419">9.73s</text>
+
+  <rect x="200" y="430" width="140" height="24" fill="#4DB6AC" rx="3"/>
+  <text class="label" x="190" y="447" text-anchor="end">PrfaaS</text>
+  <text class="value" x="350" y="449">3.51s</text>
+  <text class="tag" x="350" y="465" fill="#4DB6AC" font-weight="700">-64%</text>
+
+  <!-- bottom note -->
+  <rect x="40" y="485" width="720" height="28" fill="#F7F7F5" rx="4"/>
+  <text class="label" x="55" y="503">跨 DC 出口带宽实测 13 Gbps / 100 Gbps 链路 (13%) · 阈值 t=19.4K · Np:Nd = 3:5</text>
+</svg>

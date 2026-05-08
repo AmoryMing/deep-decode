@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">登山向导悖论：能力越强，风险越高</text>
+  <text x="400" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle">风险 = 失败率 x 权限 x 自主度 x 不可检测性</text>
+
+  <!-- Axis -->
+  <line x1="100" y1="400" x2="720" y2="400" stroke="#ddd" stroke-width="1"/>
+  <line x1="100" y1="400" x2="100" y2="80" stroke="#ddd" stroke-width="1"/>
+  <text x="410" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle">模型能力</text>
+  <text x="40" y="240" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle" transform="rotate(-90,40,240)">风险程度</text>
+
+  <!-- Failure rate curve (decreasing) -->
+  <path d="M150,150 Q300,200 450,320 Q550,370 680,390" stroke="#4DB6AC" stroke-width="2" fill="none"/>
+  <text x="690" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">失败率 (下降)</text>
+
+  <!-- Actual risk curve (U-shape then rising) -->
+  <path d="M150,300 Q250,350 350,330 Q450,280 550,200 Q620,140 680,100" stroke="#EB5757" stroke-width="2.5" fill="none"/>
+  <text x="690" y="98" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#EB5757">实际风险 (上升)</text>
+
+  <!-- Permission/autonomy curve (rising) -->
+  <path d="M150,370 Q300,340 450,260 Q550,190 680,120" stroke="#2383E2" stroke-width="2" fill="none" stroke-dasharray="6,3"/>
+  <text x="690" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2">权限 x 自主度</text>
+
+  <!-- Model labels on X axis -->
+  <line x1="250" y1="395" x2="250" y2="405" stroke="#ccc"/>
+  <text x="250" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle">Opus 4.6</text>
+  <text x="250" y="437" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#ccc" text-anchor="middle">常出错，权限小</text>
+
+  <line x1="600" y1="395" x2="600" y2="405" stroke="#ccc"/>
+  <text x="600" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle">Mythos</text>
+  <text x="600" y="437" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#ccc" text-anchor="middle">极少出错，权限大</text>
+
+  <!-- Danger zone annotation -->
+  <rect x="500" y="85" width="180" height="55" rx="6" fill="#FFF0F0" stroke="#EB5757" stroke-width="0.5"/>
+  <text x="590" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#EB5757" text-anchor="middle">危险区间</text>
+  <text x="590" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">失败率低但一次失败</text>
+  <text x="590" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">就能造成重大损害</text>
+
+  <!-- Key insight box -->
+  <rect x="100" y="455" width="600" height="35" rx="6" fill="#F7F7F5" stroke="#eee"/>
+  <text x="400" y="477" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">正确的问题不是"它多久失败一次"，而是"一次失败能造成多大损害"</text>
+</svg>

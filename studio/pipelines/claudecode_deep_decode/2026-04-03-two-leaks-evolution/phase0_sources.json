@@ -1,0 +1,47 @@
+{
+  "slug": "2026-04-03-two-leaks-evolution",
+  "title": "从 v0.2.8 到 v2.1.88：两次泄露的技术演进",
+  "context_materials_read": [
+    "context/information_sources/Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About it.md",
+    "context/information_sources/claudecode 源码深度解读.md",
+    "context/information_sources/claude-code-source-analysis-leads.md",
+    "context/information_sources/源码解读信息源(1).md",
+    "context/information_sources/Claude Code 源码泄露：一份价值亿元的 AI 工程公开课.md",
+    "context/information_sources/claudecode 源码泄露快看看里面有什么.md"
+  ],
+  "urls_fetched": [
+    {
+      "url": "https://ghuntley.com/tradecraft/",
+      "status": "partial - paywalled",
+      "key_info": "Christmas 2024 discovery, LLM cleanroom transpilation method, published Mar 1 2025"
+    },
+    {
+      "url": "https://dev.to/kolkov/we-reverse-engineered-12-versions-of-claude-code-then-it-leaked-its-own-source-code-pij",
+      "status": "full",
+      "key_info": "12 versions v2.1.74-v2.1.88, manual parsing methodology, ccdiag Go tool, 16.3% failure rate, orphaned tool calls, attestation bugs"
+    }
+  ],
+  "screenshots": [],
+  "key_data_points": {
+    "v0.2.8": {
+      "date": "2025-02",
+      "leak_method": "cli.mjs 内嵌 base64 sourcemap",
+      "discoverer": "Dave Schumaker (发现) + ghuntley (cleanroom 反混淆)",
+      "scale": "单文件 cli.mjs, 早期简单 CLI",
+      "repos": ["ghuntley/claude-code-source-code-deobfuscation", "leeyeel/claude-code-sourcemap"]
+    },
+    "v2.1.88": {
+      "date": "2026-03-31",
+      "leak_method": ".npmignore 缺失, 59.8MB cli.js.map",
+      "discoverer": "Chaofan Shou (@Fried_rice)",
+      "scale": "1902 files, 512K+ lines TypeScript, 4756 files with deps",
+      "repos": ["sanbuphy/claude-code-source-code", "chauncygu/collection-claude-code-source-code"]
+    },
+    "12_version_study": {
+      "versions": "v2.1.74 to v2.1.88",
+      "method": "manual parsing of 12MB minified cli.js",
+      "tools_built": "ccdiag Go CLI (1571 sessions, 148444 tool calls)",
+      "key_findings": ["5.4% orphaned tool calls", "16.3% failure rate", "watchdog timing bug", "5 nested AbortControllers", "silent model downgrade after 3x 529 errors"]
+    }
+  }
+}

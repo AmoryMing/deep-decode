@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-04-13",
+  "claims": [
+    {"claim": "Anttila 是 OU 加速硕士, GPA 4.0, 创办两家公司", "status": "VERIFIED", "note": "GSC Webinar 描述确认: outstanding ISE senior, 4.0 accelerated Masters, founder Pristine Pens, co-founder PhantomFit = 2家"},
+    {"claim": "播放量 117K, 两周内", "status": "VERIFIED", "note": "YouTube 页面显示 117,051 views, Mar 24 发布"},
+    {"claim": "$10K 替代知识工人 by 2030", "status": "VERIFIED", "note": "YouTube 描述原文匹配"},
+    {"claim": "Oracle 裁员 30,000 人 (18%)", "status": "NEEDS_QUALIFIER", "fix": "改为'TD Cowen 估计裁员 20,000-30,000 人(约18%)', Oracle 未官方确认总数。Forbes/CNBC/TNW 多来源交叉验证估算范围"},
+    {"claim": "同季度净利润增 95%", "status": "VERIFIED", "note": "Forbes确认 $6.13B net income, 95% jump"},
+    {"claim": "CEO原话 Smaller teams. AI tools. More output.", "status": "NEEDS_FIX", "fix": "这不是Oracle CEO原话，是LinkedIn帖子的概括性描述。原文未标注具体来源。改为'社交媒体上广泛流传的对Oracle裁员逻辑的概括'，或删除引号"},
+    {"claim": "3月科技行业裁员 40,000+", "status": "PARTIALLY_VERIFIED", "note": "LinkedIn帖子称40,000+, Forbes提到多家公司裁员但未给出总数。保留但标注来源"},
+    {"claim": "WEF 9200万岗位替代 / 7800万新增", "status": "VERIFIED", "note": "WEF Future of Jobs Report, Matt Britton文章和多来源交叉验证"},
+    {"claim": "Michael Levin 440+ 同行评审论文", "status": "VERIFIED", "note": "TSC 2026 speaker bio 确认 440+ peer-reviewed papers"},
+    {"claim": "Cortical Labs CL1", "status": "VERIFIED", "note": "官网确认, 2026年2月演示Doom, Melbourne+Singapore数据中心计划, Tom's Hardware报道"},
+    {"claim": "FinalSpark Neuroplatform", "status": "VERIFIED", "note": "官网确认, 多所大学使用(Bristol, Exeter, Munich, Cote d'Azur), Python SDK"},
+    {"claim": "Kurzweil AGI 2029 / LEV 2032", "status": "VERIFIED", "note": "多来源广泛引用, 2026年访谈维持时间线"},
+    {"claim": "Bryan Johnson 融资 $60M", "status": "SINGLE_SOURCE", "note": "仅biocomputer.com提及, 无法独立验证。在文中删除此具体数字"}
+  ],
+  "subjective_language_check": [
+    {"phrase": "凤毛麟角", "location": "第1章", "status": "OK", "reason": "修辞性表达, 上下文清楚是相对TEDx频道"},
+    {"phrase": "碾压同期大部分嘉宾", "location": "第1章", "status": "NEEDS_SOFTEN", "fix": "改为'远超同期大部分嘉宾'"},
+    {"phrase": "这不是民科", "location": "第4章", "status": "OK", "reason": "后接440+论文的具体证据"}
+  ],
+  "actions_taken": [
+    "Oracle裁员数标注'估计'",
+    "'CEO原话'改为非直接引用",
+    "Bryan Johnson $60M数字删除",
+    "'碾压'改为'远超'"
+  ],
+  "unresolved_errors": 0
+}

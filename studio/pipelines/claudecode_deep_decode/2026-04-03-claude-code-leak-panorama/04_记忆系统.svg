@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <defs><style>text { font-family: PingFang SC, Inter, sans-serif; }</style></defs>
+  <rect width="800" height="380" fill="#FFFFFF"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">记忆系统：不记代码，只记人</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#999">四类记忆 + 三级压缩 + 用户消息铁律</text>
+
+  <!-- 4 categories -->
+  <rect x="40" y="75" width="350" height="80" rx="8" fill="#E8F4FD" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="215" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#2383E2">用户偏好 + 行为反馈</text>
+  <text x="60" y="120" font-size="11" fill="#37352F">语言、风格、接受/拒绝模式</text>
+  <rect x="290" y="108" width="80" height="20" rx="4" fill="#2383E2"/>
+  <text x="330" y="122" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFF">持久化 ✓</text>
+
+  <rect x="410" y="75" width="350" height="80" rx="8" fill="#FFF3E0" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="585" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#E6930A">项目信息</text>
+  <text x="430" y="120" font-size="11" fill="#37352F">架构决策、技术栈、团队约定</text>
+  <rect x="660" y="108" width="80" height="20" rx="4" fill="#FFB020"/>
+  <text x="700" y="122" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFF">半持久化</text>
+
+  <rect x="40" y="170" width="350" height="80" rx="8" fill="#F5F5F5" stroke="#999" stroke-width="1.5" stroke-dasharray="5,5"/>
+  <text x="215" y="195" text-anchor="middle" font-size="12" font-weight="bold" fill="#999">代码事实 ✗</text>
+  <text x="60" y="215" font-size="11" fill="#999">变量名、函数签名、文件内容</text>
+  <text x="60" y="235" font-size="11" fill="#EB5757" font-weight="bold">绝不存储! 每次实时读取</text>
+
+  <!-- 3-level compression -->
+  <rect x="410" y="170" width="350" height="80" rx="8" fill="#F7F7F5" stroke="#ddd"/>
+  <text x="585" y="195" text-anchor="middle" font-size="12" font-weight="bold" fill="#37352F">三级压缩</text>
+  <text x="430" y="215" font-size="10" fill="#4DB6AC">MicroCompact</text>
+  <text x="530" y="215" font-size="10" fill="#2383E2">AutoCompact(87%)</text>
+  <text x="670" y="215" font-size="10" fill="#EB5757">Full Compact</text>
+  <text x="430" y="235" font-size="10" fill="#666">清旧工具结果</text>
+  <text x="540" y="235" font-size="10" fill="#666">自动触发</text>
+  <text x="660" y="235" font-size="10" fill="#666">AI 总结替换</text>
+
+  <!-- 9-segment -->
+  <rect x="40" y="275" width="720" height="40" rx="6" fill="#F7F7F5" stroke="#ddd"/>
+  <text x="400" y="300" text-anchor="middle" font-size="10" fill="#666">九段式压缩: 核心请求 → 关键概念 → 文件代码 → 错误修复 → 解决过程 → 用户消息 → 待办 → 当前工作 → 下一步</text>
+
+  <!-- Iron rule -->
+  <rect x="40" y="330" width="720" height="35" rx="6" fill="#FFEBEE" stroke="#EB5757"/>
+  <text x="400" y="352" text-anchor="middle" font-size="12" font-weight="bold" fill="#EB5757">铁律: 用户消息完整保留，AI 可压缩自己的输出 -- AI 可以遗忘，但不能篡改用户意图</text>
+</svg>

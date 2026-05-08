@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">80 年血缘时间线 — 每一代都卡在哪</text>
+  <text x="400" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">一根接力棒传了八次 — 问题兜回到 Bush 的起点</text>
+
+  <!-- 中轴 -->
+  <line x1="90" y1="120" x2="90" y2="510" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- 1945 Bush -->
+  <circle cx="90" cy="140" r="7" fill="#2383E2"/>
+  <text x="110" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">1945 Vannevar Bush — Memex 纸上方案</text>
+  <text x="110" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：默认用户终身自律维护，没人兑现得了</text>
+
+  <!-- 1962 Engelbart -->
+  <circle cx="90" cy="190" r="7" fill="#EB5757"/>
+  <text x="110" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">1962 Engelbart — NLS 第一次跑起来</text>
+  <text x="110" y="205" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：只能在 SRI 大机器上跑，平民用不起</text>
+
+  <!-- 1965 Nelson -->
+  <circle cx="90" cy="240" r="7" fill="#EB5757"/>
+  <text x="110" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">1965 Ted Nelson — 造词 hypertext / transclusion</text>
+  <text x="110" y="255" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：30 年在 Xanadu 反复重启，1994 破产</text>
+
+  <!-- 1972 Kay -->
+  <circle cx="90" cy="290" r="7" fill="#FFB020"/>
+  <text x="110" y="285" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">1972 Alan Kay — Dynabook 设想</text>
+  <text x="110" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：硬件等了 40 年才等到 iPad</text>
+
+  <!-- 1987 Atkinson -->
+  <circle cx="90" cy="340" r="7" fill="#FFB020"/>
+  <text x="110" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">1987 Bill Atkinson — HyperCard</text>
+  <text x="110" y="355" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：只做本地 stacks，错过成为第一个浏览器</text>
+
+  <!-- 1991 Berners-Lee -->
+  <circle cx="90" cy="390" r="7" fill="#FFB020"/>
+  <text x="110" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">1991 Berners-Lee — WWW 全球上线</text>
+  <text x="110" y="405" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：丢掉双向链接和私人策展，只剩单向</text>
+
+  <!-- 2019 Roam -->
+  <circle cx="90" cy="440" r="7" fill="#EB5757"/>
+  <text x="110" y="435" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">2019 Roam Research — 双链复活 transclusion</text>
+  <text x="110" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">卡点：维护成本把九成用户劝退</text>
+
+  <!-- 2026 Karpathy -->
+  <circle cx="90" cy="490" r="10" fill="#4DB6AC"/>
+  <text x="115" y="485" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#37352F">2026 Karpathy — LLM Wiki gist</text>
+  <text x="115" y="505" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">把维护一步交给 LLM — 48 小时 5000 star</text>
+
+  <!-- 图例 -->
+  <rect x="560" y="495" width="12" height="12" fill="#EB5757"/>
+  <text x="578" y="505" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">失败</text>
+  <rect x="615" y="495" width="12" height="12" fill="#FFB020"/>
+  <text x="633" y="505" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">部分成立</text>
+  <rect x="690" y="495" width="12" height="12" fill="#4DB6AC"/>
+  <text x="708" y="505" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">兑现</text>
+</svg>

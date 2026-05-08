@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380">
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Inter', sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="380" fill="#FFFFFF"/>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#37352F">踩坑路径：从数据堆砌到叙事驱动</text>
+
+  <!-- Timeline -->
+  <line x1="80" y1="180" x2="720" y2="180" stroke="#E2E8F0" stroke-width="2"/>
+
+  <!-- Step 1: Failed -->
+  <circle cx="140" cy="180" r="24" fill="#FEF2F2" stroke="#EB5757" stroke-width="2"/>
+  <text x="140" y="185" text-anchor="middle" font-size="16" fill="#EB5757">1</text>
+  <text x="140" y="130" text-anchor="middle" font-size="12" font-weight="600" fill="#991B1B">派 6 个 Agent</text>
+  <text x="140" y="146" text-anchor="middle" font-size="11" fill="#7F1D1D">扫描全部文件</text>
+  <text x="140" y="228" text-anchor="middle" font-size="11" fill="#64748B">30分钟</text>
+  <text x="140" y="244" text-anchor="middle" font-size="11" fill="#EB5757">"这些都是玩具"</text>
+
+  <!-- Step 2: Failed -->
+  <circle cx="300" cy="180" r="24" fill="#FEF2F2" stroke="#EB5757" stroke-width="2"/>
+  <text x="300" y="185" text-anchor="middle" font-size="16" fill="#EB5757">2</text>
+  <text x="300" y="130" text-anchor="middle" font-size="12" font-weight="600" fill="#991B1B">堆数据写简历</text>
+  <text x="300" y="146" text-anchor="middle" font-size="11" fill="#7F1D1D">23000行 / 37152条</text>
+  <text x="300" y="228" text-anchor="middle" font-size="11" fill="#64748B">20分钟</text>
+  <text x="300" y="244" text-anchor="middle" font-size="11" fill="#EB5757">"空洞的数据没意义"</text>
+
+  <!-- Step 3: Turning point -->
+  <circle cx="460" cy="180" r="24" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="460" y="185" text-anchor="middle" font-size="16" fill="#92400E">!</text>
+  <text x="460" y="130" text-anchor="middle" font-size="12" font-weight="600" fill="#92400E">跑 /insights</text>
+  <text x="460" y="146" text-anchor="middle" font-size="11" fill="#78350F">发现 79 次跑偏</text>
+  <text x="460" y="228" text-anchor="middle" font-size="11" fill="#64748B">转折点</text>
+  <text x="460" y="244" text-anchor="middle" font-size="11" fill="#F59E0B">"原来是接口问题"</text>
+
+  <!-- Step 4: Success -->
+  <circle cx="620" cy="180" r="24" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="620" y="185" text-anchor="middle" font-size="16" fill="#16A34A">4</text>
+  <text x="620" y="130" text-anchor="middle" font-size="12" font-weight="600" fill="#166534">三层修复</text>
+  <text x="620" y="146" text-anchor="middle" font-size="11" fill="#15803D">规则 + Hook + 行为</text>
+  <text x="620" y="228" text-anchor="middle" font-size="11" fill="#64748B">10分钟</text>
+  <text x="620" y="244" text-anchor="middle" font-size="11" fill="#16A34A">简历v2确认"大面OK"</text>
+
+  <!-- Arrows -->
+  <path d="M168,180 L272,180" stroke="#EB5757" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <path d="M328,180 L432,180" stroke="#EB5757" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <path d="M488,180 L592,180" stroke="#22C55E" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#EB5757"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#22C55E"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom: Before/After comparison -->
+  <rect x="40" y="285" width="340" height="75" rx="10" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="210" y="308" text-anchor="middle" font-size="13" font-weight="600" fill="#991B1B">修复前</text>
+  <text x="210" y="328" text-anchor="middle" font-size="12" fill="#7F1D1D">1小时 → 没有可用产出</text>
+  <text x="210" y="348" text-anchor="middle" font-size="11" fill="#94A3B8">6 Agent + 2 版简历 = 过程废料</text>
+
+  <rect x="420" y="285" width="340" height="75" rx="10" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="590" y="308" text-anchor="middle" font-size="13" font-weight="600" fill="#166534">修复后</text>
+  <text x="590" y="328" text-anchor="middle" font-size="12" fill="#15803D">10分钟 → 2个项目确认完</text>
+  <text x="590" y="348" text-anchor="middle" font-size="11" fill="#64748B">叙事驱动 + 逐项快问快答</text>
+</svg>

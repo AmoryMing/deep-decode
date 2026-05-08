@@ -1,0 +1,36 @@
+{
+  "slug": "2026-04-13-tedx-fractal-minds",
+  "source_url": "https://www.youtube.com/watch?v=FqlNhe8a_sM",
+  "source_type": "TEDx Talk (YouTube video)",
+  "title": "Our next 20 years: AI, capitalism, and fractal minds",
+  "author": "Judah Anttila",
+  "author_identity": "Accelerated master's student in Industrial & Systems Engineering at OU, founder of Pristine Pens, co-founder of PhantomFit, founding president of OU Norman Next",
+  "published": "2026-03-24",
+  "duration": "16:06",
+  "views": 117051,
+  "likes": 2056,
+  "channel": "TEDx Talks (44.2M subscribers)",
+  "description": "It may cost less than $10,000 to replace a knowledge worker by 2030. Infinite life could be possible by 2040. This talk argues that these aren't science fiction — they follow directly from the exponential curve of computation, and the real question isn't whether they'll happen, but whether we'll be ready for them.",
+  "earlier_version": "GSC Webinar, Feb 5, 2026 (58 views) — same talk given to Graduate Student Community at GCOE OU",
+  "key_arguments_from_analysis": {
+    "1_knowledge_worker_collapse": "By 2030, replacing a knowledge worker with AI agents will cost under $10,000. Companies will rent infinite agents instead of hiring. The Great Decoupling separates productivity from labor at scale for the first time.",
+    "2_longevity_escape_velocity": "Radical longevity for wealthy by ~2032, broader access by 2040. Cites Kurzweil (AGI 2029 → aging becomes software problem) and Bryan Johnson Blueprint protocol as proof-of-concept.",
+    "3_fractal_mind_thesis": "Consciousness is a pattern, not a substrate. Minds are recursive, self-similar information structures not locked to biological neurons. Can ingest into software, mathematics, wetware, or all three simultaneously.",
+    "4_emotional_register": "Names three emotions: anxiety, anger, amazement — visible in every quarterly earnings call celebrating 'efficiency gains'.",
+    "5_rent_an_agent_economy": "Already happening — companies moving entry-level analysts, junior coders, first-tier support to AI agent fleets costing pennies per task."
+  },
+  "external_analysis": [
+    {
+      "source": "biocomputer.com",
+      "url": "https://biocomputer.com/blog/fractal-minds-tedx-judah-anttila-biocomputing-2045/",
+      "key_addition": "Missing piece in Anttila's thesis is the substrate — wetware/biocomputing already filling that gap. Pure silicon AI runs hot and hungry; wetware outperforms by orders of magnitude on energy efficiency. Michael Levin's diverse intelligence research supports fractal mind thesis."
+    }
+  ],
+  "screenshots": [
+    "screenshots/youtube_page.png",
+    "screenshots/biocomputer_analysis.png"
+  ],
+  "context_files_read": 0,
+  "transcript_available": false,
+  "transcript_note": "YouTube requires login for transcript; yt-dlp blocked by bot detection. Content reconstructed from description + biocomputer.com analysis + tavily search results."
+}

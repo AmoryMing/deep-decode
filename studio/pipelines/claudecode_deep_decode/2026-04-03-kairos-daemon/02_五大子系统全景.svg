@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#FFFFFF" rx="12"/>
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#37352F" font-size="20" font-weight="bold">KAIROS 五大子系统：从 systemd 到 AI 运行时</text>
+  <line x1="100" y1="52" x2="700" y2="52" stroke="#E8E8E8" stroke-width="1"/>
+
+  <!-- Central hub -->
+  <rect x="310" y="70" width="180" height="50" rx="8" fill="#2383E2" opacity="0.1" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="400" y="92" text-anchor="middle" fill="#2383E2" font-size="15" font-weight="bold">KAIROS 守护进程</text>
+  <text x="400" y="110" text-anchor="middle" fill="#2383E2" font-size="10">feature('KAIROS') gate</text>
+
+  <!-- Subsystem 1: Tick -->
+  <rect x="40" y="150" width="200" height="100" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <circle cx="66" cy="174" r="12" fill="#4DB6AC" opacity="0.15"/>
+  <text x="66" y="178" text-anchor="middle" fill="#4DB6AC" font-size="12" font-weight="bold">1</text>
+  <text x="150" y="178" text-anchor="middle" fill="#37352F" font-size="14" font-weight="bold">Tick 心跳</text>
+  <text x="140" y="198" text-anchor="middle" fill="#666666" font-size="11">周期性 &lt;tick&gt; 信号</text>
+  <text x="140" y="214" text-anchor="middle" fill="#666666" font-size="11">AI 判断：干活 or 继续睡</text>
+  <text x="140" y="234" text-anchor="middle" fill="#4DB6AC" font-size="10">15 秒执行预算</text>
+  <line x1="310" y1="95" x2="240" y2="150" stroke="#4DB6AC" stroke-width="1" opacity="0.4"/>
+
+  <!-- Subsystem 2: Sleep -->
+  <rect x="280" y="150" width="240" height="100" rx="8" fill="#F7F7F5" stroke="#FFB020" stroke-width="1.5"/>
+  <circle cx="306" cy="174" r="12" fill="#FFB020" opacity="0.15"/>
+  <text x="306" y="178" text-anchor="middle" fill="#FFB020" font-size="12" font-weight="bold">2</text>
+  <text x="410" y="178" text-anchor="middle" fill="#37352F" font-size="14" font-weight="bold">SleepTool 成本感知休眠</text>
+  <text x="400" y="198" text-anchor="middle" fill="#666666" font-size="11">不持有 shell 进程，纯逻辑休眠</text>
+  <text x="400" y="214" text-anchor="middle" fill="#666666" font-size="11">5 分钟 cache 过期临界点</text>
+  <text x="400" y="234" text-anchor="middle" fill="#FFB020" font-size="10">AI 自己决定最优睡眠时长</text>
+  <line x1="400" y1="120" x2="400" y2="150" stroke="#FFB020" stroke-width="1" opacity="0.4"/>
+
+  <!-- Subsystem 3: Brief -->
+  <rect x="560" y="150" width="200" height="100" rx="8" fill="#F7F7F5" stroke="#EB5757" stroke-width="1.5"/>
+  <circle cx="586" cy="174" r="12" fill="#EB5757" opacity="0.15"/>
+  <text x="586" y="178" text-anchor="middle" fill="#EB5757" font-size="12" font-weight="bold">3</text>
+  <text x="670" y="178" text-anchor="middle" fill="#37352F" font-size="14" font-weight="bold">BriefTool 通信</text>
+  <text x="660" y="198" text-anchor="middle" fill="#666666" font-size="11">思考过程对用户不可见</text>
+  <text x="660" y="214" text-anchor="middle" fill="#666666" font-size="11">normal / proactive 双状态</text>
+  <text x="660" y="234" text-anchor="middle" fill="#EB5757" font-size="10">强制通道化输出</text>
+  <line x1="490" y1="95" x2="560" y2="150" stroke="#EB5757" stroke-width="1" opacity="0.4"/>
+
+  <!-- Subsystem 4: External Messages + Cron -->
+  <rect x="40" y="280" width="340" height="100" rx="8" fill="#F7F7F5" stroke="#9B59B6" stroke-width="1.5"/>
+  <circle cx="66" cy="304" r="12" fill="#9B59B6" opacity="0.15"/>
+  <text x="66" y="308" text-anchor="middle" fill="#9B59B6" font-size="12" font-weight="bold">4</text>
+  <text x="220" y="308" text-anchor="middle" fill="#37352F" font-size="14" font-weight="bold">外部消息 + PR 订阅</text>
+  <text x="210" y="328" text-anchor="middle" fill="#666666" font-size="11">MCP Channel: Slack / Discord / SMS 推入会话</text>
+  <text x="210" y="344" text-anchor="middle" fill="#666666" font-size="11">SubscribePRTool: GitHub PR 事件实时推送</text>
+  <text x="210" y="364" text-anchor="middle" fill="#9B59B6" font-size="10">结构化 permission_request 权限协议</text>
+  <line x1="310" y1="120" x2="210" y2="280" stroke="#9B59B6" stroke-width="1" opacity="0.3"/>
+
+  <!-- Subsystem 5: autoDream -->
+  <rect x="420" y="280" width="340" height="100" rx="8" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <circle cx="446" cy="304" r="12" fill="#2383E2" opacity="0.15"/>
+  <text x="446" y="308" text-anchor="middle" fill="#2383E2" font-size="12" font-weight="bold">5</text>
+  <text x="600" y="308" text-anchor="middle" fill="#37352F" font-size="14" font-weight="bold">autoDream 记忆巩固</text>
+  <text x="590" y="328" text-anchor="middle" fill="#666666" font-size="11">Fork 子进程隔离运行，Bash 只读</text>
+  <text x="590" y="344" text-anchor="middle" fill="#666666" font-size="11">四阶段：定位 - 采集 - 整合 - 修剪</text>
+  <text x="590" y="364" text-anchor="middle" fill="#2383E2" font-size="10">24h + 5 sessions 触发 / 锁文件互斥</text>
+  <line x1="490" y1="120" x2="590" y2="280" stroke="#2383E2" stroke-width="1" opacity="0.3"/>
+
+  <!-- CronScheduler row -->
+  <rect x="160" y="410" width="480" height="70" rx="8" fill="#F0F8FF" stroke="#2383E2" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="400" y="438" text-anchor="middle" fill="#37352F" font-size="13" font-weight="bold">CronScheduler -- 本地 + 云端双引擎</text>
+  <text x="400" y="458" text-anchor="middle" fill="#666666" font-size="11">本地: 标准 cron 表达式 | 云端: Anthropic 服务器隔离会话，最小间隔 1h</text>
+  <text x="400" y="474" text-anchor="middle" fill="#999999" font-size="10">每天 9:00 代码质量检查 / 每周五 changelog / 定时漏洞扫描</text>
+
+  <!-- Bottom annotation -->
+  <text x="400" y="508" text-anchor="middle" fill="#AAAAAA" font-size="10">五个子系统 = 心跳 + 休眠 + 通信 + 唤醒 + 记忆 -- 一个完整的 AI 运行时</text>
+</svg>

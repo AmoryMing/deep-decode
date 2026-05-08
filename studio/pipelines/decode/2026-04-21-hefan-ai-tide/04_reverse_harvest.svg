@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="400" y="44" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">"风口反收割"：你以为在收割，其实在被收</text>
+  <text x="400" y="70" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">过去三年被这个模式伤害的人，比被 AI 替代的人更多</text>
+
+  <!-- 中心漏斗：你以为 -->
+  <g>
+    <rect x="60" y="120" width="220" height="42" rx="6" fill="#EB5757" opacity="0.9"/>
+    <text x="170" y="147" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">你以为：收割风口</text>
+
+    <rect x="520" y="120" width="220" height="42" rx="6" fill="#4DB6AC" opacity="0.9"/>
+    <text x="630" y="147" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">实际：被风口收割</text>
+
+    <!-- 中间转折 -->
+    <path d="M290,141 L510,141" stroke="#37352F" stroke-width="2" stroke-dasharray="6 4" fill="none" marker-end="url(#arrM)"/>
+    <text x="400" y="135" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">3 年后回头看</text>
+
+    <defs>
+      <marker id="arrM" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- 左侧：投入（幻象） -->
+  <g>
+    <text x="170" y="195" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">投入（你以为在播种）</text>
+    <rect x="40" y="210" width="260" height="48" rx="6" fill="#FDF2F0" stroke="#EB5757"/>
+    <text x="170" y="240" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">放下 10 年专业去学 Prompt 工程</text>
+
+    <rect x="40" y="268" width="260" height="48" rx="6" fill="#FDF2F0" stroke="#EB5757"/>
+    <text x="170" y="298" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">每月追一个新模型 / 新框架</text>
+
+    <rect x="40" y="326" width="260" height="48" rx="6" fill="#FDF2F0" stroke="#EB5757"/>
+    <text x="170" y="356" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">买课程、付工具订阅、跑副业</text>
+
+    <rect x="40" y="384" width="260" height="48" rx="6" fill="#FDF2F0" stroke="#EB5757"/>
+    <text x="170" y="414" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">ALL IN AI 转型</text>
+  </g>
+
+  <!-- 右侧：真实结果 -->
+  <g>
+    <text x="630" y="195" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">代价（实际被拿走）</text>
+    <rect x="500" y="210" width="260" height="48" rx="6" fill="#F0F7F5" stroke="#4DB6AC"/>
+    <text x="630" y="240" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">专业长板荒废，丢失不可逆</text>
+
+    <rect x="500" y="268" width="260" height="48" rx="6" fill="#F0F7F5" stroke="#4DB6AC"/>
+    <text x="630" y="298" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">注意力被切碎，深度思考能力退化</text>
+
+    <rect x="500" y="326" width="260" height="48" rx="6" fill="#F0F7F5" stroke="#4DB6AC"/>
+    <text x="630" y="356" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">学费 + 时间 + 机会成本</text>
+
+    <rect x="500" y="384" width="260" height="48" rx="6" fill="#F0F7F5" stroke="#4DB6AC"/>
+    <text x="630" y="414" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">回头发现原领域已被甩开</text>
+  </g>
+
+  <!-- 中间：焦虑税水流 -->
+  <g>
+    <path d="M310,234 Q400,234 400,290 T490,410" stroke="#FFB020" stroke-width="3" fill="none" opacity="0.6"/>
+    <path d="M310,292 Q400,292 400,350 T490,350" stroke="#FFB020" stroke-width="3" fill="none" opacity="0.6"/>
+    <path d="M310,350 Q400,350 400,292 T490,292" stroke="#FFB020" stroke-width="3" fill="none" opacity="0.6"/>
+    <path d="M310,408 Q400,408 400,350 T490,234" stroke="#FFB020" stroke-width="3" fill="none" opacity="0.6"/>
+
+    <rect x="370" y="280" width="60" height="30" rx="15" fill="#FFB020"/>
+    <text x="400" y="300" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">焦虑税</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <rect x="40" y="465" width="720" height="50" fill="#F7F7F5" rx="6"/>
+  <text x="400" y="487" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-style="italic" fill="#37352F">被风口反收割的人，比被 AI 替代的人还多。</text>
+  <text x="400" y="506" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">守在自己的专业里，不是保守，是对抗焦虑税的唯一复利策略。</text>
+</svg>

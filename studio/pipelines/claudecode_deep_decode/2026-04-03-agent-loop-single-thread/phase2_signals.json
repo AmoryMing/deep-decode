@@ -1,0 +1,69 @@
+{
+  "slug": "2026-04-03-agent-loop-single-thread",
+  "signals": [
+    {
+      "source": "PromptLayer Blog - Behind the Scenes of the Master Agent Loop",
+      "url": "https://blog.promptlayer.com/claude-code-behind-the-scenes-of-the-master-agent-loop/",
+      "type": "technical_analysis",
+      "key_point": "Agent循环核心是query.ts的while(true)，单线程+流式工具执行。StreamingToolExecutor在模型流式输出时就开始执行工具。",
+      "relevance": "直接佐证单线程架构选择"
+    },
+    {
+      "source": "rumor - 从Claude Code源码看Anthropic的产品野心",
+      "url": "context/information_sources/从Claude Code源码看Anthropic的产品野心.md",
+      "type": "first_party_analysis",
+      "key_point": "三套多Agent系统（Swarm/Coordinator/Fork）并存不是重复建设，而是针对不同场景的精确设计。Coordinator铁律：Never write 'based on your findings'。",
+      "relevance": "佐证多Agent是可选层，非默认范式"
+    },
+    {
+      "source": "Claude Code 源码泄露全面剖析（长文）",
+      "url": "context/information_sources/Claude Code 源码泄露全面剖析.md",
+      "type": "first_party_analysis",
+      "key_point": "架构核心用一句话概括：'一个带权限系统的流式工具执行循环'。工具分两类——并发安全的并行跑，需要串行的排队。",
+      "relevance": "佐证单线程内的精细并发控制"
+    },
+    {
+      "source": "Claude Code 架构全解密（onefly.top）",
+      "url": "context/information_sources/claudecode架构全解密.md",
+      "type": "first_party_analysis",
+      "key_point": "Coordinator模式只有3个工具（Agent/SendMessage/TaskStop），369行system prompt定义了四阶段工作流。Swarm通过AsyncLocalStorage实现上下文隔离。",
+      "relevance": "佐证多Agent的精确设计和约束"
+    },
+    {
+      "source": "OpenAI Swarm Framework (GitHub)",
+      "url": "https://github.com/openai/swarm",
+      "type": "competitor_reference",
+      "key_point": "OpenAI 2024年发布的多Agent编排框架，强调handoffs和routines。社区反应两极：有人认为多Agent是未来，有人认为过度工程化。",
+      "relevance": "Claude Code明确选择了与Swarm相反的路径"
+    },
+    {
+      "source": "Sebastian Raschka - Claude Code's Secret Sauce",
+      "url": "https://sebastianraschka.com/blog/2026/claude-code-secret-sauce.html",
+      "type": "technical_analysis",
+      "key_point": "harness > model 的核心论点。prompt cache 在单线程架构中效益最大化——前缀重复率高，cache命中率可达92%。",
+      "relevance": "单线程的经济学论证"
+    },
+    {
+      "source": "LMCache Blog - Context Engineering Reuse Pattern",
+      "url": "https://blog.lmcache.ai/en/2025/12/23/context-engineering-reuse-pattern-under-the-hood-of-claude-code/",
+      "type": "technical_analysis",
+      "key_point": "Claude Code前缀沉重架构下，单线程保证了每次API调用的前缀一致性，最大化prompt cache命中。Fork子Agent通过字节级前缀对齐复用cache。",
+      "relevance": "cache经济学是单线程选择的关键因素"
+    },
+    {
+      "source": "vault已有拆解：QueryEngine 13000行代码的大脑中枢",
+      "url": "2026-04-03-queryengine-brain/2026-04-03-queryengine-brain.md",
+      "type": "vault_cross_reference",
+      "key_point": "五步净化流水线、StreamingToolExecutor投机执行、tombstone消息清理机制。Oracle数据：Agent系统消耗4倍于普通chat的token，多Agent高达15倍。",
+      "relevance": "单线程与多线程的token成本对比数据"
+    }
+  ],
+  "signal_count": 8,
+  "coverage": {
+    "same_author": true,
+    "competitor_views": true,
+    "community_feedback": true,
+    "data_benchmarks": true,
+    "vault_cross_ref": true
+  }
+}

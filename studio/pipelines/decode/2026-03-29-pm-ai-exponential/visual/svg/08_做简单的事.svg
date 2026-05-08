@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="380" viewBox="0 0 800 380">
+  <rect width="800" height="380" fill="#FFFFFF"/>
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Do the Simple Thing -- 做简单的事</text>
+
+  <!-- Left: Complex approach -->
+  <rect x="40" y="70" width="340" height="230" rx="8" fill="#F7F7F5" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="210" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757">复杂方案</text>
+
+  <rect x="70" y="120" width="120" height="30" rx="4" fill="#EB5757" opacity="0.08"/>
+  <text x="130" y="140" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">workaround A</text>
+  <rect x="210" y="120" width="120" height="30" rx="4" fill="#EB5757" opacity="0.08"/>
+  <text x="270" y="140" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">workaround B</text>
+  <rect x="70" y="160" width="120" height="30" rx="4" fill="#EB5757" opacity="0.08"/>
+  <text x="130" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">workaround C</text>
+  <rect x="210" y="160" width="120" height="30" rx="4" fill="#EB5757" opacity="0.08"/>
+  <text x="270" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">兼容层</text>
+
+  <text x="210" y="220" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">复杂度指数级放大失败</text>
+  <text x="210" y="245" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">下一代模型出来全白做</text>
+  <text x="210" y="280" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#EB5757">X</text>
+
+  <!-- Right: Simple approach -->
+  <rect x="420" y="70" width="340" height="230" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="590" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#4DB6AC">简单方案</text>
+
+  <rect x="490" y="130" width="200" height="40" rx="6" fill="#4DB6AC" opacity="0.1" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="590" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4DB6AC">最笨的方法先跑起来</text>
+
+  <text x="590" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">技术栈选 on distribution</text>
+  <text x="590" y="222" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">(TypeScript / React / Bun)</text>
+  <text x="590" y="248" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">不是最优雅，是 AI 最熟悉的</text>
+  <text x="590" y="280" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#4DB6AC">效果好十倍</text>
+
+  <!-- Bottom -->
+  <rect x="150" y="320" width="500" height="40" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="345" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">有些问题最好的解法是: 等等看。下一代模型可能原生就解决了。</text>
+</svg>

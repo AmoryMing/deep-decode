@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Side Quest -- PRD 的替代品</text>
+
+  <!-- Traditional flow (crossed out) -->
+  <rect x="40" y="70" width="720" height="70" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="60" y="95" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">传统流程:</text>
+  <rect x="60" y="105" width="80" height="26" rx="4" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1"/>
+  <text x="100" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">写 PRD</text>
+  <text x="155" y="122" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="170" y="105" width="80" height="26" rx="4" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1"/>
+  <text x="210" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">评审会</text>
+  <text x="265" y="122" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="280" y="105" width="80" height="26" rx="4" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1"/>
+  <text x="320" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">排期</text>
+  <text x="375" y="122" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="390" y="105" width="80" height="26" rx="4" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1"/>
+  <text x="430" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">开发</text>
+  <text x="485" y="122" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="500" y="105" width="80" height="26" rx="4" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1"/>
+  <text x="540" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">测试</text>
+  <text x="595" y="122" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="610" y="105" width="80" height="26" rx="4" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1"/>
+  <text x="650" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">上线</text>
+  <!-- Cross line -->
+  <line x1="50" y1="80" x2="750" y2="130" stroke="#EB5757" stroke-width="2" opacity="0.5"/>
+
+  <!-- Side Quest flow -->
+  <rect x="40" y="160" width="720" height="70" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="60" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#4DB6AC" font-weight="bold">Side Quest:</text>
+  <rect x="60" y="195" width="100" height="26" rx="4" fill="#4DB6AC" opacity="0.1" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="110" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">下午的灵感</text>
+  <text x="175" y="212" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="190" y="195" width="100" height="26" rx="4" fill="#4DB6AC" opacity="0.1" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="240" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">做原型</text>
+  <text x="305" y="212" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="320" y="195" width="120" height="26" rx="4" fill="#4DB6AC" opacity="0.1" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="380" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">内部 dogfooding</text>
+  <text x="455" y="212" font-family="Inter, sans-serif" font-size="12" fill="#787774">→</text>
+  <rect x="470" y="195" width="100" height="26" rx="4" fill="#4DB6AC" opacity="0.15" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="520" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" font-weight="bold">直接上线</text>
+
+  <!-- Examples -->
+  <text x="400" y="265" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">Side Quest 产物（没人写过 PRD）</text>
+  <rect x="80" y="280" width="180" height="36" rx="6" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="170" y="303" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Claude Code Desktop</text>
+  <rect x="300" y="280" width="200" height="36" rx="6" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="303" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">AskUserQuestion 工具</text>
+  <rect x="540" y="280" width="180" height="36" rx="6" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="630" y="303" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Todo lists</text>
+
+  <!-- Stats -->
+  <text x="200" y="350" text-anchor="middle" font-family="Inter, PingFang SC, sans-serif" font-size="28" font-weight="bold" fill="#2383E2">5x/天</text>
+  <text x="200" y="372" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">每个工程师日均发布</text>
+
+  <text x="450" y="350" text-anchor="middle" font-family="Inter, PingFang SC, sans-serif" font-size="28" font-weight="bold" fill="#2383E2">10+</text>
+  <text x="450" y="372" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">每个功能的原型迭代次数</text>
+
+  <!-- Bottom -->
+  <text x="400" y="405" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">"Wrong bets are cheap" -- 赌错了也不贵</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Hooks -- Agent 不是黑盒，每个关键节点都能拦截</text>
+
+  <!-- Timeline bar -->
+  <rect x="60" y="90" width="680" height="8" rx="4" fill="#E3E2E0"/>
+
+  <!-- 4 Hook points on timeline -->
+  <!-- Hook 1: SessionStart -->
+  <circle cx="140" cy="94" r="14" fill="#2383E2" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="140" y="99" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" font-weight="bold">1</text>
+
+  <rect x="75" y="125" width="130" height="100" rx="8" fill="#EBF3FE" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="140" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2">SessionStart</text>
+  <text x="140" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">启动时注入</text>
+  <line x1="95" y1="180" x2="185" y2="180" stroke="#2383E2" stroke-width="0.5" opacity="0.3"/>
+  <text x="140" y="198" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">动态加载 CLAUDE.md</text>
+  <text x="140" y="215" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">读取项目上下文</text>
+
+  <!-- Hook 2: PreToolUse -->
+  <circle cx="330" cy="94" r="14" fill="#FFB020" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="330" y="99" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" font-weight="bold">2</text>
+
+  <rect x="265" y="125" width="130" height="100" rx="8" fill="#FFF8E7" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="330" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#CC8800">PreToolUse</text>
+  <text x="330" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">每次操作前拦截</text>
+  <line x1="285" y1="180" x2="375" y2="180" stroke="#FFB020" stroke-width="0.5" opacity="0.3"/>
+  <text x="330" y="198" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">记录命令日志</text>
+  <text x="330" y="215" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">拦截危险操作</text>
+
+  <!-- Hook 3: PermissionRequest -->
+  <circle cx="520" cy="94" r="14" fill="#EB5757" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="520" y="99" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" font-weight="bold">3</text>
+
+  <rect x="445" y="125" width="150" height="100" rx="8" fill="#FDECEC" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="520" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#EB5757">PermissionRequest</text>
+  <text x="520" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">关键操作等人确认</text>
+  <line x1="465" y1="180" x2="575" y2="180" stroke="#EB5757" stroke-width="0.5" opacity="0.3"/>
+  <text x="520" y="198" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">路由审批流程</text>
+  <text x="520" y="215" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">解决评审瓶颈</text>
+
+  <!-- Hook 4: Stop -->
+  <circle cx="680" cy="94" r="14" fill="#4DB6AC" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="680" y="99" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" font-weight="bold">4</text>
+
+  <rect x="615" y="125" width="130" height="100" rx="8" fill="#E8F5F3" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="680" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#4DB6AC">Stop</text>
+  <text x="680" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">任务结束后衔接</text>
+  <line x1="635" y1="180" x2="725" y2="180" stroke="#4DB6AC" stroke-width="0.5" opacity="0.3"/>
+  <text x="680" y="198" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">保持任务动量</text>
+  <text x="680" y="215" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">自动触发下一步</text>
+
+  <!-- Analogy section -->
+  <rect x="60" y="260" width="680" height="50" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="280" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">类比 Linux 的 systemd：不是插件，是 <tspan font-weight="bold">Agent 操作系统级的扩展点</tspan></text>
+  <text x="400" y="300" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">覆盖 Agent 完整生命周期 -- 从启动到执行到审批到收尾</text>
+
+  <!-- Key insight -->
+  <rect x="60" y="330" width="680" height="70" rx="8" fill="#FDECEC" stroke="#EB5757" stroke-width="1"/>
+  <text x="400" y="355" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#EB5757">PermissionRequest 是最关键的钩子</text>
+  <text x="400" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">当 Agent 能力越强，"在哪里暂停等人确认"就越重要</text>
+  <text x="400" y="395" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">瓶颈从"实现速度"转移到"评审速度" -- 与 LangChain CEO 同期论断一致</text>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="550" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="550" fill="#F7F7F5"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#37352F">Prompt Suggestion: 12 道过滤的建议生成</text>
+  <line x1="80" y1="54" x2="720" y2="54" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Funnel: progressively narrowing trapezoids -->
+  <!-- Layer 0: Top - LLM prediction (widest) -->
+  <polygon points="120,80 580,80 560,120 140,120" fill="#2383E2"/>
+  <text x="350" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">LLM 预测用户下一步</text>
+
+  <!-- Connector -->
+  <line x1="350" y1="120" x2="350" y2="132" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Layer 1: Too short / too long -->
+  <polygon points="148,132 552,132 536,168 164,168" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="350" y="150" text-anchor="middle" font-size="12" fill="#EB5757">x</text>
+  <text x="366" y="150" text-anchor="start" font-size="11" fill="#37352F">太短 (&lt;2词) 或太长 (&gt;12词/100字符)</text>
+
+  <line x1="350" y1="168" x2="350" y2="180" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Layer 2: AI tone -->
+  <polygon points="172,180 528,180 514,216 186,216" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="350" y="198" text-anchor="middle" font-size="12" fill="#EB5757">x</text>
+  <text x="366" y="198" text-anchor="start" font-size="11" fill="#37352F">AI口吻: Let me... / I'll... / Here's...</text>
+
+  <line x1="350" y1="216" x2="350" y2="228" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Layer 3: Evaluative -->
+  <polygon points="194,228 506,228 494,264 206,264" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="350" y="246" text-anchor="middle" font-size="12" fill="#EB5757">x</text>
+  <text x="366" y="246" text-anchor="start" font-size="11" fill="#37352F">评价性: thanks / looks good / perfect</text>
+
+  <line x1="350" y1="264" x2="350" y2="276" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Layer 4: Multi-sentence / formatting / error -->
+  <polygon points="214,276 486,276 474,312 226,312" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="350" y="294" text-anchor="middle" font-size="12" fill="#EB5757">x</text>
+  <text x="366" y="294" text-anchor="start" font-size="11" fill="#37352F">多句子 / 带格式 / 错误消息</text>
+
+  <line x1="350" y1="312" x2="350" y2="324" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Layer 5: Meta text -->
+  <polygon points="234,324 466,324 456,360 244,360" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="350" y="342" text-anchor="middle" font-size="12" fill="#EB5757">x</text>
+  <text x="366" y="342" text-anchor="start" font-size="11" fill="#37352F">Meta文本: no suggestion / silence</text>
+
+  <line x1="350" y1="360" x2="350" y2="376" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Bottom: Surviving suggestions (narrow, green) -->
+  <polygon points="280,376 420,376 410,416 290,416" fill="#4DB6AC"/>
+  <text x="350" y="401" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">像用户自己会打的话</text>
+
+  <!-- Left side annotation -->
+  <rect x="30" y="240" width="90" height="80" rx="8" fill="#FFB020" opacity="0.15" stroke="#FFB020" stroke-width="1"/>
+  <text x="75" y="266" text-anchor="middle" font-size="11" fill="#37352F" font-weight="bold">设计哲学</text>
+  <text x="75" y="284" text-anchor="middle" font-size="11" fill="#37352F">宁可</text>
+  <text x="75" y="300" text-anchor="middle" font-size="11" fill="#37352F">不建议</text>
+  <text x="75" y="316" text-anchor="middle" font-size="11" fill="#EB5757" font-weight="bold">也不建议错</text>
+
+  <!-- Right side: Economics box -->
+  <rect x="610" y="130" width="160" height="120" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="690" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#2383E2">经济学门槛</text>
+  <line x1="625" y1="164" x2="755" y2="164" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="690" y="184" text-anchor="middle" font-size="11" fill="#37352F">父进程</text>
+  <text x="690" y="200" text-anchor="middle" font-size="11" fill="#37352F">未缓存 token</text>
+  <text x="690" y="220" text-anchor="middle" font-size="16" font-weight="bold" fill="#EB5757">&lt; 10,000</text>
+  <text x="690" y="240" text-anchor="middle" font-size="11" fill="#787774">才触发预测</text>
+
+  <!-- Arrow from economics box to funnel top -->
+  <line x1="610" y1="190" x2="582" y2="106" stroke="#2383E2" stroke-width="1" stroke-dasharray="4,3"/>
+  <polygon points="582,106 587,114 577,114" fill="#2383E2"/>
+
+  <!-- Filter count labels on right -->
+  <text x="580" y="154" text-anchor="start" font-size="10" fill="#787774">Filter 1</text>
+  <text x="580" y="202" text-anchor="start" font-size="10" fill="#787774">Filter 2</text>
+  <text x="580" y="250" text-anchor="start" font-size="10" fill="#787774">Filter 3</text>
+  <text x="580" y="298" text-anchor="start" font-size="10" fill="#787774">Filter 4</text>
+  <text x="580" y="346" text-anchor="start" font-size="10" fill="#787774">Filter 5</text>
+
+  <!-- Bottom stats bar -->
+  <rect x="0" y="440" width="800" height="110" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Three stat boxes -->
+  <rect x="40" y="456" width="220" height="72" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="150" y="480" text-anchor="middle" font-size="12" font-weight="bold" fill="#37352F">输入</text>
+  <text x="150" y="500" text-anchor="middle" font-size="20" font-weight="bold" fill="#2383E2">N 条候选</text>
+  <text x="150" y="516" text-anchor="middle" font-size="10" fill="#787774">LLM 生成的原始建议</text>
+
+  <text x="300" y="496" text-anchor="middle" font-size="18" fill="#787774">-></text>
+
+  <rect x="320" y="456" width="160" height="72" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="480" text-anchor="middle" font-size="12" font-weight="bold" fill="#37352F">过滤</text>
+  <text x="400" y="500" text-anchor="middle" font-size="20" font-weight="bold" fill="#EB5757">12 道规则</text>
+  <text x="400" y="516" text-anchor="middle" font-size="10" fill="#787774">正则 + 语义 + 长度</text>
+
+  <text x="520" y="496" text-anchor="middle" font-size="18" fill="#787774">-></text>
+
+  <rect x="540" y="456" width="220" height="72" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="650" y="480" text-anchor="middle" font-size="12" font-weight="bold" fill="#37352F">输出</text>
+  <text x="650" y="500" text-anchor="middle" font-size="20" font-weight="bold" fill="#4DB6AC">0-3 条精选</text>
+  <text x="650" y="516" text-anchor="middle" font-size="10" fill="#787774">用户真正会说的话</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Cowork Dispatch -- Agent 走出代码仓库</text>
+
+  <!-- Center: Agent circle -->
+  <circle cx="400" cy="210" r="55" fill="#2383E2" opacity="0.1" stroke="#2383E2" stroke-width="2"/>
+  <text x="400" y="205" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2">Agent</text>
+  <text x="400" y="225" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Claude Desktop</text>
+
+  <!-- Inner ring (old capability): Code only -->
+  <circle cx="400" cy="210" r="90" fill="none" stroke="#E3E2E0" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="400" y="105" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B9A97">以前只能碰代码</text>
+
+  <!-- Outer connections (new capabilities) -->
+  <!-- Top: Code repo (old) -->
+  <rect x="345" y="60" width="110" height="35" rx="6" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1"/>
+  <text x="400" y="82" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">代码仓库</text>
+  <line x1="400" y1="155" x2="400" y2="95" stroke="#9B9A97" stroke-width="1.5"/>
+
+  <!-- Right-top: Browser -->
+  <rect x="570" y="90" width="110" height="35" rx="6" fill="#EBF3FE" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="625" y="112" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" font-weight="bold">浏览器</text>
+  <line x1="448" y1="175" x2="570" y2="107" stroke="#2383E2" stroke-width="1.5"/>
+
+  <!-- Right-bottom: Email/Slack -->
+  <rect x="580" y="240" width="120" height="35" rx="6" fill="#FFF8E7" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="640" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#CC8800" font-weight="bold">邮件 / Slack</text>
+  <line x1="450" y1="225" x2="580" y2="255" stroke="#FFB020" stroke-width="1.5"/>
+
+  <!-- Bottom: File system -->
+  <rect x="320" y="320" width="160" height="35" rx="6" fill="#E8F5F3" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="400" y="342" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" font-weight="bold">文件管理</text>
+  <line x1="400" y1="265" x2="400" y2="320" stroke="#4DB6AC" stroke-width="1.5"/>
+
+  <!-- Left-bottom: MCP tools -->
+  <rect x="100" y="240" width="130" height="35" rx="6" fill="#FDECEC" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="165" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" font-weight="bold">MCP 工具链</text>
+  <line x1="350" y1="225" x2="230" y2="255" stroke="#EB5757" stroke-width="1.5"/>
+
+  <!-- Left-top: Remote control -->
+  <rect x="90" y="90" width="130" height="35" rx="6" fill="#F3ECFD" stroke="#9B59B6" stroke-width="1.5"/>
+  <text x="155" y="112" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#9B59B6" font-weight="bold">远程控制</text>
+  <line x1="352" y1="175" x2="220" y2="107" stroke="#9B59B6" stroke-width="1.5"/>
+
+  <!-- "NEW" badges -->
+  <rect x="677" y="82" width="32" height="16" rx="3" fill="#2383E2"/>
+  <text x="693" y="93" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#FFFFFF" font-weight="bold">NEW</text>
+  <rect x="697" y="232" width="32" height="16" rx="3" fill="#FFB020"/>
+  <text x="713" y="243" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#FFFFFF" font-weight="bold">NEW</text>
+  <rect x="55" y="82" width="32" height="16" rx="3" fill="#9B59B6"/>
+  <text x="71" y="93" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#FFFFFF" font-weight="bold">NEW</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="375" width="600" height="35" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="398" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">从"编码助手"到"数字工作台" -- Agent 的能力边界正在扩展到整个工作流</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Claude Code 的冰山 -- 大多数人只看到水面上</text>
+
+  <!-- Water surface line -->
+  <path d="M 0 210 Q 50 200 100 210 Q 150 220 200 210 Q 250 200 300 210 Q 350 220 400 210 Q 450 200 500 210 Q 550 220 600 210 Q 650 200 700 210 Q 750 220 800 210" fill="none" stroke="#2383E2" stroke-width="2.5" opacity="0.6"/>
+  <path d="M 0 218 Q 60 210 120 218 Q 180 226 240 218 Q 300 210 360 218 Q 420 226 480 218 Q 540 210 600 218 Q 660 226 720 218 Q 780 210 800 218" fill="none" stroke="#2383E2" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Sky area (above water) - light -->
+  <rect x="0" y="50" width="800" height="160" fill="#F7FBFF" opacity="0.5"/>
+
+  <!-- Water area (below water) - deep blue gradient -->
+  <rect x="0" y="215" width="800" height="305" fill="#EBF3FE" opacity="0.4"/>
+
+  <!-- Iceberg above water - small tip -->
+  <polygon points="350,80 450,80 470,210 330,210" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1.5"/>
+
+  <!-- Chat bubbles on the tip -->
+  <rect x="360" y="100" width="80" height="30" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="400" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2">你好 AI</text>
+  <rect x="370" y="140" width="60" height="25" rx="10" fill="#2383E2" opacity="0.15" stroke="#2383E2" stroke-width="1"/>
+  <text x="400" y="157" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">...</text>
+
+  <!-- Label above water -->
+  <text x="560" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">对话界面</text>
+  <text x="560" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#9B9A97">手机 / 语音 / 聊天</text>
+  <text x="560" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2">~90% 用户停在这里</text>
+  <line x1="540" y1="110" x2="455" y2="110" stroke="#9B9A97" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- Iceberg below water - massive -->
+  <polygon points="330,215 470,215 560,420 240,420" fill="#B8D4F0" stroke="#2383E2" stroke-width="1.5" opacity="0.5"/>
+
+  <!-- Layer 2: Infrastructure (middle of iceberg) -->
+  <rect x="290" y="250" width="220" height="60" rx="8" fill="#FFFFFF" stroke="#FFB020" stroke-width="2" opacity="0.9"/>
+  <text x="400" y="275" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#CC8800">开发基础设施</text>
+  <text x="400" y="298" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Hooks / Worktree / Agent / 多仓库</text>
+
+  <!-- Label for Layer 2 -->
+  <text x="560" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#CC8800">可编程、可扩展</text>
+  <text x="560" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#9B9A97">~9% 用户</text>
+  <line x1="540" y1="280" x2="515" y2="280" stroke="#FFB020" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- Layer 3: Autonomy (bottom of iceberg) -->
+  <rect x="270" y="340" width="260" height="60" rx="8" fill="#FFFFFF" stroke="#EB5757" stroke-width="2" opacity="0.9"/>
+  <text x="400" y="365" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#EB5757">自主运行</text>
+  <text x="400" y="388" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">/loop / /batch / /schedule / --bare</text>
+
+  <!-- Label for Layer 3 -->
+  <text x="560" y="360" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">无人值守、千级并行</text>
+  <text x="560" y="380" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#9B9A97">~1% 用户</text>
+  <line x1="540" y1="370" x2="535" y2="370" stroke="#EB5757" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- Boris arrow -->
+  <path d="M 160 130 Q 140 280 180 370" fill="none" stroke="#37352F" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#arrowB)"/>
+  <defs>
+    <marker id="arrowB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+    </marker>
+  </defs>
+  <text x="100" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">Boris</text>
+  <text x="73" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">日常在这里</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="440" width="560" height="55" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="465" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">水面下的体积是水面上的 10 倍</text>
+  <text x="400" y="485" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Claude Code 创建者用得最多的功能，恰恰是大多数人没碰过的</text>
+</svg>

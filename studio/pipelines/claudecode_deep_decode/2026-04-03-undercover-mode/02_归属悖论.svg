@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="420" fill="#FFFFFF" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" fill="#37352F" font-size="20" font-weight="bold">归属悖论：同一套源码的两张面孔</text>
+  <line x1="100" y1="52" x2="700" y2="52" stroke="#E8E8E8" stroke-width="1"/>
+
+  <!-- Left: Undercover -->
+  <rect x="40" y="75" width="340" height="200" rx="10" fill="#FFFFFF" stroke="#EB5757" stroke-width="1.5"/>
+  <rect x="40" y="75" width="340" height="36" rx="10" fill="#EB5757" opacity="0.08"/>
+  <text x="210" y="99" text-anchor="middle" fill="#EB5757" font-size="15" font-weight="bold">公共仓库：隐身</text>
+  <text x="210" y="130" text-anchor="middle" fill="#37352F" font-size="12">Undercover Mode = ON</text>
+  <line x1="80" y1="145" x2="340" y2="145" stroke="#F0F0F0" stroke-width="1"/>
+  <text x="70" y="168" fill="#666666" font-size="11">Commit:</text>
+  <text x="160" y="168" fill="#37352F" font-size="11" font-family="monospace">"Fix race condition in file watcher"</text>
+  <text x="70" y="192" fill="#666666" font-size="11">Co-Author:</text>
+  <text x="160" y="192" fill="#EB5757" font-size="11" text-decoration="line-through">Co-Authored-By: Claude...</text>
+  <text x="70" y="216" fill="#666666" font-size="11">PR 描述:</text>
+  <text x="160" y="216" fill="#999999" font-size="11">(空)</text>
+  <text x="70" y="244" fill="#666666" font-size="11">AI 痕迹:</text>
+  <text x="160" y="244" fill="#EB5757" font-size="11" font-weight="500">零。完全像人类写的。</text>
+  <text x="210" y="268" text-anchor="middle" fill="#999999" font-size="10">解决今天的问题：商业机密 + 社区争议</text>
+
+  <!-- Right: Attribution -->
+  <rect x="420" y="75" width="340" height="200" rx="10" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <rect x="420" y="75" width="340" height="36" rx="10" fill="#4DB6AC" opacity="0.08"/>
+  <text x="590" y="99" text-anchor="middle" fill="#4DB6AC" font-size="15" font-weight="bold">内部仓库：全量追踪</text>
+  <text x="590" y="130" text-anchor="middle" fill="#37352F" font-size="12">Attribution Tracking = ON</text>
+  <line x1="460" y1="145" x2="720" y2="145" stroke="#F0F0F0" stroke-width="1"/>
+  <text x="450" y="168" fill="#666666" font-size="11">Commit:</text>
+  <text x="540" y="168" fill="#37352F" font-size="11" font-family="monospace">"Co-Authored-By: Claude Opus 4.6"</text>
+  <text x="450" y="192" fill="#666666" font-size="11">PR 描述:</text>
+  <text x="540" y="192" fill="#4DB6AC" font-size="10" font-family="monospace">93% 3-shotted by opus-4-5</text>
+  <text x="450" y="216" fill="#666666" font-size="11">追踪精度:</text>
+  <text x="540" y="216" fill="#37352F" font-size="11">每文件、每次编辑、字符级</text>
+  <text x="450" y="244" fill="#666666" font-size="11">记录内容:</text>
+  <text x="540" y="244" fill="#4DB6AC" font-size="11" font-weight="500">claudeChars + humanChars + N-shot</text>
+  <text x="590" y="268" text-anchor="middle" fill="#999999" font-size="10">准备明天的合规：EU AI Act 2026.08.02</text>
+
+  <!-- VS divider -->
+  <circle cx="400" cy="175" r="18" fill="#37352F"/>
+  <text x="400" y="180" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="bold">VS</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="300" width="600" height="90" rx="8" fill="#F0F8FF" stroke="#2383E2" stroke-width="1"/>
+  <text x="400" y="328" text-anchor="middle" fill="#37352F" font-size="14" font-weight="bold">不矛盾，是同时为两个未来做准备</text>
+  <text x="400" y="352" text-anchor="middle" fill="#555555" font-size="11">隐身 = 保护商业机密 + 回避开源争议（解决今天的问题）</text>
+  <text x="400" y="372" text-anchor="middle" fill="#555555" font-size="11">追踪 = 合规基础设施 + 可审计数据（准备明天的法规）</text>
+
+  <!-- Timeline -->
+  <text x="200" y="408" text-anchor="middle" fill="#EB5757" font-size="10">2026.04 隐身模式曝光</text>
+  <line x1="300" y1="405" x2="500" y2="405" stroke="#CCCCCC" stroke-width="1"/>
+  <text x="600" y="408" text-anchor="middle" fill="#4DB6AC" font-size="10">2026.08.02 EU AI Act 标注义务生效</text>
+</svg>

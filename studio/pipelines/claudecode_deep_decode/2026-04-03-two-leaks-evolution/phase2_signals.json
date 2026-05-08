@@ -1,0 +1,48 @@
+{
+  "external_signals": [
+    {
+      "source": "Layer5 Blog",
+      "url": "https://layer5.io/blog/engineering/the-claude-code-source-leak-512000-lines-a-missing-npmignore-and-the-fastest-growing-repo-in-github-history/",
+      "key_point": "Bun bundler bug: development:false 仍生成 sourcemap，不止是 .npmignore 缺失",
+      "use": "佐证技术根因比表面看到的更深"
+    },
+    {
+      "source": "NodeSource Blog",
+      "url": "https://nodesource.com/blog/anthropic-claude-code-source-leak-bun-bug",
+      "key_point": "Bun bug 详细分析，build pipeline 安全问题",
+      "use": "佐证 Bun 生态的成熟度问题"
+    },
+    {
+      "source": "DEV Community (kolkov)",
+      "url": "https://dev.to/kolkov/we-reverse-engineered-12-versions-of-claude-code-then-it-leaked-its-own-source-code-pij",
+      "key_point": "12版本手工逆向，16.3% API 失败率，5.4% orphaned tool calls，ccdiag 工具",
+      "use": "提供版本演进的技术证据"
+    },
+    {
+      "source": "Gizmodo",
+      "url": "https://gizmodo.com/source-code-for-anthropics-claude-code-leaks-at-the-exact-wrong-time-2000740379",
+      "key_point": "泄露发生在 Anthropic IPO 筹备期 + Mythos 事故之后",
+      "use": "商业时机的反讽"
+    },
+    {
+      "source": "ghuntley GitHub + HN",
+      "url": "https://github.com/ghuntley/claude-code-source-code-deobfuscation",
+      "key_point": "LLM cleanroom 方法论: 用 Claude 反编译 Claude，archived 2025-03-01",
+      "use": "第一次泄露的技术方法论"
+    },
+    {
+      "source": "Bitcoin News / Zscaler ThreatLabz",
+      "url": "https://www.zscaler.com/blogs/security-research/anthropic-claude-code-leak",
+      "key_point": "axios 供应链攻击同日发生（2026-03-31 00:21-03:29 UTC），RAT 注入",
+      "use": "安全事件叠加，放大影响"
+    },
+    {
+      "source": "VentureBeat",
+      "url": "https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know",
+      "key_point": "主流科技媒体报道，确认事件规模",
+      "use": "事件影响力验证"
+    }
+  ],
+  "signal_count": 7,
+  "validation_summary": "7个外部信源交叉验证。核心事实（两次泄露时间线、技术根因、规模数据）在所有信源中一致。Bun bug 细节由 Layer5 和 NodeSource 独立确认。kolkov 的逆向数据提供了唯一的跨版本技术对比。"
+}

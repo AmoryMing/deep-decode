@@ -1,0 +1,47 @@
+{
+  "signals": [
+    {
+      "source": "arXiv: PASTE - Pattern-Aware Speculative Tool Execution",
+      "url": "https://arxiv.org/pdf/2603.18897",
+      "relevance": "学术界也在研究 Agent 的投机性工具执行，与 Claude Code 的 StreamingToolExecutor 和 startSpeculativeClassifierCheck 是同一思路。论文来自上海交大+微软研究院，证明这不是 Anthropic 独家创新，而是 Agent 架构的普遍演进方向",
+      "use": "佐证"
+    },
+    {
+      "source": "ByteByteGo: A Guide to Context Engineering for LLMs",
+      "url": "https://blog.bytebytego.com/p/a-guide-to-context-engineering-for",
+      "relevance": "上下文工程正在成为独立学科。'More context isn't better, the model needs the right information rather than all available information' -- 这正是 Claude Code 五步压缩流水线的设计哲学",
+      "use": "佐证"
+    },
+    {
+      "source": "Oracle Developers: What Is the AI Agent Loop",
+      "url": "https://blogs.oracle.com/developers/what-is-the-ai-agent-loop-the-core-architecture-behind-autonomous-ai-systems",
+      "relevance": "Agent 消耗约 4x 于普通 chat 的 token（多 Agent 高达 15x）。这解释了为什么 Claude Code 在压缩上投入如此重的工程——成本是 Agent 产品的生死线",
+      "use": "佐证"
+    },
+    {
+      "source": "Addy Osmani: The Code Agent Orchestra",
+      "url": "https://addyosmani.com/blog/code-agent-orchestra/",
+      "relevance": "Google Chrome 团队的 Addy Osmani 对多 Agent 编排模式的系统梳理。Claude Code 选择单线程+子 Agent 而非 Swarm，与 Osmani 描述的 'shared task list + peer-to-peer messaging' 形成对比",
+      "use": "反驳/补充"
+    },
+    {
+      "source": "Codewithmukesh: Anatomy of a Claude Code Session",
+      "url": "https://codewithmukesh.com/blog/anatomy-claude-code-session/",
+      "relevance": "独立开发者实测：新会话起步约 8,700 token 开销（system prompt + tools + CLAUDE.md + git status）。印证了 Claude Code 的'前缀沉重'架构",
+      "use": "佐证"
+    },
+    {
+      "source": "Rust 重写分析: 88行 Agent Loop",
+      "url": "https://dev.to/brooks_wilson_36fbefbbae4/claude-code-architecture-explained-agent-loop-tool-system-and-permission-model-rust-rewrite-41b2",
+      "relevance": "有人用 Rust 重写了 Claude Code 核心循环，精简到 88 行。对比 query.ts 的数千行，差异在于——Rust 版只实现了循环骨架，没有五步预处理、流式执行、压缩策略、fallback、tombstone 等工程层。证明'胖核心'的厚度来自工程需求而非代码冗余",
+      "use": "反驳/佐证"
+    }
+  ],
+  "vault_cross_references": [
+    "2026-04-03-harness-greater-than-model.md (Sebastian Raschka 论证 harness > model)",
+    "2026-04-03-two-leaks-evolution.md (版本演进，query.ts 的膨胀轨迹)",
+    "2026-04-03-claude-code-leak-panorama.md (全景概览，定位 QueryEngine 在整体架构中的位置)"
+  ],
+  "signal_count": 6,
+  "phase2_complete": true
+}

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580">
+  <rect width="800" height="580" fill="#FFF5E1"/>
+  <rect x="40" y="20" width="4" height="30" rx="2" fill="#C47B2B"/>
+  <text x="55" y="43" font-family="PingFang SC, Georgia, serif" font-size="20" fill="#2B1D0E" font-weight="bold">案例一：前端设计循环——具体怎么跑的</text>
+  <text x="55" y="65" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#8B7355">每轮生成 → Playwright 实测 → 4 维打分 → 迭代；单次完整运行长达 4 小时，5-15 轮迭代</text>
+
+  <!-- Loop flow at top -->
+  <g transform="translate(30, 88)">
+    <!-- Step boxes in a row -->
+    <rect x="0" y="0" width="130" height="50" rx="8" fill="#C47B2B" opacity="0.85"/>
+    <text x="65" y="21" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#FFF5E1" text-anchor="middle" font-weight="bold">生成器生成</text>
+    <text x="65" y="38" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#FCEBD0" text-anchor="middle">输出 React 页面</text>
+
+    <line x1="130" y1="25" x2="160" y2="25" stroke="#C47B2B" stroke-width="1.5"/>
+    <polygon points="156,20 166,25 156,30" fill="#C47B2B"/>
+
+    <rect x="165" y="0" width="130" height="50" rx="8" fill="#B8860B" opacity="0.85"/>
+    <text x="230" y="21" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#FFF5E1" text-anchor="middle" font-weight="bold">Playwright 实测</text>
+    <text x="230" y="38" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#FCEBD0" text-anchor="middle">真实点击操作 UI</text>
+
+    <line x1="295" y1="25" x2="325" y2="25" stroke="#B8860B" stroke-width="1.5"/>
+    <polygon points="321,20 331,25 321,30" fill="#B8860B"/>
+
+    <rect x="330" y="0" width="130" height="50" rx="8" fill="#A0522D" opacity="0.85"/>
+    <text x="395" y="21" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#FFF5E1" text-anchor="middle" font-weight="bold">4 维打分</text>
+    <text x="395" y="38" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#FCEBD0" text-anchor="middle">少样本校准过的评估器</text>
+
+    <line x1="460" y1="25" x2="490" y2="25" stroke="#A0522D" stroke-width="1.5"/>
+    <polygon points="486,20 496,25 486,30" fill="#A0522D"/>
+
+    <rect x="495" y="0" width="130" height="50" rx="8" fill="#8B4513" opacity="0.85"/>
+    <text x="560" y="21" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#FFF5E1" text-anchor="middle" font-weight="bold">策略决策</text>
+    <text x="560" y="38" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#FCEBD0" text-anchor="middle">细化 or 转换方向</text>
+
+    <!-- Feedback loop arrow -->
+    <path d="M625,25 C680,25 680,80 395,80 C110,80 110,50 30,50" fill="none" stroke="#8B4513" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <polygon points="34,45 24,50 34,55" fill="#8B4513"/>
+    <text x="395" y="78" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B4513" text-anchor="middle">循环 5-15 次，总时长最长 4 小时</text>
+  </g>
+
+  <!-- 4 scoring dimensions -->
+  <text x="55" y="218" font-family="PingFang SC, Georgia, serif" font-size="14" fill="#C47B2B" font-weight="bold">4 维评分标准（评估器的具体问题）</text>
+
+  <g transform="translate(30, 232)">
+    <!-- Dimension 1 -->
+    <rect x="0" y="0" width="178" height="120" rx="8" fill="#FFF9EE" stroke="#C47B2B" stroke-width="1.5"/>
+    <rect x="0" y="0" width="178" height="28" rx="8" fill="#C47B2B" opacity="0.12"/>
+    <text x="89" y="19" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#C47B2B" text-anchor="middle" font-weight="bold">设计质量</text>
+    <text x="10" y="44" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">问：整体是否像一个</text>
+    <text x="10" y="58" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">有机整体，而非零件</text>
+    <text x="10" y="72" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">的拼凑？</text>
+    <text x="10" y="92" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">一致性 / 氛围感 /</text>
+    <text x="10" y="107" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">品牌身份感</text>
+
+    <!-- Dimension 2 -->
+    <rect x="190" y="0" width="178" height="120" rx="8" fill="#FFF9EE" stroke="#B8860B" stroke-width="1.5"/>
+    <rect x="190" y="0" width="178" height="28" rx="8" fill="#B8860B" opacity="0.12"/>
+    <text x="279" y="19" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#B8860B" text-anchor="middle" font-weight="bold">原创性</text>
+    <text x="200" y="44" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">明确惩罚 AI 套路：</text>
+    <text x="200" y="58" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#CC4444" font-weight="bold">紫色渐变 + 白色卡片</text>
+    <text x="200" y="72" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">= 自动扣分</text>
+    <text x="200" y="92" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">是否有独特视角，</text>
+    <text x="200" y="107" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">还是千篇一律</text>
+
+    <!-- Dimension 3 -->
+    <rect x="380" y="0" width="178" height="120" rx="8" fill="#FFF9EE" stroke="#A0522D" stroke-width="1.5"/>
+    <rect x="380" y="0" width="178" height="28" rx="8" fill="#A0522D" opacity="0.12"/>
+    <text x="469" y="19" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#A0522D" text-anchor="middle" font-weight="bold">工艺感</text>
+    <text x="390" y="44" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">排版层级是否清晰？</text>
+    <text x="390" y="58" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">间距是否合理？</text>
+    <text x="390" y="72" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">色彩对比度是否达标？</text>
+    <text x="390" y="92" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">Typography / Spacing /</text>
+    <text x="390" y="107" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">Contrast ratio</text>
+
+    <!-- Dimension 4 -->
+    <rect x="570" y="0" width="170" height="120" rx="8" fill="#FFF9EE" stroke="#8B4513" stroke-width="1.5"/>
+    <rect x="570" y="0" width="170" height="28" rx="8" fill="#8B4513" opacity="0.12"/>
+    <text x="655" y="19" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#8B4513" text-anchor="middle" font-weight="bold">功能性</text>
+    <text x="580" y="44" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">用户能否完成核心</text>
+    <text x="580" y="58" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">任务流程？</text>
+    <text x="580" y="72" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">交互是否直观可用？</text>
+    <text x="580" y="92" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">Playwright 实际</text>
+    <text x="580" y="107" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#8B7355" font-style="italic">操作来验证</text>
+  </g>
+
+  <!-- Calibration detail -->
+  <g transform="translate(30, 375)">
+    <rect width="740" height="75" rx="10" fill="#FFF0E8" stroke="#C47B2B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#C47B2B" font-weight="bold">评估器校准方法：少样本对齐</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+    <text x="20" y="54" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">准备若干带详细评分解析的示例 → 喂给评估器做 few-shot prompt → 确保它的判断和人类偏好对齐</text>
+    <text x="20" y="70" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#8B7355">目的：减少跨迭代的"分数漂移"——同样质量的输出每次打分不一样，会让优化方向失去意义</text>
+  </g>
+
+  <!-- Key observation -->
+  <g transform="translate(30, 468)">
+    <rect width="740" height="90" rx="10" fill="#FFF9EE" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#B8860B" font-weight="bold">一个重要发现</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+    <circle cx="30" cy="54" r="3" fill="#B8860B"/>
+    <text x="42" y="58" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">Claude 对"工艺感"和"功能性"的默认表现较好；但"设计质量"和"原创性"需要在提示词中明确强调才有效</text>
+    <circle cx="30" cy="78" r="3" fill="#B8860B"/>
+    <text x="42" y="82" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">即使第一轮无任何提示词，输出质量也"明显优于基线"——说明评估标准本身就在引导生成方向</text>
+  </g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#37352F">Opus 4.7 的三个转向</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#787066">不是"更强一点"，而是优化重点从能力峰值转到效率、持续性、工作流</text>
+
+  <!-- Shift 1: token efficiency -->
+  <g transform="translate(50, 100)">
+    <rect width="700" height="130" rx="12" fill="#F7F7F5"/>
+    <circle cx="48" cy="48" r="26" fill="#2383E2"/>
+    <text x="48" y="54" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">1</text>
+    <text x="90" y="38" font-size="16" font-weight="700" fill="#37352F">从 "能力天花板" 到 "token 效率"</text>
+    <text x="90" y="64" font-size="13" fill="#6B6052">Opus 4.7 xhigh 100k token · 性能 ≈ Opus 4.6 max 200k token</text>
+
+    <!-- visualization: two bars -->
+    <g transform="translate(90, 80)">
+      <text x="0" y="0" font-size="11" fill="#6B6052">Opus 4.6 max</text>
+      <rect x="100" y="-12" width="300" height="14" fill="#C0C0C0"/>
+      <text x="405" y="0" font-size="11" fill="#6B6052">200k · 同分数</text>
+
+      <text x="0" y="26" font-size="11" fill="#2383E2" font-weight="700">Opus 4.7 xhigh</text>
+      <rect x="100" y="14" width="150" height="14" fill="#2383E2"/>
+      <text x="255" y="26" font-size="11" fill="#2383E2" font-weight="700">100k · 省一半</text>
+    </g>
+  </g>
+
+  <!-- Shift 2: long-running -->
+  <g transform="translate(50, 246)">
+    <rect width="700" height="130" rx="12" fill="#F7F7F5"/>
+    <circle cx="48" cy="48" r="26" fill="#EB5757"/>
+    <text x="48" y="54" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">2</text>
+    <text x="90" y="38" font-size="16" font-weight="700" fill="#37352F">从 "一次响应" 到 "数小时持续"</text>
+    <text x="90" y="64" font-size="13" fill="#6B6052">Task Budget 给 Claude 一个 running countdown · Auto Mode 授权无人值守</text>
+
+    <g transform="translate(90, 84)">
+      <rect x="0" y="0" width="560" height="22" rx="4" fill="#FFE4E4"/>
+      <rect x="0" y="0" width="200" height="22" rx="4" fill="#EB5757"/>
+      <text x="10" y="15" font-size="11" fill="#FFFFFF" font-weight="700">已用 35%</text>
+      <text x="210" y="15" font-size="11" fill="#EB5757">剩余 token 预算 · 模型自行决定优先级</text>
+    </g>
+  </g>
+
+  <!-- Shift 3: commands -->
+  <g transform="translate(50, 392)">
+    <rect width="700" height="130" rx="12" fill="#F7F7F5"/>
+    <circle cx="48" cy="48" r="26" fill="#7C3AED"/>
+    <text x="48" y="54" text-anchor="middle" font-size="20" font-weight="800" fill="#FFFFFF">3</text>
+    <text x="90" y="38" font-size="16" font-weight="700" fill="#37352F">从 "模型即终点" 到 "命令化工作流"</text>
+    <text x="90" y="64" font-size="13" fill="#6B6052">/ultrareview 把结构化代码审查打包成命令 · Anthropic 首次下场产品层</text>
+
+    <g transform="translate(90, 82)" font-family="SF Mono, Menlo, monospace">
+      <rect x="0" y="0" width="250" height="30" rx="4" fill="#1F1A14"/>
+      <text x="12" y="20" font-size="13" fill="#7DDAA8">/ultrareview</text>
+      <text x="260" y="20" font-size="12" fill="#6B6052" font-family="PingFang SC, sans-serif">架构 · 安全 · 性能 · 可维护性</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="bold" fill="#37352F">版本考古学：六维技术演进对比</text>
+  <text x="400" y="56" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999">v0.2.8 (2025.02) vs v2.1.88 (2026.03)</text>
+
+  <!-- Legend -->
+  <rect x="280" y="68" width="12" height="12" rx="2" fill="#2383E2" opacity="0.3"/>
+  <text x="298" y="79" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">v0.2.8</text>
+  <rect x="370" y="68" width="12" height="12" rx="2" fill="#EB5757" opacity="0.8"/>
+  <text x="388" y="79" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">v2.1.88</text>
+
+  <!-- Row 1: Scale -->
+  <rect x="40" y="100" width="720" height="62" rx="8" fill="#F7F7F5"/>
+  <text x="60" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">规模</text>
+  <text x="60" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">代码量</text>
+  <rect x="200" y="112" width="20" height="20" rx="4" fill="#2383E2" opacity="0.3"/>
+  <text x="228" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2">单文件 cli.mjs</text>
+  <rect x="420" y="108" width="320" height="28" rx="4" fill="#EB5757" opacity="0.15"/>
+  <text x="430" y="127" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" font-weight="bold">1,902 文件 | 512,685 行 | 35 个目录</text>
+  <text x="660" y="150" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757">100x+</text>
+
+  <!-- Row 2: Architecture -->
+  <rect x="40" y="172" width="720" height="62" rx="8" fill="#FFFFFF" stroke="#E8E8E4" stroke-width="1"/>
+  <text x="60" y="197" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">架构</text>
+  <text x="60" y="220" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">核心循环</text>
+  <rect x="200" y="187" width="100" height="20" rx="4" fill="#2383E2" opacity="0.3"/>
+  <text x="210" y="201" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">while + API</text>
+  <rect x="420" y="184" width="320" height="26" rx="4" fill="#EB5757" opacity="0.15"/>
+  <text x="430" y="202" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">五步流水线: Snip-微压缩-折叠-压缩-组装</text>
+
+  <!-- Row 3: Security -->
+  <rect x="40" y="244" width="720" height="62" rx="8" fill="#F7F7F5"/>
+  <text x="60" y="269" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">安全</text>
+  <text x="60" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">防御体系</text>
+  <rect x="200" y="259" width="80" height="20" rx="4" fill="#2383E2" opacity="0.3"/>
+  <text x="210" y="273" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">基础检查</text>
+  <rect x="420" y="256" width="320" height="26" rx="4" fill="#EB5757" opacity="0.15"/>
+  <text x="430" y="274" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">9,300 行 | 四层纵深 | 23 种模式 | AI 分类器</text>
+
+  <!-- Row 4: Memory -->
+  <rect x="40" y="316" width="720" height="62" rx="8" fill="#FFFFFF" stroke="#E8E8E4" stroke-width="1"/>
+  <text x="60" y="341" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">记忆</text>
+  <text x="60" y="364" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">持久化系统</text>
+  <rect x="200" y="334" width="50" height="18" rx="4" fill="#E0E0E0"/>
+  <text x="210" y="347" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">无</text>
+  <rect x="420" y="328" width="320" height="26" rx="4" fill="#EB5757" opacity="0.15"/>
+  <text x="430" y="346" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">三层: CLAUDE.md + auto memory + autoDream</text>
+
+  <!-- Row 5: Agent -->
+  <rect x="40" y="388" width="720" height="62" rx="8" fill="#F7F7F5"/>
+  <text x="60" y="413" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">Agent</text>
+  <text x="60" y="436" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">协作体系</text>
+  <rect x="200" y="406" width="50" height="18" rx="4" fill="#E0E0E0"/>
+  <text x="210" y="419" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">单体</text>
+  <rect x="420" y="400" width="320" height="26" rx="4" fill="#EB5757" opacity="0.15"/>
+  <text x="430" y="418" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">三层: 子Agent + Fork(缓存共享) + Coordinator</text>
+
+  <!-- Row 6: Hidden features -->
+  <rect x="40" y="460" width="720" height="50" rx="8" fill="#FFFFFF" stroke="#E8E8E4" stroke-width="1"/>
+  <text x="60" y="485" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">隐藏功能</text>
+  <rect x="200" y="475" width="50" height="18" rx="4" fill="#E0E0E0"/>
+  <text x="210" y="488" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">无</text>
+  <rect x="420" y="472" width="320" height="26" rx="4" fill="#EB5757" opacity="0.15"/>
+  <text x="430" y="490" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">44 flags: KAIROS + Buddy + Undercover + Bridge...</text>
+</svg>

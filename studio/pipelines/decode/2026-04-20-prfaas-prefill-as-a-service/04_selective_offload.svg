@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #FFFFFF; }
+    .h1 { font: 700 20px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .h2 { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .label { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .desc { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #666; }
+    .tag { font: 500 11px 'PingFang SC', Inter, sans-serif; fill: #888; }
+    .note { font: 500 12px 'PingFang SC', Inter, sans-serif; fill: #2383E2; }
+    .short { fill: #E3F1FF; stroke: #2383E2; stroke-width: 1.5; }
+    .long { fill: #FFF4E0; stroke: #FFB020; stroke-width: 1.5; }
+    .router { fill: #FFFFFF; stroke: #37352F; stroke-width: 2; }
+    .dest { fill: #F7F7F5; stroke: #666; stroke-width: 1.5; }
+    .flow { stroke: #666; stroke-width: 1.5; fill: none; }
+    .flow-long { stroke: #FFB020; stroke-width: 2.5; fill: none; }
+    .flow-short { stroke: #2383E2; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="h1" x="40" y="38">选择性卸载：只让长请求走跨 DC 通道</text>
+  <text class="desc" x="40" y="60">阈值 t=19.4K tokens — 论文 Figure 5 寻优结果，约 50% 请求被卸载</text>
+
+  <!-- incoming requests -->
+  <text class="h2" x="40" y="110">进入的请求</text>
+  <rect class="short" x="40" y="125" width="80" height="24" rx="3"/>
+  <text class="tag" x="50" y="142">5K tokens</text>
+  <rect class="long" x="40" y="160" width="140" height="24" rx="3"/>
+  <text class="tag" x="50" y="177">42K tokens</text>
+  <rect class="short" x="40" y="195" width="60" height="24" rx="3"/>
+  <text class="tag" x="50" y="212">2K tokens</text>
+  <rect class="long" x="40" y="230" width="180" height="24" rx="3"/>
+  <text class="tag" x="50" y="247">80K tokens</text>
+  <rect class="short" x="40" y="265" width="70" height="24" rx="3"/>
+  <text class="tag" x="50" y="282">3K tokens</text>
+  <rect class="long" x="40" y="300" width="160" height="24" rx="3"/>
+  <text class="tag" x="50" y="317">55K tokens</text>
+
+  <!-- Router -->
+  <rect class="router" x="300" y="180" width="180" height="120" rx="10"/>
+  <text class="h2" x="338" y="210">路由分发器</text>
+  <text class="label" x="320" y="240">if length &gt; t (19.4K):</text>
+  <text class="label" x="335" y="258" fill="#FFB020">→ PrfaaS 集群</text>
+  <text class="label" x="320" y="278">else:</text>
+  <text class="label" x="335" y="296" fill="#2383E2">→ 本地 PD 集群</text>
+
+  <!-- arrows from requests to router -->
+  <path class="flow" d="M 220 140 Q 270 180 300 220"/>
+  <path class="flow" d="M 220 172 Q 270 190 300 230"/>
+  <path class="flow" d="M 220 205 Q 270 215 300 240"/>
+  <path class="flow" d="M 220 242 Q 270 245 300 252"/>
+  <path class="flow" d="M 220 275 Q 270 275 300 262"/>
+  <path class="flow" d="M 220 312 Q 270 305 300 275"/>
+
+  <!-- Targets -->
+  <rect class="dest" x="560" y="95" width="200" height="130" rx="10" stroke="#FFB020"/>
+  <text class="h2" x="580" y="120" fill="#FFB020">PrfaaS 集群（跨 DC）</text>
+  <text class="tag" x="580" y="138">32× H200，算力密度最大化</text>
+  <rect class="long" x="580" y="150" width="130" height="20" rx="3"/>
+  <rect class="long" x="580" y="175" width="150" height="20" rx="3"/>
+  <rect class="long" x="580" y="200" width="140" height="20" rx="3"/>
+  <text class="tag" x="580" y="234" fill="#666">长请求 prefill 专属</text>
+
+  <rect class="dest" x="560" y="265" width="200" height="130" rx="10" stroke="#2383E2"/>
+  <text class="h2" x="580" y="290" fill="#2383E2">本地 PD 集群</text>
+  <text class="tag" x="580" y="308">64× H20，带宽/decode 型</text>
+  <rect class="short" x="580" y="320" width="70" height="20" rx="3"/>
+  <rect class="short" x="580" y="345" width="60" height="20" rx="3"/>
+  <rect class="short" x="580" y="370" width="80" height="20" rx="3"/>
+
+  <!-- arrows from router to destinations -->
+  <path class="flow-long" d="M 480 220 Q 520 190 560 160"/>
+  <polygon points="558,156 565,165 554,168" fill="#FFB020"/>
+  <path class="flow-short" d="M 480 270 Q 520 295 560 320"/>
+  <polygon points="558,316 565,325 554,328" fill="#2383E2"/>
+
+  <text class="note" x="40" y="410" fill="#37352F" font-weight="700">为什么分流</text>
+  <text class="desc" x="40" y="430">短请求本地跑完就好 —— 跨 DC 传输反而增加延迟、浪费稀缺带宽</text>
+  <text class="desc" x="40" y="448">长请求 prefill 成本极高 —— 加上跨 DC 传输仍划算，还能借 H200 算力优势</text>
+  <text class="desc" x="40" y="466">本质：让跨 DC 带宽这种稀缺资源，集中用在 ROI 最高的地方</text>
+</svg>

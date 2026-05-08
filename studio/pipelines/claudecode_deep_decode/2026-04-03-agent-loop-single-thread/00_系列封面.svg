@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2383E2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <!-- Series header -->
+  <rect x="0" y="0" width="800" height="56" fill="#F7F7F5"/>
+  <text x="32" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Claude Code 源码拆解系列 #5</text>
+
+  <!-- Title -->
+  <text x="400" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="bold" fill="#37352F" text-anchor="middle">单线程 Agent Loop</text>
+  <text x="400" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#787774" text-anchor="middle">为什么 Claude Code 不用 Swarm</text>
+
+  <!-- Central loop visualization -->
+  <rect x="300" y="180" width="200" height="50" rx="25" fill="#2383E2" opacity="0.1" stroke="#2383E2" stroke-width="2"/>
+  <text x="400" y="210" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2" text-anchor="middle">while (true)</text>
+
+  <!-- Loop arrows -->
+  <path d="M 500 205 C 560 205, 560 275, 500 275" fill="none" stroke="#2383E2" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <path d="M 300 275 C 240 275, 240 205, 300 205" fill="none" stroke="#2383E2" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Four steps around the loop -->
+  <rect x="80" y="250" width="140" height="36" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="150" y="273" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">1. 准备上下文</text>
+
+  <rect x="240" y="290" width="140" height="36" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="310" y="313" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">2. 调用 API</text>
+
+  <rect x="420" y="290" width="140" height="36" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="490" y="313" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">3. 执行工具</text>
+
+  <rect x="580" y="250" width="140" height="36" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="650" y="273" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">4. 判断继续?</text>
+
+  <!-- Bottom insight -->
+  <line x1="100" y1="370" x2="700" y2="370" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" text-anchor="middle" font-weight="bold">模型即调度器：不需要外部编排框架，模型自己决定下一步做什么</text>
+  <text x="400" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">query.ts:307 | 单线程 + prompt cache 92% 命中率 | 三套多 Agent 系统全部 opt-in</text>
+</svg>

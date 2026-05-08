@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" font-family="PingFang SC, Inter, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">权限边界矩阵: 推测执行的刹车系统</text>
+
+  <!-- Table header -->
+  <rect x="30" y="56" width="740" height="36" rx="8" fill="#37352F"/>
+  <text x="100" y="79" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">工具类别</text>
+  <text x="290" y="79" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">示例</text>
+  <text x="510" y="79" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">推测中行为</text>
+  <text x="690" y="79" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">边界类型</text>
+
+  <!-- Row 1: Green - Safe read-only -->
+  <rect x="30" y="96" width="740" height="52" rx="0" fill="#4DB6AC" opacity="0.08"/>
+  <rect x="30" y="96" width="6" height="52" fill="#4DB6AC"/>
+  <circle cx="50" cy="122" r="8" fill="#4DB6AC" opacity="0.3"/>
+  <text x="100" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#4DB6AC">安全只读</text>
+  <text x="290" y="114" text-anchor="middle" font-size="11" fill="#787774">Read, Glob, Grep,</text>
+  <text x="290" y="132" text-anchor="middle" font-size="11" fill="#787774">LSP, ToolSearch</text>
+  <rect x="440" y="108" width="140" height="28" rx="8" fill="#4DB6AC" opacity="0.15"/>
+  <text x="510" y="127" text-anchor="middle" font-size="13" font-weight="bold" fill="#4DB6AC">自由使用</text>
+  <text x="690" y="126" text-anchor="middle" font-size="12" fill="#787774">-</text>
+
+  <!-- Row 2: Blue - File write -->
+  <rect x="30" y="152" width="740" height="52" rx="0" fill="#2383E2" opacity="0.06"/>
+  <rect x="30" y="152" width="6" height="52" fill="#2383E2"/>
+  <circle cx="50" cy="178" r="8" fill="#2383E2" opacity="0.3"/>
+  <text x="100" y="174" text-anchor="middle" font-size="13" font-weight="bold" fill="#2383E2">文件写入</text>
+  <text x="290" y="170" text-anchor="middle" font-size="11" fill="#787774">Edit, Write,</text>
+  <text x="290" y="188" text-anchor="middle" font-size="11" fill="#787774">NotebookEdit</text>
+  <rect x="440" y="164" width="140" height="28" rx="8" fill="#2383E2" opacity="0.12"/>
+  <text x="510" y="183" text-anchor="middle" font-size="12" font-weight="bold" fill="#2383E2">重定向到 Overlay</text>
+  <rect x="640" y="168" width="100" height="22" rx="8" fill="#2383E2" opacity="0.12"/>
+  <text x="690" y="183" text-anchor="middle" font-size="11" fill="#2383E2">edit</text>
+
+  <!-- Row 3: Yellow - Bash -->
+  <rect x="30" y="208" width="740" height="52" rx="0" fill="#FFB020" opacity="0.08"/>
+  <rect x="30" y="208" width="6" height="52" fill="#FFB020"/>
+  <circle cx="50" cy="234" r="8" fill="#FFB020" opacity="0.3"/>
+  <text x="100" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#C48800">Bash命令</text>
+  <text x="290" y="226" text-anchor="middle" font-size="11" fill="#787774">git diff, rg,</text>
+  <text x="290" y="244" text-anchor="middle" font-size="11" fill="#787774">find</text>
+  <rect x="440" y="220" width="140" height="28" rx="8" fill="#FFB020" opacity="0.12"/>
+  <text x="510" y="239" text-anchor="middle" font-size="12" font-weight="bold" fill="#C48800">仅只读命令</text>
+  <rect x="640" y="224" width="100" height="22" rx="8" fill="#FFB020" opacity="0.12"/>
+  <text x="690" y="239" text-anchor="middle" font-size="11" fill="#C48800">bash</text>
+
+  <!-- Row 4: Red - Other tools -->
+  <rect x="30" y="264" width="740" height="52" rx="0" fill="#EB5757" opacity="0.06"/>
+  <rect x="30" y="264" width="6" height="52" fill="#EB5757"/>
+  <circle cx="50" cy="290" r="8" fill="#EB5757" opacity="0.3"/>
+  <text x="100" y="286" text-anchor="middle" font-size="13" font-weight="bold" fill="#EB5757">其他工具</text>
+  <text x="290" y="282" text-anchor="middle" font-size="11" fill="#787774">WebFetch, Agent,</text>
+  <text x="290" y="300" text-anchor="middle" font-size="11" fill="#787774">MCP</text>
+  <rect x="440" y="276" width="140" height="28" rx="8" fill="#EB5757" opacity="0.12"/>
+  <text x="510" y="295" text-anchor="middle" font-size="12" font-weight="bold" fill="#EB5757">无条件拒绝</text>
+  <rect x="640" y="280" width="100" height="22" rx="8" fill="#EB5757" opacity="0.12"/>
+  <text x="690" y="295" text-anchor="middle" font-size="11" fill="#EB5757">denied_tool</text>
+
+  <!-- Bottom annotation box -->
+  <rect x="30" y="340" width="740" height="50" rx="8" fill="#37352F" opacity="0.04" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="362" text-anchor="middle" font-size="14" fill="#37352F">
+    <tspan font-weight="bold">设计哲学: Deny by Default</tspan>
+    <tspan fill="#787774"> -- 不在白名单里的一律不做</tspan>
+  </text>
+  <text x="400" y="382" text-anchor="middle" font-size="11" fill="#787774">安全边界从"允许列表"出发，而非"禁止列表"。推测执行永远不会比人类操作更激进</text>
+
+  <!-- Bottom border -->
+  <rect x="0" y="416" width="800" height="4" fill="#EB5757" opacity="0.3"/>
+</svg>

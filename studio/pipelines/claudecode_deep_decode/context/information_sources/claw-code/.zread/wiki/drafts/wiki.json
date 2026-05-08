@@ -1,0 +1,237 @@
+{
+  "id": "2026-04-05-151334",
+  "generated_at": "2026-04-05T07:13:34.934327173Z",
+  "language": "zh",
+  "pages": [
+    {
+      "slug": "1-gai-shu",
+      "title": "概述",
+      "file": "1-gai-shu.md",
+      "section": "开始使用",
+      "level": "Beginner"
+    },
+    {
+      "slug": "2-kuai-su-kai-shi",
+      "title": "快速开始",
+      "file": "2-kuai-su-kai-shi.md",
+      "section": "开始使用",
+      "level": "Beginner"
+    },
+    {
+      "slug": "3-xiang-mu-yuan-jing-yu-jie-zhi-zhu-zhang",
+      "title": "项目愿景与价值主张",
+      "file": "3-xiang-mu-yuan-jing-yu-jie-zhi-zhu-zhang.md",
+      "section": "开始使用",
+      "group": "项目背景与理念",
+      "level": "Beginner"
+    },
+    {
+      "slug": "4-zi-zhu-kai-fa-zhe-xue",
+      "title": "自主开发哲学",
+      "file": "4-zi-zhu-kai-fa-zhe-xue.md",
+      "section": "开始使用",
+      "group": "项目背景与理念",
+      "level": "Beginner"
+    },
+    {
+      "slug": "5-sheng-tai-xi-tong-zu-jian-jie-shao",
+      "title": "生态系统组件介绍",
+      "file": "5-sheng-tai-xi-tong-zu-jian-jie-shao.md",
+      "section": "开始使用",
+      "group": "项目背景与理念",
+      "level": "Beginner"
+    },
+    {
+      "slug": "6-qian-zhi-yi-lai-yu-an-zhuang",
+      "title": "前置依赖与安装",
+      "file": "6-qian-zhi-yi-lai-yu-an-zhuang.md",
+      "section": "开始使用",
+      "group": "环境搭建",
+      "level": "Beginner"
+    },
+    {
+      "slug": "7-ren-zheng-yu-pei-zhi",
+      "title": "认证与配置",
+      "file": "7-ren-zheng-yu-pei-zhi.md",
+      "section": "开始使用",
+      "group": "环境搭建",
+      "level": "Beginner"
+    },
+    {
+      "slug": "8-shuang-yu-yan-shi-xian-jia-gou",
+      "title": "双语言实现架构",
+      "file": "8-shuang-yu-yan-shi-xian-jia-gou.md",
+      "section": "深入理解",
+      "group": "架构概览",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "9-rust-gong-zuo-kong-jian-jie-gou",
+      "title": "Rust 工作空间结构",
+      "file": "9-rust-gong-zuo-kong-jian-jie-gou.md",
+      "section": "深入理解",
+      "group": "架构概览",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "10-python-yi-zhi-gong-zuo-qu",
+      "title": "Python 移植工作区",
+      "file": "10-python-yi-zhi-gong-zuo-qu.md",
+      "section": "深入理解",
+      "group": "架构概览",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "11-yun-xing-shi-yin-qing-yu-dui-hua-xun-huan",
+      "title": "运行时引擎与对话循环",
+      "file": "11-yun-xing-shi-yin-qing-yu-dui-hua-xun-huan.md",
+      "section": "深入理解",
+      "group": "核心模块详解",
+      "level": "Advanced"
+    },
+    {
+      "slug": "12-gong-ju-xi-tong-shi-xian",
+      "title": "工具系统实现",
+      "file": "12-gong-ju-xi-tong-shi-xian.md",
+      "section": "深入理解",
+      "group": "核心模块详解",
+      "level": "Advanced"
+    },
+    {
+      "slug": "13-ming-ling-yu-xie-gang-ming-ling-xi-tong",
+      "title": "命令与斜杠命令系统",
+      "file": "13-ming-ling-yu-xie-gang-ming-ling-xi-tong.md",
+      "section": "深入理解",
+      "group": "核心模块详解",
+      "level": "Advanced"
+    },
+    {
+      "slug": "14-quan-xian-yu-an-quan-mo-xing",
+      "title": "权限与安全模型",
+      "file": "14-quan-xian-yu-an-quan-mo-xing.md",
+      "section": "深入理解",
+      "group": "核心模块详解",
+      "level": "Advanced"
+    },
+    {
+      "slug": "15-hui-hua-guan-li-yu-chi-jiu-hua",
+      "title": "会话管理与持久化",
+      "file": "15-hui-hua-guan-li-yu-chi-jiu-hua.md",
+      "section": "深入理解",
+      "group": "核心模块详解",
+      "level": "Advanced"
+    },
+    {
+      "slug": "16-anthropic-api-ke-hu-duan",
+      "title": "Anthropic API 客户端",
+      "file": "16-anthropic-api-ke-hu-duan.md",
+      "section": "深入理解",
+      "group": "API 与集成",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "17-mcp-fu-wu-qi-sheng-ming-zhou-qi",
+      "title": "MCP 服务器生命周期",
+      "file": "17-mcp-fu-wu-qi-sheng-ming-zhou-qi.md",
+      "section": "深入理解",
+      "group": "API 与集成",
+      "level": "Advanced"
+    },
+    {
+      "slug": "18-cha-jian-xi-tong-jia-gou",
+      "title": "插件系统架构",
+      "file": "18-cha-jian-xi-tong-jia-gou.md",
+      "section": "深入理解",
+      "group": "API 与集成",
+      "level": "Advanced"
+    },
+    {
+      "slug": "19-yao-ce-yu-zhui-zong",
+      "title": "遥测与追踪",
+      "file": "19-yao-ce-yu-zhui-zong.md",
+      "section": "深入理解",
+      "group": "API 与集成",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "20-jiao-hu-shi-repl-mo-shi",
+      "title": "交互式 REPL 模式",
+      "file": "20-jiao-hu-shi-repl-mo-shi.md",
+      "section": "深入理解",
+      "group": "CLI 使用指南",
+      "level": "Beginner"
+    },
+    {
+      "slug": "21-dan-ci-ti-shi-yu-zi-dong-hua",
+      "title": "单次提示与自动化",
+      "file": "21-dan-ci-ti-shi-yu-zi-dong-hua.md",
+      "section": "深入理解",
+      "group": "CLI 使用指南",
+      "level": "Beginner"
+    },
+    {
+      "slug": "22-hui-hua-guan-li-yu-hui-fu",
+      "title": "会话管理与恢复",
+      "file": "22-hui-hua-guan-li-yu-hui-fu.md",
+      "section": "深入理解",
+      "group": "CLI 使用指南",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "23-mo-xing-yu-quan-xian-kong-zhi",
+      "title": "模型与权限控制",
+      "file": "23-mo-xing-yu-quan-xian-kong-zhi.md",
+      "section": "深入理解",
+      "group": "CLI 使用指南",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "24-mock-qi-ou-xing-ce-shi-kuang-jia",
+      "title": "Mock 奇偶性测试框架",
+      "file": "24-mock-qi-ou-xing-ce-shi-kuang-jia.md",
+      "section": "深入理解",
+      "group": "测试与验证",
+      "level": "Advanced"
+    },
+    {
+      "slug": "25-gong-zuo-kong-jian-ce-shi-ce-lue",
+      "title": "工作空间测试策略",
+      "file": "25-gong-zuo-kong-jian-ce-shi-ce-lue.md",
+      "section": "深入理解",
+      "group": "测试与验证",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "26-zi-zhu-kai-fa-gong-zuo-liu-she-ji",
+      "title": "自主开发工作流设计",
+      "file": "26-zi-zhu-kai-fa-gong-zuo-liu-she-ji.md",
+      "section": "深入理解",
+      "group": "高级主题",
+      "level": "Advanced"
+    },
+    {
+      "slug": "27-shi-jian-qu-dong-xie-diao-xi-tong",
+      "title": "事件驱动协调系统",
+      "file": "27-shi-jian-qu-dong-xie-diao-xi-tong.md",
+      "section": "深入理解",
+      "group": "高级主题",
+      "level": "Advanced"
+    },
+    {
+      "slug": "28-hui-fu-xun-huan-yu-rong-cuo-ji-zhi",
+      "title": "恢复循环与容错机制",
+      "file": "28-hui-fu-xun-huan-yu-rong-cuo-ji-zhi.md",
+      "section": "深入理解",
+      "group": "高级主题",
+      "level": "Advanced"
+    },
+    {
+      "slug": "29-kai-fa-lu-xian-tu",
+      "title": "开发路线图",
+      "file": "29-kai-fa-lu-xian-tu.md",
+      "section": "深入理解",
+      "group": "高级主题",
+      "level": "Advanced"
+    }
+  ]
+}

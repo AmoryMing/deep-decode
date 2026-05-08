@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect x="40" y="40" width="720" height="370" rx="12" fill="none" stroke="#e94560" stroke-width="2" opacity="0.6"/>
+  <text x="400" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#e94560" letter-spacing="6">AI ALIGNMENT DEEP DECODE</text>
+  <text x="400" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="42" fill="#FFFFFF" font-weight="bold">不是叛逆，是不守规矩</text>
+  <text x="400" y="260" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#a8a8b3">AI 对齐的第三种范式</text>
+  <line x1="300" y1="290" x2="500" y2="290" stroke="#e94560" stroke-width="2"/>
+  <text x="400" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#a8a8b3">基于 Anthropic Alignment Risk Update (60页) 逐行拆解</text>
+  <text x="400" y="360" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">Claude Mythos Preview | 2026-04-12</text>
+</svg>

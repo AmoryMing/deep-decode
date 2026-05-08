@@ -1,0 +1,83 @@
+嘿朋友，欢迎回来，今天聊一个很重要的事情。
+
+就是最近两周，AI 圈子里发生了一场小型战争。战场不在模型，在 harness。如果你不知道 harness 是什么，没关系，花十分钟我讲清楚——而且这件事可能决定了你做的 AI 产品未来三年的命运。
+
+先把时间线摆出来，你看完就懂这不是巧合。三月三十一号，Anthropic 的 Claude Code 源码泄漏了，51.2 万行 TypeScript，全球开发者扒了个底朝天。四月二号，Letta 公司发布了一个叫 Context Constitution 的东西，翻译过来就是"上下文宪章"。四月三号，Letta 的 CTO Sarah Wooders 发了条推，标题叫 Memory 不是插件，Memory 就是 harness。到了四月八号，Anthropic 出手，发布 Managed Agents 公测，按小时收费，0.08 美金一小时。四月十号前后，LangChain 紧跟着发了 Deep Agents Deploy，博客标题一刀见血——open alternative to Claude Managed Agents，翻译过来就是"开源版的 Managed Agents"。第二天，四月十一号，LangChain CEO Harrison Chase 发长推，1.8 M 阅读，标题叫 Your Harness Your Memory——你的 harness，你的 memory。
+
+十二天里六个动作，两家公司一个立场。这不是各写各的博客，这是 LangChain 和 Letta 两家公司，联合起来，对 Anthropic 开了第一枪。
+
+说到这儿，我们先把 harness 这个词搞清楚。什么是 harness？你可以理解为"智能体脚手架"。它是包裹在大模型外面那一层控制代码——接消息、调模型、解析输出、路由工具调用、把结果喂回模型。你用的 Claude Code，其实就是一个 harness，模型是 Claude，但把 Claude 变成能帮你写代码、能跑 bash、能读文件的那个东西，是 harness 这 51.2 万行代码在做事。
+
+[转场]
+
+有意思的是，AI 圈过去一年半有个主流观点——模型会越来越强，最终会把 harness 吃掉。意思是 scaffolding 这些外部代码，会随着模型内化消失。Harrison 的第一个论点就是反这个。他说你们错了。证据呢？他说你们看 Claude Code 泄漏多少行？51.2 万行。连做世界最好模型的 Anthropic 自己，都在疯狂投资 harness。
+
+而且有个隐藏的反常识结论——模型越强，harness 反而越重要，不是越轻。为什么？因为模型越强，agent 能做的事越复杂。要管的状态、工具、多 agent 协作、长期记忆，都变多了。这里藏着一个判断，值得你记住——你以为 LangChain 会被 Claude 吃掉，实际情况是 Claude 自己也在成为另一个 LangChain。
+
+说完 harness，我们进第二个议题，也是全场最核心的一个概念重构——Sarah 提出来的：Memory 不是插件，Memory 就是 harness。
+
+她的原话特别精辟，用中文讲大概是——把 memory 插进 harness，就像把"开车"插进汽车里。你说什么？开车不就是汽车本来该做的事吗？对，这就是她要说的。管 context、因此也就是管 memory，本来就是 harness 的核心责任。如果一个 harness 不管 context，那它在做什么？
+
+[转场]
+
+她还列了七个问题，这七个问题只有 harness 能回答。你要是在做 AI 产品，这七个问题每一个都应该在你脑子里过一遍。AGENTS.md 这种配置文件怎么被加载进 context？Skill 的 metadata 放 system prompt 还是 system message？Agent 能不能改自己的系统指令？上下文压缩的时候，什么留什么丢？交互记录存不存？用户工作目录怎么表达？文件系统暴露多少？
+
+每一个问题都是 harness 在做决定，而且这些决定互相耦合，你没法只换其中一个。所以所谓"独立 memory 服务"，能干的只是这七个问题之外的残渣——而那部分，Letta 自己的 benchmark 都证明了，用 grep 就够了，RAG 相比 grep 没什么优势。
+
+这个重构的商业含义很大。你以为存在一个"memory 赛道"，其实不存在。存在的是"harness 赛道"。Mem0 这种做 memory 服务的公司，充其量只能做辅助层，核心话语权在 harness 那边。这也解释了为什么 LangChain 和 Letta 要同期发声——两家本质都在做 harness，都不想让 memory 被看成可以外采的组件。
+
+[转场]
+
+Sarah 把概念建立起来了，Harrison 负责把它武器化。他做了一张给 CTO 看的三级风险阶梯。
+
+第一级——轻度坏。你用 OpenAI 的 Responses API，或者 Anthropic 的服务端 compaction，状态存在对方服务器。想换模型继续之前的对话？不行，数据在人家那边。
+
+第二级——坏。你用 Claude Agent SDK，底层是闭源的 Claude Code。harness 怎么读写 memory 是黑盒。你不知道 agent 到底在怎么记东西，也不知道怎么把记忆迁移到别的 harness。
+
+第三级——最坏。Anthropic Managed Agents。整个 harness 加上长期 memory 全在 API 后面。零可见、零控制、零迁移。你的 agent 跟用户磨合出的所有模式——语气、偏好、历史判断——都是 Anthropic 的资产。
+
+Harrison 的原话——"这就是人们说'模型会吸收 harness'时，他们真正的意思——memory 相关的部分会全部搬到 API 后面。"
+
+[转场]
+
+VentureBeat 这家科技媒体独立做了报道，标题直接用 raises vendor lock-in risk，提高厂商锁定风险。里面一句话把命题坐实了——Session 数据存在 Anthropic 管理的数据库里，增加了企业被锁定到单一厂商系统的风险。这不是 LangChain 说的，是主流媒体替他们讲的话。
+
+讲到这儿我想给这个现象起个名字，就叫——状态锁定，Stateful Lock-in。这个词是我拆解这两篇文章过程里冒出来的。为什么？因为模型时代和 agent 时代的切换成本完全是两码事。
+
+模型时代 API 是 stateless 的，切换容易。你看过去两年，从 OpenAI 迁到 Anthropic，再从 Anthropic 迁到开源模型，整个行业迁了两三轮，每次都是几周搞定。这就像换个 USB 线的品牌。
+
+Agent 时代不一样，memory 是 stateful 的。切换成本断崖式爆炸。这不是"代码重写"能估算的工程成本，是"agent 跟用户磨合出的模式"这种没法用工时估值的资产。
+
+Harrison 自己亲历过这件事。他讲了个故事——他公司内部用 Fleet 模板搭了个邮件 Agent，跑了好几个月，累积了各种偏好 memory。前几周不小心被误删了，他整个气疯。用同样的模板重建，体验差了一大截——他得从头教它自己的偏好、语气、所有东西。
+
+这就是状态锁定的真正重量。它是一种经验难以言说的资产。你问用户——你的 agent 现在比刚用的时候好在哪？他答不上来，但他知道差很多。
+
+[转场]
+
+理解了这个命题，你就能看懂这一整套商业操作。
+
+Letta 那边——四月二号发 Context Constitution，四月三号 Sarah 发推，配套推广 Letta Code——一个 memory-first 的命令行工具。
+
+LangChain 这边——四月十号前后发 Deep Agents Deploy 这个产品，四月十一号 Harrison 发长推，文末还专门致谢 Sarah。
+
+两家联动，构建"开源派共识"的叙事。Deep Agents Deploy 用的是开放标准——agents.md、skills、MCP、A2A、Agent Protocol。支持 Mongo、Postgres、Redis 做 memory store。支持自托管。每一个设计点都在对标 Managed Agents，并且反着做。
+
+这是典型的——议题设置先行，产品落地跟上。先把 harness 和 memory 绑定的故事立起来，再把自家产品做成这个故事的最佳载体。做产品的朋友从这里学什么？叙事比 feature 先走一步。叙事定义了用户脑袋里的选择题。
+
+[转场]
+
+不过要客观一点——Harrison 这篇长推有两个没说出来的盲区，你最好知道。
+
+盲区一——开源 harness 也有 lock-in，只是形式不一样。Deep Agents 有自己的 TOML 配置、AGENTS.md 结构、LangSmith 部署生态。Letta Code 有 .af 文件格式、memory block 结构。这些都是生态锁定，比 API 锁定弱，但不是零。LangChain 自己这几年也经历了 chains 到 LangGraph 到 Deep Agents 三次架构换血，每次都有用户被甩下船。
+
+盲区二——自己托管 memory 的运维成本不低。Managed Agents 那些客户愿意付 0.08 美金一小时，根本原因不是贪懒，是 orchestration 真的把工程团队压扁了。开源 harness 那句"你拥有自己的 memory"背后，隐含的前提是"你养得起 DevOps"。小团队可能还是选 Managed Agents。
+
+好，最后给我的朋友们总结三个关键词带走。
+
+第一个——状态锁定。stateless API 时代切换便宜，stateful memory 时代切换爆炸。这是护城河的新形式。
+
+第二个——Memory 等于 Harness。不要再把 memory 当做可以外采的组件。它就是 harness 本身，选 harness 就是选 memory 归属。
+
+第三个——架构选型比模型选型重要十倍。模型可以每半年评估一次，但 harness 一旦选定，业务积累就开始单向沉淀进去。三年后你的 agent 跟用户的所有磨合——都只属于那个架构。
+
+好了今天就聊到这，我们下期见。

@@ -1,0 +1,122 @@
+{
+  "checked_at": "2026-04-07",
+  "claims": [
+    {
+      "claim": "51.2万行 TypeScript，1902个源文件",
+      "source": "多来源一致（架构全解密、源码深度解读、阿里云文章）",
+      "status": "VERIFIED",
+      "note": "AeroMind: '1902个源文件，512,685行 TypeScript'；架构全解密: '~1,900个文件，512,000+行'"
+    },
+    {
+      "claim": "直接与 LLM 交互的核心代码约 6,400 行",
+      "source": "AeroMind 源码深度解析",
+      "status": "VERIFIED",
+      "note": "原文: 'query.ts、QueryEngine.ts、claude.ts 加起来约 6400 行。剩下的 50 多万行，全是让 Agent 安全、高效、可靠地运行所需的工程基础设施。'"
+    },
+    {
+      "claim": "92次 LLM 调用处理约 200 万 token，92% 前缀复用率",
+      "source": "LMCache Blog (WebFetch 原文)",
+      "status": "VERIFIED",
+      "note": "原文: 'a real Claude Code execution trace containing 92 LLM calls processing ~2M tokens over 13 minutes, revealing a 92% prefix reuse rate'"
+    },
+    {
+      "claim": "不用缓存 $6.00，用缓存 $1.152，省 81%",
+      "source": "LMCache Blog",
+      "status": "VERIFIED",
+      "note": "原文计算: '2M input tokens × $3/million = $6.00' vs '(1.84M cache reads × $0.30) + (0.16M cache writes × $3.75) = $1.152'"
+    },
+    {
+      "claim": "Explore 阶段 92.06%, Plan 93.23%, Execute 97.83%",
+      "source": "LMCache Blog",
+      "status": "VERIFIED",
+      "note": "原文表格数据一致"
+    },
+    {
+      "claim": "p99.99 compact summary 输出 17,387 token",
+      "source": "AeroMind 源码深度解析",
+      "status": "VERIFIED",
+      "note": "原文: '触发阈值不是简单的百分比——用上下文窗口大小减去 20K token 的预留量，留给压缩摘要本身的输出。这个 20K 来自实际数据：p99.99 的 compact summary 输出是 17,387 token。'"
+    },
+    {
+      "claim": "SYSTEM_PROMPT_DYNAMIC_BOUNDARY 把静态和动态部分切开",
+      "source": "架构师公众号文章",
+      "status": "VERIFIED",
+      "note": "原文: 'SYSTEM_PROMPT_DYNAMIC_BOUNDARY 明确把静态前缀和动态部分切开'"
+    },
+    {
+      "claim": "Sebastian Raschka 是 Lightning AI 研究工程师",
+      "source": "信息源表 + tavily 搜索",
+      "status": "VERIFIED",
+      "note": "信息源表: 'Lightning AI 研究工程师 / ML 畅销书作者'"
+    },
+    {
+      "claim": "Raschka 推测把 GLM-5 放进同样 harness 性能可能比肩 Claude/GPT",
+      "source": "tavily 搜索 magazine.sebastianraschka.com",
+      "status": "VERIFIED",
+      "note": "原文: 'I suspect that if we dropped one of the latest, most capable open-weight LLMs, such as GLM-5, into a similar harness, it could likely perform on par with GPT-5.4 in Codex or Claude Opus 4.6 in Claude Code.'"
+    },
+    {
+      "claim": "isConcurrencySafe 默认 false, isReadOnly 默认 false",
+      "source": "架构师公众号文章",
+      "status": "VERIFIED",
+      "note": "原文: 'buildTool() 背后的默认值是保守的。isConcurrencySafe 默认 false，isReadOnly 默认 false。'"
+    },
+    {
+      "claim": "shareAI-lab/learn-claude-code 获 47.6k stars",
+      "source": "信息源表",
+      "status": "VERIFIED_AT_TIME",
+      "note": "截至 2026-04-03 的数据，GitHub 指标持续变动"
+    },
+    {
+      "claim": "wizard 风格注释 (thinking blocks 处理规则)",
+      "source": "AeroMind 源码深度解析",
+      "status": "VERIFIED",
+      "note": "完整引用与原文一致"
+    },
+    {
+      "claim": "dmckinno 反驳 harness > model",
+      "source": "Threads @dmckinno, tavily 搜索确认",
+      "status": "VERIFIED",
+      "note": "直接引用原帖"
+    },
+    {
+      "claim": "Bilgin Ibryam 'best workflow design' 引用",
+      "source": "generativeprogrammer.com, tavily 搜索确认",
+      "status": "VERIFIED",
+      "note": "原文: 'The best coding agent is not the one with the cleverest instructions. It is the one with the best workflow design.'"
+    }
+  ],
+  "subjective_language_check": [
+    {
+      "expression": "前缀沉重架构",
+      "type": "原创概念命名",
+      "justified": true,
+      "note": "明确标注为'不是 Anthropic 官方用语，而是从源码结构里浮现出来的工程特征'，读者不会误解为官方术语"
+    },
+    {
+      "expression": "默认不信任",
+      "type": "原创概念命名",
+      "justified": true,
+      "note": "用源码事实支撑（isConcurrencySafe=false, isReadOnly=false），不是主观评价"
+    },
+    {
+      "expression": "模型是底座，harness 是杠杆",
+      "type": "分析判断",
+      "justified": true,
+      "note": "用反方论据（dmckinno）和源码证据（ant 分支联合调优）支撑，不是无根据的比喻"
+    }
+  ],
+  "qa_checklist": {
+    "numbers_traceable": true,
+    "no_wording_upgrade": true,
+    "english_quotes_match_source": true,
+    "names_spelling_correct": true,
+    "no_overclaimed_causation": true,
+    "blind_spot_not_fabricated": true,
+    "superlatives_justified": true,
+    "structure_matches_value_judgment": true,
+    "no_unmarked_emotional_language": true
+  },
+  "errors_found": [],
+  "status": "PASS"
+}

@@ -1,0 +1,50 @@
+<svg width="800" height="540" viewBox="0 0 800 540" xmlns="http://www.w3.org/2000/svg" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="400" y="45" text-anchor="middle" font-size="22" font-weight="bold" fill="#37352F">状态锁定：模型时代 vs Agent 时代</text>
+  <text x="400" y="72" text-anchor="middle" font-size="14" fill="#787774">stateless → stateful：切换成本发生断崖式突变</text>
+
+  <g>
+    <rect x="50" y="110" width="340" height="370" rx="12" fill="#F0FAF8" stroke="#4DB6AC" stroke-width="2"/>
+    <text x="220" y="145" text-anchor="middle" font-size="18" font-weight="bold" fill="#4DB6AC">模型时代</text>
+    <text x="220" y="168" text-anchor="middle" font-size="13" fill="#37352F">Stateless API</text>
+
+    <line x1="80" y1="185" x2="360" y2="185" stroke="#E3E2E0"/>
+
+    <text x="75" y="215" font-size="13" fill="#37352F" font-weight="600">切换成本：低</text>
+    <text x="75" y="240" font-size="12" fill="#787774">• 更新 API endpoint</text>
+    <text x="75" y="262" font-size="12" fill="#787774">• 调整 prompt 格式</text>
+    <text x="75" y="284" font-size="12" fill="#787774">• 重新跑评测</text>
+
+    <text x="75" y="320" font-size="13" fill="#37352F" font-weight="600">实证：</text>
+    <text x="75" y="344" font-size="12" fill="#787774">OpenAI → Anthropic</text>
+    <text x="75" y="364" font-size="12" fill="#787774">几周完成大规模迁移</text>
+
+    <rect x="75" y="395" width="290" height="60" rx="6" fill="#FFFFFF" stroke="#4DB6AC"/>
+    <text x="220" y="425" text-anchor="middle" font-size="13" fill="#4DB6AC" font-weight="bold">就像换个 USB 线品牌</text>
+    <text x="220" y="445" text-anchor="middle" font-size="11" fill="#787774">代码重写可估算，有明确工期</text>
+  </g>
+
+  <g>
+    <rect x="410" y="110" width="340" height="370" rx="12" fill="#FFF5F5" stroke="#EB5757" stroke-width="2"/>
+    <text x="580" y="145" text-anchor="middle" font-size="18" font-weight="bold" fill="#EB5757">Agent 时代</text>
+    <text x="580" y="168" text-anchor="middle" font-size="13" fill="#37352F">Stateful Memory</text>
+
+    <line x1="440" y1="185" x2="720" y2="185" stroke="#E3E2E0"/>
+
+    <text x="435" y="215" font-size="13" fill="#37352F" font-weight="600">切换成本：断崖式爆炸</text>
+    <text x="435" y="240" font-size="12" fill="#787774">• 用户偏好全部丢失</text>
+    <text x="435" y="262" font-size="12" fill="#787774">• 交互模式重新磨合</text>
+    <text x="435" y="284" font-size="12" fill="#787774">• 无法工时估算</text>
+
+    <text x="435" y="320" font-size="13" fill="#37352F" font-weight="600">实证（Harrison 亲历）：</text>
+    <text x="435" y="344" font-size="12" fill="#787774">邮件 Agent 误删重建</text>
+    <text x="435" y="364" font-size="12" fill="#EB5757">"体验差了一大截"</text>
+
+    <rect x="435" y="395" width="290" height="60" rx="6" fill="#FFFFFF" stroke="#EB5757"/>
+    <text x="580" y="425" text-anchor="middle" font-size="13" fill="#EB5757" font-weight="bold">就像换银行户头</text>
+    <text x="580" y="445" text-anchor="middle" font-size="11" fill="#787774">经验难以言说的资产，重建 = 从零</text>
+  </g>
+
+  <text x="400" y="515" text-anchor="middle" font-size="13" fill="#37352F" font-weight="600">Memory 不是"换个数据库"，是一整个重新设计的维度</text>
+</svg>

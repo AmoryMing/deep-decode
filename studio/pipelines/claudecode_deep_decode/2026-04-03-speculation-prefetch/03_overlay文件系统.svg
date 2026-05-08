@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" font-family="PingFang SC, Inter, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#787774"/>
+    </marker>
+    <marker id="arr-g" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4DB6AC"/>
+    </marker>
+    <marker id="arr-r" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EB5757"/>
+    </marker>
+    <marker id="arr-b" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2383E2"/>
+    </marker>
+    <marker id="arr-y" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFB020"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">Overlay 文件系统: 沙箱里的平行宇宙</text>
+
+  <!-- ==================== TOP LAYER: 主文件系统 ==================== -->
+  <rect x="40" y="50" width="720" height="120" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="60" y="74" font-size="14" font-weight="bold" fill="#37352F">主文件系统 (真实世界)</text>
+
+  <!-- File icons in main FS -->
+  <rect x="70" y="88" width="130" height="60" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <rect x="78" y="96" width="18" height="22" rx="2" fill="#E3E2E0"/>
+  <text x="80" y="112" font-size="8" fill="#FFFFFF">TS</text>
+  <text x="104" y="110" font-size="12" fill="#37352F">src/app.ts</text>
+  <text x="104" y="126" font-size="9" fill="#787774">120 行</text>
+
+  <rect x="220" y="88" width="130" height="60" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <rect x="228" y="96" width="18" height="22" rx="2" fill="#E3E2E0"/>
+  <text x="230" y="112" font-size="8" fill="#FFFFFF">TS</text>
+  <text x="254" y="110" font-size="12" fill="#37352F">src/test.ts</text>
+  <text x="254" y="126" font-size="9" fill="#787774">80 行</text>
+
+  <rect x="370" y="88" width="140" height="60" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <rect x="378" y="96" width="18" height="22" rx="2" fill="#E3E2E0"/>
+  <text x="380" y="112" font-size="8" fill="#FFFFFF">TS</text>
+  <text x="404" y="110" font-size="12" fill="#37352F">src/utils.ts</text>
+  <text x="404" y="126" font-size="9" fill="#787774">200 行</text>
+
+  <rect x="530" y="88" width="145" height="60" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <rect x="538" y="96" width="18" height="22" rx="2" fill="#E3E2E0"/>
+  <text x="540" y="112" font-size="8" fill="#FFFFFF">TS</text>
+  <text x="564" y="110" font-size="12" fill="#37352F">src/config.ts</text>
+  <text x="564" y="126" font-size="9" fill="#787774">45 行</text>
+
+  <!-- ==================== BOTTOM LAYER: Overlay ==================== -->
+  <rect x="40" y="220" width="720" height="120" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="60" y="244" font-size="14" font-weight="bold" fill="#2383E2">Overlay (平行宇宙)</text>
+  <text x="260" y="244" font-size="10" fill="#787774">tmpdir/overlay-xxxxx/</text>
+
+  <!-- Modified file: app.ts (yellow) -->
+  <rect x="70" y="258" width="160" height="60" rx="6" fill="#FFF8E1" stroke="#FFB020" stroke-width="2"/>
+  <rect x="78" y="266" width="18" height="22" rx="2" fill="#FFB020"/>
+  <text x="80" y="282" font-size="8" fill="#FFFFFF">TS</text>
+  <text x="104" y="280" font-size="12" fill="#37352F">src/app.ts</text>
+  <text x="104" y="296" font-size="9" fill="#FFB020" font-weight="bold">已修改 (130 行)</text>
+
+  <!-- New file: test.ts (green) -->
+  <rect x="260" y="258" width="160" height="60" rx="6" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="2"/>
+  <rect x="268" y="266" width="18" height="22" rx="2" fill="#4DB6AC"/>
+  <text x="270" y="282" font-size="8" fill="#FFFFFF">TS</text>
+  <text x="294" y="280" font-size="12" fill="#37352F">src/test.ts</text>
+  <text x="294" y="296" font-size="9" fill="#4DB6AC" font-weight="bold">新增 (50 行)</text>
+
+  <!-- Ghost placeholders for missing files -->
+  <rect x="450" y="258" width="140" height="60" rx="6" fill="none" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="520" y="284" text-anchor="middle" font-size="10" fill="#E3E2E0">utils.ts 不在此</text>
+  <text x="520" y="298" text-anchor="middle" font-size="9" fill="#E3E2E0">读取穿透到主 FS</text>
+
+  <rect x="610" y="258" width="140" height="60" rx="6" fill="none" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="680" y="284" text-anchor="middle" font-size="10" fill="#E3E2E0">config.ts 不在此</text>
+  <text x="680" y="298" text-anchor="middle" font-size="9" fill="#E3E2E0">读取穿透到主 FS</text>
+
+  <!-- ==================== ARROWS between layers ==================== -->
+
+  <!-- Write app.ts: Copy-on-Write -->
+  <line x1="135" y1="148" x2="135" y2="256" stroke="#FFB020" stroke-width="2" marker-end="url(#arr-y)"/>
+  <rect x="144" y="176" width="190" height="36" rx="6" fill="#FFF8E1" stroke="#FFB020" stroke-width="1"/>
+  <text x="239" y="192" text-anchor="middle" font-size="10" font-weight="bold" fill="#FFB020">写 app.ts: Copy-on-Write</text>
+  <text x="239" y="205" text-anchor="middle" font-size="9" fill="#787774">先复制到 Overlay, 再修改副本</text>
+
+  <!-- Read app.ts: from Overlay -->
+  <line x1="190" y1="258" x2="190" y2="170" stroke="#2383E2" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="198" y="248" font-size="9" fill="#2383E2">读 app.ts → 从 Overlay 读 (已修改)</text>
+
+  <!-- Read utils.ts: fallback to main FS -->
+  <line x1="520" y1="258" x2="440" y2="170" stroke="#787774" stroke-width="1.5" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+  <text x="510" y="200" font-size="9" fill="#787774">读 utils.ts → 穿透到主 FS (未修改)</text>
+
+  <!-- ==================== BOTTOM: Two outcomes ==================== -->
+  <text x="400" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#37352F">推测完成后:</text>
+
+  <!-- LEFT: Accept -->
+  <rect x="60" y="382" width="320" height="80" rx="8" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="2"/>
+  <text x="220" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="#4DB6AC">接受</text>
+  <text x="220" y="424" text-anchor="middle" font-size="11" fill="#37352F">copyOverlayToMain()</text>
+  <text x="220" y="442" text-anchor="middle" font-size="10" fill="#787774">Overlay 中修改的文件复制回主文件系统</text>
+
+  <!-- Arrow icon inside accept -->
+  <line x1="130" y1="450" x2="160" y2="450" stroke="#4DB6AC" stroke-width="2" marker-end="url(#arr-g)"/>
+  <text x="168" y="454" font-size="9" fill="#4DB6AC">文件回流到主 FS</text>
+
+  <!-- RIGHT: Reject -->
+  <rect x="420" y="382" width="320" height="80" rx="8" fill="#FDEAEA" stroke="#EB5757" stroke-width="2"/>
+  <text x="580" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="#EB5757">拒绝</text>
+  <text x="580" y="424" text-anchor="middle" font-size="11" fill="#37352F">rm -rf overlay/</text>
+  <text x="580" y="442" text-anchor="middle" font-size="10" fill="#787774">整个 Overlay 目录直接删除, 主 FS 不受影响</text>
+
+  <!-- X symbol for reject -->
+  <line x1="490" y1="444" x2="504" y2="458" stroke="#EB5757" stroke-width="2.5"/>
+  <line x1="504" y1="444" x2="490" y2="458" stroke="#EB5757" stroke-width="2.5"/>
+
+  <!-- Footer -->
+  <text x="400" y="490" text-anchor="middle" font-size="10" fill="#787774">Overlay = Copy-on-Write 沙箱: 写操作隔离在临时目录, 读操作按需穿透到主文件系统</text>
+</svg>

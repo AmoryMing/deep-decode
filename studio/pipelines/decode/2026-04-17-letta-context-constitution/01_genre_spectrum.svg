@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="PingFang SC, Inter, -apple-system, sans-serif">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">AI 公司治理文档的体裁光谱</text>
+  <text x="400" y="66" font-size="13" fill="#6B6864" text-anchor="middle">按"文档受众"和"AI 可修改性"两轴定位</text>
+
+  <!-- 坐标系 -->
+  <line x1="120" y1="460" x2="720" y2="460" stroke="#6B6864" stroke-width="1.5" marker-end="url(#arrR)"/>
+  <line x1="120" y1="460" x2="120" y2="120" stroke="#6B6864" stroke-width="1.5" marker-end="url(#arrU)"/>
+
+  <defs>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#6B6864"/>
+    </marker>
+    <marker id="arrU" markerWidth="10" markerHeight="10" refX="5" refY="0" orient="auto">
+      <polygon points="0 10, 5 0, 10 10" fill="#6B6864"/>
+    </marker>
+  </defs>
+
+  <!-- 轴标签 -->
+  <text x="720" y="488" font-size="13" fill="#37352F" text-anchor="end" font-weight="600">受众：从"人类团队"到"AI 本身"</text>
+  <text x="120" y="490" font-size="12" fill="#6B6864">人读</text>
+  <text x="720" y="490" font-size="12" fill="#6B6864" text-anchor="end">AI 读</text>
+
+  <text x="100" y="115" font-size="13" fill="#37352F" text-anchor="end" font-weight="600" transform="rotate(-90 100 115)">AI 修改权：从"只读"到"自主重写"</text>
+  <text x="108" y="460" font-size="12" fill="#6B6864" text-anchor="end">只读</text>
+  <text x="108" y="130" font-size="12" fill="#6B6864" text-anchor="end">自写</text>
+
+  <!-- 象限背景 -->
+  <line x1="420" y1="120" x2="420" y2="460" stroke="#E4E2DF" stroke-dasharray="3,3"/>
+  <line x1="120" y1="290" x2="720" y2="290" stroke="#E4E2DF" stroke-dasharray="3,3"/>
+
+  <!-- Data point 1: Anthropic HHH -->
+  <circle cx="200" cy="180" r="9" fill="#9B51E0"/>
+  <text x="218" y="178" font-size="14" font-weight="600" fill="#37352F">Anthropic HHH</text>
+  <text x="218" y="196" font-size="11" fill="#6B6864">训练 pipeline 内化</text>
+  <text x="218" y="212" font-size="11" fill="#6B6864">（权重内化而非修改）</text>
+
+  <!-- Data point 2: OpenAI Safety Spec -->
+  <circle cx="200" cy="410" r="9" fill="#EB5757"/>
+  <text x="218" y="408" font-size="14" font-weight="600" fill="#37352F">OpenAI Safety Spec</text>
+  <text x="218" y="426" font-size="11" fill="#6B6864">写给 policy 团队，AI 不读不改</text>
+
+  <!-- Data point 3: CLAUDE.md -->
+  <circle cx="580" cy="400" r="9" fill="#FFB020"/>
+  <text x="598" y="398" font-size="14" font-weight="600" fill="#37352F">CLAUDE.md（Claude Code）</text>
+  <text x="598" y="416" font-size="11" fill="#6B6864">AI 读；人改；Self-Healing 有限写回</text>
+  <text x="598" y="432" font-size="11" fill="#6B6864">（Strict Write Discipline）</text>
+
+  <!-- Data point 4: Context Constitution -->
+  <circle cx="620" cy="180" r="12" fill="#2383E2"/>
+  <text x="642" y="178" font-size="15" font-weight="700" fill="#2383E2">Context Constitution</text>
+  <text x="642" y="196" font-size="11" fill="#6B6864">第二人称写给 agent；</text>
+  <text x="642" y="212" font-size="11" fill="#6B6864">授权 agent 自主重写 system prompt</text>
+
+  <!-- 底部注释 -->
+  <text x="400" y="535" font-size="11" fill="#6B6864" text-anchor="middle">Letta 的 Context Constitution 是四象限里独占右上角的新体裁：AI 是主体读者 + AI 被授权自写</text>
+</svg>

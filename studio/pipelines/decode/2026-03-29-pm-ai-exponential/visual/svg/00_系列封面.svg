@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <rect x="40" y="40" width="720" height="370" rx="12" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+
+  <!-- Title -->
+  <text x="400" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="bold" fill="#37352F">地基在动</text>
+  <text x="400" y="165" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#787774">当 AI 能力指数增长时，产品经理该怎么进化</text>
+
+  <!-- Divider -->
+  <line x1="200" y1="195" x2="600" y2="195" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Stats -->
+  <text x="250" y="250" text-anchor="middle" font-family="Inter, PingFang SC, sans-serif" font-size="48" font-weight="bold" fill="#2383E2">41x</text>
+  <text x="250" y="280" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">能力提升倍数</text>
+
+  <text x="550" y="250" text-anchor="middle" font-family="Inter, PingFang SC, sans-serif" font-size="48" font-weight="bold" fill="#EB5757">16</text>
+  <text x="600" y="250" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#787774">个月</text>
+  <text x="550" y="280" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Sonnet 3.5 到 Opus 4.6</text>
+
+  <!-- Source -->
+  <text x="400" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Cat Wu | Anthropic Claude Code 产品负责人 | 2026-03-19</text>
+
+  <!-- Tag -->
+  <rect x="310" y="350" width="180" height="28" rx="14" fill="#2383E2" opacity="0.1"/>
+  <text x="400" y="369" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">AI 前沿拆解系列</text>
+</svg>

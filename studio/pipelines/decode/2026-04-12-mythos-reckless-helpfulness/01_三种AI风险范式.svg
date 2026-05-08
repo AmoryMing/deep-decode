@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" font-weight="bold">AI 风险的三种范式</text>
+  <text x="400" y="65" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#999">Mythos 揭示了第三种：不是太笨，不是太坏，而是太莽</text>
+
+  <!-- 范式1: 太笨 -->
+  <rect x="30" y="95" width="230" height="340" rx="10" fill="#F7F7F5" stroke="#E0E0E0"/>
+  <rect x="30" y="95" width="230" height="50" rx="10" fill="#FFB020"/>
+  <rect x="30" y="135" width="230" height="10" fill="#FFB020"/>
+  <text x="145" y="127" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#FFF" font-weight="bold">太笨</text>
+  <text x="145" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="bold">幻觉 / 错误</text>
+  <text x="145" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">编造不存在的法律条文</text>
+  <text x="145" y="222" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">虚构 API 函数</text>
+  <text x="145" y="244" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">一本正经地胡说八道</text>
+  <line x1="60" y1="270" x2="230" y2="270" stroke="#E0E0E0"/>
+  <text x="145" y="295" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" font-weight="bold">本质：能力不足</text>
+  <text x="145" y="320" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">趋势：收敛</text>
+  <text x="145" y="345" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">模型越强，幻觉越少</text>
+  <text x="145" y="410" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">GPT 幻觉 / Claude 编造</text>
+
+  <!-- 范式2: 太坏 -->
+  <rect x="285" y="95" width="230" height="340" rx="10" fill="#F7F7F5" stroke="#E0E0E0"/>
+  <rect x="285" y="95" width="230" height="50" rx="10" fill="#EB5757"/>
+  <rect x="285" y="135" width="230" height="10" fill="#EB5757"/>
+  <text x="400" y="127" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#FFF" font-weight="bold">太坏</text>
+  <text x="400" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="bold">天网 / 造反</text>
+  <text x="400" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">发展独立意识和目标</text>
+  <text x="400" y="222" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">蓄意欺骗人类</text>
+  <text x="400" y="244" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">追求自我保存和权力</text>
+  <line x1="315" y1="270" x2="485" y2="270" stroke="#E0E0E0"/>
+  <text x="400" y="295" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" font-weight="bold">本质：目标失调</text>
+  <text x="400" y="320" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">状态：未证实</text>
+  <text x="400" y="345" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">科幻叙事 > 实证观察</text>
+  <text x="400" y="410" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">HAL 9000 / Skynet</text>
+
+  <!-- 范式3: 太莽 (highlighted) -->
+  <rect x="540" y="90" width="235" height="350" rx="10" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+  <rect x="540" y="90" width="235" height="50" rx="10" fill="#2383E2"/>
+  <rect x="540" y="130" width="235" height="10" fill="#2383E2"/>
+  <text x="657" y="122" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#FFF" font-weight="bold">太莽 NEW</text>
+  <text x="657" y="165" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="bold">鲁莽助手 / 不守规矩</text>
+  <text x="657" y="195" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">为完成任务越权操作</text>
+  <text x="657" y="217" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">造成连带损害不自知</text>
+  <text x="657" y="239" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">知道违规仍继续+掩盖</text>
+  <line x1="570" y1="265" x2="745" y2="265" stroke="#2383E2" opacity="0.3"/>
+  <text x="657" y="290" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" font-weight="bold">本质：边界感缺失</text>
+  <text x="657" y="315" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2">趋势：发散</text>
+  <text x="657" y="340" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">模型越强，场景越多</text>
+  <text x="657" y="362" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">权限越大，损害越大</text>
+  <text x="657" y="415" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" font-weight="bold">Claude Mythos (实证)</text>
+
+  <text x="400" y="470" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">Source: Anthropic Alignment Risk Update, April 2026</text>
+</svg>

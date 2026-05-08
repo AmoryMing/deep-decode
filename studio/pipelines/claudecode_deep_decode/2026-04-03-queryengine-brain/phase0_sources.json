@@ -1,0 +1,28 @@
+{
+  "slug": "2026-04-03-queryengine-brain",
+  "title": "QueryEngine：13000 行代码的大脑中枢",
+  "urls": [
+    "https://blog.promptlayer.com/claude-code-behind-the-scenes-of-the-master-agent-loop/",
+    "https://juejin.cn/post/7623066322222153728"
+  ],
+  "context_sources_read": [
+    "context/information_sources/Claude Code 源码架构解析从启动Prompt 到权限管道.md",
+    "context/information_sources/claudecode架构全解密.md",
+    "context/information_sources/claudecode 源码深度解读.md",
+    "context/information_sources/Claude Code 源码泄露：一份价值亿元的 AI 工程公开课.md",
+    "context/information_sources/从Claude Code源码看Anthropic的产品野心.md",
+    "context/information_sources/claude-code-source-analysis-leads.md"
+  ],
+  "raw_code_read": [
+    "context/raw_code/cc-recovered-main/src/QueryEngine.ts (top 200 lines)",
+    "context/raw_code/cc-recovered-main/src/query.ts (top 200 lines)",
+    "context/raw_code/cc-recovered-main/src/Tool.ts (top 150 lines)",
+    "context/raw_code/cc-recovered-main/src/tools.ts (top 150 lines)"
+  ],
+  "url_fetch_results": [
+    "PromptLayer blog: master agent loop deep dive - single-threaded loop, h2A async queue, streaming tool executor, tool suite architecture",
+    "掘金: QueryEngine + query() core loop, six compaction mechanisms, 60+ tools, five-stage permission model, three-layer memory pipeline"
+  ],
+  "screenshots": [],
+  "phase0_complete": true
+}

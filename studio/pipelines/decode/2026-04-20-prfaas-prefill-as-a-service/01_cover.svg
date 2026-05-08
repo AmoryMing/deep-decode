@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #FFFFFF; }
+    .frame { fill: none; stroke: #37352F; stroke-width: 2; }
+    .title { font: 700 36px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .subtitle { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #6B6B6B; }
+    .big-num { font: 800 56px Inter, 'PingFang SC', sans-serif; fill: #2383E2; }
+    .num-label { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .card { fill: #F7F7F5; stroke: #E8E8E5; stroke-width: 1; }
+    .tag { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #FFFFFF; }
+    .tag-bg { fill: #37352F; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #888888; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="40" y="40" width="140" height="26" rx="4"/>
+  <text class="tag" x="56" y="58">AI 论文深度拆解</text>
+
+  <text class="title" x="40" y="120">Prefill-as-a-Service</text>
+  <text class="subtitle" x="40" y="148">Moonshot + 清华，把 LLM 推理的 prefill 阶段</text>
+  <text class="subtitle" x="40" y="170">搬到跨数据中心，用商用以太网跑通</text>
+
+  <!-- 三个数字卡片 -->
+  <g>
+    <rect class="card" x="40" y="220" width="230" height="180" rx="12"/>
+    <text class="big-num" x="55" y="300">23×</text>
+    <text class="num-label" x="55" y="332">hybrid vs dense</text>
+    <text class="num-label" x="55" y="352">KVCache 带宽差距</text>
+    <text class="num-label" x="55" y="376" fill="#888">32K tokens 场景</text>
+  </g>
+
+  <g>
+    <rect class="card" x="285" y="220" width="230" height="180" rx="12"/>
+    <text class="big-num" x="300" y="300" fill="#EB5757">+54%</text>
+    <text class="num-label" x="300" y="332">1T 模型吞吐提升</text>
+    <text class="num-label" x="300" y="352">vs 同构基线集群</text>
+    <text class="num-label" x="300" y="376" fill="#888">32×H200 + 64×H20</text>
+  </g>
+
+  <g>
+    <rect class="card" x="530" y="220" width="230" height="180" rx="12"/>
+    <text class="big-num" x="545" y="300" fill="#4DB6AC">13Gbps</text>
+    <text class="num-label" x="545" y="332">实际跨 DC 出口带宽</text>
+    <text class="num-label" x="545" y="352">仅占 100Gbps 链路 13%</text>
+    <text class="num-label" x="545" y="376" fill="#888">商用 VPC peering</text>
+  </g>
+
+  <text class="footer" x="40" y="460">arXiv:2604.15039 | 2026-04-16 | Ruoyu Qin, Weiran He, Mingxing Zhang 等</text>
+  <text class="footer" x="40" y="478">Mooncake 之后的第二步：KVCache 不止是一等公民，还能跨数据中心</text>
+</svg>

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-04-17",
+  "target_url": "https://www.letta.com/blog/context-constitution",
+  "target_date": "2026-04-02",
+  "author": "Letta (Charles Packer CEO + Sarah Wooders CTO)",
+  "author_background": "MemGPT 论文共同作者，UC Berkeley Sky Lab 博士，导师 Joseph Gonzalez + Ion Stoica。2024-09 Felicis 领投 10M 种子轮。",
+  "sources_read": [
+    {
+      "layer": "primary-blog",
+      "url": "https://www.letta.com/blog/context-constitution",
+      "via": "WebFetch + tavily_extract",
+      "role": "入口公告（~350 词）"
+    },
+    {
+      "layer": "primary-source",
+      "url": "https://github.com/letta-ai/context-constitution",
+      "file": "constitution/CONSTITUTION.md",
+      "via": "curl raw.githubusercontent.com",
+      "lines": 184,
+      "role": "宪法正文（4800+ 词，包含 Preface / Overview / Building a self / Balancing selfhood / Context Architecture / Principles / Ideal Context / Concluding thoughts）",
+      "local_path": "/tmp/letta_constitution.md",
+      "license": "CC0 1.0 Universal",
+      "repo_stats": "55 stars / 3 forks"
+    },
+    {
+      "layer": "vault-cross-reference",
+      "path": "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-17-your-harness-your-memory/",
+      "status": "同日在写（phase1+phase2 已完成，未出初稿）",
+      "role": "同一话题簇（开源 harness 舆论战），差异化角度：该文聚焦商业 lock-in，本文聚焦体裁哲学与产品应用"
+    }
+  ],
+  "screenshots_pending": [
+    {
+      "reason": "Playwright 浏览器 profile lock，改用 fallback 方案（最终产出前用 chrome headless CLI 或 tavily 图片）",
+      "planned": "1) 博客标题首屏截图；2) GitHub 仓库首页；3) 原文 Preface 段落"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "slug": "2026-04-24-ai-design-replaces-designer",
+  "decoded_at": "2026-04-24",
+  "meta_decode": true,
+  "note": "非单篇博客；三个同时发生的事件的合并解读（行业窗口期）",
+  "primary_events": [
+    {
+      "id": "gpt-image-2",
+      "name": "OpenAI ChatGPT Images 2.0 / gpt-image-2",
+      "date": "2026-04-21",
+      "primary_url": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "fetch_status": "403 (官方博客反爬)，数据来自 WebSearch summary + thenextweb 二次源",
+      "key_facts": [
+        "模型名称 gpt-image-2，2026-04-21 发布",
+        "读 prompt → 规划 layout → 渲染多语言文字",
+        "单次可出 10 张图，最高 2000px 宽",
+        "新增 aspect ratio（旧 image model 不支持）",
+        "API 暴露 reasoning-aware thinking mode（O-series reasoning 首次融入图像生成）",
+        "Instant 模式免费，Thinking 模式付费（含 web search + 多图批处理 + 输出校验）",
+        "多图一致性（up to 8 images 保持人物/物体连续）",
+        "声称 99% 文字渲染准确率、跨多语言脚本"
+      ]
+    },
+    {
+      "id": "claude-design",
+      "name": "Anthropic Claude Design (Anthropic Labs)",
+      "date": "2026-04-17",
+      "primary_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "fetch_status": "成功",
+      "key_facts": [
+        "基于 Claude Opus 4.7（Anthropic 最强视觉模型）",
+        "产出形态：HTML/CSS/React 组件，不是静态图片 —— 可交互原型",
+        "支持 voice、video、shader、3D、AI 内嵌元素",
+        "自动读取团队 codebase 和设计文件，建立设计系统（颜色/字体/组件）",
+        "输入：文本 prompt / 图片文档 (DOCX/PPTX/XLSX) / codebase / 网页抓取工具",
+        "handoff：打包成 implementation bundle（组件+tokens+文案+交互说明）→ 扔给 Claude Code 实现",
+        "访问：Research preview，面向 Claude Pro/Max/Team/Enterprise 订阅",
+        "Anthropic 官话：与 Canva 互补不替代",
+        "Canva CEO Melanie Perkins 亲自背书",
+        "Brilliant 反馈：旧工具 20+ prompts → Claude Design 2 prompts",
+        "Datadog 反馈：一周简报+mockup+review → 一次对话"
+      ]
+    },
+    {
+      "id": "market-reaction",
+      "name": "市场反应 + 设计师社区视角",
+      "date": "2026-04-17 起",
+      "key_facts": [
+        "Figma 股价发布当天跌 7%，YTD 跌约 35%",
+        "Anthropic CPO Mike Krieger 在发布前一天（4/16）辞去 Figma 董事席位",
+        "Figma 两个月前发过 Code to Canvas 功能（同方向但被抢先）",
+        "Figma 对 Gizmodo 问询未回应",
+        "Google Stitch（前 Galileo AI，2025 被 Google 收购）3/19 更新：多屏生成 + 无限画布 + 交互原型",
+        "Deloitte Digital 2025：59% 科技创业公司已用 AI UI/UX 工具做原型"
+      ]
+    }
+  ],
+  "designer_voices": [
+    {
+      "source": "Medium - Fanny @ Design Bootcamp",
+      "url": "https://medium.com/design-bootcamp/what-claude-design-actually-changes-for-designers-0c5b04fae343",
+      "key_quotes": [
+        "Pipelines optimize for throughput, and design isn't always a throughput problem.",
+        "You still need taste, judgment, and principles. You need people who understand human psychology and business strategy.",
+        "valuable creative friction — moving things two pixels, arguing with myself — risks being compressed away",
+        "Claude Code greatest strength is planning depth, not speed",
+        "Claude Code succeeds ~33% without structured planning, dramatically better with room to draft specs first"
+      ]
+    }
+  ],
+  "screenshots_planned": [
+    "OpenAI blog 首屏（gpt-image-2 封面）",
+    "Anthropic Claude Design 首屏（产品界面）",
+    "Figma 股价 K 线（可选）"
+  ],
+  "author_context": {
+    "openai": "OpenAI 官方，行业方向标 S 级信源",
+    "anthropic": "Anthropic 官方 + Anthropic Labs（实验产品线），S 级",
+    "designer_medium": "一线设计师一手实测，A 级补充"
+  }
+}

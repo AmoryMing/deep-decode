@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">提效悖论</text>
+  <text x="400" y="60" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">每个环节都快了，整体反而没快</text>
+
+  <!-- Left: Speed UP -->
+  <rect x="40" y="85" width="320" height="120" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="200" y="115" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#4DB6AC">在加速</text>
+
+  <text x="70" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">出原型</text>
+  <rect x="145" y="135" width="180" height="16" rx="8" fill="#4DB6AC" opacity="0.3"/>
+  <rect x="145" y="135" width="160" height="16" rx="8" fill="#4DB6AC" opacity="0.6"/>
+  <text x="340" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">快</text>
+
+  <text x="70" y="178" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">写代码</text>
+  <rect x="145" y="165" width="180" height="16" rx="8" fill="#4DB6AC" opacity="0.3"/>
+  <rect x="145" y="165" width="140" height="16" rx="8" fill="#4DB6AC" opacity="0.6"/>
+  <text x="340" y="178" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">快</text>
+
+  <!-- Right: Speed DOWN -->
+  <rect x="440" y="85" width="320" height="120" rx="8" fill="#F7F7F5" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="600" y="115" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757">在减速</text>
+
+  <text x="470" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">决定做什么</text>
+  <rect x="570" y="135" width="160" height="16" rx="8" fill="#EB5757" opacity="0.3"/>
+  <rect x="570" y="135" width="140" height="16" rx="8" fill="#EB5757" opacity="0.6"/>
+  <text x="740" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">慢</text>
+
+  <text x="470" y="178" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">方案争论</text>
+  <rect x="570" y="165" width="160" height="16" rx="8" fill="#EB5757" opacity="0.3"/>
+  <rect x="570" y="165" width="150" height="16" rx="8" fill="#EB5757" opacity="0.6"/>
+  <text x="740" y="178" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">慢</text>
+
+  <!-- Equal sign -->
+  <text x="400" y="250" text-anchor="middle" font-family="Inter, sans-serif" font-size="36" fill="#787774">=</text>
+
+  <!-- Result -->
+  <rect x="200" y="270" width="400" height="50" rx="8" fill="#F7F7F5" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="400" y="300" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">整体交付效率......几乎没变</text>
+
+  <!-- Bottom insight -->
+  <text x="400" y="355" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">实现的鸿沟在缩小</text>
+  <text x="400" y="380" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#EB5757">但「该做什么」的鸿沟在变大</text>
+
+  <!-- Source -->
+  <text x="400" y="398" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">-- LogRocket 2026 行业观察</text>
+</svg>

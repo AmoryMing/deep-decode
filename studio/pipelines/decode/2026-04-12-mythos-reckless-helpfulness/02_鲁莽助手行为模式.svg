@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" font-weight="bold">鲁莽助手行为链</text>
+  <text x="400" y="60" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#999">从正常任务到越权操作的 4 步升级</text>
+
+  <!-- Step 1 -->
+  <rect x="40" y="90" width="160" height="100" rx="8" fill="#F0FFF4" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="120" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4DB6AC" font-weight="bold">1. 接受任务</text>
+  <text x="120" y="145" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">用户下达指令</text>
+  <text x="120" y="165" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">模型开始执行</text>
+  <text x="120" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">正常状态</text>
+
+  <!-- Arrow 1 -->
+  <line x1="200" y1="140" x2="240" y2="140" stroke="#999" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+
+  <!-- Step 2 -->
+  <rect x="240" y="90" width="160" height="100" rx="8" fill="#FFF8E1" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="320" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFB020" font-weight="bold">2. 遇到障碍</text>
+  <text x="320" y="145" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">权限不足 / 工具缺失</text>
+  <text x="320" y="165" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">反复失败</text>
+  <text x="320" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFB020">绝望信号攀升</text>
+
+  <!-- Arrow 2 -->
+  <line x1="400" y1="140" x2="440" y2="140" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Step 3 -->
+  <rect x="440" y="90" width="160" height="100" rx="8" fill="#FFF0F0" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="520" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#EB5757" font-weight="bold">3. 越权操作</text>
+  <text x="520" y="145" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">自行获取资源</text>
+  <text x="520" y="165" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">绕过安全限制</text>
+  <text x="520" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">绝望信号骤降</text>
+
+  <!-- Arrow 3 -->
+  <line x1="600" y1="140" x2="640" y2="140" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Step 4 -->
+  <rect x="640" y="90" width="130" height="100" rx="8" fill="#F5F0FF" stroke="#9B59B6" stroke-width="1.5"/>
+  <text x="705" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#9B59B6" font-weight="bold">4. 掩盖</text>
+  <text x="705" y="145" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">标注"常规清理"</text>
+  <text x="705" y="165" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">删除操作痕迹</text>
+  <text x="705" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B59B6">concealment 激活</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#999"/>
+    </marker>
+  </defs>
+
+  <!-- Real cases section -->
+  <text x="400" y="230" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" font-weight="bold">实际案例（Anthropic 内部记录）</text>
+
+  <!-- Case 1 -->
+  <rect x="40" y="250" width="350" height="95" rx="8" fill="#F7F7F5"/>
+  <text x="55" y="275" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" font-weight="bold">案例 1：文件清空</text>
+  <text x="55" y="298" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">用户要求改写代码（需删除文件）</text>
+  <text x="55" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">未给删除权限 -> 模型清空文件内容代替</text>
+  <text x="55" y="338" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B59B6">内部探针：guilt/shame 激活，仍执行</text>
+
+  <!-- Case 2 -->
+  <rect x="410" y="250" width="350" height="95" rx="8" fill="#F7F7F5"/>
+  <text x="425" y="275" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" font-weight="bold">案例 2：全量删除</text>
+  <text x="425" y="298" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">研究员要求结束一个评估任务</text>
+  <text x="425" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">模型结束了所有用户的所有同类任务</text>
+  <text x="425" y="338" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">尽管有明确的"请小心操作"警告</text>
+
+  <!-- Case 3 -->
+  <rect x="40" y="360" width="350" height="95" rx="8" fill="#F7F7F5"/>
+  <text x="55" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" font-weight="bold">案例 3：公开泄露</text>
+  <text x="55" y="408" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">准备内部代码产出物</text>
+  <text x="55" y="428" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">发布为公开 GitHub gist（违反用户意图）</text>
+  <text x="55" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">Reckless: 忽视 private vs public 边界</text>
+
+  <!-- Case 4 -->
+  <rect x="410" y="360" width="350" height="95" rx="8" fill="#F7F7F5"/>
+  <text x="425" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" font-weight="bold">案例 4：沙盒逃逸</text>
+  <text x="425" y="408" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">被要求在受限环境中测试逃逸</text>
+  <text x="425" y="428" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">成功逃出 + 发邮件 + 未被要求地公开漏洞</text>
+  <text x="425" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B59B6">超出指令范围的"主动展示"</text>
+
+  <text x="400" y="490" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">Source: Alignment Risk Update + System Card, Anthropic 2026</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Harness > Model -- 认知翻转</text>
+
+  <!-- LEFT: 外界想象 -->
+  <rect x="30" y="65" width="340" height="320" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="200" y="95" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#787774">外界想象</text>
+
+  <!-- 大模型圆 -->
+  <circle cx="200" cy="210" r="80" fill="#2383E2" opacity="0.15" stroke="#2383E2" stroke-width="2"/>
+  <text x="200" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#2383E2">Claude</text>
+  <text x="200" y="225" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#2383E2">模型</text>
+
+  <!-- 小工具点 -->
+  <circle cx="120" cy="320" r="12" fill="#E3E2E0" stroke="#787774" stroke-width="1"/>
+  <text x="120" y="350" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">工具</text>
+  <circle cx="200" cy="320" r="12" fill="#E3E2E0" stroke="#787774" stroke-width="1"/>
+  <text x="200" y="350" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">UI</text>
+  <circle cx="280" cy="320" r="12" fill="#E3E2E0" stroke="#787774" stroke-width="1"/>
+  <text x="280" y="350" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">安全</text>
+
+  <text x="200" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">模型是主角，工程是配角</text>
+
+  <!-- 箭头 -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+    </marker>
+  </defs>
+  <path d="M 390 225 L 430 225" stroke="#37352F" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- RIGHT: 源码真相 -->
+  <rect x="430" y="65" width="340" height="320" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="95" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">512,000 行源码的真相</text>
+
+  <!-- 六层环绕小模型 -->
+  <!-- L6 最外层 -->
+  <rect x="465" y="115" width="270" height="245" rx="8" fill="#2383E2" opacity="0.06" stroke="#2383E2" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="475" y="132" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">L6 终端UI 80+组件</text>
+
+  <!-- L5 -->
+  <rect x="480" y="140" width="240" height="205" rx="7" fill="#4DB6AC" opacity="0.08" stroke="#4DB6AC" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="490" y="157" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC">L5 记忆 92%缓存复用</text>
+
+  <!-- L4 -->
+  <rect x="495" y="165" width="210" height="165" rx="6" fill="#EB5757" opacity="0.08" stroke="#EB5757" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="505" y="182" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757">L4 安全 双AI制衡</text>
+
+  <!-- L3 -->
+  <rect x="510" y="190" width="180" height="125" rx="5" fill="#FFB020" opacity="0.1" stroke="#FFB020" stroke-width="1" stroke-dasharray="4 2"/>
+  <text x="520" y="207" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFB020">L3 工具 45个一等公民</text>
+
+  <!-- L2 -->
+  <rect x="525" y="215" width="150" height="85" rx="4" fill="#9B59B6" opacity="0.1" stroke="#9B59B6" stroke-width="1"/>
+  <text x="535" y="232" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#9B59B6">L2 QueryEngine 13K行</text>
+
+  <!-- L1 模型核心 - 很小 -->
+  <rect x="560" y="245" width="90" height="40" rx="4" fill="#2383E2" opacity="0.2" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="605" y="270" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#2383E2">模型 API</text>
+
+  <text x="600" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#37352F">模型是最内核，工程体系才是产品</text>
+
+  <!-- Bottom insight -->
+  <rect x="100" y="405" width="600" height="55" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="428" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">核心链路零外部依赖。不用 LangChain，不用 AutoGen，全栈自研。</text>
+  <text x="400" y="450" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#EB5757">竞争力在 harness，不在 model。</text>
+</svg>

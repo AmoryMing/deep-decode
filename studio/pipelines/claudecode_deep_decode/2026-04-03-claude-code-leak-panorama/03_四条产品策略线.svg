@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">四个隐藏功能 = 四条产品策略线</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">不是彩蛋，是商业目标的直接映射</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#787774"/>
+    </marker>
+  </defs>
+
+  <!-- 左列：商业目标 -->
+  <text x="120" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#787774">商业目标</text>
+
+  <rect x="40" y="120" width="160" height="45" rx="6" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="120" y="147" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">使用深度</text>
+
+  <rect x="40" y="185" width="160" height="45" rx="6" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="120" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#4DB6AC">使用频度</text>
+
+  <rect x="40" y="250" width="160" height="45" rx="6" fill="#F7F7F5" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="120" y="277" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFB020">企业合规</text>
+
+  <rect x="40" y="315" width="160" height="45" rx="6" fill="#F7F7F5" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="120" y="342" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">竞争防御</text>
+
+  <!-- 箭头 -->
+  <line x1="200" y1="142" x2="360" y2="142" stroke="#2383E2" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="200" y1="207" x2="360" y2="207" stroke="#4DB6AC" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="200" y1="272" x2="360" y2="272" stroke="#FFB020" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="200" y1="337" x2="360" y2="337" stroke="#EB5757" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 右列：隐藏功能 -->
+  <text x="540" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">Feature Flag 背后的功能</text>
+
+  <rect x="370" y="120" width="390" height="45" rx="6" fill="#2383E2" opacity="0.08" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="380" y="140" font-family="Inter, PingFang SC, sans-serif" font-size="13" font-weight="bold" fill="#2383E2">KAIROS</text>
+  <text x="380" y="157" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">7x24 后台 Daemon，从「你问它答」变成「始终在线的搭档」</text>
+
+  <rect x="370" y="185" width="390" height="45" rx="6" fill="#4DB6AC" opacity="0.08" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="380" y="205" font-family="Inter, PingFang SC, sans-serif" font-size="13" font-weight="bold" fill="#4DB6AC">Buddy</text>
+  <text x="380" y="222" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">18物种电子宠物，创造「编码之外每天打开」的理由</text>
+
+  <rect x="370" y="250" width="390" height="45" rx="6" fill="#FFB020" opacity="0.08" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="380" y="270" font-family="Inter, PingFang SC, sans-serif" font-size="13" font-weight="bold" fill="#FFB020">Undercover Mode</text>
+  <text x="380" y="287" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">~90行代码，抹除所有 AI 辅助痕迹（讽刺：自己被泄露了）</text>
+
+  <rect x="370" y="315" width="390" height="45" rx="6" fill="#EB5757" opacity="0.08" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="380" y="335" font-family="Inter, PingFang SC, sans-serif" font-size="13" font-weight="bold" fill="#EB5757">Anti-Distillation</text>
+  <text x="380" y="352" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">fake_tools 注入虚假工具定义，毒化竞品训练数据</text>
+
+  <!-- Bottom -->
+  <rect x="100" y="380" width="600" height="30" rx="6" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="400" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">44 个 Feature Flags 不是工程师的玩具，是产品路线图的密码本</text>
+</svg>

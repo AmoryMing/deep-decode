@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#FFF5E1"/>
+  <rect x="40" y="20" width="4" height="30" rx="2" fill="#C47B2B"/>
+  <text x="55" y="43" font-family="PingFang SC, Georgia, serif" font-size="20" fill="#2B1D0E" font-weight="bold">上下文重置机制：为什么是重置而非压缩</text>
+  <text x="55" y="65" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#8B7355">Sonnet 4.5 会"上下文焦虑"；Opus 4.6 解决了这个问题——但重置机制仍然是关键基础设施</text>
+
+  <!-- Sonnet 4.5 problem -->
+  <g transform="translate(30, 90)">
+    <rect width="355" height="185" rx="10" fill="#FFF0F0" stroke="#CC6666" stroke-width="1.5"/>
+    <rect width="355" height="32" rx="10" fill="#CC4444" opacity="0.12"/>
+    <text x="177" y="22" font-family="PingFang SC, Georgia, serif" font-size="14" fill="#CC4444" text-anchor="middle" font-weight="bold">Claude Sonnet 4.5 的行为</text>
+    <line x1="20" y1="38" x2="335" y2="38" stroke="#F0C8C8" stroke-width="0.5"/>
+
+    <!-- Context bar -->
+    <text x="20" y="58" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">上下文使用率接近上限时：</text>
+    <rect x="20" y="65" width="315" height="16" rx="4" fill="#F5EDE0"/>
+    <rect x="20" y="65" width="284" height="16" rx="4" fill="#CC4444" opacity="0.55"/>
+    <text x="310" y="77" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#CC4444" font-weight="bold">~90%</text>
+
+    <text x="20" y="102" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#CC4444" font-weight="bold">出现"上下文焦虑"症状：</text>
+    <circle cx="30" cy="120" r="3" fill="#CC4444"/>
+    <text x="42" y="124" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">提前草草总结，宣称已完成所有任务</text>
+    <circle cx="30" cy="140" r="3" fill="#CC4444"/>
+    <text x="42" y="144" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">跳过复杂功能，只交付简单部分</text>
+    <circle cx="30" cy="160" r="3" fill="#CC4444"/>
+    <text x="42" y="164" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">代码细节处理越来越潦草</text>
+
+    <text x="177" y="182" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444" text-anchor="middle" font-style="italic">本质：模型感知到"快没空间了"而开始收尾</text>
+  </g>
+
+  <!-- Opus 4.6 improvement -->
+  <g transform="translate(415, 90)">
+    <rect width="355" height="185" rx="10" fill="#F0FFF0" stroke="#66AA66" stroke-width="1.5"/>
+    <rect width="355" height="32" rx="10" fill="#448844" opacity="0.12"/>
+    <text x="177" y="22" font-family="PingFang SC, Georgia, serif" font-size="14" fill="#448844" text-anchor="middle" font-weight="bold">Claude Opus 4.6 的改进</text>
+    <line x1="20" y1="38" x2="335" y2="38" stroke="#C8E6C8" stroke-width="0.5"/>
+
+    <!-- Context bar -->
+    <text x="20" y="58" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">长期任务处理能力：</text>
+    <rect x="20" y="65" width="315" height="16" rx="4" fill="#F5EDE0"/>
+    <rect x="20" y="65" width="315" height="16" rx="4" fill="#448844" opacity="0.3"/>
+    <text x="175" y="77" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#448844" text-anchor="middle" font-weight="bold">持续连贯 2+ 小时构建</text>
+
+    <text x="20" y="102" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#448844" font-weight="bold">关键能力提升：</text>
+    <circle cx="30" cy="120" r="3" fill="#448844"/>
+    <text x="42" y="124" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">"计划更周密" — 原文描述</text>
+    <circle cx="30" cy="140" r="3" fill="#448844"/>
+    <text x="42" y="144" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">"能更长时间维持智能体任务"</text>
+    <circle cx="30" cy="160" r="3" fill="#448844"/>
+    <text x="42" y="164" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">DAW 项目 Sprint 结构因此被移除</text>
+
+    <text x="177" y="182" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#448844" text-anchor="middle" font-style="italic">结果：Harness 设计因此可以显著简化</text>
+  </g>
+
+  <!-- Reset vs Compaction comparison -->
+  <g transform="translate(30, 295)">
+    <rect width="740" height="120" rx="10" fill="#FFF9EE" stroke="#C47B2B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="14" fill="#C47B2B" font-weight="bold">重置 vs 压缩：关键区别</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+
+    <!-- Compaction -->
+    <rect x="20" y="44" width="330" height="65" rx="8" fill="#FFF0F0" stroke="#CC4444" stroke-width="1"/>
+    <text x="185" y="62" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#CC4444" text-anchor="middle" font-weight="bold">压缩（Compaction）</text>
+    <text x="30" y="80" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">把之前的对话摘要压缩进去 → 窗口腾出空间</text>
+    <text x="30" y="96" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444">问题：关键细节丢失，模型仍在"带着包袱"继续</text>
+
+    <!-- Reset -->
+    <rect x="370" y="44" width="350" height="65" rx="8" fill="#F0FFF0" stroke="#448844" stroke-width="1"/>
+    <text x="545" y="62" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#448844" text-anchor="middle" font-weight="bold">重置（Reset）</text>
+    <text x="380" y="80" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">清空上下文，携带结构化 Artifact 重新启动</text>
+    <text x="380" y="96" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#448844">代价：需要 Artifact 包含足够信息；收益：全新清醒状态</text>
+  </g>
+
+  <!-- Artifact contents -->
+  <g transform="translate(30, 432)">
+    <rect width="740" height="108" rx="10" fill="#FFF9EE" stroke="#B8860B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#B8860B" font-weight="bold">交接 Artifact 必须包含的信息（文件交接机制）</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+    <text x="20" y="54" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#8B7355">实现方式：一个 Agent 写文件 → 另一个 Agent 读取并响应，或写新文件供前一个读取</text>
+    <line x1="20" y1="64" x2="720" y2="64" stroke="#E8D5B5" stroke-width="0.5"/>
+
+    <circle cx="30" cy="80" r="3" fill="#B8860B"/>
+    <text x="42" y="84" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">已完成功能列表 + 每项状态（完成 / 部分完成 / 有已知 bug）</text>
+
+    <circle cx="30" cy="99" r="3" fill="#B8860B"/>
+    <text x="42" y="103" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">待完成功能优先级 + 当前 Sprint 合约（验收标准全文）+ 关键技术决策记录</text>
+  </g>
+</svg>

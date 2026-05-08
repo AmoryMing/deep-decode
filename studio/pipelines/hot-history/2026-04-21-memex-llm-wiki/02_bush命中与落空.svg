@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">Bush 1945 — 画准五件事，画离谱五件事</text>
+  <text x="400" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">每条都对应他 80 年后的一次命中或落空</text>
+
+  <!-- 左列标题 -->
+  <rect x="40" y="90" width="340" height="36" rx="6" fill="#4DB6AC"/>
+  <text x="210" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">画准了 — 后来兑现</text>
+
+  <!-- 右列标题 -->
+  <rect x="420" y="90" width="340" height="36" rx="6" fill="#EB5757"/>
+  <text x="590" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF" text-anchor="middle">画离谱 — 后来落空或绕路</text>
+
+  <!-- 左列五项 -->
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="40" y="140" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="60" y="164" font-size="14" font-weight="700" fill="#37352F">信息过载是主症</text>
+    <text x="60" y="185" font-size="12" fill="#787774">2025 arXiv 一年 30 万篇 — 完全对</text>
+
+    <rect x="40" y="210" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="60" y="234" font-size="14" font-weight="700" fill="#37352F">个人化的"桌"</text>
+    <text x="60" y="255" font-size="12" fill="#787774">PC、笔记本、手机 — 全在他那张桌上</text>
+
+    <rect x="40" y="280" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="60" y="304" font-size="14" font-weight="700" fill="#37352F">储存焦虑会消失</text>
+    <text x="60" y="325" font-size="12" fill="#787774">今天每个 Obsidian 用户默认无限存</text>
+
+    <rect x="40" y="350" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="60" y="374" font-size="14" font-weight="700" fill="#37352F">超链接会出现</text>
+    <text x="60" y="395" font-size="12" fill="#787774">Nelson 造词、Berners-Lee 落地</text>
+
+    <rect x="40" y="420" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="60" y="444" font-size="14" font-weight="700" fill="#37352F">人会协作一份共享知识</text>
+    <text x="60" y="465" font-size="12" fill="#787774">Wikipedia、Notion 协作 — 对</text>
+  </g>
+
+  <!-- 右列五项 -->
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="420" y="140" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="440" y="164" font-size="14" font-weight="700" fill="#37352F">微缩胶片作载体</text>
+    <text x="440" y="185" font-size="12" fill="#787774">赌错介质 — 磁介质 → 硅</text>
+
+    <rect x="420" y="210" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="440" y="234" font-size="14" font-weight="700" fill="#37352F">Vocoder 语音输入</text>
+    <text x="440" y="255" font-size="12" fill="#787774">Whisper 等到 2022 才跑起来</text>
+
+    <rect x="420" y="280" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="440" y="304" font-size="14" font-weight="700" fill="#37352F">摄影眼镜随身记录</text>
+    <text x="440" y="325" font-size="12" fill="#787774">Meta Ray-Ban 2024 才成</text>
+
+    <rect x="420" y="350" width="340" height="60" rx="6" fill="#F7F7F5"/>
+    <text x="440" y="374" font-size="14" font-weight="700" fill="#37352F">trail blazer 会是新职业</text>
+    <text x="440" y="395" font-size="12" fill="#787774">被 SEO 农场和博主低质接走</text>
+
+    <rect x="420" y="420" width="340" height="60" rx="6" fill="#F7F7F5" stroke="#EB5757" stroke-width="2"/>
+    <text x="440" y="444" font-size="14" font-weight="700" fill="#EB5757">默认用户会自己维护</text>
+    <text x="440" y="465" font-size="12" fill="#787774">80 年没人兑现 — 这次 LLM 顶上</text>
+  </g>
+
+  <!-- 底部结论 -->
+  <rect x="40" y="500" width="720" height="44" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="527" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">最致命的一条落空 — 维护者缺席 — 被 Karpathy 一条 gist 补上</text>
+</svg>

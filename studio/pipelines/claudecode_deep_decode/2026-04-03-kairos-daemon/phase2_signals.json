@@ -1,0 +1,73 @@
+{
+  "slug": "2026-04-03-kairos-daemon",
+  "signals_collected": "2026-04-07",
+  "external_signals": [
+    {
+      "source": "TheNewStack",
+      "url": "https://thenewstack.io/claude-code-source-leak/",
+      "key_quote": "Think of KAIROS as a systemd service for an AI agent. It starts, persists, watches, and acts on its own schedule.",
+      "relevance": "行业媒体对KAIROS的技术定位——类比Linux守护进程，首次将AI Agent与操作系统基础设施类比"
+    },
+    {
+      "source": "VentureBeat",
+      "url": "https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know",
+      "key_quote": "the autoDream logic merges disparate observations, removes logical contradictions, and converts vague insights into absolute facts. This background maintenance ensures that when the user returns, the agent's context is clean and highly relevant.",
+      "relevance": "主流科技媒体对autoDream机制的解读，强调后台记忆巩固的工程成熟度"
+    },
+    {
+      "source": "Reddit r/artificial",
+      "url": "https://www.reddit.com/r/artificial/comments/1s9jprb/",
+      "key_quote": "Multiple independent builders keep converging on the same design because the constraints demand it... The patterns are convergent.",
+      "relevance": "独立开发者独立到达相同架构——趋同进化证据，说明KAIROS设计不是Anthropic拍脑袋"
+    },
+    {
+      "source": "kingy.ai",
+      "url": "https://kingy.ai/ai/kairos-everything-we-know-about-anthropics-secret-always-on-ai-daemon/",
+      "key_quote": "Enterprise security teams will need detailed answers about log retention, storage location, transmission policies, and access controls before approving KAIROS in sensitive environments.",
+      "relevance": "安全视角反面论证——永不下线的AI带来的企业安全挑战"
+    },
+    {
+      "source": "dev.to 24/7 AI Agent成本追踪",
+      "url": "https://dev.to/helen_mireille_47b02db70c/how-much-does-it-actually-cost-to-run-an-ai-agent-247-in-2026-i-tracked-every-dollar-for-three-3k4i",
+      "key_quote": "The agent does not just make one API call per task. A moderately complex task can trigger anywhere from 3 to 8 LLM calls. Each call carries system prompts, tool definitions, conversation history... $187 per month.",
+      "relevance": "实测数据：7x24运行AI Agent每月$187，量化KAIROS的成本真相"
+    },
+    {
+      "source": "Medium - AI Daemons: Persistent Background Agents",
+      "url": "https://understandingdata.com/posts/ai-daemons-maintenance-roles/",
+      "key_quote": "Agents need a human to notice a problem, frame the task, and prompt each time. Daemons watch for conditions and act on their own. The hundredth action costs the team nothing in attention.",
+      "relevance": "Task vs Role框架——KAIROS是从Agent到Daemon的范式转换"
+    },
+    {
+      "source": "Continue.dev - Introducing Agents",
+      "url": "https://blog.continue.dev/introducing-workflows-run-continuous-ai-in-the-background/",
+      "key_quote": "Most AI coding tools feel like a fax machine. Send a request, get a response. But coding is a continuous process.",
+      "relevance": "行业趋势佐证：从request-response到continuous AI是共识方向"
+    },
+    {
+      "source": "Devin AI定价与效果",
+      "url": "https://www.linkedin.com/posts/alshahria-shishir_devin-ai-costs-500month-but-completes-only-activity-7379455296265572352-ePL1",
+      "key_quote": "Devin AI costs $500/month but completes only 15% of tasks... $3,333 per successfully completed task at current performance levels.",
+      "relevance": "竞品对标：Devin的高成本低完成率说明always-on agent的成本-质量平衡难题"
+    }
+  ],
+  "vault_cross_references": [
+    "从Claude Code源码看Anthropic的产品野心.md - KAIROS全家桶完整描述",
+    "claudecode 源码深度解读.md - KAIROS feature flag分析 + autoDream详解",
+    "源码解读记忆.md - 7层记忆架构 + DreamTask四阶段"
+  ],
+  "original_concepts": [
+    {
+      "name": "成本感知休眠（Cost-Conscious Dormancy）",
+      "description": "SleepTool的核心设计——AI需要自己学会在API调用成本和prompt cache过期之间找到最优睡眠时长，本质是让AI学会'管理自己的开销'"
+    },
+    {
+      "name": "守护进程范式（Daemon Paradigm）",
+      "description": "从request-response到always-on的范式转换。KAIROS不是让AI更聪明，而是让AI有了'时间维度'——它能感知时间流逝、决定何时行动、何时休息"
+    },
+    {
+      "name": "趋同进化（Convergent Evolution）",
+      "description": "多个独立开发者在不知道KAIROS的情况下到达了相同架构，说明这个设计是约束条件决定的必然解"
+    }
+  ]
+}

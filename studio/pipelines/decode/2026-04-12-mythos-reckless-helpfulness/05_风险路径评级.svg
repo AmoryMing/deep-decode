@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">Mythos 风险路径评级</text>
+  <text x="400" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle">"very low, but higher than for previous models" -- Anthropic 最终评级</text>
+
+  <!-- Table header -->
+  <rect x="40" y="85" width="300" height="35" rx="0" fill="#F7F7F5"/>
+  <text x="190" y="108" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">风险路径</text>
+  <rect x="340" y="85" width="200" height="35" rx="0" fill="#F7F7F5"/>
+  <text x="440" y="108" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">Weak 缓解</text>
+  <rect x="540" y="85" width="220" height="35" rx="0" fill="#F7F7F5"/>
+  <text x="650" y="108" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">Moderate 缓解</text>
+
+  <!-- Row 1: CBRN -->
+  <rect x="40" y="120" width="300" height="40" fill="#FFFFFF" stroke="#eee"/>
+  <text x="55" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">CBRN (生化核放射)</text>
+  <rect x="340" y="120" width="200" height="40" fill="#F0FFF0" stroke="#eee"/>
+  <text x="440" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle">Low</text>
+  <rect x="540" y="120" width="220" height="40" fill="#F0FFF0" stroke="#eee"/>
+  <text x="650" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle">Very Low</text>
+
+  <!-- Row 2: Cyber -->
+  <rect x="40" y="160" width="300" height="40" fill="#FAFAFA" stroke="#eee"/>
+  <text x="55" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">网络安全攻击</text>
+  <rect x="340" y="160" width="200" height="40" fill="#FFF8E1" stroke="#eee"/>
+  <text x="440" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020" text-anchor="middle">Moderate</text>
+  <rect x="540" y="160" width="220" height="40" fill="#F0FFF0" stroke="#eee"/>
+  <text x="650" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle">Low</text>
+
+  <!-- Row 3: Autonomy -->
+  <rect x="40" y="200" width="300" height="40" fill="#FFFFFF" stroke="#eee"/>
+  <text x="55" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">自主行为 / 越权</text>
+  <rect x="340" y="200" width="200" height="40" fill="#FFF8E1" stroke="#eee"/>
+  <text x="440" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020" text-anchor="middle">Moderate</text>
+  <rect x="540" y="200" width="220" height="40" fill="#FFF8E1" stroke="#eee"/>
+  <text x="650" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020" text-anchor="middle">Low-Moderate</text>
+
+  <!-- Row 4: Deception -->
+  <rect x="40" y="240" width="300" height="40" fill="#FAFAFA" stroke="#eee"/>
+  <text x="55" y="265" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">欺骗 / 隐匿行为</text>
+  <rect x="340" y="240" width="200" height="40" fill="#FFF8E1" stroke="#eee"/>
+  <text x="440" y="265" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020" text-anchor="middle">Moderate</text>
+  <rect x="540" y="240" width="220" height="40" fill="#F0FFF0" stroke="#eee"/>
+  <text x="650" y="265" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle">Low</text>
+
+  <!-- Row 5: AI Safety undermining -->
+  <rect x="40" y="280" width="300" height="40" fill="#FFFFFF" stroke="#eee"/>
+  <text x="55" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#EB5757">破坏 AI 安全研究</text>
+  <rect x="340" y="280" width="200" height="40" fill="#FFF0F0" stroke="#eee"/>
+  <text x="440" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#EB5757" text-anchor="middle">High (2x Opus)</text>
+  <rect x="540" y="280" width="220" height="40" fill="#FFF8E1" stroke="#eee"/>
+  <text x="650" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020" text-anchor="middle">Moderate</text>
+
+  <!-- Row 6: Power seeking -->
+  <rect x="40" y="320" width="300" height="40" fill="#FAFAFA" stroke="#eee"/>
+  <text x="55" y="345" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">权力寻求</text>
+  <rect x="340" y="320" width="200" height="40" fill="#F0FFF0" stroke="#eee"/>
+  <text x="440" y="345" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle">Low</text>
+  <rect x="540" y="320" width="220" height="40" fill="#F0FFF0" stroke="#eee"/>
+  <text x="650" y="345" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle">Very Low</text>
+
+  <!-- Highlight callout -->
+  <rect x="40" y="380" width="720" height="55" rx="8" fill="#FFF0F0" stroke="#EB5757" stroke-width="0.5"/>
+  <text x="60" y="402" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#EB5757">免疫盲区：</text>
+  <text x="145" y="402" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">唯一高于前代的路径是"破坏AI安全研究本身"</text>
+  <text x="60" y="422" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">破坏其他领域容易被发现，但破坏对齐研究——恰恰是用来检测和约束模型的东西——"风险收益比最划算"</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="465" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#bbb" text-anchor="middle">数据来源: Anthropic Alignment Risk Update, April 2026 | 评级为编者基于报告描述的归纳，非原文直接评级</text>
+</svg>

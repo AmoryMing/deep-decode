@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460">
+  <rect width="800" height="460" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="tarr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37352F"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">51 年时间轴：从 Frames 到 Skills</text>
+  <text x="400" y="66" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">中间隔着一场寒冬和一个 Transformer</text>
+
+  <!-- 主时间轴 -->
+  <line x1="60" y1="240" x2="740" y2="240" stroke="#37352F" stroke-width="2" marker-end="url(#tarr)"/>
+
+  <!-- 节点 1：1974 Frames -->
+  <g transform="translate(90, 240)">
+    <circle cx="0" cy="0" r="8" fill="#2383E2"/>
+    <text x="0" y="-100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">1974</text>
+    <rect x="-55" y="-85" width="110" height="60" rx="6" fill="#F7F7F5" stroke="#2383E2"/>
+    <text x="0" y="-64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="700">Frames</text>
+    <text x="0" y="-46" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">Minsky Memo 306</text>
+  </g>
+
+  <!-- 节点 2：1977 Scripts -->
+  <g transform="translate(190, 240)">
+    <circle cx="0" cy="0" r="6" fill="#37352F"/>
+    <text x="0" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">1977</text>
+    <rect x="-50" y="40" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="0" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">Scripts</text>
+    <text x="0" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">Schank &amp; Abelson</text>
+  </g>
+
+  <!-- 节点 3：1983 KEE -->
+  <g transform="translate(290, 240)">
+    <circle cx="0" cy="0" r="6" fill="#37352F"/>
+    <text x="0" y="-85" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">1983-84</text>
+    <rect x="-55" y="-70" width="110" height="48" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="0" y="-52" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">KEE · CYC</text>
+    <text x="0" y="-34" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">产业起飞</text>
+  </g>
+
+  <!-- 节点 4：1987 崩盘 -->
+  <g transform="translate(390, 240)">
+    <circle cx="0" cy="0" r="10" fill="#EB5757"/>
+    <text x="0" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">1987</text>
+    <rect x="-55" y="40" width="110" height="60" rx="6" fill="#F7F7F5" stroke="#EB5757"/>
+    <text x="0" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" text-anchor="middle" font-weight="700">崩盘</text>
+    <text x="0" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">AI 寒冬 12 个月</text>
+    <text x="0" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">行业蒸发</text>
+  </g>
+
+  <!-- 寒冬区段阴影 -->
+  <rect x="400" y="230" width="170" height="20" fill="#EB5757" opacity="0.08"/>
+  <text x="485" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle" font-style="italic">--- 沉寂 30 余年 ---</text>
+
+  <!-- 节点 5：2017 Transformer -->
+  <g transform="translate(555, 240)">
+    <circle cx="0" cy="0" r="6" fill="#37352F"/>
+    <text x="0" y="-85" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">2017</text>
+    <rect x="-55" y="-70" width="110" height="48" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="0" y="-52" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">Transformer</text>
+    <text x="0" y="-34" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">骨架等来了肉</text>
+  </g>
+
+  <!-- 节点 6：2022 GPT -->
+  <g transform="translate(640, 240)">
+    <circle cx="0" cy="0" r="6" fill="#37352F"/>
+    <text x="0" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">2022</text>
+    <rect x="-48" y="40" width="96" height="48" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="0" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">ChatGPT</text>
+    <text x="0" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">手写 Frame</text>
+  </g>
+
+  <!-- 节点 7：2025 Skills -->
+  <g transform="translate(720, 240)">
+    <circle cx="0" cy="0" r="8" fill="#4DB6AC"/>
+    <text x="0" y="-100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">2025.10</text>
+    <rect x="-55" y="-85" width="110" height="60" rx="6" fill="#F7F7F5" stroke="#4DB6AC"/>
+    <text x="0" y="-64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="700">Skills</text>
+    <text x="0" y="-46" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">SKILL.md 落地</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <text x="400" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-style="italic">老结构回来得越干净，说明当初的抽象越准</text>
+</svg>

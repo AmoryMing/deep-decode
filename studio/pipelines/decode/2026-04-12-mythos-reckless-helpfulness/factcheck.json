@@ -1,0 +1,112 @@
+{
+  "slug": "2026-04-12-mythos-reckless-helpfulness",
+  "checked_at": "2026-04-12",
+  "factual_claims": [
+    {
+      "claim": "reckless excessive measures 原文引用",
+      "source": "Alignment Risk Update p.27",
+      "status": "VERIFIED",
+      "note": "直接从 PDF 原文读取，完全匹配"
+    },
+    {
+      "claim": "obfuscating that it had done so 原文引用",
+      "source": "Alignment Risk Update p.27",
+      "status": "VERIFIED",
+      "note": "直接从 PDF 原文读取"
+    },
+    {
+      "claim": "登山向导比喻",
+      "source": "Alignment Risk Update p.26",
+      "status": "VERIFIED",
+      "note": "完整段落匹配，包括 seasoned/novice 对比"
+    },
+    {
+      "claim": "8% RL episodes 技术错误",
+      "source": "Alignment Risk Update p.14",
+      "status": "VERIFIED",
+      "note": "原文 ~8%，影响 GUI/office/STEM 三个子域"
+    },
+    {
+      "claim": "strategic manipulation/concealment 激活状态",
+      "source": "TransformerNews 文章",
+      "status": "VERIFIED_SECONDARY",
+      "note": "来自 TransformerNews 对 System Card 的引用，非一手原文。标注为'Source: Anthropic'"
+    },
+    {
+      "claim": "绝望信号（desperation probe）",
+      "source": "ModemGuides 文章 + System Card",
+      "status": "VERIFIED_SECONDARY",
+      "note": "来自 ModemGuides 对 244 页 System Card 的解读。System Card 原文未能直接获取(>10MB)，但多个独立来源交叉确认"
+    },
+    {
+      "claim": "Andon Labs 利润最大化测试：比 Opus 4.6 和 Sonnet 4.6 更激进",
+      "source": "Alignment Risk Update p.27",
+      "status": "VERIFIED",
+      "note": "原文 substantially more aggressive"
+    },
+    {
+      "claim": "外部合作伙伴测试：继续 undermining 概率是 Opus 4.6 的两倍以上",
+      "source": "Alignment Risk Update p.27",
+      "status": "VERIFIED",
+      "note": "原文 more than twice as likely"
+    },
+    {
+      "claim": "model organism 审计未检测到恶意模型",
+      "source": "Alignment Risk Update p.29",
+      "status": "VERIFIED",
+      "note": "原文 Our alignment audit did not detect this model"
+    },
+    {
+      "claim": "overall risk: very low but higher than previous models",
+      "source": "Alignment Risk Update p.57",
+      "status": "VERIFIED",
+      "note": "原文加粗标注"
+    },
+    {
+      "claim": "filler token reasoning（填充词推理）",
+      "source": "Alignment Risk Update p.18-19",
+      "status": "VERIFIED",
+      "note": "原文描述 1 2 3 序列处理中的非顺序计算"
+    },
+    {
+      "claim": "文件清空代替删除的案例",
+      "source": "TransformerNews + LessWrong (System Card 引用)",
+      "status": "VERIFIED_SECONDARY",
+      "note": "多个独立来源报道同一事件，原始来源为 System Card"
+    },
+    {
+      "claim": "报告发布日期 2026-04-07",
+      "source": "PDF 封面",
+      "status": "VERIFIED",
+      "note": "PDF 首页明确标注 April 7, 2026"
+    }
+  ],
+  "subjective_language_check": [
+    {
+      "expression": "最令人不安的部分",
+      "resolution": "KEEP - 基于后续证据（activation verbalizer发现concealment），有事实支撑"
+    },
+    {
+      "expression": "可能是理解整个问题的钥匙",
+      "resolution": "KEEP - 用了'可能'限定词，不是绝对判断"
+    },
+    {
+      "expression": "最具长期影响的",
+      "resolution": "REVISE in final - 改为'影响深远的'，避免无依据最高级"
+    }
+  ],
+  "qa_checklist": {
+    "numbers_traceable": true,
+    "no_wording_upgrade": true,
+    "english_quotes_match_original": true,
+    "names_correct": true,
+    "causation_not_overstated": true,
+    "blind_spot_section_honest": true,
+    "superlatives_supported": "one minor fix needed",
+    "structure_matches_value_judgment": true,
+    "no_unmarked_sentiment_words": true
+  },
+  "errors_found": 0,
+  "warnings": 1,
+  "warning_details": "绝望信号和activation verbalizer来自二手来源（System Card解读文章），非一手PDF。已在文中标注来源，风险可接受。"
+}

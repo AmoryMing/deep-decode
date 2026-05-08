@@ -1,0 +1,86 @@
+{
+  "slug": "2026-04-03-agent-loop-single-thread",
+  "checked_at": "2026-04-07",
+  "claims": [
+    {
+      "claim": "query.ts 第 307 行 while(true) 循环",
+      "source": "源码直读",
+      "status": "VERIFIED",
+      "evidence": "grep -n 'while (true)' query.ts → 307:  while (true) {"
+    },
+    {
+      "claim": "coordinatorMode.ts 369 行系统提示词",
+      "source": "源码直读",
+      "status": "VERIFIED",
+      "evidence": "wc -l coordinatorMode.ts → 369 行（含函数定义，prompt 主体约 200+ 行）",
+      "note": "369 是文件总行数，系统提示词是 getCoordinatorSystemPrompt() 返回的字符串，约 250 行"
+    },
+    {
+      "claim": "Claude Code 51万行代码、1900个文件",
+      "source": "多信源一致（onefly.top、rumor、全面剖析文）",
+      "status": "VERIFIED",
+      "evidence": "三篇独立分析均报告 512,000+ 行、~1900 文件"
+    },
+    {
+      "claim": "prompt cache 命中率 92%",
+      "source": "LMCache Blog",
+      "status": "VERIFIED",
+      "evidence": "https://blog.lmcache.ai/en/2025/12/23/ 原文数据"
+    },
+    {
+      "claim": "Oracle 报告：Agent 4倍 token，多Agent 15倍",
+      "source": "QueryEngine 拆解文引用",
+      "status": "SECONDARY",
+      "note": "二手引用，未直接核实 Oracle 原报告。已在文中标注为'Oracle 的一份 Agent 架构报告'"
+    },
+    {
+      "claim": "OpenAI 2024年10月发布 Swarm",
+      "source": "公开信息",
+      "status": "VERIFIED",
+      "evidence": "OpenAI Swarm GitHub repo 创建于 2024-10"
+    },
+    {
+      "claim": "Coordinator 只有 3 个工具：Agent/SendMessage/TaskStop",
+      "source": "源码直读",
+      "status": "VERIFIED",
+      "evidence": "coordinatorMode.ts prompt 明确列出三个工具，另有 subscribe_pr_activity 条件可用"
+    },
+    {
+      "claim": "AsyncLocalStorage 用于 teammate 上下文隔离",
+      "source": "源码直读",
+      "status": "VERIFIED",
+      "evidence": "inProcessRunner.ts 注释：'AsyncLocalStorage-based context isolation via runWithTeammateContext()'"
+    },
+    {
+      "claim": "isConcurrencySafe 根据实际参数动态判断",
+      "source": "源码直读",
+      "status": "VERIFIED",
+      "evidence": "StreamingToolExecutor.ts: toolDefinition.isConcurrencySafe(parsedInput.data)"
+    },
+    {
+      "claim": "Teammate 普通文本输出对队友不可见",
+      "source": "源码直读",
+      "status": "VERIFIED",
+      "evidence": "teammatePromptAddendum.ts: 'Just writing a response in text is not visible to others on your team'"
+    }
+  ],
+  "subjective_checks": [
+    {
+      "expression": "一场安静但重要的路线之争",
+      "type": "客观过渡句",
+      "status": "OK",
+      "note": "描述性表述，不是价值判断"
+    },
+    {
+      "expression": "最差的PM是传话筒",
+      "type": "引用转述",
+      "status": "OK",
+      "note": "rumor 原文观点，已标注来源"
+    }
+  ],
+  "errors_found": 0,
+  "warnings": [
+    "Oracle 数据为二手引用，标注为'报告'而非确定性事实",
+    "coordinatorMode.ts '369行' 是文件总行数而非纯 prompt 行数，文中已调整表述为'系统提示词长达369行的文件'"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "slug": "2026-04-03-agent-loop-single-thread",
+  "title": "单线程 Agent Loop：为什么 Claude Code 不用 Swarm",
+  "context_sources_read": [
+    "context/information_sources/claudecode架构全解密.md",
+    "context/information_sources/从Claude Code源码看Anthropic的产品野心.md",
+    "context/information_sources/Claude Code 源码泄露全面剖析.md"
+  ],
+  "raw_code_read": [
+    "context/raw_code/cc-recovered-main/src/QueryEngine.ts (lines 1-200)",
+    "context/raw_code/cc-recovered-main/src/query.ts (lines 1-400)",
+    "context/raw_code/cc-recovered-main/src/services/tools/StreamingToolExecutor.ts (lines 1-100)",
+    "context/raw_code/cc-recovered-main/src/coordinator/coordinatorMode.ts (full)",
+    "context/raw_code/cc-recovered-main/src/utils/swarm/constants.ts (full)",
+    "context/raw_code/cc-recovered-main/src/utils/swarm/inProcessRunner.ts (lines 1-150)",
+    "context/raw_code/cc-recovered-main/src/utils/swarm/teammatePromptAddendum.ts (full)"
+  ],
+  "urls_fetched": [
+    "https://blog.promptlayer.com/claude-code-behind-the-scenes-of-the-master-agent-loop/",
+    "https://blog.promptlayer.com/watch-my-ai-engineering-talk/"
+  ],
+  "screenshots": [],
+  "key_findings": {
+    "core_loop": "query.ts while(true) loop - single-threaded, flat message history",
+    "tool_concurrency": "StreamingToolExecutor handles tool-level concurrency within single thread (read parallel, write serial)",
+    "swarm_system": "utils/swarm/ - opt-in multi-agent: InProcess (AsyncLocalStorage), Tmux, iTerm2 backends",
+    "coordinator": "coordinatorMode.ts - feature-flagged, transforms Claude into project manager with Agent/SendMessage/TaskStop only",
+    "fork_agents": "Lightweight sub-agents sharing prompt cache prefix for maximum cache hits"
+  }
+}

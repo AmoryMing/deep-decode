@@ -1,0 +1,23 @@
+{
+  "slug": "2026-04-03-undercover-mode",
+  "title": "Undercover Mode：Anthropic 员工的隐身衣",
+  "context_sources_read": [
+    "claude-source-leaked-main/src/utils/undercover.ts",
+    "claude-source-leaked-main/src/utils/commitAttribution.ts",
+    "claude-source-leaked-main/src/utils/attribution.ts",
+    "claude-source-leaked-main/analysis/en/undercover-mode.md",
+    "claudecode 源码深度解读.md (Undercover Mode段落)",
+    "从Claude Code源码看Anthropic的产品野心.md"
+  ],
+  "queue_urls": ["https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/"],
+  "key_source_code_evidence": {
+    "isUndercover": "undercover.ts:28-37 - USER_TYPE=ant + repo不在allowlist = 启用",
+    "no_force_off": "undercover.ts:17 - 'There is NO force-OFF'",
+    "undercover_instructions": "undercover.ts:39-69 - CRITICAL prompt注入，禁止一切AI归属信息",
+    "internal_repos": "commitAttribution.ts:30-75 - 21个私有仓库白名单",
+    "attribution_texts": "attribution.ts:52-98 - undercover时返回空字符串",
+    "enhanced_pr": "attribution.ts:297-393 - '93% 3-shotted by claude-opus-4-5, 2 memories recalled'",
+    "sanitize_model": "commitAttribution.ts:154-168 - 未知模型fallback为claude",
+    "dead_code_elim": "undercover.ts:19-21 - USER_TYPE是build-time --define，外部构建物理删除"
+  }
+}

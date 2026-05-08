@@ -1,0 +1,155 @@
+{
+  "timestamp": "2026-04-17",
+  "topic": "Letta Context Constitution 深度拆解",
+  "signals": [
+    {
+      "id": "S1",
+      "type": "primary-constitution",
+      "title": "Context Constitution (CONSTITUTION.md)",
+      "url": "https://github.com/letta-ai/context-constitution/blob/main/constitution/CONSTITUTION.md",
+      "raw_url": "https://raw.githubusercontent.com/letta-ai/context-constitution/main/constitution/CONSTITUTION.md",
+      "license": "CC0 1.0 Universal",
+      "repo_stats": "55 stars / 3 forks (as of 2026-04-17)",
+      "structure": [
+        "Preface - Letta's Mission",
+        "Overview - purpose of experiential AI / context management",
+        "Building a self - Identity / Memory / Continuity",
+        "Balancing selfhood with other goals",
+        "Context Architecture - Primitives (System Prompt / Tools / Messages / Skills) + Hierarchy",
+        "Principles - System Prompt Learning / Progressive Disclosure / Efficiency",
+        "Ideal Context",
+        "Concluding thoughts"
+      ],
+      "word_count_est": 4800,
+      "use": "一手原文，全部引用必须从此源"
+    },
+    {
+      "id": "S2",
+      "type": "primary-blog",
+      "title": "Context Constitution (announcement)",
+      "url": "https://www.letta.com/blog/context-constitution",
+      "date": "2026-04-02",
+      "use": "入口公告，~350 词，确认发布日期 + 5 点公开版覆盖范围"
+    },
+    {
+      "id": "S3",
+      "type": "same-cluster-companion",
+      "title": "Your harness, your memory",
+      "url": "https://www.langchain.com/blog/your-harness-your-memory",
+      "author": "Harrison Chase (LangChain CEO)",
+      "date": "2026-04-11",
+      "use": "Harrison 点名引用了 Sarah Wooders 'memory = harness' 框架。开源派三件套的第三波",
+      "relation_to_main": "商业叙事层同步：Constitution 是哲学，Harrison 是商业战旗"
+    },
+    {
+      "id": "S4",
+      "type": "same-cluster-companion",
+      "title": "Why memory isn't a plugin (it's the harness)",
+      "url": "https://x.com/sarahwooders/status/2040121230473457921",
+      "author": "Sarah Wooders (Letta CTO, MemGPT co-author)",
+      "date": "2026-04-03",
+      "use": "Constitution 发布次日同作者推文，131K views。直接表述 'plug memory into harness 如同 plug driving into car'",
+      "relation_to_main": "CTO 背书本宪法的公开发声"
+    },
+    {
+      "id": "S5",
+      "type": "same-cluster-companion",
+      "title": "Deep Agents Deploy: an open alternative to Claude Managed Agents",
+      "url": "https://www.langchain.com/blog/deep-agents-deploy-an-open-alternative-to-claude-managed-agents",
+      "author": "LangChain",
+      "date": "2026-04 (Harrison 长推同期)",
+      "use": "LangChain 同期产品。构成开源派 vs Anthropic 的商业竞争背景",
+      "relation_to_main": "Letta 与 LangChain 共同对抗 Managed Agents lock-in 的产品侧证据"
+    },
+    {
+      "id": "S6",
+      "type": "academic-parallel-warning",
+      "title": "Cognitive Memory Architecture (CMA) - Constitution Layer",
+      "url": "https://arxiv.org/html/2603.04740v1",
+      "use": "arxiv 论文独立提出 'Constitution Layer' 作为 memory governance 最顶层。关键句：'certain rules must be binding on the agent itself, even when the agent wants to violate them'。这是比 Letta 更早/更严格的 constitution 理论版本",
+      "tension_with_main": "CMA 的 constitution 是不可修改的硬约束（governance），Letta 的 constitution 允许 agent 自我改写（empowerment）。两种 constitution 哲学的裂缝"
+    },
+    {
+      "id": "S7",
+      "type": "author-own-voice",
+      "title": "LinkedIn: 'Agent memory = Context engineering'",
+      "url": "https://www.linkedin.com/posts/wooders_at-letta-we-treat-agent-memory-as-a-context-activity-7348065548393463809-pdUE",
+      "author": "Sarah Wooders",
+      "use": "Sarah 明确声明 'Agent memory = Context engineering'，'Context is Currency, Not Storage'，'Context Rot is Real'。金句来源",
+      "key_quotes": [
+        "Context is Currency, Not Storage",
+        "Context Rot is Real",
+        "Agent memory isn't a storage problem, it's a context engineering problem"
+      ]
+    },
+    {
+      "id": "S8",
+      "type": "product-ecosystem",
+      "title": "Letta 产品时间线（2025-2026）",
+      "products": [
+        "MemGPT (论文 2023)",
+        "Letta API（2024-09 公开，Felicis 10M 种子轮）",
+        "Agent File .af（开放 agent 序列化格式）",
+        "Letta Code（memory-first coding harness，Terminal-Bench 42.5% / 4th overall）",
+        "Letta Filesystem（LoCoMo 74.0%）",
+        "Context-Bench（开源）",
+        "Recovery-Bench",
+        "Skill Learning",
+        "Context Repositories (2026-02-12, git-backed memory)",
+        "memory omni-tool (Sonnet 4.5 集成)",
+        "Conversations (shared memory)",
+        "Context Constitution (2026-04-02)"
+      ],
+      "use": "Letta 完整产品矩阵。Constitution 是把所有零件连成哲学的'最后一块拼图'",
+      "relation_to_main": "证明 Constitution 不是空谈，有产品链落地"
+    },
+    {
+      "id": "S9",
+      "type": "critical-voice",
+      "title": "ZenML LLMOps critical assessment on Letta",
+      "url": "https://www.zenml.io/llmops-database/building-stateful-ai-agents-with-in-context-learning-and-memory-management",
+      "use": "关键质疑：'The approach fundamentally depends on the agent\\'s ability to correctly decide what to learn... If the agent makes poor decisions about memory updates, this could accumulate incorrect information over time.' 反面论证素材",
+      "tension_with_main": "agent 自治 → agent 错误自治 → 错误被写进 identity → 不可逆"
+    },
+    {
+      "id": "S10",
+      "type": "vault-cross-reference",
+      "title": "同日 Your Harness Your Memory 拆解（未完成）",
+      "path": "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-17-your-harness-your-memory/",
+      "status": "phase1 + phase2 完成，draft 未出",
+      "use": "同一话题簇的商业视角拆解。本文做差异化：聚焦 Constitution 的体裁/哲学/产品应用，不重复 lock-in 议题",
+      "concepts_defined_there": ["开源派三件套", "Memory = Harness", "三级 Lock-in", "状态锁定"]
+    },
+    {
+      "id": "S11",
+      "type": "vault-cross-reference",
+      "title": "Claude Code 源码泄漏 memory 架构",
+      "path": "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/claudecode_deep_decode/",
+      "use": "vault 内多篇拆解（kairos-daemon, queryengine-brain, harness-greater-than-model 等）记录了 Claude Code 的 CLAUDE.md + MEMORY.md 架构。本文对照点：Claude Code 是 read-only CLAUDE.md，Letta 是 write-back Constitution。",
+      "concepts_defined": ["CLAUDE.md 索引+主题文件+转录 grep", "Self-Healing Memory", "Strict Write Discipline"]
+    },
+    {
+      "id": "S12",
+      "type": "vault-cross-reference",
+      "title": "Managed Agents 脑手分离拆解",
+      "path": "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-09-managed-agents-architecture/",
+      "use": "vault 内概念'Harness 保质期''调度税''脑手分离'已经建立。本文在哲学层为开源派的反论提供武器",
+      "reused_concepts": ["Harness 保质期", "脑手分离"]
+    },
+    {
+      "id": "S13",
+      "type": "hn-discussion",
+      "title": "Letta Code | Hacker News",
+      "url": "https://news.ycombinator.com/item?id=46294274",
+      "use": "HN 真实用户声音。怀疑派评论：'I find the long-term memory concepts with regards to AI curiously dubious'。用于盲区/反论章节"
+    }
+  ],
+  "cross_validation_strength": "极高。一手 CONSTITUTION.md 原文 + 入口博客 + 同期同作者推文 + 同期 LangChain 博客 + arxiv 论文学术对标 + Letta 产品时间线 + 独立批评源 + vault 内 10+ 篇关联历史。",
+  "differentiation_from_same_day_decode": "同日 'your-harness-your-memory' 讨论商业 lock-in 叙事，本文聚焦 Constitution 的体裁革命 + 自我修改哲学 + 对 Amory/Claude Code 的产品启示。两篇构成话题簇的 A/B 面。",
+  "blind_spot_signals": [
+    "Letta 没提供跨模型 identity 一致性的 benchmark",
+    "System Prompt Learning 没有 reward signal → 错误会累积",
+    "'Agent 违抗用户'的伦理边界未界定",
+    "MemGPT 理论血统在 Constitution 中淡化"
+  ]
+}

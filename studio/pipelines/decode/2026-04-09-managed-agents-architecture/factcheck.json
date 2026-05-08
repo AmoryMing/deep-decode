@@ -1,0 +1,120 @@
+{
+  "date": "2026-04-09",
+  "slug": "2026-04-09-managed-agents-architecture",
+  "claims": [
+    {
+      "claim": "$0.08/session-hour 定价",
+      "source": "ChatGPT Guide (chatgptguide.ai/claude-managed-agents-launch/)",
+      "status": "VERIFIED_THIRDPARTY",
+      "note": "第三方报道，官方文档未明确写出。文中已标注来源为第三方。"
+    },
+    {
+      "claim": "p50 TTFT 降约 60%，p95 降超 90%",
+      "source": "Anthropic 工程博客原文",
+      "status": "VERIFIED",
+      "note": "原文: 'p50 TTFT dropped roughly 60%' 和 'p95 TTFT dropped over 90%'"
+    },
+    {
+      "claim": "Context anxiety（上下文焦虑）在 Sonnet 4.5 出现，在 Opus 4.5 消失",
+      "source": "Anthropic 工程博客原文",
+      "status": "VERIFIED",
+      "note": "原文: 'Claude Sonnet 4.5 exhibited context anxiety...When the same harness ran on Claude Opus 4.5, this behavior vanished'"
+    },
+    {
+      "claim": "早期客户: Notion, Sentry, Rakuten, Asana, Vibecode",
+      "source": "Reddit 官方发布帖 + ChatGPT Guide",
+      "status": "VERIFIED",
+      "note": "Reddit 帖子明确提到 'Teams at Notion, Sentry, Rakuten, Asana, and Vibecode are already building with it'"
+    },
+    {
+      "claim": "7 种 SDK（Python, TypeScript, Java, Go, C#, Ruby, PHP）+ CLI",
+      "source": "Quickstart 文档页代码示例",
+      "status": "VERIFIED",
+      "note": "文档 Quickstart 页面有所有 7 种语言的代码示例 + ant CLI"
+    },
+    {
+      "claim": "8 个内置工具: bash, read, write, edit, glob, grep, web_fetch, web_search",
+      "source": "Tools 文档页",
+      "status": "VERIFIED",
+      "note": "文档 Tools 页表格精确列出 8 个工具"
+    },
+    {
+      "claim": "Memory Store 上限 100KB/条，每 Session 最多 8 个",
+      "source": "Memory 文档页",
+      "status": "VERIFIED",
+      "note": "原文: 'Individual memories within the store are capped at 100KB' 和 'A maximum of 8 memory stores are supported per session'"
+    },
+    {
+      "claim": "Outcomes 最多 20 轮迭代",
+      "source": "Outcomes 文档页",
+      "status": "VERIFIED",
+      "note": "原文: 'max_iterations is optional; default 3, max 20'"
+    },
+    {
+      "claim": "Claude Code 代码质量盲测 67% 胜率，SWE-bench 80.9%",
+      "source": "NxCode 对比文章 (nxcode.io)",
+      "status": "VERIFIED_THIRDPARTY",
+      "note": "第三方对比评测数据。文中标注了来源。"
+    },
+    {
+      "claim": "GPT-5.3-Codex 代码生成速度 1000+ tokens/s",
+      "source": "NxCode 对比文章",
+      "status": "VERIFIED_THIRDPARTY",
+      "note": "第三方数据"
+    },
+    {
+      "claim": "Multi-agent 限一级委派",
+      "source": "Multi-agent 文档页",
+      "status": "VERIFIED",
+      "note": "原文: 'Only one level of delegation is supported: the coordinator can call other agents, but those agents cannot call agents of their own'"
+    },
+    {
+      "claim": "Beta header: managed-agents-2026-04-01",
+      "source": "Overview 文档页",
+      "status": "VERIFIED",
+      "note": "所有文档页重复确认"
+    },
+    {
+      "claim": "作者: Lance Martin, Gabe Cemaj, Michael Cohen",
+      "source": "Anthropic 工程博客原文",
+      "status": "VERIFIED",
+      "note": "原文底部: 'Authors: Lance Martin, Gabe Cemaj, and Michael Cohen'"
+    },
+    {
+      "claim": "2026-04-08 发布",
+      "source": "ChatGPT Guide + 文档 beta header 日期",
+      "status": "VERIFIED",
+      "note": "ChatGPT Guide 明确标注 'Launched April 8, 2026'，beta header 日期 2026-04-01 为 API 版本号"
+    }
+  ],
+  "subjective_language_check": [
+    {
+      "expression": "最有想象力的部分 (Outcomes)",
+      "action": "KEEP",
+      "reason": "独立 grader + 自动迭代 + rubric 机制在 Agent API 中确实罕见，有功能差异化支撑"
+    },
+    {
+      "expression": "出色的架构设计 (安全隔离)",
+      "action": "KEEP",
+      "reason": "双策略隔离 + 凭证完全不可见的设计确实在技术上有说服力"
+    },
+    {
+      "expression": "有说服力的案例 (context anxiety)",
+      "action": "KEEP",
+      "reason": "用同一 harness 在两个模型上产生不同效果，直接证明了架构论点"
+    }
+  ],
+  "qa_checklist": {
+    "all_numbers_traceable": true,
+    "no_wording_escalation": true,
+    "english_quotes_match_original": true,
+    "names_spelling_correct": true,
+    "no_overclaiming_causation": true,
+    "blind_spots_not_fabricated": true,
+    "superlatives_evidence_backed": true,
+    "structure_matches_value_claims": true,
+    "no_unattributed_emotional_language": true
+  },
+  "errors_found": 0,
+  "result": "PASS"
+}

@@ -1,0 +1,107 @@
+{
+  "slug": "2026-04-03-claude-code-leak-panorama",
+  "searched_at": "2026-04-03",
+  "signals": [
+    {
+      "id": 1,
+      "source": "VentureBeat",
+      "url": "https://venturebeat.com/security/claude-code-512000-line-source-leak-attack-paths-audit-security-leaders",
+      "type": "security_analysis",
+      "key_findings": [
+        "GitGuardian: Claude Code commits leak secrets at 3.2% vs 1.5% baseline",
+        "Gartner: Claude Code is 90% AI-generated → diminished IP protection under US copyright",
+        "CrowdStrike CTO: 'Don't give agent access to everything just because you're lazy'",
+        "Concurrent axios supply chain attack (RAT) 00:21-03:29 UTC same day"
+      ],
+      "used_for": "安全影响分析、axios 供应链攻击事件"
+    },
+    {
+      "id": 2,
+      "source": "Engineer's Codex",
+      "url": "https://read.engineerscodex.com/p/diving-into-claude-codes-source-code",
+      "type": "technical_deep_dive",
+      "key_findings": [
+        "print.ts: 5,594 lines total, single function 3,167 lines, 12 nesting levels",
+        "buddy/companion.ts: 18 species, rarity tiers, 1% shiny rate, RPG stats",
+        "187 spinner verbs (Source: Wes Bos)",
+        "LLM-oriented comments throughout, written for AI agents not humans",
+        "March 2026 was worst month in AI developer security: Delve/YC fraud, Mercor LAPSUS$ breach, OpenAI Codex injection, GitHub Copilot ad injection"
+      ],
+      "used_for": "屎山证据、Buddy 细节、行业安全背景"
+    },
+    {
+      "id": 3,
+      "source": "dev.to - Varshith Hegde",
+      "url": "https://dev.to/varshithvhegde/the-great-claude-code-leak-of-2026-accident-incompetence-or-the-best-pr-stunt-in-ai-history-3igm",
+      "type": "contrarian_analysis",
+      "key_findings": [
+        "质疑：真的是意外吗？4/1 愚人节前夕 + Buddy 原定 4/1-7 上线",
+        "Anthropic 收购了 Bun，runtime bug 20 天前就被报了但没修",
+        "Undercover Mode 反讽：反泄露系统自己被泄露",
+        "ANTI_DISTILLATION_CC: fake_tools 注入 decoy tool definitions"
+      ],
+      "used_for": "反面论证：泄露可能是故意的？"
+    },
+    {
+      "id": 4,
+      "source": "The Guardian",
+      "url": "https://www.theguardian.com/technology/2026/apr/01/anthropic-claudes-code-leaks-ai",
+      "type": "mainstream_media",
+      "key_findings": [
+        "Anthropic 确认 'human error'",
+        "近 2,000 文件泄露"
+      ],
+      "used_for": "事实核查：官方确认"
+    },
+    {
+      "id": 5,
+      "source": "Zscaler ThreatLabz",
+      "url": "https://www.zscaler.com/blogs/security-research/anthropic-claude-code-leak",
+      "type": "security_vendor_analysis",
+      "key_findings": [
+        "59.8 MB source map file, ~512,000 lines TypeScript",
+        "CVE-2025-59536, CVE-2026-21852 已知漏洞现在更容易被利用",
+        "Concurrent axios supply chain attack creates perfect storm"
+      ],
+      "used_for": "安全专业视角、CVE 信息"
+    },
+    {
+      "id": 6,
+      "source": "APIYI",
+      "url": "https://help.apiyi.com/en/claude-code-source-leak-march-2026-impact-ai-agent-industry-en.html",
+      "type": "industry_impact",
+      "key_findings": [
+        "Chaofan Shou (@Fried_rice) at Solayer Labs first discovered",
+        "GitHub mirrors 1,100+ stars",
+        "比作 Android 开源推动生态"
+      ],
+      "used_for": "发现者身份、行业影响"
+    },
+    {
+      "id": 7,
+      "source": "CyberNews",
+      "url": "https://cybernews.com/security/anthropic-claude-code-source-leak/",
+      "type": "news_report",
+      "key_findings": [
+        "instructkr/claude-code repo: 30,000 stars, 40,200 forks",
+        "Hacker News noted regex filter for swear words (negative sentiment detection)"
+      ],
+      "used_for": "GitHub 镜像规模数据"
+    },
+    {
+      "id": 8,
+      "source": "Randal Olson",
+      "url": "https://www.randalolson.com/2026/04/02/claude-code-leak-four-charts/",
+      "type": "data_visualization",
+      "key_findings": [
+        "40 tool modules across 184 files, ~50,800 lines",
+        "7 categories: File IO, Shell, Web, Multi-Agent, Planning, MCP/Skills, Internal"
+      ],
+      "used_for": "工具系统规模数据可视化"
+    }
+  ],
+  "vault_cross_refs": [
+    "vault/1-knowledge/ai-frontier/decode/ — 无已有相关拆解（全新系列）"
+  ],
+  "total_signals": 8
+}

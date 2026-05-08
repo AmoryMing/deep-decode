@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="440" fill="#FFFFFF" rx="12"/>
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#37352F" font-size="20" font-weight="bold">autoDream：AI 怎么"做梦"整理记忆</text>
+  <line x1="100" y1="52" x2="700" y2="52" stroke="#E8E8E8" stroke-width="1"/>
+
+  <!-- Gate sequence -->
+  <rect x="60" y="70" width="680" height="50" rx="6" fill="#F7F7F5" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="400" y="88" text-anchor="middle" fill="#37352F" font-size="13" font-weight="bold">三层门控（从最便宜的检查开始）</text>
+  <text x="180" y="108" text-anchor="middle" fill="#4DB6AC" font-size="11">1. 时间 >= 24h?  (1次stat)</text>
+  <text x="400" y="108" text-anchor="middle" fill="#FFB020" font-size="11">2. 新会话 >= 5?  (扫描目录)</text>
+  <text x="620" y="108" text-anchor="middle" fill="#EB5757" font-size="11">3. 锁可用?  (PID+mtime)</text>
+  <!-- Arrows between gates -->
+  <text x="290" y="108" text-anchor="middle" fill="#CCCCCC" font-size="14">-></text>
+  <text x="510" y="108" text-anchor="middle" fill="#CCCCCC" font-size="14">-></text>
+
+  <!-- Phase 1 -->
+  <rect x="60" y="145" width="155" height="140" rx="8" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <rect x="60" y="145" width="155" height="32" rx="8" fill="#4DB6AC" opacity="0.1"/>
+  <text x="137" y="166" text-anchor="middle" fill="#4DB6AC" font-size="13" font-weight="bold">Phase 1  定位</text>
+  <text x="137" y="192" text-anchor="middle" fill="#555555" font-size="11">扫描 memory/</text>
+  <text x="137" y="210" text-anchor="middle" fill="#555555" font-size="11">读 MEMORY.md 索引</text>
+  <text x="137" y="228" text-anchor="middle" fill="#555555" font-size="11">防止创建重复记忆</text>
+  <text x="137" y="258" text-anchor="middle" fill="#999999" font-size="10">工具: ls, cat</text>
+  <text x="137" y="275" text-anchor="middle" fill="#4DB6AC" font-size="10">零 API 成本</text>
+
+  <!-- Arrow -->
+  <line x1="215" y1="215" x2="235" y2="215" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Phase 2 -->
+  <rect x="237" y="145" width="155" height="140" rx="8" fill="#FFFFFF" stroke="#FFB020" stroke-width="1.5"/>
+  <rect x="237" y="145" width="155" height="32" rx="8" fill="#FFB020" opacity="0.1"/>
+  <text x="314" y="166" text-anchor="middle" fill="#FFB020" font-size="13" font-weight="bold">Phase 2  采集</text>
+  <text x="314" y="192" text-anchor="middle" fill="#555555" font-size="11">grep 会话日志</text>
+  <text x="314" y="210" text-anchor="middle" fill="#555555" font-size="11">只搜怀疑重要的</text>
+  <text x="314" y="228" text-anchor="middle" fill="#555555" font-size="11">不全量读取</text>
+  <text x="314" y="258" text-anchor="middle" fill="#999999" font-size="10">工具: grep, tail</text>
+  <text x="314" y="275" text-anchor="middle" fill="#FFB020" font-size="10">"Look only for things</text>
+
+  <!-- Arrow -->
+  <line x1="392" y1="215" x2="412" y2="215" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Phase 3 -->
+  <rect x="414" y="145" width="155" height="140" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5"/>
+  <rect x="414" y="145" width="155" height="32" rx="8" fill="#2383E2" opacity="0.1"/>
+  <text x="491" y="166" text-anchor="middle" fill="#2383E2" font-size="13" font-weight="bold">Phase 3  整合</text>
+  <text x="491" y="192" text-anchor="middle" fill="#555555" font-size="11">合并重复记忆</text>
+  <text x="491" y="210" text-anchor="middle" fill="#555555" font-size="11">修正矛盾事实</text>
+  <text x="491" y="228" text-anchor="middle" fill="#555555" font-size="11">"昨天" -> 2026-04-06</text>
+  <text x="491" y="258" text-anchor="middle" fill="#999999" font-size="10">工具: Edit, Write</text>
+  <text x="491" y="275" text-anchor="middle" fill="#2383E2" font-size="10">只能写 memory/</text>
+
+  <!-- Arrow -->
+  <line x1="569" y1="215" x2="589" y2="215" stroke="#CCCCCC" stroke-width="1.5"/>
+
+  <!-- Phase 4 -->
+  <rect x="591" y="145" width="155" height="140" rx="8" fill="#FFFFFF" stroke="#9B59B6" stroke-width="1.5"/>
+  <rect x="591" y="145" width="155" height="32" rx="8" fill="#9B59B6" opacity="0.1"/>
+  <text x="668" y="166" text-anchor="middle" fill="#9B59B6" font-size="13" font-weight="bold">Phase 4  修剪</text>
+  <text x="668" y="192" text-anchor="middle" fill="#555555" font-size="11">更新 MEMORY.md</text>
+  <text x="668" y="210" text-anchor="middle" fill="#555555" font-size="11">控制 200 行 / 25KB</text>
+  <text x="668" y="228" text-anchor="middle" fill="#555555" font-size="11">删除过时条目</text>
+  <text x="668" y="258" text-anchor="middle" fill="#999999" font-size="10">双重限制</text>
+  <text x="668" y="275" text-anchor="middle" fill="#9B59B6" font-size="10">197KB 单行事件逼出来的</text>
+
+  <!-- Lock mechanism -->
+  <rect x="100" y="310" width="280" height="100" rx="8" fill="#FFF8E1" stroke="#FFB020" stroke-width="1"/>
+  <text x="240" y="335" text-anchor="middle" fill="#37352F" font-size="13" font-weight="bold">锁文件：一个文件解决三个问题</text>
+  <text x="240" y="358" text-anchor="middle" fill="#555555" font-size="11">mtime = 上次整理时间戳</text>
+  <text x="240" y="376" text-anchor="middle" fill="#555555" font-size="11">锁体 = 持有者 PID（互斥控制）</text>
+  <text x="240" y="394" text-anchor="middle" fill="#555555" font-size="11">失败回滚 mtime（崩溃恢复）</text>
+
+  <!-- Isolation box -->
+  <rect x="420" y="310" width="320" height="100" rx="8" fill="#F0F8FF" stroke="#2383E2" stroke-width="1"/>
+  <text x="580" y="335" text-anchor="middle" fill="#37352F" font-size="13" font-weight="bold">安全隔离：有限自主性</text>
+  <text x="580" y="358" text-anchor="middle" fill="#555555" font-size="11">Fork 子进程，与主会话完全隔离</text>
+  <text x="580" y="376" text-anchor="middle" fill="#555555" font-size="11">Bash 只读 | Edit/Write 仅限 memory/</text>
+  <text x="580" y="394" text-anchor="middle" fill="#555555" font-size="11">不能用 MCP | 不能生成子 Agent</text>
+
+  <!-- Bottom -->
+  <text x="400" y="432" text-anchor="middle" fill="#AAAAAA" font-size="10">KAIROS 模式禁用普通 autoDream -- 改用 /dream skill + daily log 实时蒸馏</text>
+</svg>

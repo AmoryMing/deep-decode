@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">神经符号：骨架 + 肉</text>
+  <text x="400" y="66" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">结构来自符号，语义来自神经</text>
+
+  <!-- 左：骨架 Frames -->
+  <g transform="translate(60, 110)">
+    <text x="130" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" text-anchor="middle" font-weight="700">Frames 骨架</text>
+    <text x="130" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">1974 年 Minsky 搭出来</text>
+
+    <!-- 骨架：分层矩形 -->
+    <g transform="translate(30, 50)">
+      <!-- 顶层 -->
+      <rect x="0" y="0" width="200" height="40" rx="6" fill="#37352F"/>
+      <text x="100" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">顶层固定</text>
+
+      <!-- slot 1 -->
+      <rect x="0" y="50" width="200" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4 3"/>
+      <text x="100" y="73" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">slot · 默认值松绑</text>
+
+      <!-- slot 2 -->
+      <rect x="0" y="94" width="200" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4 3"/>
+      <text x="100" y="117" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">slot · 按需加载</text>
+
+      <!-- slot 3 -->
+      <rect x="0" y="138" width="200" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4 3"/>
+      <text x="100" y="161" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">slot · 异常处理</text>
+
+      <!-- slot 4 -->
+      <rect x="0" y="182" width="200" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4 3"/>
+      <text x="100" y="205" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">slot · 组合调用</text>
+    </g>
+
+    <text x="130" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">分层 · 预挂 · 可替换</text>
+    <text x="130" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" text-anchor="middle" font-weight="600">缺了"理解 slot 是什么"</text>
+  </g>
+
+  <!-- 中间加号 -->
+  <g transform="translate(370, 230)">
+    <circle cx="30" cy="30" r="26" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="30" y="42" font-family="PingFang SC, Inter, sans-serif" font-size="32" fill="#2383E2" text-anchor="middle" font-weight="700">+</text>
+  </g>
+
+  <!-- 右：肉 LLM -->
+  <g transform="translate(500, 110)">
+    <text x="130" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" text-anchor="middle" font-weight="700">LLM 的肉</text>
+    <text x="130" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">2022 年之后训出来</text>
+
+    <!-- 肉：实心块 -->
+    <g transform="translate(30, 50)">
+      <rect x="0" y="0" width="200" height="40" rx="6" fill="#2383E2"/>
+      <text x="100" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">语义理解</text>
+
+      <rect x="0" y="50" width="200" height="36" rx="4" fill="#2383E2" opacity="0.25"/>
+      <text x="100" y="73" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">读懂自然语言 slot</text>
+
+      <rect x="0" y="94" width="200" height="36" rx="4" fill="#2383E2" opacity="0.25"/>
+      <text x="100" y="117" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">运行时做决定</text>
+
+      <rect x="0" y="138" width="200" height="36" rx="4" fill="#2383E2" opacity="0.25"/>
+      <text x="100" y="161" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">上下文自动对齐</text>
+
+      <rect x="0" y="182" width="200" height="36" rx="4" fill="#2383E2" opacity="0.25"/>
+      <text x="100" y="205" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">例外靠常识补</text>
+    </g>
+
+    <text x="130" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">规模 · 预训练 · RLHF</text>
+    <text x="130" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle" font-weight="600">把骨架没填的活干完</text>
+  </g>
+
+  <!-- 底部等号 -->
+  <g transform="translate(320, 470)">
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#37352F"/>
+    <text x="80" y="23" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">= Skills 2025</text>
+  </g>
+</svg>

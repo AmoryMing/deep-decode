@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">分形心智：意识是模式，不是基底</text>
+  <text x="400" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle">Fractal Mind -- 同一种信息模式在不同基底上涌现</text>
+
+  <!-- Central concept: Pattern -->
+  <circle cx="400" cy="230" r="55" fill="none" stroke="#2383E2" stroke-width="2"/>
+  <text x="400" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2" text-anchor="middle">意识</text>
+  <text x="400" y="245" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" text-anchor="middle">= 信息模式</text>
+
+  <!-- Fractal-like small patterns inside -->
+  <circle cx="385" cy="210" r="8" fill="none" stroke="#2383E2" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="415" cy="210" r="8" fill="none" stroke="#2383E2" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="400" cy="250" r="8" fill="none" stroke="#2383E2" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Three substrates -->
+  <!-- Carbon -->
+  <g transform="translate(150,230)">
+    <rect x="-65" y="-45" width="130" height="90" rx="10" fill="#F0FFF0" stroke="#4DB6AC" stroke-width="1.5"/>
+    <text x="0" y="-20" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">碳基</text>
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">生物神经元</text>
+    <text x="0" y="18" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle">860 亿神经元</text>
+    <text x="0" y="33" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC" text-anchor="middle">20W 功耗</text>
+  </g>
+  <line x1="220" y1="230" x2="345" y2="230" stroke="#4DB6AC" stroke-width="1.5"/>
+
+  <!-- Silicon -->
+  <g transform="translate(650,150)">
+    <rect x="-65" y="-45" width="130" height="90" rx="10" fill="#EBF5FF" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="0" y="-20" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">硅基</text>
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">GPU / TPU</text>
+    <text x="0" y="18" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle">万亿参数模型</text>
+    <text x="0" y="33" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" text-anchor="middle">MW 级功耗</text>
+  </g>
+  <line x1="455" y1="210" x2="585" y2="165" stroke="#2383E2" stroke-width="1.5"/>
+
+  <!-- Wetware -->
+  <g transform="translate(650,330)">
+    <rect x="-65" y="-45" width="130" height="90" rx="10" fill="#FFF8E1" stroke="#FFB020" stroke-width="1.5"/>
+    <text x="0" y="-20" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">湿件</text>
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">生物计算基底</text>
+    <text x="0" y="18" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999" text-anchor="middle">Cortical Labs / FinalSpark</text>
+    <text x="0" y="33" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC" text-anchor="middle">极低功耗</text>
+  </g>
+  <line x1="455" y1="250" x2="585" y2="315" stroke="#FFB020" stroke-width="1.5"/>
+
+  <!-- Levin research box -->
+  <rect x="100" y="360" width="280" height="60" rx="6" fill="#F7F7F5" stroke="#eee"/>
+  <text x="115" y="380" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#37352F">Michael Levin (Tufts) 实验证据：</text>
+  <text x="115" y="398" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">细胞/黏菌/xenobots 无神经元但有类认知行为</text>
+  <text x="115" y="412" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">440+ 同行评审论文 | Diverse Intelligence</text>
+
+  <!-- Hard Problem warning -->
+  <rect x="430" y="430" width="320" height="55" rx="6" fill="#FFF0F0" stroke="#EB5757" stroke-width="0.5"/>
+  <text x="445" y="450" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#EB5757">困难问题 (Chalmers)：</text>
+  <text x="445" y="468" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">"类认知行为" 到 "意识" 之间的概念鸿沟</text>
+  <text x="445" y="482" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">模式 = 意识？哲学立场，非科学定论</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">PM 的四大操作变革</text>
+  <text x="400" y="65" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">从 Cat Wu 的实践中提炼</text>
+
+  <!-- Card 1: Short Sprints -->
+  <rect x="30" y="90" width="355" height="180" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="30" y="90" width="355" height="6" rx="3" fill="#2383E2"/>
+  <text x="50" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">1. 短冲刺取代长路线图</text>
+  <text x="50" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">传统: 季度/年度路线图，瀑布式推进</text>
+  <text x="50" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">现在: Side Quest 机制，任何人可发起实验</text>
+  <text x="50" y="196" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Claude Code Desktop / Todo lists</text>
+  <text x="50" y="216" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">都是 Side Quest 的产物</text>
+  <rect x="50" y="235" width="160" height="24" rx="12" fill="#2383E2" opacity="0.1"/>
+  <text x="130" y="251" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2">"Wrong bets are cheap"</text>
+
+  <!-- Card 2: Demos over Docs -->
+  <rect x="415" y="90" width="355" height="180" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="415" y="90" width="355" height="6" rx="3" fill="#4DB6AC"/>
+  <text x="435" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">2. 原型吃掉文档</text>
+  <text x="435" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">传统: PRD -> 评审 -> 开发 -> 测试</text>
+  <text x="435" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">现在: Spec -> Claude Code -> 可运行原型</text>
+  <text x="435" y="196" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">PM 核心产出从文档变为:</text>
+  <text x="435" y="218" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#4DB6AC">可运行的原型 + 可衡量的 eval</text>
+  <rect x="435" y="235" width="220" height="24" rx="12" fill="#4DB6AC" opacity="0.1"/>
+  <text x="545" y="251" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">"Prompt sets are the new PRDs"</text>
+
+  <!-- Card 3: Model Upgrade = Product Upgrade -->
+  <rect x="30" y="290" width="355" height="180" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="30" y="290" width="355" height="6" rx="3" fill="#FFB020"/>
+  <text x="50" y="322" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">3. 模型升级即产品升级</text>
+  <text x="50" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">每次新模型发布:</text>
+  <text x="50" y="372" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">-> 重翻「做不到」清单，新模型再试一次</text>
+  <text x="50" y="396" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">-> 清理旧 workaround (技术债)</text>
+  <text x="50" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Opus 4.6 system prompt 精简了 20%</text>
+  <rect x="50" y="437" width="250" height="24" rx="12" fill="#FFB020" opacity="0.1"/>
+  <text x="175" y="453" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#B8860B">今天的 hack = 明天的技术债</text>
+
+  <!-- Card 4: Do the Simple Thing -->
+  <rect x="415" y="290" width="355" height="180" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="415" y="290" width="355" height="6" rx="3" fill="#9B51E0"/>
+  <text x="435" y="322" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">4. 做简单的事</text>
+  <text x="435" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Agent 系统中复杂度指数级放大失败</text>
+  <text x="435" y="372" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">先用最笨的方法做</text>
+  <text x="435" y="396" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">技术栈选「on distribution」而非最优雅</text>
+  <text x="435" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">有些问题最好的解法是: 等等看</text>
+  <rect x="435" y="437" width="200" height="24" rx="12" fill="#9B51E0" opacity="0.1"/>
+  <text x="535" y="453" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#9B51E0">"Do the simple thing"</text>
+
+  <!-- Bottom summary -->
+  <text x="400" y="500" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">本质: 计划颗粒度要跟模型迭代速度匹配</text>
+</svg>

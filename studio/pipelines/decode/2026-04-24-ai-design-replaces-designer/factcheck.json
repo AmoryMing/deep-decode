@@ -1,0 +1,47 @@
+{
+  "slug": "2026-04-24-ai-design-replaces-designer",
+  "checked_at": "2026-04-24",
+  "verdict": "PASS (1 修正后)",
+  "claims": [
+    {"claim": "Claude Design 发布于 2026-04-17", "status": "Accurate", "sources": ["anthropic.com/news/claude-design-anthropic-labs", "techcrunch.com 2026-04-17", "gizmodo"]},
+    {"claim": "gpt-image-2 / ChatGPT Images 2.0 发布于 2026-04-21", "status": "Accurate", "sources": ["WebSearch summary apidog + releasebot"]},
+    {"claim": "Figma 股价发布当天跌 7%", "status": "Accurate", "sources": ["gizmodo"]},
+    {"claim": "Figma 股价 YTD 跌约 35%", "status": "Accurate", "sources": ["WebSearch summary"]},
+    {"claim": "Anthropic CPO Mike Krieger 于 2026-04-16 辞 Figma 董事", "status": "Accurate", "sources": ["gizmodo"]},
+    {"claim": "Claude Design 基于 Claude Opus 4.7", "status": "Accurate", "sources": ["letsdatascience.com", "anthropic.com"]},
+    {"claim": "Claude Design 产出 HTML/CSS/React 组件而非静态图", "status": "Accurate", "sources": ["anthropic.com"]},
+    {"claim": "Canva CEO Melanie Perkins 为 Claude Design 站台", "status": "Accurate", "sources": ["anthropic.com", "gizmodo"]},
+    {"claim": "Brilliant 反馈 '20+ prompts → 2 prompts'", "status": "Accurate", "sources": ["anthropic.com", "medium Fanny"]},
+    {"claim": "Datadog 反馈 '一周 → 一次对话'", "status": "Accurate", "sources": ["anthropic.com", "medium Fanny"]},
+    {"claim": "gpt-image-2 多语言文字渲染 99% 准确率（声称）", "status": "Accurate-with-attribution", "note": "用'声称'标注为官方数字而非第三方验证", "sources": ["thenextweb"]},
+    {"claim": "gpt-image-2 一次最多出 10 张图", "status": "Accurate", "sources": ["WebSearch summary"]},
+    {"claim": "gpt-image-2 最多 8 张保持人物/物体一致性", "status": "Accurate (已修正)", "note": "初稿将 10/8 合并为'10张保持一致'有误，已拆开表达", "sources": ["thenextweb"]},
+    {"claim": "gpt-image-2 单图最高 2000px 宽", "status": "Accurate", "sources": ["WebSearch summary"]},
+    {"claim": "gpt-image-2 Thinking Mode 含 web search + 多图批处理 + 输出校验（付费）", "status": "Accurate", "sources": ["thenextweb"]},
+    {"claim": "O-series reasoning 首次融入图像生成", "status": "Accurate", "sources": ["thenextweb 原文: 'integration of OpenAI's O-series reasoning architecture into image generation for the first time'"]},
+    {"claim": "Google 2025 年收购 Galileo AI，改名 Google Stitch", "status": "Accurate", "sources": ["WebSearch summary"]},
+    {"claim": "Google Stitch 3/19 更新多屏+无限画布", "status": "Accurate", "sources": ["tech-insider.org"]},
+    {"claim": "Deloitte Digital 2025: 59% 科技创业公司用 AI UI/UX 工具", "status": "Accurate", "sources": ["WebSearch summary"]},
+    {"claim": "Fanny 原话 'Pipelines optimize for throughput...' 保留原文引号", "status": "Accurate", "sources": ["medium Fanny 原文"]},
+    {"claim": "Claude Code 无结构化规划 ~33% 成功率", "status": "Accurate-with-attribution", "note": "为 Fanny 个人观察，文中已归属给她", "sources": ["medium Fanny"]},
+    {"claim": "Anthropic 原话 'complement Canva rather than replace'", "status": "Accurate", "sources": ["techcrunch"]},
+    {"claim": "Claude Design / gpt-image-2 当前都是 Research Preview 状态", "status": "Accurate", "sources": ["anthropic.com", "OpenAI messaging"]}
+  ],
+  "corrections_applied": [
+    {
+      "location": "§三 会思考的像素",
+      "before": "一次生成最多 10 张图并保持角色一致",
+      "after": "一次最多可以出 10 张图，其中最多 8 张能保持人物和物体的一致性",
+      "reason": "原文合并了 '10 张出图上限' 和 '8 张一致性上限' 两条不同数据，易误读"
+    }
+  ],
+  "subjective_language_audit": {
+    "最高级声明": [
+      {"phrase": "Anthropic 最强视觉模型", "status": "归属给 Anthropic 官方宣传，非独立声明"},
+      {"phrase": "Claude Code 最大的强项", "status": "归属给 Fanny 的判断，已明确作者"}
+    ],
+    "情感倾向词": "无'震惊/不可思议/炸裂/细思极恐'等贩卖焦虑词",
+    "价值排序": "无未标注的价值排序"
+  },
+  "unresolved_errors": []
+}

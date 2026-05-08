@@ -1,0 +1,236 @@
+{
+  "id": "2026-04-03-162829",
+  "generated_at": "2026-04-03T08:28:29.449975904Z",
+  "language": "zh",
+  "pages": [
+    {
+      "slug": "1-xiang-mu-gai-lan",
+      "title": "项目概览",
+      "file": "1-xiang-mu-gai-lan.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "2-kuai-su-kai-shi",
+      "title": "快速开始",
+      "file": "2-kuai-su-kai-shi.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "3-he-xin-gai-nian-yu-jia-gou-zong-lan",
+      "title": "核心概念与架构总览",
+      "file": "3-he-xin-gai-nian-yu-jia-gou-zong-lan.md",
+      "section": "快速入门",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "4-cha-xun-yin-qing-jia-gou-yu-zhi-xing-ji-zhi",
+      "title": "查询引擎架构与执行机制",
+      "file": "4-cha-xun-yin-qing-jia-gou-yu-zhi-xing-ji-zhi.md",
+      "section": "深度探索",
+      "group": "核心引擎与执行流程",
+      "level": "Advanced"
+    },
+    {
+      "slug": "5-gong-ju-xi-tong-she-ji-yu-bian-pai",
+      "title": "工具系统设计与编排",
+      "file": "5-gong-ju-xi-tong-she-ji-yu-bian-pai.md",
+      "section": "深度探索",
+      "group": "核心引擎与执行流程",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "6-ren-wu-guan-li-yu-bing-fa-kong-zhi",
+      "title": "任务管理与并发控制",
+      "file": "6-ren-wu-guan-li-yu-bing-fa-kong-zhi.md",
+      "section": "深度探索",
+      "group": "核心引擎与执行流程",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "7-ming-ling-zhu-ce-yu-lu-you-ji-zhi",
+      "title": "命令注册与路由机制",
+      "file": "7-ming-ling-zhu-ce-yu-lu-you-ji-zhi.md",
+      "section": "深度探索",
+      "group": "命令系统",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "8-chang-yong-ming-ling-shi-xian-jie-xi",
+      "title": "常用命令实现解析",
+      "file": "8-chang-yong-ming-ling-shi-xian-jie-xi.md",
+      "section": "深度探索",
+      "group": "命令系统",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "9-ying-yong-zhuang-tai-guan-li-jia-gou",
+      "title": "应用状态管理架构",
+      "file": "9-ying-yong-zhuang-tai-guan-li-jia-gou.md",
+      "section": "深度探索",
+      "group": "状态管理与数据流",
+      "level": "Advanced"
+    },
+    {
+      "slug": "10-react-ink-zhong-duan-ui-shi-xian",
+      "title": "React + Ink 终端 UI 实现",
+      "file": "10-react-ink-zhong-duan-ui-shi-xian.md",
+      "section": "深度探索",
+      "group": "状态管理与数据流",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "11-api-fu-wu-yu-anthropic-sdk-ji-cheng",
+      "title": "API 服务与 Anthropic SDK 集成",
+      "file": "11-api-fu-wu-yu-anthropic-sdk-ji-cheng.md",
+      "section": "深度探索",
+      "group": "服务层集成",
+      "level": "Advanced"
+    },
+    {
+      "slug": "12-mcp-mo-xing-shang-xia-wen-xie-yi-ji-cheng",
+      "title": "MCP（模型上下文协议）集成",
+      "file": "12-mcp-mo-xing-shang-xia-wen-xie-yi-ji-cheng.md",
+      "section": "深度探索",
+      "group": "服务层集成",
+      "level": "Advanced"
+    },
+    {
+      "slug": "13-quan-xian-xi-tong-yu-an-quan-kong-zhi",
+      "title": "权限系统与安全控制",
+      "file": "13-quan-xian-xi-tong-yu-an-quan-kong-zhi.md",
+      "section": "深度探索",
+      "group": "服务层集成",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "14-she-zhi-guan-li-yu-chi-jiu-hua",
+      "title": "设置管理与持久化",
+      "file": "14-she-zhi-guan-li-yu-chi-jiu-hua.md",
+      "section": "深度探索",
+      "group": "服务层集成",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "15-wen-jian-cao-zuo-gong-ju-ji",
+      "title": "文件操作工具集",
+      "file": "15-wen-jian-cao-zuo-gong-ju-ji.md",
+      "section": "深度探索",
+      "group": "工具实现详解",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "16-shell-yu-bash-gong-ju",
+      "title": "Shell 与 Bash 工具",
+      "file": "16-shell-yu-bash-gong-ju.md",
+      "section": "深度探索",
+      "group": "工具实现详解",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "17-agent-gong-ju-yu-duo-zhi-neng-ti-xie-zuo",
+      "title": "Agent 工具与多智能体协作",
+      "file": "17-agent-gong-ju-yu-duo-zhi-neng-ti-xie-zuo.md",
+      "section": "深度探索",
+      "group": "工具实现详解",
+      "level": "Advanced"
+    },
+    {
+      "slug": "18-web-sou-suo-yu-wang-luo-gong-ju",
+      "title": "Web 搜索与网络工具",
+      "file": "18-web-sou-suo-yu-wang-luo-gong-ju.md",
+      "section": "深度探索",
+      "group": "工具实现详解",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "19-git-ban-ben-kong-zhi-gong-ju",
+      "title": "Git 版本控制工具",
+      "file": "19-git-ban-ben-kong-zhi-gong-ju.md",
+      "section": "深度探索",
+      "group": "工具实现详解",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "20-ji-neng-xi-tong-yu-cha-jian-jia-gou",
+      "title": "技能系统与插件架构",
+      "file": "20-ji-neng-xi-tong-yu-cha-jian-jia-gou.md",
+      "section": "深度探索",
+      "group": "高级功能",
+      "level": "Advanced"
+    },
+    {
+      "slug": "21-yu-yin-mo-shi-yu-duo-mo-tai-jiao-hu",
+      "title": "语音模式与多模态交互",
+      "file": "21-yu-yin-mo-shi-yu-duo-mo-tai-jiao-hu.md",
+      "section": "深度探索",
+      "group": "高级功能",
+      "level": "Advanced"
+    },
+    {
+      "slug": "22-hui-hua-hui-fu-yu-li-shi-ji-lu",
+      "title": "会话恢复与历史记录",
+      "file": "22-hui-hua-hui-fu-yu-li-shi-ji-lu.md",
+      "section": "深度探索",
+      "group": "高级功能",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "23-yuan-cheng-hui-hua-yu-bridge-mo-shi",
+      "title": "远程会话与 Bridge 模式",
+      "file": "23-yuan-cheng-hui-hua-yu-bridge-mo-shi.md",
+      "section": "深度探索",
+      "group": "高级功能",
+      "level": "Advanced"
+    },
+    {
+      "slug": "24-xiang-mu-gou-jian-yu-yi-lai-guan-li",
+      "title": "项目构建与依赖管理",
+      "file": "24-xiang-mu-gou-jian-yu-yi-lai-guan-li.md",
+      "section": "深度探索",
+      "group": "开发与调试",
+      "level": "Beginner"
+    },
+    {
+      "slug": "25-diao-shi-ji-qiao-yu-zhen-duan-gong-ju",
+      "title": "调试技巧与诊断工具",
+      "file": "25-diao-shi-ji-qiao-yu-zhen-duan-gong-ju.md",
+      "section": "深度探索",
+      "group": "开发与调试",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "26-xing-neng-you-hua-yu-nei-cun-guan-li",
+      "title": "性能优化与内存管理",
+      "file": "26-xing-neng-you-hua-yu-nei-cun-guan-li.md",
+      "section": "深度探索",
+      "group": "开发与调试",
+      "level": "Advanced"
+    },
+    {
+      "slug": "27-zi-ding-yi-gong-ju-kai-fa-zhi-nan",
+      "title": "自定义工具开发指南",
+      "file": "27-zi-ding-yi-gong-ju-kai-fa-zhi-nan.md",
+      "section": "深度探索",
+      "group": "扩展与定制",
+      "level": "Advanced"
+    },
+    {
+      "slug": "28-zi-ding-yi-ming-ling-kai-fa-zhi-nan",
+      "title": "自定义命令开发指南",
+      "file": "28-zi-ding-yi-ming-ling-kai-fa-zhi-nan.md",
+      "section": "深度探索",
+      "group": "扩展与定制",
+      "level": "Advanced"
+    },
+    {
+      "slug": "29-mcp-fu-wu-qi-kai-fa",
+      "title": "MCP 服务器开发",
+      "file": "29-mcp-fu-wu-qi-kai-fa.md",
+      "section": "深度探索",
+      "group": "扩展与定制",
+      "level": "Advanced"
+    }
+  ]
+}

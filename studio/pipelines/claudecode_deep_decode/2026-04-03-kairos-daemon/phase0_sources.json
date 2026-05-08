@@ -1,0 +1,35 @@
+{
+  "slug": "2026-04-03-kairos-daemon",
+  "title": "KAIROS：7x24 后台 Daemon 的野心",
+  "context_sources_read": [
+    "从Claude Code源码看Anthropic的产品野心.md",
+    "claudecode架构全解密.md (KAIROS特性标志段落)",
+    "Claude Code 源码泄露全面剖析.md (Feature Flag段落)",
+    "claudecode 源码深度解读.md (KAIROS段落 + autoDream段落)",
+    "源码解读记忆.md (7层记忆架构 + DreamTask)"
+  ],
+  "raw_code_read": [
+    "src/main.tsx (line 79-81: KAIROS conditional import)",
+    "src/tools/BriefTool/BriefTool.ts (KAIROS门控 + isBriefEnabled)",
+    "src/tools/ScheduleCronTool/prompt.ts (isKairosCronEnabled + durableCron)",
+    "src/constants/xml.ts (TICK_TAG定义)",
+    "src/query.ts (SLEEP_TOOL_NAME import + proactive path)",
+    "src/commands.ts (proactive command conditional load)",
+    "src/constants/prompts.ts (proactive module + SLEEP_TOOL_NAME)"
+  ],
+  "queue_urls": [
+    "https://www.reddit.com/r/LocalLLaMA/comments/1s8ijfb/",
+    "https://36kr.com/p/3747481076417289"
+  ],
+  "screenshots": [],
+  "key_source_code_evidence": {
+    "kairos_gate": "main.tsx:80 - const assistantModule = feature('KAIROS') ? require('./assistant/index.js') : null",
+    "kairos_gate2": "main.tsx:81 - const kairosGate = feature('KAIROS') ? require('./assistant/gate.js') : null",
+    "brief_tool_gate": "BriefTool.ts:91-92 - feature('KAIROS') || feature('KAIROS_BRIEF') -> getKairosActive()",
+    "cron_gate": "ScheduleCronTool/prompt.ts:36-44 - isKairosCronEnabled() with tengu_kairos_cron GB gate",
+    "tick_tag": "constants/xml.ts:25 - export const TICK_TAG = 'tick'",
+    "sleep_import": "query.ts:91 - import { SLEEP_TOOL_NAME } from './tools/SleepTool/prompt.js'",
+    "set_kairos_active": "bootstrap/state.ts:168 - setKairosActive function exported",
+    "proactive_command": "commands.ts:62-64 - feature('PROACTIVE') || feature('KAIROS') conditional require"
+  }
+}

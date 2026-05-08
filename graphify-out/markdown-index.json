@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "root": "deep-decode-repo",
-  "node_count": 33,
-  "edge_count": 60,
+  "node_count": 433,
+  "edge_count": 502,
   "nodes": [
     {
       "path": "SKILL.md",
@@ -13,20 +13,26 @@
     {
       "path": "README.md",
       "title": "deep-decode",
-      "size_bytes": 2632,
-      "lines": 55
+      "size_bytes": 2789,
+      "lines": 56
     },
     {
       "path": "AGENTS.md",
       "title": "AGENTS.md — 给 AI Agent 的入口索引",
-      "size_bytes": 5636,
-      "lines": 122
+      "size_bytes": 6906,
+      "lines": 149
     },
     {
       "path": "decode-entity-SKILL.md",
       "title": "/decode-entity -- 实体横纵分析拆解器 v1",
       "size_bytes": 16529,
       "lines": 406
+    },
+    {
+      "path": "hot-history-SKILL.md",
+      "title": "/hot-history -- 热点 × 历史 配对深度文章生成器 v1",
+      "size_bytes": 8911,
+      "lines": 156
     },
     {
       "path": "skill-references/evaluator-prompt.md",
@@ -125,6 +131,30 @@
       "lines": 69
     },
     {
+      "path": "studio/changelog.md",
+      "title": "企媒运营 Changelog",
+      "size_bytes": 2164,
+      "lines": 42
+    },
+    {
+      "path": "studio/ground-truth.md",
+      "title": "企媒内容生产 Ground Truth（索引版）",
+      "size_bytes": 9793,
+      "lines": 202
+    },
+    {
+      "path": "studio/lessons_project.md",
+      "title": "studio/lessons_project.md",
+      "size_bytes": 0,
+      "lines": 1
+    },
+    {
+      "path": "studio/next_steps.md",
+      "title": "企媒运营 Next Steps",
+      "size_bytes": 3217,
+      "lines": 69
+    },
+    {
       "path": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
       "title": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
       "size_bytes": 18345,
@@ -201,6 +231,2376 @@
       "title": "设计这件事，正在被切成三段——一次拆解",
       "size_bytes": 12171,
       "lines": 112
+    },
+    {
+      "path": "graphify-out/converted/【AI笔记0409】脑手分离-Anthropic不再只卖模型了_13c42397.md",
+      "title": "graphify-out/converted/【AI笔记0409】脑手分离-Anthropic不再只卖模型了_13c42397.md",
+      "size_bytes": 7569,
+      "lines": 58
+    },
+    {
+      "path": "studio/context/范文 20260406.md",
+      "title": "studio/context/范文 20260406.md",
+      "size_bytes": 78249,
+      "lines": 1523
+    },
+    {
+      "path": "studio/context/范文标注-写作方法论.md",
+      "title": "范文标注 -- deep-decode 系列写作方法论",
+      "size_bytes": 16304,
+      "lines": 287
+    },
+    {
+      "path": "studio/feedback/20260401_dave.md",
+      "title": "studio/feedback/20260401_dave.md",
+      "size_bytes": 2349,
+      "lines": 38
+    },
+    {
+      "path": "studio/knowledge/channel-specs.md",
+      "title": "分发渠道规范",
+      "size_bytes": 7814,
+      "lines": 238
+    },
+    {
+      "path": "studio/knowledge/horizontal-vertical-analysis-prompt.md",
+      "title": "横纵分析法 Deep Research Prompt",
+      "size_bytes": 8183,
+      "lines": 135
+    },
+    {
+      "path": "studio/knowledge/hot-history-pairs.md",
+      "title": "热点 × 历史 对照表（Hot-History Pairs）",
+      "size_bytes": 7671,
+      "lines": 199
+    },
+    {
+      "path": "studio/knowledge/html-template.md",
+      "title": "Markdown → HTML 标准范式",
+      "size_bytes": 6232,
+      "lines": 174
+    },
+    {
+      "path": "studio/knowledge/pipeline-standards.md",
+      "title": "多渠道交付标准与模板包 v1",
+      "size_bytes": 24585,
+      "lines": 718
+    },
+    {
+      "path": "studio/knowledge/podcast-aesthetics.md",
+      "title": "播客听感美学",
+      "size_bytes": 4216,
+      "lines": 128
+    },
+    {
+      "path": "studio/knowledge/polish-7steps.md",
+      "title": "中文技术散文润色标尺（7 步）",
+      "size_bytes": 9759,
+      "lines": 218
+    },
+    {
+      "path": "studio/knowledge/svg-design.md",
+      "title": "概念可视化 SVG 设计规范",
+      "size_bytes": 5147,
+      "lines": 161
+    },
+    {
+      "path": "studio/knowledge/writing-style.md",
+      "title": "写作风格规范",
+      "size_bytes": 23503,
+      "lines": 492
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/SCHEMA.md",
+      "title": "Claude for Excel 实操手册 - Wiki Schema",
+      "size_bytes": 2323,
+      "lines": 78
+    },
+    {
+      "path": "studio/topics/AIpicked.md",
+      "title": "studio/topics/AIpicked.md",
+      "size_bytes": 0,
+      "lines": 1
+    },
+    {
+      "path": "studio/topics/handpicked.md",
+      "title": "studio/topics/handpicked.md",
+      "size_bytes": 156,
+      "lines": 4
+    },
+    {
+      "path": "studio/context/参考项目/科技向深度解析/【AI笔记0327】Harness Design——Anthropic工程实战案例拆解.md",
+      "title": "Harness Design for Long-Running Apps",
+      "size_bytes": 11213,
+      "lines": 172
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/01-main-guide.md",
+      "title": "Claude for Excel - Official Guide",
+      "size_bytes": 13268,
+      "lines": 326
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/02-llm-gateway.md",
+      "title": "Use Claude for Excel and PowerPoint with Third-Party Platforms (LLM Gateway)",
+      "size_bytes": 7185,
+      "lines": 210
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/03-skills.md",
+      "title": "Use Skills in Claude",
+      "size_bytes": 3676,
+      "lines": 93
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/04-custom-connectors-mcp.md",
+      "title": "Get Started with Custom Connectors Using Remote MCP",
+      "size_bytes": 4555,
+      "lines": 93
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/05-usage-length-limits.md",
+      "title": "Understanding Usage and Length Limits",
+      "size_bytes": 1889,
+      "lines": 36
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/06-powerpoint.md",
+      "title": "Claude for PowerPoint - Complete Guide",
+      "size_bytes": 5070,
+      "lines": 141
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/07-cross-app.md",
+      "title": "Work across Excel and PowerPoint",
+      "size_bytes": 2390,
+      "lines": 58
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/context/08-release-notes-office.md",
+      "title": "Release Notes - Claude for Excel & PowerPoint",
+      "size_bytes": 1394,
+      "lines": 36
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/deliverable/manual.md",
+      "title": "Claude for Excel / PowerPoint 实操手册",
+      "size_bytes": 31400,
+      "lines": 798
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "title": "最佳实践 — Claude for Excel / PowerPoint",
+      "size_bytes": 4092,
+      "lines": 99
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "title": "连接器（MCP）",
+      "size_bytes": 3536,
+      "lines": 87
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "title": "跨应用协作 — Excel 与 PowerPoint 联动",
+      "size_bytes": 4289,
+      "lines": 111
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "title": "企业部署 — Claude for Excel / PowerPoint",
+      "size_bytes": 5730,
+      "lines": 153
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "title": "Excel 核心功能",
+      "size_bytes": 7487,
+      "lines": 212
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "title": "安装与配置",
+      "size_bytes": 4282,
+      "lines": 128
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "title": "Wiki 索引",
+      "size_bytes": 1229,
+      "lines": 25
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "title": "限制与安全 — Claude for Excel / PowerPoint",
+      "size_bytes": 5208,
+      "lines": 134
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/log.md",
+      "title": "操作日志",
+      "size_bytes": 289,
+      "lines": 7
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "title": "产品全景 — Claude for Excel / PowerPoint",
+      "size_bytes": 3382,
+      "lines": 92
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "title": "PowerPoint 核心功能",
+      "size_bytes": 6592,
+      "lines": 191
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "title": "Skills 技能系统",
+      "size_bytes": 3275,
+      "lines": 82
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "title": "产品演进时间线",
+      "size_bytes": 3323,
+      "lines": 100
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "title": "故障排除 — Claude for Excel / PowerPoint",
+      "size_bytes": 3886,
+      "lines": 63
+    },
+    {
+      "path": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "title": "场景化 Prompt 大全",
+      "size_bytes": 7084,
+      "lines": 196
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/PIPELINE_HANDOVER.md",
+      "title": "Claude Code 源码拆解系列 — 任务交接文档",
+      "size_bytes": 5806,
+      "lines": 157
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution.md",
+      "size_bytes": 22993,
+      "lines": 252
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer.md",
+      "title": "设计这件事，正在被切成三段",
+      "size_bytes": 15468,
+      "lines": 147
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/CLAUDE.md",
+      "title": "Claude Code 实操手册 — LLM Wiki Schema",
+      "size_bytes": 3969,
+      "lines": 109
+    },
+    {
+      "path": "studio/pipelines/practice/2026-03-29-claude-insights-collaboration-fix.md",
+      "title": "studio/pipelines/practice/2026-03-29-claude-insights-collaboration-fix.md",
+      "size_bytes": 16821,
+      "lines": 224
+    },
+    {
+      "path": "studio/pipelines/小红书参考/值得参考的账号.md",
+      "title": "studio/pipelines/小红书参考/值得参考的账号.md",
+      "size_bytes": 17,
+      "lines": 3
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/2026-04-03-agent-loop-single-thread.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/2026-04-03-agent-loop-single-thread.md",
+      "size_bytes": 20128,
+      "lines": 242
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/draft.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/draft.md",
+      "size_bytes": 20286,
+      "lines": 242
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 2475,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/2026-04-03-claude-code-leak-panorama.md",
+      "title": "1902个文件里藏了什么：Claude Code 源码泄露全景",
+      "size_bytes": 17015,
+      "lines": 159
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/brief.md",
+      "title": "Article Brief #1: 1902个文件里藏了什么：Claude Code 源码泄露全景",
+      "size_bytes": 3459,
+      "lines": 53
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/draft.md",
+      "title": "1902个文件里藏了什么：Claude Code 源码泄露全景",
+      "size_bytes": 20339,
+      "lines": 186
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖 — claude-code-leak-panorama",
+      "size_bytes": 2879,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/2026-04-03-harness-greater-than-model.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/2026-04-03-harness-greater-than-model.md",
+      "size_bytes": 19974,
+      "lines": 198
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/draft.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/draft.md",
+      "size_bytes": 19942,
+      "lines": 198
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 3150,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/【AI笔记0407】Harness大于Model.md",
+      "title": "Harness > Model",
+      "size_bytes": 6283,
+      "lines": 117
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-kairos-daemon/2026-04-03-kairos-daemon.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-kairos-daemon/2026-04-03-kairos-daemon.md",
+      "size_bytes": 18296,
+      "lines": 232
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-kairos-daemon/draft.md",
+      "title": "KAIROS：7x24 后台 Daemon 的野心",
+      "size_bytes": 19991,
+      "lines": 217
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-kairos-daemon/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖 -- KAIROS：7x24 后台 Daemon 的野心",
+      "size_bytes": 4574,
+      "lines": 57
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/2026-04-03-queryengine-brain.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/2026-04-03-queryengine-brain.md",
+      "size_bytes": 21115,
+      "lines": 196
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/draft.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/draft.md",
+      "size_bytes": 20861,
+      "lines": 188
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 3486,
+      "lines": 46
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/2026-04-03-speculation-prefetch.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/2026-04-03-speculation-prefetch.md",
+      "size_bytes": 22057,
+      "lines": 261
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/draft.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/draft.md",
+      "size_bytes": 22057,
+      "lines": 261
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 5520,
+      "lines": 81
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/【AI笔记0407】推测执行：当AI编程助手学会了CPU的老把戏.md",
+      "title": "Speculative Execution in Claude Code",
+      "size_bytes": 13821,
+      "lines": 255
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/2026-04-03-two-leaks-evolution.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/2026-04-03-two-leaks-evolution.md",
+      "size_bytes": 19675,
+      "lines": 177
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/draft.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/draft.md",
+      "size_bytes": 19443,
+      "lines": 169
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 2150,
+      "lines": 36
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-undercover-mode/2026-04-03-undercover-mode.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-undercover-mode/2026-04-03-undercover-mode.md",
+      "size_bytes": 14278,
+      "lines": 194
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-undercover-mode/draft.md",
+      "title": "draft — 同终稿，已直接写入 2026-04-03-undercover-mode.md",
+      "size_bytes": 89,
+      "lines": 3
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-undercover-mode/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖 -- Undercover Mode：Anthropic 员工的隐身衣",
+      "size_bytes": 3218,
+      "lines": 45
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/pipeline/README-小红书发布.md",
+      "title": "小红书草稿发布操作手册",
+      "size_bytes": 1373,
+      "lines": 41
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/pipeline/production-plan.md",
+      "title": "Claude Code 源码拆解系列 -- 30+ 篇产出计划",
+      "size_bytes": 7765,
+      "lines": 127
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/distribute/xiaohongshu/content.md",
+      "size_bytes": 1571,
+      "lines": 32
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/distribute/xiaohongshu/content.md",
+      "size_bytes": 898,
+      "lines": 30
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-harness-greater-than-model/distribute/xiaohongshu/content.md",
+      "size_bytes": 1279,
+      "lines": 32
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-kairos-daemon/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-kairos-daemon/distribute/xiaohongshu/content.md",
+      "size_bytes": 1393,
+      "lines": 31
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/distribute/xiaohongshu/content.md",
+      "size_bytes": 1153,
+      "lines": 32
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/core-util-is/README.md",
+      "title": "core-util-is",
+      "size_bytes": 67,
+      "lines": 4
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/docx/README.md",
+      "title": "Demo",
+      "size_bytes": 5535,
+      "lines": 125
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/hash.js/README.md",
+      "title": "hash.js [![Build Status](https://secure.travis-ci.org/indutny/hash.js.svg)](http://travis-ci.org/indutny/hash.js)",
+      "size_bytes": 1515,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/immediate/README.md",
+      "title": "immediate [![Build Status](https://travis-ci.org/calvinmetcalf/immediate.svg?branch=master)](https://travis-ci.org/calvinmetcalf/immediate)",
+      "size_bytes": 3697,
+      "lines": 94
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/inherits/README.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/inherits/README.md",
+      "size_bytes": 1625,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/isarray/README.md",
+      "title": "isarray",
+      "size_bytes": 1890,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/jszip/CHANGES.md",
+      "title": "v2.0.0, 2013-10-20",
+      "size_bytes": 12038,
+      "lines": 205
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/jszip/sponsors.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/jszip/sponsors.md",
+      "size_bytes": 704,
+      "lines": 22
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/lie/README.md",
+      "title": "lie",
+      "size_bytes": 2165,
+      "lines": 63
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/lie/license.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/lie/license.md",
+      "size_bytes": 1084,
+      "lines": 8
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/minimalistic-assert/readme.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/minimalistic-assert/readme.md",
+      "size_bytes": 58,
+      "lines": 5
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "title": "Nano ID",
+      "size_bytes": 1651,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/pako/CHANGELOG.md",
+      "title": "Changelog",
+      "size_bytes": 4138,
+      "lines": 165
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/pako/README.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/pako/README.md",
+      "size_bytes": 6066,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/process-nextick-args/license.md",
+      "title": "Copyright (c) 2015 Calvin Metcalf",
+      "size_bytes": 1064,
+      "lines": 20
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/process-nextick-args/readme.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/process-nextick-args/readme.md",
+      "size_bytes": 450,
+      "lines": 19
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/CONTRIBUTING.md",
+      "title": "Developer's Certificate of Origin 1.1",
+      "size_bytes": 1443,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/GOVERNANCE.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/GOVERNANCE.md",
+      "size_bytes": 5550,
+      "lines": 137
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/README.md",
+      "title": "readable-stream",
+      "size_bytes": 2999,
+      "lines": 59
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/safe-buffer/README.md",
+      "title": "safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]",
+      "size_bytes": 19555,
+      "lines": 585
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/sax/LICENSE.md",
+      "title": "Blue Oak Model License",
+      "size_bytes": 1552,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/sax/README.md",
+      "title": "sax js",
+      "size_bytes": 8519,
+      "lines": 228
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/string_decoder/README.md",
+      "title": "string_decoder",
+      "size_bytes": 1801,
+      "lines": 48
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/undici-types/README.md",
+      "title": "undici-types",
+      "size_bytes": 455,
+      "lines": 7
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/util-deprecate/History.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/util-deprecate/History.md",
+      "size_bytes": 282,
+      "lines": 17
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/util-deprecate/README.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/util-deprecate/README.md",
+      "size_bytes": 1666,
+      "lines": 54
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/xml-js/README.md",
+      "title": "Synopsis",
+      "size_bytes": 28321,
+      "lines": 391
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/xml/readme.md",
+      "title": "xml [![Build Status](https://api.travis-ci.org/dylang/node-xml.svg)](http://travis-ci.org/dylang/node-xml)",
+      "size_bytes": 4806,
+      "lines": 185
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/@types/node/README.md",
+      "title": "Installation",
+      "size_bytes": 1582,
+      "lines": 16
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+      "title": "streams WG Meeting 2015-01-30",
+      "size_bytes": 2280,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/distribute/xiaohongshu/content.md",
+      "size_bytes": 1704,
+      "lines": 34
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/core-util-is/README.md",
+      "title": "core-util-is",
+      "size_bytes": 67,
+      "lines": 4
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/docx/README.md",
+      "title": "Demo",
+      "size_bytes": 5535,
+      "lines": 125
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/hash.js/README.md",
+      "title": "hash.js [![Build Status](https://secure.travis-ci.org/indutny/hash.js.svg)](http://travis-ci.org/indutny/hash.js)",
+      "size_bytes": 1515,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/immediate/README.md",
+      "title": "immediate [![Build Status](https://travis-ci.org/calvinmetcalf/immediate.svg?branch=master)](https://travis-ci.org/calvinmetcalf/immediate)",
+      "size_bytes": 3697,
+      "lines": 94
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/inherits/README.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/inherits/README.md",
+      "size_bytes": 1625,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/isarray/README.md",
+      "title": "isarray",
+      "size_bytes": 1890,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/jszip/CHANGES.md",
+      "title": "v2.0.0, 2013-10-20",
+      "size_bytes": 12038,
+      "lines": 205
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/jszip/sponsors.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/jszip/sponsors.md",
+      "size_bytes": 704,
+      "lines": 22
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/lie/README.md",
+      "title": "lie",
+      "size_bytes": 2165,
+      "lines": 63
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/lie/license.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/lie/license.md",
+      "size_bytes": 1084,
+      "lines": 8
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/minimalistic-assert/readme.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/minimalistic-assert/readme.md",
+      "size_bytes": 58,
+      "lines": 5
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "title": "Nano ID",
+      "size_bytes": 1651,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/pako/CHANGELOG.md",
+      "title": "Changelog",
+      "size_bytes": 4138,
+      "lines": 165
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/pako/README.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/pako/README.md",
+      "size_bytes": 6066,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/process-nextick-args/license.md",
+      "title": "Copyright (c) 2015 Calvin Metcalf",
+      "size_bytes": 1064,
+      "lines": 20
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/process-nextick-args/readme.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/process-nextick-args/readme.md",
+      "size_bytes": 450,
+      "lines": 19
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/CONTRIBUTING.md",
+      "title": "Developer's Certificate of Origin 1.1",
+      "size_bytes": 1443,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/GOVERNANCE.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/GOVERNANCE.md",
+      "size_bytes": 5550,
+      "lines": 137
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/README.md",
+      "title": "readable-stream",
+      "size_bytes": 2999,
+      "lines": 59
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/safe-buffer/README.md",
+      "title": "safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]",
+      "size_bytes": 19555,
+      "lines": 585
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/sax/LICENSE.md",
+      "title": "Blue Oak Model License",
+      "size_bytes": 1552,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/sax/README.md",
+      "title": "sax js",
+      "size_bytes": 8519,
+      "lines": 228
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/string_decoder/README.md",
+      "title": "string_decoder",
+      "size_bytes": 1801,
+      "lines": 48
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/undici-types/README.md",
+      "title": "undici-types",
+      "size_bytes": 455,
+      "lines": 7
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/util-deprecate/History.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/util-deprecate/History.md",
+      "size_bytes": 282,
+      "lines": 17
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/util-deprecate/README.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/util-deprecate/README.md",
+      "size_bytes": 1666,
+      "lines": 54
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/xml-js/README.md",
+      "title": "Synopsis",
+      "size_bytes": 28321,
+      "lines": 391
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/xml/readme.md",
+      "title": "xml [![Build Status](https://api.travis-ci.org/dylang/node-xml.svg)](http://travis-ci.org/dylang/node-xml)",
+      "size_bytes": 4806,
+      "lines": 185
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/@types/node/README.md",
+      "title": "Installation",
+      "size_bytes": 1582,
+      "lines": 16
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+      "title": "streams WG Meeting 2015-01-30",
+      "size_bytes": 2280,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-two-leaks-evolution/distribute/xiaohongshu/content.md",
+      "size_bytes": 1403,
+      "lines": 31
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/2026-04-03-undercover-mode/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/claudecode_deep_decode/2026-04-03-undercover-mode/distribute/xiaohongshu/content.md",
+      "size_bytes": 837,
+      "lines": 29
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 源码架构解析从启动Prompt 到权限管道.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 源码架构解析从启动Prompt 到权限管道.md",
+      "size_bytes": 24161,
+      "lines": 410
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 源码泄露全面剖析.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 源码泄露全面剖析.md",
+      "size_bytes": 23015,
+      "lines": 484
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 源码泄露：一份价值亿元的 AI 工程公开课.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 源码泄露：一份价值亿元的 AI 工程公开课.md",
+      "size_bytes": 14692,
+      "lines": 189
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 遭深度逆向！核心技术架构被 95% 还原.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code 遭深度逆向！核心技术架构被 95% 还原.md",
+      "size_bytes": 0,
+      "lines": 1
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About it.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About it.md",
+      "size_bytes": 25320,
+      "lines": 412
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/How an AI Reads the Web: A Deep Dive into Claude Code’s WebFetchTool.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/How an AI Reads the Web: A Deep Dive into Claude Code’s WebFetchTool.md",
+      "size_bytes": 7036,
+      "lines": 105
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/How should Chinese AI companies \"learn from Claude Code\".md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/How should Chinese AI companies \"learn from Claude Code\".md",
+      "size_bytes": 11227,
+      "lines": 133
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-code-source-analysis-leads.md",
+      "title": "Claude Code 源码解读 -- 精选信息源表",
+      "size_bytes": 17571,
+      "lines": 227
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode 源码泄露快看看里面有什么.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode 源码泄露快看看里面有什么.md",
+      "size_bytes": 16936,
+      "lines": 259
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode 源码深度解读.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode 源码深度解读.md",
+      "size_bytes": 25416,
+      "lines": 259
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode架构全解密.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode架构全解密.md",
+      "size_bytes": 13744,
+      "lines": 277
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/hackernewsdiscussion.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/hackernewsdiscussion.md",
+      "size_bytes": 249468,
+      "lines": 6784
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/从Claude Code源码看Anthropic的产品野心.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/从Claude Code源码看Anthropic的产品野心.md",
+      "size_bytes": 16401,
+      "lines": 215
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/源码解读信息源(1).md",
+      "title": "Claude Code 源码解读 -- 精选信息源表",
+      "size_bytes": 16431,
+      "lines": 220
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/源码解读记忆.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/源码解读记忆.md",
+      "size_bytes": 9616,
+      "lines": 219
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/翻了翻 Claude Code 的泄露源码说几个有意思的发现.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/information_sources/翻了翻 Claude Code 的泄露源码说几个有意思的发现.md",
+      "size_bytes": 16553,
+      "lines": 270
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-code-buddy-reroll/README.md",
+      "title": "Reroll Your Claude Code Buddy",
+      "size_bytes": 22023,
+      "lines": 589
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-code-buddy-reroll/README_zh-HK.md",
+      "title": "砍掉重練你嘅 Claude Code 寵物",
+      "size_bytes": 6436,
+      "lines": 184
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-code-source/README.md",
+      "title": "Claude Code's Entire Source Code Got Leaked via a Sourcemap in npm, Let's Talk About It",
+      "size_bytes": 6094,
+      "lines": 142
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "title": "Claude Code Unveiled",
+      "size_bytes": 19093,
+      "lines": 504
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "title": "Claude Code 深度揭秘",
+      "size_bytes": 11105,
+      "lines": 289
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/CLAUDE.md",
+      "title": "CLAUDE.md",
+      "size_bytes": 1093,
+      "lines": 22
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/PARITY.md",
+      "title": "Parity Status — claw-code Rust Port",
+      "size_bytes": 13571,
+      "lines": 188
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/PHILOSOPHY.md",
+      "title": "Claw Code Philosophy",
+      "size_bytes": 4053,
+      "lines": 115
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/README.md",
+      "title": "Rewriting Project Claw Code",
+      "size_bytes": 7944,
+      "lines": 186
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/ROADMAP.md",
+      "title": "ROADMAP.md",
+      "size_bytes": 15731,
+      "lines": 362
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/USAGE.md",
+      "title": "Claw Code Usage",
+      "size_bytes": 2995,
+      "lines": 160
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/architecture/multi-agent.md",
+      "title": "多代理协调架构",
+      "size_bytes": 3241,
+      "lines": 102
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/architecture/permission-model.md",
+      "title": "权限模型架构",
+      "size_bytes": 3677,
+      "lines": 144
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/architecture/query-lifecycle.md",
+      "title": "请求生命周期",
+      "size_bytes": 3537,
+      "lines": 136
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/architecture/tool-system.md",
+      "title": "工具系统架构",
+      "size_bytes": 3985,
+      "lines": 137
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/comparison/feature-matrix.md",
+      "title": "Feature Matrix: Claude Code vs Cursor vs Cline",
+      "size_bytes": 4150,
+      "lines": 88
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/comparison/vs-cline.md",
+      "title": "Claude Code vs Cline: The Open-Source Alternative",
+      "size_bytes": 3057,
+      "lines": 88
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/comparison/vs-cursor.md",
+      "title": "Claude Code vs Cursor: Architecture Deep-Dive",
+      "size_bytes": 2825,
+      "lines": 88
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/practical/claude-md-guide.md",
+      "title": "CLAUDE.md 最佳实践指南",
+      "size_bytes": 4622,
+      "lines": 201
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/practical/cost-optimization.md",
+      "title": "Claude Code 省钱指南",
+      "size_bytes": 5948,
+      "lines": 228
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/practical/hidden-configs.md",
+      "title": "Claude Code 隐藏配置项完全手册",
+      "size_bytes": 9799,
+      "lines": 300
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/practical/system-prompts.md",
+      "title": "Claude Code System Prompt 完整解析",
+      "size_bytes": 7846,
+      "lines": 253
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/en/hidden-features.md",
+      "title": "Hidden Features and Codename System",
+      "size_bytes": 5688,
+      "lines": 196
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/en/remote-control.md",
+      "title": "Remote Control and Killswitches",
+      "size_bytes": 6484,
+      "lines": 205
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/en/roadmap.md",
+      "title": "Future Roadmap",
+      "size_bytes": 6065,
+      "lines": 147
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/en/telemetry.md",
+      "title": "Telemetry and Privacy Analysis",
+      "size_bytes": 6060,
+      "lines": 208
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/en/undercover-mode.md",
+      "title": "Undercover Mode Analysis",
+      "size_bytes": 5965,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/zh/hidden-features.md",
+      "title": "隐藏功能与代号系统",
+      "size_bytes": 5050,
+      "lines": 196
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/zh/remote-control.md",
+      "title": "远程控制与紧急开关",
+      "size_bytes": 5679,
+      "lines": 205
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/zh/roadmap.md",
+      "title": "未来路线图",
+      "size_bytes": 5153,
+      "lines": 147
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/zh/telemetry.md",
+      "title": "遥测与隐私分析",
+      "size_bytes": 5485,
+      "lines": 208
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/analysis/zh/undercover-mode.md",
+      "title": "卧底模式分析",
+      "size_bytes": 5312,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/MOCK_PARITY_HARNESS.md",
+      "title": "Mock LLM parity harness",
+      "size_bytes": 1263,
+      "lines": 50
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/PARITY.md",
+      "title": "Parity Status — claw-code Rust Port",
+      "size_bytes": 9121,
+      "lines": 149
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/README.md",
+      "title": "🦞 Claw Code — Rust Implementation",
+      "size_bytes": 7281,
+      "lines": 208
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/TUI-ENHANCEMENT-PLAN.md",
+      "title": "TUI Enhancement Plan — Claw Code (`rusty-claude-cli`)",
+      "size_bytes": 14498,
+      "lines": 222
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/USAGE.md",
+      "title": "Rust usage guide",
+      "size_bytes": 281,
+      "lines": 12
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/raw_code/cc-recovered-main/README.md",
+      "title": "Claude Code 2.1.88 Recovered",
+      "size_bytes": 4430,
+      "lines": 193
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/raw_code/cc-recovered-main/README.zh-CN.md",
+      "title": "Claude Code 2.1.88 Recovered",
+      "size_bytes": 4214,
+      "lines": 193
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/raw_code/claude-code-main/README.md",
+      "title": "Claude Code — Leaked Source (2026-03-31)",
+      "size_bytes": 9843,
+      "lines": 258
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/raw_code/claude-code/README.md",
+      "title": "Claude Code Source Snapshot for Security Research",
+      "size_bytes": 10831,
+      "lines": 281
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/raw_code/package/LICENSE.md",
+      "title": "studio/pipelines/claudecode_deep_decode/context/raw_code/package/LICENSE.md",
+      "size_bytes": 147,
+      "lines": 2
+    },
+    {
+      "path": "studio/pipelines/claudecode_deep_decode/context/raw_code/package/README.md",
+      "title": "Claude Code",
+      "size_bytes": 2037,
+      "lines": 44
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-levie-capability-overhang/2026-03-29-AI能力悬置-浪已到岸企业还没开门.md",
+      "title": "studio/pipelines/decode/2026-03-29-levie-capability-overhang/2026-03-29-AI能力悬置-浪已到岸企业还没开门.md",
+      "size_bytes": 10589,
+      "lines": 144
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "title": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "size_bytes": 18345,
+      "lines": 195
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-31-boris-claude-code-tips/2026-03-31-Boris-15条Claude-Code隐藏功能拆解.md",
+      "title": "15 条\"小技巧\"背后的大图景 -- Claude Code 创建者揭示的三层架构",
+      "size_bytes": 11516,
+      "lines": 131
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "title": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "size_bytes": 17116,
+      "lines": 190
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/draft.md",
+      "title": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/draft.md",
+      "size_bytes": 16432,
+      "lines": 172
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/2026-04-12-mythos-reckless-helpfulness.md",
+      "title": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/2026-04-12-mythos-reckless-helpfulness.md",
+      "size_bytes": 22194,
+      "lines": 214
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/draft.md",
+      "title": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/draft.md",
+      "size_bytes": 22330,
+      "lines": 212
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/next-session-tasks.md",
+      "title": "Mythos Deep Decode 下一 Session 任务清单",
+      "size_bytes": 1966,
+      "lines": 48
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖 -- 「不是叛逆，是不守规矩」",
+      "size_bytes": 3859,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/2026-04-13-tedx-fractal-minds.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/2026-04-13-tedx-fractal-minds.md",
+      "size_bytes": 13881,
+      "lines": 127
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/draft.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/draft.md",
+      "size_bytes": 13881,
+      "lines": 127
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 6047,
+      "lines": 79
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/【AI笔记0413】一万美元买一个你.md",
+      "title": "Our Next 20 Years: AI, Capitalism, and Fractal Minds",
+      "size_bytes": 7754,
+      "lines": 136
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-claude-opus-4-7/2026-04-17-claude-opus-4-7.md",
+      "title": "Claude Opus 4.7 不是顶配——顶配被 Anthropic 锁起来了",
+      "size_bytes": 20040,
+      "lines": 201
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-claude-opus-4-7/email_brief.md",
+      "title": "Claude Opus 4.7：顶配模型被刻意锁起来的一次发布",
+      "size_bytes": 6717,
+      "lines": 104
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/draft.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/draft.md",
+      "size_bytes": 22765,
+      "lines": 252
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 7354,
+      "lines": 78
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/【AI笔记0417】给AI写一份宪法.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/【AI笔记0417】给AI写一份宪法.md",
+      "size_bytes": 22765,
+      "lines": 252
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/2026-04-17-your-harness-your-memory.md",
+      "title": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/2026-04-17-your-harness-your-memory.md",
+      "size_bytes": 22155,
+      "lines": 249
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/draft.md",
+      "title": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/draft.md",
+      "size_bytes": 21761,
+      "lines": 238
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖",
+      "size_bytes": 4830,
+      "lines": 67
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/2026-04-20-prfaas-prefill-as-a-service.md",
+      "title": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/2026-04-20-prfaas-prefill-as-a-service.md",
+      "size_bytes": 16413,
+      "lines": 232
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/draft.md",
+      "title": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/draft.md",
+      "size_bytes": 16169,
+      "lines": 233
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/phase1_skeleton.md",
+      "title": "Phase 1 结构解剖 -- Prefill-as-a-Service",
+      "size_bytes": 2631,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "title": "越追 AI 风口，越被反收割：一份给产品人的\"潮汐手册\"",
+      "size_bytes": 18867,
+      "lines": 218
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/draft_v1.md",
+      "title": "越追 AI 风口，越被反收割：一份给产品人的\"潮汐手册\"",
+      "size_bytes": 17716,
+      "lines": 187
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/phase1_skeleton.md",
+      "title": "Phase 1 骨架：越追 AI 风口，越容易被时代淘汰",
+      "size_bytes": 2420,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-22-entity-claude-design/phase1_skeleton.md",
+      "title": "Phase 1 骨架：Claude Design 横纵分析",
+      "size_bytes": 16213,
+      "lines": 245
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer/draft_v1.md",
+      "title": "设计这件事，正在被切成三段",
+      "size_bytes": 14438,
+      "lines": 123
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer/draft_v2.md",
+      "title": "设计这件事，正在被切成三段",
+      "size_bytes": 14477,
+      "lines": 123
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer/email_source.md",
+      "title": "设计这件事，正在被切成三段——一次拆解",
+      "size_bytes": 12171,
+      "lines": 112
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer/infographic_prompt_for_gpt-image-2.md",
+      "title": "给你用 gpt-image-2 生成的信息图 prompt",
+      "size_bytes": 4409,
+      "lines": 95
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer/phase1_skeleton.md",
+      "title": "Phase 1 结构解剖 — 2026-04-24-ai-design-replaces-designer",
+      "size_bytes": 5782,
+      "lines": 84
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-levie-capability-overhang/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-03-29-levie-capability-overhang/distribute/xiaohongshu/content.md",
+      "size_bytes": 1439,
+      "lines": 27
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/distribute/README.md",
+      "title": "发布清单",
+      "size_bytes": 1877,
+      "lines": 40
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/distribute/bilibili/content.md",
+      "title": "B站适配",
+      "size_bytes": 4128,
+      "lines": 68
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/distribute/douyin/content.md",
+      "title": "抖音适配",
+      "size_bytes": 1685,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/distribute/gongzhonghao/README.md",
+      "title": "公众号发布指南",
+      "size_bytes": 2726,
+      "lines": 68
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/distribute/shipinhao/content.md",
+      "title": "视频号适配",
+      "size_bytes": 2219,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/distribute/xiaohongshu/content.md",
+      "title": "小红书适配",
+      "size_bytes": 7286,
+      "lines": 155
+    },
+    {
+      "path": "studio/pipelines/decode/2026-03-31-boris-claude-code-tips/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-03-31-boris-claude-code-tips/distribute/xiaohongshu/content.md",
+      "size_bytes": 1225,
+      "lines": 28
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/distribute/xiaohongshu/content.md",
+      "size_bytes": 1326,
+      "lines": 31
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/distribute/xiaohongshu/content.md",
+      "size_bytes": 1824,
+      "lines": 30
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/distribute/xiaohongshu/content.md",
+      "size_bytes": 1333,
+      "lines": 28
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/core-util-is/README.md",
+      "title": "core-util-is",
+      "size_bytes": 67,
+      "lines": 4
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/docx/README.md",
+      "title": "Demo",
+      "size_bytes": 5535,
+      "lines": 125
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/hash.js/README.md",
+      "title": "hash.js [![Build Status](https://secure.travis-ci.org/indutny/hash.js.svg)](http://travis-ci.org/indutny/hash.js)",
+      "size_bytes": 1515,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/immediate/README.md",
+      "title": "immediate [![Build Status](https://travis-ci.org/calvinmetcalf/immediate.svg?branch=master)](https://travis-ci.org/calvinmetcalf/immediate)",
+      "size_bytes": 3697,
+      "lines": 94
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/inherits/README.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/inherits/README.md",
+      "size_bytes": 1625,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/isarray/README.md",
+      "title": "isarray",
+      "size_bytes": 1890,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/jszip/CHANGES.md",
+      "title": "v2.0.0, 2013-10-20",
+      "size_bytes": 12038,
+      "lines": 205
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/jszip/sponsors.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/jszip/sponsors.md",
+      "size_bytes": 704,
+      "lines": 22
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/lie/README.md",
+      "title": "lie",
+      "size_bytes": 2165,
+      "lines": 63
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/lie/license.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/lie/license.md",
+      "size_bytes": 1084,
+      "lines": 8
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/minimalistic-assert/readme.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/minimalistic-assert/readme.md",
+      "size_bytes": 58,
+      "lines": 5
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "title": "Nano ID",
+      "size_bytes": 1651,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/pako/CHANGELOG.md",
+      "title": "Changelog",
+      "size_bytes": 4138,
+      "lines": 165
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/pako/README.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/pako/README.md",
+      "size_bytes": 6066,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/process-nextick-args/license.md",
+      "title": "Copyright (c) 2015 Calvin Metcalf",
+      "size_bytes": 1064,
+      "lines": 20
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/process-nextick-args/readme.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/process-nextick-args/readme.md",
+      "size_bytes": 450,
+      "lines": 19
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/CONTRIBUTING.md",
+      "title": "Developer's Certificate of Origin 1.1",
+      "size_bytes": 1443,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/GOVERNANCE.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/GOVERNANCE.md",
+      "size_bytes": 5550,
+      "lines": 137
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/README.md",
+      "title": "readable-stream",
+      "size_bytes": 2999,
+      "lines": 59
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/safe-buffer/README.md",
+      "title": "safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]",
+      "size_bytes": 19555,
+      "lines": 585
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/sax/LICENSE.md",
+      "title": "Blue Oak Model License",
+      "size_bytes": 1552,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/sax/README.md",
+      "title": "sax js",
+      "size_bytes": 8519,
+      "lines": 228
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/string_decoder/README.md",
+      "title": "string_decoder",
+      "size_bytes": 1801,
+      "lines": 48
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/undici-types/README.md",
+      "title": "undici-types",
+      "size_bytes": 455,
+      "lines": 7
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/util-deprecate/History.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/util-deprecate/History.md",
+      "size_bytes": 282,
+      "lines": 17
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/util-deprecate/README.md",
+      "title": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/util-deprecate/README.md",
+      "size_bytes": 1666,
+      "lines": 54
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/xml-js/README.md",
+      "title": "Synopsis",
+      "size_bytes": 28321,
+      "lines": 391
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/xml/readme.md",
+      "title": "xml [![Build Status](https://api.travis-ci.org/dylang/node-xml.svg)](http://travis-ci.org/dylang/node-xml)",
+      "size_bytes": 4806,
+      "lines": 185
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/@types/node/README.md",
+      "title": "Installation",
+      "size_bytes": 1582,
+      "lines": 16
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+      "title": "streams WG Meeting 2015-01-30",
+      "size_bytes": 2280,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-claude-opus-4-7/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-04-17-claude-opus-4-7/distribute/xiaohongshu/content.md",
+      "size_bytes": 1275,
+      "lines": 32
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/core-util-is/README.md",
+      "title": "core-util-is",
+      "size_bytes": 67,
+      "lines": 4
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/docx/README.md",
+      "title": "Demo",
+      "size_bytes": 5535,
+      "lines": 125
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/hash.js/README.md",
+      "title": "hash.js [![Build Status](https://secure.travis-ci.org/indutny/hash.js.svg)](http://travis-ci.org/indutny/hash.js)",
+      "size_bytes": 1515,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/immediate/README.md",
+      "title": "immediate [![Build Status](https://travis-ci.org/calvinmetcalf/immediate.svg?branch=master)](https://travis-ci.org/calvinmetcalf/immediate)",
+      "size_bytes": 3697,
+      "lines": 94
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/inherits/README.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/inherits/README.md",
+      "size_bytes": 1625,
+      "lines": 43
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/isarray/README.md",
+      "title": "isarray",
+      "size_bytes": 1890,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/jszip/CHANGES.md",
+      "title": "v2.0.0, 2013-10-20",
+      "size_bytes": 12038,
+      "lines": 205
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/jszip/sponsors.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/jszip/sponsors.md",
+      "size_bytes": 704,
+      "lines": 22
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/lie/README.md",
+      "title": "lie",
+      "size_bytes": 2165,
+      "lines": 63
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/lie/license.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/lie/license.md",
+      "size_bytes": 1084,
+      "lines": 8
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/minimalistic-assert/readme.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/minimalistic-assert/readme.md",
+      "size_bytes": 58,
+      "lines": 5
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "title": "Nano ID",
+      "size_bytes": 1648,
+      "lines": 38
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/pako/CHANGELOG.md",
+      "title": "Changelog",
+      "size_bytes": 4138,
+      "lines": 165
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/pako/README.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/pako/README.md",
+      "size_bytes": 6066,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/process-nextick-args/license.md",
+      "title": "Copyright (c) 2015 Calvin Metcalf",
+      "size_bytes": 1064,
+      "lines": 20
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/process-nextick-args/readme.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/process-nextick-args/readme.md",
+      "size_bytes": 450,
+      "lines": 19
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/CONTRIBUTING.md",
+      "title": "Developer's Certificate of Origin 1.1",
+      "size_bytes": 1443,
+      "lines": 39
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/GOVERNANCE.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/GOVERNANCE.md",
+      "size_bytes": 5550,
+      "lines": 137
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/README.md",
+      "title": "readable-stream",
+      "size_bytes": 2999,
+      "lines": 59
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/safe-buffer/README.md",
+      "title": "safe-buffer [![travis][travis-image]][travis-url] [![npm][npm-image]][npm-url] [![downloads][downloads-image]][downloads-url] [![javascript style guide][standard-image]][standard-url]",
+      "size_bytes": 19555,
+      "lines": 585
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/sax/LICENSE.md",
+      "title": "Blue Oak Model License",
+      "size_bytes": 1552,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/sax/README.md",
+      "title": "sax js",
+      "size_bytes": 8519,
+      "lines": 228
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/string_decoder/README.md",
+      "title": "string_decoder",
+      "size_bytes": 1801,
+      "lines": 48
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/undici-types/README.md",
+      "title": "undici-types",
+      "size_bytes": 455,
+      "lines": 7
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/util-deprecate/History.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/util-deprecate/History.md",
+      "size_bytes": 282,
+      "lines": 17
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/util-deprecate/README.md",
+      "title": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/util-deprecate/README.md",
+      "size_bytes": 1666,
+      "lines": 54
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/xml-js/README.md",
+      "title": "Synopsis",
+      "size_bytes": 28321,
+      "lines": 391
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/xml/readme.md",
+      "title": "xml [![Build Status](https://api.travis-ci.org/dylang/node-xml.svg)](http://travis-ci.org/dylang/node-xml)",
+      "size_bytes": 4806,
+      "lines": 185
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/@types/node/README.md",
+      "title": "Installation",
+      "size_bytes": 1582,
+      "lines": 16
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/doc/wg-meetings/2015-01-30.md",
+      "title": "streams WG Meeting 2015-01-30",
+      "size_bytes": 2280,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/distribute/xiaohongshu/content.md",
+      "size_bytes": 1506,
+      "lines": 36
+    },
+    {
+      "path": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/distribute/xiaohongshu/content.md",
+      "size_bytes": 1365,
+      "lines": 32
+    },
+    {
+      "path": "studio/pipelines/decode/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/decode/distribute/xiaohongshu/content.md",
+      "size_bytes": 1381,
+      "lines": 35
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/2026-04-21-memex-llm-wiki.md",
+      "title": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/2026-04-21-memex-llm-wiki.md",
+      "size_bytes": 21020,
+      "lines": 189
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/draft_v1.md",
+      "title": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/draft_v1.md",
+      "size_bytes": 22496,
+      "lines": 188
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/draft_v2.md",
+      "title": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/draft_v2.md",
+      "size_bytes": 21020,
+      "lines": 189
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/research-report.md",
+      "title": "研究报告《80 年后，Memex 终于可以兑现》",
+      "size_bytes": 19725,
+      "lines": 260
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-skills-frames/2026-04-21-skills-frames.md",
+      "title": "脚本 1974：Anthropic 的 SKILL.md 是 Minsky 51 年前写好的",
+      "size_bytes": 20478,
+      "lines": 181
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-skills-frames/draft_v1.md",
+      "title": "脚本 1974：Anthropic 的 SKILL.md 是 Minsky 51 年前写好的",
+      "size_bytes": 20077,
+      "lines": 167
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-skills-frames/draft_v2.md",
+      "title": "脚本 1974：Anthropic 的 SKILL.md 是 Minsky 51 年前写好的",
+      "size_bytes": 20478,
+      "lines": 181
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-skills-frames/research-report.md",
+      "title": "研究报告《脚本 1974》：Minsky Frames 与 Claude Skills 的血缘档案",
+      "size_bytes": 20438,
+      "lines": 282
+    },
+    {
+      "path": "studio/pipelines/hot-history/seeds/three-pairs-seed.md",
+      "title": "三对 Pair 种子条目（Agent / Reasoning / RAG）",
+      "size_bytes": 10643,
+      "lines": 172
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/hot-history/2026-04-21-memex-llm-wiki/distribute/xiaohongshu/content.md",
+      "size_bytes": 2121,
+      "lines": 33
+    },
+    {
+      "path": "studio/pipelines/hot-history/2026-04-21-skills-frames/distribute/xiaohongshu/content.md",
+      "title": "studio/pipelines/hot-history/2026-04-21-skills-frames/distribute/xiaohongshu/content.md",
+      "size_bytes": 1769,
+      "lines": 33
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/index.md",
+      "title": "Claude Code 实操手册 — 索引",
+      "size_bytes": 1781,
+      "lines": 44
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/log.md",
+      "title": "操作日志",
+      "size_bytes": 2881,
+      "lines": 50
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "title": "Claude Code 实操手册",
+      "size_bytes": 2919,
+      "lines": 69
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/CLAUDE.md",
+      "title": "CLAUDE.md",
+      "size_bytes": 7470,
+      "lines": 126
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "title": "claude-code-best-practice",
+      "size_bytes": 53885,
+      "lines": 430
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/agent-teams/agent-teams-prompt.md",
+      "title": "studio/pipelines/manual实操手册/context/claude-code-best-practice/agent-teams/agent-teams-prompt.md",
+      "size_bytes": 3597,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-cli-startup-flags.md",
+      "title": "CLI Startup Flags Best Practice",
+      "size_bytes": 9494,
+      "lines": 232
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-commands.md",
+      "title": "Commands Best Practice",
+      "size_bytes": 16432,
+      "lines": 119
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-mcp.md",
+      "title": "MCP Servers Best Practice",
+      "size_bytes": 5120,
+      "lines": 133
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-memory.md",
+      "title": "Claude Memory",
+      "size_bytes": 5375,
+      "lines": 122
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-power-ups.md",
+      "title": "Power-ups Best Practice",
+      "size_bytes": 1888,
+      "lines": 67
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-settings.md",
+      "title": "Settings Best Practice",
+      "size_bytes": 62094,
+      "lines": 1015
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-skills.md",
+      "title": "Skills Best Practice",
+      "size_bytes": 3245,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-subagents.md",
+      "title": "Sub-agents Best Practice",
+      "size_bytes": 4124,
+      "lines": 57
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-agent-teams-implementation.md",
+      "title": "Agent Teams Implementation",
+      "size_bytes": 4764,
+      "lines": 104
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-commands-implementation.md",
+      "title": "Commands Implementation",
+      "size_bytes": 3097,
+      "lines": 84
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-scheduled-tasks-implementation.md",
+      "title": "Scheduled Tasks Implementation",
+      "size_bytes": 1936,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-skills-implementation.md",
+      "title": "Skills Implementation",
+      "size_bytes": 3872,
+      "lines": 121
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-subagents-implementation.md",
+      "title": "Sub-agents Implementation",
+      "size_bytes": 3278,
+      "lines": 97
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/orchestration-workflow/orchestration-workflow.md",
+      "title": "Orchestration Workflow",
+      "size_bytes": 9676,
+      "lines": 200
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/orchestration-workflow/output.md",
+      "title": "Weather Result",
+      "size_bytes": 124,
+      "lines": 14
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-advanced-tool-use.md",
+      "title": "Claude Advanced Tool Use Patterns",
+      "size_bytes": 13790,
+      "lines": 421
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-agent-command-skill.md",
+      "title": "Agents vs Commands vs Skills — When to Use What",
+      "size_bytes": 8650,
+      "lines": 211
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-agent-memory.md",
+      "title": "Claude Code: Agent Memory Frontmatter",
+      "size_bytes": 4044,
+      "lines": 109
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-agent-sdk-vs-cli-system-prompts.md",
+      "title": "Claude Agent SDK vs Claude CLI: System Prompts and Output Consistency",
+      "size_bytes": 13118,
+      "lines": 341
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-global-vs-project-settings.md",
+      "title": "Claude Code: Global vs Project-Level Features",
+      "size_bytes": 10551,
+      "lines": 249
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-in-chrome-v-chrome-devtools-mcp.md",
+      "title": "Comprehensive Browser Automation MCP Comparison Report",
+      "size_bytes": 11497,
+      "lines": 346
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-skills-for-larger-mono-repos.md",
+      "title": "Understanding Claude Skills Discovery in Large Monorepos",
+      "size_bytes": 7181,
+      "lines": 159
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-usage-and-rate-limits.md",
+      "title": "Claude Code: Usage, Rate Limits & Extra Usage",
+      "size_bytes": 4059,
+      "lines": 109
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/llm-day-to-day-degradation.md",
+      "title": "LLM Day-to-Day Degradation: Myth vs Reality",
+      "size_bytes": 23651,
+      "lines": 361
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-boris-10-tips-01-feb-26.md",
+      "title": "10 Tips for Using Claude Code — From the Claude Code Team",
+      "size_bytes": 7417,
+      "lines": 154
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-boris-12-tips-12-feb-26.md",
+      "title": "12 Ways to Customize Claude Code — Tips from Boris Cherny",
+      "size_bytes": 7688,
+      "lines": 175
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-boris-13-tips-03-jan-26.md",
+      "title": "How I Use Claude Code — 13 Tips from Boris Cherny",
+      "size_bytes": 7073,
+      "lines": 151
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-boris-15-tips-30-mar-26.md",
+      "title": "15 Hidden & Under-Utilized Features in Claude Code — From Boris Cherny",
+      "size_bytes": 9576,
+      "lines": 221
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-boris-2-tips-10-mar-26.md",
+      "title": "Code Review & Test Time Compute — Tips from Boris Cherny",
+      "size_bytes": 1876,
+      "lines": 41
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-boris-2-tips-25-mar-26.md",
+      "title": "Squash Merging & PR Size Distribution — Tips from Boris Cherny",
+      "size_bytes": 2335,
+      "lines": 49
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tips/claude-thariq-tips-17-mar-26.md",
+      "title": "Lessons from Building Claude Code: How We Use Skills — Thariq",
+      "size_bytes": 14366,
+      "lines": 261
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/videos/claude-boris-lennys-podcast-19-feb-26.md",
+      "title": "Head of Claude Code: What Happens After Coding Is Solved — Lenny's Podcast",
+      "size_bytes": 110614,
+      "lines": 303
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/videos/claude-boris-pragmatic-engineer-04-mar-26.md",
+      "title": "Building Claude Code with Boris Cherny — The Pragmatic Engineer",
+      "size_bytes": 121478,
+      "lines": 333
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/videos/claude-boris-ryan-peterman-15-dec-25.md",
+      "title": "Boris Cherny (Creator of Claude Code) On What Grew His Career — Ryan Peterman",
+      "size_bytes": 98984,
+      "lines": 179
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/videos/claude-boris-y-combinator-17-feb-26.md",
+      "title": "Inside Claude Code With Its Creator Boris Cherny — Y Combinator",
+      "size_bytes": 68587,
+      "lines": 341
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/videos/claude-cat-every-29-oct-25.md",
+      "title": "The Secrets of Claude Code From the Engineers Who Built It — Every",
+      "size_bytes": 88796,
+      "lines": 463
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/videos/claude-dex-mlops-community-24-mar-26.md",
+      "title": "Everything We Got Wrong About Research-Plan-Implement — MLOps Community",
+      "size_bytes": 36208,
+      "lines": 192
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/!/video-presentation-transcript/1-video-workflow.md",
+      "title": "Video 1: From Vibe Coding to Agentic Engineering — Workflows with Claude Code",
+      "size_bytes": 4556,
+      "lines": 101
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/agent-teams/output/output.md",
+      "title": "Dubai Time Card",
+      "size_bytes": 213,
+      "lines": 9
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/development-workflows/changelog.md",
+      "title": "Development Workflows Changelog",
+      "size_bytes": 28055,
+      "lines": 307
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/claude-commands/changelog.md",
+      "title": "Commands Report — Changelog History",
+      "size_bytes": 15626,
+      "lines": 207
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/claude-settings/changelog.md",
+      "title": "Settings Report — Changelog History",
+      "size_bytes": 53539,
+      "lines": 356
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/claude-settings/verification-checklist.md",
+      "title": "Verification Checklist — Settings Report",
+      "size_bytes": 13815,
+      "lines": 135
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/claude-skills/changelog.md",
+      "title": "Skills Report Changelog",
+      "size_bytes": 4465,
+      "lines": 132
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/claude-subagents/changelog.md",
+      "title": "Subagents Report — Changelog History",
+      "size_bytes": 8714,
+      "lines": 170
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/claude-subagents/verification-checklist.md",
+      "title": "Verification Checklist — Subagents Report",
+      "size_bytes": 7725,
+      "lines": 104
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/concepts/changelog.md",
+      "title": "Changelog — README CONCEPTS Section",
+      "size_bytes": 34264,
+      "lines": 339
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/changelog/best-practice/concepts/verification-checklist.md",
+      "title": "Verification Checklist — README CONCEPTS Section",
+      "size_bytes": 2462,
+      "lines": 46
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/development-workflows/cross-model-workflow/cross-model-workflow.md",
+      "title": "Cross-Model (Claude Code + Codex) Workflow",
+      "size_bytes": 4251,
+      "lines": 56
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/development-workflows/rpi/rpi-workflow.md",
+      "title": "RPI Workflow",
+      "size_bytes": 2718,
+      "lines": 101
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/README.md",
+      "title": "Day 0 — Claude Code Setup",
+      "size_bytes": 1658,
+      "lines": 61
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/linux.md",
+      "title": "Linux Setup",
+      "size_bytes": 3749,
+      "lines": 119
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/mac.md",
+      "title": "macOS Setup",
+      "size_bytes": 574,
+      "lines": 33
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/windows.md",
+      "title": "Windows Setup",
+      "size_bytes": 774,
+      "lines": 34
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/agent-teams.md",
+      "title": "Agent Teams（多智能体团队）",
+      "size_bytes": 2924,
+      "lines": 82
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/cli-flags.md",
+      "title": "CLI Flags（命令行参数）",
+      "size_bytes": 2459,
+      "lines": 72
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/commands.md",
+      "title": "Commands（命令）",
+      "size_bytes": 2584,
+      "lines": 64
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "title": "Hooks（钩子）",
+      "size_bytes": 2810,
+      "lines": 78
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/mcp.md",
+      "title": "MCP（Model Context Protocol）",
+      "size_bytes": 2713,
+      "lines": 87
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/memory.md",
+      "title": "Memory（记忆系统）",
+      "size_bytes": 2858,
+      "lines": 69
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/orchestration.md",
+      "title": "Orchestration（编排模式）",
+      "size_bytes": 3543,
+      "lines": 87
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/power-ups.md",
+      "title": "Power-ups（互动教程）",
+      "size_bytes": 1492,
+      "lines": 40
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/scheduled-tasks.md",
+      "title": "Scheduled Tasks（定时任务）",
+      "size_bytes": 2001,
+      "lines": 65
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/settings.md",
+      "title": "Settings（配置系统）",
+      "size_bytes": 2824,
+      "lines": 64
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/skills.md",
+      "title": "Skills（技能）",
+      "size_bytes": 4346,
+      "lines": 100
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/concepts/subagents.md",
+      "title": "Subagents（子智能体）",
+      "size_bytes": 4695,
+      "lines": 114
+    },
+    {
+      "path": "studio/pipelines/manual实操手册/wiki/guides/agent-vs-command-vs-skill.md",
+      "title": "Agent vs Command vs Skill — 什么时候用哪个",
+      "size_bytes": 2867,
+      "lines": 74
     }
   ],
   "edges": [
@@ -331,6 +2731,31 @@
     },
     {
       "from": "AGENTS.md",
+      "to": "xxx",
+      "type": "wikilink"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "./SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "./decode-entity-SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "./knowledge/hot-history-pairs.md",
+      "type": "relative"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "./xxx.md",
+      "type": "relative"
+    },
+    {
+      "from": "AGENTS.md",
       "to": "pipelines/decode/",
       "type": "constant"
     },
@@ -342,6 +2767,11 @@
     {
       "from": "AGENTS.md",
       "to": "knowledge/xxx",
+      "type": "constant"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "knowledge/xxx.md",
       "type": "constant"
     },
     {
@@ -382,6 +2812,21 @@
     {
       "from": "decode-entity-SKILL.md",
       "to": "{slug}/",
+      "type": "constant"
+    },
+    {
+      "from": "hot-history-SKILL.md",
+      "to": "{slug}/research-report.md",
+      "type": "constant"
+    },
+    {
+      "from": "hot-history-SKILL.md",
+      "to": "{slug}/draft_v1.md",
+      "type": "constant"
+    },
+    {
+      "from": "hot-history-SKILL.md",
+      "to": "{slug}/{slug}.md",
       "type": "constant"
     },
     {
@@ -485,6 +2930,71 @@
       "type": "relative"
     },
     {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/polish-7steps.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/html-template.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/podcast-aesthetics.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/html-template.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/ground-truth.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "relative"
+    },
+    {
       "from": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
       "to": "Amory",
       "type": "wikilink"
@@ -502,6 +3012,2106 @@
     {
       "from": "examples/2026-04-12-mythos-reckless-helpfulness/next-session-tasks.md",
       "to": "文件名",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "deep-decode",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "product-pitch",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "scout",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "ai-industry-intel-digest",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/writing-style.md",
+      "to": "file.png",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/writing-style.md",
+      "to": "02_四层认知基建.png",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/knowledge/writing-style.md",
+      "to": "polish-7steps.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/SCHEMA.md",
+      "to": "wiki链接",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/SCHEMA.md",
+      "to": "链接",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "场景化Prompt大全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/best-practices.md",
+      "to": "场景化Prompt大全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "Skills技能系统",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/connectors.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/cross-app.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "连接器MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "故障排除",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "故障排除",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "连接器MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "连接器MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/enterprise.md",
+      "to": "故障排除",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "场景化Prompt大全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "场景化Prompt大全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/excel-features.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/getting-started.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "overview.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "timeline.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "excel-features.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "ppt-features.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "cross-app.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "connectors.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "skills.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "getting-started.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "enterprise.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "use-cases.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "limitations.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "troubleshooting.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/index.md",
+      "to": "best-practices.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "故障排除",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "故障排除",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "故障排除",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/limitations.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "产品演进时间线",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/overview.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "Skills技能系统",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/ppt-features.md",
+      "to": "Skills技能系统",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "连接器MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "场景化Prompt大全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/skills.md",
+      "to": "连接器MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/timeline.md",
+      "to": "跨应用协作",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "安装与配置",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "企业部署",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/troubleshooting.md",
+      "to": "限制与安全",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "产品全景",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "Skills技能系统",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "Excel核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "PowerPoint核心功能",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/manual实操手册-claudeFexcel/wiki/use-cases.md",
+      "to": "最佳实践",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution.md",
+      "to": "2026-04-09-managed-agents-architecture",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution.md",
+      "to": "2026-04-03-harness-greater-than-model",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer.md",
+      "to": "claude-opus-4-7",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer.md",
+      "to": "2026-04-24-codex-5.5-roundup",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-24-ai-design-replaces-designer.md",
+      "to": "EPD 范式转移",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/CLAUDE.md",
+      "to": "页面名",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/practice/2026-03-29-claude-insights-collaboration-fix.md",
+      "to": "2026-03-29-pm-ai-exponential",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/practice/2026-03-29-claude-insights-collaboration-fix.md",
+      "to": "experience",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/2026-04-03-agent-loop-single-thread.md",
+      "to": "2026-04-03-queryengine-brain",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/draft.md",
+      "to": "2026-04-03-queryengine-brain",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/draft.md",
+      "to": "context/information_sources/从Claude Code源码看Anthropic的产品野心.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/draft.md",
+      "to": "context/information_sources/Claude Code 源码泄露全面剖析.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-agent-loop-single-thread/draft.md",
+      "to": "context/information_sources/claudecode架构全解密.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/2026-04-03-claude-code-leak-panorama.md",
+      "to": "context/information_sources/从Claude%20Code源码看Anthropic的产品野心.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-claude-code-leak-panorama/2026-04-03-claude-code-leak-panorama.md",
+      "to": "context/information_sources/Claude%20Code%20源码架构解析从启动Prompt%20到权限管道.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.ja.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.ru.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.zh-CN.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.id-ID.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.ko.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.ar.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/nanoid/README.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-queryengine-brain/material/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.ja.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.ru.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.zh-CN.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.id-ID.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.ko.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.ar.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/nanoid/README.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/2026-04-03-speculation-prefetch/material/node_modules_local/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claudecode 源码泄露快看看里面有什么.md",
+      "to": "file.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-code-buddy-reroll/README_zh-HK.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "README_CN.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "practical/system-prompts.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "practical/hidden-configs.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "analysis/en/undercover-mode.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "practical/cost-optimization.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "architecture/query-lifecycle.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "architecture/tool-system.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "architecture/permission-model.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "architecture/multi-agent.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "comparison/vs-cursor.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "comparison/vs-cline.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "comparison/feature-matrix.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "analysis/en/telemetry.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "analysis/en/remote-control.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "analysis/en/roadmap.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README.md",
+      "to": "practical/claude-md-guide.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "practical/system-prompts.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "practical/hidden-configs.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "analysis/zh/undercover-mode.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "practical/cost-optimization.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "architecture/tool-system.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "architecture/query-lifecycle.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "architecture/permission-model.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "architecture/multi-agent.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "comparison/vs-cursor.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "comparison/vs-cline.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "comparison/feature-matrix.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "analysis/zh/telemetry.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "analysis/zh/remote-control.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "analysis/zh/roadmap.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claude-source-leaked-main/README_CN.md",
+      "to": "practical/claude-md-guide.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/README.md",
+      "to": "./USAGE.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/README.md",
+      "to": "./rust/README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/README.md",
+      "to": "./PHILOSOPHY.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/README.md",
+      "to": "../USAGE.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/README.md",
+      "to": "../USAGE.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/information_sources/claw-code/rust/USAGE.md",
+      "to": "../USAGE.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/raw_code/cc-recovered-main/README.md",
+      "to": "./README.zh-CN.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/claudecode_deep_decode/context/raw_code/cc-recovered-main/README.zh-CN.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "to": "Amory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "to": "Skill",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-03-31-boris-claude-code-tips/2026-03-31-Boris-15条Claude-Code隐藏功能拆解.md",
+      "to": "EPD范式转移-epd-paradigm-shift",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/next-session-tasks.md",
+      "to": "文件名",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/draft.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/draft.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/draft.md",
+      "to": "2026-04-09-managed-agents-architecture",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/draft.md",
+      "to": "2026-04-03-harness-greater-than-model",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/【AI笔记0417】给AI写一份宪法.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/【AI笔记0417】给AI写一份宪法.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/【AI笔记0417】给AI写一份宪法.md",
+      "to": "2026-04-09-managed-agents-architecture",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/【AI笔记0417】给AI写一份宪法.md",
+      "to": "2026-04-03-harness-greater-than-model",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/2026-04-17-your-harness-your-memory.md",
+      "to": "2026-04-09-managed-agents-architecture",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-your-harness-your-memory/draft.md",
+      "to": "2026-04-09-managed-agents-architecture",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/2026-04-20-prfaas-prefill-as-a-service.md",
+      "to": "intel-2026-04-17-quoting-kimi-ai-kimi-moonshot",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-20-prfaas-prefill-as-a-service/draft.md",
+      "to": "intel-2026-04-17-quoting-kimi-ai-kimi-moonshot",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "to": "大局观-海拔三千米经济学",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "to": "大局观-海拔三千米经济学",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "to": "产品人-潮汐观",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "to": "AI泡沫-2026年数据",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "to": "风口反收割",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-21-hefan-ai-tide/2026-04-21-hefan-ai-tide.md",
+      "to": "解答题选手",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.ja.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.ru.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.zh-CN.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.id-ID.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.ko.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.ar.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/nanoid/README.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-13-tedx-fractal-minds/material/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.ja.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.ru.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.zh-CN.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.id-ID.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.ko.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.ar.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/nanoid/README.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/decode/2026-04-17-letta-context-constitution/node_modules/readable-stream/GOVERNANCE.md",
+      "to": "./README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "mcp",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "settings",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "cli-flags",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "power-ups",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "orchestration",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "agent-teams",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "scheduled-tasks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/index.md",
+      "to": "agent-vs-command-vs-skill",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/log.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/log.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/log.md",
+      "to": "Commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/log.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Settings",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "CLI-Flags",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Plugins",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Orchestration",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Agent-Teams",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Scheduled-Tasks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/overview.md",
+      "to": "Development-Workflows",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "orchestration-workflow/orchestration-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-subagents.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "implementation/claude-subagents-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-commands.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "implementation/claude-commands-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-skills.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "implementation/claude-skills-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": ".claude/commands/weather-orchestrator.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "orchestration-workflow/orchestration-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-mcp.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-memory.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "CLAUDE.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-cli-startup-flags.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-power-ups.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-power-ups.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "reports/claude-in-chrome-v-chrome-devtools-mcp.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "implementation/claude-scheduled-tasks-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "implementation/claude-agent-teams-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "orchestration-workflow/orchestration-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "development-workflows/cross-model-workflow/cross-model-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "development-workflows/cross-model-workflow/cross-model-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "development-workflows/rpi/rpi-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "development-workflows/rpi/rpi-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-13-tips-03-jan-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-10-tips-01-feb-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-12-tips-12-feb-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-2-tips-25-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-15-tips-30-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "development-workflows/cross-model-workflow/cross-model-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-memory.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "reports/claude-skills-for-larger-mono-repos.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-2-tips-25-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-2-tips-25-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "development-workflows/cross-model-workflow/cross-model-workflow.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "best-practice/claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-15-tips-30-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-2-tips-25-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-thariq-tips-17-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-2-tips-10-mar-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-12-tips-12-feb-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-10-tips-01-feb-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/README.md",
+      "to": "tips/claude-boris-13-tips-03-jan-26.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-cli-startup-flags.md",
+      "to": "./claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-cli-startup-flags.md",
+      "to": "./claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-cli-startup-flags.md",
+      "to": "./claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-cli-startup-flags.md",
+      "to": "./claude-settings.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-commands.md",
+      "to": "../implementation/claude-commands-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-mcp.md",
+      "to": "../reports/claude-in-chrome-v-chrome-devtools-mcp.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-skills.md",
+      "to": "../implementation/claude-skills-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-skills.md",
+      "to": "../reports/claude-skills-for-larger-mono-repos.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/best-practice/claude-subagents.md",
+      "to": "../implementation/claude-subagents-implementation.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-agent-teams-implementation.md",
+      "to": "../agent-teams/agent-teams-prompt.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-commands-implementation.md",
+      "to": "../.claude/commands/weather-orchestrator.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-commands-implementation.md",
+      "to": "../.claude/commands/weather-orchestrator.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-commands-implementation.md",
+      "to": "../.claude/agents/weather-agent.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-commands-implementation.md",
+      "to": "../.claude/skills/weather-fetcher/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-commands-implementation.md",
+      "to": "../.claude/skills/weather-svg-creator/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-skills-implementation.md",
+      "to": "../.claude/skills/weather-svg-creator/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-skills-implementation.md",
+      "to": "../.claude/skills/weather-fetcher/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-subagents-implementation.md",
+      "to": "../.claude/agents/weather-agent.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-subagents-implementation.md",
+      "to": "../.claude/commands/weather-orchestrator.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-subagents-implementation.md",
+      "to": "../.claude/agents/weather-agent.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-subagents-implementation.md",
+      "to": "../.claude/skills/weather-fetcher/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/implementation/claude-subagents-implementation.md",
+      "to": "../.claude/skills/weather-svg-creator/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/orchestration-workflow/orchestration-workflow.md",
+      "to": "../.claude/commands/weather-orchestrator.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/orchestration-workflow/orchestration-workflow.md",
+      "to": "../.claude/agents/weather-agent.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/orchestration-workflow/orchestration-workflow.md",
+      "to": "../.claude/skills/weather-fetcher/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/orchestration-workflow/orchestration-workflow.md",
+      "to": "../.claude/skills/weather-svg-creator/SKILL.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-agent-command-skill.md",
+      "to": "../best-practice/claude-skills.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-agent-command-skill.md",
+      "to": "../best-practice/claude-commands.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-agent-command-skill.md",
+      "to": "../best-practice/claude-subagents.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/reports/claude-usage-and-rate-limits.md",
+      "to": "claude-cli-startup-flags.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/README.md",
+      "to": "windows.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/README.md",
+      "to": "linux.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/README.md",
+      "to": "mac.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/linux.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/linux.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/mac.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/mac.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/windows.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/context/claude-code-best-practice/tutorial/day0/windows.md",
+      "to": "README.md",
+      "type": "relative"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/agent-teams.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/agent-teams.md",
+      "to": "Orchestration",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/cli-flags.md",
+      "to": "Settings",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/cli-flags.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/cli-flags.md",
+      "to": "MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/commands.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/commands.md",
+      "to": "Orchestration",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/commands.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "to": "Settings",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/hooks.md",
+      "to": "Scheduled-Tasks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/mcp.md",
+      "to": "Settings",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/mcp.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/mcp.md",
+      "to": "Plugins",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/memory.md",
+      "to": "Settings",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/memory.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/memory.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/orchestration.md",
+      "to": "Commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/orchestration.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/orchestration.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/orchestration.md",
+      "to": "Agent-Teams",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/power-ups.md",
+      "to": "MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/power-ups.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/power-ups.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/power-ups.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/scheduled-tasks.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/scheduled-tasks.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/scheduled-tasks.md",
+      "to": "Commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/scheduled-tasks.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/settings.md",
+      "to": "Memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/settings.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/settings.md",
+      "to": "MCP",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/settings.md",
+      "to": "CLI-Flags",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/skills.md",
+      "to": "Commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/skills.md",
+      "to": "Subagents",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/skills.md",
+      "to": "Hooks",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/skills.md",
+      "to": "Memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/subagents.md",
+      "to": "Skills",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/subagents.md",
+      "to": "Commands",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/subagents.md",
+      "to": "Orchestration",
+      "type": "wikilink"
+    },
+    {
+      "from": "studio/pipelines/manual实操手册/wiki/concepts/subagents.md",
+      "to": "Agent-Teams",
       "type": "wikilink"
     }
   ]

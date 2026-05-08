@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <rect width="900" height="383" fill="#ffffff"/>
+  <!-- Top accent line -->
+  <rect x="60" y="40" width="60" height="4" fill="#2383E2" rx="2"/>
+  <!-- Main title -->
+  <text x="60" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="42" font-weight="700" fill="#1a1a1a">
+    <tspan x="60" dy="0">地基在动</tspan>
+  </text>
+  <text x="60" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="400" fill="#555555">
+    <tspan x="60" dy="0">当 AI 能力指数增长时，产品经理该怎么活</tspan>
+  </text>
+  <!-- Divider -->
+  <rect x="60" y="200" width="40" height="2" fill="#e0e0e0"/>
+  <!-- Subtitle / hook -->
+  <text x="60" y="240" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="400" fill="#888888">
+    <tspan x="60" dy="0">Anthropic Claude Code 产品负责人的内部方法论拆解</tspan>
+  </text>
+  <text x="60" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="400" fill="#888888">
+    <tspan x="60" dy="0">Side Quest / 原型吃掉文档 / 建造鸿沟 / 提效悖论</tspan>
+  </text>
+  <!-- Source -->
+  <text x="60" y="330" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="400" fill="#aaaaaa">
+    <tspan x="60" dy="0">Deep Decode | 拆解 Cat Wu (Anthropic) 博客</tspan>
+  </text>
+  <!-- Bottom accent -->
+  <rect x="0" y="375" width="900" height="8" fill="#2383E2"/>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" font-family="PingFang SC, Inter, sans-serif">
+  <!-- Background -->
+  <rect width="800" height="450" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">Prompt Cache 复用: 推测执行的经济学</text>
+
+  <!-- === LEFT: Cache Hit (green) === -->
+  <rect x="30" y="56" width="350" height="220" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="2"/>
+  <text x="205" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#4DB6AC">Cache 命中</text>
+
+  <!-- Big box: parent context -->
+  <rect x="55" y="94" width="300" height="60" rx="8" fill="#4DB6AC" opacity="0.12" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="205" y="120" text-anchor="middle" font-size="13" fill="#37352F">父进程对话上下文</text>
+  <text x="205" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#4DB6AC">200K tokens</text>
+
+  <!-- Small box: fork delta -->
+  <rect x="55" y="164" width="300" height="36" rx="8" fill="#4DB6AC" opacity="0.25" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="205" y="187" text-anchor="middle" font-size="12" fill="#37352F">Fork 新增内容 ~500 tokens</text>
+
+  <!-- Label -->
+  <text x="205" y="222" text-anchor="middle" font-size="13" fill="#37352F">实际计费:</text>
+  <text x="205" y="242" text-anchor="middle" font-size="20" font-weight="bold" fill="#4DB6AC">~500 tokens</text>
+  <text x="205" y="264" text-anchor="middle" font-size="12" fill="#787774">Cache Hit Rate: 92.7%</text>
+
+  <!-- === RIGHT: Cache Miss (red) === -->
+  <rect x="420" y="56" width="350" height="220" rx="8" fill="#F7F7F5" stroke="#EB5757" stroke-width="2"/>
+  <text x="595" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#EB5757">Cache 失效</text>
+
+  <!-- Big box: full reprocess -->
+  <rect x="445" y="94" width="300" height="60" rx="8" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="595" y="120" text-anchor="middle" font-size="13" fill="#37352F">全部重新处理</text>
+  <text x="595" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#EB5757">200K tokens</text>
+
+  <!-- Small box: fork delta -->
+  <rect x="445" y="164" width="300" height="36" rx="8" fill="#EB5757" opacity="0.15" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="595" y="187" text-anchor="middle" font-size="12" fill="#37352F">Fork 新增内容 ~500 tokens</text>
+
+  <!-- Label -->
+  <text x="595" y="222" text-anchor="middle" font-size="13" fill="#37352F">实际计费:</text>
+  <text x="595" y="242" text-anchor="middle" font-size="20" font-weight="bold" fill="#EB5757">~200,500 tokens</text>
+  <text x="595" y="264" text-anchor="middle" font-size="12" fill="#787774">PR #18143 改了一个参数 → 45x spike</text>
+
+  <!-- VS divider -->
+  <circle cx="400" cy="166" r="18" fill="#37352F"/>
+  <text x="400" y="172" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFFFFF">VS</text>
+
+  <!-- === Bottom: CacheSafeParams === -->
+  <rect x="30" y="296" width="740" height="54" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="316" text-anchor="middle" font-size="13" font-weight="bold" fill="#37352F">CacheSafeParams: 5个参数必须完全一致</text>
+  <text x="400" y="338" text-anchor="middle" font-size="12" fill="#787774">系统提示词  |  用户上下文  |  系统上下文  |  工具上下文  |  对话历史</text>
+
+  <!-- === Key insight box === -->
+  <rect x="160" y="370" width="480" height="50" rx="8" fill="#2383E2" opacity="0.08" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="400" y="400" text-anchor="middle" font-size="15" font-weight="bold" fill="#2383E2">能复用缓存才做推测，不能复用就不做</text>
+
+  <!-- Bottom border -->
+  <rect x="0" y="446" width="800" height="4" fill="#2383E2" opacity="0.3"/>
+</svg>

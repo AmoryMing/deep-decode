@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <marker id="arr3" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#37352F"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">Coordinator 四阶段工作流与认知不可委派原则</text>
+
+  <!-- Phase 1: Research -->
+  <rect x="60" y="65" width="160" height="90" rx="10" fill="#2383E2" opacity="0.08" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="140" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2" text-anchor="middle">1. Research</text>
+  <text x="140" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Workers 并行调查</text>
+  <text x="140" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">代码库 / 问题定位</text>
+  <text x="140" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC" text-anchor="middle">谁: Workers</text>
+
+  <!-- Arrow -->
+  <line x1="220" y1="110" x2="250" y2="110" stroke="#37352F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- Phase 2: Synthesis (HIGHLIGHTED) -->
+  <rect x="255" y="55" width="180" height="110" rx="10" fill="#EB5757" opacity="0.08" stroke="#EB5757" stroke-width="2.5"/>
+  <rect x="255" y="55" width="180" height="34" rx="10" fill="#EB5757" opacity="0.15"/>
+  <rect x="255" y="77" width="180" height="12" fill="#EB5757" opacity="0.15"/>
+  <text x="345" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#EB5757" text-anchor="middle">2. Synthesis</text>
+  <text x="345" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Coordinator 自己理解</text>
+  <text x="345" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">写出具体方案</text>
+  <text x="345" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">(文件路径+行号+修改)</text>
+  <text x="345" y="156" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold" text-anchor="middle">谁: Coordinator 本人</text>
+
+  <!-- Arrow -->
+  <line x1="435" y1="110" x2="465" y2="110" stroke="#37352F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- Phase 3: Implementation -->
+  <rect x="470" y="65" width="145" height="90" rx="10" fill="#4DB6AC" opacity="0.08" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="542" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#4DB6AC" text-anchor="middle">3. Implement</text>
+  <text x="542" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Workers 按方案执行</text>
+  <text x="542" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">编码 / 提交</text>
+  <text x="542" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC" text-anchor="middle">谁: Workers</text>
+
+  <!-- Arrow -->
+  <line x1="615" y1="110" x2="645" y2="110" stroke="#37352F" stroke-width="1.5" marker-end="url(#arr3)"/>
+
+  <!-- Phase 4: Verification -->
+  <rect x="650" y="65" width="110" height="90" rx="10" fill="#9B51E0" opacity="0.08" stroke="#9B51E0" stroke-width="1.5"/>
+  <text x="705" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#9B51E0" text-anchor="middle">4. Verify</text>
+  <text x="705" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Workers 测试</text>
+  <text x="705" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">证明有效</text>
+  <text x="705" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#9B51E0" text-anchor="middle">谁: Workers</text>
+
+  <!-- Iron Rule Section -->
+  <line x1="60" y1="190" x2="740" y2="190" stroke="#E3E2E0" stroke-width="1"/>
+
+  <text x="400" y="220" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757" text-anchor="middle">铁律：认知不可委派 (Non-Delegable Understanding)</text>
+
+  <!-- Bad example -->
+  <rect x="60" y="240" width="330" height="120" rx="10" fill="#EB5757" opacity="0.05" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="80" y="262" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#EB5757">X  反面教材：懒委派</text>
+  <rect x="80" y="275" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="95" y="296" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" font-style="italic">Agent({ prompt:</text>
+  <text x="95" y="314" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">"Based on your findings,</text>
+  <text x="95" y="332" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757"> fix the auth bug" })</text>
+
+  <!-- Good example -->
+  <rect x="410" y="240" width="330" height="120" rx="10" fill="#4DB6AC" opacity="0.05" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="430" y="262" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#4DB6AC">O  正面教材：自己理解后指令</text>
+  <rect x="430" y="275" width="290" height="68" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="445" y="296" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" font-style="italic">Agent({ prompt:</text>
+  <text x="445" y="314" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">"Fix null pointer at</text>
+  <text x="445" y="332" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC"> validate.ts:42..." })</text>
+
+  <!-- Bottom insight -->
+  <rect x="80" y="385" width="640" height="110" rx="12" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="415" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">本质是管理哲学的代码化</text>
+
+  <text x="120" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">可以委派执行（改代码、跑测试、提 PR）</text>
+  <text x="120" y="470" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" font-weight="bold">不可委派理解（读 findings、分析根因、制定方案）</text>
+
+  <text x="680" y="465" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">369 行 prompt</text>
+  <text x="680" y="482" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">coordinatorMode.ts</text>
+</svg>

@@ -1,0 +1,42 @@
+<svg width="800" height="560" viewBox="0 0 800 560" xmlns="http://www.w3.org/2000/svg" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="400" y="45" text-anchor="middle" font-size="22" font-weight="bold" fill="#37352F">Harrison 的三级 Lock-in 风险阶梯</text>
+  <text x="400" y="72" text-anchor="middle" font-size="14" fill="#787774">你的 agent 现在处在哪一档？</text>
+
+  <g>
+    <rect x="50" y="110" width="700" height="110" rx="10" fill="#FFF8E8" stroke="#FFB020" stroke-width="1.5"/>
+    <circle cx="95" cy="165" r="28" fill="#FFB020"/>
+    <text x="95" y="172" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">1</text>
+    <text x="145" y="145" font-size="16" fill="#FFB020" font-weight="bold">轻度坏 · Stateful API</text>
+    <text x="145" y="170" font-size="13" fill="#37352F">OpenAI Responses API / Anthropic server-side compaction</text>
+    <text x="145" y="192" font-size="12" fill="#787774">状态存在对方服务器 → 切换模型时无法恢复历史线程</text>
+    <rect x="620" y="135" width="110" height="25" rx="4" fill="#FFFFFF" stroke="#FFB020"/>
+    <text x="675" y="152" text-anchor="middle" font-size="11" fill="#FFB020" font-weight="600">可感知风险</text>
+  </g>
+
+  <g>
+    <rect x="50" y="235" width="700" height="110" rx="10" fill="#FFF0E8" stroke="#FF8C42" stroke-width="1.5"/>
+    <circle cx="95" cy="290" r="28" fill="#FF8C42"/>
+    <text x="95" y="297" text-anchor="middle" font-size="20" font-weight="bold" fill="#FFFFFF">2</text>
+    <text x="145" y="270" font-size="16" fill="#FF8C42" font-weight="bold">坏 · 闭源 Harness</text>
+    <text x="145" y="295" font-size="13" fill="#37352F">Claude Agent SDK（底层闭源 Claude Code）</text>
+    <text x="145" y="317" font-size="12" fill="#787774">harness 读写 memory 黑盒 → 不知道 agent 怎么记、怎么迁移</text>
+    <rect x="620" y="260" width="110" height="25" rx="4" fill="#FFFFFF" stroke="#FF8C42"/>
+    <text x="675" y="277" text-anchor="middle" font-size="11" fill="#FF8C42" font-weight="600">中度锁定</text>
+  </g>
+
+  <g>
+    <rect x="50" y="360" width="700" height="130" rx="10" fill="#FFF5F5" stroke="#EB5757" stroke-width="2.5"/>
+    <circle cx="95" cy="425" r="32" fill="#EB5757"/>
+    <text x="95" y="433" text-anchor="middle" font-size="22" font-weight="bold" fill="#FFFFFF">3</text>
+    <text x="145" y="395" font-size="16" fill="#EB5757" font-weight="bold">最坏 · Managed Agents</text>
+    <text x="145" y="420" font-size="13" fill="#37352F">整个 harness + long-term memory 全在 Anthropic API 后</text>
+    <text x="145" y="442" font-size="12" fill="#787774">零可见 · 零控制 · 零迁移</text>
+    <text x="145" y="465" font-size="12" fill="#EB5757" font-weight="600">agent 和用户磨合出的所有模式 → 都是 Anthropic 的资产</text>
+    <rect x="620" y="385" width="110" height="25" rx="4" fill="#FFFFFF" stroke="#EB5757"/>
+    <text x="675" y="402" text-anchor="middle" font-size="11" fill="#EB5757" font-weight="600">深度锁定</text>
+  </g>
+
+  <text x="400" y="525" text-anchor="middle" font-size="13" fill="#37352F" font-weight="600">VentureBeat 独立验证："Session 数据存在 Anthropic 数据库，锁定到单一厂商"</text>
+</svg>

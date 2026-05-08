@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+  <rect width="800" height="550" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">从"宠物"到"牲畜"：Agent 架构的进化</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">耦合架构 vs 解耦架构</text>
+
+  <!-- LEFT: Coupled (Pet) -->
+  <g transform="translate(30, 85)">
+    <text x="170" y="15" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757">Before: 宠物模式</text>
+
+    <rect x="40" y="35" width="260" height="250" rx="12" fill="#FFF5F5" stroke="#EB5757" stroke-width="2"/>
+    <text x="170" y="58" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">单体容器</text>
+
+    <rect x="70" y="75" width="200" height="40" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="170" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">Brain (Harness)</text>
+
+    <rect x="70" y="130" width="200" height="40" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="170" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">Session (State)</text>
+
+    <rect x="70" y="185" width="200" height="40" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="170" y="210" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">Sandbox (Hands)</text>
+
+    <rect x="70" y="240" width="200" height="30" rx="8" fill="#EB5757" opacity="0.1" stroke="#EB5757" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="170" y="260" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">Credentials (exposed!)</text>
+
+    <!-- Problems -->
+    <text x="55" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">x 容器挂了 = 全丢</text>
+    <text x="55" y="330" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">x 注入可触达凭证</text>
+    <text x="55" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">x 推理等容器启动</text>
+    <text x="55" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">x 无法独立升级组件</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(370, 230)">
+    <line x1="0" y1="0" x2="55" y2="0" stroke="#37352F" stroke-width="2.5" marker-end="url(#arrowB2)"/>
+    <text x="28" y="-12" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">解耦</text>
+  </g>
+  <defs>
+    <marker id="arrowB2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+    </marker>
+  </defs>
+
+  <!-- RIGHT: Decoupled (Cattle) -->
+  <g transform="translate(430, 85)">
+    <text x="170" y="15" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2">After: 牲畜模式</text>
+
+    <rect x="40" y="35" width="260" height="55" rx="8" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+    <text x="170" y="60" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2">Brain (Harness)</text>
+    <text x="170" y="78" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">容器外运行，无状态，可替换</text>
+
+    <rect x="40" y="105" width="260" height="55" rx="8" fill="#FFF8E1" stroke="#FFB020" stroke-width="2"/>
+    <text x="170" y="130" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#E6A010">Session (Event Log)</text>
+    <text x="170" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">append-only，独立存储，不丢失</text>
+
+    <rect x="40" y="175" width="120" height="50" rx="8" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="1.5"/>
+    <text x="100" y="198" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Sandbox A</text>
+    <text x="100" y="215" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">可替换</text>
+
+    <rect x="180" y="175" width="120" height="50" rx="8" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="1.5"/>
+    <text x="240" y="198" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Sandbox B</text>
+    <text x="240" y="215" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">可替换</text>
+
+    <rect x="40" y="240" width="260" height="35" rx="8" fill="#F3E8FF" stroke="#9B51E0" stroke-width="1.5"/>
+    <text x="170" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#9B51E0">Credentials Vault (隔离)</text>
+
+    <!-- Benefits -->
+    <text x="55" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">+ 容器挂了，Session 不丢</text>
+    <text x="55" y="330" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">+ 凭证永不触达沙箱</text>
+    <text x="55" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">+ 推理即时开始 (TTFT -60%)</text>
+    <text x="55" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">+ 组件独立升级/替换</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="60" y="500" width="680" height="35" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="522" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-style="italic">"Harness 是有保质期的。模型每升级一次，Harness 里的补丁就有一部分过期。"</text>
+</svg>

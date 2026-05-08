@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <defs>
+    <marker id="arr1" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#37352F"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">两种世界观：模型优先 vs 编排优先</text>
+
+  <!-- LEFT: Claude Code Single Thread -->
+  <rect x="40" y="60" width="340" height="360" rx="12" fill="#F7F7F5" stroke="#2383E2" stroke-width="2"/>
+  <rect x="40" y="60" width="340" height="40" rx="12" fill="#2383E2"/>
+  <rect x="40" y="88" width="340" height="12" fill="#2383E2"/>
+  <text x="210" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Claude Code: 模型即调度器</text>
+
+  <!-- Single loop icon -->
+  <circle cx="210" cy="165" r="40" fill="none" stroke="#2383E2" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="210" y="162" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#2383E2" text-anchor="middle">while</text>
+  <text x="210" y="178" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#2383E2" text-anchor="middle">(true)</text>
+
+  <!-- Tools below -->
+  <rect x="80" y="230" width="60" height="28" rx="6" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="110" y="249" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Read</text>
+
+  <rect x="150" y="230" width="60" height="28" rx="6" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="180" y="249" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Edit</text>
+
+  <rect x="220" y="230" width="60" height="28" rx="6" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="250" y="249" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Bash</text>
+
+  <rect x="290" y="230" width="60" height="28" rx="6" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="320" y="249" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Grep</text>
+
+  <!-- Arrows from loop to tools -->
+  <line x1="180" y1="200" x2="110" y2="228" stroke="#37352F" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <line x1="195" y1="205" x2="180" y2="228" stroke="#37352F" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <line x1="225" y1="205" x2="250" y2="228" stroke="#37352F" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <line x1="240" y1="200" x2="320" y2="228" stroke="#37352F" stroke-width="1.2" marker-end="url(#arr1)"/>
+
+  <!-- Key properties -->
+  <text x="210" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle" font-weight="bold">读操作并行 | 写操作串行</text>
+
+  <text x="80" y="325" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ 一条消息历史，可调试</text>
+  <text x="80" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ prompt cache 92% 命中</text>
+  <text x="80" y="371" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ 模型自主决策下一步</text>
+  <text x="80" y="394" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">- 超大任务性能天花板</text>
+
+  <!-- RIGHT: Swarm Multi-Agent -->
+  <rect x="420" y="60" width="340" height="360" rx="12" fill="#F7F7F5" stroke="#EB5757" stroke-width="2"/>
+  <rect x="420" y="60" width="340" height="40" rx="12" fill="#EB5757"/>
+  <rect x="420" y="88" width="340" height="12" fill="#EB5757"/>
+  <text x="590" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Swarm: 编排优先</text>
+
+  <!-- Orchestrator -->
+  <rect x="540" y="125" width="100" height="32" rx="8" fill="#EB5757" opacity="0.15" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="590" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#EB5757" text-anchor="middle">Orchestrator</text>
+
+  <!-- Multiple agents -->
+  <circle cx="490" cy="210" r="24" fill="#FFFFFF" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="490" y="214" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Agent A</text>
+
+  <circle cx="590" cy="210" r="24" fill="#FFFFFF" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="590" y="214" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Agent B</text>
+
+  <circle cx="690" cy="210" r="24" fill="#FFFFFF" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="690" y="214" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Agent C</text>
+
+  <!-- Handoff arrows -->
+  <line x1="565" y1="155" x2="495" y2="186" stroke="#EB5757" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <line x1="590" y1="157" x2="590" y2="186" stroke="#EB5757" stroke-width="1.2" marker-end="url(#arr1)"/>
+  <line x1="615" y1="155" x2="685" y2="186" stroke="#EB5757" stroke-width="1.2" marker-end="url(#arr1)"/>
+
+  <path d="M 514 210 L 566 210" stroke="#FFB020" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr1)"/>
+  <text x="540" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#FFB020" text-anchor="middle">handoff</text>
+
+  <!-- Key properties -->
+  <text x="590" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" text-anchor="middle" font-weight="bold">外部框架定义 handoff 规则</text>
+
+  <text x="460" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ 真正并行，大任务快</text>
+  <text x="460" y="328" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ 职责明确分离</text>
+  <text x="460" y="351" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">- 多份消息历史，难调试</text>
+  <text x="460" y="374" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">- cache 命中率骤降</text>
+  <text x="460" y="397" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">- Agent 间同步开销大</text>
+
+  <!-- Bottom verdict -->
+  <rect x="100" y="440" width="600" height="56" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="465" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">核心分歧：你相信模型已经足够聪明，能自己当调度器吗？</text>
+  <text x="400" y="485" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Claude Code 的答案：80% 日常任务单线程最优，20% 超大任务按需启用多 Agent</text>
+</svg>

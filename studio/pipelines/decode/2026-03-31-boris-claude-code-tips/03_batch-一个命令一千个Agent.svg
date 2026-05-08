@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">/batch -- 从"一对一辅助"到"一对千调度"</text>
+
+  <!-- LEFT: Traditional -->
+  <rect x="30" y="65" width="340" height="320" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="200" y="95" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#787774">传统方式</text>
+
+  <!-- One person, one file, sequential -->
+  <circle cx="120" cy="150" r="12" fill="none" stroke="#37352F" stroke-width="2"/>
+  <line x1="120" y1="162" x2="120" y2="190" stroke="#37352F" stroke-width="2"/>
+
+  <!-- File stack (sequential) -->
+  <rect x="170" y="130" width="50" height="20" rx="3" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1"/>
+  <text x="195" y="145" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#787774">文件 1</text>
+  <rect x="170" y="155" width="50" height="20" rx="3" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1"/>
+  <text x="195" y="170" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#787774">文件 2</text>
+  <rect x="170" y="180" width="50" height="20" rx="3" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1"/>
+  <text x="195" y="195" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#787774">文件 3</text>
+  <text x="195" y="220" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B9A97">...</text>
+  <rect x="170" y="230" width="50" height="20" rx="3" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1"/>
+  <text x="195" y="245" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#787774">文件 500</text>
+
+  <!-- Arrow going down (sequential) -->
+  <path d="M 155 135 L 155 250" stroke="#9B9A97" stroke-width="1.5" marker-end="url(#arrowG)"/>
+  <defs>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9B9A97"/>
+    </marker>
+  </defs>
+
+  <!-- Time label -->
+  <rect x="260" y="140" width="80" height="110" rx="5" fill="none" stroke="#EB5757" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="300" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="bold" fill="#EB5757">2周</text>
+
+  <text x="200" y="300" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">500 个文件串行改</text>
+  <text x="200" y="325" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">一个人、一个屏幕、一个个来</text>
+  <text x="200" y="355" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">人是瓶颈</text>
+
+  <!-- Arrow between -->
+  <path d="M 385 220 L 420 220" stroke="#37352F" stroke-width="2.5" marker-end="url(#arrowH)"/>
+  <defs>
+    <marker id="arrowH" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+    </marker>
+  </defs>
+  <text x="403" y="205" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">/batch</text>
+
+  <!-- RIGHT: /batch -->
+  <rect x="430" y="65" width="340" height="320" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="95" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">一个命令</text>
+
+  <!-- One command at top -->
+  <rect x="540" y="110" width="120" height="30" rx="6" fill="#2383E2" opacity="0.15" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="600" y="130" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#2383E2">/batch migrate</text>
+
+  <!-- Fan out lines -->
+  <line x1="560" y1="140" x2="470" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="575" y1="140" x2="510" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="590" y1="140" x2="550" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="600" y1="140" x2="590" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="610" y1="140" x2="630" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="625" y1="140" x2="670" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="640" y1="140" x2="710" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="650" y1="140" x2="745" y2="175" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+
+  <!-- Grid of parallel agents (each with own worktree) -->
+  <g>
+    <rect x="455" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="490" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="525" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="560" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="595" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="630" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="665" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="700" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="735" y="175" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="455" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="490" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="525" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="560" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="595" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="630" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="665" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="700" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+    <rect x="735" y="202" width="30" height="22" rx="3" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+  </g>
+  <text x="600" y="245" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">每个格子 = 1 个独立 Agent + 自己的 Worktree</text>
+
+  <!-- Time label -->
+  <rect x="555" y="260" width="90" height="40" rx="5" fill="none" stroke="#4DB6AC" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <text x="600" y="287" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="bold" fill="#4DB6AC">1 小时</text>
+
+  <text x="600" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">500 个 Agent 并行改</text>
+  <text x="600" y="355" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">互不干扰，各自独立工作区</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="410" width="560" height="50" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="432" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">但谁来审这 500 个 Agent 的产出？</text>
+  <text x="400" y="452" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">答案：另一队 Agent（Code Review 功能，同期发布）</text>
+</svg>

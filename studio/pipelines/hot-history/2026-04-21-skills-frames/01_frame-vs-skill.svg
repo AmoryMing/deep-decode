@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620">
+  <rect width="800" height="620" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">八行对照：Frame 1974 × Skill 2025</text>
+  <text x="400" y="66" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">不是类比，是结构上一一对应</text>
+
+  <!-- 表头 -->
+  <g transform="translate(40, 90)">
+    <rect x="0" y="0" width="240" height="40" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="120" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle" font-weight="600">维度</text>
+
+    <rect x="250" y="0" width="230" height="40" rx="6" fill="#37352F"/>
+    <text x="365" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">Minsky 1974 Frame</text>
+
+    <rect x="490" y="0" width="230" height="40" rx="6" fill="#2383E2"/>
+    <text x="605" y="25" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">Anthropic 2025 Skill</text>
+  </g>
+
+  <!-- 八行对照 -->
+  <g transform="translate(40, 140)" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="720" height="52" rx="4" fill="#FAFAF8"/>
+    <text x="12" y="30" font-weight="600">绑定什么</text>
+    <text x="258" y="22">attached to each frame</text>
+    <text x="258" y="40" fill="#787774">several kinds of information</text>
+    <text x="498" y="22">folders that include</text>
+    <text x="498" y="40" fill="#787774">instructions, scripts, resources</text>
+
+    <!-- Row 2 -->
+    <rect x="0" y="58" width="720" height="52" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="0.5"/>
+    <text x="12" y="88" font-weight="600">触发场景</text>
+    <text x="258" y="80">stereotyped situation</text>
+    <text x="258" y="98" fill="#787774">客厅 / 生日派对</text>
+    <text x="498" y="80">Claude can load</text>
+    <text x="498" y="98" fill="#787774">when needed</text>
+
+    <!-- Row 3 -->
+    <rect x="0" y="116" width="720" height="52" rx="4" fill="#FAFAF8"/>
+    <text x="12" y="146" font-weight="600">顶层固定</text>
+    <text x="258" y="138">The top levels</text>
+    <text x="258" y="156" fill="#787774">of a frame are fixed</text>
+    <text x="498" y="138">YAML frontmatter</text>
+    <text x="498" y="156" fill="#787774">name + description 必填</text>
+
+    <!-- Row 4 -->
+    <rect x="0" y="174" width="720" height="52" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="0.5"/>
+    <text x="12" y="204" font-weight="600">可填充槽位</text>
+    <text x="258" y="196">terminals / slots</text>
+    <text x="258" y="214" fill="#787774">filled by specific instances</text>
+    <text x="498" y="196">SKILL.md body</text>
+    <text x="498" y="214" fill="#787774">scripts/ + references/</text>
+
+    <!-- Row 5 -->
+    <rect x="0" y="232" width="720" height="52" rx="4" fill="#FAFAF8"/>
+    <text x="12" y="262" font-weight="600">默认值松绑</text>
+    <text x="258" y="254">default assignments</text>
+    <text x="258" y="272" fill="#787774">easily displaced</text>
+    <text x="498" y="254">示例 / 模板 / 默认参数</text>
+    <text x="498" y="272" fill="#787774">运行时可覆盖</text>
+
+    <!-- Row 6 -->
+    <rect x="0" y="290" width="720" height="52" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="0.5"/>
+    <text x="12" y="320" font-weight="600">使用说明</text>
+    <text x="258" y="312">how to use the frame</text>
+    <text x="498" y="312">usage instructions 段</text>
+
+    <!-- Row 7 -->
+    <rect x="0" y="348" width="720" height="52" rx="4" fill="#FAFAF8"/>
+    <text x="12" y="378" font-weight="600">异常处理</text>
+    <text x="258" y="370">what to do if</text>
+    <text x="258" y="388" fill="#787774">expectations are not confirmed</text>
+    <text x="498" y="370">pitfalls / error handling 段</text>
+
+    <!-- Row 8 -->
+    <rect x="0" y="406" width="720" height="52" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="0.5"/>
+    <text x="12" y="436" font-weight="600">组合调用</text>
+    <text x="258" y="428">frame-systems</text>
+    <text x="258" y="446" fill="#787774">linked collections</text>
+    <text x="498" y="428">Skills composable</text>
+    <text x="498" y="446" fill="#787774">可互相调用</text>
+
+    <!-- Row 9 -->
+    <rect x="0" y="464" width="720" height="52" rx="4" fill="#FAFAF8"/>
+    <text x="12" y="494" font-weight="600">按需加载</text>
+    <text x="258" y="486">information retrieval</text>
+    <text x="258" y="504" fill="#787774">network 触发切换</text>
+    <text x="498" y="486">Progressive disclosure</text>
+    <text x="498" y="504" fill="#787774">三级加载</text>
+  </g>
+
+  <!-- 底部判断 -->
+  <text x="400" y="598" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-style="italic">51 年、两个大陆、两代人，落到纸上是同一句话</text>
+</svg>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="400" y="44" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">守树策略：让 AI 在你专业的必经之路上撞上你</text>
+  <text x="400" y="70" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">不要用业务挑战专业，要用专业拥抱技术红利</text>
+
+  <!-- 左右对比 -->
+  <!-- 左：错误姿势 -->
+  <g>
+    <rect x="40" y="100" width="340" height="200" rx="10" fill="#FDF2F0" stroke="#EB5757" stroke-dasharray="4 3"/>
+    <text x="210" y="128" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#EB5757">追兔子的农夫（错）</text>
+
+    <!-- 图形：小人追多只兔子 -->
+    <g transform="translate(70,155)">
+      <circle cx="30" cy="30" r="18" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="2"/>
+      <text x="30" y="35" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">你</text>
+      <path d="M55,30 L90,30" stroke="#EB5757" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+      <circle cx="115" cy="15" r="8" fill="#EB5757" opacity="0.5"/>
+      <circle cx="140" cy="40" r="8" fill="#FFB020" opacity="0.5"/>
+      <circle cx="180" cy="10" r="8" fill="#9B51E0" opacity="0.5"/>
+      <circle cx="220" cy="45" r="8" fill="#2383E2" opacity="0.5"/>
+      <circle cx="250" cy="20" r="8" fill="#4DB6AC" opacity="0.5"/>
+    </g>
+
+    <text x="60" y="230" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">• 放下十年专业去学 Prompt 工程</text>
+    <text x="60" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">• 每周追一个新模型 / 框架</text>
+    <text x="60" y="274" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">• 一年后什么都没做成，专业也荒废</text>
+
+    <defs>
+      <marker id="arrR" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#EB5757"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- 右：正确姿势 -->
+  <g>
+    <rect x="420" y="100" width="340" height="200" rx="10" fill="#F0F7F5" stroke="#4DB6AC"/>
+    <text x="590" y="128" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#4DB6AC">守树的人（对）</text>
+
+    <!-- 图形：树 + 小人 + 兔子撞过来 -->
+    <g transform="translate(440,150)">
+      <!-- 树 -->
+      <rect x="95" y="45" width="14" height="40" fill="#8B6B3A"/>
+      <circle cx="102" cy="30" r="30" fill="#4DB6AC" opacity="0.7"/>
+      <circle cx="85" cy="42" r="18" fill="#4DB6AC" opacity="0.6"/>
+      <circle cx="120" cy="42" r="18" fill="#4DB6AC" opacity="0.6"/>
+      <!-- 人 -->
+      <circle cx="60" cy="65" r="12" fill="#2383E2" opacity="0.3" stroke="#2383E2" stroke-width="2"/>
+      <text x="60" y="69" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">你</text>
+      <!-- AI 兔子从右边撞过来 -->
+      <path d="M300,60 L170,60" stroke="#9B51E0" stroke-width="2" fill="none" marker-end="url(#arrL)"/>
+      <rect x="280" y="45" width="40" height="30" rx="8" fill="#9B51E0" opacity="0.85"/>
+      <text x="300" y="65" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="600" fill="#FFFFFF">AI</text>
+    </g>
+
+    <text x="440" y="230" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">• 医生守诊断，等 AI 帮你看片子</text>
+    <text x="440" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">• 老师守教学，等 AI 改作业</text>
+    <text x="440" y="274" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">• 创作者守内容，等 AI 帮你剪辑</text>
+
+    <defs>
+      <marker id="arrL" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+        <path d="M 0 0 L 10 5 L 0 10 z" fill="#9B51E0"/>
+      </marker>
+    </defs>
+  </g>
+
+  <!-- 中部：接入点矩阵 -->
+  <text x="400" y="340" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#37352F">专业 × AI ＝ 你的红利接入点</text>
+
+  <g>
+    <rect x="60" y="360" width="165" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="142" y="385" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2">医生 × AI</text>
+    <text x="142" y="410" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">影像诊断加速</text>
+    <text x="142" y="430" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">病历结构化</text>
+    <text x="142" y="450" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">个性化治疗方案</text>
+
+    <rect x="235" y="360" width="165" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="317" y="385" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2">老师 × AI</text>
+    <text x="317" y="410" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">自动批改作业</text>
+    <text x="317" y="430" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">学情画像</text>
+    <text x="317" y="450" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">个性化练习题</text>
+
+    <rect x="410" y="360" width="165" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="492" y="385" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2">创作者 × AI</text>
+    <text x="492" y="410" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">配图生成</text>
+    <text x="492" y="430" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">视频剪辑</text>
+    <text x="492" y="450" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">多语言分发</text>
+
+    <rect x="585" y="360" width="165" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="667" y="385" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2">产品人 × AI</text>
+    <text x="667" y="410" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">需求结构化</text>
+    <text x="667" y="430" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">用户洞察提炼</text>
+    <text x="667" y="450" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">原型 48 小时出</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <rect x="40" y="490" width="720" height="36" fill="#F7F7F5" rx="6"/>
+  <text x="400" y="513" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-style="italic" fill="#37352F">新技术真正改变世界的方式，从来不是推倒重来，而是以接口形式接入现有专业。</text>
+</svg>

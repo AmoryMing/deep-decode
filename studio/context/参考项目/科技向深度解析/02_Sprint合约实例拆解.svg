@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 580">
+  <rect width="800" height="580" fill="#FFF5E1"/>
+  <rect x="40" y="20" width="4" height="30" rx="2" fill="#C47B2B"/>
+  <text x="55" y="43" font-family="PingFang SC, Georgia, serif" font-size="20" fill="#2B1D0E" font-weight="bold">Sprint 合约实例：27 条验收标准长什么样</text>
+  <text x="55" y="65" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#8B7355">以游戏生成器 Sprint 3（关卡编辑器）为例——真实合约，每条都是可机器验证的 Yes/No</text>
+
+  <!-- How the contract is created -->
+  <g transform="translate(30, 88)">
+    <rect width="740" height="65" rx="10" fill="#FFF0E8" stroke="#C47B2B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#C47B2B" font-weight="bold">合约生成方式：生成器 + 评估器在实现前协商</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+    <text x="20" y="54" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">生成器先提议本 Sprint 要做什么 → 评估器提出具体验收条件 → 双方确认 → 锁定后才开始编码</text>
+  </g>
+
+  <!-- Contract example title -->
+  <text x="55" y="183" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#C47B2B" font-weight="bold">Sprint 3 合约节选（关卡编辑器功能）</text>
+
+  <!-- Contract items - left column -->
+  <g transform="translate(30, 196)">
+    <rect width="362" height="240" rx="10" fill="#FFF9EE" stroke="#C47B2B" stroke-width="1"/>
+
+    <!-- Functional tests -->
+    <rect x="0" y="0" width="362" height="28" rx="10" fill="#C47B2B" opacity="0.12"/>
+    <text x="181" y="19" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#C47B2B" text-anchor="middle" font-weight="bold">功能性验收（共 12 条）</text>
+
+    <circle cx="18" cy="46" r="3" fill="#448844"/>
+    <text x="30" y="50" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">打开关卡编辑器，工具栏可见</text>
+
+    <circle cx="18" cy="66" r="3" fill="#448844"/>
+    <text x="30" y="70" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">点击实体类型 → 画布上出现对应图标</text>
+
+    <circle cx="18" cy="86" r="3" fill="#448844"/>
+    <text x="30" y="90" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">框选多个实体 → 可整体拖拽移动</text>
+
+    <circle cx="18" cy="106" r="3" fill="#448844"/>
+    <text x="30" y="110" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">Delete 键删除选中实体</text>
+
+    <circle cx="18" cy="126" r="3" fill="#448844"/>
+    <text x="30" y="130" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">Ctrl+Z 撤销最后一步操作</text>
+
+    <circle cx="18" cy="146" r="3" fill="#448844"/>
+    <text x="30" y="150" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">保存关卡 → 刷新后数据持久化</text>
+
+    <circle cx="18" cy="166" r="3" fill="#448844"/>
+    <text x="30" y="170" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">网格吸附开关可切换</text>
+
+    <circle cx="18" cy="186" r="3" fill="#C47B2B"/>
+    <text x="30" y="190" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#8B7355">...（共 12 条，此处节选 7 条）</text>
+
+    <rect x="10" y="210" width="340" height="22" rx="4" fill="#448844" opacity="0.08"/>
+    <text x="181" y="225" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#448844" text-anchor="middle">Playwright 逐条执行，全部 Pass 才算 Sprint 通过</text>
+  </g>
+
+  <!-- Contract items - right column -->
+  <g transform="translate(407" y="196">
+  </g>
+  <g transform="translate(407, 196)">
+    <rect width="363" height="240" rx="10" fill="#FFF9EE" stroke="#A0522D" stroke-width="1"/>
+
+    <!-- Bug detection tests -->
+    <rect x="0" y="0" width="363" height="28" rx="10" fill="#A0522D" opacity="0.12"/>
+    <text x="181" y="19" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#A0522D" text-anchor="middle" font-weight="bold">边界条件与已知 Bug 检测（共 15 条）</text>
+
+    <circle cx="18" cy="46" r="3" fill="#CC4444"/>
+    <text x="30" y="50" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">空画布时 Delete 键不报错</text>
+
+    <circle cx="18" cy="66" r="3" fill="#CC4444"/>
+    <text x="30" y="70" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">实体数量 > 100 时性能不崩溃</text>
+
+    <circle cx="18" cy="86" r="3" fill="#CC4444"/>
+    <text x="30" y="90" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">同时按住 Shift 点选不乱选</text>
+
+    <!-- Specific bug from the article -->
+    <rect x="10" y="105" width="343" height="65" rx="6" fill="#FFF0F0" stroke="#CC4444" stroke-width="1"/>
+    <text x="20" y="122" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444" font-weight="bold">真实 Bug 案例（评估器发现）：</text>
+    <text x="20" y="140" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">PUT /frames/reorder 路由定义在</text>
+    <text x="20" y="155" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#5D4E37">/{frame_id} 路由之后，FastAPI 把</text>
+    <text x="20" y="168" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#CC4444">"reorder" 当成整数 frame_id 来匹配，导致 500 错误</text>
+
+    <circle cx="18" cy="186" r="3" fill="#C47B2B"/>
+    <text x="30" y="190" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#8B7355">...（共 15 条，此处节选）</text>
+
+    <rect x="10" y="210" width="340" height="22" rx="4" fill="#CC4444" opacity="0.08"/>
+    <text x="181" y="225" font-family="PingFang SC, Georgia, serif" font-size="10" fill="#CC4444" text-anchor="middle">评估器在代码中精确定位 bug 位置：LevelEditor.tsx:892</text>
+  </g>
+
+  <!-- Key insight about contract -->
+  <g transform="translate(30, 456)">
+    <rect width="740" height="98" rx="10" fill="#FFF9EE" stroke="#C47B2B" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#C47B2B" font-weight="bold">为什么合约要精确到代码路径？</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+    <circle cx="30" cy="54" r="3" fill="#C47B2B"/>
+    <text x="42" y="58" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">模糊标准（"删除键要好用"）→ 评估器容易自我说服通过；精确标准（"LevelEditor.tsx:892 的 handler 同时检查两个条件"）→ 不可抵赖</text>
+    <circle cx="30" cy="78" r="3" fill="#C47B2B"/>
+    <text x="42" y="82" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">合约在 Sprint 开始前锁定，防止生成器在实现时"重新解释"验收标准来规避困难功能</text>
+  </g>
+</svg>

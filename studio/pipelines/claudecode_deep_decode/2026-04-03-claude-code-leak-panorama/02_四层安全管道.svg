@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">四层安全管道：由快到慢，由简到复杂</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">每条 bash 命令执行前过四道门 / 信任不是开关，是阶梯</text>
+
+  <!-- Input -->
+  <rect x="300" y="85" width="200" height="36" rx="18" fill="#37352F"/>
+  <text x="400" y="108" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF">bash 命令输入</text>
+
+  <!-- Arrow -->
+  <line x1="400" y1="121" x2="400" y2="145" stroke="#E3E2E0" stroke-width="2"/>
+  <polygon points="394,142 406,142 400,150" fill="#E3E2E0"/>
+
+  <!-- Gate 1 -->
+  <rect x="120" y="150" width="560" height="56" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="2"/>
+  <rect x="130" y="156" width="28" height="28" rx="14" fill="#4DB6AC"/>
+  <text x="144" y="175" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">1</text>
+  <text x="172" y="174" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">规则匹配</text>
+  <text x="172" y="194" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">allow/deny 规则，纯字符串匹配</text>
+  <text x="620" y="180" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#4DB6AC">亚毫秒</text>
+
+  <line x1="400" y1="206" x2="400" y2="225" stroke="#E3E2E0" stroke-width="2"/>
+  <polygon points="394,222 406,222 400,230" fill="#E3E2E0"/>
+
+  <!-- Gate 2 -->
+  <rect x="120" y="230" width="560" height="56" rx="8" fill="#F7F7F5" stroke="#2383E2" stroke-width="2"/>
+  <rect x="130" y="236" width="28" height="28" rx="14" fill="#2383E2"/>
+  <text x="144" y="255" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">2</text>
+  <text x="172" y="254" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">Bash 分类器</text>
+  <text x="172" y="274" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">模式匹配 22+ 种危险操作 (force push / rm -rf / 生产部署)</text>
+  <text x="620" y="260" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#2383E2">毫秒级</text>
+
+  <line x1="400" y1="286" x2="400" y2="305" stroke="#E3E2E0" stroke-width="2"/>
+  <polygon points="394,302 406,302 400,310" fill="#E3E2E0"/>
+
+  <!-- Gate 3 -->
+  <rect x="120" y="310" width="560" height="56" rx="8" fill="#F7F7F5" stroke="#FFB020" stroke-width="2"/>
+  <rect x="130" y="316" width="28" height="28" rx="14" fill="#FFB020"/>
+  <text x="144" y="335" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">3</text>
+  <text x="172" y="334" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">YOLO 分类器</text>
+  <text x="172" y="354" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">基于整段对话上下文判断，捕捉前两层遗漏的场景</text>
+  <text x="620" y="340" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#FFB020">秒级</text>
+
+  <line x1="400" y1="366" x2="400" y2="385" stroke="#E3E2E0" stroke-width="2"/>
+  <polygon points="394,382 406,382 400,390" fill="#E3E2E0"/>
+
+  <!-- Gate 4 -->
+  <rect x="120" y="390" width="560" height="56" rx="8" fill="#FFF5F5" stroke="#EB5757" stroke-width="2"/>
+  <rect x="130" y="396" width="28" height="28" rx="14" fill="#EB5757"/>
+  <text x="144" y="415" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">4</text>
+  <text x="172" y="414" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">独立 Sonnet API</text>
+  <text x="172" y="434" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Temperature=0 确定性输出，最后一道防线</text>
+  <text x="620" y="420" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#EB5757">数秒</text>
+
+  <!-- Bottom -->
+  <text x="400" y="470" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">能在前面拦住的就不走后面 -- 快路径处理常见 case，慢路径处理边界 case</text>
+</svg>

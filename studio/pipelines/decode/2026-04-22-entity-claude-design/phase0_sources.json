@@ -1,0 +1,73 @@
+{
+  "entity": "Claude Design",
+  "entity_cn": "Claude Design（克劳德设计）",
+  "entity_type": "product",
+  "parent_company": "Anthropic (Anthropic Labs division)",
+  "launch_date": "2026-04-17",
+  "decoded_date": "2026-04-22",
+  "slug": "2026-04-22-entity-claude-design",
+  "official_url": "https://claude.ai/design",
+  "announcement_url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+  "powered_by": "Claude Opus 4.7 (最强视觉模型，同日发布)",
+  "access": "research preview, Pro/Max/Team/Enterprise 订阅自带，不额外收费，超额按 API 计费",
+  "sources": [
+    {"tier": "S-official", "url": "https://www.anthropic.com/news/claude-design-anthropic-labs", "note": "Anthropic 官方发布稿"},
+    {"tier": "S-official", "url": "https://www.anthropic.com/news/claude-opus-4-7", "note": "Claude Opus 4.7 发布稿，同日 drop"},
+    {"tier": "S-official", "url": "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation", "note": "Series G 融资 $30B @ $380B"},
+    {"tier": "A-media", "url": "https://venturebeat.com/technology/anthropic-just-launched-claude-design-an-ai-tool-that-turns-prompts-into-prototypes-and-challenges-figma", "note": "VentureBeat 深度报道，含 $30B ARR 数据 + IPO 时间线"},
+    {"tier": "A-media", "url": "https://techcrunch.com/2026/04/17/anthropic-launches-claude-design-a-new-product-for-creating-quick-visuals/", "note": "TechCrunch，Anthropic 官方口径：'补充不是替代 Canva'"},
+    {"tier": "A-media", "url": "https://thenewstack.io/anthropic-claude-design-launch/", "note": "The New Stack 亲测：建 1 个 design system + 1 个原型 = 50%+ weekly quota"},
+    {"tier": "A-media", "url": "https://www.adweek.com/media/anthropic-debuts-claude-design-for-building-marketing-assets-decks-and-uis/", "note": "AdWeek，含 Datadog PM Aneesh Kethini 背书：'一周 brief-mockup-review 变一次对话'"},
+    {"tier": "A-media", "url": "https://www.pymnts.com/artificial-intelligence-2/2026/anthropics-new-design-tool-rivals-adobe-and-figma/", "note": "PYMNTS，Adobe FY2025 $23.77B 收入对比 / Figma 80-90% 市占"},
+    {"tier": "B-analysis", "url": "https://aiinsightsnews.net/anthropic-claude-design-vs-figma-ai-design-disruption/", "note": "关键剧情：Mike Krieger 2026-04-14 辞 Figma 董事会，3 天后 Design 发布；Figma 股价跌 5%，Adobe 同跌"},
+    {"tier": "B-analysis", "url": "https://linas.substack.com/p/claude-design-founders-playbook", "note": "Linas Beliūnas：先行者 6-12 月窗口判断"},
+    {"tier": "B-analysis", "url": "https://marketingagent.blog/2026/04/17/claude-design-how-anthropics-ai-turns-prompts-into-prototypes/", "note": "Figma Make vs Claude Design 对比分析"},
+    {"tier": "C-user", "url": "https://news.ycombinator.com/item?id=47818700", "note": "HN 'Thoughts and feelings' 高讨论贴；限额是普遍痛点"},
+    {"tier": "C-user", "url": "https://www.reddit.com/r/claude/comments/1so49rs/", "note": "r/claude：Claude Code handoff 是 solo devs game-changer"},
+    {"tier": "C-user", "url": "https://www.reddit.com/r/ClaudeAI/comments/1so3k1y/", "note": "ClaudeOfficial 官方发布帖 + 社区讨论"},
+    {"tier": "C-user", "url": "https://www.reddit.com/r/ClaudeAI/comments/1sh2scb/", "note": "Claude Enterprise 定价讨论 - 800 用户年花 $1.1M 的案例"},
+    {"tier": "B-context", "url": "https://creatoreconomy.so/p/figma-ceo-on-how-anyone-can-get-good-at-design-in-ai-dylan-field", "note": "Figma CEO Dylan Field 2026-04-12 访谈：AI 时代设计哲学；2/3 Figma 用户非设计师"},
+    {"tier": "B-context", "url": "https://www.anthropic.com/news/claude-code", "note": "Claude Code 背景 - $2.5B ARR、4% GitHub commits、Anthropic 的'bundle → monetize' 打法案例"},
+    {"tier": "A-competitor", "url": "https://www.figma.com/resource-library/ai-design-tools/", "note": "Figma 自己列的 AI 设计工具清单（显然不含 Claude Design）"},
+    {"tier": "A-competitor", "url": "https://flowstep.ai/blog/best-ai-ui-design-tools/", "note": "2026 AI UI 设计工具横评 - Figma Make / v0 / Stitch / Uizard 定价对比"},
+    {"tier": "A-competitor", "url": "https://www.idlen.io/blog/best-ai-tools-ui-ux-design-2026/", "note": "v0 / Galileo / Figma AI / Uizard / Framer 6 大工具深度对比"}
+  ],
+  "timeline_raw": [
+    {"date": "2024-11", "event": "Series D: $4B @ $40B valuation"},
+    {"date": "2025-03", "event": "Series E: $3.5B @ $61.5B"},
+    {"date": "2025-05", "event": "Claude Code GA"},
+    {"date": "2025-09", "event": "Series F: $13B @ $183B"},
+    {"date": "2025年末", "event": "~$9B ARR"},
+    {"date": "2026-01", "event": "单月发布 30+ 产品/功能，含 Claude Cowork"},
+    {"date": "2026-02", "event": "Series G: $30B @ $380B post-money；$14B ARR；Claude Code $2.5B ARR（自年初翻倍）"},
+    {"date": "2026-03", "event": "$20B ARR"},
+    {"date": "2026-04-12", "event": "Figma CEO Dylan Field 访谈：'taste, craft, POV 是 AI 不能替代的 3 件事'"},
+    {"date": "2026-04-14", "event": "Anthropic CPO Mike Krieger（前 Instagram 联合创始人）辞 Figma 董事会"},
+    {"date": "2026-04-17", "event": "🚀 **Claude Opus 4.7 + Claude Design 同日发布**；Opus 4.7 定价同 4.6（$5/$25 per MTok）；Claude Code 加 /ultrareview 命令 + auto mode 扩至 Max 用户"},
+    {"date": "2026-04-17", "event": "Figma 股价跌 5%（12 月内累跌近 50%），Adobe 同跌"},
+    {"date": "2026-04 起", "event": "$30B ARR 估算；可能 2026-10 IPO（目标 $60B 融资）"}
+  ],
+  "competitors_candidates": [
+    {"name": "Figma Make", "launched": "2025-05（GA 2025-07）", "parent": "Figma", "positioning": "Figma 原生 AI 工具，深度画布集成", "tier": "A-主要对手"},
+    {"name": "Canva Magic Studio", "launched": "2024 起陆续", "parent": "Canva", "positioning": "大众市场品牌可视化 AI，模板驱动", "tier": "A-主要对手"},
+    {"name": "Adobe Firefly + GenStudio", "launched": "2023 起", "parent": "Adobe", "positioning": "企业合规 + 商业安全素材 + 嵌入 PS/AI/PR", "tier": "A-主要对手"},
+    {"name": "v0 by Vercel", "launched": "2023-10", "parent": "Vercel", "positioning": "开发者导向，输出 React/shadcn 代码", "tier": "B-相邻赛道"},
+    {"name": "Galileo AI (Google Stitch)", "launched": "2023-06", "parent": "Google（收购）", "positioning": "text-to-UI 高保真 + 免费 + Figma 导出", "tier": "B-相邻赛道"},
+    {"name": "Uizard", "launched": "2018", "parent": "独立（2025 被 Miro 收购）", "positioning": "sketch-to-UI，低保真原型，非设计师友好", "tier": "C-次要"},
+    {"name": "Framer AI", "launched": "2023", "parent": "Framer", "positioning": "AI 驱动的营销网站", "tier": "C-次要"}
+  ],
+  "key_narrative_hooks": [
+    "决定性时刻：Mike Krieger 2026-04-14 辞 Figma 董事会 → 3 天后 Claude Design 发布。SEC filing 写 'no disagreement, cordial'，市场 3 天内连点成线",
+    "反直觉数据：Anthropic 2025 底 $9B ARR → 2026-03 $20B → 2026-04 $30B（15 个月 1B→30B）；可能是史上增长最快的软件公司",
+    "被遗忘的预言：VentureBeat 说 Anthropic 'visibly 从模型供应商扩张到全栈产品公司，要从 rough idea 到 shipped product 全拿下'",
+    "用户口碑分化：solo devs 爱 handoff 到 Claude Code；企业付费者骂 token 配额太紧（一个 design system + 一个原型吃掉 50%+ weekly quota）",
+    "讽刺细节：Claude Design 导出选项——PDF / URL / PPTX / Canva / Claude Code，唯独**没有 Figma**；Canva CEO 签了 native 集成让输出立即可编辑"
+  ],
+  "screenshots": [
+    "screenshots/anthropic-blog-header.png (2026-04-22 抓取，官方发布稿 full page)"
+  ],
+  "vault_related": [
+    "vault 内无直接 Claude Design 拆解历史（grep 结果：企图-design-validation 是用户自己另一个项目）",
+    "相关可交叉引用：Claude Opus 4.7 发布 / Claude Code $2.5B ARR / Anthropic 'bundle → monetize' 打法"
+  ]
+}

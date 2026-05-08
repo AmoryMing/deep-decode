@@ -1,0 +1,48 @@
+{
+  "signals": [
+    {
+      "source": "LinkedIn / Reuters / Business Insider",
+      "type": "corroborating",
+      "summary": "Oracle 2026年3月裁员30,000人(18%员工)，同季度净利润增95%，CEO原话'Smaller teams. AI tools. More output.' 同期40,000+科技岗位被裁。Meta/Amazon/Dell/Citi同步裁员。",
+      "relevance": "直接验证Anttila的'大脱钩'论点——企业用AI替代人力已是现实，不是预测"
+    },
+    {
+      "source": "BCG 2026 Report: AI Will Reshape More Jobs Than It Replaces",
+      "url": "https://www.bcg.com/publications/2026/ai-will-reshape-more-jobs-than-it-replaces",
+      "type": "nuanced_counterpoint",
+      "summary": "BCG认为AI更多是重塑岗位而非消灭岗位。不同角色需要不同自动化策略——有时成本主导，有时速度和质量主导。",
+      "relevance": "为Anttila的'$10K替代知识工人'提供更审慎的商业视角——替代不是唯一路径"
+    },
+    {
+      "source": "WEF + McKinsey + Goldman Sachs",
+      "type": "corroborating_with_nuance",
+      "summary": "WEF: 2030年9200万岗位被替代但新增7800万。McKinsey: 大企业更倾向减人而非重新配置。AIMultiple: 90%+白领岗位到2035年可被自动化。",
+      "relevance": "Anttila的时间线与主流预测一致，但'净效应'仍有争议"
+    },
+    {
+      "source": "Michael Levin, Tufts University",
+      "url": "https://drmichaellevin.org/presentations/",
+      "type": "scientific_support",
+      "summary": "440+同行评审论文，Wyss Institute副研究员。实验证明细胞/黏菌/xenobots在没有神经元的情况下展示问题解决行为。2026年TSC大会演讲者。关键概念：diverse intelligence, basal cognition, bioelectric networks。",
+      "relevance": "为Anttila的分形心智论提供最直接的实验证据——认知不需要大脑"
+    },
+    {
+      "source": "biocomputer.com 分析文章",
+      "url": "https://biocomputer.com/blog/fractal-minds-tedx-judah-anttila-biocomputing-2045/",
+      "type": "extension",
+      "summary": "Anttila的分形心智论缺失了基底讨论。Cortical Labs CL1生物计算机、FinalSpark云端神经元平台已在运行。硅基AI耗能巨大，湿件在能效上优于硅基数个数量级。",
+      "relevance": "补全Anttila演讲的最大盲区——意识迁移到什么基底上？答案可能不是硅而是生物计算"
+    },
+    {
+      "source": "Ray Kurzweil 2026 interviews (Moonshots with Diamandis)",
+      "type": "corroborating",
+      "summary": "AGI 2029时间线不变，LEV 2032——医学进步每年延长寿命超过1年。AGI将药物研发变成'软件问题'。",
+      "relevance": "Anttila直接引用Kurzweil，后者的时间线持续被验证而非推迟"
+    }
+  ],
+  "vault_cross_references": [
+    "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-12-mythos-reckless-helpfulness/ — Mythos系列拆解，AI安全/对齐主题，可交叉引用'能力越强边界越重要'"
+  ],
+  "signal_count": 6,
+  "sufficient": true
+}

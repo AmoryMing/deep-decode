@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">他说了什么 vs 没说什么</text>
+  <text x="400" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle">指数主义的系统性盲点 -- 技术预测强，社会预测弱</text>
+
+  <!-- 2-column layout -->
+  <!-- Left: Said -->
+  <rect x="40" y="85" width="350" height="380" rx="10" fill="#F0FFF0" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="215" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#4DB6AC" text-anchor="middle">Anttila 明确论述的</text>
+
+  <g transform="translate(60,140)">
+    <circle cx="0" cy="8" r="6" fill="#4DB6AC"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">算力指数增长</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">摩尔定律广义延续 20 年</text>
+  </g>
+  <g transform="translate(60,190)">
+    <circle cx="0" cy="8" r="6" fill="#4DB6AC"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">$10K 替代知识工人</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">AI Agent 租用经济</text>
+  </g>
+  <g transform="translate(60,240)">
+    <circle cx="0" cy="8" r="6" fill="#4DB6AC"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">长寿逃逸速度</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">富人 2032, 大众 2040</text>
+  </g>
+  <g transform="translate(60,290)">
+    <circle cx="0" cy="8" r="6" fill="#4DB6AC"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">分形心智</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">意识 = 模式，可迁移基底</text>
+  </g>
+  <g transform="translate(60,340)">
+    <circle cx="0" cy="8" r="6" fill="#4DB6AC"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">情绪三重奏</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">焦虑 + 愤怒 + 惊叹</text>
+  </g>
+
+  <!-- Right: Unsaid -->
+  <rect x="410" y="85" width="350" height="380" rx="10" fill="#FFF0F0" stroke="#EB5757" stroke-width="1"/>
+  <text x="585" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757" text-anchor="middle">Anttila 没有讨论的</text>
+
+  <g transform="translate(430,140)">
+    <circle cx="0" cy="8" r="6" fill="#EB5757"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">能源瓶颈</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">AI 训练耗电 3 年增 10 倍</text>
+    <text x="15" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">指数算力需要指数能源</text>
+  </g>
+  <g transform="translate(430,200)">
+    <circle cx="0" cy="8" r="6" fill="#EB5757"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">治理真空</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">谁决定替代谁？被替代者怎么办？</text>
+    <text x="15" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">分形心智的产权归谁？</text>
+  </g>
+  <g transform="translate(430,266)">
+    <circle cx="0" cy="8" r="6" fill="#EB5757"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">非西方视角</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">全部引用来自硅谷叙事</text>
+    <text x="15" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">班加罗尔: 生存威胁 vs 未来学趣谈</text>
+  </g>
+  <g transform="translate(430,332)">
+    <circle cx="0" cy="8" r="6" fill="#EB5757"/>
+    <text x="15" y="12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">应对路径</text>
+    <text x="15" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">点名了情绪，但没给解法</text>
+    <text x="15" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">"准备好" = ? 具体做什么？</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <text x="400" y="487" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle">指数思维预测技术能力没问题，但用它预测社会后果——维度不对</text>
+</svg>

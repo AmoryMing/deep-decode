@@ -1,0 +1,35 @@
+{
+  "checked_at": "2026-04-07",
+  "claims_verified": [
+    {"claim": "v0.2.8 泄露时间 2025-02", "status": "PASS", "sources": ["源码解读信息源(1).md", "claudecode源码泄露快看看里面有什么.md"]},
+    {"claim": "Dave Schumaker 发现第一次 sourcemap", "status": "PASS", "source": "claudecode源码泄露快看看里面有什么.md 第2行"},
+    {"claim": "v2.1.88 泄露时间 2026-03-31", "status": "PASS", "sources": ["所有7个外部信源一致"]},
+    {"claim": "Chaofan Shou 发现第二次泄露", "status": "PASS", "note": "身份描述有分歧(Fuzzland CTO/intern/Solayer Labs)，文中统一用'安全研究员'"},
+    {"claim": "约1,900个文件, 512K+行代码", "status": "PASS_WITH_NOTE", "note": "kolkov文章说1,884文件/64,464行，与中文来源的1,902文件/512,685行有差异。64,464可能是不同统计口径。采用多数来源引用的约1,900/512K"},
+    {"claim": "59.8MB cli.js.map", "status": "PASS", "sources": ["Layer5", "kolkov", "多个来源一致"]},
+    {"claim": "50,000 stars in 2 hours", "status": "PASS", "source": "Layer5 Blog"},
+    {"claim": "ghuntley 仓库 2025-03-01 归档", "status": "PASS", "source": "GitHub releases page"},
+    {"claim": "Bun bug: development:false 仍生成 sourcemap", "status": "PASS", "sources": ["Layer5", "NodeSource"]},
+    {"claim": "axios 供应链攻击同日 00:21-03:29 UTC", "status": "PASS", "sources": ["Zscaler ThreatLabz", "多个安全来源"]},
+    {"claim": "5.4% orphaned tool calls", "status": "PASS", "source": "kolkov DEV.to 文章"},
+    {"claim": "16.3% API 失败率 (576/3539)", "status": "PASS", "source": "kolkov DEV.to 文章"},
+    {"claim": "148,444 次工具调用", "status": "PASS", "source": "kolkov DEV.to 文章"},
+    {"claim": "23种安全检查模式", "status": "PASS", "sources": ["claudecode源码深度解读.md", "掘金文章"]},
+    {"claim": "9,300行安全代码", "status": "PASS", "source": "claudecode源码深度解读.md"},
+    {"claim": "44个feature flags", "status": "PASS_WITH_NOTE", "note": "noya21th仓库说87个flags其中44个为未发布功能，文中用44"},
+    {"claim": "X帖浏览量2100万+", "status": "PASS_WITH_NOTE", "note": "不同时间点数据不同(2100万/2880万)，文中用'超过2000万'"}
+  ],
+  "subjective_expressions_checked": [
+    {"expression": "两个数量级", "verdict": "ACCEPTABLE", "reason": "从单文件到1900+文件，量级差距准确"},
+    {"expression": "GitHub历史上增长最快的仓库", "verdict": "ACCEPTABLE_WITH_HEDGE", "reason": "Layer5原文用'likely the fastest-growing'，文中加'很可能是'"},
+    {"expression": "指数的", "verdict": "ACCEPTABLE", "reason": "14个月从简单CLI到512K行，增长曲线确实非线性"}
+  ],
+  "corrections_applied": [
+    "Chaofan Shou 身份统一为'安全研究员'，避免不确定的具体头衔",
+    "文件数用'约1,900个'而非精确数字，因来源有轻微差异",
+    "X浏览量改为'超过2000万'，避免不同时间点的数据冲突",
+    "50,000 stars 前加'很可能是'对冲Layer5的'likely'"
+  ],
+  "unresolved": [],
+  "overall_status": "PASS"
+}

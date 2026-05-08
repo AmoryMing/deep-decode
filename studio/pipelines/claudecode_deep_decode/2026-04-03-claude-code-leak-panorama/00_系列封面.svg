@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1131" width="800" height="1131">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#16213E"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1131" fill="url(#bg)"/>
+
+  <!-- 装饰线条 -->
+  <line x1="80" y1="200" x2="720" y2="200" stroke="#2383E2" stroke-width="1" opacity="0.3"/>
+  <line x1="80" y1="760" x2="720" y2="760" stroke="#2383E2" stroke-width="1" opacity="0.3"/>
+
+  <!-- 系列标签 -->
+  <rect x="80" y="160" width="200" height="28" rx="4" fill="#2383E2" opacity="0.9"/>
+  <text x="180" y="179" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">Claude Code 源码拆解系列</text>
+
+  <!-- 期数 -->
+  <text x="720" y="179" font-family="Inter, PingFang SC, sans-serif" font-size="14" fill="#6B7280" text-anchor="end">01 / 34</text>
+
+  <!-- 主标题 -->
+  <text x="400" y="380" font-family="PingFang SC, Inter, sans-serif" font-size="48" fill="#FFFFFF" text-anchor="middle" font-weight="700">1902个文件里</text>
+  <text x="400" y="450" font-family="PingFang SC, Inter, sans-serif" font-size="48" fill="#FFFFFF" text-anchor="middle" font-weight="700">藏了什么</text>
+
+  <!-- 副标题 -->
+  <text x="400" y="520" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#9CA3AF" text-anchor="middle">Claude Code 源码泄露全景</text>
+
+  <!-- 核心数据 -->
+  <g transform="translate(120, 580)">
+    <rect width="160" height="80" rx="8" fill="#1E293B" stroke="#2383E2" stroke-width="1" opacity="0.8"/>
+    <text x="80" y="35" font-family="Inter, PingFang SC, sans-serif" font-size="28" fill="#2383E2" text-anchor="middle" font-weight="700">59.8 MB</text>
+    <text x="80" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">Source Map</text>
+  </g>
+  <g transform="translate(320, 580)">
+    <rect width="160" height="80" rx="8" fill="#1E293B" stroke="#EB5757" stroke-width="1" opacity="0.8"/>
+    <text x="80" y="35" font-family="Inter, PingFang SC, sans-serif" font-size="28" fill="#EB5757" text-anchor="middle" font-weight="700">512K</text>
+    <text x="80" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">行 TypeScript</text>
+  </g>
+  <g transform="translate(520, 580)">
+    <rect width="160" height="80" rx="8" fill="#1E293B" stroke="#4DB6AC" stroke-width="1" opacity="0.8"/>
+    <text x="80" y="35" font-family="Inter, PingFang SC, sans-serif" font-size="28" fill="#4DB6AC" text-anchor="middle" font-weight="700">1,902</text>
+    <text x="80" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#6B7280" text-anchor="middle">个源码文件</text>
+  </g>
+
+  <!-- 关键词标签 -->
+  <g transform="translate(130, 710)">
+    <rect width="100" height="26" rx="13" fill="none" stroke="#4DB6AC" stroke-width="1" opacity="0.6"/>
+    <text x="50" y="17" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" text-anchor="middle">六层架构</text>
+  </g>
+  <g transform="translate(250, 710)">
+    <rect width="100" height="26" rx="13" fill="none" stroke="#FFB020" stroke-width="1" opacity="0.6"/>
+    <text x="50" y="17" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFB020" text-anchor="middle">双AI安全</text>
+  </g>
+  <g transform="translate(370, 710)">
+    <rect width="100" height="26" rx="13" fill="none" stroke="#EB5757" stroke-width="1" opacity="0.6"/>
+    <text x="50" y="17" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">隐藏功能</text>
+  </g>
+  <g transform="translate(490, 710)">
+    <rect width="100" height="26" rx="13" fill="none" stroke="#2383E2" stroke-width="1" opacity="0.6"/>
+    <text x="50" y="17" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" text-anchor="middle">护城河评估</text>
+  </g>
+
+  <!-- 底部信息 -->
+  <text x="400" y="820" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4B5563" text-anchor="middle">AI Force 前沿探索</text>
+  <text x="400" y="845" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#374151" text-anchor="middle">2026-04-06</text>
+
+  <!-- 底部装饰 -->
+  <rect x="350" y="870" width="100" height="2" rx="1" fill="#2383E2" opacity="0.4"/>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 570">
+  <rect width="800" height="570" fill="#FFF5E1"/>
+  <rect x="40" y="20" width="4" height="30" rx="2" fill="#C47B2B"/>
+  <text x="55" y="43" font-family="PingFang SC, Georgia, serif" font-size="20" fill="#2B1D0E" font-weight="bold">QA 调优踩坑：Agent 如何"说服自己通过"</text>
+  <text x="55" y="65" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#8B7355">初始评估器表现很差——它会发现问题，然后自己把自己说服，最终还是批准</text>
+
+  <!-- Problem: self-approval behavior -->
+  <g transform="translate(30, 90)">
+    <rect width="740" height="120" rx="10" fill="#FFF0F0" stroke="#CC6666" stroke-width="1.5"/>
+    <rect width="740" height="32" rx="10" fill="#CC4444" opacity="0.12"/>
+    <text x="20" y="22" font-family="PingFang SC, Georgia, serif" font-size="14" fill="#CC4444" font-weight="bold">初始症状：评估器的"自我说服"模式</text>
+    <line x1="20" y1="38" x2="720" y2="38" stroke="#F0C8C8" stroke-width="0.5"/>
+
+    <!-- Simulated evaluator inner monologue -->
+    <rect x="20" y="46" width="700" height="62" rx="6" fill="#FFF5F5"/>
+    <text x="30" y="64" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444" font-weight="bold">评估器内部推理（典型失败模式）：</text>
+    <text x="30" y="80" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">"拖拽功能有时会在 Safari 上失效……但这可能只是浏览器兼容性问题，不是核心 bug……而且整体功能看起来还是可用的……</text>
+    <text x="30" y="97" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444">→ 批准通过" ← 原文描述：识别出合理问题后，说服自己问题不严重，最终批准</text>
+  </g>
+
+  <!-- Two more failure modes -->
+  <g transform="translate(30, 228)">
+    <rect width="358" height="120" rx="10" fill="#FFF0F0" stroke="#CC6666" stroke-width="1"/>
+    <rect width="358" height="28" rx="10" fill="#CC4444" opacity="0.1"/>
+    <text x="179" y="19" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#CC4444" text-anchor="middle" font-weight="bold">失败模式 2：浅尝辄止的测试</text>
+    <text x="15" y="50" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">只测"主路径"，不测边界条件：</text>
+    <text x="15" y="68" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444">× 测了"创建任务成功"</text>
+    <text x="15" y="86" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">✗ 没测"任务名称为空时是否报错"</text>
+    <text x="15" y="104" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">✗ 没测"同时创建 50 个任务时性能"</text>
+  </g>
+
+  <g transform="translate(412, 228)">
+    <rect width="358" height="120" rx="10" fill="#FFF0F0" stroke="#CC6666" stroke-width="1"/>
+    <rect width="358" height="28" rx="10" fill="#CC4444" opacity="0.1"/>
+    <text x="179" y="19" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#CC4444" text-anchor="middle" font-weight="bold">失败模式 3：评估标准模糊</text>
+    <text x="15" y="50" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">原始提示词中标准不够具体：</text>
+    <text x="15" y="68" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#CC4444">"确保 UI 看起来不错" →</text>
+    <text x="15" y="86" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">评估器主观认为"还行"就过了</text>
+    <text x="15" y="104" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">无法形成一致的评判标准</text>
+  </g>
+
+  <!-- Solution: iterative prompt refinement -->
+  <g transform="translate(30, 368)">
+    <rect width="740" height="55" rx="10" fill="#F0FFF0" stroke="#66AA66" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="14" fill="#448844" font-weight="bold">解法：人工读日志 → 找分歧点 → 更新 QA 提示词</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#C8E6C8" stroke-width="0.5"/>
+    <text x="20" y="50" font-family="PingFang SC, Georgia, serif" font-size="12" fill="#5D4E37">逐轮阅读评估器的推理日志，找出"它的判断和我的偏好有出入的地方"，针对性更新提示词 —— 迭代多轮直到对齐</text>
+  </g>
+
+  <!-- What the refined prompt enforces -->
+  <g transform="translate(30, 440)">
+    <rect width="740" height="108" rx="10" fill="#FFF9EE" stroke="#448844" stroke-width="1.5"/>
+    <text x="20" y="24" font-family="PingFang SC, Georgia, serif" font-size="13" fill="#448844" font-weight="bold">调优后的 QA 提示词强制要求</text>
+    <line x1="20" y1="34" x2="720" y2="34" stroke="#E8D5B5" stroke-width="0.5"/>
+
+    <circle cx="30" cy="52" r="3" fill="#448844"/>
+    <text x="42" y="56" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">每个验收标准必须单独判定，不允许"综合考虑后通过"</text>
+
+    <circle cx="30" cy="72" r="3" fill="#448844"/>
+    <text x="42" y="76" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">发现问题后必须继续寻找更多问题，不允许在找到第一个问题后就停止</text>
+
+    <circle cx="30" cy="92" r="3" fill="#448844"/>
+    <text x="42" y="96" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">如发现边界条件 bug，必须给出精确的文件路径和行号（如 LevelEditor.tsx:892）</text>
+
+    <circle cx="380" cy="52" r="3" fill="#448844"/>
+    <text x="392" y="56" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">拒绝使用"基本可用""大体正常"等模糊表述</text>
+
+    <circle cx="380" cy="72" r="3" fill="#448844"/>
+    <text x="392" y="76" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">不通过的标准必须列出复现步骤，不能仅说"有问题"</text>
+
+    <circle cx="380" cy="92" r="3" fill="#448844"/>
+    <text x="392" y="96" font-family="PingFang SC, Georgia, serif" font-size="11" fill="#5D4E37">最终结论只有两种：Pass（全部通过）或 Fail（列出所有失败项）</text>
+  </g>
+</svg>

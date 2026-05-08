@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="350" viewBox="0 0 800 350">
+  <defs><style>text { font-family: PingFang SC, Inter, sans-serif; }</style></defs>
+  <rect width="800" height="350" fill="#FFFFFF"/>
+
+  <text x="400" y="35" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">泄露后的护城河分析</text>
+  <text x="400" y="55" text-anchor="middle" font-size="12" fill="#999">秘密可以被复制，能力不能 -- 阿里云开发者</text>
+
+  <!-- Left: Weakened -->
+  <rect x="40" y="75" width="350" height="250" rx="10" fill="#FFF8E1" stroke="#FFB020" stroke-width="2"/>
+  <rect x="40" y="75" width="350" height="30" rx="10" fill="#FFB020"/>
+  <rect x="40" y="95" width="350" height="10" fill="#FFB020"/>
+  <text x="215" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">被削弱的</text>
+
+  <text x="60" y="128" font-size="11" fill="#37352F">▸ 权限模型实现（四层管道 + 双 AI）</text>
+  <text x="60" y="152" font-size="11" fill="#37352F">▸ 遥测与反作弊设计（cch 机制）</text>
+  <text x="60" y="176" font-size="11" fill="#37352F">▸ 45+ 工具架构与 BashTool 23 项检查</text>
+  <text x="60" y="200" font-size="11" fill="#37352F">▸ KAIROS 远程控制方案</text>
+  <text x="60" y="224" font-size="11" fill="#37352F">▸ 记忆系统四分类 + 三级压缩</text>
+
+  <rect x="60" y="255" width="310" height="50" rx="6" fill="#FFF3E0"/>
+  <text x="215" y="275" text-anchor="middle" font-size="11" fill="#E6930A">多个开源复刻版已获数千 stars</text>
+  <text x="215" y="293" text-anchor="middle" font-size="10" fill="#999">Gartner: 90% AI 生成 → IP 保护弱化</text>
+
+  <!-- Right: Intact -->
+  <rect x="410" y="75" width="350" height="250" rx="10" fill="#E8F4FD" stroke="#2383E2" stroke-width="2"/>
+  <rect x="410" y="75" width="350" height="30" rx="10" fill="#2383E2"/>
+  <rect x="410" y="95" width="350" height="10" fill="#2383E2"/>
+  <text x="585" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">没被动摇的</text>
+
+  <text x="430" y="128" font-size="11" fill="#37352F">▸ 模型能力本身 (Opus 4.6 / Sonnet)</text>
+  <text x="430" y="152" font-size="11" fill="#37352F">▸ 双模型经济 (Opus 推理 + Haiku 杂活)</text>
+  <text x="430" y="176" font-size="11" fill="#37352F">▸ 92% prompt prefix 缓存复用率</text>
+  <text x="430" y="200" font-size="11" fill="#37352F">▸ 企业级分发渠道 + 数十万付费用户</text>
+  <text x="430" y="224" font-size="11" fill="#37352F">▸ CLAUDE.md 团队偏好数据沉淀</text>
+  <text x="430" y="248" font-size="11" fill="#37352F">▸ 工程判断力与组织文化</text>
+
+  <rect x="430" y="268" width="310" height="40" rx="6" fill="#E3F2FD"/>
+  <text x="585" y="293" text-anchor="middle" font-size="11" font-weight="bold" fill="#2383E2">写在代码里，但无法从代码里复制</text>
+</svg>

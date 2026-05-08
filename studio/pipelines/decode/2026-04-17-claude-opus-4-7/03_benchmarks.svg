@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="800" fill="#37352F">Benchmark 的分层真相</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#787066">Mythos 放进对比表只是"展示"，不代表"可购买" —— 榜单成为战略博弈工具</text>
+
+  <!-- Legend -->
+  <g transform="translate(120, 100)">
+    <rect x="0" y="0" width="14" height="14" fill="#1F1A14"/>
+    <text x="22" y="12" font-size="12" fill="#37352F">Mythos Preview (联盟限制)</text>
+
+    <rect x="200" y="0" width="14" height="14" fill="#2383E2"/>
+    <text x="222" y="12" font-size="12" fill="#37352F">Opus 4.7 (公开)</text>
+
+    <rect x="340" y="0" width="14" height="14" fill="#C0C0C0"/>
+    <text x="362" y="12" font-size="12" fill="#37352F">Opus 4.6 (上一代)</text>
+
+    <rect x="490" y="0" width="14" height="14" fill="#E0DDD5"/>
+    <text x="512" y="12" font-size="12" fill="#37352F">GPT-5.4 / Gemini 3.1</text>
+  </g>
+
+  <!-- Chart area -->
+  <g transform="translate(60, 150)">
+    <!-- axis line -->
+    <line x1="200" y1="0" x2="200" y2="320" stroke="#E0DDD5" stroke-width="1"/>
+    <line x1="200" y1="320" x2="720" y2="320" stroke="#E0DDD5" stroke-width="1"/>
+
+    <!-- scale -->
+    <g font-size="10" fill="#9B8B72">
+      <text x="200" y="336" text-anchor="middle">0</text>
+      <text x="330" y="336" text-anchor="middle">25</text>
+      <text x="460" y="336" text-anchor="middle">50</text>
+      <text x="590" y="336" text-anchor="middle">75</text>
+      <text x="720" y="336" text-anchor="middle">100%</text>
+    </g>
+
+    <!-- Row 1: SWE-bench Verified -->
+    <text x="190" y="24" text-anchor="end" font-size="12" font-weight="600" fill="#37352F">SWE-bench Verified</text>
+    <rect x="200" y="14" width="488.28" height="12" fill="#1F1A14"/>
+    <text x="694" y="24" font-size="11" font-weight="700" fill="#1F1A14">93.9%</text>
+    <rect x="200" y="30" width="455.52" height="12" fill="#2383E2"/>
+    <text x="660" y="40" font-size="11" font-weight="700" fill="#2383E2">87.6%</text>
+    <rect x="200" y="46" width="420.16" height="12" fill="#C0C0C0"/>
+    <text x="625" y="56" font-size="11" fill="#787066">80.8%</text>
+
+    <!-- Row 2: SWE-bench Pro -->
+    <text x="190" y="94" text-anchor="end" font-size="12" font-weight="600" fill="#37352F">SWE-bench Pro</text>
+    <rect x="200" y="84" width="334.36" height="12" fill="#2383E2"/>
+    <text x="540" y="94" font-size="11" font-weight="700" fill="#2383E2">64.3%</text>
+    <rect x="200" y="100" width="300.04" height="12" fill="#E0DDD5"/>
+    <text x="505" y="110" font-size="11" fill="#9B8B72">GPT-5.4  57.7%</text>
+    <rect x="200" y="116" width="277.68" height="12" fill="#C0C0C0"/>
+    <text x="483" y="126" font-size="11" fill="#787066">Opus 4.6  53.4%</text>
+    <rect x="200" y="132" width="281.84" height="12" fill="#E0DDD5"/>
+    <text x="487" y="142" font-size="11" fill="#9B8B72">Gemini 3.1 Pro  54.2%</text>
+
+    <!-- Row 3: CursorBench -->
+    <text x="190" y="176" text-anchor="end" font-size="12" font-weight="600" fill="#37352F">CursorBench</text>
+    <rect x="200" y="166" width="364" height="12" fill="#2383E2"/>
+    <text x="570" y="176" font-size="11" font-weight="700" fill="#2383E2">70%</text>
+    <rect x="200" y="182" width="301.6" height="12" fill="#C0C0C0"/>
+    <text x="507" y="192" font-size="11" fill="#787066">Opus 4.6  58%</text>
+
+    <!-- Row 4: Vision -->
+    <text x="190" y="226" text-anchor="end" font-size="12" font-weight="600" fill="#37352F">视觉敏锐度</text>
+    <rect x="200" y="216" width="512.2" height="12" fill="#2383E2"/>
+    <text x="718" y="226" font-size="11" font-weight="700" fill="#2383E2">98.5%</text>
+    <rect x="200" y="232" width="283.4" height="12" fill="#C0C0C0"/>
+    <text x="490" y="242" font-size="11" fill="#787066">Opus 4.6  54.5%</text>
+
+    <!-- Row 5: Rakuten 3x -->
+    <text x="190" y="276" text-anchor="end" font-size="12" font-weight="600" fill="#37352F">Rakuten-SWE 生产任务</text>
+    <g transform="translate(200, 266)">
+      <rect x="0" y="0" width="120" height="12" fill="#C0C0C0"/>
+      <text x="125" y="10" font-size="10" fill="#787066">1x</text>
+      <rect x="160" y="0" width="360" height="12" fill="#2383E2"/>
+      <text x="525" y="10" font-size="11" font-weight="700" fill="#2383E2">3x · 通过的真实任务数</text>
+    </g>
+  </g>
+
+  <!-- Bottom callout -->
+  <g transform="translate(60, 470)">
+    <rect width="680" height="34" rx="6" fill="#FFF8E6" stroke="#FFB020"/>
+    <text x="340" y="22" text-anchor="middle" font-size="12" fill="#6B5B2E">衡量单位悄然换挡: 从 benchmark percentage 转到 task throughput · 注意"3x"不是分数</text>
+  </g>
+</svg>

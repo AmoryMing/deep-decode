@@ -1,0 +1,24 @@
+{
+  "slug": "2026-04-03-harness-greater-than-model",
+  "title": "Harness > Model：Claude Code 的秘密武器不是模型",
+  "urls": [
+    "https://sebastianraschka.com/blog/2026/claude-code-secret-sauce.html",
+    "https://blog.lmcache.ai/en/2025/12/23/context-engineering-reuse-pattern-under-the-hood-of-claude-code/"
+  ],
+  "context_materials_read": [
+    "context/information_sources/claudecode架构全解密.md",
+    "context/information_sources/Claude Code 源码架构解析从启动Prompt 到权限管道.md",
+    "context/information_sources/claudecode 源码深度解读.md",
+    "context/information_sources/Claude Code 源码泄露：一份价值亿元的 AI 工程公开课.md",
+    "context/information_sources/源码解读信息源(1).md"
+  ],
+  "url_fetch_results": {
+    "sebastianraschka.com": "404 - page not found, thesis captured via context materials",
+    "blog.lmcache.ai": "success - full article fetched, 92% cache reuse analysis"
+  },
+  "screenshots": [],
+  "key_authors": [
+    {"name": "Sebastian Raschka", "role": "Lightning AI 研究工程师 / ML 畅销书作者", "thesis": "真正的秘密武器不是模型，是 harness"},
+    {"name": "LMCache Team", "role": "LLM 缓存基础设施研究团队", "thesis": "92% prompt prefix 复用率来自系统性架构设计"}
+  ]
+}

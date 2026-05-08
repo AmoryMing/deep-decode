@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" font-family="PingFang SC, Inter, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#787774"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4DB6AC"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EB5757"/>
+    </marker>
+    <marker id="arrow-blue" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="10" markerHeight="7" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2383E2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="#FFFFFF" rx="0"/>
+
+  <!-- Title -->
+  <text x="400" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#37352F">Speculation: 预测 → 执行 → 提交/丢弃</text>
+
+  <!-- Step 1: 对话结束 (circle) -->
+  <circle cx="70" cy="72" r="26" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="70" y="77" text-anchor="middle" font-size="12" fill="#37352F">对话结束</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="96" y1="72" x2="148" y2="72" stroke="#787774" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: 生成建议 (blue box) -->
+  <rect x="150" y="52" width="140" height="40" rx="8" fill="#2383E2" stroke="none"/>
+  <text x="220" y="69" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">生成建议</text>
+  <text x="220" y="84" text-anchor="middle" font-size="9" fill="rgba(255,255,255,0.8)">forked agent + SUGGESTION_PROMPT</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="290" y1="72" x2="328" y2="72" stroke="#787774" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: 展示给用户 -->
+  <rect x="330" y="52" width="140" height="40" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="400" y="69" text-anchor="middle" font-size="13" fill="#37352F">展示给用户</text>
+  <text x="400" y="84" text-anchor="middle" font-size="10" fill="#787774" font-style="italic">"run the tests"</text>
+
+  <!-- Fork point -->
+  <line x1="470" y1="72" x2="520" y2="72" stroke="#787774" stroke-width="2"/>
+  <circle cx="530" cy="72" r="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="530" y="76" text-anchor="middle" font-size="10" fill="#787774">?</text>
+
+  <!-- Path A: 用户按 Tab (green path going down) -->
+  <line x1="530" y1="82" x2="530" y2="108" stroke="#4DB6AC" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="560" y="100" font-size="10" fill="#4DB6AC" font-weight="bold">用户按 Tab</text>
+
+  <!-- Path B: 用户改主意 (red path going right) -->
+  <line x1="540" y1="72" x2="630" y2="72" stroke="#EB5757" stroke-width="2" marker-end="url(#arrow-red)"/>
+  <text x="585" y="64" text-anchor="middle" font-size="10" fill="#EB5757" font-weight="bold">忽略/改输入</text>
+
+  <!-- Red end: 无事发生 -->
+  <rect x="632" y="56" width="120" height="32" rx="8" fill="#FDEAEA" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="692" y="77" text-anchor="middle" font-size="12" fill="#EB5757">建议消失</text>
+
+  <!-- Step 4: 启动推测执行 (large blue box) -->
+  <rect x="60" y="110" width="460" height="170" rx="8" fill="rgba(35,131,226,0.06)" stroke="#2383E2" stroke-width="2"/>
+  <text x="290" y="132" text-anchor="middle" font-size="14" font-weight="bold" fill="#2383E2">启动推测执行</text>
+
+  <!-- Sub-steps inside -->
+  <rect x="80" y="144" width="130" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="145" y="166" text-anchor="middle" font-size="11" fill="#37352F">创建 Overlay 目录</text>
+
+  <line x1="210" y1="162" x2="238" y2="162" stroke="#787774" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="240" y="144" width="110" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="295" y="166" text-anchor="middle" font-size="11" fill="#37352F">Fork 子 Agent</text>
+
+  <line x1="350" y1="162" x2="378" y2="162" stroke="#787774" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="380" y="144" width="126" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="443" y="160" text-anchor="middle" font-size="11" fill="#37352F">执行工具调用</text>
+  <text x="443" y="174" text-anchor="middle" font-size="9" fill="#787774">(max 20 轮)</text>
+
+  <!-- Boundary types -->
+  <text x="80" y="206" font-size="11" font-weight="bold" fill="#37352F">退出条件:</text>
+
+  <rect x="80" y="214" width="120" height="30" rx="6" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="140" y="234" text-anchor="middle" font-size="11" fill="#4DB6AC">正常完成</text>
+
+  <rect x="216" y="214" width="140" height="30" rx="6" fill="#FFF8E1" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="286" y="228" text-anchor="middle" font-size="11" fill="#FFB020">遇到边界 (Pause)</text>
+  <text x="286" y="242" text-anchor="middle" font-size="9" fill="#787774">bash / edit / denied_tool</text>
+
+  <rect x="372" y="214" width="134" height="30" rx="6" fill="#FDEAEA" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="439" y="228" text-anchor="middle" font-size="11" fill="#EB5757">超限 / 出错</text>
+  <text x="439" y="242" text-anchor="middle" font-size="9" fill="#787774">maxRounds / error</text>
+
+  <text x="290" y="270" text-anchor="middle" font-size="11" fill="#787774">推测执行暂停, 等待用户确认</text>
+
+  <!-- Arrow down from speculation box -->
+  <line x1="200" y1="280" x2="200" y2="310" stroke="#787774" stroke-width="2"/>
+  <line x1="380" y1="280" x2="380" y2="310" stroke="#787774" stroke-width="2"/>
+
+  <!-- Fork: confirm or reject -->
+  <!-- Left: 用户确认 (green) -->
+  <text x="200" y="306" text-anchor="middle" font-size="10" fill="#4DB6AC" font-weight="bold">用户确认</text>
+
+  <rect x="100" y="316" width="200" height="56" rx="8" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="2"/>
+  <text x="200" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#4DB6AC">提交</text>
+  <text x="200" y="354" text-anchor="middle" font-size="10" fill="#37352F">复制 Overlay → 主 FS</text>
+  <text x="200" y="366" text-anchor="middle" font-size="10" fill="#37352F">注入推测消息到对话</text>
+
+  <!-- Right: 用户改主意 (red) -->
+  <text x="380" y="306" text-anchor="middle" font-size="10" fill="#EB5757" font-weight="bold">用户改主意</text>
+
+  <rect x="280" y="316" width="200" height="56" rx="8" fill="#FDEAEA" stroke="#EB5757" stroke-width="2"/>
+  <text x="380" y="338" text-anchor="middle" font-size="12" font-weight="bold" fill="#EB5757">丢弃</text>
+  <text x="380" y="354" text-anchor="middle" font-size="10" fill="#37352F">rm -rf Overlay</text>
+  <text x="380" y="366" text-anchor="middle" font-size="10" fill="#37352F">丢弃所有推测消息</text>
+
+  <!-- Dashed arrow: pipelining loop from green end back to step 2 -->
+  <path d="M 200 372 L 200 400 Q 200 420 180 420 L 40 420 Q 20 420 20 400 L 20 72 Q 20 52 40 52 L 148 52"
+        fill="none" stroke="#2383E2" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow-blue)"/>
+  <text x="40" y="442" font-size="11" fill="#2383E2" font-weight="bold">递归 Pipelining</text>
+  <text x="40" y="456" font-size="10" fill="#787774">提交后立刻生成下一条建议</text>
+
+  <!-- Legend -->
+  <rect x="560" y="110" width="220" height="140" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="670" y="132" text-anchor="middle" font-size="12" font-weight="bold" fill="#37352F">图例</text>
+  <rect x="576" y="142" width="12" height="12" rx="2" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="596" y="153" font-size="10" fill="#37352F">正常完成 / 接受</text>
+  <rect x="576" y="162" width="12" height="12" rx="2" fill="#FFF8E1" stroke="#FFB020" stroke-width="1"/>
+  <text x="596" y="173" font-size="10" fill="#37352F">遇到边界, 暂停</text>
+  <rect x="576" y="182" width="12" height="12" rx="2" fill="#FDEAEA" stroke="#EB5757" stroke-width="1"/>
+  <text x="596" y="193" font-size="10" fill="#37352F">出错 / 丢弃</text>
+  <rect x="576" y="202" width="12" height="12" rx="2" fill="#2383E2"/>
+  <text x="596" y="213" font-size="10" fill="#37352F">核心执行步骤</text>
+  <line x1="576" y1="232" x2="588" y2="232" stroke="#2383E2" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="596" y="236" font-size="10" fill="#37352F">递归 Pipelining</text>
+
+  <!-- Footer -->
+  <text x="400" y="500" text-anchor="middle" font-size="10" fill="#787774">speculation 生命周期: 预测 → 推测执行 → 提交或丢弃 → 递归生成下一条</text>
+</svg>

@@ -1,0 +1,102 @@
+{
+  "factcheck_date": "2026-04-07",
+  "claims_checked": [
+    {
+      "claim": "有人用 Rust 重写了 Claude Code 核心循环，精简到 88 行",
+      "source": "https://dev.to/brooks_wilson_36fbefbbae4/claude-code-architecture-explained-agent-loop-tool-system-and-permission-model-rust-rewrite-41b2",
+      "status": "VERIFIED",
+      "note": "dev.to 原文明确说 'The entire agent loop is implemented in ~88 lines'"
+    },
+    {
+      "claim": "AUTOCOMPACT_BUFFER_TOKENS = 13_000",
+      "source": "掘金文章 + query.ts 源码",
+      "status": "VERIFIED",
+      "note": "掘金原文和源码均确认此常量值"
+    },
+    {
+      "claim": "p99.99 的 compact summary 输出是 17,387 token",
+      "source": "AeroMind 知乎文章 + 架构师JiaGouX",
+      "status": "VERIFIED",
+      "note": "多个独立信源交叉确认，来自 Anthropic 内部数据"
+    },
+    {
+      "claim": "MAX_CONSECUTIVE_AUTOCOMPACT_FAILURES = 3",
+      "source": "掘金文章 + query.ts 源码",
+      "status": "VERIFIED",
+      "note": "源码中直接定义的常量"
+    },
+    {
+      "claim": "Agent 系统消耗约 4 倍于普通 chat 的 token，多 Agent 高达 15 倍",
+      "source": "https://blogs.oracle.com/developers/what-is-the-ai-agent-loop-the-core-architecture-behind-autonomous-ai-systems",
+      "status": "VERIFIED",
+      "note": "Oracle 原文: 'approximately 4x more tokens than standard chat interactions and up to 15x in multi-agent systems'"
+    },
+    {
+      "claim": "PASTE 论文来自上海交大+微软研究院",
+      "source": "https://arxiv.org/pdf/2603.18897",
+      "status": "VERIFIED",
+      "note": "作者单位：Shanghai Jiao Tong University + Microsoft Research"
+    },
+    {
+      "claim": "QueryEngine 维护 mutableMessages[]、abortController、permissionDenials[] 等状态",
+      "source": "context/raw_code/cc-recovered-main/src/QueryEngine.ts 行 187-197",
+      "status": "VERIFIED",
+      "note": "直接从源码读取确认"
+    },
+    {
+      "claim": "wizard 注释关于 thinking block 规则",
+      "source": "context/raw_code/cc-recovered-main/src/query.ts 行 152-163",
+      "status": "VERIFIED",
+      "note": "原文逐字对比一致"
+    },
+    {
+      "claim": "feature() 是 Bun 编译时消除，不是运行时判断",
+      "source": "源码 import { feature } from 'bun:bundle' + AeroMind/rumor 分析",
+      "status": "VERIFIED",
+      "note": "import 来自 bun:bundle 模块，rumor 文章确认 '编译时直接从npm包里物理删除'"
+    },
+    {
+      "claim": "tombstone 消息类型用于清理孤儿 thinking blocks",
+      "source": "AeroMind 知乎文章 + query.ts 源码 TombstoneMessage 类型定义",
+      "status": "VERIFIED",
+      "note": "query.ts 行 39 导入了 TombstoneMessage 类型"
+    },
+    {
+      "claim": "新会话起步约 8,700 token 开销",
+      "source": "https://codewithmukesh.com/blog/anatomy-claude-code-session/",
+      "status": "VERIFIED",
+      "note": "独立开发者实测数据"
+    },
+    {
+      "claim": "siblingAbortController 用于取消兄弟进程",
+      "source": "掘金文章",
+      "status": "VERIFIED",
+      "note": "原文: '错误传播使用 siblingAbortController 取消兄弟进程而不中断父级查询循环'"
+    }
+  ],
+  "subjective_language_check": [
+    {
+      "original": "信息密度最高的部分",
+      "assessment": "主观判断，但指向该段包含最多技术细节，文章结构确实以此为重心",
+      "action": "保留，文章结构支撑"
+    },
+    {
+      "original": "最彻底的工程实现",
+      "assessment": "最高级表述，需要支撑",
+      "action": "已改为引用 ByteByteGo 观点后的分析判断，有外部信源佐证"
+    }
+  ],
+  "qa_checklist": {
+    "numbers_traceable": true,
+    "no_wording_upgrade": true,
+    "english_quotes_match_original": true,
+    "names_spelling_correct": true,
+    "no_overclaiming_causation": true,
+    "blind_spots_not_fabricated": true,
+    "superlatives_supported": true,
+    "structure_matches_value_judgments": true,
+    "no_unmarked_emotional_language": true
+  },
+  "unresolved_errors": [],
+  "phase3b_complete": true
+}

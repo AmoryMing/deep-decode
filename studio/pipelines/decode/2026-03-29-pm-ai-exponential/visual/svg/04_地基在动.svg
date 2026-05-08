@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">地基在动 -- 同一项目，三代模型，三种结果</text>
+
+  <!-- Timeline -->
+  <line x1="100" y1="120" x2="700" y2="120" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- Point 1: Sonnet 3.5 -->
+  <circle cx="180" cy="120" r="8" fill="#EB5757"/>
+  <text x="180" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2024.10</text>
+  <text x="180" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#EB5757">Sonnet 3.5</text>
+  <text x="180" y="175" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">做不出来</text>
+  <rect x="130" y="190" width="100" height="24" rx="12" fill="#EB5757" opacity="0.1"/>
+  <text x="180" y="206" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">21 分钟级任务</text>
+
+  <!-- Point 2: Opus 4 -->
+  <circle cx="400" cy="120" r="8" fill="#FFB020"/>
+  <text x="400" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2025.06</text>
+  <text x="400" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFB020">Opus 4</text>
+  <text x="400" y="175" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">偶尔能成功</text>
+  <rect x="340" y="190" width="120" height="24" rx="12" fill="#FFB020" opacity="0.1"/>
+  <text x="400" y="206" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#B8860B">提前录好 demo</text>
+
+  <!-- Point 3: Opus 4.6 -->
+  <circle cx="620" cy="120" r="8" fill="#4DB6AC"/>
+  <text x="620" y="100" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2026.03</text>
+  <text x="620" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#4DB6AC">Opus 4.6</text>
+  <text x="620" y="175" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">现场演示</text>
+  <rect x="555" y="190" width="130" height="24" rx="12" fill="#4DB6AC" opacity="0.1"/>
+  <text x="620" y="206" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC">~12 小时级任务</text>
+
+  <!-- Arrow between points -->
+  <defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 L10 5 L0 10z" fill="#787774"/></marker></defs>
+  <line x1="200" y1="120" x2="380" y2="120" stroke="#787774" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="420" y1="120" x2="600" y2="120" stroke="#787774" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- METR data box -->
+  <rect x="150" y="250" width="500" height="80" rx="8" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="400" y="280" text-anchor="middle" font-family="Inter, PingFang SC, sans-serif" font-size="36" font-weight="bold" fill="#2383E2">41x</text>
+  <text x="400" y="305" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">16 个月内能力提升倍数（METR 测量）| 翻倍周期: ~4 个月</text>
+
+  <!-- Bottom insight -->
+  <text x="400" y="370" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">测试项目: 让 Claude Code 给 Excalidraw 加表格工具</text>
+  <text x="400" y="395" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#EB5757">超过一个季度的计划，随时可能被底层能力跃迁掀翻</text>
+</svg>

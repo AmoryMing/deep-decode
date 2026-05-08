@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="440" fill="#FFFFFF" rx="12"/>
+  <text x="400" y="38" text-anchor="middle" fill="#37352F" font-size="20" font-weight="bold">Undercover Mode 五层纵深防御</text>
+  <line x1="100" y1="52" x2="700" y2="52" stroke="#E8E8E8" stroke-width="1"/>
+
+  <!-- Layer 1 -->
+  <rect x="80" y="70" width="640" height="60" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <circle cx="110" cy="100" r="14" fill="#4DB6AC" opacity="0.15"/>
+  <text x="110" y="105" text-anchor="middle" fill="#4DB6AC" font-size="13" font-weight="bold">1</text>
+  <text x="160" y="95" fill="#37352F" font-size="14" font-weight="bold">构建时：死代码消除</text>
+  <text x="160" y="115" fill="#666666" font-size="11">USER_TYPE 是编译时 --define，外部构建中整个 undercover.ts 被物理删除</text>
+  <text x="660" y="105" text-anchor="end" fill="#4DB6AC" font-size="11" font-weight="500">代码不存在</text>
+
+  <!-- Layer 2 -->
+  <rect x="120" y="140" width="560" height="60" rx="8" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <circle cx="150" cy="170" r="14" fill="#2383E2" opacity="0.15"/>
+  <text x="150" y="175" text-anchor="middle" fill="#2383E2" font-size="13" font-weight="bold">2</text>
+  <text x="200" y="165" fill="#37352F" font-size="14" font-weight="bold">运行时：USER_TYPE 检查</text>
+  <text x="200" y="185" fill="#666666" font-size="11">process.env.USER_TYPE === 'ant'  --  只对 Anthropic 内部员工生效</text>
+  <text x="620" y="175" text-anchor="end" fill="#2383E2" font-size="11" font-weight="500">身份验证</text>
+
+  <!-- Layer 3 -->
+  <rect x="160" y="210" width="480" height="60" rx="8" fill="#F7F7F5" stroke="#FFB020" stroke-width="1.5"/>
+  <circle cx="190" cy="240" r="14" fill="#FFB020" opacity="0.15"/>
+  <text x="190" y="245" text-anchor="middle" fill="#FFB020" font-size="13" font-weight="bold">3</text>
+  <text x="240" y="235" fill="#37352F" font-size="14" font-weight="bold">仓库层：白名单比对</text>
+  <text x="240" y="255" fill="#666666" font-size="11">21 个私有仓库允许归属 / 公共仓库（含 claude-code）默认隐身</text>
+  <text x="580" y="245" text-anchor="end" fill="#FFB020" font-size="11" font-weight="500">白名单逻辑</text>
+
+  <!-- Layer 4 -->
+  <rect x="200" y="280" width="400" height="60" rx="8" fill="#F7F7F5" stroke="#EB5757" stroke-width="1.5"/>
+  <circle cx="230" cy="310" r="14" fill="#EB5757" opacity="0.15"/>
+  <text x="230" y="315" text-anchor="middle" fill="#EB5757" font-size="13" font-weight="bold">4</text>
+  <text x="280" y="305" fill="#37352F" font-size="14" font-weight="bold">提示词层：CRITICAL 注入</text>
+  <text x="280" y="325" fill="#666666" font-size="11">"Do not blow your cover" / 禁止一切 AI 归属信息</text>
+  <text x="540" y="315" text-anchor="end" fill="#EB5757" font-size="11" font-weight="500">行为约束</text>
+
+  <!-- Layer 5 -->
+  <rect x="240" y="350" width="320" height="60" rx="8" fill="#F7F7F5" stroke="#9B59B6" stroke-width="1.5"/>
+  <circle cx="270" cy="380" r="14" fill="#9B59B6" opacity="0.15"/>
+  <text x="270" y="385" text-anchor="middle" fill="#9B59B6" font-size="13" font-weight="bold">5</text>
+  <text x="320" y="375" fill="#37352F" font-size="14" font-weight="bold">输出层：归属信息清零</text>
+  <text x="320" y="395" fill="#666666" font-size="11">getAttributionTexts() 返回空字符串</text>
+  <text x="500" y="385" text-anchor="end" fill="#9B59B6" font-size="11" font-weight="500">数据清除</text>
+
+  <!-- Bottom annotation -->
+  <text x="400" y="432" text-anchor="middle" fill="#AAAAAA" font-size="10">每一层都是上一层的兜底 / 安全默认值 = ON / 没有 force-OFF 选项</text>
+</svg>

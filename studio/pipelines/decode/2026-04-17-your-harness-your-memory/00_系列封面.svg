@@ -1,0 +1,23 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="800" height="500" fill="none" stroke="#E3E2E0" stroke-width="1"/>
+
+  <text x="400" y="85" text-anchor="middle" font-size="18" fill="#787774" letter-spacing="4">AI 前沿拆解</text>
+  <text x="400" y="115" text-anchor="middle" font-size="16" fill="#2383E2">深度解读系列 · 2026-04-17</text>
+
+  <text x="400" y="205" text-anchor="middle" font-size="46" font-weight="bold" fill="#37352F">Your Harness,</text>
+  <text x="400" y="260" text-anchor="middle" font-size="46" font-weight="bold" fill="#37352F">Your Memory</text>
+
+  <text x="400" y="310" text-anchor="middle" font-size="22" fill="#EB5757" font-weight="600">AI 时代的主权让渡之战</text>
+
+  <line x1="220" y1="345" x2="580" y2="345" stroke="#E3E2E0" stroke-width="1"/>
+
+  <text x="400" y="380" text-anchor="middle" font-size="15" fill="#37352F">模型厂商把 Harness 收进 API，</text>
+  <text x="400" y="402" text-anchor="middle" font-size="15" fill="#37352F">本质是用 Memory 绑架用户</text>
+
+  <text x="230" y="455" font-size="13" fill="#787774">原文：Harrison Chase + Sarah Wooders</text>
+  <text x="230" y="475" font-size="13" fill="#787774">LangChain CEO + Letta CTO（MemGPT 一作）</text>
+
+  <circle cx="150" cy="440" r="30" fill="#F7F7F5" stroke="#E3E2E0"/>
+  <text x="150" y="446" text-anchor="middle" font-size="20" fill="#2383E2">🔐</text>
+</svg>

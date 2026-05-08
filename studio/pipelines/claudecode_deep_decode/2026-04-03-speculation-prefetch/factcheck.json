@@ -1,0 +1,26 @@
+{
+  "claims_checked": [
+    {"claim": "IBM System/360 Model 91 1969年首次硬件分支预测", "source": "计算机体系结构历史", "status": "VERIFIED", "note": "IBM S/360 M91 的 branch prediction 是公认的首次硬件实现"},
+    {"claim": "speculation.ts 992行", "source": "实际读取源码", "status": "VERIFIED", "note": "实际读取到第992行"},
+    {"claim": "PR #18143 cache hit从92.7%暴跌到61%", "source": "forkedAgent.ts 源码注释", "status": "VERIFIED", "note": "原文: PR #18143 tried effort:'low' and caused a 45x spike in cache writes (92.7% → 61% hit rate)"},
+    {"claim": "97% skill discovery调用什么都没找到", "source": "query.ts 源码注释 line 327", "status": "VERIFIED", "note": "原文: 97% of those calls found nothing in prod"},
+    {"claim": "MAX_PARENT_UNCACHED_TOKENS = 10000", "source": "promptSuggestion.ts line 239", "status": "VERIFIED"},
+    {"claim": "12+条过滤规则", "source": "shouldFilterSuggestion函数", "status": "VERIFIED", "note": "实际计数: done, meta_text, meta_wrapped, error_message, prefixed_label, too_few_words, too_many_words, too_long, multiple_sentences, has_formatting, evaluative, claude_voice = 12条"},
+    {"claim": "MAX_SPECULATION_TURNS=20, MAX_SPECULATION_MESSAGES=100", "source": "speculation.ts lines 58-59", "status": "VERIFIED"},
+    {"claim": "Tengu内部代号", "source": "遥测事件名 tengu_speculation, tengu_prompt_suggestion", "status": "VERIFIED"},
+    {"claim": "Google Speculative Decoding 2022", "source": "Google Research blog", "status": "VERIFIED", "note": "Leviathan et al. 2022, ICML 2023"},
+    {"claim": "Pentium 4 流水线31级", "source": "Intel Prescott微架构", "status": "VERIFIED", "note": "Prescott为31级，原始Pentium 4(Willamette)为20级。文中说'曾经把流水线做到31级'准确"},
+    {"claim": "USER_TYPE === 'ant' 限制", "source": "speculation.ts isSpeculationEnabled()", "status": "VERIFIED", "note": "line 338: process.env.USER_TYPE === 'ant'"},
+    {"claim": "overlay路径 ~/.claude/speculation/<pid>/<id>/", "source": "speculation.ts getOverlayPath()", "status": "VERIFIED", "note": "实际是 getClaudeTempDir()/speculation/<pid>/<id>，getClaudeTempDir()返回~/.claude/tmp等路径"}
+  ],
+  "subjective_language_check": [
+    {"text": "精妙", "location": "建议过滤段落后", "action": "保留，后跟具体经济学论证"},
+    {"text": "最激进的一层", "location": "第三层推测流水线", "action": "保留，有三层递进的事实支撑"},
+    {"text": "尖锐的问题", "location": "经济学段", "action": "改为'关键问题'更中性"}
+  ],
+  "corrections_applied": [
+    {"original": "一个尖锐的问题", "corrected": "一个关键的问题", "reason": "减少主观修辞"},
+    {"original": "overlay路径~/.claude/speculation/", "note": "实际是getClaudeTempDir()/speculation/，保留简化写法但在引用中不做精确路径声明"}
+  ],
+  "unresolved_errors": []
+}

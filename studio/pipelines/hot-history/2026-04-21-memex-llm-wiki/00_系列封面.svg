@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- 顶部大号年份对比 -->
+  <text x="60" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="64" font-weight="700" fill="#37352F">1945</text>
+  <text x="60" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Bush 画下 Memex 那张桌子</text>
+
+  <text x="620" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="64" font-weight="700" fill="#2383E2" text-anchor="end">2026</text>
+  <text x="620" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="end">Karpathy 把它兑现成一条 gist</text>
+
+  <!-- 中间拉直的时间线 -->
+  <line x1="60" y1="180" x2="740" y2="180" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- 中间四个落空节点 -->
+  <circle cx="200" cy="180" r="6" fill="#EB5757"/>
+  <text x="200" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Nelson</text>
+  <text x="200" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Xanadu 破产</text>
+
+  <circle cx="340" cy="180" r="6" fill="#EB5757"/>
+  <text x="340" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Engelbart</text>
+  <text x="340" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">NLS 跑不下山</text>
+
+  <circle cx="480" cy="180" r="6" fill="#FFB020"/>
+  <text x="480" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Berners-Lee</text>
+  <text x="480" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">丢掉双向链接</text>
+
+  <circle cx="620" cy="180" r="6" fill="#FFB020"/>
+  <text x="620" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Roam / Obsidian</text>
+  <text x="620" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">卡在维护</text>
+
+  <circle cx="740" cy="180" r="10" fill="#2383E2"/>
+
+  <!-- 中央标题 -->
+  <text x="400" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="38" font-weight="700" fill="#37352F" text-anchor="middle">80 年后，Memex 终于可以兑现</text>
+
+  <!-- 副标题 -->
+  <text x="400" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="17" fill="#787774" text-anchor="middle">Bush 没解决的是谁来维护 — LLM 解决了</text>
+
+  <!-- 底部金句 -->
+  <rect x="120" y="400" width="560" height="60" rx="8" fill="#F7F7F5"/>
+  <text x="400" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">税基从「人力」切换到「token」</text>
+  <text x="400" y="446" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">不是技术突破 — 是问题被重新定义</text>
+</svg>

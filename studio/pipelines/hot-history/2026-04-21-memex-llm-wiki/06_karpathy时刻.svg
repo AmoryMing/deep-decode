@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460">
+  <rect width="800" height="460" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">Karpathy 时刻 — 48 小时的数据切片</text>
+  <text x="400" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">不是技术突破 — 是问题被重新定义</text>
+
+  <!-- 四个数据块 -->
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="40" y="110" width="170" height="130" rx="8" fill="#F7F7F5"/>
+    <text x="125" y="155" font-size="42" font-weight="700" fill="#2383E2" text-anchor="middle">5000</text>
+    <text x="125" y="180" font-size="13" fill="#37352F" text-anchor="middle">GitHub star</text>
+    <text x="125" y="218" font-size="11" fill="#787774" text-anchor="middle">48 小时</text>
+
+    <rect x="225" y="110" width="170" height="130" rx="8" fill="#F7F7F5"/>
+    <text x="310" y="155" font-size="42" font-weight="700" fill="#4DB6AC" text-anchor="middle">4851</text>
+    <text x="310" y="180" font-size="13" fill="#37352F" text-anchor="middle">fork</text>
+    <text x="310" y="218" font-size="11" fill="#787774" text-anchor="middle">多数带扩展</text>
+
+    <rect x="410" y="110" width="170" height="130" rx="8" fill="#F7F7F5"/>
+    <text x="495" y="155" font-size="42" font-weight="700" fill="#9B51E0" text-anchor="middle">1.2M</text>
+    <text x="495" y="180" font-size="13" fill="#37352F" text-anchor="middle">阅读量</text>
+    <text x="495" y="218" font-size="11" fill="#787774" text-anchor="middle">X + gist + 媒体同步</text>
+
+    <rect x="595" y="110" width="170" height="130" rx="8" fill="#F7F7F5"/>
+    <text x="680" y="155" font-size="42" font-weight="700" fill="#FFB020" text-anchor="middle">296</text>
+    <text x="680" y="180" font-size="13" fill="#37352F" text-anchor="middle">HN 分</text>
+    <text x="680" y="218" font-size="11" fill="#787774" text-anchor="middle">95 条深度讨论</text>
+  </g>
+
+  <!-- 戳中点 -->
+  <rect x="40" y="270" width="720" height="80" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="400" y="298" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#37352F" text-anchor="middle">真正戳中的不是 200 行配置</text>
+  <text x="400" y="322" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">而是 Karpathy 事后补的那句 — Bush 没解决维护，LLM 解决了</text>
+  <text x="400" y="342" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">散落的民间实践 — 那一瞬间被挂到 80 年的技术史上</text>
+
+  <!-- 底部衍生 -->
+  <text x="400" y="390" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#37352F" text-anchor="middle">48 小时内长出的衍生版本</text>
+  <text x="400" y="412" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">rohitg00 v2 — 三层记忆 + 混合检索 | Astro-Han — Agent Skill 打包</text>
+  <text x="400" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">lewislulu — Obsidian audit 插件 | ethanjoffe — Python ingestion pipeline | Farza — Farzapedia 400 篇</text>
+</svg>

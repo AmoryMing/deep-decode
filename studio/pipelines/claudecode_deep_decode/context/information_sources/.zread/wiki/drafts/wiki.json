@@ -1,0 +1,301 @@
+{
+  "id": "2026-04-03-171722",
+  "generated_at": "2026-04-03T09:17:22.967016377Z",
+  "language": "zh",
+  "pages": [
+    {
+      "slug": "1-cang-ku-gai-lan-claude-code-yuan-ma-xie-lu-zhi-shi-ku",
+      "title": "仓库概览：Claude Code 源码泄露知识库",
+      "file": "1-cang-ku-gai-lan-claude-code-yuan-ma-xie-lu-zhi-shi-ku.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "2-kuai-su-kai-shi-ru-he-shi-yong-ben-cang-ku-jin-xing-xue-xi",
+      "title": "快速开始：如何使用本仓库进行学习",
+      "file": "2-kuai-su-kai-shi-ru-he-shi-yong-ben-cang-ku-jin-xing-xue-xi.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "3-yuan-ma-xie-lu-shi-jian-quan-jie-xi",
+      "title": "源码泄露事件全解析",
+      "file": "3-yuan-ma-xie-lu-shi-jian-quan-jie-xi.md",
+      "section": "快速入门",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "4-cang-ku-jie-gou-yu-dao-hang-zhi-nan",
+      "title": "仓库结构与导航指南",
+      "file": "4-cang-ku-jie-gou-yu-dao-hang-zhi-nan.md",
+      "section": "快速入门",
+      "level": "Beginner"
+    },
+    {
+      "slug": "5-duo-zhi-neng-ti-xie-diao-jia-gou",
+      "title": "多智能体协调架构",
+      "file": "5-duo-zhi-neng-ti-xie-diao-jia-gou.md",
+      "section": "架构深度解析",
+      "group": "核心架构设计",
+      "level": "Advanced"
+    },
+    {
+      "slug": "6-gong-ju-xi-tong-she-ji-yu-zhi-xing-liu-cheng",
+      "title": "工具系统设计与执行流程",
+      "file": "6-gong-ju-xi-tong-she-ji-yu-zhi-xing-liu-cheng.md",
+      "section": "架构深度解析",
+      "group": "核心架构设计",
+      "level": "Advanced"
+    },
+    {
+      "slug": "7-cha-xun-sheng-ming-zhou-qi-yu-qing-qiu-chu-li",
+      "title": "查询生命周期与请求处理",
+      "file": "7-cha-xun-sheng-ming-zhou-qi-yu-qing-qiu-chu-li.md",
+      "section": "架构深度解析",
+      "group": "核心架构设计",
+      "level": "Advanced"
+    },
+    {
+      "slug": "8-quan-xian-mo-xing-yu-an-quan-ji-zhi",
+      "title": "权限模型与安全机制",
+      "file": "8-quan-xian-mo-xing-yu-an-quan-ji-zhi.md",
+      "section": "架构深度解析",
+      "group": "核心架构设计",
+      "level": "Advanced"
+    },
+    {
+      "slug": "9-system-prompt-wu-ceng-you-xian-ji-ti-xi",
+      "title": "System Prompt 五层优先级体系",
+      "file": "9-system-prompt-wu-ceng-you-xian-ji-ti-xi.md",
+      "section": "架构深度解析",
+      "group": "系统核心组件",
+      "level": "Advanced"
+    },
+    {
+      "slug": "10-shang-xia-wen-guan-li-yu-jiu-duan-shi-ya-suo",
+      "title": "上下文管理与九段式压缩",
+      "file": "10-shang-xia-wen-guan-li-yu-jiu-duan-shi-ya-suo.md",
+      "section": "架构深度解析",
+      "group": "系统核心组件",
+      "level": "Advanced"
+    },
+    {
+      "slug": "11-ji-yi-xi-tong-she-ji-bu-ji-dai-ma-zhi-ji-ren",
+      "title": "记忆系统设计：\"不记代码，只记人\"",
+      "file": "11-ji-yi-xi-tong-she-ji-bu-ji-dai-ma-zhi-ji-ren.md",
+      "section": "架构深度解析",
+      "group": "系统核心组件",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "12-gong-ju-quan-xian-fen-ji-yu-zi-dong-jue-ce-xi-tong",
+      "title": "工具权限分级与自动决策系统",
+      "file": "12-gong-ju-quan-xian-fen-ji-yu-zi-dong-jue-ce-xi-tong.md",
+      "section": "架构深度解析",
+      "group": "系统核心组件",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "13-87ge-yin-cang-feature-flags-wan-quan-shou-ce",
+      "title": "87个隐藏 Feature Flags 完全手册",
+      "file": "13-87ge-yin-cang-feature-flags-wan-quan-shou-ce.md",
+      "section": "隐藏功能与内部机制",
+      "group": "Feature Flags 与隐藏命令",
+      "level": "Advanced"
+    },
+    {
+      "slug": "14-15ge-yin-cang-xie-gang-ming-ling-jie-mi",
+      "title": "15个隐藏斜杠命令揭秘",
+      "file": "14-15ge-yin-cang-xie-gang-ming-ling-jie-mi.md",
+      "section": "隐藏功能与内部机制",
+      "group": "Feature Flags 与隐藏命令",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "15-25ge-nei-bu-zhuan-yong-ming-ling-anthropic-yuan-gong-zhuan-shu",
+      "title": "25个内部专用命令（Anthropic 员工专属）",
+      "file": "15-25ge-nei-bu-zhuan-yong-ming-ling-anthropic-yuan-gong-zhuan-shu.md",
+      "section": "隐藏功能与内部机制",
+      "group": "Feature Flags 与隐藏命令",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "16-kairos-zi-zhu-zhu-shou-ping-tai-jia-gou",
+      "title": "KAIROS：自主助手平台架构",
+      "file": "16-kairos-zi-zhu-zhu-shou-ping-tai-jia-gou.md",
+      "section": "隐藏功能与内部机制",
+      "group": "核心代号解读",
+      "level": "Advanced"
+    },
+    {
+      "slug": "17-coordinator-mode-duo-worker-bian-pai-xi-tong",
+      "title": "Coordinator Mode：多 Worker 编排系统",
+      "file": "17-coordinator-mode-duo-worker-bian-pai-xi-tong.md",
+      "section": "隐藏功能与内部机制",
+      "group": "核心代号解读",
+      "level": "Advanced"
+    },
+    {
+      "slug": "18-buddy-zhong-duan-dian-zi-chong-wu-xi-tong",
+      "title": "BUDDY：终端电子宠物系统",
+      "file": "18-buddy-zhong-duan-dian-zi-chong-wu-xi-tong.md",
+      "section": "隐藏功能与内部机制",
+      "group": "核心代号解读",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "19-ultraplan-chao-ji-gui-hua-qi",
+      "title": "ULTRAPLAN：超级规划器",
+      "file": "19-ultraplan-chao-ji-gui-hua-qi.md",
+      "section": "隐藏功能与内部机制",
+      "group": "核心代号解读",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "20-cheng-ben-you-hua-shi-da-ji-qiao-yuan-ma-ji",
+      "title": "成本优化十大技巧（源码级）",
+      "file": "20-cheng-ben-you-hua-shi-da-ji-qiao-yuan-ma-ji.md",
+      "section": "工程实践与优化指南",
+      "group": "成本优化策略",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "21-mo-xing-ding-jie-yu-kuai-su-mo-shi-cheng-ben-fen-xi",
+      "title": "模型定价与快速模式成本分析",
+      "file": "21-mo-xing-ding-jie-yu-kuai-su-mo-shi-cheng-ben-fen-xi.md",
+      "section": "工程实践与优化指南",
+      "group": "成本优化策略",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "22-huan-cun-ji-zhi-yu-token-yu-suan-guan-li",
+      "title": "缓存机制与 Token 预算管理",
+      "file": "22-huan-cun-ji-zhi-yu-token-yu-suan-guan-li.md",
+      "section": "工程实践与优化指南",
+      "group": "成本优化策略",
+      "level": "Advanced"
+    },
+    {
+      "slug": "23-claude-md-bian-xie-zui-jia-shi-jian",
+      "title": "CLAUDE.md 编写最佳实践",
+      "file": "23-claude-md-bian-xie-zui-jia-shi-jian.md",
+      "section": "工程实践与优化指南",
+      "group": "最佳实践",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "24-system-prompt-ding-zhi-yu-you-xian-ji-guan-li",
+      "title": "System Prompt 定制与优先级管理",
+      "file": "24-system-prompt-ding-zhi-yu-you-xian-ji-guan-li.md",
+      "section": "工程实践与优化指南",
+      "group": "最佳实践",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "25-zi-dai-li-mo-xing-lu-you-yu-pei-zhi",
+      "title": "子代理模型路由与配置",
+      "file": "25-zi-dai-li-mo-xing-lu-you-yu-pei-zhi.md",
+      "section": "工程实践与优化指南",
+      "group": "最佳实践",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "26-harness-engineering-ai-chan-pin-de-zhen-zheng-hu-cheng-he",
+      "title": "Harness Engineering：AI 产品的真正护城河",
+      "file": "26-harness-engineering-ai-chan-pin-de-zhen-zheng-hu-cheng-he.md",
+      "section": "产品设计哲学与工程洞察",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "27-cong-yuan-ma-kan-anthropic-de-gong-cheng-jue-ce",
+      "title": "从源码看 Anthropic 的工程决策",
+      "file": "27-cong-yuan-ma-kan-anthropic-de-gong-cheng-jue-ce.md",
+      "section": "产品设计哲学与工程洞察",
+      "level": "Advanced"
+    },
+    {
+      "slug": "28-yong-zui-jian-dan-de-gong-ju-zuo-zui-guan-jian-de-shi-dai-ma-sou-suo-de-zhe-xue",
+      "title": "\"用最简单的工具做最关键的事\"：代码搜索的哲学",
+      "file": "28-yong-zui-jian-dan-de-gong-ju-zuo-zui-guan-jian-de-shi-dai-ma-sou-suo-de-zhe-xue.md",
+      "section": "产品设计哲学与工程洞察",
+      "level": "Advanced"
+    },
+    {
+      "slug": "29-quan-xian-fen-lei-qi-shuang-ai-xi-tong-de-an-quan-she-ji",
+      "title": "权限分类器：双 AI 系统的安全设计",
+      "file": "29-quan-xian-fen-lei-qi-shuang-ai-xi-tong-de-an-quan-she-ji.md",
+      "section": "产品设计哲学与工程洞察",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "30-undercover-mode-shen-fen-yin-man-xi-tong-pou-xi",
+      "title": "Undercover Mode：身份隐瞒系统剖析",
+      "file": "30-undercover-mode-shen-fen-yin-man-xi-tong-pou-xi.md",
+      "section": "安全、隐私与争议",
+      "level": "Advanced"
+    },
+    {
+      "slug": "31-yao-ce-yu-shu-ju-cai-ji-ji-zhi",
+      "title": "遥测与数据采集机制",
+      "file": "31-yao-ce-yu-shu-ju-cai-ji-ji-zhi.md",
+      "section": "安全、隐私与争议",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "32-yuan-cheng-kong-zhi-yu-jin-ji-kai-guan",
+      "title": "远程控制与紧急开关",
+      "file": "32-yuan-cheng-kong-zhi-yu-jin-ji-kai-guan.md",
+      "section": "安全、隐私与争议",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "33-feng-hao-ji-zhi-ni-xiang-tan-cha",
+      "title": "封号机制逆向探查",
+      "file": "33-feng-hao-ji-zhi-ni-xiang-tan-cha.md",
+      "section": "安全、隐私与争议",
+      "level": "Advanced"
+    },
+    {
+      "slug": "34-claude-code-vs-cursor-vs-cline-gong-neng-dui-bi",
+      "title": "Claude Code vs Cursor vs Cline 功能对比",
+      "file": "34-claude-code-vs-cursor-vs-cline-gong-neng-dui-bi.md",
+      "section": "竞品对比与行业洞察",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "35-zhong-guo-ai-gong-si-ru-he-cong-claude-code-xue-xi",
+      "title": "中国 AI 公司如何从 Claude Code 学习",
+      "file": "35-zhong-guo-ai-gong-si-ru-he-cong-claude-code-xue-xi.md",
+      "section": "竞品对比与行业洞察",
+      "level": "Advanced"
+    },
+    {
+      "slug": "36-ai-agent-xing-ye-jing-zheng-luo-ji-fen-xi",
+      "title": "AI Agent 行业竞争逻辑分析",
+      "file": "36-ai-agent-xing-ye-jing-zheng-luo-ji-fen-xi.md",
+      "section": "竞品对比与行业洞察",
+      "level": "Advanced"
+    },
+    {
+      "slug": "37-wai-bu-fen-xi-wen-zhang-suo-yin",
+      "title": "外部分析文章索引",
+      "file": "37-wai-bu-fen-xi-wen-zhang-suo-yin.md",
+      "section": "附录与参考资料",
+      "level": "Beginner"
+    },
+    {
+      "slug": "38-yuan-ma-mo-kuai-qing-dan-yu-guan-jian-wen-jian-ding-wei",
+      "title": "源码模块清单与关键文件定位",
+      "file": "38-yuan-ma-mo-kuai-qing-dan-yu-guan-jian-wen-jian-ding-wei.md",
+      "section": "附录与参考资料",
+      "level": "Intermediate"
+    },
+    {
+      "slug": "39-technical-deep-dive-webfetchtool-shi-xian-jie-xi",
+      "title": "Technical Deep Dive：WebFetchTool 实现解析",
+      "file": "39-technical-deep-dive-webfetchtool-shi-xian-jie-xi.md",
+      "section": "附录与参考资料",
+      "level": "Advanced"
+    }
+  ]
+}

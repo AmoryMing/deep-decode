@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">三重指数：同一条曲线的三个投影</text>
+  <text x="400" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="middle">算力增长如何驱动劳动替代、寿命突破和意识迁移</text>
+
+  <!-- Axis -->
+  <line x1="80" y1="420" x2="750" y2="420" stroke="#ddd" stroke-width="1"/>
+  <line x1="80" y1="420" x2="80" y2="80" stroke="#ddd" stroke-width="1"/>
+
+  <!-- X axis labels -->
+  <text x="150" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle">2024</text>
+  <text x="280" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle">2027</text>
+  <text x="410" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle">2030</text>
+  <text x="540" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle">2035</text>
+  <text x="670" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle">2040</text>
+
+  <!-- Y axis label -->
+  <text x="30" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999" text-anchor="middle" transform="rotate(-90,30,250)">影响程度</text>
+
+  <!-- Curve 1: AI Agent / Labor -->
+  <path d="M150,380 Q220,375 280,360 Q340,330 410,260 Q480,180 540,130 Q600,100 670,95"
+        stroke="#2383E2" stroke-width="2.5" fill="none"/>
+  <circle cx="410" cy="260" r="5" fill="#2383E2"/>
+  <text x="422" y="255" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">$10K 替代知识工人</text>
+
+  <!-- Curve 2: Longevity -->
+  <path d="M150,400 Q280,395 410,380 Q480,350 540,260 Q600,170 670,120"
+        stroke="#4DB6AC" stroke-width="2.5" fill="none"/>
+  <circle cx="540" cy="260" r="5" fill="#4DB6AC"/>
+  <text x="552" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC">LEV 大众可及</text>
+
+  <!-- Curve 3: Consciousness -->
+  <path d="M150,410 Q280,408 410,400 Q480,390 540,350 Q600,280 670,160"
+        stroke="#EB5757" stroke-width="2.5" fill="none" stroke-dasharray="6,3"/>
+  <circle cx="670" cy="160" r="5" fill="#EB5757"/>
+  <text x="682" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757">分形心智?</text>
+
+  <!-- Milestone markers -->
+  <line x1="280" y1="420" x2="280" y2="85" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="280" y="470" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">AGI 2029</text>
+  <text x="280" y="482" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#999" text-anchor="middle">(Kurzweil)</text>
+
+  <line x1="475" y1="420" x2="475" y2="85" stroke="#eee" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="475" y="470" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666" text-anchor="middle">LEV 富人 2032</text>
+
+  <!-- Legend -->
+  <rect x="100" y="85" width="220" height="80" rx="6" fill="#F7F7F5" stroke="#eee"/>
+  <line x1="115" y1="105" x2="145" y2="105" stroke="#2383E2" stroke-width="2"/>
+  <text x="155" y="109" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">劳动替代（AI Agent 经济）</text>
+  <line x1="115" y1="125" x2="145" y2="125" stroke="#4DB6AC" stroke-width="2"/>
+  <text x="155" y="129" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">寿命延展（LEV）</text>
+  <line x1="115" y1="145" x2="145" y2="145" stroke="#EB5757" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="155" y="149" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">意识迁移（分形心智）</text>
+
+  <!-- Causality arrow annotation -->
+  <rect x="480" y="85" width="260" height="55" rx="6" fill="#FFF8E1" stroke="#FFB020" stroke-width="0.5"/>
+  <text x="495" y="103" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">因果链：算力 → AI能力 → 劳动替代</text>
+  <text x="495" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">→ 资本涌入生物技术 → 寿命突破</text>
+  <text x="495" y="133" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#999">不是三个独立预测，是一条曲线的投影</text>
+</svg>

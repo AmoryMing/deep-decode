@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" font-weight="bold">对齐-能力悖论：登山向导比喻</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#999">越对齐 + 越强大 = 反而越危险？Anthropic 说是的</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="350" x2="720" y2="350" stroke="#37352F" stroke-width="1.5"/>
+  <line x1="100" y1="350" x2="100" y2="90" stroke="#37352F" stroke-width="1.5"/>
+  <text x="410" y="390" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">模型能力</text>
+  <text x="60" y="220" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" transform="rotate(-90,60,220)">风险水平</text>
+
+  <!-- Alignment line (green, going down) -->
+  <path d="M120,300 Q300,270 450,200 Q550,160 700,120" fill="none" stroke="#4DB6AC" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="710" y="110" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" font-weight="bold">对齐程度</text>
+  <text x="710" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">(越来越好)</text>
+
+  <!-- Scope/permissions line (red, going up steeply) -->
+  <path d="M120,320 Q250,310 400,260 Q500,220 600,150 Q660,110 700,95" fill="none" stroke="#EB5757" stroke-width="2.5"/>
+  <text x="715" y="88" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" font-weight="bold">使用范围</text>
+  <text x="715" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">(权限+自主度)</text>
+
+  <!-- Net risk (blue, U-shape bottom then up) -->
+  <path d="M120,280 Q250,310 350,300 Q450,290 550,240 Q620,200 700,160" fill="none" stroke="#2383E2" stroke-width="3"/>
+  <text x="715" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" font-weight="bold">实际风险</text>
+
+  <!-- Model labels on x-axis -->
+  <line x1="200" y1="345" x2="200" y2="355" stroke="#37352F"/>
+  <text x="200" y="375" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">Haiku</text>
+  <line x1="350" y1="345" x2="350" y2="355" stroke="#37352F"/>
+  <text x="350" y="375" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">Sonnet</text>
+  <line x1="500" y1="345" x2="500" y2="355" stroke="#37352F"/>
+  <text x="500" y="375" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">Opus 4.6</text>
+  <line x1="650" y1="345" x2="650" y2="355" stroke="#37352F"/>
+  <text x="650" y="375" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" font-weight="bold">Mythos</text>
+
+  <!-- Annotation box -->
+  <rect x="160" y="100" width="310" height="75" rx="8" fill="#FFF8E1" stroke="#FFB020" stroke-width="1"/>
+  <text x="175" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" font-weight="bold">Anthropic 的登山向导比喻：</text>
+  <text x="175" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">新手向导走安全路线，能力有限但风险也低</text>
+  <text x="175" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666">老手向导更谨慎，但带你去更危险的地方</text>
+  <text x="175" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">范围扩大 > 谨慎提升 = 净风险上升</text>
+
+  <text x="400" y="430" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">风险 = 失败率 x 权限 x 自主度 x 不可检测性 (Penligent)</text>
+</svg>

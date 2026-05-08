@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Top accent bar -->
+  <rect x="0" y="0" width="800" height="6" fill="#2383E2"/>
+
+  <!-- Series badge -->
+  <rect x="40" y="30" width="120" height="28" rx="14" fill="#EBF5FF" stroke="#2383E2" stroke-width="1"/>
+  <text x="100" y="49" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" text-anchor="middle">AI 笔记 TEDx</text>
+
+  <!-- Date -->
+  <text x="760" y="49" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#999" text-anchor="end">2026.04.13</text>
+
+  <!-- Main title -->
+  <text x="400" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="36" font-weight="bold" fill="#37352F" text-anchor="middle">一万美元买一个"你"</text>
+  <text x="400" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#666" text-anchor="middle">一个 Z 世代工程师的未来 20 年推演</text>
+
+  <!-- Divider -->
+  <line x1="300" y1="190" x2="500" y2="190" stroke="#E8D5B5" stroke-width="1"/>
+
+  <!-- Three pillars -->
+  <!-- Pillar 1 -->
+  <rect x="60" y="220" width="200" height="140" rx="10" fill="#F7F7F5" stroke="#eee" stroke-width="1"/>
+  <circle cx="160" cy="255" r="18" fill="#EBF5FF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="160" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2" text-anchor="middle">01</text>
+  <text x="160" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">大脱钩</text>
+  <text x="160" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">$10K 替代知识工人</text>
+  <text x="160" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">生产力与就业脱节</text>
+  <text x="160" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2" text-anchor="middle">2030</text>
+
+  <!-- Pillar 2 -->
+  <rect x="300" y="220" width="200" height="140" rx="10" fill="#F7F7F5" stroke="#eee" stroke-width="1"/>
+  <circle cx="400" cy="255" r="18" fill="#F0FFF0" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="400" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#4DB6AC" text-anchor="middle">02</text>
+  <text x="400" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">长寿逃逸</text>
+  <text x="400" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">AGI 加速药物研发</text>
+  <text x="400" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">衰老变成软件问题</text>
+  <text x="400" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC" text-anchor="middle">2032-2040</text>
+
+  <!-- Pillar 3 -->
+  <rect x="540" y="220" width="200" height="140" rx="10" fill="#F7F7F5" stroke="#eee" stroke-width="1"/>
+  <circle cx="640" cy="255" r="18" fill="#FFF8E1" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="640" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFB020" text-anchor="middle">03</text>
+  <text x="640" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F" text-anchor="middle">分形心智</text>
+  <text x="640" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">意识 = 模式，非基底</text>
+  <text x="640" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#666" text-anchor="middle">碳基/硅基/湿件</text>
+  <text x="640" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFB020" text-anchor="middle">2040+</text>
+
+  <!-- Connecting arrows -->
+  <line x1="260" y1="290" x2="300" y2="290" stroke="#ddd" stroke-width="1.5"/>
+  <polygon points="298,286 306,290 298,294" fill="#ddd"/>
+  <line x1="500" y1="290" x2="540" y2="290" stroke="#ddd" stroke-width="1.5"/>
+  <polygon points="538,286 546,290 538,294" fill="#ddd"/>
+
+  <!-- Source info -->
+  <rect x="40" y="390" width="720" height="70" rx="8" fill="#F7F7F5" stroke="#eee"/>
+  <text x="60" y="415" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">Judah Anttila</text>
+  <text x="210" y="415" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#666">OU 工业与系统工程 加速硕士 | TEDxOU | 16 min</text>
+  <text x="60" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">117K views in 2 weeks | 同一演讲早期版本: GSC Webinar (Feb 2026, 58 views)</text>
+  <text x="60" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">youtube.com/watch?v=FqlNhe8a_sM</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="494" width="800" height="6" fill="#2383E2"/>
+</svg>

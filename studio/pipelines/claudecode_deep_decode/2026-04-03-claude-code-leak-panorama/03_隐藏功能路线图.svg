@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">四个隐藏功能 = 一张产品路线图</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">44 个 Feature Flag / 编译时全部 false / 每个都是商业目标的直接映射</text>
+
+  <!-- KAIROS -->
+  <rect x="40" y="90" width="340" height="130" rx="8" fill="#F7F7F5" stroke="#2383E2" stroke-width="2"/>
+  <text x="60" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2">KAIROS</text>
+  <text x="155" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">7x24 后台 Daemon</text>
+  <text x="60" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">tick 心跳驱动，有活就干，没活就 Sleep</text>
+  <text x="60" y="162" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">监控代码仓库 / 处理 CI 失败 / 主动 PR review</text>
+  <rect x="60" y="180" width="120" height="24" rx="4" fill="#2383E2" opacity="0.12"/>
+  <text x="120" y="196" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2">延伸使用深度</text>
+
+  <!-- Buddy -->
+  <rect x="420" y="90" width="340" height="130" rx="8" fill="#F7F7F5" stroke="#9B51E0" stroke-width="2"/>
+  <text x="440" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#9B51E0">Buddy</text>
+  <text x="505" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">电子宠物系统</text>
+  <text x="440" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">18 物种 / 5 级稀有度 / 1% 闪光率</text>
+  <text x="440" y="162" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">userId 哈希确定性生成，改配置刷不出稀有</text>
+  <rect x="440" y="180" width="120" height="24" rx="4" fill="#9B51E0" opacity="0.12"/>
+  <text x="500" y="196" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0">延伸使用频度</text>
+
+  <!-- Undercover -->
+  <rect x="40" y="240" width="340" height="130" rx="8" fill="#F7F7F5" stroke="#FFB020" stroke-width="2"/>
+  <text x="60" y="268" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#FFB020">Undercover</text>
+  <text x="170" y="268" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">隐身模式 (~90 行)</text>
+  <text x="60" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">抹除 commit / PR / 文件头中的 AI 痕迹</text>
+  <text x="60" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"Do not blow your cover"</text>
+  <rect x="60" y="330" width="140" height="24" rx="4" fill="#FFB020" opacity="0.12"/>
+  <text x="130" y="346" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFB020">企业客户合规需求</text>
+
+  <!-- Anti-Distillation -->
+  <rect x="420" y="240" width="340" height="130" rx="8" fill="#FFF5F5" stroke="#EB5757" stroke-width="2"/>
+  <text x="440" y="268" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757">Anti-Distillation</text>
+  <text x="440" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">检测输出被用于训练竞品时</text>
+  <text x="440" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">注入 fake_tools 虚假定义，污染训练集</text>
+  <rect x="440" y="330" width="100" height="24" rx="4" fill="#EB5757" opacity="0.12"/>
+  <text x="490" y="346" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">竞争防御</text>
+
+  <!-- Bottom -->
+  <text x="400" y="405" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">不是拍脑袋做的功能 -- 深度 / 频度 / 合规 / 防御，四条线都是商业目标的直接映射</text>
+</svg>

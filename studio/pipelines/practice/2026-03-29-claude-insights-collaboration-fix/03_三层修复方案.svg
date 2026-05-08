@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Inter', sans-serif; }
+    </style>
+  </defs>
+
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#37352F">三层修复：规则 + 自动化 + 行为</text>
+  <text x="400" y="58" text-anchor="middle" font-size="12" fill="#64748B">从"每次手动纠正"到"一次性规则自动执行"</text>
+
+  <!-- Layer 1: Rules -->
+  <rect x="40" y="85" width="720" height="100" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+  <text x="70" y="110" font-size="14" font-weight="700" fill="#1E40AF">第一层：CLAUDE.md 沟通规则</text>
+  <text x="70" y="132" font-size="12" fill="#1E3A8A">解决：AI 理解错意图（55次）+ 讨论过多（方向跑偏79次）</text>
+
+  <rect x="70" y="145" width="145" height="28" rx="6" fill="#DBEAFE"/>
+  <text x="142" y="163" text-anchor="middle" font-size="11" fill="#1E40AF">先复述再动手</text>
+
+  <rect x="225" y="145" width="145" height="28" rx="6" fill="#DBEAFE"/>
+  <text x="297" y="163" text-anchor="middle" font-size="11" fill="#1E40AF">术语配大白话</text>
+
+  <rect x="380" y="145" width="145" height="28" rx="6" fill="#DBEAFE"/>
+  <text x="452" y="163" text-anchor="middle" font-size="11" fill="#1E40AF">不给3个方案</text>
+
+  <rect x="535" y="145" width="100" height="28" rx="6" fill="#DBEAFE"/>
+  <text x="585" y="163" text-anchor="middle" font-size="11" fill="#1E40AF">2轮出产出</text>
+
+  <rect x="645" y="145" width="100" height="28" rx="6" fill="#DBEAFE"/>
+  <text x="695" y="163" text-anchor="middle" font-size="11" fill="#1E40AF">主动存档</text>
+
+  <!-- Layer 2: Automation -->
+  <rect x="40" y="205" width="720" height="85" rx="12" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+  <text x="70" y="230" font-size="14" font-weight="700" fill="#166534">第二层：Pre-Edit Hook 自动备份</text>
+  <text x="70" y="252" font-size="12" fill="#15803D">解决：AI 改文件不备份导致版本丢失</text>
+  <rect x="70" y="262" width="450" height="20" rx="4" fill="#DCFCE7"/>
+  <text x="80" y="277" font-size="11" font-family="monospace" fill="#166534">Edit|Write → auto cp file file.bak → 再编辑</text>
+
+  <!-- Layer 3: Behavior -->
+  <rect x="40" y="310" width="720" height="85" rx="12" fill="#FAF5FF" stroke="#C4B5FD" stroke-width="1.5"/>
+  <text x="70" y="335" font-size="14" font-weight="700" fill="#5B21B6">第三层：调自己的行为</text>
+  <text x="70" y="357" font-size="12" fill="#6B21A8">解决：直觉准但表达有延迟、不懂不敢问</text>
+
+  <rect x="70" y="367" width="200" height="20" rx="4" fill="#EDE9FE"/>
+  <text x="170" y="382" text-anchor="middle" font-size="11" fill="#5B21B6">不懂就立刻说</text>
+
+  <rect x="285" y="367" width="200" height="20" rx="4" fill="#EDE9FE"/>
+  <text x="385" y="382" text-anchor="middle" font-size="11" fill="#5B21B6">感觉不对就打断</text>
+
+  <rect x="500" y="367" width="200" height="20" rx="4" fill="#EDE9FE"/>
+  <text x="600" y="382" text-anchor="middle" font-size="11" fill="#5B21B6">先说要什么再说背景</text>
+
+  <!-- Arrow: flow -->
+  <text x="400" y="410" text-anchor="middle" font-size="12" font-weight="600" fill="#64748B">自上而下：系统规则 → 自动执行 → 人的习惯</text>
+</svg>

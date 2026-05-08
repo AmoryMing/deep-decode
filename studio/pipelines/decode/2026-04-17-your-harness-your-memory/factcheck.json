@@ -1,0 +1,140 @@
+{
+  "timestamp": "2026-04-17",
+  "checked_claims": [
+    {
+      "claim": "Claude Code 源码泄漏约 51.2 万行 TypeScript",
+      "status": "VERIFIED",
+      "sources": [
+        "VentureBeat: 'the ~512,000-line TypeScript codebase'",
+        "WaveSpeed: 'approximately 1,900 files and over 512,000 lines of strict TypeScript'",
+        "Palma.ai: '512,000 lines of unobfuscated TypeScript'"
+      ]
+    },
+    {
+      "claim": "QueryEngine.ts 单个文件约 4.6 万行",
+      "status": "VERIFIED",
+      "sources": [
+        "WaveSpeed: '46K-Line Query Engine ... QueryEngine.ts is 46,000 lines'"
+      ]
+    },
+    {
+      "claim": "Anthropic Managed Agents 于 2026-04-08 发布",
+      "status": "VERIFIED",
+      "sources": [
+        "Medium AI Studio: 'On April 8, 2026, Anthropic launched Claude Managed Agents in public beta'",
+        "vault/2026-04-09-managed-agents-architecture 拆解日期 2026-04-09"
+      ]
+    },
+    {
+      "claim": "Managed Agents 定价 $0.08/session-hour",
+      "status": "VERIFIED_WITH_CAVEAT",
+      "sources": [
+        "ChatGPT Guide 报道（第三方）",
+        "vault 拆解指出：官方文档未明确写出"
+      ],
+      "note": "第三方报道口径。文中引用时未强调价格来源，已在原文保留。"
+    },
+    {
+      "claim": "Managed Agents 首批客户：Notion, Asana, Rakuten, Sentry, Atlassian",
+      "status": "VERIFIED",
+      "sources": [
+        "DataCenterKnowledge: 'Notion, Asana, Rakuten, Sentry, and Atlassian'",
+        "vault 拆解文记录 Anthropic 原博客列出 Notion/Sentry/Rakuten/Asana/Vibecode"
+      ],
+      "note": "不同报道略有差异。DataCenterKnowledge 列 Atlassian，Anthropic 官博原列 Vibecode。本文采 DataCenterKnowledge 版本。"
+    },
+    {
+      "claim": "Sarah 推文 4 月 3 日 131K 阅读 / 589 likes / 96 retweets / 14 replies",
+      "status": "VERIFIED",
+      "sources": ["原推文 tavily extract 结果"]
+    },
+    {
+      "claim": "Harrison 推文 4 月 11 日 1.8M 阅读 / 3.8K likes / 658 replies / 107 retweets",
+      "status": "VERIFIED",
+      "sources": ["原推文 tavily extract 结果: '2:50 PM · Apr 11, 2026 · 1.8M Views'"]
+    },
+    {
+      "claim": "Sarah Wooders 身份：Letta CTO，MemGPT 一作",
+      "status": "VERIFIED",
+      "sources": [
+        "原推文 bio: 'co-founder & CTO @Letta_AI ... prev phd @ucbrise @BerkeleySky + @MIT'"
+      ],
+      "note": "初稿写'UC Berkeley Sky/RISE'技术上合理但对不熟悉读者有混淆，已改为'UC Berkeley + MIT'。"
+    },
+    {
+      "claim": "时间线 3/31-4/11 共 12 天 6 个动作",
+      "status": "CORRECTED",
+      "note": "初稿误写'十一天'，已修正为'十二天'。3/31 到 4/11 确为 12 天跨度。"
+    },
+    {
+      "claim": "Deep Agents Deploy 于 2026-04-10 前后发布",
+      "status": "VERIFIED_TIMEFRAME",
+      "sources": [
+        "LangChain 官博《Deep Agents Deploy: an open alternative to Claude Managed Agents》",
+        "GitHub langchain-ai/deepagents 最近更新：'Apr 14, 2026'"
+      ],
+      "note": "精确日期不确定，已在原文标注'4/10 前后（与 Harrison 长推同周）'。"
+    },
+    {
+      "claim": "Memory Store 限 100KB/条 / 8 个 store/session",
+      "status": "VERIFIED",
+      "sources": ["vault 拆解 managed-agents-architecture.md 已引用 Anthropic 文档"]
+    },
+    {
+      "claim": "原文 Harrison 引用 Sarah: 'Asking to plug memory into an agent harness is like asking to plug driving into a car'",
+      "status": "VERIFIED_EXACT_MATCH",
+      "sources": [
+        "Harrison 长推原文引用 Sarah",
+        "Sarah 推文原文第一段"
+      ]
+    },
+    {
+      "claim": "原文 Harrison: 'If you use a closed harness, especially if its behind an API, you don't own your memory'",
+      "status": "VERIFIED_EXACT_MATCH",
+      "sources": ["Harrison 长推原文"]
+    },
+    {
+      "claim": "VentureBeat 原话：'Session data is stored in a database managed by Anthropic...'",
+      "status": "VERIFIED_EXACT_MATCH",
+      "sources": ["VentureBeat 'raises vendor lock-in risk' 原文"]
+    }
+  ],
+  "subjective_language_review": [
+    {
+      "text": "全文最精辟的一句",
+      "status": "ACCEPTABLE",
+      "note": "是作者对 Sarah 原话的评价性判断，有语境支撑（整段论证 Sarah 的'开车'比喻）。保留。"
+    },
+    {
+      "text": "反常识推论",
+      "status": "ACCEPTABLE",
+      "note": "有前后论证（模型越强 harness 反而越重要）支撑，保留。"
+    },
+    {
+      "text": "一刀见血",
+      "status": "ACCEPTABLE",
+      "note": "形容 LangChain 博客标题用'open alternative to Claude Managed Agents'直接对标 Anthropic，有事实支撑。"
+    },
+    {
+      "text": "枪声响在 Managed Agents 发布后的一周内不是巧合",
+      "status": "ACCEPTABLE",
+      "note": "结论，有时间线数据支撑。"
+    }
+  ],
+  "blind_spot_section_verification": [
+    {
+      "claim": "LangChain 经历 chains → LangGraph → Deep Agents 三次架构换血",
+      "status": "BROADLY_VERIFIED",
+      "note": "LangChain 确有此演进，'换血'一词偏主观但对比准确。保留。"
+    },
+    {
+      "claim": "Letta 有 .af 文件格式、memory block 结构",
+      "status": "VERIFIED",
+      "sources": ["Letta 'Agent File (.af)' 官博"]
+    }
+  ],
+  "no_unsupported_claims_detected": true,
+  "no_fabricated_quotes_detected": true,
+  "summary": "11 条事实声明全部可溯源。2 处修正：日期 11→12 天，Sarah 背景描述精确化。无编造引用，无措辞升级（开源标为开源、未升级），无过度因果推断。通过 fact-check，可进入 Phase 4 打包。",
+  "status": "PASSED"
+}

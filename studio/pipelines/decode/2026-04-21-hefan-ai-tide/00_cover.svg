@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <defs>
+    <linearGradient id="seaGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#EEF4F8"/>
+      <stop offset="1" stop-color="#CFE2EE"/>
+    </linearGradient>
+    <linearGradient id="tideGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7FB3CC"/>
+      <stop offset="1" stop-color="#2383E2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <!-- 顶部主标题 -->
+  <text x="400" y="56" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="700" fill="#37352F">越追 AI 风口，越被反收割</text>
+  <text x="400" y="90" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#787774">潮汐 vs 浪花 · 一份给产品人的守树手册</text>
+
+  <!-- 海面 -->
+  <rect x="40" y="180" width="720" height="300" fill="url(#seaGrad)" rx="8"/>
+
+  <!-- 浪花（多层叠加，强调"快速但表层"）-->
+  <g opacity="0.95">
+    <path d="M60,230 Q110,215 160,230 T260,230 T360,230 T460,230 T560,230 T660,230 T760,230" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60,250 Q120,240 180,250 T300,250 T420,250 T540,250 T660,250 T760,250" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M60,270 Q100,262 140,270 T220,270 T300,270 T380,270 T460,270 T540,270 T620,270 T700,270 T760,270" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+  </g>
+
+  <!-- 浪花标签 -->
+  <g>
+    <rect x="100" y="195" width="90" height="24" rx="12" fill="#EB5757" opacity="0.9"/>
+    <text x="145" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">新模型发布</text>
+
+    <rect x="340" y="195" width="90" height="24" rx="12" fill="#FFB020" opacity="0.9"/>
+    <text x="385" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">融资新纪录</text>
+
+    <rect x="580" y="195" width="90" height="24" rx="12" fill="#9B51E0" opacity="0.9"/>
+    <text x="625" y="212" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">明星跳槽</text>
+  </g>
+
+  <!-- 浪花说明 -->
+  <text x="60" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" font-weight="600">快变量 · 浪花</text>
+  <text x="60" y="340" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">声势浩大，一天一变，抢走你全部的注意力</text>
+
+  <!-- 潮汐（底部粗横带） -->
+  <rect x="60" y="410" width="680" height="50" fill="url(#tideGrad)" rx="4" opacity="0.85"/>
+  <text x="400" y="442" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">慢变量 · 潮汐：技术革命 · 人口结构 · 全球化进程</text>
+
+  <!-- 潮汐箭头 -->
+  <g stroke="#2383E2" stroke-width="2" fill="none">
+    <path d="M80,400 L80,470" marker-end="url(#arr)"/>
+    <path d="M720,470 L720,400" marker-end="url(#arr2)"/>
+  </g>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2383E2"/>
+    </marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2383E2"/>
+    </marker>
+  </defs>
+
+  <!-- 底部金句 -->
+  <rect x="40" y="500" width="720" height="40" fill="#F7F7F5" rx="8"/>
+  <text x="400" y="526" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-style="italic" fill="#37352F">贸易摩擦只是树枝，国际关系才是大树；股价涨跌只是浪花，技术革命才是洋流。</text>
+</svg>

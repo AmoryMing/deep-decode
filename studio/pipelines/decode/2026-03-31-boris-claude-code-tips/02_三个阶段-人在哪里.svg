@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">人在哪里？-- 从键盘前到不在场</text>
+
+  <!-- LEFT: Phase 1 - Person at keyboard -->
+  <rect x="30" y="65" width="230" height="330" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="145" y="92" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#2383E2">阶段一</text>
+
+  <!-- Desk with person (simple stick figure at keyboard) -->
+  <circle cx="145" cy="145" r="15" fill="none" stroke="#37352F" stroke-width="2"/>
+  <line x1="145" y1="160" x2="145" y2="200" stroke="#37352F" stroke-width="2"/>
+  <line x1="145" y1="175" x2="120" y2="195" stroke="#37352F" stroke-width="2"/>
+  <line x1="145" y1="175" x2="170" y2="195" stroke="#37352F" stroke-width="2"/>
+  <!-- Keyboard -->
+  <rect x="105" y="205" width="80" height="15" rx="3" fill="#E3E2E0" stroke="#9B9A97" stroke-width="1"/>
+  <!-- One screen -->
+  <rect x="115" y="225" width="60" height="40" rx="3" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="145" y="250" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">1 个会话</text>
+
+  <text x="145" y="295" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">人在键盘前</text>
+  <text x="145" y="315" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">一问一答</text>
+  <text x="145" y="335" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">人 : AI = 1 : 1</text>
+  <rect x="70" y="355" width="150" height="25" rx="5" fill="#2383E2" opacity="0.1"/>
+  <text x="145" y="373" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2">写代码</text>
+
+  <!-- Arrow 1-->
+  <path d="M 270 220 L 290 220" stroke="#37352F" stroke-width="2" marker-end="url(#arrowE)"/>
+  <defs>
+    <marker id="arrowE" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+    </marker>
+  </defs>
+
+  <!-- MIDDLE: Phase 2 - Person on phone -->
+  <rect x="290" y="65" width="230" height="330" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="405" y="92" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#FFB020">阶段二</text>
+
+  <!-- Person holding phone (simplified) -->
+  <circle cx="365" cy="145" r="15" fill="none" stroke="#37352F" stroke-width="2"/>
+  <line x1="365" y1="160" x2="365" y2="200" stroke="#37352F" stroke-width="2"/>
+  <line x1="365" y1="175" x2="345" y2="190" stroke="#37352F" stroke-width="2"/>
+  <!-- Phone in hand -->
+  <rect x="335" y="188" width="20" height="30" rx="3" fill="#FFB020" opacity="0.3" stroke="#FFB020" stroke-width="1.5"/>
+  <line x1="365" y1="175" x2="385" y2="195" stroke="#37352F" stroke-width="2"/>
+
+  <!-- Multiple screens running -->
+  <rect x="400" y="150" width="25" height="18" rx="2" fill="#FFFFFF" stroke="#FFB020" stroke-width="1"/>
+  <rect x="430" y="150" width="25" height="18" rx="2" fill="#FFFFFF" stroke="#FFB020" stroke-width="1"/>
+  <rect x="400" y="175" width="25" height="18" rx="2" fill="#FFFFFF" stroke="#FFB020" stroke-width="1"/>
+  <rect x="430" y="175" width="25" height="18" rx="2" fill="#FFFFFF" stroke="#FFB020" stroke-width="1"/>
+  <rect x="400" y="200" width="25" height="18" rx="2" fill="#FFFFFF" stroke="#FFB020" stroke-width="1"/>
+  <text x="427" y="232" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#CC8800">5 个 Worktree</text>
+
+  <text x="405" y="270" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">人在手机上</text>
+  <text x="405" y="290" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">语音指挥、并行跑</text>
+  <text x="405" y="310" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">人 : AI = 1 : 5</text>
+  <rect x="330" y="330" width="150" height="25" rx="5" fill="#FFB020" opacity="0.1"/>
+  <text x="405" y="348" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#CC8800">编排意图</text>
+
+  <!-- Arrow 2 -->
+  <path d="M 530 220 L 550 220" stroke="#37352F" stroke-width="2" marker-end="url(#arrowE)"/>
+
+  <!-- RIGHT: Phase 3 - Empty chair -->
+  <rect x="550" y="65" width="230" height="330" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="665" y="92" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#EB5757">阶段三</text>
+
+  <!-- Empty chair -->
+  <path d="M 630 175 Q 630 200 640 200 L 670 200 Q 680 200 680 175" fill="none" stroke="#9B9A97" stroke-width="2" stroke-linecap="round"/>
+  <line x1="630" y1="200" x2="625" y2="225" stroke="#9B9A97" stroke-width="2"/>
+  <line x1="680" y1="200" x2="685" y2="225" stroke="#9B9A97" stroke-width="2"/>
+  <!-- Coffee cup (person was here) -->
+  <rect x="645" y="155" width="20" height="15" rx="2" fill="none" stroke="#9B9A97" stroke-width="1.5"/>
+  <path d="M 665 158 Q 672 162 665 167" fill="none" stroke="#9B9A97" stroke-width="1"/>
+  <!-- Steam -->
+  <path d="M 650 150 Q 653 142 650 135" fill="none" stroke="#9B9A97" stroke-width="1" opacity="0.5"/>
+  <path d="M 658 148 Q 661 140 658 132" fill="none" stroke="#9B9A97" stroke-width="1" opacity="0.5"/>
+
+  <!-- Massive grid of screens running -->
+  <g opacity="0.8">
+    <rect x="595" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="610" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="625" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="640" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="655" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="670" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="685" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="700" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="715" y="240" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="595" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="610" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="625" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="640" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="655" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="670" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="685" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="700" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+    <rect x="715" y="253" width="12" height="9" rx="1" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="0.5"/>
+  </g>
+  <text x="665" y="283" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757">1000 个 Agent</text>
+
+  <text x="665" y="310" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">人不在场</text>
+  <text x="665" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">定时巡检、批量执行</text>
+  <text x="665" y="350" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">人 : AI = 1 : 1000</text>
+  <rect x="590" y="363" width="150" height="25" rx="5" fill="#EB5757" opacity="0.1"/>
+  <text x="665" y="381" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">定义标准</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="420" width="560" height="45" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="448" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">瓶颈迁移：写代码 → 编排意图 → 定义标准和验收规则</text>
+</svg>

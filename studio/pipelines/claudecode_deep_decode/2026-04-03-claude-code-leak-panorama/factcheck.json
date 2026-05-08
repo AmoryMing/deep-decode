@@ -1,0 +1,56 @@
+{
+  "article": "2026-04-03-claude-code-leak-panorama",
+  "checked_at": "2026-04-07",
+  "status": "PASS",
+  "fixes_applied": [
+    {
+      "claim": "16 个月后同类错误以更大规模重演",
+      "issue": "Feb 2025 to Mar 2026 = 13 months, not 16",
+      "fix": "Changed to 13",
+      "severity": "ERROR"
+    },
+    {
+      "claim": "Solayer Labs 安全研究员 Chaofan Shou",
+      "issue": "He is developer at Solayer Labs + co-founder/CTO of FuzzLand + UC Berkeley PhD candidate",
+      "source": "ccleaks.com, LinkedIn, RootData",
+      "fix": "Changed to Solayer Labs 开发者、FuzzLand 联合创始人",
+      "severity": "ERROR"
+    }
+  ],
+  "verified_claims": [
+    {"claim": "512,000 行 TypeScript", "source": "VentureBeat, Zscaler, The Hacker News", "status": "OK"},
+    {"claim": "npm @anthropic-ai/claude-code v2.1.88", "source": "Zscaler, VentureBeat", "status": "OK"},
+    {"claim": "59.8MB source map", "source": "Zscaler, ccleaks.com", "status": "OK"},
+    {"claim": "1,906 个文件 (title uses 1902 as series branding)", "source": "Zscaler", "status": "NOTE"},
+    {"claim": "X 帖 2880 万浏览", "source": "The Hacker News: 28.8M views", "status": "OK"},
+    {"claim": "两小时 50,000 stars", "source": "Layer5", "status": "OK"},
+    {"claim": "Boris Cherny 引用", "source": "Engineer's Codex exact quote", "status": "OK"},
+    {"claim": "Anthropic human error 回应", "source": "The Guardian, Layer5", "status": "OK"},
+    {"claim": "v0.2.8 2025-02 首次泄露", "source": "Multiple sources", "status": "OK"},
+    {"claim": "Bun bug 20 天前报告", "source": "Varshith Hegde, NodeSource", "status": "OK"},
+    {"claim": "Anthropic 收购 Bun", "source": "NodeSource, dev.to", "status": "OK"},
+    {"claim": "NodeSource responsibility quote", "source": "nodesource.com direct", "status": "OK"},
+    {"claim": "Anthropic ARR $19B", "source": "VentureBeat / The Information", "status": "OK"},
+    {"claim": "Claude Code ARR $2.5B", "source": "VentureBeat", "status": "OK"},
+    {"claim": "QueryEngine 13,000 行", "source": "PromptLayer (module aggregate)", "status": "NOTE"},
+    {"claim": "45 内置工具", "source": "rumor, Engineer's Codex", "status": "OK"},
+    {"claim": "92% 缓存复用率", "source": "LMCache blog", "status": "OK"},
+    {"claim": "CVE-2025-59536 CVE-2026-21852", "source": "Check Point Research confirmed", "status": "OK"},
+    {"claim": "Straiker 攻击面分析", "source": "Straiker blog via VentureBeat paraphrase", "status": "NOTE"},
+    {"claim": "Check Point config→execution quote", "source": "CPR blog + borncity.com", "status": "OK"},
+    {"claim": "print.ts 5594行 / 3167行函数 / 12层", "source": "Engineer's Codex", "status": "OK"},
+    {"claim": "LLM-oriented comments", "source": "Engineer's Codex exact quote", "status": "OK"},
+    {"claim": "44 Feature Flags", "source": "Varshith Hegde (noya21th lists 87, discrepancy)", "status": "NOTE"},
+    {"claim": "KAIROS tick + SleepTool", "source": "rumor context article", "status": "OK"},
+    {"claim": "Buddy 18种/5级/1%闪光", "source": "rumor + Engineer's Codex", "status": "OK"},
+    {"claim": "Undercover ~90行 + exact quote", "source": "Alex Kim, Medium onix_react", "status": "OK"},
+    {"claim": "Anti-Distillation fake_tools", "source": "Alex Kim blog", "status": "OK"},
+    {"claim": "同日 axios RAT 攻击", "source": "Zscaler, VentureBeat", "status": "OK"},
+    {"claim": "Sebastian Raschka secret sauce", "source": "sebastianraschka.com blog", "status": "OK"}
+  ],
+  "subjective_check": [
+    {"text": "最赚钱的 AI 编程工具", "verdict": "OK - $2.5B ARR supports"},
+    {"text": "最值得深挖", "verdict": "MILD - editorial, acceptable"},
+    {"text": "最不AI的方案", "verdict": "OK - descriptive contrast"}
+  ]
+}

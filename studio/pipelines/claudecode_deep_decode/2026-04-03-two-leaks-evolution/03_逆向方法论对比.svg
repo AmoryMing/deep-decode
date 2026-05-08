@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="bold" fill="#37352F">三种逆向方法论：各看到不同的真相</text>
+
+  <!-- Column 1: LLM Cleanroom -->
+  <rect x="30" y="60" width="235" height="340" rx="12" fill="#EBF3FE" stroke="#2383E2" stroke-width="1.5"/>
+  <rect x="30" y="60" width="235" height="44" rx="12" fill="#2383E2"/>
+  <rect x="30" y="86" width="235" height="18" fill="#2383E2"/>
+  <text x="147" y="87" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#fff">LLM Cleanroom</text>
+
+  <text x="147" y="126" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#37352F">ghuntley | 2025</text>
+  <line x1="60" y1="136" x2="235" y2="136" stroke="#2383E2" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="50" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">方法</text>
+  <text x="50" y="175" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">用 Claude 反编译 Claude</text>
+  <text x="50" y="191" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">混淆 JS -> 结构化 TS</text>
+
+  <text x="50" y="218" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">门槛</text>
+  <rect x="50" y="226" width="60" height="6" rx="3" fill="#4DB6AC"/>
+  <text x="118" y="232" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">低 (会写 prompt)</text>
+
+  <text x="50" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">看到什么</text>
+  <text x="50" y="275" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">代码结构</text>
+  <text x="50" y="291" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">模块边界</text>
+
+  <text x="50" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">革命性意义</text>
+  <text x="50" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">混淆从此只是减速带</text>
+  <text x="50" y="351" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">不再是安全屏障</text>
+
+  <!-- Column 2: Manual Reverse -->
+  <rect x="282" y="60" width="235" height="340" rx="12" fill="#FFF8E1" stroke="#FFB020" stroke-width="1.5"/>
+  <rect x="282" y="60" width="235" height="44" rx="12" fill="#FFB020"/>
+  <rect x="282" y="86" width="235" height="18" fill="#FFB020"/>
+  <text x="400" y="87" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#fff">手工逆向 + 运行时</text>
+
+  <text x="400" y="126" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#37352F">kolkov 团队 | 2026</text>
+  <line x1="312" y1="136" x2="487" y2="136" stroke="#FFB020" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="302" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">方法</text>
+  <text x="302" y="175" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">字符串猎手 + 变量追踪</text>
+  <text x="302" y="191" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">ccdiag 日志分析 148K 调用</text>
+
+  <text x="302" y="218" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">门槛</text>
+  <rect x="302" y="226" width="150" height="6" rx="3" fill="#EB5757"/>
+  <text x="460" y="232" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">高</text>
+
+  <text x="302" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">看到什么</text>
+  <text x="302" y="275" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">运行时行为 + bug</text>
+  <text x="302" y="291" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">16.3% 失败率 | 5.4% 孤儿调用</text>
+
+  <text x="302" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">独特价值</text>
+  <text x="302" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">代码是蓝图，日志是工地</text>
+  <text x="302" y="351" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">源码审查看不到的真相</text>
+
+  <!-- Column 3: Sourcemap -->
+  <rect x="534" y="60" width="235" height="340" rx="12" fill="#FDECEC" stroke="#EB5757" stroke-width="1.5"/>
+  <rect x="534" y="60" width="235" height="44" rx="12" fill="#EB5757"/>
+  <rect x="534" y="86" width="235" height="18" fill="#EB5757"/>
+  <text x="652" y="87" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#fff">Sourcemap 提取</text>
+
+  <text x="652" y="126" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#37352F">Chaofan Shou | 2026.03</text>
+  <line x1="564" y1="136" x2="739" y2="136" stroke="#EB5757" stroke-width="0.5" opacity="0.3"/>
+
+  <text x="554" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">方法</text>
+  <text x="554" y="175" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">npm pack -> 解析 .map JSON</text>
+  <text x="554" y="191" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">十行脚本还原 51 万行</text>
+
+  <text x="554" y="218" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">门槛</text>
+  <rect x="554" y="226" width="30" height="6" rx="3" fill="#4DB6AC"/>
+  <text x="592" y="232" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">极低</text>
+
+  <text x="554" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">看到什么</text>
+  <text x="554" y="275" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">完整源码 + 内部代号</text>
+  <text x="554" y="291" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">44 flags + 未发布功能</text>
+
+  <text x="554" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="bold">讽刺之处</text>
+  <text x="554" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#EB5757" font-weight="bold">防泄露系统自己被泄露</text>
+  <text x="554" y="351" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#666">Undercover Mode vs .npmignore</text>
+</svg>

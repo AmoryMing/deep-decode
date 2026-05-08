@@ -1,0 +1,102 @@
+{
+  "slug": "2026-04-03-kairos-daemon",
+  "checked_at": "2026-04-07",
+  "claims": [
+    {
+      "claim": "KAIROS 在源码中被引用超过 150 次，关联 75 个文件",
+      "source": "phase0_sources.json (75 files from context sources); VentureBeat/TheNewStack/WaveSpeed 多篇分析均引用 '150+ references'",
+      "status": "VERIFIED",
+      "note": "75 文件来自 phase0 源码分析；150 次引用是外部分析者的统计，多个独立来源一致"
+    },
+    {
+      "claim": "SleepTool prompt 中写了 'Each wake-up costs an API call, but the prompt cache expires after 5 minutes of inactivity'",
+      "source": "直接读取源码 src/tools/SleepTool/prompt.ts 第 17 行",
+      "status": "VERIFIED",
+      "note": "原文精确引用，已与源码核对一致"
+    },
+    {
+      "claim": "BriefTool 的 status 字段区分 normal 和 proactive",
+      "source": "直接读取源码 src/tools/BriefTool/prompt.ts 第 10 行",
+      "status": "VERIFIED",
+      "note": "原文精确引用"
+    },
+    {
+      "claim": "autoDream 触发条件：minHours: 24, minSessions: 5",
+      "source": "直接读取源码 src/services/autoDream/autoDream.ts 第 63-66 行 DEFAULTS 常量",
+      "status": "VERIFIED",
+      "note": "源码中明确定义的默认值"
+    },
+    {
+      "claim": "锁文件超过 1 小时未释放视为过期可回收",
+      "source": "直接读取源码 src/services/autoDream/consolidationLock.ts 第 19 行 HOLDER_STALE_MS = 60 * 60 * 1000",
+      "status": "VERIFIED",
+      "note": "源码常量精确对应"
+    },
+    {
+      "claim": "MEMORY.md 有 200 行和 25KB 双重限制，有人塞了 197KB",
+      "source": "源码解读记忆.md (troyhua 分析) 引用源码注释: 'p100 observed: 197KB under 200 lines'",
+      "status": "VERIFIED",
+      "note": "来自源码注释的真实数据"
+    },
+    {
+      "claim": "7x24 运行 AI Agent 三个月月均 $187",
+      "source": "dev.to 文章 'How Much Does It Actually Cost to Run an AI Agent 24/7 in 2026'",
+      "status": "VERIFIED",
+      "note": "作者三个月实测数据：API $359 + 基础设施，月均约 $187"
+    },
+    {
+      "claim": "Devin 2025 年定价 $500/月，任务完成率 15%",
+      "source": "LinkedIn 帖子 (Alshahria Shishir) + Qubika 评测",
+      "status": "VERIFIED",
+      "note": "15% 来自独立评测；$500/月是 Team 计划原始定价。后改为 $20/月 Core + $2.25/ACU"
+    },
+    {
+      "claim": "每次 tick 5 分钟一次，一天 288 次",
+      "source": "计算推导：24h * 60min / 5min = 288",
+      "status": "ANALYSIS",
+      "note": "基于 5 分钟 cache 过期的推理假设，非源码确认的实际频率。文中已用'假设'措辞"
+    },
+    {
+      "claim": "15 秒 proactive blocking budget",
+      "source": "TheNewStack 分析、Reddit r/artificial 帖子、WaveSpeed 分析均提到",
+      "status": "VERIFIED",
+      "note": "多个独立来源一致，但本文未直接从源码中读到此数值——来自外部分析者"
+    },
+    {
+      "claim": "KAIROS 这个名字来自古希腊语'恰当的时机'",
+      "source": "VentureBeat: 'KAIROS, the Ancient Greek concept of at the right time'",
+      "status": "VERIFIED",
+      "note": "Kairos 是古希腊语确实指'恰当时机'，VentureBeat 原文明确引用"
+    },
+    {
+      "claim": "getKairosActive() return false 禁用普通 autoDream",
+      "source": "直接读取源码 autoDream.ts 第 96 行",
+      "status": "VERIFIED",
+      "note": "源码精确对应，注释也写明 'KAIROS mode uses disk-skill dream'"
+    }
+  ],
+  "subjective_language_check": [
+    {
+      "phrase": "KAIROS 最精巧的设计",
+      "location": "SleepTool 章节",
+      "resolution": "基于成本感知休眠的独特性，在 always-on agent 领域无对标实现，保留但基于论证"
+    },
+    {
+      "phrase": "KAIROS 最让人意外的子系统",
+      "location": "autoDream 章节",
+      "resolution": "autoDream 的'做梦'命名和 REM 睡眠类比在多篇分析中被单独提出，保留"
+    }
+  ],
+  "qa_checklist": {
+    "numbers_traceable": true,
+    "no_wording_upgrade": true,
+    "english_quotes_match_source": true,
+    "names_spelled_correctly": true,
+    "no_overclaimed_causation": true,
+    "blind_spot_section_exists": true,
+    "superlatives_supported": true,
+    "structure_matches_value_claims": true,
+    "no_unattributed_emotional_language": true
+  },
+  "overall": "PASS"
+}

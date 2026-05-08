@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-04-17",
+  "topic": "Your Harness Your Memory - Open Harness vs Managed Agents 舆论战",
+  "signals": [
+    {
+      "id": "S1",
+      "type": "primary-source",
+      "title": "Your harness, your memory",
+      "url": "https://www.langchain.com/blog/your-harness-your-memory",
+      "author": "Harrison Chase (LangChain CEO)",
+      "date": "2026-04-11",
+      "views": "1.8M",
+      "reaction": "3.8K likes / 658 replies / 107 retweets",
+      "use": "一手论点，全文引用"
+    },
+    {
+      "id": "S2",
+      "type": "primary-source",
+      "title": "Why memory isn't a plugin (it's the harness)",
+      "url": "https://x.com/sarahwooders/status/2040121230473457921",
+      "author": "Sarah Wooders (Letta CTO, MemGPT co-author)",
+      "date": "2026-04-03",
+      "views": "131K",
+      "reaction": "589 likes / 96 retweets / 14 replies",
+      "use": "Harrison 引用的原框架：'plug memory into harness 如同 plug driving into car'"
+    },
+    {
+      "id": "S3",
+      "type": "product-launch-matched",
+      "title": "Deep Agents Deploy: an open alternative to Claude Managed Agents",
+      "url": "https://www.langchain.com/blog/deep-agents-deploy-an-open-alternative-to-claude-managed-agents",
+      "author": "LangChain",
+      "date": "2026-04 (Harrison 文章同期)",
+      "use": "关键发现：Harrison 的长推本质是 Deep Agents Deploy 的营销配套。'Your Harness Your Memory' 不是观点文，是产品战宣言。直接标题就是'open alternative to Claude Managed Agents'"
+    },
+    {
+      "id": "S4",
+      "type": "product-launch-matched",
+      "title": "Context Constitution",
+      "url": "https://www.letta.com/blog/context-constitution",
+      "author": "Letta",
+      "date": "2026-04-02",
+      "use": "Sarah 的产品配套。Letta 同期推出 Context Constitution+Letta Code (memory-first harness)，把'开源 harness+自有 memory'推为行业原则"
+    },
+    {
+      "id": "S5",
+      "type": "critical-counterpoint",
+      "title": "Anthropic's Claude Managed Agents gives enterprises a new one-stop shop but raises vendor 'lock-in' risk",
+      "url": "https://venturebeat.com/orchestration/anthropics-claude-managed-agents-gives-enterprises-a-new-one-stop-shop-but",
+      "author": "VentureBeat",
+      "date": "2026-04 中旬",
+      "key_quote": "Session data is stored in a database managed by Anthropic, increasing the risk that enterprises become locked into a system run by a single company.",
+      "use": "主流科技媒体交叉验证 Harrison 的锁定论点 - 这不是 LangChain 一家之言"
+    },
+    {
+      "id": "S6",
+      "type": "supporting-evidence",
+      "title": "Anthropic Targets AI Data Center Bottleneck With Managed Agents",
+      "url": "https://www.datacenterknowledge.com/data-center-software/anthropic-targets-ai-data-center-bottleneck-with-claude-managed-agents",
+      "author": "DataCenterKnowledge",
+      "date": "2026-04-10",
+      "use": "记录 Managed Agents 客户名单：Notion, Asana, Rakuten, Sentry, Atlassian。说明 Harrison 不是在空打，是在跟真金白银客户抢市场"
+    },
+    {
+      "id": "S7",
+      "type": "supporting-evidence",
+      "title": "Anthropic will let your agents sleep on its couch",
+      "url": "https://www.theregister.com/2026/04/09/anthropic_offers_to_host_ai/",
+      "author": "The Register (Thomas Claburn)",
+      "date": "2026-04-09",
+      "use": "英国媒体视角，语气偏戏谑，标题'sleep on its couch'暗含锁定意味"
+    },
+    {
+      "id": "S8",
+      "type": "claude-code-source-leak",
+      "title": "Claude Code's source code appears to have leaked",
+      "url": "https://venturebeat.com/technology/claude-codes-source-code-appears-to-have-leaked-heres-what-we-know",
+      "author": "VentureBeat",
+      "date": "2026-03-31",
+      "key_facts": [
+        "Claude Code v2.1.88 npm 包 .map 文件泄漏",
+        "约 1900 files / 512000 lines TypeScript",
+        "核心 memory 架构: MEMORY.md 索引 + 主题文件 + 转录 grep",
+        "Self-Healing Memory 系统",
+        "Strict Write Discipline"
+      ],
+      "use": "证据源 1: harness 规模 (51.2 万行) = Harrison 反驳'模型吸收 harness'的硬证据"
+    },
+    {
+      "id": "S9",
+      "type": "vault-cross-reference",
+      "title": "脑手分离：Anthropic 不再只卖模型了（Managed Agents 架构拆解）",
+      "path": "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "decoded": "2026-04-09",
+      "use": "vault 内已有知识：已命名'Harness 保质期'、'脑手分离'、'调度税'概念。本次是 Harrison 对该文章主角的反击，必须强双链",
+      "key_concepts_reuse": ["Harness 保质期", "脑手分离", "调度税"]
+    },
+    {
+      "id": "S10",
+      "type": "vault-cross-reference",
+      "title": "Claude Code 源码泄漏全景",
+      "path": "vault/1-knowledge/project/content_creation企媒内容生产/pipelines/claudecode_deep_decode/",
+      "slugs": [
+        "2026-04-03-kairos-daemon",
+        "2026-04-03-queryengine-brain",
+        "2026-04-03-six-level-security",
+        "2026-04-03-harness-greater-than-model"
+      ],
+      "use": "vault 内 10+ 篇 Claude Code 源码拆解，为 Harrison 的'harness 是重器'论点提供在地化验证"
+    },
+    {
+      "id": "S11",
+      "type": "framework-precedent",
+      "title": "The Anatomy of an Agent Harness",
+      "url": "https://blog.langchain.com/the-anatomy-of-an-agent-harness/",
+      "author": "LangChain",
+      "date": "2026 Q1",
+      "use": "Harrison 自家此前发的长篇技术博客，'harness'一词的官方 LangChain 语义源头。追溯其理论系谱"
+    }
+  ],
+  "cross_validation_strength": "高。4 个主流科技媒体（VentureBeat、DataCenterKnowledge、The Register、WaveSpeed）独立报道 Managed Agents 锁定风险。LangChain 博客+Letta 博客+两位 CEO 推文形成 4 点开源派信号同向爆发。",
+  "blind_spot_signals": [
+    "VentureBeat 同时指出自建 orchestration 的成本：'企业被 orchestration 负担压迫，Managed Agents 提供了真实的减负价值'——Harrison 没承认的点",
+    "Medium AI Studio 强调 Managed Agents 的'10x faster development'——开源 harness 的时间成本是硬伤"
+  ]
+}

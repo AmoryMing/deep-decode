@@ -1,0 +1,44 @@
+{
+  "external_signals": [
+    {
+      "source": "Pete (Zero to Pete)",
+      "url": "https://www.zerotopete.com/p/i-found-a-hidden-feature-in-claude",
+      "type": "independent_discovery",
+      "key_finding": "通过环境变量 CLAUDE_CODE_ENABLE_PROMPT_SUGGESTION=1 激活了建议功能，确认 speculation 系统存在且完整可用",
+      "relation": "佐证"
+    },
+    {
+      "source": "Google Research - Speculative Decoding (2022)",
+      "url": "https://research.google/blog/looking-back-at-speculative-decoding/",
+      "type": "cross_domain_analogy",
+      "key_finding": "CPU 推测执行思想已被用于 LLM 推理加速（speculative decoding），Claude Code 是第二次跨域迁移——从模型推理层到人机交互层",
+      "relation": "理论框架"
+    },
+    {
+      "source": "素材库: claudecode 源码深度解读.md",
+      "url": "context/information_sources/",
+      "type": "first_party_analysis",
+      "key_finding": "投机性分类器检查(startSpeculativeClassifierCheck)在模型流式输出时并行运行，9300行安全代码的一部分",
+      "relation": "佐证"
+    },
+    {
+      "source": "素材库: 从Claude Code源码看Anthropic的产品野心.md",
+      "url": "context/information_sources/",
+      "type": "first_party_analysis",
+      "key_finding": "推测执行类比CPU分支预测，用完全隔离的沙箱agent(带overlay文件系统)预执行。进化链: 工具→助手→同事→伙伴",
+      "relation": "佐证+框架"
+    },
+    {
+      "source": "Alex Kim's Blog",
+      "url": "https://alex000kim.com/posts/2026-03-31-claude-code-source-leak/",
+      "type": "leak_analysis",
+      "key_finding": "泄露源码中的隐藏功能清单，包括 speculation 在内的多个未公开特性",
+      "relation": "背景"
+    }
+  ],
+  "vault_cross_references": [
+    "2026-04-03-claude-code-leak-panorama.md (全景拆解，提供整体背景)",
+    "2026-04-03-harness-greater-than-model.md (harness架构，cache复用机制)",
+    "2026-04-03-queryengine-brain.md (QueryEngine核心，query.ts的prefetch逻辑)"
+  ]
+}

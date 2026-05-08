@@ -1,0 +1,44 @@
+{
+  "slug": "2026-04-03-claude-code-leak-panorama",
+  "title": "1902个文件里藏了什么：Claude Code 源码泄露全景",
+  "fetched_at": "2026-04-03",
+  "sources": [
+    {
+      "url": "https://36kr.com/p/3747481076417289",
+      "title": "Claude Code源码泄露7小时：8大新功能/26个隐藏指令/6级安全架构",
+      "author": "量子位/梦晨 via 36氪",
+      "type": "primary",
+      "fetched": true
+    },
+    {
+      "url": "https://developer.aliyun.com/article/1722081",
+      "title": "Claude Code 源码泄露：一份价值亿元的 AI 工程公开课",
+      "author": "阿里云开发者社区",
+      "type": "primary",
+      "fetched": true
+    },
+    {
+      "url": "context/information_sources/Claude Code 封号机制逆向探查.pdf",
+      "type": "local_pdf",
+      "topic": "遥测三通道、cch attestation、设备ID、封号机制"
+    },
+    {
+      "url": "context/information_sources/Claude Code 源码架构深度分析.pdf",
+      "type": "local_pdf",
+      "topic": "六层架构、QueryEngine、权限管道"
+    },
+    {
+      "url": "context/information_sources/ai-agent-deep-dive-v2.pdf",
+      "type": "local_pdf",
+      "topic": "Agent架构深度分析"
+    },
+    {
+      "url": "context/information_sources/claude-code-source-analysis-leads.md",
+      "type": "local_index",
+      "topic": "46+ 信息源索引，覆盖架构/工具/安全/记忆/隐藏功能"
+    }
+  ],
+  "screenshots": [],
+  "raw_code_available": true,
+  "raw_code_path": "context/raw_code/"
+}

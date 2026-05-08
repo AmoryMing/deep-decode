@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="380" fill="#FFFFFF" rx="12"/>
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#37352F" font-size="20" font-weight="bold">从 request-response 到 always-on：AI 编程工具进化链</text>
+  <line x1="80" y1="52" x2="720" y2="52" stroke="#E8E8E8" stroke-width="1"/>
+
+  <!-- Stage 1: Tool -->
+  <rect x="40" y="80" width="155" height="170" rx="10" fill="#F7F7F5" stroke="#CCCCCC" stroke-width="1.5"/>
+  <rect x="40" y="80" width="155" height="36" rx="10" fill="#CCCCCC" opacity="0.2"/>
+  <text x="117" y="104" text-anchor="middle" fill="#37352F" font-size="15" font-weight="bold">工具</text>
+  <text x="117" y="135" text-anchor="middle" fill="#555555" font-size="12">你问，它答</text>
+  <text x="117" y="155" text-anchor="middle" fill="#555555" font-size="12">你不问，它停</text>
+  <line x1="60" y1="175" x2="175" y2="175" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="117" y="195" text-anchor="middle" fill="#999999" font-size="10">Read / Write / Bash</text>
+  <text x="117" y="215" text-anchor="middle" fill="#999999" font-size="10">request-response</text>
+  <rect x="55" y="230" width="120" height="14" rx="3" fill="#4DB6AC" opacity="0.3"/>
+  <text x="117" y="241" text-anchor="middle" fill="#4DB6AC" font-size="9" font-weight="500">已发布</text>
+
+  <!-- Arrow 1 -->
+  <line x1="195" y1="165" x2="225" y2="165" stroke="#2383E2" stroke-width="1.5"/>
+  <polygon points="225,160 235,165 225,170" fill="#2383E2"/>
+
+  <!-- Stage 2: Assistant -->
+  <rect x="237" y="80" width="155" height="170" rx="10" fill="#F0F8FF" stroke="#2383E2" stroke-width="1.5"/>
+  <rect x="237" y="80" width="155" height="36" rx="10" fill="#2383E2" opacity="0.1"/>
+  <text x="314" y="104" text-anchor="middle" fill="#2383E2" font-size="15" font-weight="bold">助手</text>
+  <text x="314" y="135" text-anchor="middle" fill="#555555" font-size="12">它主动做事</text>
+  <text x="314" y="155" text-anchor="middle" fill="#555555" font-size="12">你不在它也干活</text>
+  <line x1="257" y1="175" x2="372" y2="175" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="314" y="195" text-anchor="middle" fill="#999999" font-size="10">KAIROS / SleepTool</text>
+  <text x="314" y="215" text-anchor="middle" fill="#999999" font-size="10">autoDream / Tick</text>
+  <rect x="252" y="230" width="120" height="14" rx="3" fill="#FFB020" opacity="0.3"/>
+  <text x="314" y="241" text-anchor="middle" fill="#FFB020" font-size="9" font-weight="500">Feature Flag 锁定</text>
+
+  <!-- Arrow 2 -->
+  <line x1="392" y1="165" x2="422" y2="165" stroke="#2383E2" stroke-width="1.5"/>
+  <polygon points="422,160 432,165 422,170" fill="#2383E2"/>
+
+  <!-- Stage 3: Colleague -->
+  <rect x="434" y="80" width="155" height="170" rx="10" fill="#F0F8FF" stroke="#9B59B6" stroke-width="1.5"/>
+  <rect x="434" y="80" width="155" height="36" rx="10" fill="#9B59B6" opacity="0.1"/>
+  <text x="511" y="104" text-anchor="middle" fill="#9B59B6" font-size="15" font-weight="bold">同事</text>
+  <text x="511" y="135" text-anchor="middle" fill="#555555" font-size="12">它管理项目</text>
+  <text x="511" y="155" text-anchor="middle" fill="#555555" font-size="12">它协调多个 Agent</text>
+  <line x1="454" y1="175" x2="569" y2="175" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="511" y="195" text-anchor="middle" fill="#999999" font-size="10">Coordinator / Ultraplan</text>
+  <text x="511" y="215" text-anchor="middle" fill="#999999" font-size="10">Multi-Agent / Bridge</text>
+  <rect x="449" y="230" width="120" height="14" rx="3" fill="#FFB020" opacity="0.3"/>
+  <text x="511" y="241" text-anchor="middle" fill="#FFB020" font-size="9" font-weight="500">部分已上线</text>
+
+  <!-- Arrow 3 -->
+  <line x1="589" y1="165" x2="619" y2="165" stroke="#2383E2" stroke-width="1.5"/>
+  <polygon points="619,160 629,165 619,170" fill="#2383E2"/>
+
+  <!-- Stage 4: Partner -->
+  <rect x="631" y="80" width="135" height="170" rx="10" fill="#FFF8E1" stroke="#FFB020" stroke-width="1.5"/>
+  <rect x="631" y="80" width="135" height="36" rx="10" fill="#FFB020" opacity="0.1"/>
+  <text x="698" y="104" text-anchor="middle" fill="#FFB020" font-size="15" font-weight="bold">伙伴</text>
+  <text x="698" y="135" text-anchor="middle" fill="#555555" font-size="12">它有情感连接</text>
+  <text x="698" y="155" text-anchor="middle" fill="#555555" font-size="12">它记住你的喜好</text>
+  <line x1="651" y1="175" x2="746" y2="175" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="698" y="195" text-anchor="middle" fill="#999999" font-size="10">BUDDY 宠物精灵</text>
+  <text x="698" y="215" text-anchor="middle" fill="#999999" font-size="10">正向反馈记忆</text>
+  <rect x="646" y="230" width="100" height="14" rx="3" fill="#EB5757" opacity="0.2"/>
+  <text x="698" y="241" text-anchor="middle" fill="#EB5757" font-size="9" font-weight="500">远期愿景</text>
+
+  <!-- Bottom comparison -->
+  <rect x="60" y="280" width="300" height="70" rx="8" fill="#F7F7F5" stroke="#E8E8E8" stroke-width="1"/>
+  <text x="210" y="305" text-anchor="middle" fill="#37352F" font-size="12" font-weight="bold">当前行业主流</text>
+  <text x="210" y="325" text-anchor="middle" fill="#666666" font-size="11">Cursor / Copilot / Codex = 工具阶段</text>
+  <text x="210" y="343" text-anchor="middle" fill="#666666" font-size="11">Devin = 工具->助手过渡</text>
+
+  <rect x="420" y="280" width="320" height="70" rx="8" fill="#2383E2" fill-opacity="0.05" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="580" y="305" text-anchor="middle" fill="#2383E2" font-size="12" font-weight="bold">KAIROS 的定位</text>
+  <text x="580" y="325" text-anchor="middle" fill="#555555" font-size="11">跳过工具，直接从助手开始</text>
+  <text x="580" y="343" text-anchor="middle" fill="#555555" font-size="11">同时布局同事(Coordinator)和伙伴(BUDDY)</text>
+
+  <!-- Bottom insight -->
+  <text x="400" y="374" text-anchor="middle" fill="#AAAAAA" font-size="10">趋同进化：多个独立开发者到达了相同架构 -- 约束条件决定了最优解</text>
+</svg>

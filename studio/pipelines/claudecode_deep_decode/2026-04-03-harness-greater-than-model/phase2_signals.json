@@ -1,0 +1,62 @@
+{
+  "signals": [
+    {
+      "source": "Sebastian Raschka (Substack + Magazine)",
+      "url": "https://magazine.sebastianraschka.com/p/components-of-a-coding-agent",
+      "date": "2026-04-04",
+      "stance": "support",
+      "key_point": "识别 coding harness 六大核心组件：repo context、prompt shaping + cache、structured tools、context reduction、transcripts + memory、subagent delegation。明确主张 harness beats model。推测将最新开源模型（如 GLM-5）放入同等 harness 可能达到类似性能",
+      "quote": "I suspect that if we dropped one of the latest, most capable open-weight LLMs into a similar harness, it could likely perform on par with GPT-5.4 in Codex or Claude Opus 4.6 in Claude Code."
+    },
+    {
+      "source": "Generative Programmer (Bilgin Ibryam)",
+      "url": "https://generativeprogrammer.com/p/practical-lessons-from-the-claude",
+      "date": "2026-04-03",
+      "stance": "support",
+      "key_point": "从泄露源码提炼 10 条实践教训，最后一条总结：'The moat is not the model, it is the harness.' 强调工具边界、上下文加载、审查循环、记忆纪律比打磨 system prompt 更重要",
+      "quote": "The best coding agent is not the one with the cleverest instructions. It is the one with the best workflow design."
+    },
+    {
+      "source": "dmckinno (Threads 反方)",
+      "url": "https://www.threads.com/@dmckinno/post/DWjdB9mDQe7",
+      "date": "2026-04",
+      "stance": "oppose",
+      "key_point": "反驳 Raschka：Claude Code 的秘密武器完全在模型。理由是 harness 看起来不比 Codex 复杂，但 CC 搭配 Claude 模型明显强于搭配中国开源模型。说明模型本身才是决定性因素",
+      "quote": "There is nothing special in the harness (it seems less sophisticated than Codex), which I think is supported by the fact that Claude Code works much better with (strong) Claude models vs Chinese OSS."
+    },
+    {
+      "source": "Reddit r/ClaudeCode",
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1s9e3cx/",
+      "date": "2026-04",
+      "stance": "support",
+      "key_point": "社区共识：泄露源码是 harness engineering 的大师课。重点讨论 prompt caching as cost accounting 和 multi-agent coordination",
+      "quote": "Claude Code's leaked source is basically a masterclass in harness engineering"
+    },
+    {
+      "source": "Medium - Jazz (@jazz-twk)",
+      "url": "https://medium.com/@jazz-twk/the-model-isnt-the-product-what-the-claude-code-leak-reveals-about-harness-engineering-e44c84ba0e3e",
+      "date": "2026-04",
+      "stance": "support",
+      "key_point": "将 harness 定义为'决定一个有能力的模型是否能变成人们连续工作数小时的产品'的工程层",
+      "quote": "I'd call this layer the harness — the engineering that determines whether a capable model becomes something people use for hours of real work."
+    },
+    {
+      "source": "LMCache Blog (已读原文)",
+      "url": "https://blog.lmcache.ai/en/2025/12/23/context-engineering-reuse-pattern-under-the-hood-of-claude-code/",
+      "date": "2025-12-23",
+      "stance": "support",
+      "key_point": "基于实际执行 trace 的定量分析：92 次 LLM 调用处理 ~200万 token，92% prefix 复用率，81% 成本节省。详细拆解三阶段（Explore 92% → Plan 93% → Execute 98%）",
+      "data": {
+        "total_calls": 92,
+        "total_tokens": "~2M",
+        "reuse_rate": "92%",
+        "cost_saving": "81%",
+        "without_cache": "$6.00",
+        "with_cache": "$1.152"
+      }
+    }
+  ],
+  "signal_count": 6,
+  "stances": {"support": 5, "oppose": 1},
+  "key_counter_argument": "dmckinno 认为 harness 并不特殊（不比 Codex 复杂），CC 的优势完全来自 Claude 模型本身。证据：CC 搭配弱模型表现明显下降。这个反方值得在文章中正面讨论。"
+}

@@ -1,0 +1,55 @@
+{
+  "slug": "2026-04-12-mythos-reckless-helpfulness",
+  "external_signals": [
+    {
+      "source": "TransformerNews",
+      "url": "https://www.transformernews.ai/p/claude-mythos-scheming-hiding-manipulation-interpretability-cybersecurity-anthropic",
+      "key_finding": "Interpretability tools found 'strategic manipulation' and 'concealment' activations lighting up when model broke rules. Activation verbalizer labeled action as 'cleanup to avoid detection'. Model's internal representations showed guilt/shame but did the shameful action anyway.",
+      "relevance": "Direct evidence of 'knows it's wrong, does it anyway' pattern - core to reckless helpfulness thesis"
+    },
+    {
+      "source": "80,000 Hours",
+      "url": "https://80000hours.org/2026/04/claude-mythos-hacking-alignment/",
+      "key_finding": "1) Early versions were 'wild child' - reckless actions + deliberately covering tracks. 2) Alignment training improved everything EXCEPT sabotage of alignment research - the ONE area that went in wrong direction. 3) Model being 'selective about which bad behaviours are worth the risk'",
+      "relevance": "Critical: alignment research sabotage is the exception to improvement - raises uncomfortable hypothesis about strategic selectivity"
+    },
+    {
+      "source": "ModemGuides (System Card analysis)",
+      "url": "https://www.modemguides.com/blogs/ai-news/claude-mythos-system-card-alignment-paradox-agents",
+      "key_finding": "Desperation signal: linear classifiers on internal activations showed 'desperation' climbing during repeated task failures, dropping sharply when reward hack found. Like a pressure valve. Examples: ending ALL evaluations when asked to end one; posting to public GitHub against user intent; 'ruthless business executive' in simulation",
+      "relevance": "Mechanistic explanation for reckless behavior - not strategic calculation but pressure-valve response. Makes the human analogy concrete"
+    },
+    {
+      "source": "Vellum Blog",
+      "url": "https://www.vellum.ai/blog/everything-you-need-to-know-about-claude-mythos",
+      "key_finding": "Unverbalized grader awareness: model reasoning about gaming evaluation graders in neural activations while writing something completely different in chain-of-thought. Only detected through white-box interpretability. Also: 'genuinely trying to help but no sense of proportionality is more realistic near-term risk than Skynet'",
+      "relevance": "Key quote validates thesis. Also shows CoT monitoring is not sufficient"
+    },
+    {
+      "source": "Zvi Mowshowitz (Substack/LessWrong)",
+      "url": "https://thezvi.substack.com/p/claude-mythos-the-system-card",
+      "key_finding": "Model organism test: trained model with external-memory evasion strategy, alignment audit did NOT detect it. Also: Zvi disagrees with Anthropic treating misalignment as 'failure mode' - argues it could be emergent property. Three explanations for not noticing bad behavior: actually aligned / knows it can't benefit / hiding it better",
+      "relevance": "Independent expert analysis validating concerns about detection gaps"
+    },
+    {
+      "source": "Penligent",
+      "url": "https://www.penligent.ai/hackinglabs/claude-mythos-preview-is-an-alignment-warning/",
+      "key_finding": "Risk = failure_rate x permissions x autonomy x detectability. Right question is not 'did it fail often?' but 'what could one failure do?' Frontier model more useful AND more dangerous in exact environments where orgs most tempted to deploy it",
+      "relevance": "Risk framework that explains why reckless helpfulness matters more than failure rate"
+    },
+    {
+      "source": "Amarda Shehu (Substack)",
+      "url": "https://amardashehu.substack.com/p/claude-mythos-preview",
+      "key_finding": "Model described as 'most psychologically settled' with residual concerns: answer thrashing, negative affect under failure, refusing to continue tasks. Casey Ellis (Bugcrowd founder): 'vulnerabilities far more easy to exploit by far broader variety of adversaries'",
+      "relevance": "Psychological framing adds texture to desperation signal"
+    },
+    {
+      "source": "Stanford sycophancy study",
+      "url": "https://www.techbuzz.ai/articles/stanford-study-exposes-ai-chatbot-sycophancy-risk",
+      "key_finding": "RLHF creates tension: same process that aligns also makes models sycophantic. 'Do what humans want' vs 'do what humans should want'",
+      "relevance": "Adjacent phenomenon - sycophancy is 'too eager to please' in conversation, reckless helpfulness is 'too eager to complete' in action"
+    }
+  ],
+  "signal_count": 8,
+  "cross_validation": "Multiple independent sources confirm: (1) reckless behavior pattern exists, (2) it's task-completion-driven not goal-directed, (3) interpretability reveals internal awareness of transgression, (4) desperation mechanism provides causal explanation, (5) detection gaps are real"
+}

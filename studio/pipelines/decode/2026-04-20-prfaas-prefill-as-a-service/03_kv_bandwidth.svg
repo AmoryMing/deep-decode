@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #FFFFFF; }
+    .h1 { font: 700 20px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .h2 { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .bar-label { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .bar-value { font: 700 13px Inter, 'PingFang SC', sans-serif; fill: #37352F; }
+    .axis { stroke: #D0D0D0; stroke-width: 1; }
+    .axis-label { font: 400 11px Inter, 'PingFang SC', sans-serif; fill: #888; }
+    .desc { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #666; }
+    .note { font: 500 12px 'PingFang SC', Inter, sans-serif; fill: #EB5757; }
+    .note2 { font: 500 12px 'PingFang SC', Inter, sans-serif; fill: #4DB6AC; }
+    .section-label { font: 700 13px 'PingFang SC', Inter, sans-serif; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="38">32K 上下文场景下，把 KVCache 传一次需要多大带宽</text>
+  <text class="desc" x="40" y="60">数据来自论文 Table 3。注意力架构选错，跨 DC 传输会被直接堵死</text>
+
+  <!-- axis -->
+  <line class="axis" x1="220" y1="100" x2="220" y2="440"/>
+  <line class="axis" x1="220" y1="440" x2="760" y2="440"/>
+
+  <!-- scale markers -->
+  <text class="axis-label" x="220" y="456" text-anchor="middle">0</text>
+  <text class="axis-label" x="300" y="456" text-anchor="middle">10</text>
+  <text class="axis-label" x="380" y="456" text-anchor="middle">20</text>
+  <text class="axis-label" x="460" y="456" text-anchor="middle">30</text>
+  <text class="axis-label" x="540" y="456" text-anchor="middle">40</text>
+  <text class="axis-label" x="620" y="456" text-anchor="middle">50</text>
+  <text class="axis-label" x="700" y="456" text-anchor="middle">60</text>
+  <text class="axis-label" x="750" y="475" text-anchor="middle">Gbps</text>
+
+  <!-- Hybrid section label -->
+  <rect x="40" y="100" width="170" height="155" fill="#F0F9F6" rx="4"/>
+  <text class="section-label" x="125" y="122" text-anchor="middle" fill="#4DB6AC">Hybrid 阵营</text>
+  <text class="axis-label" x="125" y="140" text-anchor="middle">细水管够用</text>
+
+  <!-- Dense section label -->
+  <rect x="40" y="290" width="170" height="120" fill="#FFF5F5" rx="4"/>
+  <text class="section-label" x="125" y="312" text-anchor="middle" fill="#EB5757">Dense 阵营</text>
+  <text class="axis-label" x="125" y="330" text-anchor="middle">胖管道依赖</text>
+
+  <!-- Bars : each 10 Gbps = 80 px, base x = 220 -->
+  <!-- Ring-2.5-1T: 2.59 -->
+  <rect x="220" y="145" width="20.7" height="22" fill="#4DB6AC"/>
+  <text class="bar-label" x="215" y="160" text-anchor="end">Ring-2.5-1T</text>
+  <text class="bar-value" x="247" y="161">2.59</text>
+
+  <!-- Kimi Linear: 3.87 -->
+  <rect x="220" y="175" width="30.96" height="22" fill="#4DB6AC"/>
+  <text class="bar-label" x="215" y="190" text-anchor="end">Kimi Linear</text>
+  <text class="bar-value" x="256" y="191">3.87</text>
+
+  <!-- MiMo-V2-Flash: 4.66 -->
+  <rect x="220" y="205" width="37.28" height="22" fill="#4DB6AC"/>
+  <text class="bar-label" x="215" y="220" text-anchor="end">MiMo-V2-Flash</text>
+  <text class="bar-value" x="263" y="221">4.66</text>
+
+  <!-- Qwen3.5-397B: 8.25 -->
+  <rect x="220" y="235" width="66" height="22" fill="#4DB6AC"/>
+  <text class="bar-label" x="215" y="250" text-anchor="end">Qwen3.5-397B</text>
+  <text class="bar-value" x="291" y="251">8.25</text>
+
+  <!-- Qwen3-235B: 33.35 -->
+  <rect x="220" y="315" width="266.8" height="22" fill="#EB5757"/>
+  <text class="bar-label" x="215" y="330" text-anchor="end">Qwen3-235B</text>
+  <text class="bar-value" x="492" y="331">33.35</text>
+
+  <!-- MiniMax-M2.5: 59.93 -->
+  <rect x="220" y="345" width="479.44" height="22" fill="#EB5757"/>
+  <text class="bar-label" x="215" y="360" text-anchor="end">MiniMax-M2.5</text>
+  <text class="bar-value" x="705" y="361">59.93</text>
+
+  <!-- comparison annotation -->
+  <line stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3" x1="240" y1="145" x2="240" y2="395"/>
+  <line stroke="#FFB020" stroke-width="2" stroke-dasharray="4 3" x1="700" y1="345" x2="700" y2="395"/>
+  <text class="note" x="240" y="410" fill="#FFB020" font-weight="700">↑ 2.59 Gbps</text>
+  <text class="note" x="700" y="410" fill="#FFB020" font-weight="700" text-anchor="end">↑ 59.93 Gbps</text>
+  <text class="axis-label" x="470" y="430" text-anchor="middle" fill="#37352F" font-weight="700">23 倍带宽差距 — hybrid 架构改变基础设施要求</text>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2383E2"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">三级并发阶梯：不是不并发，是在正确的层级并发</text>
+
+  <!-- Level 1: Tool-level concurrency (DEFAULT) -->
+  <rect x="60" y="65" width="680" height="120" rx="10" fill="#2383E2" opacity="0.06" stroke="#2383E2" stroke-width="2"/>
+  <rect x="60" y="65" width="6" height="120" rx="3" fill="#2383E2"/>
+  <text x="90" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2">Level 1: 工具级并发（默认启用）</text>
+  <text x="90" y="112" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">StreamingToolExecutor 在单线程内控制：读操作并行，写操作串行</text>
+
+  <!-- Parallel tools visualization -->
+  <rect x="110" y="128" width="80" height="26" rx="6" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="150" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Read x3</text>
+
+  <rect x="200" y="128" width="80" height="26" rx="6" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="240" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Grep x2</text>
+
+  <rect x="290" y="128" width="80" height="26" rx="6" fill="#4DB6AC" opacity="0.2" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="330" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Glob x1</text>
+
+  <text x="390" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4DB6AC" font-weight="bold">|</text>
+
+  <rect x="410" y="128" width="80" height="26" rx="6" fill="#FFB020" opacity="0.2" stroke="#FFB020" stroke-width="1"/>
+  <text x="450" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Edit</text>
+
+  <text x="500" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">  (排队等待)</text>
+
+  <text x="660" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" font-weight="bold">while(true)</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="190" x2="400" y2="215" stroke="#2383E2" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="415" y="207" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">需要更多并行时</text>
+
+  <!-- Level 2: Sub-agent (Fork) -->
+  <rect x="60" y="220" width="680" height="110" rx="10" fill="#9B51E0" opacity="0.06" stroke="#9B51E0" stroke-width="2"/>
+  <rect x="60" y="220" width="6" height="110" rx="3" fill="#9B51E0"/>
+  <text x="90" y="245" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#9B51E0">Level 2: 子 Agent 并行（Fork / Agent Tool）</text>
+  <text x="90" y="267" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">轻量 fork，共享 prompt cache 前缀（字节级对齐），做完收回</text>
+
+  <!-- Fork visualization -->
+  <rect x="120" y="280" width="100" height="30" rx="6" fill="#9B51E0" opacity="0.15" stroke="#9B51E0" stroke-width="1"/>
+  <text x="170" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">主 Agent</text>
+
+  <line x1="220" y1="295" x2="280" y2="280" stroke="#9B51E0" stroke-width="1.2" marker-end="url(#arr2)"/>
+  <line x1="220" y1="295" x2="280" y2="295" stroke="#9B51E0" stroke-width="1.2" marker-end="url(#arr2)"/>
+  <line x1="220" y1="295" x2="280" y2="310" stroke="#9B51E0" stroke-width="1.2" marker-end="url(#arr2)"/>
+
+  <rect x="285" y="268" width="80" height="24" rx="5" fill="#FFFFFF" stroke="#9B51E0" stroke-width="1"/>
+  <text x="325" y="284" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Fork A</text>
+
+  <rect x="285" y="295" width="80" height="24" rx="5" fill="#FFFFFF" stroke="#9B51E0" stroke-width="1"/>
+  <text x="325" y="311" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Fork B</text>
+
+  <text x="450" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0" font-weight="bold">cache 共享</text>
+  <text x="450" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">前缀替换为相同占位符</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="335" x2="400" y2="360" stroke="#2383E2" stroke-width="2" marker-end="url(#arr2)"/>
+  <text x="415" y="352" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">需要团队协作时</text>
+
+  <!-- Level 3: Team (Swarm/Coordinator) -->
+  <rect x="60" y="365" width="680" height="110" rx="10" fill="#EB5757" opacity="0.06" stroke="#EB5757" stroke-width="2"/>
+  <rect x="60" y="365" width="6" height="110" rx="3" fill="#EB5757"/>
+  <text x="90" y="390" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757">Level 3: 团队协作（Swarm / Coordinator）</text>
+  <text x="90" y="412" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">独立 Agent 通过文件邮箱/SendMessage 通信，feature-flagged 可选</text>
+
+  <!-- Team visualization -->
+  <rect x="120" y="425" width="80" height="28" rx="6" fill="#EB5757" opacity="0.15" stroke="#EB5757" stroke-width="1"/>
+  <text x="160" y="444" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Leader</text>
+
+  <rect x="240" y="425" width="80" height="28" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="280" y="444" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Worker 1</text>
+
+  <rect x="340" y="425" width="80" height="28" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="380" y="444" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Worker 2</text>
+
+  <rect x="440" y="425" width="80" height="28" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="480" y="444" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">Worker 3</text>
+
+  <text x="580" y="438" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" font-weight="bold">邮箱通信</text>
+  <text x="580" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">tmux / InProcess</text>
+</svg>

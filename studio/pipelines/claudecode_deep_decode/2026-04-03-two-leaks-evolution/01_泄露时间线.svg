@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <rect width="800" height="400" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="bold" fill="#37352F">两次泄露时间线：从发现到扩散</text>
+
+  <!-- Timeline base line -->
+  <line x1="80" y1="180" x2="720" y2="180" stroke="#E0E0E0" stroke-width="2"/>
+
+  <!-- Event 1: 2024-12 ghuntley discovery -->
+  <circle cx="120" cy="180" r="6" fill="#4DB6AC"/>
+  <line x1="120" y1="186" x2="120" y2="230" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="120" y="248" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" font-weight="bold" fill="#37352F">2024.12</text>
+  <text x="120" y="264" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">Huntley 发现</text>
+  <text x="120" y="278" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">LLM 反混淆能力</text>
+
+  <!-- Event 2: 2025-02 First leak -->
+  <circle cx="220" cy="180" r="8" fill="#2383E2"/>
+  <line x1="220" y1="174" x2="220" y2="110" stroke="#2383E2" stroke-width="1.5"/>
+  <rect x="145" y="68" width="150" height="42" rx="6" fill="#EBF3FE" stroke="#2383E2" stroke-width="1"/>
+  <text x="220" y="85" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#2383E2">第一次泄露</text>
+  <text x="220" y="102" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">v0.2.8 | base64 sourcemap</text>
+  <text x="220" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#37352F">2025.02</text>
+
+  <!-- Event 3: 2025-03 ghuntley archived -->
+  <circle cx="300" cy="180" r="5" fill="#FFB020"/>
+  <line x1="300" y1="186" x2="300" y2="230" stroke="#FFB020" stroke-width="1.5"/>
+  <text x="300" y="248" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" font-weight="bold" fill="#37352F">2025.03</text>
+  <text x="300" y="264" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">仓库归档</text>
+  <text x="300" y="278" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">cleanroom 完成</text>
+
+  <!-- Gap indicator -->
+  <text x="420" y="172" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#999">. . . 12 个月 . . .</text>
+
+  <!-- Event 4: 2026-03-31 Second leak -->
+  <circle cx="560" cy="180" r="10" fill="#EB5757"/>
+  <line x1="560" y1="174" x2="560" y2="80" stroke="#EB5757" stroke-width="1.5"/>
+  <rect x="475" y="40" width="170" height="42" rx="6" fill="#FDECEC" stroke="#EB5757" stroke-width="1"/>
+  <text x="560" y="57" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="bold" fill="#EB5757">第二次泄露</text>
+  <text x="560" y="74" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">v2.1.88 | .npmignore 缺失</text>
+  <text x="560" y="200" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" font-weight="bold" fill="#37352F">2026.03.31</text>
+
+  <!-- Event 5: Same day axios attack -->
+  <circle cx="560" cy="180" r="14" fill="none" stroke="#EB5757" stroke-width="1" stroke-dasharray="3 3"/>
+  <line x1="560" y1="194" x2="560" y2="240" stroke="#EB5757" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="560" y="258" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#EB5757">同日 axios 供应链攻击</text>
+
+  <!-- Event 6: 2026-04-01 DMCA -->
+  <circle cx="650" cy="180" r="6" fill="#9B59B6"/>
+  <line x1="650" y1="186" x2="650" y2="310" stroke="#9B59B6" stroke-width="1.5"/>
+  <text x="650" y="328" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" font-weight="bold" fill="#37352F">2026.04.01</text>
+  <text x="650" y="344" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">DMCA 大规模下架</text>
+
+  <!-- Impact data boxes -->
+  <rect x="60" y="325" width="170" height="58" rx="8" fill="#F7F7F5" stroke="#E0E0E0" stroke-width="1"/>
+  <text x="145" y="347" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" font-weight="bold" fill="#37352F">第一次影响</text>
+  <text x="145" y="365" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">社区小范围讨论，几天后平息</text>
+  <text x="145" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">Anthropic 删包了事</text>
+
+  <rect x="310" y="325" width="200" height="58" rx="8" fill="#FDECEC" stroke="#EB5757" stroke-width="1"/>
+  <text x="410" y="347" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" font-weight="bold" fill="#EB5757">第二次影响</text>
+  <text x="410" y="365" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">50,000 stars / 2h | X 浏览 2000万+</text>
+  <text x="410" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#666">Rust/Python 重写 | IPO 受影响</text>
+</svg>

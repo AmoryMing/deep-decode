@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Series badge -->
+  <rect x="30" y="25" width="180" height="32" rx="16" fill="#2383E2" opacity="0.9"/>
+  <text x="120" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="600">Claude Code 源码拆解</text>
+
+  <!-- Episode number -->
+  <text x="770" y="46" font-family="Inter, PingFang SC, sans-serif" font-size="14" fill="#787774" text-anchor="end">#02</text>
+
+  <!-- Main title -->
+  <text x="400" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="42" fill="#FFFFFF" text-anchor="middle" font-weight="700">Harness &gt; Model</text>
+  <text x="400" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="24" fill="#E3E2E0" text-anchor="middle">51 万行代码揭示的 AI 产品真相</text>
+
+  <!-- Key stats -->
+  <line x1="200" y1="260" x2="600" y2="260" stroke="#787774" stroke-width="1" opacity="0.3"/>
+
+  <text x="200" y="310" font-family="Inter, PingFang SC, sans-serif" font-size="36" fill="#2383E2" text-anchor="middle" font-weight="700">6,400</text>
+  <text x="200" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle">行核心 LLM 交互</text>
+
+  <text x="400" y="310" font-family="Inter, PingFang SC, sans-serif" font-size="36" fill="#4DB6AC" text-anchor="middle" font-weight="700">92%</text>
+  <text x="400" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle">缓存复用率</text>
+
+  <text x="600" y="310" font-family="Inter, PingFang SC, sans-serif" font-size="36" fill="#FFB020" text-anchor="middle" font-weight="700">512K</text>
+  <text x="600" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle">行工程基础设施</text>
+
+  <!-- Bottom tagline -->
+  <text x="400" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">AI 前沿拆解 | 深度解读系列</text>
+</svg>
