@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "root": "deep-decode-repo",
+  "node_count": 33,
+  "edge_count": 60,
+  "nodes": [
+    {
+      "path": "SKILL.md",
+      "title": "/deep-decode -- AI 博客深度拆解器 v4",
+      "size_bytes": 23963,
+      "lines": 554
+    },
+    {
+      "path": "README.md",
+      "title": "deep-decode",
+      "size_bytes": 2632,
+      "lines": 55
+    },
+    {
+      "path": "AGENTS.md",
+      "title": "AGENTS.md — 给 AI Agent 的入口索引",
+      "size_bytes": 5636,
+      "lines": 122
+    },
+    {
+      "path": "decode-entity-SKILL.md",
+      "title": "/decode-entity -- 实体横纵分析拆解器 v1",
+      "size_bytes": 16529,
+      "lines": 406
+    },
+    {
+      "path": "skill-references/evaluator-prompt.md",
+      "title": "Evaluator Subagent Prompt",
+      "size_bytes": 4016,
+      "lines": 120
+    },
+    {
+      "path": "skill-references/gotchas-exec.md",
+      "title": "执行避坑清单",
+      "size_bytes": 7337,
+      "lines": 254
+    },
+    {
+      "path": "skill-references/podcast-pipeline.md",
+      "title": "播客执行管线",
+      "size_bytes": 7145,
+      "lines": 229
+    },
+    {
+      "path": "knowledge/channel-specs.md",
+      "title": "分发渠道规范",
+      "size_bytes": 7814,
+      "lines": 238
+    },
+    {
+      "path": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "title": "横纵分析法 Deep Research Prompt",
+      "size_bytes": 8183,
+      "lines": 135
+    },
+    {
+      "path": "knowledge/hot-history-pairs.md",
+      "title": "热点 × 历史 对照表（Hot-History Pairs）",
+      "size_bytes": 7671,
+      "lines": 199
+    },
+    {
+      "path": "knowledge/html-template.md",
+      "title": "Markdown → HTML 标准范式",
+      "size_bytes": 6232,
+      "lines": 174
+    },
+    {
+      "path": "knowledge/pipeline-standards.md",
+      "title": "多渠道交付标准与模板包 v1",
+      "size_bytes": 24585,
+      "lines": 718
+    },
+    {
+      "path": "knowledge/podcast-aesthetics.md",
+      "title": "播客听感美学",
+      "size_bytes": 4216,
+      "lines": 128
+    },
+    {
+      "path": "knowledge/polish-7steps.md",
+      "title": "中文技术散文润色标尺（7 步）",
+      "size_bytes": 9759,
+      "lines": 218
+    },
+    {
+      "path": "knowledge/svg-design.md",
+      "title": "概念可视化 SVG 设计规范",
+      "size_bytes": 5147,
+      "lines": 161
+    },
+    {
+      "path": "knowledge/writing-style.md",
+      "title": "写作风格规范",
+      "size_bytes": 23503,
+      "lines": 492
+    },
+    {
+      "path": "context/范文标注-写作方法论.md",
+      "title": "范文标注 -- deep-decode 系列写作方法论",
+      "size_bytes": 16304,
+      "lines": 287
+    },
+    {
+      "path": "docs/ground-truth.md",
+      "title": "企媒内容生产 Ground Truth（索引版）",
+      "size_bytes": 9793,
+      "lines": 202
+    },
+    {
+      "path": "docs/changelog.md",
+      "title": "企媒运营 Changelog",
+      "size_bytes": 2164,
+      "lines": 42
+    },
+    {
+      "path": "docs/next_steps.md",
+      "title": "企媒运营 Next Steps",
+      "size_bytes": 3217,
+      "lines": 69
+    },
+    {
+      "path": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "title": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "size_bytes": 18345,
+      "lines": 195
+    },
+    {
+      "path": "examples/2026-03-29-pm-ai-exponential/README.md",
+      "title": "发布清单",
+      "size_bytes": 1877,
+      "lines": 40
+    },
+    {
+      "path": "examples/2026-04-09-managed-agents-architecture/draft.md",
+      "title": "examples/2026-04-09-managed-agents-architecture/draft.md",
+      "size_bytes": 16432,
+      "lines": 172
+    },
+    {
+      "path": "examples/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "title": "examples/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "size_bytes": 17116,
+      "lines": 190
+    },
+    {
+      "path": "examples/2026-04-12-mythos-reckless-helpfulness/phase1_skeleton.md",
+      "title": "Phase 1: 结构解剖 -- 「不是叛逆，是不守规矩」",
+      "size_bytes": 3859,
+      "lines": 56
+    },
+    {
+      "path": "examples/2026-04-12-mythos-reckless-helpfulness/draft.md",
+      "title": "examples/2026-04-12-mythos-reckless-helpfulness/draft.md",
+      "size_bytes": 22330,
+      "lines": 212
+    },
+    {
+      "path": "examples/2026-04-12-mythos-reckless-helpfulness/2026-04-12-mythos-reckless-helpfulness.md",
+      "title": "examples/2026-04-12-mythos-reckless-helpfulness/2026-04-12-mythos-reckless-helpfulness.md",
+      "size_bytes": 22194,
+      "lines": 214
+    },
+    {
+      "path": "examples/2026-04-12-mythos-reckless-helpfulness/next-session-tasks.md",
+      "title": "Mythos Deep Decode 下一 Session 任务清单",
+      "size_bytes": 1966,
+      "lines": 48
+    },
+    {
+      "path": "examples/2026-04-24-ai-design-replaces-designer/phase1_skeleton.md",
+      "title": "Phase 1 结构解剖 — 2026-04-24-ai-design-replaces-designer",
+      "size_bytes": 5782,
+      "lines": 84
+    },
+    {
+      "path": "examples/2026-04-24-ai-design-replaces-designer/draft_v1.md",
+      "title": "设计这件事，正在被切成三段",
+      "size_bytes": 14438,
+      "lines": 123
+    },
+    {
+      "path": "examples/2026-04-24-ai-design-replaces-designer/draft_v2.md",
+      "title": "设计这件事，正在被切成三段",
+      "size_bytes": 14477,
+      "lines": 123
+    },
+    {
+      "path": "examples/2026-04-24-ai-design-replaces-designer/infographic_prompt_for_gpt-image-2.md",
+      "title": "给你用 gpt-image-2 生成的信息图 prompt",
+      "size_bytes": 4409,
+      "lines": 95
+    },
+    {
+      "path": "examples/2026-04-24-ai-design-replaces-designer/email_source.md",
+      "title": "设计这件事，正在被切成三段——一次拆解",
+      "size_bytes": 12171,
+      "lines": 112
+    }
+  ],
+  "edges": [
+    {
+      "from": "SKILL.md",
+      "to": "文件名",
+      "type": "wikilink"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "pipelines/decode/",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "pipelines/claudecode_deep_decode/",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/writing-style.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "{slug}.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/writing-style.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/svg-design.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "{slug}.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "{slug}/",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/svg-design.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/podcast-aesthetics.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/html-template.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "pipelines/claudecode_deep_decode/",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "pipeline/queue.jsonl",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "context/",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "{slug}/",
+      "type": "constant"
+    },
+    {
+      "from": "SKILL.md",
+      "to": "{slug}/",
+      "type": "constant"
+    },
+    {
+      "from": "README.md",
+      "to": "./AGENTS.md",
+      "type": "relative"
+    },
+    {
+      "from": "README.md",
+      "to": "./knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "README.md",
+      "to": "./knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "README.md",
+      "to": "./knowledge/horizontal-vertical-analysis-prompt.md",
+      "type": "relative"
+    },
+    {
+      "from": "README.md",
+      "to": "./knowledge/hot-history-pairs.md",
+      "type": "relative"
+    },
+    {
+      "from": "README.md",
+      "to": "./docs/ground-truth.md",
+      "type": "relative"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "pipelines/decode/",
+      "type": "constant"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "pipelines/claudecode_deep_decode/",
+      "type": "constant"
+    },
+    {
+      "from": "AGENTS.md",
+      "to": "knowledge/xxx",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "pipelines/decode/",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "{slug}.md",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "knowledge/writing-style.md",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "knowledge/svg-design.md",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "{slug}.md",
+      "type": "constant"
+    },
+    {
+      "from": "decode-entity-SKILL.md",
+      "to": "{slug}/",
+      "type": "constant"
+    },
+    {
+      "from": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "deep-decode",
+      "type": "wikilink"
+    },
+    {
+      "from": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "product-pitch",
+      "type": "wikilink"
+    },
+    {
+      "from": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "scout",
+      "type": "wikilink"
+    },
+    {
+      "from": "knowledge/horizontal-vertical-analysis-prompt.md",
+      "to": "ai-industry-intel-digest",
+      "type": "wikilink"
+    },
+    {
+      "from": "knowledge/writing-style.md",
+      "to": "file.png",
+      "type": "wikilink"
+    },
+    {
+      "from": "knowledge/writing-style.md",
+      "to": "02_四层认知基建.png",
+      "type": "wikilink"
+    },
+    {
+      "from": "knowledge/writing-style.md",
+      "to": "polish-7steps.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/polish-7steps.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/html-template.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/podcast-aesthetics.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/writing-style.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/html-template.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/svg-design.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "relative"
+    },
+    {
+      "from": "docs/ground-truth.md",
+      "to": "knowledge/channel-specs.md",
+      "type": "relative"
+    },
+    {
+      "from": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "to": "Amory",
+      "type": "wikilink"
+    },
+    {
+      "from": "examples/2026-03-29-pm-ai-exponential/2026-03-29-PM遇上指数级AI拆解.md",
+      "to": "Skill",
+      "type": "wikilink"
+    },
+    {
+      "from": "examples/2026-04-09-managed-agents-architecture/2026-04-09-managed-agents-architecture.md",
+      "to": "2026-04-17-your-harness-your-memory",
+      "type": "wikilink"
+    },
+    {
+      "from": "examples/2026-04-12-mythos-reckless-helpfulness/next-session-tasks.md",
+      "to": "文件名",
+      "type": "wikilink"
+    }
+  ]
+}

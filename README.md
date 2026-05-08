@@ -36,13 +36,14 @@
 ## 目录速查
 
 ```
-SKILL.md                  # Skill 主体（执行步骤）
+SKILL.md                  # deep-decode 主 Skill（输入 URL）
+decode-entity-SKILL.md    # decode-entity Skill（输入实体名，横纵分析）
 skill-references/         # Skill 内部引用：评分提示、播客管线、踩坑清单
 knowledge/                # 写作 / SVG / 播客 / 渠道规范 / 横纵 / 热点配对（Skill 按阶段读取）
 context/                  # 范文标注（拆开看「好文章为什么好」）
-examples/                 # 4 篇代表性产出，含原始草稿 + 终稿 .md
+examples/                 # 4 篇代表性产出（managed-agents 篇含完整 6 张 SVG + .docx 演示四件套效果）
 docs/                     # 项目级文档：ground-truth / changelog / next_steps
-graphify-out/             # 知识图谱（graph.json + GRAPH_REPORT.md）
+graphify-out/             # 知识图谱：markdown-index.json (33 节点 60 边) + GRAPH_INDEX.md
 ```
 
 ## 状态

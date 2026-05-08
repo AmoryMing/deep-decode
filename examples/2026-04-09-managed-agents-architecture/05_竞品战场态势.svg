@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">三家 Agent 云的战场态势</text>
+  <text x="400" y="58" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Anthropic vs OpenAI vs Google -- 都在建 Agent 基础设施</text>
+
+  <!-- Three columns -->
+  <!-- Anthropic -->
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="230" height="340" rx="10" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#2383E2" opacity="0.15"/>
+    <text x="115" y="22" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2">Anthropic</text>
+    <text x="115" y="55" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">Managed Agents</text>
+    <text x="115" y="75" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">完全托管 + 结构化接口</text>
+
+    <text x="20" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">哲学：脑手分离，平台化</text>
+    <text x="20" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">定价：$0.08/session-hour</text>
+    <text x="20" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">工具：8 内置 + 自定义</text>
+    <text x="20" y="165" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">SDK：7 种语言 + CLI</text>
+
+    <rect x="15" y="185" width="200" height="24" rx="4" fill="#4DB6AC" opacity="0.1"/>
+    <text x="115" y="202" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#3D9E8F">Outcomes (自动评分)</text>
+    <rect x="15" y="215" width="200" height="24" rx="4" fill="#FFB020" opacity="0.1"/>
+    <text x="115" y="232" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E6A010">Multi-agent (多体协作)</text>
+    <rect x="15" y="245" width="200" height="24" rx="4" fill="#9B51E0" opacity="0.1"/>
+    <text x="115" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0">Memory (持久记忆)</text>
+
+    <text x="20" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" font-weight="bold">优势：通用 Agent 平台</text>
+    <text x="20" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">风险：厂商锁定</text>
+  </g>
+
+  <!-- OpenAI -->
+  <g transform="translate(285, 80)">
+    <rect x="0" y="0" width="230" height="340" rx="10" fill="#F7F7F5" stroke="#37352F" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#37352F" opacity="0.08"/>
+    <text x="115" y="22" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">OpenAI</text>
+    <text x="115" y="55" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">Codex</text>
+    <text x="115" y="75" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">开源 CLI + 完全自主</text>
+
+    <text x="20" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">哲学：fire-and-forget</text>
+    <text x="20" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">定价：$20-200/月订阅</text>
+    <text x="20" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">速度：1000+ tokens/s</text>
+    <text x="20" y="165" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">安全：OS 级沙箱</text>
+
+    <rect x="15" y="185" width="200" height="24" rx="4" fill="#37352F" opacity="0.05"/>
+    <text x="115" y="202" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">Plugins (Box/Figma/Linear)</text>
+    <rect x="15" y="215" width="200" height="24" rx="4" fill="#37352F" opacity="0.05"/>
+    <text x="115" y="232" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">67K GitHub Stars</text>
+    <rect x="15" y="245" width="200" height="24" rx="4" fill="#37352F" opacity="0.05"/>
+    <text x="115" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">Token 效率约 4x Claude</text>
+
+    <text x="20" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" font-weight="bold">优势：速度快、社区强</text>
+    <text x="20" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">劣势：代码质量盲测输 Claude</text>
+  </g>
+
+  <!-- Google -->
+  <g transform="translate(540, 80)">
+    <rect x="0" y="0" width="230" height="340" rx="10" fill="#F7F7F5" stroke="#787774" stroke-width="1.5"/>
+    <rect x="0" y="0" width="230" height="32" rx="10" fill="#787774" opacity="0.08"/>
+    <text x="115" y="22" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">Google</text>
+    <text x="115" y="55" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">Gemini CLI + Antigravity</text>
+    <text x="115" y="75" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">扩展架构 + IDE 集成</text>
+
+    <text x="20" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">哲学：Extensions 生态</text>
+    <text x="20" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">MCP + 自定义命令</text>
+    <text x="20" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">内置注册中心分发</text>
+    <text x="20" y="165" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">安装时提示 API Key 配置</text>
+
+    <rect x="15" y="185" width="200" height="24" rx="4" fill="#787774" opacity="0.05"/>
+    <text x="115" y="202" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">Extensions (类似 Plugins)</text>
+    <rect x="15" y="215" width="200" height="24" rx="4" fill="#787774" opacity="0.05"/>
+    <text x="115" y="232" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">Agent Skills + Hooks</text>
+    <rect x="15" y="245" width="200" height="24" rx="4" fill="#787774" opacity="0.05"/>
+    <text x="115" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">GitHub 分发</text>
+
+    <text x="20" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" font-weight="bold">优势：Google 生态整合</text>
+    <text x="20" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">劣势：无托管 Agent 服务</text>
+  </g>
+
+  <!-- Bottom convergence note -->
+  <rect x="60" y="435" width="680" height="35" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="457" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-style="italic">三家底层模式趋同（MCP + Skills + Hooks），但 Anthropic 独有 Outcomes/Memory/Multi-agent。</text>
+</svg>

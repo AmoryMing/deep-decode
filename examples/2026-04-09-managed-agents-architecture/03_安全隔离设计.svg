@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <rect width="800" height="440" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">安全边界：凭证永不触达沙箱</text>
+  <text x="400" y="58" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">两种隔离策略保障 Agent 安全运行</text>
+
+  <!-- Strategy 1: Resource-bundled auth -->
+  <g transform="translate(40, 80)">
+    <rect x="0" y="0" width="340" height="300" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="170" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#2383E2">策略一：资源绑定认证</text>
+    <text x="170" y="48" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Resource-bundled Auth</text>
+
+    <!-- Flow -->
+    <rect x="30" y="70" width="280" height="40" rx="6" fill="#EBF5FF" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="170" y="94" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">1. 沙箱初始化时注入 Git 令牌</text>
+
+    <line x1="170" y1="110" x2="170" y2="130" stroke="#787774" stroke-width="1.5" marker-end="url(#arrowC)"/>
+
+    <rect x="30" y="130" width="280" height="40" rx="6" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="1.5"/>
+    <text x="170" y="154" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3D9E8F">2. push/pull 正常工作</text>
+
+    <line x1="170" y1="170" x2="170" y2="190" stroke="#787774" stroke-width="1.5" marker-end="url(#arrowC)"/>
+
+    <rect x="30" y="190" width="280" height="40" rx="6" fill="#FFF5F5" stroke="#EB5757" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="170" y="214" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">3. Claude 看不到令牌本身</text>
+
+    <!-- Use case -->
+    <text x="170" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">适用：Git 仓库访问</text>
+    <text x="170" y="282" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">令牌写入 .git/config，运行时透明</text>
+  </g>
+
+  <defs>
+    <marker id="arrowC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#787774"/>
+    </marker>
+  </defs>
+
+  <!-- Strategy 2: Vault-based tokens -->
+  <g transform="translate(420, 80)">
+    <rect x="0" y="0" width="340" height="300" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="170" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#9B51E0">策略二：金库令牌</text>
+    <text x="170" y="48" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Vault-based Tokens</text>
+
+    <!-- Flow -->
+    <rect x="30" y="70" width="280" height="40" rx="6" fill="#EBF5FF" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="170" y="94" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">1. Claude 发起工具调用请求</text>
+
+    <line x1="170" y1="110" x2="170" y2="130" stroke="#787774" stroke-width="1.5" marker-end="url(#arrowC)"/>
+
+    <rect x="30" y="130" width="280" height="40" rx="6" fill="#F3E8FF" stroke="#9B51E0" stroke-width="1.5"/>
+    <text x="170" y="154" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#9B51E0">2. 代理层从金库取凭证</text>
+
+    <line x1="170" y1="170" x2="170" y2="190" stroke="#787774" stroke-width="1.5" marker-end="url(#arrowC)"/>
+
+    <rect x="30" y="190" width="280" height="40" rx="6" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="1.5"/>
+    <text x="170" y="214" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3D9E8F">3. 代理层发起外部调用，返回结果</text>
+
+    <!-- Use case -->
+    <text x="170" y="262" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">适用：OAuth / 第三方 API</text>
+    <text x="170" y="282" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Claude + Harness 全程不接触凭证</text>
+  </g>
+
+  <!-- Bottom insight -->
+  <rect x="60" y="398" width="680" height="32" rx="6" fill="#FFF5F5"/>
+  <text x="400" y="419" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">耦合架构下，prompt injection 一步即可触达凭证。解耦后，即使 Harness 被攻破也拿不到任何凭证。</text>
+</svg>

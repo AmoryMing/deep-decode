@@ -11,6 +11,10 @@
 *.jpg
 *.jpeg
 
+# 但 demo 目录里的代表作二进制保留 — 让别人能看到完整四件套效果
+!examples/2026-04-09-managed-agents-architecture/*.svg
+!examples/2026-04-09-managed-agents-architecture/*.docx
+
 # Skill 运行时状态
 state/
 .omc/

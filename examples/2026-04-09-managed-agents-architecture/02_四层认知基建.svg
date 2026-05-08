@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">Managed Agents 的四层"认知基建"</text>
+  <text x="400" y="60" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">从原始 LLM 到自主工人的完整基础设施</text>
+
+  <!-- Layer 4: Memory (bottom) -->
+  <rect x="60" y="430" width="680" height="85" rx="10" fill="#F3E8FF" stroke="#9B51E0" stroke-width="2"/>
+  <rect x="60" y="430" width="680" height="26" rx="10" fill="#9B51E0" opacity="0.15"/>
+  <text x="100" y="449" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#9B51E0">Layer 4: Memory (记忆层)</text>
+  <text x="660" y="449" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0" opacity="0.7">Research Preview</text>
+  <text x="100" y="475" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">跨 Session 持久化记忆 | 版本控制 + 乐观并发 + 脱敏操作</text>
+  <text x="100" y="495" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Agent 自动检索/写入，无需额外提示 | 上限 100KB/条 | 每 Session 最多挂 8 个 store</text>
+
+  <!-- Layer 3: Multi-agent -->
+  <rect x="60" y="330" width="680" height="85" rx="10" fill="#FFF8E1" stroke="#FFB020" stroke-width="2"/>
+  <rect x="60" y="330" width="680" height="26" rx="10" fill="#FFB020" opacity="0.15"/>
+  <text x="100" y="349" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#E6A010">Layer 3: Multi-agent (协作层)</text>
+  <text x="660" y="349" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E6A010" opacity="0.7">Research Preview</text>
+  <text x="100" y="375" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">协调者 Agent 调度子 Agent | 共享文件系统，独立上下文</text>
+  <text x="100" y="395" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">适合: 代码审查 + 测试生成 + 研究搜索并行 | 限一级委派</text>
+
+  <!-- Layer 2: Outcomes -->
+  <rect x="60" y="230" width="680" height="85" rx="10" fill="#E8F5E9" stroke="#4DB6AC" stroke-width="2"/>
+  <rect x="60" y="230" width="680" height="26" rx="10" fill="#4DB6AC" opacity="0.15"/>
+  <text x="100" y="249" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#3D9E8F">Layer 2: Outcomes (目标层)</text>
+  <text x="660" y="249" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#3D9E8F" opacity="0.7">Research Preview</text>
+  <text x="100" y="275" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">定义 Rubric(评分标准) + 独立 Grader 评估 + 自动迭代到达标</text>
+  <text x="100" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">"裁判"和"运动员"分开 | 最多 20 轮迭代 | 结果: satisfied / needs_revision / failed</text>
+
+  <!-- Layer 1: Foundation (top) -->
+  <rect x="60" y="90" width="680" height="125" rx="10" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+  <rect x="60" y="90" width="680" height="26" rx="10" fill="#2383E2" opacity="0.15"/>
+  <text x="100" y="109" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2">Layer 1: Foundation (基础层)</text>
+  <text x="660" y="109" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" opacity="0.7">Public Beta</text>
+
+  <!-- Four concepts in boxes -->
+  <rect x="85" y="125" width="140" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="155" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Agent (模型+工具)</text>
+
+  <rect x="240" y="125" width="155" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="317" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Environment (容器)</text>
+
+  <rect x="410" y="125" width="150" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="485" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Session (事件流)</text>
+
+  <rect x="575" y="125" width="140" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="645" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Events (SSE 流)</text>
+
+  <text x="100" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">8 内置工具 (bash/file/web) + 自定义工具 | 7 SDK + CLI | $0.08/session-hour</text>
+  <text x="100" y="203" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">脑手分离架构 | Session 独立存储 | 凭证永不触达沙箱</text>
+
+  <!-- Bottom insight -->
+  <rect x="60" y="528" width="680" height="24" rx="4" fill="#F7F7F5"/>
+  <text x="400" y="544" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">从卖 token 到卖 session-hour，从模型提供商到平台提供商 -- "认知基建"</text>
+</svg>
