@@ -1,0 +1,52 @@
+{
+  "slug": "2026-04-24-ai-design-replaces-designer",
+  "signal_count": 6,
+  "signals": [
+    {
+      "type": "market",
+      "source": "Gizmodo",
+      "url": "https://gizmodo.com/anthropic-launches-claude-design-figma-stock-immediately-nosedives-2000748071",
+      "role": "佐证冲击真实性",
+      "key_point": "Figma 股价发布当天跌 7%，YTD 跌 35%；Anthropic CPO Mike Krieger 4/16 辞 Figma 董事。资本市场和人事动作同时给答案。"
+    },
+    {
+      "type": "designer_voice",
+      "source": "Medium - Fanny @ Design Bootcamp",
+      "url": "https://medium.com/design-bootcamp/what-claude-design-actually-changes-for-designers-0c5b04fae343",
+      "role": "反面/补充论证",
+      "key_point": "Pipelines optimize for throughput, and design isn't always a throughput problem. 创意摩擦（two pixels 反复调）不能被吞吐量优化掉。"
+    },
+    {
+      "type": "official_partner",
+      "source": "Canva / Melanie Perkins",
+      "url": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "role": "验证生态选择",
+      "key_point": "Canva 选择成为 Claude Design 的输出终点，而不是对手。行业玩家的站队信号。"
+    },
+    {
+      "type": "competitor_context",
+      "source": "Google Stitch (ex-Galileo AI)",
+      "url": "https://tech-insider.org/google-stitch-ai-design-tool-march-2026-update/",
+      "role": "行业共识佐证",
+      "key_point": "3/19 更新多屏 + 无限画布 + 交互原型，赛道已经挤满。Claude Design 不是孤例。"
+    },
+    {
+      "type": "data_benchmark",
+      "source": "Deloitte Digital 2025",
+      "role": "产业渗透率",
+      "key_point": "59% 科技创业公司已用 AI UI/UX 工具做原型。Claude Design 不是行业教育起点，是已经成熟市场的头部压制。"
+    },
+    {
+      "type": "technical_detail",
+      "source": "TheNextWeb",
+      "url": "https://thenextweb.com/news/openai-chatgpt-images-2-0-reasoning-image-generation",
+      "role": "技术差异验证",
+      "key_point": "gpt-image-2 加入 reasoning，Thinking 模式含 web search + 多图批处理 + 输出校验。不是升级版渲染器，是会思考的渲染器。"
+    }
+  ],
+  "vault_cross_reference_candidates": [
+    "claude-opus-4-7（已有）",
+    "AI 大厂做产品 vs 做平台的路线分化",
+    "Builder vs Reviewer（EPD 范式转移）"
+  ]
+}
