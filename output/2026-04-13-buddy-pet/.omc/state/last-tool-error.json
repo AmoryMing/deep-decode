@@ -1,0 +1,7 @@
+{
+  "tool_name": "mcp__tavily__tavily_search",
+  "tool_input_preview": "{\"query\":\"Chris Olah blog design visual explanation neural network diagrams colah.github.io distill.pub design principles\",\"search_depth\":\"advanced\",\"max_results\":10}",
+  "error": "Tavily API error: Request failed with status code 502\nDocumentation: https://docs.tavily.com/documentation/api-reference/endpoint/search",
+  "timestamp": "2026-04-13T15:02:40.040Z",
+  "retry_count": 1
+}
