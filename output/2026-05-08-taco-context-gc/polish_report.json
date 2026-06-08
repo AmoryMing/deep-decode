@@ -1,0 +1,17 @@
+{
+  "structural": {
+    "ai-signature": {"status": "PASS", "hits": 0},
+    "translation": {"status": "PASS", "hits": 0, "fixed_round": 1},
+    "abstract-noun": {"status": "PASS", "hits": 0, "fixed_round": 1},
+    "hook": {"status": "PASS", "hits": 0}
+  },
+  "prose": {
+    "paragraphs_changed": 2,
+    "notes": "fixed translation-style negation ladder + 缩水词 某个 → concrete file path"
+  },
+  "summary": {
+    "structural_total_edits": 2,
+    "prose_paragraphs_changed": 2,
+    "over_polished": false
+  }
+}

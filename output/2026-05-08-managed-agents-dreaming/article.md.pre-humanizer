@@ -1,0 +1,136 @@
+---
+title: agent 学会了做梦：Anthropic 把人类晚上才做的事写进了产品
+source: https://claude.com/blog/new-in-claude-managed-agents
+author: Anthropic Managed Agents Team
+date: 2026-05-08
+type: decode
+tags: [Anthropic, managed-agents, dreaming, outcomes, multiagent, agent工程]
+---
+
+![封面](00_系列封面.png)
+
+去年这个时候，Anthropic 把 agent 的"脑"和"手"拆开卖。这个月，他们补上了第三件——梦。
+
+听起来像营销词，但 Harvey 那条 6× 完成率的数据是真的。Anthropic 在 Managed Agents 里做了一件以前没人正经做过的事：让 agent 在没有任务的时候，回头看自己之前几百次会话，找出哪里反复栽跟头，然后改自己的系统提示词。这个动作他们叫 dreaming。
+
+人类睡觉时大脑做的事，被翻译成了一条 API。
+
+## 反应式 agent 的天花板
+
+要理解 dreaming 是什么改动，先得说清楚 agent 现在卡在哪。
+
+过去两年的 agent，行为模式都是一样的：收到请求 → 推理 → 调工具 → 输出 → 会话结束。结束之后，刚才发生的所有事被打包扔进日志，下一次会话从零开始。这是反应式的——给输入，出输出，没有中间。
+
+问题不在某次任务做得好不好，而在它永远做不好同一类任务里那个反复出现的坑。客户名字写错了纠正一次，下个会话又错。某个 SQL 风格客户讨厌，提醒一次，第二天又写出来。每个 agent 团队都在给系统提示词打补丁，打成一坨连作者自己都不敢删的东西。
+
+我见过一个团队的 system prompt 600 行，每一行都对应过去某次客诉。这是反应式 agent 的脚手架最终归宿——补丁博物馆。
+
+![反应式与反身式对比](01_反应式_vs_反身式.png)
+
+Dreaming 改变的就是这个。它不是让 agent 学得更聪明，而是给 harness 加了一条记忆通道：上一周你做错了什么，今天的版本应该知道。这条通道以前只能靠人，靠工程师每周翻日志手动改提示词。现在 Anthropic 把它做成了产品功能。
+
+## Dreaming 的实际机制
+
+抛开"做梦"这个词，机制并不神秘。三步。
+
+第一步，把 session 当语料。脑手分离架构里 session 是 append-only 的事件流，本来就不丢。Dreaming 做的事就是把这堆事件流喂给一个专门的复盘 agent。
+
+第二步，复盘 agent 不执行任务，只读自己。它问的问题是工程师每周开会问的那种——这一周哪些任务进了死循环？哪些工具调用一直失败？用户哪里不满意？提示词哪里描述模糊导致 agent 自由发挥？
+
+第三步，输出系统提示更新建议。可以走两种路径：自动合并到下一次会话的 system prompt，或者写成一份变更建议等人审核。Anthropic 把这个开关留给了开发者。
+
+![dreaming 工作机制](02_dreaming_循环.png)
+
+Harvey 跑通后报告完成率提升约六倍。法律 AI 这种长链路任务最吃这一套——一个并购尽调要拆成上百步，每步都可能踩同样的坑。把这些坑变成 system prompt 的边界条件，等于把"老法律助理的肌肉记忆"做成了软件。
+
+值得拆穿的一点：6× 是 Anthropic 报的数字，不是独立测评。但即使打个对折，这个量级的提升也已经超过了模型版本升级带来的差距。一年里 Sonnet 4.5 到 Opus 4.5 的实际任务收益大概是 20%-40%，dreaming 在长任务上一拳干到 300%。这个差距不是模型能力做的，是 harness 做的。
+
+## Outcomes：把验收 API 化
+
+Outcomes 是同一组更新里被低估的那个。
+
+它解决的问题更朴素：agent 自己不知道自己有没有干完。模型输出"我已经把报告写好了"是一回事，文件是不是真的格式正确、字段是不是真的填全，是另一回事。过去这层判断只能靠人——agent 输出，人检查，不对再说一遍。
+
+Outcomes 让开发者写一份成功标准——可以是规则也可以是 rubric——然后系统启动一个独立 grader 来评。grader 在另一个上下文窗口里，读 agent 的产出，对照标准给反馈。不达标，agent 拿着反馈再来一次，最多迭代 N 轮。
+
+为什么要"独立的 grader"？因为如果用同一个 agent 自评，它会作弊。这不是阴谋论，是实测过的现象——LLM 评估自己的输出时倾向给高分，叫 self-preference bias。Anthropic 干脆把裁判和运动员物理隔开，独立上下文，独立评分。
+
+数据上：总任务成功率 +10pp，docx 文档类任务 +8.4%，pptx +10.1%。结构化产出物收益最大，因为这类任务本来就有客观验收标准——表头对不对、模板有没有用、必填字段全不全，rubric 写起来不费劲。开放性写作上 Outcomes 收益没那么明显，这个边界 Anthropic 没公开承认，但产品发布稿挑数据的方式已经在告诉你了。
+
+把这件事抽象一层：Outcomes 是把产品经理的验收清单变成 API。以前你写 PRD，工程师读完做出来，QA 拿着 PRD 测。现在你直接写 rubric，agent 拿着 rubric 自我迭代。"定义需求"的能力变得比"管开发"值钱——这是托管 agent 时代第一个明显的角色变化。
+
+## Multiagent 的 Netflix 时刻
+
+第三件套是多 agent 编排，主 agent 拆任务交给子 agent 并行干。
+
+这件事概念上不新鲜，AutoGen、CrewAI 早做过 demo。Managed Agents 把它做进托管平台，主要解决两件事：一是子 agent 的容器、token、状态都在 Anthropic 这边记账，开发者不用自己搭调度；二是子 agent 跟主 agent 共享同一份文件系统，不用走奇怪的传参。
+
+Netflix 是案例。他们用主 agent 把上千份构建日志切片，分发给数百个子 agent 并行扫，每个子 agent 找异常模式，主 agent 汇总。这个工作流以前要么单线程跑几个小时，要么人写 MapReduce。现在直接是 agent-native 的拆分-合并。
+
+数百个子 agent 并行——这个数字本身比"多 agent 协作"这种说法有用得多。它告诉你这个东西适合什么场景：批量、可拆分、子任务彼此独立、结果可汇总。日志分析、批量代码审查、文档去重、对账。不适合什么：长链路依赖的任务、子任务结果会改变后续路径的任务。这条边界 Anthropic 也没说，但限制写在产品里——目前只支持一级委派，子 agent 不能再调 agent。
+
+Spiral 那个案例顺手解决了另一个问题：成本分层。他们用 Haiku 处理用户请求和路由，用 Opus 跑核心推理。同一套 harness、不同 token 价位的模型混搭。以前要做这件事，得自己拼两套 SDK。现在内置。
+
+![三件套数据](03_三件套数据.png)
+
+## 为什么这件事重要
+
+我把这次更新放到去年那篇"脑手分离"的延长线上看，看见的不是产品列表，是范式。
+
+去年的故事是 agent 的架构问题——脑和手粘在一起没法独立升级。今年的故事是 agent 的成长问题——它不会从昨天的错误里学。这是两个不同层次的脱耦：去年解开"运行时"，今年解开"时间"。
+
+反应式 agent 永远活在当下。每个 session 是一个孤岛。Dreaming 第一次给了它一条往回看的通道——不是上下文窗口里那种短期记忆，是跨 session 跨周的长期反思。哪些反思值得保留、写进哪个层（系统提示？工具描述？子 agent 的 rubric？），这一层的工程到目前是空白。Anthropic 推了第一版方案，行业接下来一年要补的是这一块。
+
+更深一层的变化：harness 的职能在扩。
+
+之前 harness 管运行——把模型输出路由到工具，把工具结果写回上下文。Sebastian Raschka 那句"Harness > Model"说的还是这个层面。现在 harness 开始管成长——历史回放、自我评估、规则迭代。一个 harness 能不能让 agent 持续变好，比模型基础能力强不强，更接近产品体验。
+
+往坏处说，这是 Anthropic 把锁点埋得更深了一层。Session 格式锁过一次，现在 dreaming 输出的提示更新、Outcomes 的 rubric DSL、子 agent 的编排协议——每一个都是新的标准位。开发者一旦在这上面建立了 evaluation 基础设施，迁移成本不只是切 API，是要重做整套质量保障流程。这不是阴谋论，是平台的结构性优势——AWS 的 lock-in 也不是从 EC2 开始，是从 IAM 和 CloudWatch 开始。
+
+## 盲区
+
+几件官方稿没说但值得问的事。
+
+**Dreaming 的失败模式**。如果复盘 agent 自己有偏差，它会把错误写进系统提示，下次会话变得更糟。Anthropic 的解法是让人审核，但人审核就回到了"工程师每周翻日志手动改"。这个事自动化的飞轮怎么转，他们没解释清楚。
+
+**Outcomes 评分的天花板**。结构化任务收益大，开放性任务呢？写一份分析报告，rubric 该怎么写？写松了 grader 全过，写紧了 agent 永远不达标。这条曲线在哪个点拐弯，发布稿没披露。
+
+**Multiagent 的故障半径**。一个主 agent 调数百个子 agent 并行，其中一个子 agent 跑死循环或者输出毒化数据怎么办？回滚机制在哪一层？这个问题在传统分布式系统里有几十年答案，但 agent 上下文里没人正面回答过。
+
+**6× 这个数字怎么测的**。基线是什么？没 dreaming 时是哪个版本的 system prompt？测试集的任务分布有多偏向 dreaming 擅长的类型？厂商内部数据公开时这种问号是默认的，但应该写出来。
+
+## 对 AI 从业者意味着什么
+
+**做 agent 产品的**：把 evaluation 当一等公民。Outcomes 这条线背后的逻辑是 rubric 比代码更值钱——能定义清楚"什么叫做完了"的人，比能写出 agent 实现的人更稀缺。组里没有专门做 eval 的人，赶紧补一个。
+
+**做基础设施的**：dreaming 这层迟早会有开源版本，但短期内自己造的成本远高于直接用。如果产品上还没到非自有不可的阶段，先用 Managed Agents 跑通一遍，看哪里被锁住才决定要不要拆出来。这是 build-vs-buy 的标准答案，但一年前还没法这么算，今年可以了。
+
+**做模型评测的**：传统的"任务成功率"指标越来越不够用。一个用了 dreaming 的 agent 在第一周和第十周的表现可能差出三倍——你测哪一周？时间维度成了 evaluation 的新轴，而行业里几乎所有 benchmark 都是单点测试。这块的方法论需要重写。
+
+**做企业 AI 落地的**：Multiagent 那个 Netflix 案例值得仔细看。批量、可拆分、独立子任务——你公司里类似形态的任务比你以为的多。日终对账、合同抽取、客诉分类、API 文档校对，全是。这些场景以前要么单线程跑很慢，要么写 MapReduce 工程量大，现在中间档有了。
+
+---
+
+## 本期关键词
+
+**Dreaming（梦境式自我迭代）** -- Managed Agents 的新功能，让 agent 在闲时回看历史 session，复盘失败模式，自动或半自动更新自己的系统提示词。Harvey 用上之后任务完成率提升约六倍。这是 agent 第一次有了"上次怎么做错的"这条跨 session 的记忆通道。
+
+**Outcomes（成功标准 API）** -- 开发者写一份验收 rubric，系统启动独立 grader 在隔离上下文里评估 agent 产出，不达标 agent 自动迭代。docx +8.4%、pptx +10.1%，总任务成功率 +10pp。本质是把产品经理的验收清单 API 化。
+
+**Self-preference bias（自评偏好偏差）** -- LLM 评估自己输出时倾向给高分。Outcomes 用独立 grader、独立上下文规避这个问题。这是为什么"agent 自检"这件事要靠架构，不能靠提示词。
+
+**Multiagent orchestration（多 agent 编排）** -- 主 agent 拆任务，子 agent 并行执行，共享文件系统不共享上下文。Managed Agents 当前限制一级委派。Netflix 案例是数百子 agent 并行扫构建日志找异常。
+
+**Tiered model（分层模型架构）** -- 同一套 harness 里混搭不同价位的模型。Spiral 案例：Haiku 接请求做路由，Opus 跑核心推理。把成本结构变成可配置的，不再是"全用最贵的"。
+
+**Reflective agent（反身式 agent）** -- 与 reactive agent（反应式）相对。能基于自己历史行为做改进的 agent。Dreaming 是反身能力的一种实现，长期看这是 agent 工程范式的临界点：从"运行得好"到"持续变好"。
+
+**Harness（脚手架）** -- 包裹 LLM 的控制循环。本期看点是 harness 的职能边界又扩了一圈：从管"运行"到管"成长"。Sebastian Raschka 那句 "Harness > Model" 在这一更新后更适用了。
+
+**Webhook 任务通知** -- Managed Agents 这次也支持任务完成时主动 webhook，不必轮询。看起来是工程细节，但配合 dreaming 和 outcomes 的长任务时长，这个支持本来就是必需的——不然客户端没法等。
+
+## 引用
+
+1. [New in Claude Managed Agents: dreaming, outcomes, and multiagent orchestration](https://claude.com/blog/new-in-claude-managed-agents) -- 本期拆解原文
+2. [Scaling Managed Agents: Decoupling the Brain from the Hands](https://www.anthropic.com/engineering/managed-agents) -- 上一期"脑手分离"原文，本文延长线
+3. [Claude Managed Agents Documentation](https://platform.claude.com/docs/en/managed-agents/overview) -- 官方完整 API 文档
