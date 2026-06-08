@@ -1,0 +1,26 @@
+platform: xiaohongshu
+source_article: /Users/muming/项目/内容/output/2026-05-08-brief-luma-taco-xai/article.md
+generated_at: '2026-05-31T18:45:49'
+exact_article_text: true
+watermark: Amory · AI文科生
+mood: pixel-tactile-ui
+romi_state: symbol
+canvas:
+  width: 1080
+  height: 1440
+max_images: 18
+body_cards: 7
+source_text_chars: 1151
+image_order:
+- cover.png
+- card_01.png
+- card_02.png
+- card_03.png
+- card_04.png
+- card_05.png
+- card_06.png
+- card_07.png
+notes:
+- 'Prototype: semantic Markdown block pagination; paragraphs are not split.'
+- HTML owns all long Chinese text; image generation is not used for article body text.
+skin: magazine-editorial

@@ -1,0 +1,12 @@
+{
+  "structural": {
+    "ai-signature": "PASS",
+    "translation": "PASS (after 1 fix: removed 不是X而是Y construction)",
+    "abstract-noun": "PASS",
+    "hook": "PASS"
+  },
+  "summary": {
+    "structural_total_edits": 1,
+    "over_polished": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "tts": "edge-tts",
+  "voice": "zh-CN-XiaoxiaoNeural",
+  "rate": "+8%",
+  "segments": 8,
+  "duration_seconds": 536.52,
+  "duration_hms": "00:08:56",
+  "raw_file": "podcast_raw.mp3",
+  "output_file": "podcast.mp3"
+}

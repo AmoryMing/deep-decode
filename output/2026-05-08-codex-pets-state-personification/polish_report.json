@@ -1,0 +1,49 @@
+{
+  "mode": "light-polish",
+  "structural_audit_10": {
+    "1_钩子": "PASS：标题用“状态拟人化”直接概括产品变化，不像 PR 稿。",
+    "2_AI签名词": "PASS：grep 未命中“让我们/综上所述/值得注意的是/接下来看/首先/其次/我认为”。",
+    "3_反复不是X而是Y": "PASS：已减少标题和正文中的否定阶梯，保留必要边界判断。",
+    "4_概念命名": "PASS：状态拟人化、旁路观察者、工作型桌宠、可编程界面等概念嵌入叙事。",
+    "5_多受众": "PASS：从 Agent 产品、开发者工具、企业 AI、平台四类视角落地。",
+    "6_推理链完整": "PASS：官方功能事实 → 状态层判断 → Claude buddy 对照 → 架构边界 → 从业者启示。",
+    "7_外部信号数": "PASS：OpenAI 官方 settings/skills/overview + Claude 源码对照。",
+    "8_盲区段": "PASS：列出状态映射、自定义边界、隐私、归因四个未知点。",
+    "9_落回具体": "PASS：落到长任务、后台状态、等待 review、企业审批流等具体场景。",
+    "10_企媒适配": "PASS：不暴露生产 pipeline，不贩卖焦虑，保留判断。"
+  },
+  "prose_audit_7steps": {
+    "edits": [
+      {
+        "location": "§一标题",
+        "original": "桌宠不是宠物，是状态灯",
+        "revised": "桌宠先是一盏状态灯",
+        "rule_cited": "Step 3",
+        "why": "减少 Not X but Y 的翻译腔阶梯。"
+      },
+      {
+        "location": "§二首段",
+        "original": "本地项目里的源码是之前泄露的 Claude Code/Claude CLI 体系",
+        "revised": "参照组里的源码来自之前泄露的 Claude Code/Claude CLI 体系",
+        "rule_cited": "Step 6.5",
+        "why": "避免暴露本地项目加工过程，把表述改成文章内的证据关系。"
+      },
+      {
+        "location": "§四中段",
+        "original": "这不是简单换皮肤",
+        "revised": "这一步超过了简单换皮肤",
+        "rule_cited": "Step 3",
+        "why": "保留判断，减少否定句式。"
+      }
+    ]
+  },
+  "summary": {
+    "total_edits": 3,
+    "step_distribution": {
+      "Step 3": 2,
+      "Step 6.5": 1
+    },
+    "over_polished": false,
+    "hot_zones": ["§一", "§二", "§四"]
+  }
+}

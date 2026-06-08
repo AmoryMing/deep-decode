@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#F7F7F5;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F7F7F5;">
+<tr><td align="center" style="padding:32px 16px;">
+<table role="presentation" width="680" cellpadding="0" cellspacing="0"
+  style="background:#FFFFFF;border-radius:8px;max-width:680px;width:100%;">
+<tr><td style="padding:36px 40px;">
+
+<h1 style="font-size:24px;color:#37352F;font-weight:700;margin:0 0 8px 0;
+  line-height:1.4;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">
+  AI 情报日报 2026-05-08｜Luma 杀进文生图前三、TACO 给 Agent 倒上下文垃圾、xAI 22 万张卡转租 Anthropic</h1>
+<p style="font-size:13px;color:#787774;margin:0 0 24px 0;
+  font-family:'PingFang SC','Microsoft YaHei',sans-serif;">
+  情报日报 | 原文：AI Force 情报组 | 2026-05-08</p>
+<hr style="border:none;border-top:2px solid #2383E2;margin:0 0 28px 0;">
+
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"># AI 情报日报 2026-05-08</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">今日三条线索分别落在三个层面：模型（生图）、Agent 工程（上下文管理）、基础设施（算力流向）。共同的潜台词是——前沿能力的边界，正在被很小的团队和很短的工程动作改写。</p>
+<hr style="border:none;border-top:1px solid #E3E2E0;margin:28px 0;">
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">今日要点</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">### 1. Luma Uni-1.1：15 人华人团队挤进文生图前三，专攻"图里写字"</p>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">一句话</strong>：Luma 发布 Uni-1.1 文生图模型，在主流榜单上排名第三，重点强化海报、招牌、UI 截图里的文字渲染，质量直追 GPT-Image-2。团队规模约 15 人，对外口径是"40 小时干完一家广告公司一年的活"。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">为什么重要</strong>：文字渲染是过去两年文生图最稳定的"翻车点"。这块过线意味着电商主图、活动海报、UI 草稿这一类强商业场景，可以从"AI 出灵感、设计师重做"切到"AI 直接出可用稿"。同时验证了一件事：文生图的赛点已经从"画得像"转移到"能不能落地用"。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">信源</strong>：量子位、机器之心</li>
+</ul>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">### 2. TACO（Terminal Agent Compression）：让命令行 Agent 自己学会丢上下文垃圾</p>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">一句话</strong>：一种针对 Terminal Agent 的上下文压缩方案。Agent 跑长任务时，过期命令输出和报错日志会持续堆进 context，越堆越糊；TACO 让 Agent 自己识别"这段已经没用了"并主动剔除，相当于给 Agent 加了一个自动垃圾回收。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">为什么重要</strong>：Agent 长程任务的瓶颈不是模型能力，而是 context 衰减——窗口越满，注意力越散，越后面越蠢。TACO 解决的是 Agent 工程里最现实的一类问题：Claude Code、Codex 这类需要在 shell 里反复执行的 Agent，如何在不爆窗口的前提下跑得动几十步任务。判断方向上，"上下文裁剪"会和 prompt 缓存、KV 复用一起，成为 Agent 框架的标配模块。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">信源</strong>：机器之心</li>
+</ul>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">### 3. xAI 把 22 万张 GPU 整体转租 Anthropic，Claude 额度立刻翻倍</p>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">一句话</strong>：xAI 把 Colossus 1 整套超算（坊间口径约 15 万张 H100、5 万张 H200、3 万张 GB200，约 300 兆瓦）打包租给 Anthropic 跑推理。直接结果：Claude Code 的 5 小时配额翻倍、高峰期不再降速，Opus API 的限流明显放宽。Anthropic 的 Alex Albert 一句话总结："More chips, more Claude."</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">为什么重要</strong>：两层信号。第一层，前沿模型公司之间的算力流向已经跨越阵营——能租就租，立场让位于产能。第二层，Dario 此前在采访里承认 Claude 用量"意外暴涨 80 倍"，这次大规模租卡是对那次承认的兑现。这件事把"算力是真护城河"摆到台面上：模型质量、产品体验、限流策略，最终都是算力账本的下游。对一线开发者最直观的影响是，Claude 上的体感卡顿在过去这周已经明显缓解。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">信源</strong>：量子位、机器之心、Smol AI News</li>
+</ul>
+<hr style="border:none;border-top:1px solid #E3E2E0;margin:28px 0;">
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">值得关注</h2>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">文生图榜单第三这一类排名变动，单点意义不大，要看 Luma 后续能否把"图里写字"的优势固化成 API 调用习惯。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">TACO 的具体压缩策略（启发式还是模型判定）会决定它能不能下沉成框架默认行为，值得跟一篇细读。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">xAI 这次出租的是"集群整体"而非按卡时计费，意味着 Anthropic 拿到的是相对稳定的产能而不是 spot 算力，Claude 的服务等级（SLA）下半年应该会再上一档。</li>
+</ul>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">关键词</h2>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">文字渲染（text rendering）</strong> —— 文生图模型把指定文字准确画进图里的能力，长期是短板，被视为"能不能商用"的分水岭。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Terminal Agent</strong> —— 在 shell/终端里反复执行命令的 AI Agent，典型代表是 Claude Code、Codex CLI。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">上下文压缩（context compression）</strong> —— 主动从 Agent 的对话历史里剔除过期内容，让有效信息密度保持在窗口里。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Colossus</strong> —— xAI 在孟菲斯部署的超算集群代号，也是这次整体出租给 Anthropic 的物理对象。</li>
+</ul>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">引用</h2>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">量子位：Luma Uni-1.1 文生图新模型评测</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">机器之心：《马斯克官宣 xAI 解散，22 万张 GPU 算力租给 Anthropic》</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">机器之心：TACO 上下文压缩论文解读</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Smol AI News：Anthropic 算力扩容简报，Alex Albert 原话 "More chips, more Claude."</li>
+</ul>
+<hr style="border:none;border-top:1px solid #E3E2E0;margin:28px 0;">
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><em style="font-style:italic;color:#37352F;">AI Force ｜ 中数智汇</em></p>
+
+<hr style="border:none;border-top:1px solid #E3E2E0;margin:28px 0 16px 0;">
+<p style="font-size:12px;color:#787774;text-align:center;margin:0;
+  font-family:'PingFang SC','Microsoft YaHei',sans-serif;">
+  慕铭 | AI Force 智能体研究员 | 中数智汇</p>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
