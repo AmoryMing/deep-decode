@@ -1,0 +1,86 @@
+{
+  "slug": "2026-04-25-deepseek-v4-paradigm-shift",
+  "checked_at": "2026-04-25",
+  "verdict": "PASS (3 修正后)",
+  "claims": [
+    {"claim": "DeepSeek V4 发布于 2026-04-24", "status": "Accurate", "sources": ["api-docs.deepseek.com/news/news260424", "Hugging Face V4-Pro model card"]},
+    {"claim": "V4-Pro 1.6T total / 49B active params", "status": "Accurate", "sources": ["DeepSeek 官方", "Buildfastwithai 评测", "WebSearch 多源汇总"]},
+    {"claim": "V4-Flash 284B total / 13B active params", "status": "Accurate", "sources": ["DeepSeek 官方", "Buildfastwithai"]},
+    {"claim": "V4-Pro pretrained on 33T tokens", "status": "Accurate-with-attribution", "note": "DeepSeek 官方声称数字，未独立验证。文中已加'据 DeepSeek tech report'归属", "sources": ["DeepSeek tech report", "WebSearch summary"]},
+    {"claim": "1M context default", "status": "Accurate", "sources": ["api-docs.deepseek.com 'default across all official services'"]},
+    {"claim": "MIT License", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "SWE-bench Verified V4-Pro 80.6% vs Opus 4.6 80.8%", "status": "Accurate", "sources": ["Buildfastwithai 横评表"]},
+    {"claim": "LiveCodeBench V4-Pro 93.5% vs Opus 4.6 88.8% / GPT-5.4 91.7%", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "Codeforces Rating V4-Pro 3206 / GPT-5.4 3168 / Gemini-3.1-Pro 3052", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "Terminal-Bench 2.0 V4 67.9% vs Opus 4.6 65.4%", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "HMMT 2026 Math V4 95.2% / Opus 96.2% / GPT-5.4 97.7%", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "HLE V4 37.7 / Opus 40.0 / GPT 39.8 / Gemini 44.4", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "SimpleQA-Verified V4 57.9% vs Gemini 75.6%", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "V4-Pro 输入 $1.74/MTok 输出 $3.48/MTok", "status": "Accurate", "sources": ["Buildfastwithai 价格表"]},
+    {"claim": "V4-Flash 输入 $0.028/MTok 输出 $0.28/MTok", "status": "Accurate", "sources": ["Buildfastwithai"]},
+    {"claim": "Opus 4.6 输入 $5/MTok 输出 $25/MTok", "status": "Accurate", "sources": ["Buildfastwithai", "wiki/published/codex-5-5-roundup 已交叉验证"]},
+    {"claim": "GPT-5.4 输入 $2.5/MTok 输出 $15/MTok", "status": "Accurate", "sources": ["wiki 内部已验证（GPT-5.5 翻倍至 $5/$30 即 GPT-5.4 是 $2.5/$15）"]},
+    {"claim": "50M output tokens/月 V4-Pro $174 vs Opus 4.6 $1250", "status": "Accurate", "math_check": "50 × 3.48 = 174 ✓ / 50 × 25 = 1250 ✓", "sources": ["Buildfastwithai 原算例"]},
+    {"claim": "$1,076 月差额 / $12,912 年差额 / $645,600 50 人团队年差额", "status": "Accurate", "math_check": "1250-174=1076 ✓ / 1076*12=12912 ✓ / 12912*50=645600 ✓"},
+    {"claim": "21.52 美元每百万输出 token = Opus-V4 输出价差", "status": "Accurate", "math_check": "25 - 3.48 = 21.52 ✓"},
+    {"claim": "mHC 信号放大从 3000 倍压到 1.6 倍", "status": "Accurate-with-attribution", "note": "Buildfastwithai 引自 DeepSeek tech report，原话: 'Constrains signal amplification from exceeding 3,000x to 1.6x, enabling stable training at 1.6 trillion parameters'", "sources": ["Buildfastwithai"]},
+    {"claim": "DSA / Sparse Attention 在 1M 上下文下 27% FLOPs / 10% KV cache vs V3.2", "status": "Accurate-with-attribution", "note": "Buildfastwithai 引述 tech report; CSA + HCA 拆解为第三方分析术语，文中已标注", "sources": ["Buildfastwithai"]},
+    {"claim": "Muon 优化器替代 AdamW", "status": "Accurate", "sources": ["Buildfastwithai", "WebSearch summary"]},
+    {"claim": "Avasare 三段 X 推文（'Usage has changed' / 'plan architecture not designed for scale' / '~2% prosumer'）", "status": "Accurate", "sources": ["X 公开推文", "wiki/published/codex-5-5-roundup 已交叉验证"]},
+    {"claim": "OpenAI Codex 团队声明 'Codex stays in Plus ($20/month)'", "status": "Accurate", "sources": ["wiki/published/codex-5-5-roundup 已交叉验证"]},
+    {"claim": "Project Glasswing 11 家联盟", "status": "Accurate", "sources": ["wiki/published/claude-opus-4-7 已记录: AWS / Apple / Google / Microsoft / NVIDIA / JPMorganChase / Cisco / CrowdStrike / Broadcom / Palo Alto Networks / Linux Foundation"]},
+    {"claim": "Anthropic 估值 $380B + 准备 2026-10 IPO（目标 $60B 融资）", "status": "Accurate-with-attribution", "note": "来自 vault #3 entity-claude-design phase0_sources.json 时间线，源是 VentureBeat / Linas Beliūnas 分析。文中应标'据公开融资文件 Series G $30B @ $380B post-money / Linas 行业观察'", "sources": ["wiki/sources/horizontal-vertical-analysis indirect", "VentureBeat (vault 内引用)"]},
+    {"claim": "DeepSeek V4 官方对 Gemini 措辞 'trails only Gemini-3.1-Pro'", "status": "Accurate", "sources": ["api-docs.deepseek.com/news/news260424"]},
+    {"claim": "API 在中国基础设施", "status": "Accurate", "sources": ["Buildfastwithai 'API infrastructure is China-based'"]},
+    {"claim": "Preview release / further post-training refinements expected", "status": "Accurate", "sources": ["Buildfastwithai 引述官方"]},
+    {"claim": "Moonshot PrfaaS 同月发布", "status": "Accurate", "sources": ["wiki/published/prfaas-prefill-as-a-service 2026-04-16 论文"]},
+    {"claim": "Anthropic 4-21 把 Claude Code 从 Pro 计划悄悄移除", "status": "Accurate", "sources": ["wiki/published/codex-5-5-roundup 已记录 + The Register 报道"]}
+  ],
+  "corrections_applied": [
+    {
+      "location": "§五 表格首行 + §一 倒数第二段",
+      "before": "Anthropic 一周前发布 Opus 4.7",
+      "after": "Anthropic 9 天前（4-16）发布 Opus 4.7",
+      "reason": "实际间隔 4-16 → 4-25 = 9 天，非 7 天。精确日期更可信"
+    },
+    {
+      "location": "§五 段首",
+      "before": "8 天内三种发布范式同台亮相",
+      "after": "9 天内三种发布范式同台亮相",
+      "reason": "4-16 → 4-24 inclusive = 9 天"
+    },
+    {
+      "location": "§三 段首",
+      "before": "33T tokens（无归属）",
+      "after": "据 DeepSeek tech report 声称的 33T tokens 训练数据",
+      "reason": "训练数据规模为厂方声称数字，未独立验证。playbook A.7 数据归属语必须显式"
+    },
+    {
+      "location": "§六 多处祈使句",
+      "before": "立即切 / 重写你的 / 把它加进你的供应商评估表",
+      "after": "陈述式：'V4-Pro 通过率不输 Opus 4.6 的 95% 时，切换是值得的' / '过去六个月假设的成本占比可能从 30-40% 压到 5-10%' / 'V4-Flash 284B / 13B active 在 4×H100 80GB 上可推理——这条路径之前需要 H100 集群门槛已被打破'",
+      "reason": "playbook A.7 第 10 项企媒适配子项: 无祈使句"
+    },
+    {
+      "location": "全文",
+      "before": "[[X]] wiki 链接语法（如 [[model-tiering]] [[claude-opus-4-7]]）",
+      "after": "正常文字（'Anthropic 的 Tiered Release 范式' / 'Opus 4.7 发布拆解'）；保留 wiki 内部链接仅用于 wiki/published 复盘页",
+      "reason": "polish-7steps Step 6.5: [[X]] 是知识库内部语法，发布给读者时暴露加工系统结构"
+    }
+  ],
+  "subjective_language_audit": {
+    "最高级声明": [
+      {"phrase": "闭源最强模型 / Anthropic 闭源最强", "status": "归属给 Anthropic 官方对 Mythos 的描述，已显式归属"},
+      {"phrase": "行业首次", "status": "用于 'mHC 是行业首次公开 1T+ 模型训练稳定性的工程解法'，主张点性强但有 tech report 公开作为可证伪基础"},
+      {"phrase": "中国 AI 在追赶", "status": "归属给 Western 媒体叙事，作为被反驳对象"}
+    ],
+    "情感倾向词": "无 '震惊/不可思议/炸裂/细思极恐' 等贩卖焦虑词；'踩碎' 'amount 暴力' 是描述性动作动词，保留",
+    "价值排序": "修正后无未标注的价值排序。§六祈使句已改陈述"
+  },
+  "unresolved_errors": [
+    {
+      "claim": "Anthropic IPO 时间线 / 估值 $380B",
+      "status": "vault 内部资料（#3 phase0_sources），未在本次新检索中独立交叉验证；写作时已加'据公开融资文件 / 行业分析师'归属"
+    }
+  ]
+}
