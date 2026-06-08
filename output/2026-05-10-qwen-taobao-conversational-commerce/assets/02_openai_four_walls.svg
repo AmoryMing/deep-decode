@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1080" height="8" fill="#2383E2"/>
+
+  <text x="60" y="100" font-size="20" fill="#787774" letter-spacing="2">SECTION 2 · OpenAI Instant Checkout</text>
+  <text x="60" y="170" font-size="52" font-weight="700" fill="#37352F">撞了哪四面墙</text>
+  <text x="60" y="220" font-size="22" fill="#787774">本质：没有自己的商品库 → 无法保证交易数据的实时性 / 合规性 / 连续性</text>
+
+  <!-- 4 walls grid -->
+  <g transform="translate(60, 290)">
+    <!-- Wall 1 -->
+    <rect width="460" height="280" fill="#FFF3E0" stroke="#FFA500" stroke-width="2" rx="8"/>
+    <text x="30" y="60" font-size="20" fill="#787774">墙 #1</text>
+    <text x="30" y="110" font-size="28" font-weight="700" fill="#37352F">高意图，低转化</text>
+    <text x="30" y="155" font-size="18" fill="#37352F">用户问"哪款 DSLR 2000 美元</text>
+    <text x="30" y="180" font-size="18" fill="#37352F">以内最好"——问完不在</text>
+    <text x="30" y="205" font-size="18" fill="#37352F">ChatGPT 里下单</text>
+    <text x="30" y="245" font-size="16" fill="#787774">CNBC 2026-03-20</text>
+  </g>
+
+  <g transform="translate(560, 290)">
+    <!-- Wall 2 -->
+    <rect width="460" height="280" fill="#FFF3E0" stroke="#FFA500" stroke-width="2" rx="8"/>
+    <text x="30" y="60" font-size="20" fill="#787774">墙 #2</text>
+    <text x="30" y="110" font-size="28" font-weight="700" fill="#37352F">商家集成成本</text>
+    <text x="30" y="155" font-size="18" fill="#37352F">实时库存同步</text>
+    <text x="30" y="180" font-size="18" fill="#37352F">防欺诈系统对接</text>
+    <text x="30" y="205" font-size="18" fill="#37352F">售后流程打通</text>
+    <text x="30" y="245" font-size="16" fill="#787774">长尾商家配不出这种工程量</text>
+  </g>
+
+  <g transform="translate(60, 610)">
+    <!-- Wall 3 -->
+    <rect width="460" height="280" fill="#FFF3E0" stroke="#FFA500" stroke-width="2" rx="8"/>
+    <text x="30" y="60" font-size="20" fill="#787774">墙 #3</text>
+    <text x="30" y="110" font-size="28" font-weight="700" fill="#37352F">合规缺口</text>
+    <text x="30" y="155" font-size="18" fill="#37352F">截至 2026-02</text>
+    <text x="30" y="180" font-size="18" fill="#37352F">还没建美国 50 个州的</text>
+    <text x="30" y="205" font-size="18" fill="#37352F">销售税收集系统</text>
+    <text x="30" y="245" font-size="16" fill="#787774">Amazon 花了 20 年</text>
+  </g>
+
+  <g transform="translate(560, 610)">
+    <!-- Wall 4 -->
+    <rect width="460" height="280" fill="#FFF3E0" stroke="#FFA500" stroke-width="2" rx="8"/>
+    <text x="30" y="60" font-size="20" fill="#787774">墙 #4</text>
+    <text x="30" y="110" font-size="28" font-weight="700" fill="#37352F">商品信息不新</text>
+    <text x="30" y="155" font-size="18" fill="#37352F">第三方数据 6 个月前</text>
+    <text x="30" y="180" font-size="18" fill="#37352F">的库存今天可能已下架</text>
+    <text x="30" y="205" font-size="18" fill="#37352F">变体没了 / 价格变了</text>
+    <text x="30" y="245" font-size="16" fill="#787774">一次坏体验毁信任</text>
+  </g>
+
+  <!-- Bottom conclusion -->
+  <g transform="translate(60, 940)">
+    <rect width="960" height="320" fill="#37352F" rx="8"/>
+    <text x="40" y="70" font-size="22" fill="#9B9A97" letter-spacing="2">OPENAI 转向</text>
+    <text x="40" y="125" font-size="32" font-weight="700" fill="#FFFFFF">从"交易层"退到"发现层"</text>
+    <text x="40" y="175" font-size="20" fill="#E3E2E0">推荐 + 路由 → 跳到合作零售商支付</text>
+    <text x="40" y="225" font-size="20" fill="#E3E2E0">当前 5 家合作伙伴：</text>
+    <text x="40" y="265" font-size="24" font-weight="600" fill="#FFA500">Instacart · Target · Walmart · Expedia · Booking.com</text>
+  </g>
+</svg>

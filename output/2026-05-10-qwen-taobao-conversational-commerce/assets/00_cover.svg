@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1080" height="8" fill="#2383E2"/>
+  <text x="60" y="120" font-size="22" fill="#787774" letter-spacing="2">2026-05-10 · DECODE · AI-PRODUCT × BUSINESS</text>
+  <text x="60" y="220" font-size="72" font-weight="700" fill="#37352F">当 OpenAI 砍掉购物</text>
+  <text x="60" y="305" font-size="72" font-weight="700" fill="#37352F">阿里把 40 亿 SKU</text>
+  <text x="60" y="390" font-size="72" font-weight="700" fill="#2383E2">塞进 Chat</text>
+  <line x1="60" y1="430" x2="280" y2="430" stroke="#FFA500" stroke-width="6"/>
+
+  <g transform="translate(60, 510)">
+    <rect width="960" height="200" fill="#F7F7F5" rx="8"/>
+    <text x="40" y="60" font-size="22" fill="#787774">14 个月，两条路</text>
+    <text x="40" y="115" font-size="32" font-weight="600" fill="#37352F">要么你自己拥有商品库</text>
+    <text x="40" y="160" font-size="32" font-weight="600" fill="#2383E2">要么你做转介</text>
+  </g>
+
+  <g transform="translate(60, 760)">
+    <rect width="960" height="510" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="2" rx="8"/>
+    <text x="40" y="60" font-size="22" fill="#787774">三件事</text>
+
+    <text x="40" y="125" font-size="42" font-weight="700" fill="#2383E2">$10B</text>
+    <text x="260" y="125" font-size="22" fill="#37352F">Rufus 预计年增量销售</text>
+    <text x="260" y="155" font-size="18" fill="#787774">Evercore ISI 测算 · 2.5 亿用户 / +60% 转化</text>
+
+    <text x="40" y="235" font-size="42" font-weight="700" fill="#FFA500">14 个月</text>
+    <text x="320" y="235" font-size="22" fill="#37352F">OpenAI Instant Checkout 生命周期</text>
+    <text x="320" y="265" font-size="18" fill="#787774">2025-01 → 2026-03 · 四面墙撞翻</text>
+
+    <text x="40" y="345" font-size="42" font-weight="700" fill="#37352F">40 亿</text>
+    <text x="220" y="345" font-size="22" fill="#37352F">千问 App 接入的淘宝 + 天猫 SKU</text>
+    <text x="220" y="375" font-size="18" fill="#787774">春节"一句话下单"近 2 亿次</text>
+
+    <text x="40" y="440" font-size="20" fill="#37352F">阿里同时押两条路 ——</text>
+    <text x="40" y="470" font-size="22" font-weight="600" fill="#2383E2">千问 App 当入口 + 淘宝站内 AI 助手</text>
+  </g>
+
+  <text x="60" y="1320" font-size="18" fill="#787774">慕铭 | AI Force 智能体研究员 | 中数智汇</text>
+</svg>

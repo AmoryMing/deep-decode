@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1080" height="8" fill="#2383E2"/>
+
+  <text x="60" y="100" font-size="20" fill="#787774" letter-spacing="2">SECTION 4 · 阿里的双押</text>
+  <text x="60" y="170" font-size="52" font-weight="700" fill="#37352F">两条路同时跑</text>
+  <text x="60" y="220" font-size="26" fill="#787774">14 个月所有玩家都想走但只有它走得通的版本</text>
+
+  <!-- Center node: Alibaba -->
+  <g transform="translate(420, 320)">
+    <rect width="240" height="120" fill="#37352F" rx="8"/>
+    <text x="120" y="50" font-size="28" font-weight="700" fill="#FFFFFF" text-anchor="middle">Alibaba</text>
+    <text x="120" y="85" font-size="16" fill="#9B9A97" text-anchor="middle">40 亿 SKU + 3 亿 AI MAU</text>
+  </g>
+
+  <!-- Two branches -->
+  <line x1="500" y1="440" x2="280" y2="540" stroke="#2383E2" stroke-width="4"/>
+  <line x1="580" y1="440" x2="800" y2="540" stroke="#FFA500" stroke-width="4"/>
+
+  <!-- Left branch: 千问 App -->
+  <g transform="translate(60, 540)">
+    <rect width="440" height="320" fill="#F7F7F5" stroke="#2383E2" stroke-width="3" rx="8"/>
+    <text x="30" y="60" font-size="22" fill="#787774">路线 1</text>
+    <text x="30" y="105" font-size="30" font-weight="700" fill="#2383E2">千问 App 当入口</text>
+    <line x1="30" y1="130" x2="180" y2="130" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="30" y="170" font-size="18" fill="#37352F">接入 40 亿 SKU 商品库</text>
+    <text x="30" y="200" font-size="18" fill="#37352F">skill library 处理物流/售后/推荐</text>
+    <text x="30" y="230" font-size="18" fill="#37352F">对话 → 浏览 → 比价 → 下单</text>
+    <text x="30" y="280" font-size="16" font-weight="600" fill="#FFA500">OpenAI 想做但撞墙的那条路</text>
+  </g>
+
+  <!-- Right branch: 淘宝站内 -->
+  <g transform="translate(580, 540)">
+    <rect width="440" height="320" fill="#FFF3E0" stroke="#FFA500" stroke-width="3" rx="8"/>
+    <text x="30" y="60" font-size="22" fill="#787774">路线 2</text>
+    <text x="30" y="105" font-size="30" font-weight="700" fill="#FFA500">淘宝站内 AI 助手</text>
+    <line x1="30" y1="130" x2="180" y2="130" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="30" y="170" font-size="18" fill="#37352F">虚拟试穿</text>
+    <text x="30" y="200" font-size="18" fill="#37352F">30 天价格走势追踪</text>
+    <text x="30" y="230" font-size="18" fill="#37352F">站内浏览路径增加 AI 助手</text>
+    <text x="30" y="280" font-size="16" font-weight="600" fill="#2383E2">Amazon Rufus 已跑通的那条路</text>
+  </g>
+
+  <!-- Comparison table -->
+  <g transform="translate(60, 920)">
+    <text x="0" y="0" font-size="22" font-weight="700" fill="#37352F">同类双押对照</text>
+
+    <rect x="0" y="20" width="960" height="50" fill="#37352F"/>
+    <text x="20" y="55" font-size="18" font-weight="600" fill="#FFFFFF">玩家</text>
+    <text x="280" y="55" font-size="18" font-weight="600" fill="#FFFFFF">入口侧</text>
+    <text x="540" y="55" font-size="18" font-weight="600" fill="#FFFFFF">内嵌侧</text>
+    <text x="800" y="55" font-size="18" font-weight="600" fill="#FFFFFF">瓶颈</text>
+
+    <rect x="0" y="70" width="960" height="70" fill="#F7F7F5"/>
+    <text x="20" y="115" font-size="20" font-weight="700" fill="#2383E2">阿里</text>
+    <text x="280" y="115" font-size="18" fill="#37352F">千问 App</text>
+    <text x="540" y="115" font-size="18" fill="#37352F">淘宝站内助手</text>
+    <text x="800" y="115" font-size="18" fill="#37352F">能跑</text>
+
+    <rect x="0" y="140" width="960" height="70" fill="#FFFFFF"/>
+    <text x="20" y="185" font-size="20" font-weight="700" fill="#37352F">京东</text>
+    <text x="280" y="185" font-size="18" fill="#37352F">京东 AI 购</text>
+    <text x="540" y="185" font-size="18" fill="#37352F">京言导购</text>
+    <text x="800" y="185" font-size="18" fill="#787774">SKU 差一档</text>
+
+    <rect x="0" y="210" width="960" height="70" fill="#F7F7F5"/>
+    <text x="20" y="255" font-size="20" font-weight="700" fill="#37352F">字节</text>
+    <text x="280" y="255" font-size="18" fill="#37352F">豆包 App</text>
+    <text x="540" y="255" font-size="18" fill="#37352F">抖音电商</text>
+    <text x="800" y="255" font-size="18" fill="#787774">内容电商起点弱</text>
+
+    <rect x="0" y="280" width="960" height="70" fill="#FFFFFF"/>
+    <text x="20" y="325" font-size="20" font-weight="700" fill="#37352F">拼多多</text>
+    <text x="280" y="325" font-size="18" fill="#787774">—</text>
+    <text x="540" y="325" font-size="18" fill="#787774">货找人（后端）</text>
+    <text x="800" y="325" font-size="18" fill="#787774">不押对话入口</text>
+  </g>
+</svg>

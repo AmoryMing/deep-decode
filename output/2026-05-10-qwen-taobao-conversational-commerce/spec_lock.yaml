@@ -1,0 +1,102 @@
+version: 2
+# spec_lock.yaml — 项目级机器契约。Strategy Spec 确认后填齐 + freeze。
+# 所有 executor 开始前必须重读本文件，不凭上下文记忆。
+
+# ─────────── 项目元数据 ───────────
+project:
+  slug: YYYY-MM-DD-slug          # kebab-case
+  type: decode                   # decode | brief | practice
+  input_mode: local-material     # decode-url | decode-entity | hot-history | local-material
+  root: output/YYYY-MM-DD-slug
+  status: awaiting-confirmation  # awaiting-confirmation | in-progress | ready-to-distribute | distributed
+  strategy_confirmed: false      # 唯一硬停 — 用户确认前不进 evidence
+
+# ─────────── 触发与输入 ───────────
+trigger: manual                  # manual | auto-scout
+input:
+  type: url                      # url | entity | hotspot | local
+  source: ""                     # URL / 实体名 / 选题描述 / raw 路径
+  router_recommendation_path: phase0_router.yaml  # router 输出存档（如有）
+
+# ─────────── 5 原子配置（来自 router 推荐 + 用户确认） ───────────
+config:
+  reader: default                # readers/[名]/persona.md，见 readers/README.md
+  style: default                 # styles/[名]/，见 styles/README.md
+  knowledge_domains: []          # ["ai-infra", ...]，见 wiki/_domains.md
+  content_type: decode           # decode | brief | practice
+  # ↓ 派生：写作时可由 reader+style+content_type 推出，但显式写出便于审计
+
+# ─────────── Strategy（用户确认时填齐） ───────────
+strategy:
+  title_angle: ""
+  thesis: ""
+  counter_thesis: ""
+  audience:
+    primary: ""                  # 引用 readers/[reader]/persona.md 的 Primary
+    secondary: ""
+  source_policy:
+    raw_immutable: true
+    must_read_primary_sources: true
+    wiki_summary_is_not_source: true
+  red_lines:
+    - 不从 wiki 摘要写正文
+    - 不用"我认为"
+    - 英文引用必须翻译
+    - 禁止 emoji、"让我们"、"值得注意的是"
+
+# ─────────── 产物与分发 ───────────
+artifacts:
+  article: article.md
+  visuals_min: 4
+  visuals_max: 8
+  podcast_required: true         # decode 类默认 true
+  factcheck_required: true
+  polish_required: true
+  video_required: false          # creative 套件常 true
+  distribution:
+    channels: [email, wechat, xhs]   # 子集 of [email, wechat, xhs, video, podcast]
+    mode: draft                  # draft | send（高风险渠道默认 draft）
+    schedule: immediate          # immediate | "YYYY-MM-DD HH:MM"
+
+# ─────────── 自动化（Stage 2 解锁） ───────────
+auto_pipeline:
+  after_strategy_confirmed: false   # true → 确认后连续跑 article→polish→visual→podcast→video
+  stop_before_distribute: true      # true → 走到 distribute(draft) 停下等审
+  notify_on_ready: false            # true → 写 READY.md + 可选邮件提醒
+
+# ─────────── 质量门 ───────────
+quality_gates:
+  source_reading: phase0_sources.json
+  strategy: phase1_strategy.md
+  evidence: phase2_evidence.json
+  draft: draft_v1.md
+  article: article.md
+  polish: polish_report.json
+  factcheck: factcheck.json
+  visual: assets/png
+  podcast: podcast.mp3
+  video: video.mp4               # 仅当 video_required: true
+
+# ─────────── 阶段状态 ───────────
+phase_status:
+  router: pending                # pending | done | skipped
+  project_init: pending
+  strategy_spec: pending
+  evidence: pending
+  article_executor: pending
+  asset_executors:
+    visual: pending
+    podcast: pending
+    video: pending               # pending | skipped | done
+  qa:
+    polish: pending
+    factcheck: pending
+  package: pending
+  distribute:
+    email: pending
+    wechat: pending
+    xhs: pending
+    video_channel: pending       # 视频号
+    douyin: pending
+    podcast_channel: pending     # 小宇宙
+  memory: pending                # wiki/published 复盘 + schedule 更新

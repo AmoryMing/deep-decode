@@ -1,0 +1,30 @@
+version: 1
+slug: YYYY-MM-DD-slug
+title: ""
+type: decode
+input_mode: local-material
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+status: initialized
+
+paths:
+  root: output/YYYY-MM-DD-slug
+  spec: spec.md
+  spec_lock: spec_lock.yaml
+  run_log: run_log.md
+
+phase_status:
+  project_init: done
+  strategy_spec: pending
+  evidence: pending
+  article_executor: pending
+  asset_executors: pending
+  qa: pending
+  package: pending
+  memory: pending
+
+artifacts:
+  article: null
+  visuals: []
+  podcast: null
+  distributions: []

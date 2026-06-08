@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="1080" height="1350" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1080" height="8" fill="#2383E2"/>
+
+  <text x="60" y="100" font-size="20" fill="#787774" letter-spacing="2">SECTION 1 · 14 个月时间轴</text>
+  <text x="60" y="170" font-size="52" font-weight="700" fill="#37352F">谁押了什么</text>
+  <text x="60" y="220" font-size="26" fill="#787774">2025-01 到 2026-05 · agentic commerce 路线表演完了</text>
+
+  <!-- timeline axis -->
+  <line x1="120" y1="320" x2="120" y2="1240" stroke="#E3E2E0" stroke-width="4"/>
+
+  <!-- 2024 Amazon Rufus -->
+  <circle cx="120" cy="340" r="14" fill="#9B9A97"/>
+  <text x="160" y="340" font-size="20" font-weight="700" fill="#37352F">2024 早期</text>
+  <text x="160" y="370" font-size="22" font-weight="600" fill="#37352F">Amazon Rufus 上线</text>
+  <text x="160" y="400" font-size="18" fill="#787774">内嵌 Amazon App · 不让用户换 App</text>
+
+  <!-- 2025-01 OpenAI Operator -->
+  <circle cx="120" cy="490" r="14" fill="#FFA500"/>
+  <text x="160" y="490" font-size="20" font-weight="700" fill="#37352F">2025-01</text>
+  <text x="160" y="520" font-size="22" font-weight="600" fill="#37352F">OpenAI Operator 发布</text>
+  <text x="160" y="550" font-size="18" fill="#787774">AI Agent 代点击 · $200 Pro 限定 · 研究预览</text>
+
+  <!-- 2025 底 京东 AI 购 -->
+  <circle cx="120" cy="640" r="14" fill="#9B9A97"/>
+  <text x="160" y="640" font-size="20" font-weight="700" fill="#37352F">2025 底</text>
+  <text x="160" y="670" font-size="22" font-weight="600" fill="#37352F">京东 AI 购独立 App</text>
+  <text x="160" y="700" font-size="18" fill="#787774">完全对话驱动 · 无传统货架</text>
+
+  <!-- 2026-02 千问春节 -->
+  <circle cx="120" cy="790" r="14" fill="#2383E2"/>
+  <text x="160" y="790" font-size="20" font-weight="700" fill="#37352F">2026-02 春节</text>
+  <text x="160" y="820" font-size="22" font-weight="600" fill="#2383E2">千问"一句话下单"近 2 亿次</text>
+  <text x="160" y="850" font-size="18" fill="#787774">1.4 亿用户首次 AI 购物</text>
+
+  <!-- 2026-03 OpenAI 砍 -->
+  <circle cx="120" cy="940" r="16" fill="#D33"/>
+  <text x="160" y="940" font-size="20" font-weight="700" fill="#37352F">2026-03-20</text>
+  <text x="160" y="970" font-size="22" font-weight="600" fill="#D33">OpenAI 砍 Instant Checkout</text>
+  <text x="160" y="1000" font-size="18" fill="#787774">14 个月生命周期 · 四面墙撞翻</text>
+
+  <!-- 2026-05-10 阿里官宣 -->
+  <circle cx="120" cy="1090" r="16" fill="#2383E2"/>
+  <text x="160" y="1090" font-size="20" font-weight="700" fill="#37352F">2026-05-10</text>
+  <text x="160" y="1120" font-size="22" font-weight="600" fill="#2383E2">阿里千问 × 淘宝整合（路透社传）</text>
+  <text x="160" y="1150" font-size="18" fill="#787774">40 亿 SKU 塞进 Chat · 双押两条路</text>
+
+  <!-- footer -->
+  <text x="60" y="1310" font-size="20" font-weight="600" fill="#FFA500">↑ 14 个月，撞墙的、慢热的、跑通的，结果全摆出来了</text>
+</svg>

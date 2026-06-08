@@ -1,0 +1,244 @@
+{
+  "provider": "voxcpm2-native",
+  "api": "http://10.12.16.11:49002",
+  "health": {
+    "ready": true,
+    "device": "mps",
+    "sample_rate": 48000,
+    "model": "openbmb/VoxCPM2",
+    "default_prompt_available": true
+  },
+  "cfg": 2.0,
+  "timesteps": 10,
+  "segments": [
+    {
+      "index": 1,
+      "chars": 25,
+      "file": "tts_segments_voxcpm2/seg_001.wav"
+    },
+    {
+      "index": 2,
+      "chars": 133,
+      "file": "tts_segments_voxcpm2/seg_002.wav"
+    },
+    {
+      "index": 3,
+      "chars": 96,
+      "file": "tts_segments_voxcpm2/seg_003.wav"
+    },
+    {
+      "index": 4,
+      "chars": 12,
+      "file": "tts_segments_voxcpm2/seg_004.wav"
+    },
+    {
+      "index": 5,
+      "chars": 80,
+      "file": "tts_segments_voxcpm2/seg_005.wav"
+    },
+    {
+      "index": 6,
+      "chars": 80,
+      "file": "tts_segments_voxcpm2/seg_006.wav"
+    },
+    {
+      "index": 7,
+      "chars": 40,
+      "file": "tts_segments_voxcpm2/seg_007.wav"
+    },
+    {
+      "index": 8,
+      "chars": 65,
+      "file": "tts_segments_voxcpm2/seg_008.wav"
+    },
+    {
+      "index": 9,
+      "chars": 150,
+      "file": "tts_segments_voxcpm2/seg_009.wav"
+    },
+    {
+      "index": 10,
+      "chars": 64,
+      "file": "tts_segments_voxcpm2/seg_010.wav"
+    },
+    {
+      "index": 11,
+      "chars": 122,
+      "file": "tts_segments_voxcpm2/seg_011.wav"
+    },
+    {
+      "index": 12,
+      "chars": 13,
+      "file": "tts_segments_voxcpm2/seg_012.wav"
+    },
+    {
+      "index": 13,
+      "chars": 43,
+      "file": "tts_segments_voxcpm2/seg_013.wav"
+    },
+    {
+      "index": 14,
+      "chars": 94,
+      "file": "tts_segments_voxcpm2/seg_014.wav"
+    },
+    {
+      "index": 15,
+      "chars": 94,
+      "file": "tts_segments_voxcpm2/seg_015.wav"
+    },
+    {
+      "index": 16,
+      "chars": 92,
+      "file": "tts_segments_voxcpm2/seg_016.wav"
+    },
+    {
+      "index": 17,
+      "chars": 98,
+      "file": "tts_segments_voxcpm2/seg_017.wav"
+    },
+    {
+      "index": 18,
+      "chars": 77,
+      "file": "tts_segments_voxcpm2/seg_018.wav"
+    },
+    {
+      "index": 19,
+      "chars": 23,
+      "file": "tts_segments_voxcpm2/seg_019.wav"
+    },
+    {
+      "index": 20,
+      "chars": 107,
+      "file": "tts_segments_voxcpm2/seg_020.wav"
+    },
+    {
+      "index": 21,
+      "chars": 148,
+      "file": "tts_segments_voxcpm2/seg_021.wav"
+    },
+    {
+      "index": 22,
+      "chars": 64,
+      "file": "tts_segments_voxcpm2/seg_022.wav"
+    },
+    {
+      "index": 23,
+      "chars": 92,
+      "file": "tts_segments_voxcpm2/seg_023.wav"
+    },
+    {
+      "index": 24,
+      "chars": 82,
+      "file": "tts_segments_voxcpm2/seg_024.wav"
+    },
+    {
+      "index": 25,
+      "chars": 76,
+      "file": "tts_segments_voxcpm2/seg_025.wav"
+    },
+    {
+      "index": 26,
+      "chars": 62,
+      "file": "tts_segments_voxcpm2/seg_026.wav"
+    },
+    {
+      "index": 27,
+      "chars": 25,
+      "file": "tts_segments_voxcpm2/seg_027.wav"
+    },
+    {
+      "index": 28,
+      "chars": 144,
+      "file": "tts_segments_voxcpm2/seg_028.wav"
+    },
+    {
+      "index": 29,
+      "chars": 102,
+      "file": "tts_segments_voxcpm2/seg_029.wav"
+    },
+    {
+      "index": 30,
+      "chars": 148,
+      "file": "tts_segments_voxcpm2/seg_030.wav"
+    },
+    {
+      "index": 31,
+      "chars": 129,
+      "file": "tts_segments_voxcpm2/seg_031.wav"
+    },
+    {
+      "index": 32,
+      "chars": 64,
+      "file": "tts_segments_voxcpm2/seg_032.wav"
+    },
+    {
+      "index": 33,
+      "chars": 9,
+      "file": "tts_segments_voxcpm2/seg_033.wav"
+    },
+    {
+      "index": 34,
+      "chars": 100,
+      "file": "tts_segments_voxcpm2/seg_034.wav"
+    },
+    {
+      "index": 35,
+      "chars": 114,
+      "file": "tts_segments_voxcpm2/seg_035.wav"
+    },
+    {
+      "index": 36,
+      "chars": 78,
+      "file": "tts_segments_voxcpm2/seg_036.wav"
+    },
+    {
+      "index": 37,
+      "chars": 120,
+      "file": "tts_segments_voxcpm2/seg_037.wav"
+    },
+    {
+      "index": 38,
+      "chars": 78,
+      "file": "tts_segments_voxcpm2/seg_038.wav"
+    },
+    {
+      "index": 39,
+      "chars": 13,
+      "file": "tts_segments_voxcpm2/seg_039.wav"
+    },
+    {
+      "index": 40,
+      "chars": 109,
+      "file": "tts_segments_voxcpm2/seg_040.wav"
+    },
+    {
+      "index": 41,
+      "chars": 113,
+      "file": "tts_segments_voxcpm2/seg_041.wav"
+    },
+    {
+      "index": 42,
+      "chars": 143,
+      "file": "tts_segments_voxcpm2/seg_042.wav"
+    },
+    {
+      "index": 43,
+      "chars": 155,
+      "file": "tts_segments_voxcpm2/seg_043.wav"
+    },
+    {
+      "index": 44,
+      "chars": 19,
+      "file": "tts_segments_voxcpm2/seg_044.wav"
+    },
+    {
+      "index": 45,
+      "chars": 14,
+      "file": "tts_segments_voxcpm2/seg_045.wav"
+    }
+  ],
+  "created_at": "2026-05-11 10:47:57",
+  "loudnorm": true,
+  "duration_seconds": 675.05,
+  "output": "podcast.mp3"
+}

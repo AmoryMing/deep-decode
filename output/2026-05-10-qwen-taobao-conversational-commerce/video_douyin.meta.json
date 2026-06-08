@@ -1,0 +1,17 @@
+{
+  "output": "video_douyin.mp4",
+  "duration_s": 833.3,
+  "audio_duration_s": 675.05,
+  "aspect": "1080x1920",
+  "fps": 30,
+  "crf": 20,
+  "images": [
+    "01_14_months_timeline.png",
+    "02_openai_four_walls.png",
+    "03_two_routes_compare.png",
+    "04_alibaba_dual_bet.png"
+  ],
+  "cover": "00_cover.png",
+  "outro": null,
+  "per_image_s": 168.264
+}
