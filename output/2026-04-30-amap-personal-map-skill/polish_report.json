@@ -1,0 +1,53 @@
+{
+  "structural": {
+    "atom_results": {
+      "ai-signature": {"initial_hits": 0, "final_hits": 0, "rounds": 0},
+      "translation": {"initial_hits": 0, "final_hits": 0, "rounds": 0},
+      "abstract-noun": {"initial_hits": 1, "final_hits": 0, "rounds": 1},
+      "hook": {"initial_hits": 0, "final_hits": 0, "rounds": 0}
+    },
+    "edits": [
+      {
+        "para_first_chars": "差别是程序员都熟悉的那个差别——给一堆 lego 零件",
+        "rule": "abstract-noun",
+        "removed": ["某个"],
+        "replacement": "某个 reference → 对应的 reference",
+        "rounds": 1
+      }
+    ],
+    "status": "PASS"
+  },
+  "prose": {
+    "paragraphs_total": 28,
+    "paragraphs_changed": 3,
+    "diffs": [
+      {
+        "para_first_chars": "## Tech 层：Skill 究竟把什么东西换掉了",
+        "edits": [
+          {"original": "Skill 究竟把什么东西换掉了", "revised": "Skill 到底换掉了什么", "rule": "Step 5 动词 + Step 6 留白"},
+          {"original": "Skill 这个概念", "revised": "Skill 这层包装", "rule": "Step 5 名词具体化"}
+        ]
+      },
+      {
+        "para_first_chars": "这是一个微妙但重要的产品设计取舍",
+        "edits": [
+          {"original": "微妙但重要", "revised": "微妙但要命", "rule": "Step 5 动词强度"},
+          {"original": "同一类东西", "revised": "同一类资产", "rule": "Step 6 缩水词替换"}
+        ]
+      },
+      {
+        "para_first_chars": "这条产品逻辑落地的难点不在 AI",
+        "edits": [
+          {"original": "AI 把自然语言翻译成 API 调用是已经成熟的事", "revised": "把自然语言翻译成 API 调用现在已经是熟食", "rule": "Step 5 动词 + 比喻强化"},
+          {"original": "一个能在导航软件里打开的真实地图", "revised": "一张能在导航软件里直接打开的真实地图", "rule": "Step 5 量词精确"},
+          {"original": "一段文字 + 几个坐标", "revised": "一段文字加几个坐标", "rule": "Step 6 标点中文化"}
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "structural_total_edits": 1,
+    "prose_paragraphs_changed": 3,
+    "over_polished": false
+  }
+}

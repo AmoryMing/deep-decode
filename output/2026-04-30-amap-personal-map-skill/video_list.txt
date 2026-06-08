@@ -1,0 +1,13 @@
+file '00_系列封面.png'
+duration 91.79833333333333
+file '01_skill封装.png'
+duration 91.79833333333333
+file '02_计费矩阵.png'
+duration 91.79833333333333
+file '03_交互链路.png'
+duration 91.79833333333333
+file '04_产品三象限.png'
+duration 91.79833333333333
+file '05_能力gap.png'
+duration 91.79833333333333
+file '05_能力gap.png'
