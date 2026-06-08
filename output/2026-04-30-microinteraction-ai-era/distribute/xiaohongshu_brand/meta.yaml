@@ -1,0 +1,34 @@
+platform: xiaohongshu
+source_article: /Users/muming/项目/内容/output/2026-04-30-microinteraction-ai-era/article.md
+generated_at: '2026-05-31T18:46:27'
+exact_article_text: true
+watermark: Amory · AI文科生
+mood: pixel-tactile-ui
+romi_state: symbol
+canvas:
+  width: 1080
+  height: 1440
+max_images: 18
+body_cards: 15
+source_text_chars: 1719
+image_order:
+- cover.png
+- card_01.png
+- card_02.png
+- card_03.png
+- card_04.png
+- card_05.png
+- card_06.png
+- card_07.png
+- card_08.png
+- card_09.png
+- card_10.png
+- card_11.png
+- card_12.png
+- card_13.png
+- card_14.png
+- card_15.png
+notes:
+- 'Prototype: semantic Markdown block pagination; paragraphs are not split.'
+- HTML owns all long Chinese text; image generation is not used for article body text.
+skin: magazine-editorial

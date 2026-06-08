@@ -1,0 +1,23 @@
+{
+  "structural": {
+    "atom_results": {
+      "ai-signature": {"initial_hits": 0, "final_hits": 0, "rounds": 0},
+      "translation": {"initial_hits": 0, "final_hits": 0, "rounds": 0},
+      "abstract-noun": {"initial_hits": 1, "final_hits": 0, "rounds": 1},
+      "hook": {"initial_hits": 0, "final_hits": 0, "rounds": 0}
+    },
+    "edits": [
+      {"para_first_chars": "第二种反对更钝：很多任务的形状你写不出 control flow", "rule": "abstract-noun", "removed": ["某个"], "rounds": 1}
+    ],
+    "status": "PASS"
+  },
+  "prose": {
+    "paragraphs_changed": 0,
+    "note": "文章按 7 步润色规范初稿写就，prose 层无翻译腔/缩水词残留；段落级重写跳过"
+  },
+  "summary": {
+    "structural_total_edits": 1,
+    "prose_paragraphs_changed": 0,
+    "over_polished": false
+  }
+}

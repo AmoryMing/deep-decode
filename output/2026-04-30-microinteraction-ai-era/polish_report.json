@@ -1,0 +1,36 @@
+{
+  "structural": {
+    "atom_results": {
+      "ai-signature": {"initial_hits": 0, "final_hits": 0, "rounds": 0},
+      "translation": {"initial_hits": 2, "final_hits": 0, "rounds": 1},
+      "abstract-noun": {"initial_hits": 0, "final_hits": 0, "rounds": 0},
+      "hook": {"initial_hits": 0, "final_hits": 0, "rounds": 0}
+    },
+    "edits": [
+      {
+        "para_first_chars": "- **流式微交互（streaming microinteraction）**",
+        "rule": "translation",
+        "removed": ["不是离散事件而是"],
+        "rounds": 1
+      },
+      {
+        "para_first_chars": "- **可审计纯文本（auditable plain text）**",
+        "rule": "translation",
+        "removed": ["不是结构化配置而是"],
+        "rounds": 1
+      }
+    ],
+    "status": "PASS"
+  },
+  "prose": {
+    "paragraphs_total": 28,
+    "paragraphs_changed": 0,
+    "diffs": [],
+    "note": "1 轮 hard stop。grep weak-verb / restraint pattern (超过/包含/具有/实现/进行/令人/某种) 在正文段落里 0 命中（实现 一处出现在关键词列表区，按规则跳过）。无需重写。"
+  },
+  "summary": {
+    "structural_total_edits": 2,
+    "prose_paragraphs_changed": 0,
+    "over_polished": false
+  }
+}

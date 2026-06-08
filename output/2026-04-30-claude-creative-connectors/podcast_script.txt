@@ -1,0 +1,67 @@
+嗨，欢迎回到 AI 前沿拆解。今天聊一件四月二十八号发生的事。Anthropic 一次性发了九个 Claude connector，全是创意工具——Adobe、Ableton、Splice、Canva 旗下的 Affinity、Autodesk Fusion、Blender、SketchUp，还有 Resolume Arena 和 Resolume Wire。同一天，Blender 基金会的捐赠人页面里多了一行 Anthropic，年捐二十四万欧元，Corporate Patron 档。
+
+这两件事如果分开看都不算大新闻。连在一起读，味道就出来了。
+
+[转场]
+
+先说为什么是九个一起发，不是分九次发。
+
+九次分发等于九次产品更新公告，每次都讲一个功能。一次性九个，等于一次生态宣言，定义一个类目。Anthropic 选了后者。
+
+它在做什么？它在用 connector 矩阵把"AI 助手 + 专业工具"的标准接口卡位定义下来。你之前可以怀疑 MCP 协议是不是噱头，看到九家商业软件巨头同时签字，怀疑成本会被快速抬高。
+
+九件套里也藏着分层。Adobe 和 Autodesk 是商业旗舰，覆盖图像视频和工业设计；Ableton 和 Splice 是音乐制作的左右手——一个 DAW，一个采样库；Affinity by Canva 是后来者反扑，靠"批量自动化"差异化；Blender 和 SketchUp 是 3D 建模的两条路径；Resolume Arena 加 Wire 是 VJ 现场视觉，专业到一般人没听过。
+
+九件套读完，最快冒出来的反问是 Figma 呢？
+
+[转场]
+
+Figma 没在名单里。而且很可能永远不会出现。
+
+原因不复杂。Figma 自己就在做 MCP host，给 Cursor、Claude Desktop 这些客户端调用。它不是不接，是不愿做被 Claude 一键开关的"端"，它要做"中枢"。
+
+这个差异决定了 connector 矩阵的边界。愿意做被调用方的工具，承认"AI 助手在用户的入口位置"。Adobe、Autodesk、Ableton 接受这个前提，因为它们靠工具内的高频深度使用赚钱——Claude 把人引进来即可，不威胁主收入。
+
+Figma 不接受，因为 Figma 靠"作为协作中枢的网络效应"赚钱。一旦做被调用方，它就从枢纽降级成节点。
+
+这是 connector 生态最值得读懂的隐变量：每个被接入的工具都在做一次自我定位——我是端，还是枢纽？这一波九件套全部站在了"我是端"那一边。
+
+[转场]
+
+接下来说那笔二十四万欧元。
+
+Blender 基金会公开的 Corporate Patron 档位门槛是二十四万欧元一年。Anthropic 这次进来就是按这个数填的。Blender CEO Francesco Siddi 在公告里把这笔钱的用途讲得很直白——用于核心开发，特别提到 Python API 的维护和改进。
+
+这句话值得重读一遍。Python API 是什么？是 Claude Blender connector 调用的同一套接口。Anthropic 一边用 Blender 的 API 卖 connector，一边给 API 维护团队发工资。
+
+二十四万欧元在 Blender 那一侧能覆盖大约四名全职工程师的年薪。换在 Anthropic 这一侧，按它最新一轮估值算，这个数字可能比 Mike Krieger 一个月的 Slack 通讯录预算还少。杠杆比拉到极致——花零头给生态最薄弱的一环续命，反过来保证自己的产品能持续工作。
+
+Siddi 也很懂处理社区情绪。他在公告里直接说 "this is not an AI takeover"，强调赞助"无附加条件"，与 Meta 之前的赞助同性质。这段话同时安抚了两群人——担心 AI 公司渗透开源的艺术家、和担心 Blender 偏向 AI 路线的传统用户。
+
+[转场]
+
+横向对比一下。OpenAI、Google、xAI——它们都在卷模型、都在搭工具调用接口。但截至四月底，没有一家在 Blender Development Fund 的捐赠人列表里出现过。过去两年 Blender 的 Patron 名单里有 Meta、AMD、NVIDIA、Microsoft、Intel、Epic Games，生成式 AI 阵营这边是一片空白。
+
+为什么 Anthropic 要做这件 OpenAI 没做的事？
+
+第一层是 PR。OpenAI 这两年在创作者社区背着"训练数据来源不透明"的包袱，Anthropic 用二十四万欧元直接买一份"我们和创作者站在一起"的姿态，性价比极高。
+
+第二层是产品。Anthropic 的差异化叙事一直是 Constitutional AI、Responsible Scaling Policy——这些抽象的东西需要具体的物证支持。"给 Blender 捐了一年四个工程师工资"是物证，比一篇博客好用。
+
+第三层是技术防御。Blender 是九件套里唯一的开源软件，也是九个里 API 最深、最容易出问题的一个。如果 Blender 的 Python API 在某个版本里改了行为，Claude Blender connector 就会大面积失灵。Anthropic 现在掏钱让 Blender 工程师能稳定上班，等于给自己买了一份生态稳定性保险。
+
+三层叠在一起，二十四万欧元的真实价格远低于它的账面数字。
+
+[转场]
+
+最后讲对从业者意味着什么。
+
+如果你在做 AI 问答评测，原先以"能不能正确回答 Adobe 文档问题"评 Claude，现在要加"能不能正确编排一条横跨 Photoshop、Premiere、Stock 的五步工作流"。前者考知识点，后者考 agent 行为。
+
+如果你在评估接 MCP 的时机，过去四十八小时内最强的生态信号就是这九件套。Anthropic 愿意把 connector 当主线产品推；专业软件商愿意做被调用方；九个名字坐实了 MCP 不是协议层小众实验。三个信号都对你的 MCP 接入决策构成正向加权。
+
+如果你的产品要让用户用自然语言驱动专业工具，这次的范式可以照抄——Claude 当编排器，专业工具当执行器。Adobe 和 Ableton 的做法说明 connector 的最小可用版本是"答案锚定在官方文档"，不需要从第一天就做完整工具调用。这是非常友好的起步姿势。
+
+最后一条，Anthropic 给 Blender 那二十四万欧元是一记潜台词——做生态的人要愿意给生态垫钱。如果你的业务依赖某个开源底盘，预算里留一笔反哺的钱可能不是花费，是保险。
+
+今天就讲到这里。我是慕铭，AI Force 智能体研究员。下一期见。

@@ -1,0 +1,60 @@
+{
+  "pipeline_version": "v2 (atom/molecule/compound)",
+  "ran_at": "2026-04-30",
+  "structural": {
+    "atom_results": {
+      "ai-signature": {"initial_hits": 1, "final_hits": 0, "rounds": 1},
+      "translation": {"initial_hits": 1, "final_hits": 0, "rounds": 1},
+      "abstract-noun": {"initial_hits": 2, "final_hits": 0, "rounds": 1},
+      "hook": {"initial_hits": 0, "final_hits": 0, "rounds": 0, "note": "v1 误报：未读 frontmatter title。已修 polish_grep.py 让 hook_check 优先读 frontmatter title"}
+    },
+    "edits": [
+      {
+        "rule": "ai-signature",
+        "line": 39,
+        "removed": "换句话说",
+        "before": "换句话说，Figma 不是不接，是不愿做被 Claude 一键开关的「端」。它要做「中枢」。",
+        "after": "它不是不接，是不愿做被 Claude 一键开关的「端」。它要做中枢。"
+      },
+      {
+        "rule": "translation",
+        "line": 19,
+        "match": "不是单点 API，而是",
+        "before": "Claude 接到的不是单点 API，而是一条横跨图像、视频、版式、库存素材的工作流总线。",
+        "after": "Claude 接到的是一条横跨图像、视频、版式、库存素材的工作流总线，不是单点 API。",
+        "rule_applied": "Step 3 否定阶梯 → 单边肯定（句序倒置 + 删一处否定）"
+      },
+      {
+        "rule": "abstract-noun",
+        "line": 71,
+        "match": "某个",
+        "before": "如果 Blender 的 Python API 在某个版本里改了行为",
+        "after": "如果 Blender 在哪一次 minor 升级里悄悄改了 Python API 的行为",
+        "rule_applied": "Step 4 以实代虚：某个版本 → 哪一次 minor 升级；加'悄悄'让动作有画面"
+      },
+      {
+        "rule": "abstract-noun",
+        "line": 97,
+        "match": "某个",
+        "before": "如果你的业务依赖某个开源底盘",
+        "after": "如果你的业务踩在一块开源底盘上",
+        "rule_applied": "Step 4 以实代虚：依赖某个 → 踩在一块上（动词换'踩'，画面化）"
+      }
+    ],
+    "status": "PASS",
+    "rounds_total": 1
+  },
+  "prose": {
+    "status": "skipped (本次只验证 structural molecule；prose molecule 需要外部 subagent，下次跑)",
+    "note": "prose-rewrite 涉及 LLM 段落重写，这次先验证 structural 闭环"
+  },
+  "summary": {
+    "v1_total_edits": 1,
+    "v2_structural_edits": 4,
+    "real_issues_caught_v2_only": 3,
+    "false_positives_fixed": 1,
+    "verdict": "v2 抓出 4 倍真问题。v1 漏掉的关键词包括 2 处「某个」（旧版结构 10 项里抽象动词维度太弱），和 1 处「不是X而是Y」（旧版认为 ≤2 次可接受，但 atom 把判断延后到 molecule，hits 全报）。1 个 hook 误报来自代码 bug（未读 frontmatter title），已修复。",
+    "edit_distance_chars": 92,
+    "over_polished": false
+  }
+}
