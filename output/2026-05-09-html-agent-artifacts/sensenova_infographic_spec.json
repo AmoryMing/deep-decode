@@ -1,0 +1,50 @@
+{
+  "mode": "hybrid",
+  "width": 1536,
+  "height": 864,
+  "steps": 32,
+  "cfg_scale": 4.2,
+  "title": "HTML工作台：\n被渲染的判断",
+  "subtitle": "草稿归草稿；界面归界面。",
+  "visual_subject": "AI agent turns Markdown, YAML, JSON, source code and evidence notes into an interactive HTML browser workspace for human review",
+  "style_prompt": "retro editorial collage, archival evidence board, memory wall, concrete wall background, torn paper, receipt fragments, metal clips, transparent tape, red thread, browser window as central object, old screenshots, handwritten marks without readable glyphs, cinematic studio lighting, high-detail magazine spread, warm paper texture, not flat vector, not SaaS dashboard",
+  "title_box": [44, 42, 590, 190],
+  "center": { "x": 768, "y": 440 },
+  "arrow_color": [255, 138, 18, 242],
+  "badges": [
+    { "text": "渲染产物", "tone": "orange", "xy": [650, 250], "size": 23 },
+    { "text": "工作界面", "tone": "blue", "xy": [780, 250], "size": 23 }
+  ],
+  "panels": [
+    {
+      "title": "源文件层",
+      "body": "Markdown / YAML / JSON：可追溯、可 diff、可机器解析。",
+      "slot": "left_mid",
+      "tone": "brown"
+    },
+    {
+      "title": "可视密度",
+      "body": "HTML 把表格、布局、SVG、交互压成工作界面。",
+      "slot": "top_right",
+      "tone": "gold"
+    },
+    {
+      "title": "人类回路",
+      "body": "人审阅、比较、调参；选择再喂回 Agent。",
+      "slot": "right_mid",
+      "tone": "purple"
+    },
+    {
+      "title": "边界条件",
+      "body": "HTML 是工作台；代码、配置、审阅记录才是档案。",
+      "slot": "bottom_left",
+      "tone": "black"
+    },
+    {
+      "title": "企业落点",
+      "body": "PR 解说 / 配置编辑器 / 研究报告 / 提示词调参。",
+      "slot": "bottom_right",
+      "tone": "white"
+    }
+  ]
+}

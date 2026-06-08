@@ -1,0 +1,30 @@
+{
+  "provider": "sensenova-u1-native",
+  "api": "http://10.12.16.90:49000",
+  "task_id": "9a3e1ac0-8f0d-4b6b-ac6b-0fba4d89d1d5",
+  "params": {
+    "prompt": "企业科技媒体信息图主视觉：Markdown 退回草稿层，HTML 成为 Agent 工作界面。画面呈现 source of truth 到 rendered artifact 再到 human feedback loop 的转换，白底，蓝色与橙色强调，现代简洁，适合邮件正文首图，中文科技分析文章配图，不要小人，不要复杂小字。",
+    "width": 1024,
+    "height": 1024,
+    "num_steps": 25,
+    "cfg_scale": 4.0
+  },
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "queue_depth": 0,
+    "running_task": null,
+    "vram_used_gb": 32.8804669380188,
+    "uptime_s": 149476.39966225624
+  },
+  "task": {
+    "task_id": "9a3e1ac0-8f0d-4b6b-ac6b-0fba4d89d1d5",
+    "type": "t2i",
+    "status": "done",
+    "created_at": "2026-05-09T02:54:43.497259+00:00",
+    "started_at": "2026-05-09T02:54:43.497451+00:00",
+    "finished_at": "2026-05-09T02:56:23.931529+00:00",
+    "image_url": "/tasks/9a3e1ac0-8f0d-4b6b-ac6b-0fba4d89d1d5/image"
+  },
+  "output": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/00_sensenova_hero.png"
+}

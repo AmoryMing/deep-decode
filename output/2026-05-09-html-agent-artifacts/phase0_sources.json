@@ -1,0 +1,52 @@
+{
+  "status": "partial_before_confirmation",
+  "created": "2026-05-09",
+  "primary_sources": [
+    {
+      "title": "Berryxia.AI: Markdown 失宠！HTML 的好日子要来了？",
+      "url": "https://x.com/berryxia/status/2052884681193144743",
+      "author": "Berryxia.AI",
+      "created_at": "Fri May 08 22:53:43 +0000 2026",
+      "read_status": "read",
+      "notes": "中文长推转述 Thariq 的 X Article，概括 HTML 相对 Markdown 的信息密度、可读性、分享、双向交互、数据摄入优势。"
+    },
+    {
+      "title": "Using Claude Code: The Unreasonable Effectiveness of HTML",
+      "url": "https://x.com/trq212/status/2052809885763747935",
+      "author": "Thariq / trq212",
+      "created_at": "Fri May 08 17:56:30 +0000 2026",
+      "read_status": "read_via_fx_twitter_article",
+      "notes": "主原文。核心观点是 Markdown 已限制 Agent 表达，HTML 更适合作为 Claude Code 输出 artifact。"
+    },
+    {
+      "title": "HTML effectiveness examples",
+      "url": "https://thariqs.github.io/html-effectiveness",
+      "author": "Thariq",
+      "read_status": "pending",
+      "notes": "需要确认后补读，用于挑选具体 HTML artifact 证据。"
+    }
+  ],
+  "quoted_metrics_snapshot": {
+    "berryxia_tweet": {
+      "views": 923,
+      "likes": 5,
+      "bookmarks": 7,
+      "replies": 2,
+      "quotes": 1
+    },
+    "thariq_article_tweet": {
+      "views": 1238668,
+      "likes": 3768,
+      "retweets": 297,
+      "bookmarks": 7063,
+      "replies": 254,
+      "quotes": 246
+    }
+  },
+  "next_evidence_steps": [
+    "补读 examples 页面，抽取具体 artifact 类型和截图证据。",
+    "查找 Markdown 作为 source of truth 的反向证据。",
+    "核实 Thariq 的 Claude Code / Anthropic 身份描述。",
+    "形成 phase2_evidence.json 后再写 draft_v1.md。"
+  ]
+}

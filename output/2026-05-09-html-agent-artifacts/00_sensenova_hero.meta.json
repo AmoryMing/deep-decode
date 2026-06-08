@@ -1,0 +1,30 @@
+{
+  "provider": "sensenova-u1-native",
+  "api": "http://10.12.16.90:49000",
+  "task_id": "72bf7e6d-61f5-4691-b462-377bce079519",
+  "params": {
+    "prompt": "企业科技媒体文章主视觉，抽象信息图风格：左侧是源文件层，中央是明亮的 HTML 工作台界面，右侧是反馈回路和决策节点，三者用箭头和色块连接。不要任何可读文字，不要字母，不要中文，不要人物，不要 logo。白色背景，深蓝、亮蓝、橙色强调，干净、现代、适合邮件正文首图。",
+    "width": 1024,
+    "height": 1024,
+    "num_steps": 25,
+    "cfg_scale": 4.0
+  },
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "queue_depth": 0,
+    "running_task": null,
+    "vram_used_gb": 32.8804669380188,
+    "uptime_s": 149602.3542587757
+  },
+  "task": {
+    "task_id": "72bf7e6d-61f5-4691-b462-377bce079519",
+    "type": "t2i",
+    "status": "done",
+    "created_at": "2026-05-09T02:56:49.537958+00:00",
+    "started_at": "2026-05-09T02:56:49.538346+00:00",
+    "finished_at": "2026-05-09T02:58:29.997125+00:00",
+    "image_url": "/tasks/72bf7e6d-61f5-4691-b462-377bce079519/image"
+  },
+  "output": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/00_sensenova_hero.png"
+}

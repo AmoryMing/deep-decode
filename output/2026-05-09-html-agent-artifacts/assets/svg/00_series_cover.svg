@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="48" y="44" width="704" height="412" rx="0" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="72" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#2383E2" font-weight="700">AI 前沿拆解</text>
+  <text x="72" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="42" fill="#37352F" font-weight="800">Markdown 没死</text>
+  <text x="72" y="214" font-family="PingFang SC, Inter, sans-serif" font-size="42" fill="#37352F" font-weight="800">只是退回草稿层</text>
+  <text x="74" y="262" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#605E5A">HTML 正在变成 Agent 与人协作的工作界面</text>
+
+  <g transform="translate(76,318)">
+    <rect x="0" y="0" width="220" height="84" rx="8" fill="#FFFFFF" stroke="#D9D7D2" stroke-width="2"/>
+    <text x="20" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" font-weight="700">Markdown</text>
+    <text x="20" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">源文件 / 草稿 / 日志</text>
+  </g>
+  <path d="M325 360 L418 360" stroke="#2383E2" stroke-width="3"/>
+  <path d="M418 360 L405 351 M418 360 L405 369" stroke="#2383E2" stroke-width="3" fill="none"/>
+  <g transform="translate(448,318)">
+    <rect x="0" y="0" width="220" height="84" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="3"/>
+    <text x="20" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" font-weight="700">HTML artifact</text>
+    <text x="20" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">阅读 / 操作 / 回流</text>
+  </g>
+</svg>

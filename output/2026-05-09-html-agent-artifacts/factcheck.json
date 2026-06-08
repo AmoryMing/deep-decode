@@ -1,0 +1,38 @@
+{
+  "created": "2026-05-09",
+  "status": "PASS",
+  "checked_claims": [
+    {
+      "claim": "Berryxia 的长推转述 Thariq 的 X Article《Using Claude Code: The Unreasonable Effectiveness of HTML》。",
+      "status": "Accurate",
+      "source": "https://x.com/berryxia/status/2052884681193144743"
+    },
+    {
+      "claim": "Thariq 的文章认为 Markdown 正在限制 Agent 表达能力，并开始偏好 HTML 输出。",
+      "status": "Accurate",
+      "source": "https://x.com/trq212/status/2052809885763747935"
+    },
+    {
+      "claim": "Thariq 提到 HTML 可承载 table、CSS、SVG、script、JavaScript + CSS 交互、canvas 和 image tags。",
+      "status": "Accurate",
+      "source": "https://x.com/trq212/status/2052809885763747935"
+    },
+    {
+      "claim": "Thariq 认为 HTML 可以比 Markdown 多花 2-4 倍生成时间。",
+      "status": "Accurate",
+      "source": "FAQ section of Thariq X Article"
+    },
+    {
+      "claim": "Thariq 认为 HTML diff 比 Markdown 噪声更大、更难 review。",
+      "status": "Accurate",
+      "source": "FAQ section of Thariq X Article"
+    },
+    {
+      "claim": "文章判断 HTML 不适合作为所有场景的 source of truth。",
+      "status": "Analysis",
+      "source": "由原文承认的 diff / review 缺点和本项目 spec_lock 机制推导，不作为 Thariq 原话。"
+    }
+  ],
+  "unresolved": [],
+  "notes": "未将“HTML 取代 Markdown”陈述为事实；正文明确写成 source 与 artifact 分层。"
+}

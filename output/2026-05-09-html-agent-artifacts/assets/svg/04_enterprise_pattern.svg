@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="52" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="26" fill="#37352F" font-weight="800">企业落地的三层架构</text>
+  <text x="52" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#787774">HTML 负责界面体验，事实源和审计链必须留在后台</text>
+
+  <g transform="translate(86,132)">
+    <rect x="0" y="0" width="628" height="74" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="28" y="31" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" font-weight="700">1. Source of truth</text>
+    <text x="28" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#605E5A">Markdown / YAML / JSON / code / database，负责可追溯</text>
+  </g>
+
+  <path d="M400 212 L400 244" stroke="#2383E2" stroke-width="3"/>
+  <path d="M400 244 L391 231 M400 244 L409 231" stroke="#2383E2" stroke-width="3" fill="none"/>
+
+  <g transform="translate(86,252)">
+    <rect x="0" y="0" width="628" height="74" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="3"/>
+    <text x="28" y="31" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" font-weight="700">2. Rendered interface</text>
+    <text x="28" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#605E5A">HTML / SVG / tabs / sliders / annotations，负责阅读与操作</text>
+  </g>
+
+  <path d="M400 332 L400 364" stroke="#2383E2" stroke-width="3"/>
+  <path d="M400 364 L391 351 M400 364 L409 351" stroke="#2383E2" stroke-width="3" fill="none"/>
+
+  <g transform="translate(86,372)">
+    <rect x="0" y="0" width="628" height="74" rx="8" fill="#FFF3E0" stroke="#F5C46B" stroke-width="2"/>
+    <text x="28" y="31" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" font-weight="700">3. Audit trail</text>
+    <text x="28" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#605E5A">copy diff / copy prompt / copy JSON，负责把人类判断写回系统</text>
+  </g>
+</svg>

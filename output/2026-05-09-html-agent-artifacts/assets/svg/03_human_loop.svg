@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="52" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="26" fill="#37352F" font-weight="800">HTML artifact 把人拉回 Agent loop</text>
+  <text x="52" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#787774">价值不在长期存在，而在把一次判断转成可回流的数据</text>
+
+  <circle cx="400" cy="260" r="92" fill="#F2F7FF" stroke="#2383E2" stroke-width="3"/>
+  <text x="400" y="250" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" font-weight="700">HTML</text>
+  <text x="400" y="278" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#2383E2">工作界面</text>
+
+  <g>
+    <rect x="86" y="118" width="164" height="62" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="168" y="156" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" font-weight="700">读懂上下文</text>
+    <rect x="550" y="118" width="164" height="62" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="632" y="156" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" font-weight="700">拖拽 / 调参</text>
+    <rect x="550" y="340" width="164" height="62" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="632" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" font-weight="700">导出 diff / JSON</text>
+    <rect x="86" y="340" width="164" height="62" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="168" y="378" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" font-weight="700">贴回 Agent</text>
+  </g>
+
+  <path d="M250 150 C314 112 486 112 550 150" stroke="#2383E2" stroke-width="3" fill="none"/>
+  <path d="M632 180 C690 235 690 285 632 340" stroke="#2383E2" stroke-width="3" fill="none"/>
+  <path d="M550 372 C486 410 314 410 250 372" stroke="#2383E2" stroke-width="3" fill="none"/>
+  <path d="M168 340 C110 285 110 235 168 180" stroke="#2383E2" stroke-width="3" fill="none"/>
+
+  <text x="400" y="456" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#605E5A">从“看文档”变成“操作界面，再把操作结果回流给 Claude Code”。</text>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "structural": {
+    "checks": {
+      "ai-signature": {"status": "PASS", "hit_count": 0},
+      "translation": {"status": "PASS", "hit_count": 0, "rounds": 1, "fixed": ["否定阶梯：不是X而是Y → 改为正面陈述"]},
+      "abstract-noun": {"status": "PASS", "hit_count": 0}
+    },
+    "rounds_used": 1,
+    "max_rounds": 2,
+    "result": "PASS"
+  },
+  "prose": {
+    "paragraphs_changed": 1,
+    "edits": ["删除'值得停一停'软化短语，断成两句更利落"],
+    "result": "PASS"
+  },
+  "summary": {
+    "structural_total_edits": 1,
+    "prose_paragraphs_changed": 1,
+    "over_polished": false
+  }
+}

@@ -1,0 +1,38 @@
+version: 1
+slug: 2026-05-09-html-agent-artifacts
+title: "Markdown 退回草稿层：HTML 成为 Agent 的工作界面"
+type: decode
+input_mode: decode-url
+created: 2026-05-09
+updated: 2026-05-09
+status: awaiting-evaluation
+
+paths:
+  root: output/2026-05-09-html-agent-artifacts
+  spec: spec.md
+  spec_lock: spec_lock.yaml
+  run_log: run_log.md
+
+phase_status:
+  project_init: done
+  strategy_spec: done
+  evidence: done
+  article_executor: done
+  asset_executors: done
+  qa: done
+  package: done
+  memory: done
+
+artifacts:
+  article: article.md
+  visuals:
+    - 00_sensenova_hero.png
+    - assets/png/00_series_cover.png
+    - assets/png/01_format_shift.png
+    - assets/png/02_source_vs_artifact.png
+    - assets/png/03_human_loop.png
+    - assets/png/04_enterprise_pattern.png
+  podcast: podcast.mp3
+  distributions:
+    - email_preview.html
+    - distribute/xiaohongshu/content.md

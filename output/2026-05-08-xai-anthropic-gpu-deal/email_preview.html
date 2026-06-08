@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#F7F7F5;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F7F7F5;">
+<tr><td align="center" style="padding:32px 16px;">
+<table role="presentation" width="680" cellpadding="0" cellspacing="0"
+  style="background:#FFFFFF;border-radius:8px;max-width:680px;width:100%;">
+<tr><td style="padding:36px 40px;">
+
+<h1 style="font-size:24px;color:#37352F;font-weight:700;margin:0 0 8px 0;
+  line-height:1.4;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">
+  22 万张卡换一句"没触发我的邪恶探测器"——Anthropic 把推理跑到了 Musk 的机房里</h1>
+<p style="font-size:13px;color:#787774;margin:0 0 24px 0;
+  font-family:'PingFang SC','Microsoft YaHei',sans-serif;">
+  深度拆解 | 原文：xAI / Anthropic / Code with Claude 2026 | 2026-05-08</p>
+<hr style="border:none;border-top:2px solid #2383E2;margin:0 0 28px 0;">
+
+<div style="text-align:center;margin:24px 0;"><img src="00_系列封面.png" alt="封面" style="max-width:100%;height:auto;border-radius:6px;"></div>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">三个月前，Musk 在 X 上还在叫 Anthropic「Misanthropic」、「evil」、「憎恶西方文明」。三个月后，Anthropic 把推理流量整体搬进了他在 Memphis 的机房：22 万张 NVIDIA GPU、300 兆瓦电力、Colossus 1 超算的全部容量，本月内全部点亮。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">同一天，Musk 顺手把 xAI 这家公司解散了。今后只作为 SpaceX 旗下的 AI 产品线存在，叫 SpaceXAI。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这是 2026 年 5 月 6 日 Code with Claude 大会发生的事。如果只看新闻标题——"竞争对手跨阵营租卡"——会以为这是一桩戏剧化的反转。但把账拆开看，整件事一点都不浪漫，是产业里两套现金流被算力价格压到必须握手的结果。</p>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Anthropic 这边：用量 80 倍，超出预期 7 倍</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Dario Amodei 在大会现场把这桩交易的底牌摊开了。Anthropic 年初的内部规划是 10 倍增长。第一季度结束时，年化增长跑到了 80 倍。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Dario 的原话是 "too hard to handle"——太难撑住了。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这种数字在 SaaS 时代是不存在的。Claude Code 在六个月内做到 10 亿美元年化收入。年付百万美元以上的企业客户，从 2 月份的 500 家在两个月内翻倍到 1000 家以上。整个公司年化营收从 90 亿冲到 300 亿区间。这不是产品涨势好，是供给端塌方。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Dario 没有用"机会"这个词。他用的是"crisis"。一家被认为在前沿模型公司里最不缺钱、最不缺人才、最不缺研究员名声的实验室，在一个季度里被自己产品的需求打到要去对手机房里租卡。这说明前沿 AI 公司过去三年讲的那套护城河故事，在 2026 年开始被重新洗牌。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">护城河不是研究、不是数据、不是模型质量。最近这一波，护城河是<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">插座</strong>。</p>
+<div style="text-align:center;margin:24px 0;"><img src="01_增长曲线.png" alt="80x 增长曲线" style="max-width:100%;height:auto;border-radius:6px;"></div>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">为什么不是 AWS、Google、CoreWeave？</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Anthropic 已经签了 AWS、Google、CoreWeave、Broadcom 一整圈算力合约。能再去找的对手只剩 Microsoft（绑死 OpenAI）、Meta（自己用）、和 SpaceXAI。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">第一个动作不能再按月签云合同。云厂商签新机柜要走两年的资本支出周期：选址、变压器、冷却塔、机柜上架、调试。Anthropic 等不起 24 个月。它要的是<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">已经亮着、已经接好电、马上能跑推理</strong>的整套设施。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这种东西全世界只有一个候选人：Musk 在 Memphis 的 Colossus 1。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Colossus 1 是 2024 年用 122 天点亮、被 Nvidia 老黄称作"工程奇迹"的整套超算。坊间口径是 15 万张 H100 + 5 万张 H200 + 3 万张 GB200，约 220k 张卡、300 兆瓦电力。这套设施去年底刚被 xAI 内部"退役"——不是真退役，是 Grok 4 的训练已经搬去更大的 Colossus 2（500k Blackwell 量级）。Colossus 1 在 5 月之前是一台 90% 闲置的现金负担。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Anthropic 要的是亮着的机房。Musk 手里有一台亮着但闲着的机房。这就是为什么这桩交易能在三个月之内从骂战谈到签字。坊间估算的合同价大约是每年 50 亿美元——按 latent.space 的口径，这个数字让 xAI 单凭这一份合同就能把 Colossus 1 的折旧覆盖掉。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">不是和好。是供需在桌子上把人按住了。</p>
+<div style="text-align:center;margin:24px 0;"><img src="02_供需结构.png" alt="供需结构图" style="max-width:100%;height:auto;border-radius:6px;"></div>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Musk 这边：一笔交易把 xAI 的故事换掉了</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">更值得读的是另一面。Musk 不只是把机房租出去——他在同一天解散了 xAI。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">公开的措辞是"xAI 不再是独立公司，今后作为 SpaceX 旗下的 AI 产品线存在"。新名字 SpaceXAI。SpaceX 全资收购 xAI 的伏笔在 2 月已经埋下，合并实体估值 1.25 万亿美元。这次只是把组织结构对外讲清。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">但这个动作和 Anthropic 合同放在一起看，传递出的真实信号是：<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">xAI 退出了与 Anthropic、OpenAI 同台竞争前沿模型的赛道</strong>。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">xAI 没法再讲"训练超过 GPT-5 的下一代 Grok"这种故事——讲了，资本市场也会问：那你为什么把全部 Colossus 1 整租给对手？退路只能是改讲一个新故事：SpaceXAI 是 SpaceX 的 AI 业务线，对标的是 AWS Bedrock 和 Microsoft Azure 的 AI 平台。这是一家<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">neocloud</strong>——往上买 Nvidia 卡，往下租给模型公司。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这个定位在估值上是有现成参照的。CoreWeave 是 700 亿美元市值的纯 neocloud。SpaceXAI 上面还有星舰、Starlink、轨道数据中心愿景，1.25 万亿估值才有支撑物。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">把上述账算清楚，"Musk 解散 xAI"就不是情绪化的退场，是一次估值故事的结构调整。前沿模型那条路，他在 5 月 6 日承认走不通，于是把账重做了一遍。</p>
+<div style="text-align:center;margin:24px 0;"><img src="03_xAI重定位.png" alt="xAI 重定位" style="max-width:100%;height:auto;border-radius:6px;"></div>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">评估探测器、轨道数据中心、和合同里的杠杆</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Musk 在这次公告里给自己留了一句话，被很多分析忽略了。他说"我们保留终止权——如果他们的 AI 做出伤害人类的事，我们随时收回算力"。Simon Willison 在他 5 月 7 日的札记里把这句话标成了一个供应链风险信号。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这句话翻译成商业语言是：<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Musk 单方面有权随时切掉 Anthropic 30% 以上的推理产能</strong>。"伤害人类"的判定标准没写在合同里——按 Musk 自己最近三个月内对 Anthropic 的态度从"evil"到"impressed"的反复，这个标准是动态的。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Anthropic 接受了这个条款，说明 80 倍的增长压力让它认了这个杠杆。但这是一个真实的不对称风险——和 OpenAI 早年完全依赖 Microsoft Azure 是同一种结构。前沿模型公司在自己机房还没建成之前，永远会有一个上游可以拔电源。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这次合作里还埋了第二条线：双方"表示有兴趣"共同开发<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">多吉瓦级的轨道 AI 算力</strong>。这是 SpaceX 自 2026 年 2 月起在 FCC 申请的百万卫星轨道数据中心计划——把训练集群放上太空，用太阳能直供、轨道散热。地面机房受电网、土地、冷却塔约束，电力成本一路推高；轨道方案如果跑通，是把摩尔定律接到 SpaceX 火箭的发射成本曲线上。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">把"轨道数据中心"列进合同，不是科幻。是 Anthropic 给自己锁定<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">下一个十年的非地面算力供给位</strong>。这一行字的真实价值不在 5 月 8 日，而在 2030 年之后——届时谁有能力把 100 兆瓦推上轨道、谁就是新的 AWS。</p>
+<div style="text-align:center;margin:24px 0;"><img src="04_太空算力.png" alt="太空算力时间线" style="max-width:100%;height:auto;border-radius:6px;"></div>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">限速恢复：用户层看到的是什么</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">回到地面。这桩交易对 Claude 终端用户的直接结果，5 月 6 日当天就生效了：</p>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Claude Code 5 小时滚动窗口的额度翻倍</strong>——所有 Pro、Max、Team、Enterprise 席位</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">取消高峰期降速</strong>——Pro 和 Max 在工作日下午不再被限速</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Opus API 速率大幅放宽</strong>——Tier 1 输入 tokens 从 30k/min 提升到 500k/min（约 16 倍），输出对应放宽</li>
+</ul>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">这些数字单独看是产品公告。组合起来读是 Anthropic 第一次承认<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">过去半年的限流不是"产品策略"，是"机房不够"</strong>。Claude Code 用户在 4 月初普遍抱怨的"早上 9 点写两轮就被踢出去"——根因是 Anthropic 在 AWS、Google 上的预留容量被高峰打满，不是为了筛掉穷人。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">承认这件事对 Anthropic 是有代价的。它意味着前沿模型公司的定价和 SLA 在 2026 年要重写一遍。过去 token-based 计费假设的是"算力按需可得"。现在显然不是。Pro 订阅的 200 美元包含的是一个有上限的池子，池子能多大取决于 Memphis 那 300 兆瓦能跑多少 token 出来。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">下一步可以预期的是：所有前沿模型公司都会增加"按 GPU 小时"的企业套餐。token 计费会保留给小客户，大客户开始按机柜买。Anthropic 的 Managed Agents 4 月发布的 0.08 美元/小时套餐，是这个方向的早期样本。</p>
+<div style="text-align:center;margin:24px 0;"><img src="05_限速恢复.png" alt="用户限速变化" style="max-width:100%;height:auto;border-radius:6px;"></div>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">盲区：我们不知道的</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">合同金额没公开。坊间 50 亿美元/年是分析师按 300 兆瓦电力市场价 + GPU 折旧反推的，不是合同披露。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Musk 的"邪恶探测器"条款的具体触发机制没公开。这意味着 Anthropic 在 Memphis 的算力实际上被一份不透明的协议守着。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">xAI 的 GPU 究竟是 22 万张还是更多没有第三方核实。Colossus 1 的真实 PUE（电力使用效率）和液冷成熟度也没公开。这套设施的环保许可在 2024 年就因为绕过 Clean Air Act 上过新闻，本地居民投诉过空气质量——Anthropic 接手之后会不会被卷进这条线，5 月 8 日还看不到。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">Grok 模型的下一步路径完全没说。SpaceXAI 还会不会有自家前沿模型，还是彻底转 neocloud？Musk 没正面回应，xAI 的训练人才下一步去哪也没人知道。</p>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">对 AI 从业者意味着什么</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">第一，<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">算力供给的时间常数现在是 24 个月</strong>。任何依赖前沿模型的产品规划，都要把"算力可能在六个月内被对手买空"算进风险表。Anthropic 这次不是不想再建机房，是建不出来。它有钱、有研究、有客户，唯独造不出 300 兆瓦的供电站。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">第二，<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">前沿模型公司开始进入"现金流换算力"的阶段</strong>。80 倍增长换来的是 50 亿美元/年的长期采购合约。这种合约的本质是预售客户付费换上游产能——Salesforce、Notion、Cursor 通过 Claude API 付的钱，最终一路传递到 Memphis 的电网。任何 SaaS 公司在做 2026 年预算时，都要预期 API 单价会先稳一段、再涨——而不是按摩尔定律下降。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">第三，<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">前沿模型的「研究护城河」论被部分修正</strong>。过去两年 Anthropic 讲的故事是"我们在解释性、安全、Claude 3 系列质量上领先"。Theo 在 5 月 7 日的分析里指出：当 OpenAI 拿到 AWS 通路、Anthropic 失去 AWS 独占之后，模型质量会变成更脆弱的差异化点。如果 Claude 在 7 月份的 Sonnet 5/Opus 5 上没有再次拉开质量差距，2026 年的护城河就会从"模型质量"快速滑向"机房 + 数据"组合。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">第四，<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">neocloud 是一个新赛道，不是临时现象</strong>。SpaceXAI、CoreWeave、Lambda、Crusoe——这一组公司在 2026 年会从"GPU 出租商"升级为前沿模型公司的关键合作伙伴。判断它们的关键不再是 GPU 数量，是<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">机房接电的速度</strong>和<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">单 GPU 小时的成本曲线</strong>。</p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">第五，<strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">对企业 IT 决策者</strong>：如果你在 2026 年签 Claude / GPT 的企业合约，把 SLA、地理冗余、和"上游供应商可单方面终止"条款单独列出来谈。Musk 那句"保留终止权"是公开的——商业合同里大概率有更细的版本，值得在续约前请律师看一遍。</p>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">本期关键词</h2>
+<ul style="padding-left:20px;margin:12px 0;">
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Colossus 1 / Colossus 2</strong> —— Musk 在 Memphis 的两座超算。Colossus 1 是 2024 年 122 天点亮的 H100/H200/GB200 混合集群，约 22 万张卡、300 兆瓦，本次整租给 Anthropic。Colossus 2 是 2025 年下半年点亮的下一代集群，约 50 万张 Blackwell，专供 Grok 训练。两座设施一台对外卖、一台对内训，是 SpaceXAI 转 neocloud 的物理基础。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Neocloud</strong> —— 区别于 AWS/Azure/GCP 的新型云厂商，专做 GPU 算力出租。代表是 CoreWeave（700 亿市值）、Lambda、Crusoe。SpaceXAI 在 5 月 6 日之后实际上加入了这个阵营。它们的商业模式是从 Nvidia 大批拿卡、迅速接电、按 GPU 小时租给模型公司。判断指标不是规模，是机房上电速度和电力成本。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Token-based 计费 vs GPU-hour 计费</strong> —— 前者是 OpenAI / Anthropic 过去两年的主力定价模式，按用户调用的输入输出 token 计费。后者是企业大客户场景下的新计费模式，按租用的 GPU 小时计费——客户买的是确定算力。Anthropic 4 月发布的 Managed Agents 0.08 美元/小时是这个方向的早期落地。算力稀缺时代，GPU-hour 计费会逐步覆盖大客户。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">轨道数据中心</strong> —— SpaceX 自 2026 年 2 月起向 FCC 申请的百万卫星级轨道算力星座。核心想法是把训练集群放上轨道，用太阳能直供、低温真空散热，绕开地面电网和土地约束。这次合同里 Anthropic 的"表示有兴趣"是给自己 2030 年之后的算力供给位下注。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">80 倍年化增长</strong> —— Anthropic 第一季度的实际数字。Dario Amodei 在 Code with Claude 大会现场承认原计划 10 倍，实际跑出 80 倍。Claude Code 六个月做到 10 亿美元年化、企业百万美元客户两个月翻倍到 1000+。这个数字解释了所有限流事故的根因——不是产品策略，是机房不够。</li>
+<li style="font-size:15px;line-height:1.8;color:#37352F;margin-bottom:8px;font-family:'PingFang SC','Microsoft YaHei',sans-serif;"><strong style="background:#FFF3E0;padding:1px 5px;border-radius:3px;color:#37352F;">Harness 上游风险</strong> —— 前沿模型公司无论自己研发能力多强，只要不自建机房和电网，就有一个可以拔电源的上游。OpenAI 之于 Microsoft、Anthropic 之于 SpaceXAI 是同一结构。Musk 公开保留的"终止权"条款是这种风险的明示版本。所有依赖前沿 API 的下游产品在做 2026 年规划时都要把这层风险计入。</li>
+</ul>
+<h2 style="font-size:19px;color:#37352F;font-weight:700;margin:32px 0 12px 0;padding-bottom:8px;border-bottom:2px solid #2383E2;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">引用</h2>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">1. <a href="https://x.ai/news/anthropic-compute-partnership" style="color:#2383E2;text-decoration:none;">New Compute Partnership with Anthropic — xAI 官方公告</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">2. <a href="https://www.latent.space/p/ainews-anthropic-spacexais-300mw5byr" style="color:#2383E2;text-decoration:none;">Anthropic-SpaceXai's 300MW/$5B/yr deal for Colossus I — Smol AI / latent.space</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">3. <a href="https://simonwillison.net/2026/May/7/xai-anthropic/" style="color:#2383E2;text-decoration:none;">Notes on the xAI/Anthropic data center deal — Simon Willison</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">4. <a href="https://techcrunch.com/2026/05/06/is-xai-a-neocloud-now/" style="color:#2383E2;text-decoration:none;">Is xAI a neocloud now? — TechCrunch</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">5. <a href="https://www.36kr.com/p/3798913264868613" style="color:#2383E2;text-decoration:none;">刚刚，马斯克官宣 xAI 解散，22 万张 GPU 算力租给 Anthropic — 36氪</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">6. <a href="https://news.pedaily.cn/202605/563537.shtml" style="color:#2383E2;text-decoration:none;">解散 xAI，马斯克和 Anthropic 都赢麻了 — 投资界</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">7. <a href="https://sherwood.news/tech/anthropics-amodei-we-could-grow-80x-this-year/" style="color:#2383E2;text-decoration:none;">Anthropic's Amodei: We could grow 80x this year — Sherwood News</a></p>
+<p style="font-size:15px;line-height:1.9;color:#37352F;margin:0 0 16px 0;font-family:'PingFang SC','Microsoft YaHei',sans-serif;">8. <a href="https://finance.biggo.com/news/a542f7444f8432c8" style="color:#2383E2;text-decoration:none;">Theo: Anthropic's 80x growth crisis reveals the new AI pecking order — BigGo Finance</a></p>
+
+<hr style="border:none;border-top:1px solid #E3E2E0;margin:28px 0 16px 0;">
+<p style="font-size:12px;color:#787774;text-align:center;margin:0;
+  font-family:'PingFang SC','Microsoft YaHei',sans-serif;">
+  慕铭 | AI Force 智能体研究员 | 中数智汇</p>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="52" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="26" fill="#37352F" font-weight="800">不要让 HTML 承担所有责任</text>
+  <text x="52" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#787774">更稳的模式是 source of truth 与 rendered artifact 分层</text>
+
+  <g transform="translate(70,140)">
+    <rect x="0" y="0" width="260" height="236" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="24" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" font-weight="700">Source of truth</text>
+    <text x="24" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#605E5A">负责稳定、可审、可追溯</text>
+    <rect x="24" y="108" width="212" height="32" rx="6" fill="#FFFFFF" stroke="#D9D7D2"/>
+    <text x="40" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Markdown / YAML / JSON</text>
+    <rect x="24" y="154" width="212" height="32" rx="6" fill="#FFFFFF" stroke="#D9D7D2"/>
+    <text x="40" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">代码 / diff / 数据库记录</text>
+  </g>
+
+  <path d="M360 258 L438 258" stroke="#2383E2" stroke-width="3"/>
+  <path d="M438 258 L425 249 M438 258 L425 267" stroke="#2383E2" stroke-width="3" fill="none"/>
+  <text x="365" y="238" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">渲染</text>
+
+  <g transform="translate(470,140)">
+    <rect x="0" y="0" width="260" height="236" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="3"/>
+    <text x="24" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" font-weight="700">Rendered artifact</text>
+    <text x="24" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#605E5A">负责阅读、操作、分享</text>
+    <rect x="24" y="108" width="212" height="32" rx="6" fill="#F2F7FF" stroke="#BFD7F5"/>
+    <text x="40" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">HTML 报告 / PR explainer</text>
+    <rect x="24" y="154" width="212" height="32" rx="6" fill="#F2F7FF" stroke="#BFD7F5"/>
+    <text x="40" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">交互原型 / 调参面板</text>
+  </g>
+
+  <rect x="96" y="414" width="608" height="42" rx="8" fill="#FFF3E0" stroke="#F5C46B"/>
+  <text x="118" y="441" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#6B4E00">结论：Markdown 不负责取悦读者，HTML 不负责当最终事实源。</text>
+</svg>

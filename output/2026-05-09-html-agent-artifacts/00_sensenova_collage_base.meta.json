@@ -1,0 +1,30 @@
+{
+  "provider": "sensenova-u1-native",
+  "api": "http://10.12.16.90:49000",
+  "task_id": "30895621-b1dd-41f6-8858-31748b640680",
+  "params": {
+    "prompt": "复古拼贴艺术风格的信息图背景，主题是 AI Agent 内容生产流水线：灰色水泥墙面和泛黄纸张构成的档案板，中央是一个打开的发光 HTML 工作台或浏览器窗口，周围散落 Markdown 草稿纸、YAML 配置卡、代码打印纸、便签、回形针、胶带、红线、旧照片、箭头、剪报碎片、金属夹子。怀旧、私密、略带凌乱，但版面清晰。不要任何可读文字，不要字母，不要中文，不要 logo，不要人物。留出左上角标题区域和四周模块贴纸空间。横版 16:9，深灰、泛黄纸、蓝色、橙色点缀。",
+    "width": 1536,
+    "height": 864,
+    "num_steps": 25,
+    "cfg_scale": 4.0
+  },
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "queue_depth": 0,
+    "running_task": null,
+    "vram_used_gb": 32.8804669380188,
+    "uptime_s": 150581.74046444893
+  },
+  "task": {
+    "task_id": "30895621-b1dd-41f6-8858-31748b640680",
+    "type": "t2i",
+    "status": "done",
+    "created_at": "2026-05-09T03:13:08.844031+00:00",
+    "started_at": "2026-05-09T03:13:08.844431+00:00",
+    "finished_at": "2026-05-09T03:16:45.834827+00:00",
+    "image_url": "/tasks/30895621-b1dd-41f6-8858-31748b640680/image"
+  },
+  "output": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/00_sensenova_collage_base.png"
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="52" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="26" fill="#37352F" font-weight="800">输出格式的判断标准变了</text>
+  <text x="52" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#787774">从“人类手改文本”转向“人类参与 Agent loop”</text>
+
+  <rect x="58" y="134" width="296" height="250" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="88" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="21" fill="#37352F" font-weight="700">旧标准</text>
+  <text x="88" y="216" font-family="PingFang SC, Inter, sans-serif" font-size="17" fill="#2383E2" font-weight="700">人类直接编辑</text>
+  <text x="88" y="254" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">轻量、可读、好 diff</text>
+  <text x="88" y="286" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">Markdown 的优势最大</text>
+  <rect x="88" y="318" width="208" height="34" rx="6" fill="#FFFFFF" stroke="#D9D7D2"/>
+  <text x="104" y="340" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">输出 = 文档</text>
+
+  <path d="M374 260 L424 260" stroke="#2383E2" stroke-width="3"/>
+  <path d="M424 260 L411 251 M424 260 L411 269" stroke="#2383E2" stroke-width="3" fill="none"/>
+
+  <rect x="446" y="134" width="296" height="250" rx="8" fill="#FFFFFF" stroke="#2383E2" stroke-width="3"/>
+  <text x="476" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="21" fill="#37352F" font-weight="700">新标准</text>
+  <text x="476" y="216" font-family="PingFang SC, Inter, sans-serif" font-size="17" fill="#2383E2" font-weight="700">人类审阅和操作</text>
+  <text x="476" y="254" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">可视化、可交互、可分享</text>
+  <text x="476" y="286" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">HTML 的优势变强</text>
+  <rect x="476" y="318" width="208" height="34" rx="6" fill="#F2F7FF" stroke="#BFD7F5"/>
+  <text x="492" y="340" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">输出 = 工作界面</text>
+
+  <text x="52" y="438" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#605E5A">核心变化：不是 HTML 更漂亮，而是人类不再主要手改 Agent 输出。</text>
+</svg>

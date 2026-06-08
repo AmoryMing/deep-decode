@@ -1,0 +1,61 @@
+version: 1
+project:
+  slug: 2026-05-09-html-agent-artifacts
+  type: decode
+  input_mode: decode-url
+  root: output/2026-05-09-html-agent-artifacts
+  status: awaiting-evaluation
+  strategy_confirmed: true
+
+strategy:
+  title_angle: "Markdown 退回草稿层：HTML 成为 Agent 的工作界面"
+  thesis: "这不是 HTML 对 Markdown 的格式胜利，而是 Agent 输出从“人类手改的文本”转向“人类参与的工作界面”。当人类越来越少直接编辑 Agent 输出，Markdown 的核心优势变弱；HTML 的信息密度、可视化、交互和分享能力开始变成协作优势。"
+  counter_thesis: "HTML 不会替代 Markdown 成为所有长期知识和工程文档的源格式。它的生成成本更高、diff 更难审、版本控制不友好；企业落地更可能是“Markdown / JSON / spec 作为源，HTML 作为可读和可操作的界面”。"
+  audience:
+    primary: "重度使用 Claude Code / Codex / Cursor 的 AI 工程师、产品经理、架构师"
+    secondary: "正在设计企业内部 Agent 工作流、PR 说明、设计 spec、研究报告的人"
+  source_policy:
+    raw_immutable: true
+    must_read_primary_sources: true
+    wiki_summary_is_not_source: true
+  red_lines:
+    - 不写成“HTML 要消灭 Markdown”的二元标题党
+    - 不把 Berryxia 的转述当成唯一证据，必须回到 Thariq 原文
+    - 不从 wiki 摘要写正文
+    - 不用"我认为"
+    - 英文引用必须翻译
+    - 禁止 emoji、"让我们"、"值得注意的是"
+
+artifacts:
+  article: article.md
+  visuals_min: 4
+  visuals_max: 6
+  podcast_required: true
+  factcheck_required: true
+  polish_required: true
+  distribution:
+    wechat: draft_only
+    xiaohongshu: assets_only
+    email: draft_only
+    video: optional
+
+quality_gates:
+  source_reading: phase0_sources.json
+  strategy: phase1_strategy.md
+  evidence: phase2_evidence.json
+  draft: draft_v1.md
+  article: article.md
+  polish: polish_report.json
+  factcheck: factcheck.json
+  visual: assets/png
+  podcast: podcast.mp3
+
+phase_status:
+  project_init: done
+  strategy_spec: done
+  evidence: done
+  article_executor: done
+  asset_executors: done
+  qa: done
+  package: done
+  memory: done

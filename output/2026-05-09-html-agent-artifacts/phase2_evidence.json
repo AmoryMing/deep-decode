@@ -1,0 +1,93 @@
+{
+  "created": "2026-05-09",
+  "status": "complete",
+  "claims": [
+    {
+      "claim_id": "E1",
+      "claim": "Thariq 认为 Markdown 已经开始限制 Agent 的表达能力，原因是 Agent 输出正在变成长文档、spec、参考文件和头脑风暴结果。",
+      "evidence": [
+        {
+          "source": "Using Claude Code: The Unreasonable Effectiveness of HTML",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "quote": "I'm also increasingly not editing these files myself, but using them as specs, reference files, brainstorming outputs, etc.",
+          "translation": "我也越来越少直接编辑这些文件，而是把它们当作 spec、参考文件、头脑风暴输出等。"
+        }
+      ],
+      "use_in_article": "支撑主判断：Markdown 的核心优势是人类易编辑，但这个动作正在迁移给 Agent。"
+    },
+    {
+      "claim_id": "E2",
+      "claim": "HTML 的优势不是单纯美观，而是能承载更高信息密度。",
+      "evidence": [
+        {
+          "source": "Using Claude Code: The Unreasonable Effectiveness of HTML",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "quote": "HTML can convey much richer information compared to markdown.",
+          "translation": "与 Markdown 相比，HTML 可以传达更丰富的信息。"
+        },
+        {
+          "source": "Article section: Information Density",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "summary": "原文列出 table、CSS、SVG、script、JavaScript + CSS 交互、canvas、image tags 等表达能力。"
+        }
+      ],
+      "use_in_article": "支撑 HTML 从文档变成界面的论点。"
+    },
+    {
+      "claim_id": "E3",
+      "claim": "HTML artifact 的核心新增能力是双向交互和结果回流。",
+      "evidence": [
+        {
+          "source": "Using Claude Code: The Unreasonable Effectiveness of HTML",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "quote": "You can also ask it to let you copy these changes into a prompt to paste back into Claude Code.",
+          "translation": "也可以让它把这些改动复制成一个 prompt，再粘回 Claude Code。"
+        },
+        {
+          "source": "Custom Editing Interfaces section",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "summary": "原文举例：Linear ticket 拖拽排序、feature flag 表单编辑器、prompt 实时预览、copy diff / copy as JSON / copy as prompt。"
+        }
+      ],
+      "use_in_article": "支撑 human-in-the-loop UI 章节。"
+    },
+    {
+      "claim_id": "E4",
+      "claim": "Thariq 明确承认 HTML 的成本和工程缺陷。",
+      "evidence": [
+        {
+          "source": "FAQ section",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "quote": "HTML can take 2-4x longer than Markdown",
+          "translation": "HTML 可能比 Markdown 多花 2-4 倍时间。"
+        },
+        {
+          "source": "FAQ section",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "quote": "HTML diffs are noisy and hard to review compared to Markdown.",
+          "translation": "与 Markdown 相比，HTML diff 噪声很大，也更难审阅。"
+        }
+      ],
+      "use_in_article": "支撑盲区：HTML 更适合作为 artifact，不适合作为全部源格式。"
+    },
+    {
+      "claim_id": "E5",
+      "claim": "这条 X Article 有明显传播强度，值得拆。",
+      "evidence": [
+        {
+          "source": "fxtwitter snapshot",
+          "url": "https://x.com/trq212/status/2052809885763747935",
+          "summary": "抓取时显示约 126.7 万 views、3809 likes、304 retweets、7169 bookmarks、255 replies、246 quotes。"
+        }
+      ],
+      "use_in_article": "只作为传播背景，不作为技术论据。"
+    }
+  ],
+  "counter_evidence": [
+    {
+      "claim": "Markdown / YAML / JSON 仍更适合做可追溯 source of truth。",
+      "evidence": "原文自己承认 HTML diff 难审；本内容工厂也采用 spec_lock.yaml 作为机器契约，而不是用 HTML 作为源。"
+    }
+  ],
+  "article_direction": "以“source 与 artifact 分层”为主线，避免写成 HTML maximalism。"
+}

@@ -1,0 +1,70 @@
+{
+  "mode": "hybrid",
+  "provider": "sensenova-u1-native + local-text-overlay",
+  "generated_base": true,
+  "base": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/00_sensenova_hero_base.png",
+  "output": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/00_sensenova_hero.png",
+  "base_prompt": "Generate a high-impact editorial collage infographic base image.\nSubject: AI agent turns Markdown, YAML, JSON, source code and evidence notes into an interactive HTML browser workspace for human review.\nStyle: retro editorial collage, archival evidence board, memory wall, concrete wall background, torn paper, receipt fragments, metal clips, transparent tape, red thread, browser window as central object, old screenshots, handwritten marks without readable glyphs, cinematic studio lighting, high-detail magazine spread, warm paper texture, not flat vector, not SaaS dashboard.\nLayout: 16:9, central visual metaphor, 5 surrounding blank torn-paper label areas.\nImportant: no readable text, no letters, no words, no logos, no fake captions. Leave label areas blank for later typography overlay.\nMaterials: gray concrete board, aged paper, tape, clips, receipts, screenshots, red thread, annotations without readable glyphs.\nMood: analytical, critical, handmade, sophisticated, not SaaS dashboard, not flat vector.",
+  "text_source": {
+    "title": "HTML工作台：\n被渲染的判断",
+    "subtitle": "草稿归草稿；界面归界面。",
+    "panels": [
+      {
+        "box": [
+          56,
+          340,
+          420,
+          180
+        ],
+        "title": "源文件层",
+        "body": "Markdown / YAML / JSON：可追溯、可 diff、可机器解析。",
+        "tone": "brown"
+      },
+      {
+        "box": [
+          1130,
+          86,
+          420,
+          185
+        ],
+        "title": "可视密度",
+        "body": "HTML 把表格、布局、SVG、交互压成工作界面。",
+        "tone": "gold"
+      },
+      {
+        "box": [
+          1120,
+          330,
+          420,
+          180
+        ],
+        "title": "人类回路",
+        "body": "人审阅、比较、调参；选择再喂回 Agent。",
+        "tone": "purple"
+      },
+      {
+        "box": [
+          56,
+          640,
+          520,
+          170
+        ],
+        "title": "边界条件",
+        "body": "HTML 是工作台；代码、配置、审阅记录才是档案。",
+        "tone": "black"
+      },
+      {
+        "box": [
+          1060,
+          630,
+          480,
+          170
+        ],
+        "title": "企业落点",
+        "body": "PR 解说 / 配置编辑器 / 研究报告 / 提示词调参。",
+        "tone": "white"
+      }
+    ]
+  },
+  "spec": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/sensenova_infographic_spec.json"
+}

@@ -1,0 +1,266 @@
+{
+  "provider": "modelbest-gradio",
+  "base_url": "https://tts.ali-dev.modelbest.cn",
+  "voice_index": 2,
+  "cfg": 2.0,
+  "control": "自然、有判断力的中文播客旁白，语速略快但清晰，情绪克制，适合科技深度解读。",
+  "segments": [
+    {
+      "index": 1,
+      "chars": 87,
+      "file": "tts_segments_modelbest/seg_001.wav",
+      "reused": true
+    },
+    {
+      "index": 2,
+      "chars": 153,
+      "file": "tts_segments_modelbest/seg_002.wav",
+      "reused": true
+    },
+    {
+      "index": 3,
+      "chars": 47,
+      "file": "tts_segments_modelbest/seg_003.wav",
+      "reused": true
+    },
+    {
+      "index": 4,
+      "chars": 155,
+      "file": "tts_segments_modelbest/seg_004.wav",
+      "reused": true
+    },
+    {
+      "index": 5,
+      "chars": 49,
+      "file": "tts_segments_modelbest/seg_005.wav",
+      "reused": true
+    },
+    {
+      "index": 6,
+      "chars": 58,
+      "file": "tts_segments_modelbest/seg_006.wav",
+      "reused": true
+    },
+    {
+      "index": 7,
+      "chars": 113,
+      "file": "tts_segments_modelbest/seg_007.wav",
+      "reused": true
+    },
+    {
+      "index": 8,
+      "chars": 181,
+      "file": "tts_segments_modelbest/seg_008.wav",
+      "reused": true
+    },
+    {
+      "index": 9,
+      "chars": 44,
+      "file": "tts_segments_modelbest/seg_009.wav",
+      "reused": true
+    },
+    {
+      "index": 10,
+      "chars": 35,
+      "file": "tts_segments_modelbest/seg_010.wav",
+      "reused": true
+    },
+    {
+      "index": 11,
+      "chars": 139,
+      "file": "tts_segments_modelbest/seg_011.wav",
+      "reused": true
+    },
+    {
+      "index": 12,
+      "chars": 10,
+      "file": "tts_segments_modelbest/seg_012.wav",
+      "reused": true
+    },
+    {
+      "index": 13,
+      "chars": 74,
+      "file": "tts_segments_modelbest/seg_013.wav",
+      "reused": true
+    },
+    {
+      "index": 14,
+      "chars": 66,
+      "file": "tts_segments_modelbest/seg_014.wav",
+      "reused": true
+    },
+    {
+      "index": 15,
+      "chars": 63,
+      "file": "tts_segments_modelbest/seg_015.wav",
+      "reused": true
+    },
+    {
+      "index": 16,
+      "chars": 23,
+      "file": "tts_segments_modelbest/seg_016.wav",
+      "reused": true
+    },
+    {
+      "index": 17,
+      "chars": 24,
+      "file": "tts_segments_modelbest/seg_017.wav",
+      "reused": true
+    },
+    {
+      "index": 18,
+      "chars": 107,
+      "file": "tts_segments_modelbest/seg_018.wav",
+      "reused": true
+    },
+    {
+      "index": 19,
+      "chars": 23,
+      "file": "tts_segments_modelbest/seg_019.wav",
+      "reused": true
+    },
+    {
+      "index": 20,
+      "chars": 163,
+      "file": "tts_segments_modelbest/seg_020.wav",
+      "reused": true
+    },
+    {
+      "index": 21,
+      "chars": 96,
+      "file": "tts_segments_modelbest/seg_021.wav",
+      "reused": true
+    },
+    {
+      "index": 22,
+      "chars": 83,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/e4406825cabcb3123658b06285ae6794b34548ffc5782af47f7e99b658bced0a/audio.wav",
+      "file": "tts_segments_modelbest/seg_022.wav"
+    },
+    {
+      "index": 23,
+      "chars": 25,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/ec06eb8e8691c599054f8e901555d216347ae6b6a05c48316238f000fdada60a/audio.wav",
+      "file": "tts_segments_modelbest/seg_023.wav"
+    },
+    {
+      "index": 24,
+      "chars": 17,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/5b96e5b68ff787ff36de89eca9acd6822bb63bd41c90efda7e24bf9421f12c69/audio.wav",
+      "file": "tts_segments_modelbest/seg_024.wav"
+    },
+    {
+      "index": 25,
+      "chars": 98,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/8e41bfe92e3f4a5fd40696cafc05b00567639a3d294a8bd7bf80ee360b88fe25/audio.wav",
+      "file": "tts_segments_modelbest/seg_025.wav"
+    },
+    {
+      "index": 26,
+      "chars": 96,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/c733adde8685225c4f0d6c5c2fe4fd3a060f5fd3d5292fabd85541cd17dc2e33/audio.wav",
+      "file": "tts_segments_modelbest/seg_026.wav"
+    },
+    {
+      "index": 27,
+      "chars": 81,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/2b4d1d557a27f1683183d3944e46b7136b0d346afababaf23e853f36fc82eeb9/audio.wav",
+      "file": "tts_segments_modelbest/seg_027.wav"
+    },
+    {
+      "index": 28,
+      "chars": 16,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/ed7ae713766b42ccfc46cd4174e31f4d95f81de55f1149fbacc928cf1445da56/audio.wav",
+      "file": "tts_segments_modelbest/seg_028.wav"
+    },
+    {
+      "index": 29,
+      "chars": 76,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/26074aaa863e2936e088fd9363c682fc84e876acf9ec9603c1bc3f75c847d392/audio.wav",
+      "file": "tts_segments_modelbest/seg_029.wav"
+    },
+    {
+      "index": 30,
+      "chars": 92,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/f6d77182c1e874378cec4265a48a998c3a9d3b4bfb7f0403aa1690bebe7cebec/audio.wav",
+      "file": "tts_segments_modelbest/seg_030.wav"
+    },
+    {
+      "index": 31,
+      "chars": 15,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/a6fc98b0861953c1519a8d5422b2282327f94f4d61c35f23a5453430276173ab/audio.wav",
+      "file": "tts_segments_modelbest/seg_031.wav"
+    },
+    {
+      "index": 32,
+      "chars": 57,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/d54e84d94be13e53bce6849f5089e96f9cb8c159ce44abbb4c8352e622503874/audio.wav",
+      "file": "tts_segments_modelbest/seg_032.wav"
+    },
+    {
+      "index": 33,
+      "chars": 50,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/51775d07b329d31e99688915574447dc292bd920427a212a0bbaf73bc0f7127d/audio.wav",
+      "file": "tts_segments_modelbest/seg_033.wav"
+    },
+    {
+      "index": 34,
+      "chars": 59,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/26f552385e5dacf5d0468f3be9e4926e63db8295a09920edeee99430a18fd04c/audio.wav",
+      "file": "tts_segments_modelbest/seg_034.wav"
+    },
+    {
+      "index": 35,
+      "chars": 33,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/c945e800e76dde9c3c892f986fed1b0a3afff968c9550d9d4836d3476942ef43/audio.wav",
+      "file": "tts_segments_modelbest/seg_035.wav"
+    },
+    {
+      "index": 36,
+      "chars": 15,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/c912e38643091f9726fd7cd065e4d5f099603b565b7555644cb416131b9c54a9/audio.wav",
+      "file": "tts_segments_modelbest/seg_036.wav"
+    },
+    {
+      "index": 37,
+      "chars": 81,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/77346d297f7c82376a49fde3054713e71cb91f0e65d6573533abe9f9434ca64b/audio.wav",
+      "file": "tts_segments_modelbest/seg_037.wav"
+    },
+    {
+      "index": 38,
+      "chars": 103,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/00102f95eeb9dbf876faee52c8d05a17385a34644fbe1c80d6e46e2345ec0310/audio.wav",
+      "file": "tts_segments_modelbest/seg_038.wav"
+    },
+    {
+      "index": 39,
+      "chars": 85,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/2a1ad9bb6691f233f1b2e34908824879bd9e44f0d70626c7a15314a2b21121a9/audio.wav",
+      "file": "tts_segments_modelbest/seg_039.wav"
+    },
+    {
+      "index": 40,
+      "chars": 82,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/d0bd6c8719db2f7892f875daf0cf14620f194ecd9efac4dfd28dd4642ab68fb2/audio.wav",
+      "file": "tts_segments_modelbest/seg_040.wav"
+    },
+    {
+      "index": 41,
+      "chars": 79,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/c6fe0c1cef28c8a1ff84377fb2379fbc2a28f0285c5631c9e1165d79c55a479c/audio.wav",
+      "file": "tts_segments_modelbest/seg_041.wav"
+    },
+    {
+      "index": 42,
+      "chars": 56,
+      "url": "https://tts.ali-dev.modelbest.cn/gradio_api/file=/tmp/gradio/e6a7c95e7f4ebc7b698adf49753e92f2b5bdf712c5d45fe45d4ce46b93596a70/audio.wav",
+      "file": "tts_segments_modelbest/seg_042.wav"
+    }
+  ],
+  "created_at": "2026-05-09 10:45:14",
+  "raw_audio": "podcast_raw.mp3",
+  "output": "podcast.mp3",
+  "duration_seconds": 488.68,
+  "loudnorm": true
+}

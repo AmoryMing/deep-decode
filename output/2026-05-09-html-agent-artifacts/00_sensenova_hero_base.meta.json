@@ -1,0 +1,30 @@
+{
+  "provider": "sensenova-u1-native",
+  "api": "http://10.12.16.90:49000",
+  "task_id": "5c902497-2d81-4dd8-86fa-09e9d20892f9",
+  "params": {
+    "prompt": "Generate a high-impact editorial collage infographic base image.\nSubject: AI agent turns Markdown, YAML, JSON, source code and evidence notes into an interactive HTML browser workspace for human review.\nStyle: retro editorial collage, archival evidence board, memory wall, concrete wall background, torn paper, receipt fragments, metal clips, transparent tape, red thread, browser window as central object, old screenshots, handwritten marks without readable glyphs, cinematic studio lighting, high-detail magazine spread, warm paper texture, not flat vector, not SaaS dashboard.\nLayout: 16:9, central visual metaphor, 5 surrounding blank torn-paper label areas.\nImportant: no readable text, no letters, no words, no logos, no fake captions. Leave label areas blank for later typography overlay.\nMaterials: gray concrete board, aged paper, tape, clips, receipts, screenshots, red thread, annotations without readable glyphs.\nMood: analytical, critical, handmade, sophisticated, not SaaS dashboard, not flat vector.",
+    "width": 1536,
+    "height": 864,
+    "num_steps": 32,
+    "cfg_scale": 4.2
+  },
+  "health": {
+    "status": "ok",
+    "model_loaded": true,
+    "queue_depth": 0,
+    "running_task": null,
+    "vram_used_gb": 32.8804669380188,
+    "uptime_s": 151433.45524191856
+  },
+  "task": {
+    "task_id": "5c902497-2d81-4dd8-86fa-09e9d20892f9",
+    "type": "t2i",
+    "status": "done",
+    "created_at": "2026-05-09T03:27:20.552153+00:00",
+    "started_at": "2026-05-09T03:27:20.552383+00:00",
+    "finished_at": "2026-05-09T03:30:23.457708+00:00",
+    "image_url": "/tasks/5c902497-2d81-4dd8-86fa-09e9d20892f9/image"
+  },
+  "output": "/Users/muming/项目/内容/output/2026-05-09-html-agent-artifacts/00_sensenova_hero_base.png"
+}
