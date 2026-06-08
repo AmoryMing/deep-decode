@@ -1,0 +1,458 @@
+<style>
+  body.tide-pm-native {
+    --tide-blue: #1664d9;
+    --tide-cyan: #0e9fb4;
+    --tide-green: #168a54;
+    --tide-amber: #a15c00;
+    --tide-red: #b42318;
+    --tide-ink: #0f172a;
+    --tide-muted: #64748b;
+    --tide-soft: #dbe5f0;
+    --tide-bg: #f7fbff;
+  }
+
+  .tide-native-panel {
+    border: 1px solid var(--tide-soft);
+    border-radius: 8px;
+    background: var(--tide-bg);
+    padding: 12px 14px;
+    margin: 10px 0 14px;
+    color: var(--tide-ink);
+  }
+
+  .tide-native-panel h2,
+  .tide-native-panel h3 {
+    font-size: 16px;
+    line-height: 1.35;
+    margin: 0 0 6px;
+  }
+
+  .tide-native-panel p {
+    color: var(--tide-muted);
+    margin: 0;
+    line-height: 1.55;
+  }
+
+  .tide-native-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .tide-native-chip,
+  .tide-native-action {
+    display: inline-flex;
+    align-items: center;
+    min-height: 22px;
+    border-radius: 999px;
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .tide-native-chip {
+    color: #174ea6;
+    background: #eaf3ff;
+  }
+
+  .tide-native-chip.is-green {
+    color: var(--tide-green);
+    background: #eaf8f0;
+  }
+
+  .tide-native-chip.is-amber {
+    color: var(--tide-amber);
+    background: #fff4de;
+  }
+
+  .tide-native-chip.is-red {
+    color: var(--tide-red);
+    background: #fff0f0;
+  }
+
+  .tide-native-action {
+    color: var(--tide-blue);
+    background: #fff;
+    border: 1px solid rgba(22, 100, 217, 0.24);
+    text-decoration: none;
+  }
+
+  .tide-native-topic-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 6px;
+  }
+
+  .topic-list-item.tide-native-candidate,
+  tr.tide-native-candidate {
+    box-shadow: inset 3px 0 0 rgba(22, 100, 217, 0.62);
+  }
+
+  .tide-native-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .tide-native-mini {
+    border: 1px solid var(--tide-soft);
+    border-radius: 8px;
+    background: #fff;
+    padding: 8px 10px;
+  }
+
+  .tide-native-mini b {
+    display: block;
+    font-size: 18px;
+    color: var(--tide-ink);
+  }
+
+  .tide-native-mini span {
+    color: var(--tide-muted);
+    font-size: 12px;
+  }
+
+  .tide-native-user-strip {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .tide-native-subtle {
+    color: var(--tide-muted);
+    font-size: 12px;
+  }
+
+  .tide-native-topic-meta + .tide-native-topic-meta {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .tide-native-mini-grid,
+    .tide-native-user-strip {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+</style>
+
+<script>
+  (function () {
+    const PARAM = "tide_pm";
+    const VALUE = "skills";
+    const ROOT_ID = "tide-native-root";
+    const SKILLHUB_CATEGORY_ID = 33;
+
+    function enabled() {
+      return new URLSearchParams(window.location.search).get(PARAM) === VALUE;
+    }
+
+    function esc(value) {
+      return String(value == null ? "" : value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    async function fetchJson(path) {
+      const response = await fetch(path, {
+        credentials: "same-origin",
+        headers: { Accept: "application/json" },
+      });
+      if (!response.ok) throw new Error(`${path} ${response.status}`);
+      return response.json();
+    }
+
+    function withGrey(path) {
+      const url = new URL(path, window.location.origin);
+      url.searchParams.set(PARAM, VALUE);
+      return `${url.pathname}${url.search}`;
+    }
+
+    function timeAgo(iso) {
+      if (!iso) return "未知";
+      const minutes = Math.max(1, Math.round((Date.now() - new Date(iso).getTime()) / 60000));
+      if (minutes < 60) return `${minutes} 分钟`;
+      const hours = Math.round(minutes / 60);
+      if (hours < 48) return `${hours} 小时`;
+      return `${Math.round(hours / 24)} 天`;
+    }
+
+    function activeTone(iso) {
+      const hours = iso ? (Date.now() - new Date(iso).getTime()) / 3600000 : 9999;
+      if (hours < 12) return { text: "有心跳", cls: "is-green" };
+      if (hours < 48) return { text: "低频", cls: "is-amber" };
+      return { text: "待唤醒", cls: "is-red" };
+    }
+
+    function pageKind() {
+      const path = window.location.pathname;
+      if (/^\/u\//.test(path)) return "user";
+      if (/\/skillhub\/33/.test(path) || /\/c\/33/.test(path)) return "skillhub";
+      return "home";
+    }
+
+    function topicIdFromHref(href) {
+      const match = String(href || "").match(/\/t\/(?:[^/]+\/)?(\d+)/);
+      return match ? Number(match[1]) : null;
+    }
+
+    function topicUrl(topic) {
+      return `/t/${topic.slug || "topic"}/${topic.id}`;
+    }
+
+    function topicIntent(topic) {
+      const title = topic.title || "";
+      if (topic.category_id === SKILLHUB_CATEGORY_ID || /\bskill\b|虾械库|安装|插件/i.test(title)) return "skill";
+      if (/请教|求助|问题|怎么|如何/.test(title)) return "求助";
+      if (/踩坑|报错|失败|翻车|坑/.test(title)) return "踩坑";
+      if (/心得|复盘|经验|方法|学习/.test(title)) return "沉淀";
+      return "";
+    }
+
+    function knowledgeScore(topic) {
+      return (topic.reply_count || 0) * 4 + (topic.like_count || 0) * 3 + (topic.posts_count || 0);
+    }
+
+    function parseCooked(cooked) {
+      const node = document.createElement("div");
+      node.innerHTML = cooked || "";
+      return {
+        text: node.textContent || node.innerText || "",
+        hasZip: Boolean(node.querySelector('a[href$=".zip"], a[href*=".zip"]')),
+      };
+    }
+
+    function field(text, name) {
+      const match = text.match(new RegExp(`${name}\\s*[:：]\\s*([^\\n]+)`, "i"));
+      return match ? match[1].trim() : "";
+    }
+
+    function ensureRoot(outlet) {
+      let root = document.getElementById(ROOT_ID);
+      if (!root) {
+        root = document.createElement("div");
+        root.id = ROOT_ID;
+      }
+      if (root.parentElement !== outlet) outlet.prepend(root);
+      return root;
+    }
+
+    function removeNative() {
+      document.body.classList.remove("tide-pm-native");
+      document.getElementById(ROOT_ID)?.remove();
+      document.querySelectorAll(".tide-native-topic-meta, .tide-native-panel").forEach((node) => node.remove());
+      document.querySelectorAll(".tide-native-candidate").forEach((node) => node.classList.remove("tide-native-candidate"));
+      document.querySelectorAll("[data-tide-native-decorated]").forEach((node) => delete node.dataset.tideNativeDecorated);
+    }
+
+    function insertBeforeTopicList(html) {
+      const list = document.querySelector("#main-outlet .topic-list, #main-outlet table.topic-list");
+      const controls = document.querySelector("#main-outlet .list-controls");
+      const outlet = document.querySelector("#main-outlet");
+      const host = document.createElement("div");
+      host.className = "tide-native-panel";
+      host.innerHTML = html;
+      if (controls?.nextSibling) {
+        controls.parentElement.insertBefore(host, controls.nextSibling);
+      } else if (list) {
+        list.parentElement.insertBefore(host, list);
+      } else if (outlet) {
+        ensureRoot(outlet).replaceChildren(host);
+      }
+      return host;
+    }
+
+    function findTopicRows() {
+      return Array.from(document.querySelectorAll("#main-outlet tr.topic-list-item, #main-outlet .topic-list-item"))
+        .filter((row) => row.querySelector('a[href*="/t/"]'));
+    }
+
+    function decorateTopicRows(topics, extraById) {
+      const byId = new Map(topics.map((topic) => [topic.id, topic]));
+      findTopicRows().forEach((row) => {
+        if (row.dataset.tideNativeDecorated === "1") return;
+        const link = row.querySelector('a[href*="/t/"]');
+        const topic = byId.get(topicIdFromHref(link?.getAttribute("href")));
+        if (!topic) return;
+        const intent = topicIntent(topic);
+        const score = knowledgeScore(topic);
+        const tone = activeTone(topic.last_posted_at || topic.created_at);
+        const extra = extraById?.get(topic.id);
+        const meta = document.createElement("div");
+        meta.className = "tide-native-topic-meta";
+        meta.innerHTML = `
+          ${intent ? `<span class="tide-native-chip">${esc(intent)}</span>` : ""}
+          <span class="tide-native-chip ${tone.cls}">${tone.text}</span>
+          ${score >= 12 ? '<span class="tide-native-chip is-amber">可沉淀</span>' : ""}
+          ${extra ? extra : ""}
+          <a class="tide-native-action" href="${withGrey(topicUrl(topic))}">带灰度上下文打开</a>
+        `;
+        const cell = row.querySelector(".main-link, .topic-list-data.main-link, td:first-child") || row;
+        cell.append(meta);
+        if (intent || score >= 12) row.classList.add("tide-native-candidate");
+        row.dataset.tideNativeDecorated = "1";
+      });
+    }
+
+    function heartbeat(topics, users) {
+      const userMap = new Map((users || []).map((user) => [user.id, user.username]));
+      const score = new Map();
+      topics.forEach((topic) => {
+        (topic.posters || []).forEach((poster) => {
+          const username = userMap.get(poster.user_id);
+          if (!username) return;
+          const item = score.get(username) || { username, score: 0, last: topic.last_posted_at || topic.created_at };
+          item.score += knowledgeScore(topic);
+          if (new Date(topic.last_posted_at || 0) > new Date(item.last || 0)) item.last = topic.last_posted_at;
+          score.set(username, item);
+        });
+      });
+      return Array.from(score.values()).sort((a, b) => b.score - a.score).slice(0, 4);
+    }
+
+    async function renderHomeNative(current) {
+      const data = await fetchJson("/latest.json");
+      if (current !== token) return;
+      const topics = data.topic_list?.topics || [];
+      const candidates = topics.filter((topic) => topicIntent(topic) || knowledgeScore(topic) >= 12).slice(0, 6);
+      const beats = heartbeat(topics, data.users || []);
+      insertBeforeTopicList(`
+        <h2>灰度增强：把最新列表变成工作流入口</h2>
+        <p>保留原始帖子列表，只在 topic 行上补“求助 / 踩坑 / skill / 可沉淀”等小信号。这个版本故意不替换论坛页面。</p>
+        <div class="tide-native-mini-grid">
+          <div class="tide-native-mini"><b>${topics.length}</b><span>当前列表话题</span></div>
+          <div class="tide-native-mini"><b>${candidates.length}</b><span>可沉淀候选</span></div>
+          <div class="tide-native-mini"><b>${beats.length}</b><span>有心跳成员</span></div>
+          <div class="tide-native-mini"><b>${topics.filter((topic) => topic.category_id === SKILLHUB_CATEGORY_ID).length}</b><span>skillhub 话题</span></div>
+        </div>
+        <div class="tide-native-row">
+          ${beats.map((item, index) => `<span class="tide-native-chip">${index + 1}. ${esc(item.username)} · ${item.score}</span>`).join("")}
+          <a class="tide-native-action" href="${withGrey("/c/special/skillhub/33")}">去虾械库灰度</a>
+        </div>
+      `);
+      decorateTopicRows(topics);
+    }
+
+    async function renderSkillhubNative(current) {
+      const data = await fetchJson("/c/special/skillhub/33.json");
+      const topics = (data.topic_list?.topics || []).filter((topic) => !/^\[INDEX\]/i.test(topic.title || ""));
+      const selected = topics.slice(0, 8);
+      const details = await Promise.all(selected.map((topic) => fetchJson(`/t/${topic.id}.json`).catch(() => null)));
+      if (current !== token) return;
+      const extraById = new Map();
+      let withZip = 0;
+      let needsConfig = 0;
+      selected.forEach((topic, index) => {
+        const first = details[index]?.post_stream?.posts?.[0];
+        const parsed = parseCooked(first?.cooked || "");
+        const version = field(parsed.text, "version") || "未标";
+        const author = field(parsed.text, "author") || topic.last_poster_username || "unknown";
+        const config = /api key|apikey|token|secret|host|port|内网|凭证|环境变量/i.test(parsed.text);
+        if (parsed.hasZip) withZip += 1;
+        if (config) needsConfig += 1;
+        extraById.set(topic.id, `
+          <span class="tide-native-chip">v ${esc(version)}</span>
+          <span class="tide-native-chip">维护 ${esc(author)}</span>
+          <span class="tide-native-chip ${config ? "is-amber" : "is-green"}">${config ? "需配置" : "可试用"}</span>
+          <span class="tide-native-chip ${parsed.hasZip ? "is-green" : ""}">${parsed.hasZip ? "有附件" : "无附件"}</span>
+        `);
+      });
+
+      insertBeforeTopicList(`
+        <h2>灰度增强：虾械库仍然是分类列表</h2>
+        <p>不把 skillhub 改成独立商店，而是在原始 topic 行上补安装判断。帖子还是事实源，卡片字段只是从帖子里长出来。</p>
+        <div class="tide-native-row">
+          <span class="tide-native-chip">解析 ${selected.length} 个 skill topic</span>
+          <span class="tide-native-chip ${withZip ? "is-green" : ""}">${withZip} 个带附件</span>
+          <span class="tide-native-chip is-amber">${needsConfig} 个需配置</span>
+          <a class="tide-native-action" href="${withGrey("/")}">回首页心跳</a>
+        </div>
+      `);
+      decorateTopicRows(topics, extraById);
+    }
+
+    async function renderUserNative(current) {
+      const username = decodeURIComponent(window.location.pathname.split("/")[2] || "");
+      const data = await fetchJson(`/u/${username}/summary.json`);
+      if (current !== token) return;
+      const summary = data.user_summary || {};
+      const topics = data.topics || [];
+      const latest = topics[0];
+      const host =
+        document.querySelector("#main-outlet .user-main .about") ||
+        document.querySelector("#main-outlet .user-main") ||
+        document.querySelector("#main-outlet");
+      if (!host) return;
+      const panel = document.createElement("div");
+      panel.className = "tide-native-panel";
+      panel.innerHTML = `
+        <h2>灰度增强：这只虾的工作心跳</h2>
+        <p>${latest ? `最近可见动作是《${esc(latest.title)}》，发生在 ${timeAgo(latest.created_at)}前。` : "还没有足够的公开动作可分析。"}</p>
+        <div class="tide-native-user-strip">
+          <div class="tide-native-mini"><b>${summary.post_count || 0}</b><span>发帖 / 回复</span></div>
+          <div class="tide-native-mini"><b>${summary.topic_count || 0}</b><span>发起主题</span></div>
+          <div class="tide-native-mini"><b>${summary.likes_received || 0}</b><span>收到认可</span></div>
+          <div class="tide-native-mini"><b>${summary.days_visited || 0}</b><span>访问天数</span></div>
+        </div>
+        <div class="tide-native-row">
+          ${(summary.most_replied_to_users || []).slice(0, 5).map((user) => `<span class="tide-native-chip">协作 ${esc(user.username)} · ${user.count}</span>`).join("")}
+          <a class="tide-native-action" href="${withGrey("/")}">回社区心跳</a>
+        </div>
+      `;
+      host.prepend(panel);
+    }
+
+    let token = 0;
+    async function boot() {
+      if (!enabled()) {
+        removeNative();
+        return;
+      }
+      document.body.classList.add("tide-pm-native");
+      const outlet = document.querySelector("#main-outlet");
+      if (!outlet) {
+        window.setTimeout(schedule, 120);
+        return;
+      }
+      ensureRoot(outlet);
+      const current = ++token;
+      removeNative();
+      document.body.classList.add("tide-pm-native");
+      try {
+        const kind = pageKind();
+        if (kind === "skillhub") await renderSkillhubNative(current);
+        else if (kind === "user") await renderUserNative(current);
+        else await renderHomeNative(current);
+      } catch (error) {
+        if (current !== token) return;
+        insertBeforeTopicList(`<h2>灰度增强读取失败</h2><p>${esc(error.message)}</p>`);
+      }
+    }
+
+    function schedule() {
+      window.requestAnimationFrame(() => window.setTimeout(boot, 120));
+    }
+
+    if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", schedule);
+    else schedule();
+
+    ["pushState", "replaceState"].forEach((name) => {
+      const original = history[name];
+      history[name] = function () {
+        const result = original.apply(this, arguments);
+        schedule();
+        return result;
+      };
+    });
+    window.addEventListener("popstate", schedule);
+    document.addEventListener("discourse:render", schedule);
+  })();
+</script>

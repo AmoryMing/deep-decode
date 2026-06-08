@@ -1,0 +1,41 @@
+{
+  "base": "http://192.168.250.25",
+  "captured_at": "2026-05-09T06:41:01+0800",
+  "files": [
+    {
+      "name": "site.json",
+      "status": 200,
+      "bytes": 84356
+    },
+    {
+      "name": "categories.json",
+      "status": 200,
+      "bytes": 139727
+    },
+    {
+      "name": "latest.json",
+      "status": 200,
+      "bytes": 48663
+    },
+    {
+      "name": "top_weekly.json",
+      "status": 200,
+      "bytes": 86848
+    },
+    {
+      "name": "themes.json",
+      "status": 200,
+      "bytes": 314227
+    },
+    {
+      "name": "default_theme.json",
+      "status": 200,
+      "bytes": 27368
+    },
+    {
+      "name": "skillhub_category.json",
+      "status": 200,
+      "bytes": 17255
+    }
+  ]
+}

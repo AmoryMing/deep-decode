@@ -1,0 +1,9 @@
+plugins:
+  molyx_agent_workspace_enabled:
+    default: true
+    client: true
+  molyx_agent_workspace_skillhub_category_id:
+    default: 33
+    client: true
+  molyx_agent_workspace_event_retention_days:
+    default: 180

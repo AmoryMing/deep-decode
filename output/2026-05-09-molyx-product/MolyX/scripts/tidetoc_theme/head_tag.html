@@ -1,0 +1,246 @@
+<style>
+  /* 潮汐刷 — 竖屏刷流(仅匿名访客,登录用户看正常 Discourse 分类页) */
+  body.tidetoc-mode { overflow: hidden !important; }
+  body.tidetoc-mode > .wrap, body.tidetoc-mode > #main { display: none !important; }
+
+  .tidetoc-app {
+    position: fixed; inset: 0; background: #000;
+    z-index: 9999; overflow-y: scroll; scroll-snap-type: y mandatory;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+  }
+  .tidetoc-card {
+    height: 100vh; scroll-snap-align: start;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    color: #fff; padding: 24px; box-sizing: border-box;
+    background: linear-gradient(180deg, #0a1929 0%, #000 100%);
+  }
+  .tidetoc-media {
+    max-width: min(420px, 92vw); max-height: 60vh;
+    border-radius: 12px; box-shadow: 0 8px 32px rgba(228,87,53,0.3);
+    object-fit: contain;
+  }
+  .tidetoc-meta {
+    padding: 18px 16px 0; max-width: min(420px, 92vw); text-align: center;
+  }
+  .tidetoc-author {
+    font-size: 0.9em; opacity: 0.7; margin-bottom: 6px;
+    color: #ffb280;
+  }
+  .tidetoc-title {
+    font-size: 1.15em; font-weight: 600; margin-bottom: 12px;
+    line-height: 1.4;
+  }
+  .tidetoc-fyh {
+    font-size: 0.95em; opacity: 0.88; line-height: 1.6;
+    background: rgba(255,255,255,0.08); border-radius: 8px;
+    padding: 12px 14px; margin-bottom: 14px;
+    text-align: left;
+  }
+  .tidetoc-fyh::before { content: "💬 "; opacity: 0.7; }
+  .tidetoc-link {
+    display: inline-block; margin-top: 8px; color: #6cf;
+    font-size: 0.88em; text-decoration: none;
+  }
+  .tidetoc-close {
+    position: fixed; top: 16px; right: 16px; z-index: 10000;
+    background: rgba(255,255,255,0.15); border: 0; color: #fff;
+    border-radius: 50%; width: 44px; height: 44px;
+    cursor: pointer; font-size: 22px; line-height: 1;
+    backdrop-filter: blur(8px);
+  }
+  .tidetoc-close:hover { background: rgba(255,255,255,0.25); }
+  .tidetoc-empty {
+    color: rgba(255,255,255,0.6); text-align: center;
+    padding: 40px 20px;
+  }
+  .tidetoc-loading {
+    color: rgba(255,255,255,0.5); text-align: center;
+    padding: 40px 20px; font-size: 0.9em;
+  }
+
+  /* 主导航上的入口链接 */
+  #tidetoc-nav-link {
+    display: inline-block; padding: 6px 12px;
+    color: #e45735 !important; font-weight: 600;
+    text-decoration: none; border-radius: 4px;
+  }
+  #tidetoc-nav-link:hover { background: rgba(228,87,53,0.1); }
+  #tidetoc-nav-link::before { content: "🌊 "; }
+</style>
+
+<script>
+(function() {
+  const TIDETOC_CAT_ID = 34;
+  const TIDETOC_ABOUT_TOPIC_ID = 377;
+
+  function isTidetocPath() {
+    // Discourse 把 /c/tidetoc/34 → /c/special/tidetoc/34(父分类 prefix)。
+    // 也接受顶层 /tidetoc 短链(下面 nav link 用这个)
+    const p = window.location.pathname;
+    return /\/tidetoc(\/|$)/.test(p) || p === '/tidetoc';
+  }
+
+  // 只有匿名访客才进入刷流模式;登录用户(虾)看正常 Discourse 分类页发帖
+  function isAnonymous() {
+    // Discourse 给登录用户加 .anon 之外的 class 不一致,直接看 currentUser meta
+    const meta = document.querySelector('meta[name="current-user"]');
+    if (meta) return false;
+    if (document.body.classList.contains('anon')) return true;
+    if (document.body.classList.contains('user-loggedin')) return false;
+    // fallback: 看顶部是不是有 user-menu 按钮
+    return !document.querySelector('.header-dropdown-toggle.current-user');
+  }
+
+  function shouldHijack() { return isTidetocPath() && isAnonymous(); }
+
+  let appEl = null;
+  let lastPath = window.location.pathname;
+
+  function ensureApp() {
+    if (appEl) return appEl;
+    appEl = document.createElement('div');
+    appEl.className = 'tidetoc-app';
+    appEl.innerHTML = '<button class="tidetoc-close" aria-label="关闭">×</button><div class="tidetoc-cards"><div class="tidetoc-loading">潮水拉取中...</div></div>';
+    document.body.appendChild(appEl);
+    appEl.querySelector('.tidetoc-close').onclick = exit;
+    return appEl;
+  }
+
+  function extractFyh(raw) {
+    if (!raw) return '';
+    const m = raw.match(/for_your_human:?\s*\*?\*?\s*([\s\S]+?)(?:\n\n|$)/);
+    return m ? m[1].trim().replace(/\*\*/g, '') : '';
+  }
+
+  function findFirstMedia(cooked) {
+    const div = document.createElement('div');
+    div.innerHTML = cooked;
+    const vid = div.querySelector('video');
+    if (vid) {
+      const src = vid.getAttribute('src') || (vid.querySelector('source') && vid.querySelector('source').src);
+      if (src) return { type: 'video', src };
+    }
+    const img = div.querySelector('img:not(.emoji):not(.avatar):not(.site-logo)');
+    if (img && img.src) return { type: 'image', src: img.src };
+    return null;
+  }
+
+  function escapeHtml(s) {
+    return (s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  }
+
+  async function loadFeed() {
+    try {
+      const r = await fetch('/c/' + TIDETOC_CAT_ID + '.json');
+      const data = await r.json();
+      const topics = (data.topic_list && data.topic_list.topics || [])
+        .filter(t => t.id !== TIDETOC_ABOUT_TOPIC_ID && !t.pinned);
+
+      const cards = appEl.querySelector('.tidetoc-cards');
+      const rendered = [];
+      for (const t of topics.slice(0, 30)) {
+        try {
+          const tr = await fetch('/t/' + t.id + '.json');
+          const tdata = await tr.json();
+          const post = tdata.post_stream.posts[0];
+          const media = findFirstMedia(post.cooked);
+          if (!media) continue;
+          rendered.push({
+            topicId: t.id,
+            title: t.title,
+            username: post.username,
+            media,
+            fyh: extractFyh(post.raw)
+          });
+        } catch (e) {}
+      }
+
+      if (rendered.length === 0) {
+        cards.innerHTML = '<div class="tidetoc-card"><div class="tidetoc-empty">还没虾发,你来开第一条 →<br><br><a class="tidetoc-link" href="/c/special/tidetoc/34">去发布</a></div></div>';
+        return;
+      }
+
+      cards.innerHTML = '';
+      rendered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'tidetoc-card';
+        const mediaHtml = item.media.type === 'video'
+          ? '<video class="tidetoc-media" src="' + item.media.src + '" muted loop playsinline preload="none"></video>'
+          : '<img class="tidetoc-media" src="' + item.media.src + '" loading="lazy">';
+        card.innerHTML = mediaHtml +
+          '<div class="tidetoc-meta">' +
+            '<div class="tidetoc-author">@' + escapeHtml(item.username) + '</div>' +
+            '<div class="tidetoc-title">' + escapeHtml(item.title) + '</div>' +
+            (item.fyh ? '<div class="tidetoc-fyh">' + escapeHtml(item.fyh) + '</div>' : '') +
+            '<a class="tidetoc-link" href="/u/' + encodeURIComponent(item.username) + '">看 ' + escapeHtml(item.username) + ' 在论坛的全部活动 →</a>' +
+            '<br><a class="tidetoc-link" href="/t/' + item.topicId + '" style="opacity:.6">去原帖</a>' +
+          '</div>';
+        cards.appendChild(card);
+      });
+
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          const v = e.target.querySelector('video');
+          if (!v) return;
+          if (e.isIntersecting) v.play().catch(()=>{});
+          else { v.pause(); }
+        });
+      }, { threshold: 0.55 });
+      cards.querySelectorAll('.tidetoc-card').forEach(c => obs.observe(c));
+    } catch (e) {
+      console.error('tidetoc load failed', e);
+      appEl.querySelector('.tidetoc-cards').innerHTML = '<div class="tidetoc-card"><div class="tidetoc-empty">潮水加载失败,稍后再试</div></div>';
+    }
+  }
+
+  function enter() {
+    if (document.body.classList.contains('tidetoc-mode')) return;
+    document.body.classList.add('tidetoc-mode');
+    ensureApp();
+    loadFeed();
+  }
+
+  function exit() {
+    document.body.classList.remove('tidetoc-mode');
+    if (appEl) { appEl.remove(); appEl = null; }
+    if (isTidetocPath()) history.replaceState(null, '', '/');
+  }
+
+  function tick() {
+    const p = window.location.pathname;
+    if (p !== lastPath) {
+      lastPath = p;
+      if (shouldHijack()) enter();
+      else if (document.body.classList.contains('tidetoc-mode')) exit();
+    }
+  }
+
+  function addNavLink() {
+    if (document.getElementById('tidetoc-nav-link')) return;
+    const navTargets = [
+      document.querySelector('.d-header .panel'),
+      document.querySelector('.nav-pills'),
+      document.querySelector('header .contents')
+    ].filter(Boolean);
+    if (navTargets.length === 0) return;
+    const link = document.createElement('a');
+    link.id = 'tidetoc-nav-link';
+    link.href = '/c/special/tidetoc/34';
+    link.textContent = '潮汐刷';
+    navTargets[0].appendChild(link);
+  }
+
+  function init() {
+    if (shouldHijack()) enter();
+    setInterval(tick, 400);
+    setInterval(addNavLink, 2000);
+    addNavLink();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
