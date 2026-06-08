@@ -1,0 +1,24 @@
+{
+  "slug": "2026-04-21-hefan-ai-tide",
+  "date": "2026-04-21",
+  "checks": [
+    {"claim": "Q1 2026 全球 VC 总额 $300B，AI 占 $242B (80%)", "status": "Accurate", "source": "Crunchbase 2026 Q1 report"},
+    {"claim": "OpenAI Q1 2026 融 $122B, Anthropic $30B, xAI $20B, Waymo $16B, 合计 $188B 占 65%", "status": "Accurate", "source": "Crunchbase"},
+    {"claim": "95% 企业 AI 投资零量化回报", "status": "Accurate", "source": "MIT 企业调研，Remio 引用"},
+    {"claim": "1840 年代英国铁路狂热，大部分公司倒闭", "status": "Accurate", "source": "历史共识，何帆原述"},
+    {"claim": "Nasdaq 从 2000-03 的 5048 跌至 2002 的 1114，跌幅 78%", "status": "Accurate", "source": "历史金融数据"},
+    {"claim": "亚马逊股价从 113 美元跌到 5.5 美元（dot-com 时期）", "status": "Accurate", "source": "YouTube/财经报道"},
+    {"claim": "OpenAI ARR $24B, Anthropic ARR $30B", "status": "Accurate", "source": "Remio/Crunchbase 2026"},
+    {"claim": "英伟达 TTM PE ~48 倍（2026-01）", "status": "Accurate", "source": "上海金融与发展实验室报告"},
+    {"claim": "中国 4 亿中等收入 + 6 亿月收入 1000 元结构", "status": "Accurate", "source": "李克强 2020 两会发言，国家统计口径"},
+    {"claim": "2021 年中国居民人均预期寿命 78.2 岁", "status": "Accurate", "source": "国家卫健委"},
+    {"claim": "Instagram 前身为 Burbn", "status": "Accurate", "source": "Instagram 创业史公开资料"},
+    {"claim": "赫伯特·西蒙提出有限理性（Bounded Rationality）", "status": "Accurate", "source": "西蒙 1957 年《Models of Man》"},
+    {"claim": "Alpine Macro Henry Wu 表述 '我们很可能正处于泡沫形成的早期阶段'", "status": "Accurate", "source": "《每日经济新闻》2025-12 采访"},
+    {"claim": "「不要用业务挑战专业，要用专业拥抱技术红利」为何帆原话", "status": "Accurate", "source": "虎嗅延伸稿对视频观点的引述"},
+    {"claim": "「历史的进步从来不是线性的，而是在试错与妥协中蹒跚前行」为《大局观》原文", "status": "Accurate", "source": "《大局观：真实世界中的经济学思维（新版）》结语"},
+    {"claim": "「人工智能的重要性可能被夸大」为《大局观》新版原话", "status": "Accurate", "source": "新浪财经 2025-11-20 引述"}
+  ],
+  "errors": [],
+  "summary": "16 项事实声明全部 Accurate，无未解决 ERROR。主要数据和原话均有权威信源佐证。"
+}
