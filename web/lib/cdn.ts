@@ -1,18 +1,15 @@
 /**
- * 媒体走 CDN，部署包零媒体。
- * - 图片 / 音频：jsDelivr（仓库已在 GitHub，免费 CDN，自带边缘缓存）
- * - 视频：GitHub raw（mp4 常超 jsDelivr 单文件 20MB 上限）
- * 路径段做 percent-encode 以兼容中文文件名（如 00_系列封面.png）。
+ * 媒体 URL 构造。
  *
- * 内容推送在孤儿分支 deploy（cleanup 的历史含 600MB+ 大 commit，
- * 经代理推不动；deploy 用分批小 commit 推送），故默认指向 @deploy。
+ * 默认走站内中转路由 /api/media（见 app/api/media/[...path]/route.ts）：
+ *   - 本地直接读 output/，线上由 Vercel 服务器回源 GitHub raw。
+ *   - 绕开 jsDelivr / GitHub raw 在国内浏览器端不可达的问题。
+ *
+ * 若设置 NEXT_PUBLIC_CDN_BASE / NEXT_PUBLIC_RAW_BASE，则改为直连该 CDN
+ *（例如海外访问为主、或将来换到国内 OSS 时）。
  */
-const CDN_BASE =
-  process.env.NEXT_PUBLIC_CDN_BASE ||
-  "https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy";
-const RAW_BASE =
-  process.env.NEXT_PUBLIC_RAW_BASE ||
-  "https://raw.githubusercontent.com/AmoryMing/deep-decode/deploy";
+const DIRECT_CDN = process.env.NEXT_PUBLIC_CDN_BASE;
+const DIRECT_RAW = process.env.NEXT_PUBLIC_RAW_BASE;
 
 function enc(repoRelPath: string): string {
   return repoRelPath
@@ -22,12 +19,14 @@ function enc(repoRelPath: string): string {
     .join("/");
 }
 
-/** 图片 / 音频 → jsDelivr */
+/** 图片 / 音频 */
 export function cdnUrl(repoRelPath: string): string {
-  return `${CDN_BASE}/${enc(repoRelPath)}`;
+  const p = enc(repoRelPath);
+  return DIRECT_CDN ? `${DIRECT_CDN}/${p}` : `/api/media/${p}`;
 }
 
-/** 视频等大文件 → GitHub raw */
+/** 视频等大文件 */
 export function rawUrl(repoRelPath: string): string {
-  return `${RAW_BASE}/${enc(repoRelPath)}`;
+  const p = enc(repoRelPath);
+  return DIRECT_RAW ? `${DIRECT_RAW}/${p}` : `/api/media/${p}`;
 }
