@@ -1,0 +1,92 @@
+{
+  "slug": "2026-05-12-anthropic-financial-services",
+  "thesis": "Anthropic is productizing financial-services know-how into default workflow structure.",
+  "evidence": [
+    {
+      "claim": "The repository is positioned as financial-services workflow infrastructure, not a single demo.",
+      "support": [
+        "README: reference agents, skills, and data connectors for financial-services workflows.",
+        "Official Agents for financial services post: 10 ready-to-run agent templates tailored to common financial workflows.",
+        "GoSailGlobal thread: calls it a complete SOP for financial AI implementation rather than a demo."
+      ],
+      "source_urls": [
+        "https://github.com/anthropics/financial-services",
+        "https://www.anthropic.com/news/finance-agents",
+        "https://x.com/GoSailGlobal/status/2053304501231350074"
+      ],
+      "strength": "high"
+    },
+    {
+      "claim": "The repo encodes financial work into named workflows and reusable business assets.",
+      "support": [
+        "Ten named agents cover pitch decks, meeting prep, market research, earnings review, model building, valuation review, GL reconciliation, month-end close, statement audit, and KYC screening.",
+        "Vertical plugins package financial-analysis, investment-banking, equity-research, private-equity, wealth-management, fund-admin, and operations workflows.",
+        "Skill and command references include concrete financial actions such as /comps, /dcf, /earnings, /ic-memo, /rebalance, /tlh."
+      ],
+      "source_urls": [
+        "https://github.com/anthropics/financial-services"
+      ],
+      "strength": "high"
+    },
+    {
+      "claim": "Anthropic is selling the same workflow structure across personal, team, and enterprise deployment surfaces.",
+      "support": [
+        "README says everything is available two ways from one source: Claude Cowork plugin or Claude Managed Agents API behind a firm's workflow engine.",
+        "Official Agents post adds Claude Code, Claude web/desktop via Cowork, and Claude Managed Agents API as deployment surfaces.",
+        "README says the same system prompt and skills are reused across plugin and managed-agent modes."
+      ],
+      "source_urls": [
+        "https://github.com/anthropics/financial-services",
+        "https://www.anthropic.com/news/finance-agents"
+      ],
+      "strength": "high"
+    },
+    {
+      "claim": "Data connectors turn the templates from prompt packs into workflow entry points.",
+      "support": [
+        "README lists 11 MCP integrations: Daloopa, Morningstar, S&P Global, FactSet, Moody's, MT Newswires, Aiera, LSEG, PitchBook, Chronograph, Egnyte.",
+        "Official Claude for Financial Services and Advancing Claude for Financial Services news both emphasize financial data connectors and work-tool connectors.",
+        "README notes MCP access may require a subscription or API key from the provider."
+      ],
+      "source_urls": [
+        "https://github.com/anthropics/financial-services",
+        "https://www.anthropic.com/news/claude-for-financial-services",
+        "https://www.anthropic.com/news/advancing-claude-for-financial-services"
+      ],
+      "strength": "high"
+    },
+    {
+      "claim": "Microsoft 365 tooling shows the target is the existing financial desk, not a separate AI portal.",
+      "support": [
+        "README describes admin tooling to provision Claude inside Excel, PowerPoint, Word, and Outlook.",
+        "The install tooling can run against Vertex AI, Bedrock, or an internal LLM gateway rather than only Anthropic's API.",
+        "Advancing Claude for Financial Services expands Claude for Excel and says Claude can preserve formulas, formatting, and dependencies across workbooks."
+      ],
+      "source_urls": [
+        "https://github.com/anthropics/financial-services",
+        "https://www.anthropic.com/news/advancing-claude-for-financial-services"
+      ],
+      "strength": "high"
+    },
+    {
+      "claim": "The correct boundary is human-reviewed analyst work product, not autonomous financial decisioning.",
+      "support": [
+        "README says nothing in the repository constitutes investment, legal, tax, or accounting advice.",
+        "README says agents draft analyst work products for qualified professional review.",
+        "README says agents do not make investment recommendations, execute transactions, bind risk, post to a ledger, or approve onboarding."
+      ],
+      "source_urls": [
+        "https://github.com/anthropics/financial-services"
+      ],
+      "strength": "high"
+    }
+  ],
+  "interpretive_leaps": [
+    {
+      "interpretation": "Default workflow structure is the commercial asset.",
+      "basis": "Repeated packaging of agents, skills, commands, connectors, deployment modes, and M365 tooling across official sources.",
+      "risk": "Anthropic has not used the exact phrase 'default workflow structure'; this is editorial synthesis."
+    }
+  ]
+}
+

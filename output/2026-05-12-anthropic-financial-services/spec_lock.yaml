@@ -1,0 +1,47 @@
+version: 1
+project:
+  slug: 2026-05-12-anthropic-financial-services
+  type: decode
+  input_mode: decode-url
+  root: /Users/muming/项目/内容/output/2026-05-12-anthropic-financial-services
+  strategy_confirmed: true
+strategy:
+  title_angle: "Anthropic 不卖模型，改卖金融行业的默认工作流"
+  thesis: "Anthropic 不是开源一个金融 demo，而是在把金融行业 know-how 产品化；真正卖的不是模型，而是行业工作流的默认结构。"
+  counter_thesis: "公开仓库仍是参考模板，不等于正式生产采用；金融数据、合规责任和流程改造仍在客户侧。"
+  audience:
+    primary: "企业 AI 决策者、AI 产品负责人、行业解决方案架构师"
+    secondary: "金融科技、投研、风控、企业应用团队"
+  red_lines:
+    - "不用 emoji"
+    - "不用“我认为”"
+    - "不用“让我们”"
+    - "不用“值得注意的是”"
+    - "不宣称已生产上线"
+    - "不把公开模板说成投资建议或自动交易系统"
+sources:
+  required:
+    - https://x.com/frxiaobei/status/2053861985008431398
+    - https://x.com/GoSailGlobal/status/2053304501231350074
+    - https://github.com/anthropics/financial-services
+    - https://www.anthropic.com/news/claude-for-financial-services
+    - https://www.anthropic.com/news/advancing-claude-for-financial-services
+    - https://www.anthropic.com/news/finance-agents
+artifacts:
+  article: article.md
+  draft: draft_v1.md
+  visuals_required: true
+  visuals_min: 4
+  visuals_max: 6
+  visuals_status: main_thread_completed
+  podcast_required: true
+  podcast_status: main_thread_completed
+  distribution: none
+quality_gates:
+  source_reading: phase0_sources.json
+  strategy: phase1_strategy.md
+  evidence: phase2_evidence.json
+  polish: polish_report.json
+  factcheck: factcheck.json
+  visual: assets/png
+  podcast: podcast.mp3

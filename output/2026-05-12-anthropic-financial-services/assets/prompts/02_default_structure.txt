@@ -1,0 +1,1 @@
+中文结构图，白底，展示默认结构如何由核心 financial-analysis、业务线插件、commands、11 家数据连接器组成。

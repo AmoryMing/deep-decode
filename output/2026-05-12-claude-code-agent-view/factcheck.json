@@ -1,0 +1,87 @@
+{
+  "created": "2026-05-12",
+  "method": "official-source fact check",
+  "sources_used": [
+    "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+    "https://code.claude.com/docs/en/changelog.md",
+    "https://code.claude.com/docs/en/agent-view.md",
+    "https://code.claude.com/docs/en/goal.md",
+    "https://code.claude.com/docs/en/agents.md"
+  ],
+  "summary": {
+    "total_claims_checked": 11,
+    "accurate": 11,
+    "incorrect": 0,
+    "unverifiable": 0,
+    "misleading": 0
+  },
+  "checks": [
+    {
+      "claim": "v2.1.139 was published on 2026-05-11.",
+      "status": "Accurate",
+      "source": "GitHub release API / release page",
+      "note": "published_at is 2026-05-11T18:43:42Z."
+    },
+    {
+      "claim": "v2.1.139 added agent view as Research Preview.",
+      "status": "Accurate",
+      "source": "GitHub release and agent view docs",
+      "note": "Docs state agent view is a research preview and requires v2.1.139 or later."
+    },
+    {
+      "claim": "`claude agents` opens agent view.",
+      "status": "Accurate",
+      "source": "agent view docs",
+      "note": "Quick start instructs users to run `claude agents`."
+    },
+    {
+      "claim": "Agent view shows sessions running, blocked on user input, or done.",
+      "status": "Accurate",
+      "source": "release notes and agent view docs",
+      "note": "Docs list state groups and state indicators."
+    },
+    {
+      "claim": "Background sessions can continue without a terminal attached.",
+      "status": "Accurate",
+      "source": "agent view docs",
+      "note": "Docs describe a supervisor process and background operation."
+    },
+    {
+      "claim": "Background session edits are isolated in git worktrees when needed.",
+      "status": "Accurate",
+      "source": "agent view docs",
+      "note": "Docs specify `.claude/worktrees/` isolation for file edits."
+    },
+    {
+      "claim": "v2.1.139 added `/goal`.",
+      "status": "Accurate",
+      "source": "GitHub release and changelog",
+      "note": "Release notes list `/goal` as a new command."
+    },
+    {
+      "claim": "`/goal` keeps Claude working across turns until a condition is met.",
+      "status": "Accurate",
+      "source": "goal docs",
+      "note": "Docs state this explicitly."
+    },
+    {
+      "claim": "`/goal` uses a small fast model evaluator after each turn.",
+      "status": "Accurate",
+      "source": "goal docs",
+      "note": "Docs say the small fast model defaults to Haiku."
+    },
+    {
+      "claim": "`/goal` evaluator does not run commands or read files independently.",
+      "status": "Accurate",
+      "source": "goal docs",
+      "note": "Docs state it judges only what Claude surfaced in the conversation."
+    },
+    {
+      "claim": "v2.1.139 adds subagent request headers and OTEL agent attributes.",
+      "status": "Accurate",
+      "source": "GitHub release and changelog",
+      "note": "Release notes mention `x-claude-code-agent-id`, `x-claude-code-parent-agent-id`, and OTEL `agent_id` fields."
+    }
+  ],
+  "result": "PASS"
+}

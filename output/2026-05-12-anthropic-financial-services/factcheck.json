@@ -1,0 +1,65 @@
+{
+  "slug": "2026-05-12-anthropic-financial-services",
+  "created": "2026-05-12",
+  "status": "pass",
+  "checks": [
+    {
+      "claim": "frxiaobei posted 'Anthropic：“我正在金融街”。走自己的路，让别人无路可走。' on 2026-05-11 and quoted GoSailGlobal.",
+      "verdict": "verified",
+      "source": "https://x.com/frxiaobei/status/2053861985008431398",
+      "access_note": "Verified through fxtwitter public API mirror."
+    },
+    {
+      "claim": "GoSailGlobal's long post summarized 10 agents, vertical plugins, 11 MCP data connectors, two deployment paths, and Microsoft 365 tooling.",
+      "verdict": "verified",
+      "source": "https://x.com/GoSailGlobal/status/2053304501231350074",
+      "access_note": "Verified through quoted tweet data in fxtwitter public API mirror."
+    },
+    {
+      "claim": "Anthropic financial-services README defines the repo as reference agents, skills, and data connectors for financial-services workflows.",
+      "verdict": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "The README lists ten named agents: Pitch Agent, Meeting Prep Agent, Market Researcher, Earnings Reviewer, Model Builder, Valuation Reviewer, GL Reconciler, Month-End Closer, Statement Auditor, and KYC Screener.",
+      "verdict": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "The README lists MCP integrations for Daloopa, Morningstar, S&P Global, FactSet, Moody's, MT Newswires, Aiera, LSEG, PitchBook, Chronograph, and Egnyte.",
+      "verdict": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "The README says the same source can be installed as a Claude Cowork plugin or deployed through Claude Managed Agents API behind a firm's workflow engine.",
+      "verdict": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "The repository includes Microsoft 365 install tooling for Excel, PowerPoint, Word, and Outlook, and can use Vertex AI, Bedrock, or an internal LLM gateway.",
+      "verdict": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "Anthropic's 2026-05-05 official post announces 10 ready-to-run agent templates for financial workflows.",
+      "verdict": "verified",
+      "source": "https://www.anthropic.com/news/finance-agents"
+    },
+    {
+      "claim": "Advancing Claude for Financial Services expands Claude for Excel beta and describes preserving formulas, formatting, and dependencies.",
+      "verdict": "verified",
+      "source": "https://www.anthropic.com/news/advancing-claude-for-financial-services"
+    },
+    {
+      "claim": "The article's thesis that Anthropic is selling default workflow structure is an editorial synthesis, not a direct quote from Anthropic.",
+      "verdict": "interpretation_disclosed",
+      "source": "phase2_evidence.json"
+    }
+  ],
+  "failed_checks": [],
+  "cautions": [
+    "The article intentionally does not claim customer production adoption.",
+    "The article intentionally treats connector access as conditional because provider subscriptions/API keys may be required."
+  ]
+}
+

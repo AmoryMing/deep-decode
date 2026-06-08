@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+  <text x="54" y="70" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="700" fill="#111827">默认结构比 prompt 更值钱</text>
+  <rect x="100" y="130" width="600" height="310" rx="18" fill="#F7FAFD" stroke="#E3E2E0" stroke-width="2"/>
+  <rect x="150" y="172" width="500" height="58" rx="12" fill="#2383E2"/>
+  <text x="330" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="19" font-weight="700" fill="#FFFFFF">financial-analysis 核心层</text>
+  <rect x="150" y="258" width="145" height="88" rx="12" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="190" y="294" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#111827">业务线</text>
+  <text x="178" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#6B7280">投行 / 投研 / 私募</text>
+  <rect x="328" y="258" width="145" height="88" rx="12" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="368" y="294" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#111827">动作</text>
+  <text x="354" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#6B7280">/comps / /dcf</text>
+  <rect x="505" y="258" width="145" height="88" rx="12" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="544" y="294" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#111827">连接器</text>
+  <text x="532" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#6B7280">11 家数据商</text>
+  <text x="108" y="478" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#374151">模型是发动机，默认结构决定发动机装进哪台机器。</text>
+</svg>

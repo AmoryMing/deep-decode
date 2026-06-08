@@ -1,0 +1,1 @@
+中文信息图，白底，展示 agent view 如何把多个 Claude Code session 变成状态表。包含 Running、Needs input、Completed 三类状态和人类处理动作。风格类似产品架构图。

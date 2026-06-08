@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <rect x="52" y="50" width="696" height="350" rx="18" fill="#F7FAFD" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="84" y="116" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="700" fill="#111827">Anthropic 开始卖默认工作流</text>
+  <text x="86" y="154" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#4B5563">金融仓库的重点不是 prompt，而是行业 know-how 的产品化</text>
+  <rect x="100" y="218" width="160" height="82" rx="12" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="142" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#111827">Agents</text>
+  <text x="130" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#6B7280">10 个工作流</text>
+  <rect x="320" y="218" width="160" height="82" rx="12" fill="#2383E2"/>
+  <text x="364" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">Skills</text>
+  <text x="348" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EAF3FF">行业动作</text>
+  <rect x="540" y="218" width="160" height="82" rx="12" fill="#111827"/>
+  <text x="579" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">MCP</text>
+  <text x="566" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#D1D5DB">数据入口</text>
+  <text x="96" y="356" font-family="PingFang SC, Inter, sans-serif" font-size="17" fill="#374151">真正卖的不是模型，而是企业开工时默认参考的第一版结构。</text>
+</svg>

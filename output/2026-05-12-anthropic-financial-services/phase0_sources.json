@@ -1,0 +1,99 @@
+{
+  "slug": "2026-05-12-anthropic-financial-services",
+  "created": "2026-05-12",
+  "sources_read": [
+    {
+      "title": "frxiaobei X post",
+      "url": "https://x.com/frxiaobei/status/2053861985008431398",
+      "type": "primary_social",
+      "access_method": "fxtwitter public API mirror",
+      "read_status": "tweet_and_quote_read",
+      "key_facts": [
+        "Posted 2026-05-11 15:37:10 UTC.",
+        "Text: Anthropic：“我正在金融街”。走自己的路，让别人无路可走。",
+        "The post quotes GoSailGlobal's long thread about Anthropic's financial-services repository."
+      ]
+    },
+    {
+      "title": "GoSailGlobal long quote thread",
+      "url": "https://x.com/GoSailGlobal/status/2053304501231350074",
+      "type": "primary_social",
+      "access_method": "fxtwitter public API mirror via quoted tweet",
+      "read_status": "full_note_tweet_read",
+      "key_facts": [
+        "Posted 2026-05-10 02:41:56 UTC.",
+        "Frames the repository as a full financial-services AI workflow template rather than a demo.",
+        "Summarizes 10 end-to-end agents, 7 vertical plugins, 11 MCP data connectors, two deployment paths, and Microsoft 365 install tooling.",
+        "Claims the significance is that firms copying the structure grow on Claude's track, while firms not copying it start from scratch."
+      ]
+    },
+    {
+      "title": "Anthropic financial-services README",
+      "url": "https://github.com/anthropics/financial-services",
+      "type": "primary",
+      "read_status": "README_full_relevant_sections_read",
+      "key_facts": [
+        "README defines the repo as reference agents, skills, and data connectors for financial-services workflows across investment banking, equity research, private equity, and wealth management.",
+        "The same source can be installed as a Claude Cowork plugin or deployed through Claude Managed Agents API behind a firm's own workflow engine.",
+        "Named agents include Pitch Agent, Meeting Prep Agent, Market Researcher, Earnings Reviewer, Model Builder, Valuation Reviewer, GL Reconciler, Month-End Closer, Statement Auditor, and KYC Screener.",
+        "Vertical plugins include financial-analysis, investment-banking, equity-research, private-equity, wealth-management, fund-admin, operations, plus partner-built LSEG and S&P Global plugins.",
+        "MCP integrations include Daloopa, Morningstar, S&P Global, FactSet, Moody's, MT Newswires, Aiera, LSEG, PitchBook, Chronograph, and Egnyte.",
+        "The Microsoft 365 install tooling can provision Claude inside Excel, PowerPoint, Word, and Outlook against Vertex AI, Bedrock, or an internal LLM gateway.",
+        "README warns that outputs are analyst work product for qualified professional review and do not execute transactions, bind risk, post to a ledger, or approve onboarding."
+      ]
+    },
+    {
+      "title": "Claude for Financial Services",
+      "url": "https://www.anthropic.com/news/claude-for-financial-services",
+      "type": "official_news",
+      "read_status": "official_news_read",
+      "key_facts": [
+        "Anthropic positions Claude as a financial analysis platform.",
+        "The official page describes an Excel add-in beta and additional connectors to major financial data providers.",
+        "The page emphasizes enterprise-grade security, compliance, and bringing Claude into existing financial workflows."
+      ]
+    },
+    {
+      "title": "Advancing Claude for Financial Services",
+      "url": "https://www.anthropic.com/news/advancing-claude-for-financial-services",
+      "type": "official_news",
+      "read_status": "official_news_read",
+      "key_facts": [
+        "Anthropic announces Claude for Excel beta expansion to Max, Team, and Enterprise users.",
+        "Anthropic says Claude can preserve formatting, formulas, and dependencies across workbooks while explaining changes as it works.",
+        "Anthropic announces connectors for Asana, Box, Canva, Daloopa, Databricks, FactSet, Notion, PitchBook, and Snowflake.",
+        "The page frames Claude as working across spreadsheets, financial data, and work tools rather than as a chat-only interface."
+      ]
+    },
+    {
+      "title": "Agents for financial services",
+      "url": "https://www.anthropic.com/news/finance-agents",
+      "type": "official_news",
+      "read_status": "official_news_read",
+      "key_facts": [
+        "Published 2026-05-05.",
+        "Anthropic says it is releasing 10 ready-to-run agent templates tailored to common financial workflows.",
+        "The official page says these agents are powered by industry-specific skills, connectors, and subagents.",
+        "Supported usage surfaces include Claude Code, Claude web or desktop via Cowork, and Claude Managed Agents API.",
+        "The page lists agent templates for investment banking, equity research, private equity, fund administration, operations, and wealth management."
+      ]
+    },
+    {
+      "title": "GitHub repository metadata",
+      "url": "https://api.github.com/repos/anthropics/financial-services",
+      "type": "primary_metadata",
+      "read_status": "api_response_read",
+      "key_facts": [
+        "Repository created at 2026-02-23T19:24:50Z and pushed at 2026-05-09T11:28:47Z.",
+        "Checked on 2026-05-12, GitHub API showed 20,311 stars and 2,671 forks.",
+        "License is Apache License 2.0."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "Direct X pages are not reliable in this environment; social post contents were retrieved through public API mirrors.",
+    "The repo and official posts prove Anthropic's packaging strategy, but not customer production deployment or paid partnership terms.",
+    "Connector availability may depend on external subscriptions or API keys from providers."
+  ]
+}
+

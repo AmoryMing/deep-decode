@@ -1,0 +1,70 @@
+{
+  "created": "2026-05-12",
+  "topic": "Claude Code v2.1.139 agent view and /goal",
+  "sources": [
+    {
+      "id": "s1",
+      "title": "GitHub release v2.1.139",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+      "type": "official_release",
+      "read_status": "read",
+      "key_points": [
+        "Published at 2026-05-11T18:43:42Z.",
+        "Added agent view as Research Preview, opened with `claude agents`.",
+        "Added `/goal` command to set a completion condition and keep Claude working across turns.",
+        "Release also includes plugin details, hook args, continueOnBlock, MCP env alignment, and subagent telemetry headers."
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Claude Code changelog",
+      "url": "https://code.claude.com/docs/en/changelog.md",
+      "type": "official_docs",
+      "read_status": "read",
+      "key_points": [
+        "Changelog repeats v2.1.139 feature list.",
+        "Agent view and `/goal` are the first two listed changes.",
+        "Release frames agent view as a single list of every Claude Code session: running, blocked on user, or done."
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Manage multiple agents with agent view",
+      "url": "https://code.claude.com/docs/en/agent-view.md",
+      "type": "official_docs",
+      "read_status": "read",
+      "key_points": [
+        "Agent view dispatches and manages many Claude Code sessions from one screen.",
+        "It shows running, needs-input, idle, completed, failed, and stopped states.",
+        "Background sessions can run without a terminal attached through a supervisor process.",
+        "Every background session starts in the working directory but is blocked from writing there until moved into an isolated git worktree under `.claude/worktrees/` when edits are needed.",
+        "Agent view is a research preview and requires Claude Code v2.1.139 or later."
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Keep Claude working toward a goal",
+      "url": "https://code.claude.com/docs/en/goal.md",
+      "type": "official_docs",
+      "read_status": "read",
+      "key_points": [
+        "`/goal` sets a completion condition and keeps Claude working across turns until the condition is met.",
+        "After each turn, a small fast model checks whether the condition holds.",
+        "It works interactively, in non-interactive `-p`, and through Remote Control.",
+        "The evaluator does not run commands or read files independently; it judges from what Claude surfaced in the conversation.",
+        "Goal conditions can be up to 4,000 characters and should state measurable end state, check, and constraints."
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Run agents in parallel",
+      "url": "https://code.claude.com/docs/en/agents.md",
+      "type": "official_docs",
+      "read_status": "read",
+      "key_points": [
+        "Claude Code docs position subagents, agent view, agent teams, and worktrees as different forms of parallel work.",
+        "This supports reading v2.1.139 as a scheduling and orchestration release rather than a UI-only release."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS_WITH_CAVEATS",
+  "checked_at": "2026-05-12",
+  "claims": [
+    {
+      "claim": "Claude Code v2.1.139 added agent view and /goal.",
+      "status": "verified",
+      "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+    },
+    {
+      "claim": "agent view can be opened with `claude agents` and lists sessions by running, blocked, or done state.",
+      "status": "verified",
+      "source": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139"
+    },
+    {
+      "claim": "Anthropic financial-services repository provides reference agents, skills, data connectors, Managed Agents deployment, and Microsoft 365 install tooling.",
+      "status": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "The repository covers financial-services workflows including investment banking, equity research, private equity, wealth management, fund admin, and operations/KYC.",
+      "status": "verified",
+      "source": "https://github.com/anthropics/financial-services"
+    },
+    {
+      "claim": "OpenAI Developers announced a Codex OpenAI Developers plugin for building AI apps and agents with OpenAI APIs.",
+      "status": "verified_from_official_social_post",
+      "source": "https://x.com/OpenAIDevs/status/2053925962287583379"
+    }
+  ],
+  "caveats": [
+    "OpenAI plugin depth is not expanded beyond the official X post because no separate official docs page was found during this pass.",
+    "X content was accessed via public API mirrors for reliability; original X URLs are preserved in the article citations."
+  ]
+}

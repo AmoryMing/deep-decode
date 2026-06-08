@@ -1,0 +1,38 @@
+version: 1
+project:
+  slug: 2026-05-12-claude-code-agent-view
+  type: decode
+  input_mode: decode-url
+  root: output/2026-05-12-claude-code-agent-view
+  strategy_confirmed: true
+strategy:
+  title_angle: "任务调度台：Claude Code v2.1.139 真正改了人机分工"
+  thesis: "Claude Code v2.1.139 的核心不是小功能更新，而是把 AI coding 从单会话助手推向任务调度台；agent view 管横向并发，/goal 管纵向续航。"
+  counter_thesis: "agent view 仍是 research preview，/goal 依赖模型评估完成条件，不能直接视为无人值守的企业级自动化闭环。"
+  audience:
+    primary: "B 端 AI 决策者、工程负责人、架构师、AI PM"
+    secondary: "一线工程师、agent 工具链研究者"
+  red_lines:
+    - "不写成 release note 翻译"
+    - "不用 emoji"
+    - "不用“我认为”“让我们”“值得注意的是”"
+    - "不夸大为完全自动化"
+artifacts:
+  article: article.md
+  visuals_required: true
+  visuals_min: 4
+  visuals_max: 6
+  podcast_required: true
+  factcheck_required: true
+  polish_required: true
+  distribution: none
+quality_gates:
+  source_reading: phase0_sources.json
+  strategy: phase1_strategy.md
+  evidence: phase2_evidence.json
+  polish: polish_report.json
+  factcheck: factcheck.json
+  visual: assets/png
+  podcast: podcast.mp3
+notes:
+  visual_and_podcast: "用户要求每篇 decode 走完流水线，主线程补齐视觉和播客。"

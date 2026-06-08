@@ -1,0 +1,16 @@
+slug: 2026-05-12-brief-agent-platform-shift
+title: "AI 情报日报 2026-05-12｜Agent 平台战开始换挡"
+type: brief
+status: production-complete
+created: 2026-05-12
+updated: 2026-05-12
+reader: default
+style: default
+domains:
+  - ai-product
+  - ai-infra
+  - dev-ux
+sources:
+  - https://github.com/anthropics/claude-code/releases/tag/v2.1.139
+  - https://x.com/frxiaobei/status/2053861985008431398
+  - https://x.com/OpenAIDevs/status/2053925962287583379

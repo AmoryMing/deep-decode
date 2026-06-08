@@ -1,0 +1,62 @@
+{
+  "created": "2026-05-12",
+  "pipeline": "polish-pipeline-compatible",
+  "scope": "article.md",
+  "structural": {
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "hook_not_template",
+        "status": "PASS",
+        "note": "开篇用 v2.1.139 发布时间和两个功能建立事实冲突，没有使用“今天聊聊”等模板句。"
+      },
+      {
+        "name": "judgment_density",
+        "status": "PASS",
+        "note": "每个主体章节都有判断句和官方证据承接。"
+      },
+      {
+        "name": "evidence_traceability",
+        "status": "PASS",
+        "note": "关键事实均可追溯到 GitHub release 或 Claude Code docs。"
+      },
+      {
+        "name": "reader_value",
+        "status": "PASS",
+        "note": "落地段覆盖 PM、架构师、CTO、工程师、平台负责人。"
+      }
+    ],
+    "edits_from_draft": [
+      "将“直到满意”改为“直到满意/验收口径”的更精确表达，避免把 /goal 夸大为主观满足。",
+      "收紧 agent view 部分的 UI 描述，突出状态表和阻塞处理。"
+    ]
+  },
+  "prose": {
+    "status": "PASS",
+    "checks": [
+      {
+        "name": "forbidden_phrases",
+        "status": "PASS",
+        "note": "未发现 emoji、“我认为”、“让我们”、“值得注意的是”。"
+      },
+      {
+        "name": "translation_tone",
+        "status": "PASS",
+        "note": "英文术语保留在功能名、命令、状态名和协议名中，正文以中文判断为主。"
+      },
+      {
+        "name": "abstract_noun_control",
+        "status": "PASS",
+        "note": "抽象词均由具体机制支撑：状态表、peek panel、worktree、evaluator、OTEL。"
+      }
+    ],
+    "paragraphs_changed": 4
+  },
+  "summary": {
+    "structural_total_edits": 2,
+    "prose_paragraphs_changed": 4,
+    "over_polished": false,
+    "visuals_skipped_by_user_request": true,
+    "podcast_skipped_by_user_request": true
+  }
+}

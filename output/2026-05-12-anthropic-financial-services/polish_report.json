@@ -1,0 +1,61 @@
+{
+  "slug": "2026-05-12-anthropic-financial-services",
+  "created": "2026-05-12",
+  "status": "pass",
+  "scope": "article.md",
+  "style_suite": "default",
+  "structure_check": {
+    "hook": {
+      "status": "pass",
+      "note": "Opens with frxiaobei's concrete post and immediately turns it into a structural claim."
+    },
+    "thesis": {
+      "status": "pass",
+      "note": "Main thesis appears in opening and is reinforced across sections: default workflow, not model/demo."
+    },
+    "evidence_density": {
+      "status": "pass",
+      "note": "Each major section cites README or official Anthropic news facts."
+    },
+    "blind_spot_section": {
+      "status": "pass",
+      "note": "Boundary section covers compliance, provider subscriptions, production adoption, and path dependency."
+    },
+    "practitioner_section": {
+      "status": "pass",
+      "note": "CTO, product owner, solution team, and internal financial institution team each receive concrete takeaways."
+    },
+    "keywords": {
+      "status": "pass",
+      "note": "Five keywords are full explanatory paragraphs, not glossary fragments."
+    },
+    "references": {
+      "status": "pass",
+      "note": "Original repository URL is first; social and official sources follow."
+    }
+  },
+  "prose_check": {
+    "banned_phrases": {
+      "status": "pass",
+      "checked": ["我认为", "让我们", "值得注意的是"],
+      "found": []
+    },
+    "translationese": {
+      "status": "pass",
+      "note": "Some English product terms intentionally remain in English because they are source artifact names."
+    },
+    "ai_process_leakage": {
+      "status": "pass",
+      "note": "Article does not say it read sources or expose research workflow."
+    },
+    "overclaiming": {
+      "status": "pass",
+      "note": "Article avoids claiming production deployment, transaction execution, or investment recommendations."
+    }
+  },
+  "remaining_risks": [
+    "No visual assets were embedded because the user explicitly deferred visual and podcast work to the main thread.",
+    "X content was accessed through public API mirrors due direct X unreliability."
+  ]
+}
+

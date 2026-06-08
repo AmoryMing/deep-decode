@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "mode": "manual_svg",
+  "generated_at": "2026-05-12",
+  "assets": [
+    {"svg": "assets/svg/00_cover.svg", "png": "assets/png/00_cover.png", "purpose": "cover and thesis"},
+    {"svg": "assets/svg/01_showroom.svg", "png": "assets/png/01_showroom.png", "purpose": "demo vs industry showroom"},
+    {"svg": "assets/svg/02_default_structure.svg", "png": "assets/png/02_default_structure.png", "purpose": "default workflow structure"},
+    {"svg": "assets/svg/03_financial_desktop.svg", "png": "assets/png/03_financial_desktop.png", "purpose": "Claude in financial desktop"}
+  ],
+  "qa": {
+    "png_files_exist": true,
+    "embedded_in_article": true,
+    "font_family": "PingFang SC, Inter, sans-serif",
+    "unicode_risk": "no checkmark/cross symbols used"
+  }
+}

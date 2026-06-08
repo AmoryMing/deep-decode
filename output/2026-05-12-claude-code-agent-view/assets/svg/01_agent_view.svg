@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="54" y="70" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="700" fill="#111827">agent view：把对话变成状态表</text>
+  <text x="56" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4B5563">一个调度面板同时管理 running、needs input、completed、failed 的后台 session</text>
+  <rect x="70" y="150" width="660" height="270" rx="14" fill="#F7FAFD" stroke="#E3E2E0" stroke-width="2"/>
+  <rect x="100" y="185" width="600" height="44" rx="8" fill="#2383E2"/>
+  <text x="124" y="213" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Session</text>
+  <text x="320" y="213" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">状态</text>
+  <text x="482" y="213" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">人类动作</text>
+  <g font-family="PingFang SC, Inter, sans-serif" font-size="14">
+    <rect x="100" y="244" width="600" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="124" y="270" fill="#111827">修复登录 bug</text>
+    <text x="320" y="270" fill="#2383E2">Running</text>
+    <text x="482" y="270" fill="#6B7280">先不用管</text>
+    <rect x="100" y="298" width="600" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="124" y="324" fill="#111827">迁移旧 API</text>
+    <text x="320" y="324" fill="#F59E0B">Needs input</text>
+    <text x="482" y="324" fill="#111827">peek 后回复</text>
+    <rect x="100" y="352" width="600" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="124" y="378" fill="#111827">补单元测试</text>
+    <text x="320" y="378" fill="#10B981">Completed</text>
+    <text x="482" y="378" fill="#6B7280">验收或合并</text>
+  </g>
+  <text x="82" y="456" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#374151">调度价值：人类不再读完整 transcript，而是处理阻塞、检查结果、决定接管。</text>
+</svg>

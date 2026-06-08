@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+  <text x="54" y="70" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="700" fill="#111827">人类角色：从驾驶员到调度员</text>
+  <text x="56" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4B5563">任务调度台不是无人驾驶，而是重新分配人和 agent 的动作</text>
+  <rect x="70" y="154" width="300" height="260" rx="16" fill="#FFF7ED" stroke="#FDBA74" stroke-width="2"/>
+  <text x="116" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#9A3412">旧模式：驾驶员</text>
+  <text x="106" y="246" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#7C2D12">逐轮追问</text>
+  <text x="106" y="286" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#7C2D12">手动续命</text>
+  <text x="106" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#7C2D12">凭记忆判断进度</text>
+  <text x="106" y="366" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#7C2D12">一个终端一条线</text>
+  <rect x="430" y="154" width="300" height="260" rx="16" fill="#EFF6FF" stroke="#2383E2" stroke-width="2"/>
+  <text x="476" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#1D4ED8">新模式：调度员</text>
+  <text x="466" y="246" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#1E3A8A">定义完成条件</text>
+  <text x="466" y="286" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#1E3A8A">观察 session 状态</text>
+  <text x="466" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#1E3A8A">只处理阻塞</text>
+  <text x="466" y="366" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#1E3A8A">验收和归因</text>
+  <path d="M382 282 H420" stroke="#2383E2" stroke-width="4"/>
+  <text x="84" y="462" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#374151">边界：权限、worktree、日志、token 成本仍需要团队治理。调度台不等于放弃监管。</text>
+</svg>

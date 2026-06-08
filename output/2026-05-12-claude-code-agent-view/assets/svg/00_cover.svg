@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <rect x="52" y="50" width="696" height="350" rx="18" fill="#F7FAFD" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="86" y="112" font-family="PingFang SC, Inter, sans-serif" font-size="34" font-weight="700" fill="#111827">Claude Code 变成任务调度台</text>
+  <text x="88" y="152" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#4B5563">v2.1.139 的重点不是新命令，而是新工作面</text>
+  <rect x="96" y="210" width="176" height="92" rx="12" fill="#2383E2"/>
+  <text x="132" y="248" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">agent view</text>
+  <text x="126" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#EAF3FF">横向并发</text>
+  <rect x="312" y="210" width="176" height="92" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="2"/>
+  <text x="366" y="248" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#111827">/goal</text>
+  <text x="360" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4B5563">纵向续航</text>
+  <rect x="528" y="210" width="176" height="92" rx="12" fill="#111827"/>
+  <text x="573" y="248" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">人类角色</text>
+  <text x="564" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#D1D5DB">从驾驶员到调度员</text>
+  <path d="M278 256 H304" stroke="#2383E2" stroke-width="3"/>
+  <path d="M494 256 H520" stroke="#2383E2" stroke-width="3"/>
+  <text x="94" y="356" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="600" fill="#111827">核心判断</text>
+  <text x="184" y="356" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#374151">AI coding 的下一步，是把任务变成可派发、可观察、可验收的工作单元。</text>
+</svg>

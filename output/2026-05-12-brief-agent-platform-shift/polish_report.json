@@ -1,0 +1,38 @@
+{
+  "mode": "light-polish",
+  "article": "article.md",
+  "structural_audit_10": {
+    "1_钩子": "PASS - first two paragraphs anchor the three news items to one shared platform-shift judgment.",
+    "2_AI签名词": "PASS - checked for 让我们 / 综上所述 / 值得注意的是 / 接下来看 / 首先 / 其次.",
+    "3_反复不是X而是Y": "PASS - contrast is used sparingly and tied to the main thesis.",
+    "4_原创命名": "PASS - 调度台 / 完成条件 / 行业样板间 / API 前台 are used as explanatory names without self-labeling.",
+    "5_多受众": "PASS - PM, architect, CTO, developer actions included.",
+    "6_推理链完整": "PASS - each item moves from fact to platform implication.",
+    "7_外部信号数": "PASS - six primary or official-adjacent sources cited.",
+    "8_盲区段": "PASS - uncertainties are listed under 值得关注.",
+    "9_落回具体": "PASS - closing action section gives concrete weekly checks.",
+    "10_企媒适配": "PASS - no direct sales proposal, no hidden internal agenda, no process exposure."
+  },
+  "prose_audit_7steps": {
+    "summary": "Light pass tightened the piece around one judgment: agent competition is moving from model capability to work entry, task orchestration, and industry packaging.",
+    "edits_applied": [
+      {
+        "rule_cited": "Step 3",
+        "why": "Reduced stiff contrast phrasing and kept the brief voice conversational."
+      },
+      {
+        "rule_cited": "Step 4",
+        "why": "Replaced vague phrases with concrete nouns such as session state, blocking reason, completion condition, API foreground."
+      },
+      {
+        "rule_cited": "Step 6.5",
+        "why": "Removed drafting-process language and kept the article as field judgment, not workflow narration."
+      }
+    ]
+  },
+  "summary": {
+    "total_edits": 7,
+    "over_polished": false,
+    "status": "PASS"
+  }
+}

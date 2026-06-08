@@ -1,0 +1,71 @@
+{
+  "created": "2026-05-12",
+  "claims": [
+    {
+      "claim": "Claude Code v2.1.139 was published on GitHub on 2026-05-11.",
+      "source_ids": ["s1"],
+      "evidence": "GitHub release API shows tag v2.1.139 with published_at 2026-05-11T18:43:42Z.",
+      "use_in_article": "开篇事实锚点"
+    },
+    {
+      "claim": "v2.1.139 added agent view as a Research Preview and introduced `claude agents`.",
+      "source_ids": ["s1", "s2", "s3"],
+      "evidence": "Release notes list agent view first and docs say it requires v2.1.139 or later.",
+      "use_in_article": "证明 agent view 是该版本主功能之一"
+    },
+    {
+      "claim": "Agent view is a single screen for dispatching and managing multiple Claude Code sessions.",
+      "source_ids": ["s3"],
+      "evidence": "Docs describe it as one screen for background sessions, showing what is running, needs input, and done.",
+      "use_in_article": "支撑横向并发判断"
+    },
+    {
+      "claim": "Background sessions continue without a terminal attached and are hosted by a supervisor process.",
+      "source_ids": ["s3"],
+      "evidence": "Agent view docs say sessions keep running in background and a separate supervisor process runs them.",
+      "use_in_article": "证明不是简单 UI 列表"
+    },
+    {
+      "claim": "Agent view groups sessions by state and lets users peek, reply, attach, dispatch, pin, filter, stop, and delete.",
+      "source_ids": ["s3"],
+      "evidence": "Docs list state groups, peek and reply panel, attach/detach, filters, keyboard shortcuts, stop/delete commands.",
+      "use_in_article": "证明人类角色变为调度者"
+    },
+    {
+      "claim": "Background session file edits are isolated through git worktrees when edits are needed.",
+      "source_ids": ["s3"],
+      "evidence": "Docs say background sessions are blocked from writing the original working directory and moved into isolated `.claude/worktrees/` for edits.",
+      "use_in_article": "说明并发落地需要隔离机制"
+    },
+    {
+      "claim": "`/goal` sets a completion condition and keeps Claude working across turns until the condition is met.",
+      "source_ids": ["s1", "s4"],
+      "evidence": "Release notes and goal docs state the command keeps Claude working across turns until a completion condition is met.",
+      "use_in_article": "支撑纵向续航判断"
+    },
+    {
+      "claim": "`/goal` uses a small fast model evaluator after each turn.",
+      "source_ids": ["s4"],
+      "evidence": "Docs say after each turn a small fast model checks whether the condition holds and defaults to Haiku.",
+      "use_in_article": "解释其不是普通 prompt"
+    },
+    {
+      "claim": "`/goal` works in interactive mode, `-p`, and Remote Control.",
+      "source_ids": ["s1", "s4"],
+      "evidence": "Release notes and docs state support for interactive, non-interactive `-p`, and Remote Control.",
+      "use_in_article": "说明其是工作流能力"
+    },
+    {
+      "claim": "The `/goal` evaluator cannot run commands or read files independently.",
+      "source_ids": ["s4"],
+      "evidence": "Goal docs explicitly say the evaluator judges from the conversation and does not call tools.",
+      "use_in_article": "盲区段"
+    },
+    {
+      "claim": "v2.1.139 also added subagent telemetry headers and OTEL agent_id attributes.",
+      "source_ids": ["s1", "s2"],
+      "evidence": "Release notes mention API requests from subagents carry x-claude-code-agent-id / parent-agent-id headers and OTEL spans include agent_id / parent_agent_id.",
+      "use_in_article": "说明 agent 化正在变成可观测对象"
+    }
+  ]
+}

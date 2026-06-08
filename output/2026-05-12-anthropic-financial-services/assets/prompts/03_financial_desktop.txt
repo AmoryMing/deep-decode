@@ -1,0 +1,1 @@
+中文概念图，白底，展示 Claude 进入金融桌面：Excel、PowerPoint、Word、Outlook、Cowork plugin、Managed Agents、数据连接器。

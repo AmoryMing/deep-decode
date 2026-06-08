@@ -1,0 +1,58 @@
+{
+  "slug": "2026-05-12-brief-agent-platform-shift",
+  "created": "2026-05-12",
+  "sources_read": [
+    {
+      "title": "Claude Code v2.1.139 release",
+      "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.139",
+      "type": "primary",
+      "read_status": "full_release_notes_read",
+      "key_facts": [
+        "Published at 2026-05-11T18:43:42Z.",
+        "Adds agent view Research Preview via `claude agents`.",
+        "Adds `/goal` command for completion-condition driven work across turns.",
+        "Adds plugin details, hook args exec form, PostToolUse continueOnBlock, MCP reconnect and environment improvements.",
+        "Adds subagent tracing headers and OTEL agent_id / parent_agent_id attributes."
+      ]
+    },
+    {
+      "title": "frxiaobei X post quoting Anthropic financial-services discussion",
+      "url": "https://x.com/frxiaobei/status/2053861985008431398",
+      "type": "primary_social",
+      "read_status": "tweet_and_quote_read_via_public_api",
+      "key_facts": [
+        "Posted 2026-05-11T15:37:10Z.",
+        "Text: Anthropic: 'I am on Wall Street.' The post quotes a long thread about Anthropic's financial-services repository.",
+        "Quoted thread points to https://github.com/anthropics/financial-services."
+      ]
+    },
+    {
+      "title": "Anthropic financial-services repository",
+      "url": "https://github.com/anthropics/financial-services",
+      "type": "primary",
+      "read_status": "readme_and_repo_metadata_read",
+      "key_facts": [
+        "Repository created 2026-02-23T19:24:50Z and pushed 2026-05-09T11:28:47Z.",
+        "README describes reference agents, skills, and data connectors for financial-services workflows.",
+        "The repo lists named workflow agents, vertical plugins, 11 data connectors, Managed Agents deployment, and Claude for Microsoft 365 install tooling.",
+        "GitHub API showed 20,294 stars and 2,670 forks when checked on 2026-05-12."
+      ]
+    },
+    {
+      "title": "OpenAI Developers X post about Codex OpenAI Developers plugin",
+      "url": "https://x.com/OpenAIDevs/status/2053925962287583379",
+      "type": "primary_social",
+      "read_status": "tweet_read_via_public_api",
+      "key_facts": [
+        "Posted 2026-05-11T19:51:24Z by the verified OpenAI Developers account.",
+        "Text says Codex can now help build AI apps and agents faster with OpenAI APIs using the OpenAI Developers plugin.",
+        "Attached media is a 40.457 second video."
+      ]
+    }
+  ],
+  "uncertainties": [
+    "The OpenAI Developers plugin details are only confirmed from the official X post in this pass; no separate official docs page was found in the quick search window.",
+    "The Anthropic financial-services repo is a public reference template repo; the article avoids claiming production adoption or paid partnership terms beyond what the README states.",
+    "X posts were accessed through public API mirrors because direct X page retrieval is unreliable in this environment."
+  ]
+}

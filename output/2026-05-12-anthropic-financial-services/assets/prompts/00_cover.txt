@@ -1,0 +1,1 @@
+中文概念图，白底，主题是 Anthropic financial-services 把金融 know-how 产品化，元素包括 agents、skills、MCP 数据入口、默认工作流。

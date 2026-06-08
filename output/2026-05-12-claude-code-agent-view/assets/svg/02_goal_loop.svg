@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="54" y="70" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="700" fill="#111827">/goal：把“继续做”改成完成条件</text>
+  <text x="56" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4B5563">长任务不是靠更长 prompt，而是靠可检查的验收口径</text>
+  <rect x="84" y="162" width="160" height="82" rx="12" fill="#2383E2"/>
+  <text x="124" y="198" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">写 goal</text>
+  <text x="112" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EAF3FF">测试通过 / lint 干净</text>
+  <rect x="320" y="162" width="160" height="82" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="2"/>
+  <text x="358" y="198" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#111827">Claude 执行</text>
+  <text x="348" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#4B5563">一轮工具调用</text>
+  <rect x="556" y="162" width="160" height="82" rx="12" fill="#111827"/>
+  <text x="595" y="198" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">小模型验收</text>
+  <text x="588" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#D1D5DB">条件是否满足</text>
+  <path d="M250 203 H314" stroke="#2383E2" stroke-width="3"/>
+  <path d="M486 203 H550" stroke="#2383E2" stroke-width="3"/>
+  <path d="M636 252 C636 324 404 346 404 258" fill="none" stroke="#F59E0B" stroke-width="3"/>
+  <text x="444" y="340" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#B45309">未满足：继续下一轮</text>
+  <path d="M636 252 V330" stroke="#10B981" stroke-width="3"/>
+  <rect x="546" y="350" width="180" height="54" rx="10" fill="#ECFDF5" stroke="#10B981"/>
+  <text x="585" y="383" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#065F46">满足：交还人类</text>
+  <text x="88" y="454" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#374151">关键变化：人类定义终点，系统在 turn 之间自己判断是否继续。</text>
+</svg>

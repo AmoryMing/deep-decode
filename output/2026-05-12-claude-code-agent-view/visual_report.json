@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "mode": "manual_svg",
+  "generated_at": "2026-05-12",
+  "assets": [
+    {
+      "svg": "assets/svg/00_cover.svg",
+      "png": "assets/png/00_cover.png",
+      "purpose": "cover and thesis"
+    },
+    {
+      "svg": "assets/svg/01_agent_view.svg",
+      "png": "assets/png/01_agent_view.png",
+      "purpose": "agent view as status table"
+    },
+    {
+      "svg": "assets/svg/02_goal_loop.svg",
+      "png": "assets/png/02_goal_loop.png",
+      "purpose": "/goal loop and completion condition"
+    },
+    {
+      "svg": "assets/svg/03_handoff.svg",
+      "png": "assets/png/03_handoff.png",
+      "purpose": "human role shift"
+    }
+  ],
+  "qa": {
+    "png_files_exist": true,
+    "embedded_in_article": true,
+    "font_family": "PingFang SC, Inter, sans-serif",
+    "unicode_risk": "no checkmark/cross symbols used"
+  }
+}
