@@ -1,0 +1,27 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <rect x="40" y="36" width="720" height="378" rx="14" fill="#F7F7F5" stroke="#E3E2E0"/>
+  <text x="70" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#787774">Shiv Sakhuja · Skill Graphs 2.0 拆解</text>
+  <text x="70" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="36" font-weight="700" fill="#37352F">Skill Graph 1.0 必塌</text>
+  <text x="70" y="206" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#37352F">人为什么不该在原子层驾驶 Agent</text>
+  <line x1="70" y1="240" x2="730" y2="240" stroke="#2383E2" stroke-width="3"/>
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="76" y="276" width="200" height="76" rx="10" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="176" y="306" font-size="14" fill="#787774" text-anchor="middle">原子（capabilities）</text>
+    <text x="176" y="334" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">单一动作</text>
+    <path d="M286 314 L320 314" stroke="#2383E2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="332" y="276" width="200" height="76" rx="10" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="432" y="306" font-size="14" fill="#787774" text-anchor="middle">分子（composites）</text>
+    <text x="432" y="334" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">显式编排</text>
+    <path d="M542 314 L576 314" stroke="#2383E2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="588" y="276" width="140" height="76" rx="10" fill="#FFF3E0" stroke="#FFA500" stroke-width="2"/>
+    <text x="658" y="306" font-size="14" fill="#787774" text-anchor="middle">化合物（playbooks）</text>
+    <text x="658" y="334" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">人在这里</text>
+  </g>
+  <text x="70" y="392" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">脑 RAM 是稀缺资源，让 Agent 跑最高抽象。</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2383E2"/>
+    </marker>
+  </defs>
+</svg>

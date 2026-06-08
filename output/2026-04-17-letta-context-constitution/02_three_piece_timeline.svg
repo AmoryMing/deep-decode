@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" font-family="PingFang SC, Inter, -apple-system, sans-serif">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">开源派舆论三件套时间线（2026-04）</text>
+  <text x="400" y="66" font-size="13" fill="#6B6864" text-anchor="middle">哲学 + 产品 + 商业战旗，三线合围 Anthropic Managed Agents</text>
+
+  <!-- 主时间轴 -->
+  <line x1="80" y1="200" x2="720" y2="200" stroke="#6B6864" stroke-width="2"/>
+
+  <!-- Event 1: Letta Context Constitution -->
+  <circle cx="140" cy="200" r="10" fill="#2383E2"/>
+  <line x1="140" y1="195" x2="140" y2="130" stroke="#2383E2" stroke-width="1.5"/>
+  <rect x="60" y="80" width="160" height="50" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5" rx="4"/>
+  <text x="140" y="100" font-size="12" font-weight="700" fill="#2383E2" text-anchor="middle">Letta</text>
+  <text x="140" y="118" font-size="11" fill="#37352F" text-anchor="middle">Context Constitution</text>
+  <text x="140" y="225" font-size="11" fill="#6B6864" text-anchor="middle">04-02</text>
+
+  <!-- Event 2: Sarah tweet -->
+  <circle cx="290" cy="200" r="8" fill="#2383E2"/>
+  <line x1="290" y1="205" x2="290" y2="270" stroke="#2383E2" stroke-width="1.5"/>
+  <rect x="220" y="270" width="150" height="50" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5" rx="4"/>
+  <text x="295" y="290" font-size="12" font-weight="700" fill="#2383E2" text-anchor="middle">Sarah Wooders (Letta)</text>
+  <text x="295" y="308" font-size="10" fill="#6B6864" text-anchor="middle">"memory isn't a plugin" 131K</text>
+  <text x="290" y="225" font-size="11" fill="#6B6864" text-anchor="middle">04-03</text>
+
+  <!-- Event 3: LangChain Deep Agents Deploy -->
+  <circle cx="450" cy="200" r="8" fill="#9B51E0"/>
+  <line x1="450" y1="195" x2="450" y2="130" stroke="#9B51E0" stroke-width="1.5"/>
+  <rect x="375" y="80" width="150" height="50" fill="#F7F7F5" stroke="#9B51E0" stroke-width="1.5" rx="4"/>
+  <text x="450" y="100" font-size="12" font-weight="700" fill="#9B51E0" text-anchor="middle">LangChain</text>
+  <text x="450" y="118" font-size="11" fill="#37352F" text-anchor="middle">Deep Agents Deploy</text>
+  <text x="450" y="225" font-size="11" fill="#6B6864" text-anchor="middle">04 中</text>
+
+  <!-- Event 4: Harrison long tweet -->
+  <circle cx="620" cy="200" r="10" fill="#9B51E0"/>
+  <line x1="620" y1="205" x2="620" y2="270" stroke="#9B51E0" stroke-width="1.5"/>
+  <rect x="545" y="270" width="155" height="50" fill="#FFFFFF" stroke="#9B51E0" stroke-width="1.5" rx="4"/>
+  <text x="622" y="290" font-size="12" font-weight="700" fill="#9B51E0" text-anchor="middle">Harrison Chase (LangChain)</text>
+  <text x="622" y="308" font-size="10" fill="#6B6864" text-anchor="middle">"Your Harness Your Memory" 1.8M</text>
+  <text x="620" y="225" font-size="11" fill="#6B6864" text-anchor="middle">04-11</text>
+
+  <!-- 底部共同指向 -->
+  <rect x="180" y="355" width="440" height="42" fill="#F7F7F5" stroke="#E4E2DF" rx="4"/>
+  <text x="400" y="378" font-size="13" font-weight="600" fill="#37352F" text-anchor="middle">共同指向：反击 Anthropic Managed Agents 托管路线</text>
+  <text x="400" y="393" font-size="11" fill="#6B6864" text-anchor="middle">哲学（Letta Constitution）+ 产品（Deep Agents Deploy）+ 商业战旗（Harrison 长推）</text>
+</svg>

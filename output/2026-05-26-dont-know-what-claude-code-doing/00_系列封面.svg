@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Top border -->
+  <rect x="0" y="0" width="800" height="4" fill="#2383E2"/>
+
+  <!-- Title block -->
+  <text x="60" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="38" font-weight="700" fill="#1A1A1A">思考被默认藏起来了</text>
+  <text x="60" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#5F5F5F">Claude Code v2 把可观测性押给了反蒸馏</text>
+
+  <!-- Center: hidden thinking metaphor -->
+  <g transform="translate(60, 180)">
+    <!-- terminal frame -->
+    <rect x="0" y="0" width="680" height="220" fill="#FAFAFA" stroke="#E3E2E0" stroke-width="1.5" rx="4"/>
+    <!-- macOS-style dots -->
+    <circle cx="20" cy="20" r="5" fill="#FF5F57"/>
+    <circle cx="38" cy="20" r="5" fill="#FEBC2E"/>
+    <circle cx="56" cy="20" r="5" fill="#28C840"/>
+
+    <!-- "∴ Thinking (ctrl+o to expand)" pill -->
+    <text x="20" y="70" font-family="ui-monospace, Menlo, monospace" font-size="16" fill="#999">user&gt; refactor the auth module</text>
+    <text x="20" y="105" font-family="ui-monospace, Menlo, monospace" font-size="16" fill="#777" font-style="italic">∴ Thinking <tspan fill="#B0B0B0">(ctrl+o to expand)</tspan></text>
+
+    <!-- Curtain hiding actual thinking -->
+    <rect x="20" y="125" width="640" height="80" fill="#F0F0F0" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="340" y="160" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#999">实际思考链 · 被默认折叠</text>
+    <text x="340" y="185" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#B0B0B0">Thought for 376s · 时长，不是信号</text>
+  </g>
+
+  <!-- Bottom: 81 comments badge -->
+  <g transform="translate(60, 430)">
+    <rect x="0" y="0" width="160" height="36" fill="#FFF" stroke="#E3E2E0" stroke-width="1" rx="18"/>
+    <circle cx="20" cy="18" r="6" fill="#2383E2"/>
+    <text x="36" y="23" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#1A1A1A">GitHub #8477 · 81 楼</text>
+  </g>
+
+  <text x="740" y="453" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#5F5F5F">deep-decode · 2026-05-26</text>
+</svg>

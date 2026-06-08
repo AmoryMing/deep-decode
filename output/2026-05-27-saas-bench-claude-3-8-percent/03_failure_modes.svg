@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#F7F1E8"/>
+
+  <text x="60" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472" letter-spacing="2">FOUR  FAILURE  MODES  ·  ARXIV 2605.15777</text>
+  <text x="60" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#2A241B">四种失败模式：诊断 agent 卡在哪一步</text>
+  <text x="60" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#8A8472">三条工程问题  +  一条 agent 元认知缺陷</text>
+
+  <line x1="60" y1="155" x2="740" y2="155" stroke="#D8CFB8" stroke-width="1"/>
+
+  <!-- Quadrant 1: Long-Horizon Fragility -->
+  <g transform="translate(60, 185)">
+    <rect x="0" y="0" width="325" height="160" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="20" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#8A8472" letter-spacing="1">01  ·  工程问题</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#2A241B">长程脆性</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">Long-Horizon Fragility</text>
+    <text x="20" y="106" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">单步成功率独立累乘</text>
+    <text x="20" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">100 步以上端到端 → 0</text>
+    <text x="20" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#B85A3A">缓解：减步数 + verifier</text>
+  </g>
+
+  <!-- Quadrant 2: Error Cascading -->
+  <g transform="translate(415, 185)">
+    <rect x="0" y="0" width="325" height="160" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="20" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#8A8472" letter-spacing="1">02  ·  工程问题</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#2A241B">错误级联</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">Error Cascading</text>
+    <text x="20" y="106" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">3% 早期错 → 30% 下游废</text>
+    <text x="20" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">单应用 53% → 四应用 20%</text>
+    <text x="20" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#B85A3A">缓解：回滚 + task decomp</text>
+  </g>
+
+  <!-- Quadrant 3: Verification Blindness -->
+  <g transform="translate(60, 360)">
+    <rect x="0" y="0" width="325" height="160" rx="6" fill="#B85A3A" stroke="#B85A3A" stroke-width="1"/>
+    <text x="20" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#F7E8DE" letter-spacing="1">03  ·  AGENT 本征缺陷</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">验证盲</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#F7E8DE">Verification Blindness</text>
+    <text x="20" y="106" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF">改完不回页面 recheck</text>
+    <text x="20" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF">"点了保存" = "完成了"</text>
+    <text x="20" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#F7E8DE">缓解：外挂 verifier 强制</text>
+  </g>
+
+  <!-- Quadrant 4: Execution Variance -->
+  <g transform="translate(415, 360)">
+    <rect x="0" y="0" width="325" height="160" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="20" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#8A8472" letter-spacing="1">04  ·  工程问题</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#2A241B">执行方差</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">Execution Variance</text>
+    <text x="20" y="106" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">同题三跑 0.00–0.68</text>
+    <text x="20" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">路径依赖 · 分叉复合</text>
+    <text x="20" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#B85A3A">缓解：重试也救不动</text>
+  </g>
+
+  <text x="60" y="548" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">四条单独都还能用工程手段缓解  ·  四条叠加 → 能力曲线被压到端到端 4% 以下</text>
+</svg>

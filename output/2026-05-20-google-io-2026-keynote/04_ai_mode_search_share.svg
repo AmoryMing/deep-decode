@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="40" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">AI Mode 抢走 1/3 搜索用户</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">一年突破 10 亿 MAU；Generative UI 把蓝链接换成模型现场组装的界面</text>
+
+  <line x1="40" y1="105" x2="760" y2="105" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- 圆环图：30 亿用户里 10 亿用 AI Mode -->
+  <g transform="translate(200, 280)">
+    <!-- Background circle (剩余 20 亿蓝链接) -->
+    <circle cx="0" cy="0" r="110" fill="none" stroke="#E3E2E0" stroke-width="40"/>
+    <!-- 1/3 圆弧 = AI Mode 10 亿 -->
+    <circle cx="0" cy="0" r="110"
+            fill="none"
+            stroke="#2383E2"
+            stroke-width="40"
+            stroke-dasharray="230.4 460.8"
+            transform="rotate(-90)"/>
+    <text x="0" y="-5" font-family="PingFang SC, Inter, sans-serif" font-size="26" font-weight="700" fill="#37352F" text-anchor="middle">1 / 3</text>
+    <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">用户已迁移</text>
+  </g>
+
+  <!-- Right labels -->
+  <g transform="translate(400, 170)">
+    <rect x="0" y="0" width="20" height="20" fill="#2383E2"/>
+    <text x="30" y="15" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">10 亿 MAU</text>
+    <text x="30" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">AI Mode（1 年从零起）</text>
+
+    <rect x="0" y="60" width="20" height="20" fill="#E3E2E0"/>
+    <text x="30" y="75" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">20+ 亿 MAU</text>
+    <text x="30" y="96" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">仍在用蓝链接（搜索 ≈ 30 亿）</text>
+  </g>
+
+  <!-- 配套产品列表 -->
+  <g transform="translate(400, 290)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">配套发布</text>
+
+    <rect x="0" y="20" width="320" height="40" rx="6" fill="#F0F7FF"/>
+    <text x="14" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Ask YouTube · 秒级定位视频片段</text>
+
+    <rect x="0" y="68" width="320" height="40" rx="6" fill="#F0F7FF"/>
+    <text x="14" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Information Agents · 替你跑调研</text>
+
+    <rect x="0" y="116" width="320" height="40" rx="6" fill="#FFEDED"/>
+    <text x="14" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#EB5757">Generative UI · 拔掉传统 SEO 根基</text>
+  </g>
+
+  <!-- 警示 -->
+  <rect x="40" y="475" width="720" height="48" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="505" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">对内容方含义：十年沉淀的 SEO 资产，可能在 Generative UI 下不再兑现</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-size="22" font-weight="700" fill="#37352F">Worktree 隔离：读共享、写各自</text>
+  <text x="40" y="78" font-size="14" fill="#9B9A97">git 原生特性 · 每个并行会话写到独立 checkout · 删会话 = 删 worktree（含未提交改动）</text>
+
+  <!-- 中心：共享 .git -->
+  <rect x="320" y="220" width="160" height="80" rx="8" fill="#2383E2" opacity="0.1" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="400" y="250" font-size="14" font-weight="700" fill="#2383E2" text-anchor="middle">.git/</text>
+  <text x="400" y="272" font-size="12" fill="#37352F" text-anchor="middle">共享对象库</text>
+  <text x="400" y="290" font-size="11" fill="#9B9A97" text-anchor="middle">所有 worktree 都读这里</text>
+
+  <!-- 三个 worktree 分支 -->
+  <g>
+    <rect x="40" y="150" width="200" height="100" rx="8" fill="#FFFFFF" stroke="#4DB6AC"/>
+    <text x="55" y="178" font-size="12" fill="#9B9A97">.claude/worktrees/</text>
+    <text x="55" y="200" font-size="14" font-weight="600" fill="#37352F">7c5dcf5d/</text>
+    <text x="55" y="222" font-size="11" fill="#37352F" opacity="0.7">会话 A · 在改 auth.ts</text>
+    <text x="55" y="240" font-size="11" fill="#9B9A97">分支：cc/bug-fix-A</text>
+  </g>
+
+  <g>
+    <rect x="40" y="290" width="200" height="100" rx="8" fill="#FFFFFF" stroke="#FFB020"/>
+    <text x="55" y="318" font-size="12" fill="#9B9A97">.claude/worktrees/</text>
+    <text x="55" y="340" font-size="14" font-weight="600" fill="#37352F">3a2b8c1f/</text>
+    <text x="55" y="362" font-size="11" fill="#37352F" opacity="0.7">会话 B · review PR 改 README</text>
+    <text x="55" y="380" font-size="11" fill="#9B9A97">分支：cc/pr-review-B</text>
+  </g>
+
+  <g>
+    <rect x="560" y="220" width="200" height="100" rx="8" fill="#FFFFFF" stroke="#EB5757" opacity="0.7"/>
+    <text x="575" y="248" font-size="12" fill="#9B9A97">.claude/worktrees/</text>
+    <text x="575" y="270" font-size="14" font-weight="600" fill="#37352F">9f1e2a/</text>
+    <text x="575" y="292" font-size="11" fill="#37352F" opacity="0.7">会话 C · 改 test/checkout.spec</text>
+    <text x="575" y="310" font-size="11" fill="#9B9A97">分支：cc/flaky-test-C</text>
+  </g>
+
+  <!-- 连线 -->
+  <line x1="240" y1="200" x2="320" y2="240" stroke="#9B9A97" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="240" y1="340" x2="320" y2="280" stroke="#9B9A97" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="560" y1="260" x2="480" y2="260" stroke="#9B9A97" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="270" y="155" font-size="10" fill="#9B9A97">读</text>
+  <text x="540" y="245" font-size="10" fill="#9B9A97">读</text>
+
+  <!-- 边界条件 -->
+  <line x1="40" y1="420" x2="760" y2="420" stroke="#E0E0E0"/>
+  <text x="40" y="448" font-size="13" font-weight="600" fill="#37352F">三种不进 worktree 的情况</text>
+  <text x="40" y="472" font-size="12" fill="#37352F">① 会话已经在 .claude/worktrees/ 里  ② 工作目录不是 git 仓库  ③ 写到工作目录外（如 ~/.zshrc）</text>
+  <text x="40" y="496" font-size="12" fill="#EB5757">⚠ 非 git 目录里多个会话不互相隔离 · 删会话会一起删未提交改动 · 先 push/commit</text>
+</svg>

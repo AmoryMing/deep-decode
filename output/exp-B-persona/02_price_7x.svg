@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+
+  <text x="600" y="60" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#222222">7.2 倍价差落到企业财报上</text>
+  <text x="600" y="90" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle" fill="#666666">月输出 5000 万 token 的 agent 流水线场景</text>
+
+  <!-- Bar chart: monthly cost -->
+  <text x="240" y="180" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666666">V4-Pro $3.48/MTok</text>
+  <rect x="240" y="200" width="55" height="50" fill="#FFA500"/>
+  <text x="310" y="232" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#222222">$174 / 月</text>
+
+  <text x="240" y="290" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666666">Opus 4.6 $25/MTok</text>
+  <rect x="240" y="310" width="395" height="50" fill="#2383E2"/>
+  <text x="650" y="342" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#222222">$1,250 / 月</text>
+
+  <text x="240" y="400" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999999">差额每月 $1,076</text>
+
+  <!-- Scaling -->
+  <line x1="240" y1="440" x2="960" y2="440" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="600" y="485" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#222222">把这个差额按团队和年度乘出来</text>
+
+  <text x="290" y="555" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#666666">单工程师 / 年</text>
+  <text x="290" y="595" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#FFA500">$12,912</text>
+
+  <text x="600" y="555" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#666666">10 人团队 / 年</text>
+  <text x="600" y="595" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#FFA500">$129,120</text>
+
+  <text x="910" y="555" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#666666">50 人团队 / 年</text>
+  <text x="910" y="595" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#FFA500">$645,600</text>
+
+  <text x="600" y="650" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">＝ 再招两个高级工程师的预算  ·  CFO 季度评审表那一行从绿变红的原因</text>
+</svg>

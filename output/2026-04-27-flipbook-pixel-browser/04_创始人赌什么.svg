@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="38" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">Shah 押的不是产品 —— 是模型能力曲线</text>
+  <text x="400" y="60" font-size="12" fill="#787774" text-anchor="middle">"As the models get more accurate and more stateful, the set of things worth doing this way will expand."</text>
+
+  <!-- timeline axis -->
+  <line x1="80" y1="170" x2="720" y2="170" stroke="#1A1A1A" stroke-width="2"/>
+  <polygon points="720,170 712,166 712,174" fill="#1A1A1A"/>
+
+  <!-- 3 markers -->
+  <circle cx="180" cy="170" r="6" fill="#2383E2"/>
+  <circle cx="400" cy="170" r="6" fill="#2383E2"/>
+  <circle cx="620" cy="170" r="6" fill="#2383E2"/>
+
+  <text x="180" y="195" font-size="13" font-weight="600" fill="#2383E2" text-anchor="middle">1–2 年（短期）</text>
+  <text x="400" y="195" font-size="13" font-weight="600" fill="#2383E2" text-anchor="middle">3–5 年（中期）</text>
+  <text x="620" y="195" font-size="13" font-weight="600" fill="#2383E2" text-anchor="middle">5 年以上（长期）</text>
+
+  <!-- 3 cards -->
+  <rect x="40" y="220" width="240" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="160" y="248" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">flipbook 是玩具</text>
+  <text x="55" y="278" font-size="12" fill="#37352F">最适场景：</text>
+  <text x="55" y="298" font-size="12" fill="#37352F">• 低 IA、高视觉</text>
+  <text x="55" y="318" font-size="12" fill="#37352F">• 容忍幻觉</text>
+  <text x="55" y="346" font-size="12" fill="#787774">具体：</text>
+  <text x="55" y="366" font-size="12" fill="#37352F">• 百科条目</text>
+  <text x="55" y="386" font-size="12" fill="#37352F">• 儿童科普 / 博物馆导览</text>
+  <text x="55" y="406" font-size="12" fill="#37352F">• 随手查询</text>
+  <text x="55" y="430" font-size="11" fill="#787774">不替代严肃应用 / 也不消失</text>
+
+  <rect x="290" y="220" width="240" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="410" y="248" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">低 IA 场景被吃掉</text>
+  <text x="305" y="278" font-size="12" fill="#37352F">"信息浏览"出现裂缝：</text>
+  <text x="305" y="306" font-size="12" fill="#37352F">• 维基 / Quora / 知乎类</text>
+  <text x="305" y="326" font-size="12" fill="#37352F">  被 AI 视觉解释蚕食</text>
+  <text x="305" y="354" font-size="12" fill="#37352F">• 教育 / 科普</text>
+  <text x="305" y="374" font-size="12" fill="#37352F">• 营销页 / 产品手册</text>
+  <text x="305" y="402" font-size="11" fill="#787774">HTML 不死，从主流变备选</text>
+
+  <rect x="540" y="220" width="240" height="220" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="660" y="248" font-size="14" font-weight="700" fill="#2383E2" text-anchor="middle">老假设松动</text>
+  <text x="555" y="278" font-size="12" fill="#37352F">"应用 UI 必须由人类</text>
+  <text x="555" y="296" font-size="12" fill="#37352F">工程师用代码写"</text>
+  <text x="555" y="316" font-size="12" font-weight="600" fill="#2383E2">→ 这条三十年公理松动</text>
+  <text x="555" y="346" font-size="12" fill="#787774">Shah 押注的极端：</text>
+  <text x="555" y="366" font-size="12" fill="#37352F">• 模型够稳 + 够有状态</text>
+  <text x="555" y="386" font-size="12" fill="#37352F">• 字符级精确编辑</text>
+  <text x="555" y="406" font-size="12" font-weight="600" fill="#1A4D8C">→ 连写代码都可能像素化</text>
+  <text x="555" y="430" font-size="11" fill="#787774">最大变量：交互范式不确定</text>
+
+  <text x="400" y="468" font-size="12" fill="#787774" text-anchor="middle">不是产品赌注，是时间赌注 —— flipbook 这栋纸牌屋下面押的是模型能力曲线</text>
+</svg>

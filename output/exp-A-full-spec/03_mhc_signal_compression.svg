@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <text x="600" y="50" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">mHC：把闭源派最深的训练稳定性钢筋拔出来开源</text>
+  <text x="600" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Manifold-Constrained Hyper-Connections（流形约束超级连接）</text>
+
+  <!-- 左侧：旧范式 3000x -->
+  <g>
+    <rect x="80" y="120" width="450" height="480" rx="12" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2"/>
+    <rect x="80" y="120" width="450" height="50" rx="12" fill="#787774"/>
+    <text x="305" y="153" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">没有 mHC：信号在层间疯狂放大</text>
+
+    <!-- 神经网络层叠加可视化（信号变粗） -->
+    <g transform="translate(305, 200)">
+      <!-- 层 1 -->
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#2383E2" stroke-width="2"/>
+      <text x="-180" y="25" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 1 层 信号宽度</text>
+
+      <!-- 层 2 -->
+      <line x1="0" y1="50" x2="0" y2="90" stroke="#2383E2" stroke-width="6"/>
+      <text x="-180" y="75" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 10 层 ×10</text>
+
+      <!-- 层 3 -->
+      <line x1="0" y1="100" x2="0" y2="140" stroke="#FFA500" stroke-width="14"/>
+      <text x="-180" y="125" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 50 层 ×100</text>
+
+      <!-- 层 4 -->
+      <line x1="0" y1="150" x2="0" y2="190" stroke="#EB5757" stroke-width="28"/>
+      <text x="-180" y="175" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 100 层 ×1000</text>
+
+      <!-- 崩塌指示 -->
+      <line x1="0" y1="200" x2="0" y2="240" stroke="#EB5757" stroke-width="50"/>
+      <text x="-180" y="225" font-family="PingFang SC, sans-serif" font-size="11" fill="#EB5757" font-weight="700">第 N 层 ×3000 崩</text>
+    </g>
+
+    <text x="305" y="495" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#EB5757">3,000×</text>
+    <text x="305" y="525" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">信号放大上限</text>
+    <text x="305" y="555" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">→ 千亿参数 Dense 训练</text>
+    <text x="305" y="575" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" font-weight="700">collapse 主要触发器</text>
+  </g>
+
+  <!-- 中央箭头 -->
+  <g transform="translate(600, 360)">
+    <line x1="-30" y1="0" x2="30" y2="0" stroke="#FFA500" stroke-width="3"/>
+    <polygon points="30,-8 50,0 30,8" fill="#FFA500"/>
+    <text x="10" y="-30" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFA500">mHC 流形约束</text>
+    <text x="10" y="30" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">tech report 公开</text>
+  </g>
+
+  <!-- 右侧：新范式 1.6x -->
+  <g>
+    <rect x="670" y="120" width="450" height="480" rx="12" fill="#FFF3E0" stroke="#FFA500" stroke-width="2"/>
+    <rect x="670" y="120" width="450" height="50" rx="12" fill="#FFA500"/>
+    <text x="895" y="153" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">有 mHC：信号被约束在流形上</text>
+
+    <g transform="translate(895, 200)">
+      <line x1="0" y1="0" x2="0" y2="40" stroke="#2383E2" stroke-width="2"/>
+      <text x="40" y="25" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 1 层</text>
+
+      <line x1="0" y1="50" x2="0" y2="90" stroke="#2383E2" stroke-width="2"/>
+      <text x="40" y="75" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 10 层</text>
+
+      <line x1="0" y1="100" x2="0" y2="140" stroke="#2383E2" stroke-width="2.5"/>
+      <text x="40" y="125" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 50 层</text>
+
+      <line x1="0" y1="150" x2="0" y2="190" stroke="#2383E2" stroke-width="2.5"/>
+      <text x="40" y="175" font-family="PingFang SC, sans-serif" font-size="11" fill="#787774">第 100 层</text>
+
+      <line x1="0" y1="200" x2="0" y2="240" stroke="#2383E2" stroke-width="3"/>
+      <text x="40" y="225" font-family="PingFang SC, sans-serif" font-size="11" fill="#FFA500" font-weight="700">第 N 层 撑得住</text>
+    </g>
+
+    <text x="895" y="495" text-anchor="middle" font-family="Inter, sans-serif" font-size="48" font-weight="700" fill="#FFA500">1.6×</text>
+    <text x="895" y="525" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">信号放大上限</text>
+    <text x="895" y="555" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">→ 1.6 万亿参数训得稳</text>
+    <text x="895" y="575" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFA500" font-weight="700">行业首次开源此工程方案</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <rect x="80" y="630" width="1040" height="50" rx="8" fill="#37352F"/>
+  <text x="600" y="662" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-style="italic" fill="#FFFFFF">"千亿参数以上的 Dense 模型训练里，信号在层间放大失控是 collapse 的主要触发器——这根钢筋被搬到了地上。"</text>
+</svg>

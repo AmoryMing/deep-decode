@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480" font-family="PingFang SC, Inter, -apple-system, sans-serif">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">给 Amory 写一份宪法：三阶段升级路径</text>
+  <text x="400" y="66" font-size="13" fill="#6B6864" text-anchor="middle">muming 的 CLAUDE.md → Letta 式 Constitution 的可行路径</text>
+
+  <!-- Stage 1 -->
+  <rect x="40" y="120" width="220" height="240" fill="#F7F7F5" stroke="#FFB020" stroke-width="2" rx="6"/>
+  <text x="150" y="150" font-size="14" font-weight="700" fill="#FFB020" text-anchor="middle">阶段 1</text>
+  <text x="150" y="172" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">静态 CLAUDE.md</text>
+  <text x="150" y="190" font-size="11" fill="#6B6864" text-anchor="middle">（现状）</text>
+  <line x1="70" y1="205" x2="230" y2="205" stroke="#E4E2DF"/>
+  <g font-size="11" fill="#37352F">
+    <text x="60" y="228">• 100 行索引 + protocol 分片</text>
+    <text x="60" y="250">• MEMORY.md 画像沉淀</text>
+    <text x="60" y="272">• hooks 强制 worklog 等</text>
+    <text x="60" y="294">• Progressive Disclosure</text>
+  </g>
+  <text x="60" y="330" font-size="11" fill="#EB5757" font-weight="600">限制：</text>
+  <text x="60" y="345" font-size="11" fill="#6B6864">人写人改，AI 被动遵守</text>
+
+  <!-- Stage 2 -->
+  <rect x="290" y="120" width="220" height="240" fill="#F7F7F5" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="400" y="150" font-size="14" font-weight="700" fill="#2383E2" text-anchor="middle">阶段 2</text>
+  <text x="400" y="172" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">meta + rules 两层</text>
+  <text x="400" y="190" font-size="11" fill="#6B6864" text-anchor="middle">（过渡）</text>
+  <line x1="320" y1="205" x2="480" y2="205" stroke="#E4E2DF"/>
+  <g font-size="11" fill="#37352F">
+    <text x="310" y="228">• meta 层人写死：</text>
+    <text x="310" y="244">  "Amory 是谁、为何存在"</text>
+    <text x="310" y="266">• rules 层 AI 可写回：</text>
+    <text x="310" y="282">  工作流、偏好、协作约定</text>
+    <text x="310" y="304">• Self-Healing 机制</text>
+  </g>
+  <text x="310" y="340" font-size="11" fill="#2383E2" font-weight="600">价值：保 identity + 允许进化</text>
+
+  <!-- Stage 3 -->
+  <rect x="540" y="120" width="220" height="240" fill="#F7F7F5" stroke="#9B51E0" stroke-width="2" rx="6"/>
+  <text x="650" y="150" font-size="14" font-weight="700" fill="#9B51E0" text-anchor="middle">阶段 3</text>
+  <text x="650" y="172" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">Amory Constitution</text>
+  <text x="650" y="190" font-size="11" fill="#6B6864" text-anchor="middle">（Letta 式）</text>
+  <line x1="570" y1="205" x2="730" y2="205" stroke="#E4E2DF"/>
+  <g font-size="11" fill="#37352F">
+    <text x="560" y="228">• 第二人称写给 Amory</text>
+    <text x="560" y="250">• Identity/Memory/Continuity</text>
+    <text x="560" y="272">  三位一体</text>
+    <text x="560" y="294">• System Prompt Learning</text>
+    <text x="560" y="316">• 跨模型身份连续性测试</text>
+  </g>
+  <text x="560" y="345" font-size="11" fill="#9B51E0" font-weight="600">价值：可迁移人格 + 持续同事</text>
+
+  <!-- 箭头 1->2 -->
+  <defs>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#6B6864"/>
+    </marker>
+  </defs>
+  <line x1="262" y1="240" x2="288" y2="240" stroke="#6B6864" stroke-width="2" marker-end="url(#arrB)"/>
+  <line x1="512" y1="240" x2="538" y2="240" stroke="#6B6864" stroke-width="2" marker-end="url(#arrB)"/>
+
+  <!-- 底部 -->
+  <text x="400" y="420" font-size="11" fill="#6B6864" text-anchor="middle">数字员工、企百科研究员、HR 小秘书——每个产品化 agent 都值得一份最小可行宪法（约 100 词）</text>
+  <text x="400" y="440" font-size="11" fill="#6B6864" text-anchor="middle">起点是"产品语言升级"：从"我给 AI 写了多少 prompt"  →  "我的 AI 的 token-space identity 是什么形状"</text>
+</svg>

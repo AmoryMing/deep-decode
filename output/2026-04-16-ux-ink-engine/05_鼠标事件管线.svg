@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="800" height="420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" text-anchor="middle" font-weight="bold">终端里的鼠标：从字节流到 onClick</text>
+  <text x="400" y="52" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">渲染管线的反向：用户输入 → DOM 事件</text>
+
+  <!-- Step 1: Terminal reports mouse -->
+  <rect x="40" y="75" width="160" height="60" rx="8" fill="#37352F"/>
+  <text x="120" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="600">终端模拟器</text>
+  <text x="120" y="118" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#4DB6AC" text-anchor="middle">xterm mode 1003</text>
+
+  <line x1="200" y1="105" x2="240" y2="105" stroke="#37352F" stroke-width="1.5" marker-end="url(#am)"/>
+
+  <!-- Step 2: Parse (col, row) -->
+  <rect x="245" y="75" width="140" height="60" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="315" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">解析坐标</text>
+  <text x="315" y="118" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774" text-anchor="middle">(col: 42, row: 7)</text>
+
+  <line x1="385" y1="105" x2="425" y2="105" stroke="#37352F" stroke-width="1.5" marker-end="url(#am)"/>
+
+  <!-- Step 3: Hit test -->
+  <rect x="430" y="75" width="160" height="60" rx="8" fill="#2383E2"/>
+  <text x="510" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle" font-weight="600">hitTest()</text>
+  <text x="510" y="118" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#FFFFFF" text-anchor="middle" opacity="0.8">hit-test.ts:18</text>
+
+  <line x1="590" y1="105" x2="630" y2="105" stroke="#37352F" stroke-width="1.5" marker-end="url(#am)"/>
+
+  <!-- Step 4: DOM node -->
+  <rect x="635" y="75" width="130" height="60" rx="8" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="700" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" text-anchor="middle" font-weight="600">命中节点</text>
+  <text x="700" y="118" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774" text-anchor="middle">ink-box (Button)</text>
+
+  <!-- Hit test detail box -->
+  <rect x="40" y="165" width="360" height="120" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="220" y="190" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">hitTest 怎么找到节点？</text>
+  <text x="220" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">1. 从根节点递归遍历 DOM 树</text>
+  <text x="220" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">2. 用 nodeCache 的屏幕坐标做碰撞检测</text>
+  <text x="220" y="255" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" text-anchor="middle" font-weight="600">3. 反向遍历子节点（后绘制 = 在上面）</text>
+  <text x="220" y="272" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">和浏览器 z-index 默认行为一致</text>
+
+  <!-- Event dispatch box -->
+  <rect x="430" y="165" width="330" height="120" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="595" y="190" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">事件分发（和浏览器一样）</text>
+
+  <rect x="450" y="205" width="130" height="28" rx="4" fill="#2383E2"/>
+  <text x="515" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">dispatchClick</text>
+
+  <rect x="600" y="205" width="140" height="28" rx="4" fill="#4DB6AC"/>
+  <text x="670" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">dispatchHover</text>
+
+  <text x="515" y="255" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">向上冒泡 onClick</text>
+  <text x="515" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">+ 自动聚焦 (tabIndex)</text>
+
+  <text x="670" y="255" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">mouseenter/leave</text>
+  <text x="670" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">不冒泡（DOM 规范）</text>
+
+  <!-- Bottom insight -->
+  <rect x="80" y="310" width="640" height="90" rx="10" fill="#F7F7F5" stroke="none"/>
+  <text x="400" y="338" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">终端鼠标的完整事件模型</text>
+  <text x="400" y="362" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">onClick + onFocus/onBlur + onKeyDown + onMouseEnter/onMouseLeave</text>
+  <text x="400" y="382" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">点击聚焦、事件冒泡、capture 阶段——照搬浏览器 DOM 事件规范</text>
+
+  <defs>
+    <marker id="am" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0 0 L 8 3 L 0 6" fill="none" stroke="#37352F" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

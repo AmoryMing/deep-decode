@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="60" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">用户自救工具链 · 按代价排</text>
+  <text x="60" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#5F5F5F">付费用户用工程手段把默认拿走的东西抠回来</text>
+
+  <!-- A: UI toggle -->
+  <g transform="translate(60, 110)">
+    <rect x="0" y="0" width="680" height="90" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="90" fill="#28C840" rx="3"/>
+    <text x="24" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">A · UI 中段切换</text>
+    <text x="24" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#3F3F3F">VS Code 扩展里发消息时关右开关 · 收到回复后开左开关</text>
+    <text x="24" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888">代价: 依赖一个开关 UX 本身已坏（#49739 无视觉反馈、状态不持久）</text>
+    <text x="640" y="30" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#28C840" font-weight="600">代价低</text>
+  </g>
+
+  <!-- B: env var -->
+  <g transform="translate(60, 220)">
+    <rect x="0" y="0" width="680" height="90" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="90" fill="#FEBC2E" rx="3"/>
+    <text x="24" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">B · env var 注入 extraBody</text>
+    <text x="24" y="54" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#3F3F3F">CLAUDE_CODE_EXTRA_BODY = {"thinking":{"type":"adaptive","display":"summarized"}}</text>
+    <text x="24" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888">代价: process-wide 生效 · Haiku subagent 400 adaptive thinking not supported</text>
+    <text x="640" y="30" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FEBC2E" font-weight="600">代价中</text>
+  </g>
+
+  <!-- C: CLI flag -->
+  <g transform="translate(60, 330)">
+    <rect x="0" y="0" width="680" height="90" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="90" fill="#FEBC2E" rx="3"/>
+    <text x="24" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">C · CLI flag --thinking-display summarized</text>
+    <text x="24" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#3F3F3F">v2.1.117+ 跟 showThinkingSummaries 设置互相破坏 · 同时启用会让 thinking 块返回空</text>
+    <text x="24" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888">代价: 文档上看正交 · 实际是两个开关同走一条代码路径打架</text>
+    <text x="640" y="30" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FEBC2E" font-weight="600">代价中</text>
+  </g>
+
+  <!-- D: binary patch -->
+  <g transform="translate(60, 440)">
+    <rect x="0" y="0" width="680" height="90" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="90" fill="#FF5F57" rx="3"/>
+    <text x="24" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">D · binary patch（同长度字节替换）</text>
+    <text x="24" y="54" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#3F3F3F">isTranscriptMode:j,verbose:f  →  isTranscriptMode:1,verbose:1</text>
+    <text x="24" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888">代价: minify 变量名每版本变 · patch-claude-code 仓库用 GitHub Actions 自动重打</text>
+    <text x="640" y="30" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FF5F57" font-weight="600">代价高</text>
+  </g>
+</svg>

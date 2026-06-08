@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="bold" fill="#37352F">骨骼是数学，灵魂是文学</text>
+
+  <!-- HERO: Large coin shape, split vertically -->
+  <!-- Left half: Bones (blue, geometric) -->
+  <clipPath id="leftHalf">
+    <rect x="170" y="80" width="230" height="300"/>
+  </clipPath>
+  <clipPath id="rightHalf">
+    <rect x="400" y="80" width="230" height="300"/>
+  </clipPath>
+
+  <!-- Full circle outline -->
+  <circle cx="400" cy="230" r="150" fill="none" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- Left half fill (Bones - blue, angular) -->
+  <path d="M 400 80 A 150 150 0 0 0 400 380 Z" fill="#2383E2" opacity="0.06"/>
+  <!-- Right half fill (Soul - purple, warm) -->
+  <path d="M 400 80 A 150 150 0 0 1 400 380 Z" fill="#9B51E0" opacity="0.06"/>
+
+  <!-- Center divider -->
+  <line x1="400" y1="80" x2="400" y2="380" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- Left: Bones label and content -->
+  <text x="310" y="150" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#2383E2">骨骼</text>
+  <text x="310" y="175" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Bones</text>
+
+  <!-- Geometric pattern suggestion (angular shapes) -->
+  <rect x="275" y="195" width="70" height="3" rx="1" fill="#2383E2" opacity="0.3"/>
+  <rect x="260" y="208" width="100" height="3" rx="1" fill="#2383E2" opacity="0.2"/>
+  <rect x="270" y="221" width="80" height="3" rx="1" fill="#2383E2" opacity="0.15"/>
+
+  <text x="310" y="255" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">算法生成</text>
+  <text x="310" y="278" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">每次重算</text>
+  <text x="310" y="301" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">结果相同</text>
+
+  <text x="310" y="345" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2">确定</text>
+
+  <!-- Right: Soul label and content -->
+  <text x="490" y="150" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#9B51E0">灵魂</text>
+  <text x="490" y="175" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Soul</text>
+
+  <!-- Organic pattern suggestion (curved shapes) -->
+  <path d="M 455 200 Q 490 190 525 200" fill="none" stroke="#9B51E0" stroke-width="2" opacity="0.3"/>
+  <path d="M 460 213 Q 490 205 520 213" fill="none" stroke="#9B51E0" stroke-width="2" opacity="0.2"/>
+  <path d="M 465 226 Q 490 218 515 226" fill="none" stroke="#9B51E0" stroke-width="2" opacity="0.15"/>
+
+  <text x="490" y="255" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Claude 写入</text>
+  <text x="490" y="278" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">生成一次</text>
+  <text x="490" y="301" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">永不重来</text>
+
+  <text x="490" y="345" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#9B51E0">唯一</text>
+
+  <!-- Below coin: key details (small, detail level) -->
+  <g transform="translate(0, 400)">
+    <text x="220" y="15" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">物种 / 稀有度 / 属性 / 外观</text>
+    <text x="220" y="32" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">FNV-1a + Mulberry32 确定性生成</text>
+
+    <text x="580" y="15" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">名字 / 性格 / 角色分离</text>
+    <text x="580" y="32" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">Claude 模型一次性 LLM 调用</text>
+  </g>
+
+  <!-- Merge rule annotation -->
+  <text x="400" y="450" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">{ ...stored, ...bones }  bones 在后，覆盖篡改</text>
+
+  <!-- Bottom insight -->
+  <rect x="140" y="475" width="520" height="35" rx="8" fill="#F7F7F5"/>
+  <text x="400" y="498" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F">骨骼确保公平（不可篡改），灵魂确保唯一（不可重来）</text>
+</svg>

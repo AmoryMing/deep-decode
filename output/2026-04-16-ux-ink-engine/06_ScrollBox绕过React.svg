@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <rect width="800" height="440" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" text-anchor="middle" font-weight="bold">ScrollBox：为什么滚动要绕过 React</text>
+
+  <!-- LEFT: Normal React flow (slow) -->
+  <rect x="40" y="60" width="330" height="320" rx="12" fill="#FFF5F5" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="205" y="88" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#EB5757" text-anchor="middle" font-weight="600">常规 React 状态驱动</text>
+
+  <rect x="70" y="105" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="205" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">鼠标滚轮事件</text>
+
+  <line x1="205" y1="137" x2="205" y2="152" stroke="#EB5757" stroke-width="1" marker-end="url(#as)"/>
+
+  <rect x="70" y="155" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="205" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">setState({ scrollTop: N })</text>
+
+  <line x1="205" y1="187" x2="205" y2="202" stroke="#EB5757" stroke-width="1" marker-end="url(#as)"/>
+
+  <rect x="70" y="205" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="205" y="226" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">Reconciler diff + commit</text>
+
+  <line x1="205" y1="237" x2="205" y2="252" stroke="#EB5757" stroke-width="1" marker-end="url(#as)"/>
+
+  <rect x="70" y="255" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="205" y="276" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">Yoga 布局重算</text>
+
+  <line x1="205" y1="287" x2="205" y2="302" stroke="#EB5757" stroke-width="1" marker-end="url(#as)"/>
+
+  <rect x="70" y="305" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="205" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">渲染帧</text>
+
+  <text x="205" y="360" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" text-anchor="middle" font-weight="600">每次滚轮 = 完整 React 周期</text>
+  <text x="205" y="375" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">高频事件下严重卡顿</text>
+
+  <!-- RIGHT: ScrollBox bypass (fast) -->
+  <rect x="430" y="60" width="330" height="320" rx="12" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="595" y="88" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4DB6AC" text-anchor="middle" font-weight="600">ScrollBox 直接 DOM 修改</text>
+
+  <rect x="460" y="105" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="595" y="126" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">鼠标滚轮事件</text>
+
+  <line x1="595" y1="137" x2="595" y2="152" stroke="#4DB6AC" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <rect x="460" y="155" width="270" height="32" rx="6" fill="#4DB6AC"/>
+  <text x="595" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" font-weight="600">node.scrollTop += delta (直接改 DOM)</text>
+
+  <line x1="595" y1="187" x2="595" y2="202" stroke="#4DB6AC" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <rect x="460" y="205" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="595" y="226" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" text-anchor="middle">markDirty + scheduleRenderFrom</text>
+
+  <line x1="595" y1="237" x2="595" y2="252" stroke="#4DB6AC" stroke-width="1.5" marker-end="url(#ag)"/>
+
+  <rect x="460" y="255" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="595" y="276" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">渲染帧（跳过 Reconciler）</text>
+
+  <!-- Empty space where steps would be -->
+  <rect x="460" y="305" width="270" height="32" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="595" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">queueMicrotask 合并多次 scrollBy</text>
+
+  <text x="595" y="360" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" text-anchor="middle" font-weight="600">跳过 2 步，合并多次事件</text>
+  <text x="595" y="375" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">高频滚动保持流畅</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="400" width="560" height="28" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="419" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">ScrollBox.tsx 第 89-96 行："scrollTo/scrollBy mutate scrollTop directly on the DOM node"</text>
+
+  <defs>
+    <marker id="as" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M 0 0 L 6 2.5 L 0 5" fill="none" stroke="#EB5757" stroke-width="1"/>
+    </marker>
+    <marker id="ag" markerWidth="6" markerHeight="5" refX="6" refY="2.5" orient="auto">
+      <path d="M 0 0 L 6 2.5 L 0 5" fill="none" stroke="#4DB6AC" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

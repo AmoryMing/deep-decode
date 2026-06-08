@@ -1,0 +1,18 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">角色融合，但稀缺能力更硬</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">PM、工程、设计的边界变软；产品品味、评估能力和行动力变硬。</text>
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <circle cx="310" cy="240" r="105" fill="#EAF4FE" stroke="#2383E2" stroke-width="2" opacity="0.88"/>
+    <circle cx="420" cy="240" r="105" fill="#FFF3E0" stroke="#FFA500" stroke-width="2" opacity="0.88"/>
+    <circle cx="365" cy="155" r="96" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="2" opacity="0.92"/>
+    <text x="265" y="250" font-size="17" font-weight="700" fill="#2383E2" text-anchor="middle">工程</text>
+    <text x="470" y="250" font-size="17" font-weight="700" fill="#C46A00" text-anchor="middle">PM</text>
+    <text x="365" y="145" font-size="17" font-weight="700" fill="#37352F" text-anchor="middle">设计</text>
+    <rect x="290" y="198" width="150" height="84" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="2"/>
+    <text x="365" y="228" font-size="16" font-weight="700" fill="#37352F" text-anchor="middle">产品品味</text>
+    <text x="365" y="254" font-size="13" fill="#787774" text-anchor="middle">决定写什么</text>
+    <text x="365" y="274" font-size="13" fill="#787774" text-anchor="middle">以及何时删除</text>
+    <text x="400" y="388" font-size="15" fill="#37352F" text-anchor="middle">代码越便宜，选择越贵。</text>
+  </g>
+</svg>

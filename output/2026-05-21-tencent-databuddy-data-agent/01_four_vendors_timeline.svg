@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <rect width="800" height="460" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">四家措辞不同，动作一致</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">2026 年第二季度，云厂商集体把 Copilot 换成 Agent 原生</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Timeline horizontal -->
+  <line x1="100" y1="260" x2="740" y2="260" stroke="#37352F" stroke-width="2"/>
+  <text x="100" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">2026-04</text>
+  <text x="740" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">2026-05</text>
+
+  <!-- 4/13 Snowflake -->
+  <g transform="translate(150, 260)">
+    <circle cx="0" cy="0" r="8" fill="#4DB6AC"/>
+    <line x1="0" y1="-8" x2="0" y2="-70" stroke="#4DB6AC" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-90" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#4DB6AC" text-anchor="middle">Snowflake</text>
+    <text x="0" y="-72" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">Cortex Agents</text>
+    <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">4/13</text>
+    <text x="0" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Agent 直接生成 SQL</text>
+    <text x="0" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">不再委派给 Analyst</text>
+  </g>
+
+  <!-- 4/15 Aliyun -->
+  <g transform="translate(330, 260)">
+    <circle cx="0" cy="0" r="8" fill="#FFB020"/>
+    <line x1="0" y1="-8" x2="0" y2="-70" stroke="#FFB020" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-90" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFB020" text-anchor="middle">阿里云</text>
+    <text x="0" y="-72" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">DataWorks Data Agent</text>
+    <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">4/15</text>
+    <text x="0" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">结束公测</text>
+    <text x="0" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">转商业化</text>
+  </g>
+
+  <!-- 5/19 Tencent -->
+  <g transform="translate(510, 260)">
+    <circle cx="0" cy="0" r="12" fill="#2383E2"/>
+    <line x1="0" y1="-12" x2="0" y2="-70" stroke="#2383E2" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-90" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#2383E2" text-anchor="middle">腾讯云</text>
+    <text x="0" y="-72" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="600" fill="#37352F" text-anchor="middle">DataBuddy</text>
+    <text x="0" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#2383E2" text-anchor="middle">5/19</text>
+    <text x="0" y="42" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">WeData 控制台上线</text>
+    <text x="0" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">大数据智能体工作台</text>
+  </g>
+
+  <!-- 同周 Databricks -->
+  <g transform="translate(680, 260)">
+    <circle cx="0" cy="0" r="8" fill="#EB5757"/>
+    <line x1="0" y1="-8" x2="0" y2="-70" stroke="#EB5757" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-90" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#EB5757" text-anchor="middle">Databricks</text>
+    <text x="0" y="-72" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">AI/BI Genie</text>
+    <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">同周</text>
+    <text x="0" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Agent mode 默认</text>
+    <text x="0" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">+ Genie Code</text>
+  </g>
+
+  <!-- Bottom -->
+  <rect x="40" y="400" width="720" height="40" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F" text-anchor="middle">把"数据分析师 + 治理员 + 数仓工程师"打包成 Agent 工作台，嵌进自家数据栈卖给企业</text>
+</svg>

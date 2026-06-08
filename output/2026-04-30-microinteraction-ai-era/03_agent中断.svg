@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#1F1F1F">Esc 不是关闭，是协作信号</text>
+  <text x="40" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">一个键三种语义，靠上下文区分</text>
+
+  <!-- Esc 中央 -->
+  <rect x="340" y="110" width="120" height="60" rx="8" fill="#1F1F1F"/>
+  <text x="400" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">Esc</text>
+
+  <!-- 三层语义 -->
+  <line x1="400" y1="170" x2="200" y2="220" stroke="#787774" stroke-width="1.5"/>
+  <line x1="400" y1="170" x2="400" y2="220" stroke="#787774" stroke-width="1.5"/>
+  <line x1="400" y1="170" x2="600" y2="220" stroke="#787774" stroke-width="1.5"/>
+
+  <!-- 当前轮次 -->
+  <rect x="60" y="225" width="280" height="130" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+  <text x="200" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#2383E2" text-anchor="middle">当前轮次取消</text>
+  <text x="200" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">currentWorkAbortController.abort()</text>
+  <text x="200" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">这次走偏了，重来一次</text>
+  <text x="200" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">teammate 实例保留</text>
+
+  <!-- 选择模式 -->
+  <rect x="350" y="225" width="180" height="130" rx="6" fill="#FFFFFF" stroke="#787774"/>
+  <text x="440" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#787774" text-anchor="middle">退出选择</text>
+  <text x="440" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">不取消上层任务</text>
+  <text x="440" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">先不选了</text>
+  <text x="440" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">leader 不动</text>
+
+  <!-- 关闭 agent -->
+  <rect x="540" y="225" width="200" height="130" rx="6" fill="#FFFFFF" stroke="#FFA500"/>
+  <text x="640" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#FFA500" text-anchor="middle">关闭 agent</text>
+  <text x="640" y="278" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">abortController.abort()</text>
+  <text x="640" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">需要二次 Esc 或显式确认</text>
+  <text x="640" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">我后悔创建这个</text>
+
+  <!-- 三件事支撑信任 -->
+  <text x="40" y="395" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#1F1F1F">信任不是靠动画建立的，靠「东西归你管」建立的</text>
+
+  <rect x="40" y="410" width="240" height="55" rx="4" fill="#F5F5F4"/>
+  <text x="160" y="432" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">分层 Esc 中断</text>
+  <text x="160" y="452" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">3 种语义 · 上下文区分</text>
+
+  <rect x="290" y="410" width="220" height="55" rx="4" fill="#F5F5F4"/>
+  <text x="400" y="432" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">InterruptedByUser 占位</text>
+  <text x="400" y="452" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">写进对话历史</text>
+
+  <rect x="520" y="410" width="240" height="55" rx="4" fill="#F5F5F4"/>
+  <text x="640" y="432" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">CLAUDE.md 纯文本</text>
+  <text x="640" y="452" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">git diff · rm · 一秒看懂</text>
+</svg>

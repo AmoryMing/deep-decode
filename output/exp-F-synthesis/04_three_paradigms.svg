@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <rect width="1200" height="750" fill="#FFFFFF"/>
+
+  <text x="600" y="60" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#222222">9 天里同台亮相的三种发布范式</text>
+  <text x="600" y="90" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle" fill="#666666">三种姿势，三种押注未来 12 个月谁能定价</text>
+
+  <!-- Timeline -->
+  <line x1="100" y1="170" x2="1100" y2="170" stroke="#E0E0E0" stroke-width="2"/>
+
+  <!-- Anthropic 4-16 -->
+  <circle cx="200" cy="170" r="6" fill="#2383E2"/>
+  <text x="200" y="150" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">4-16</text>
+  <text x="200" y="200" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Opus 4.7</text>
+  <text x="200" y="218" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">+ Mythos 锁联盟</text>
+
+  <!-- 4-21 -->
+  <circle cx="400" cy="170" r="5" fill="#999999"/>
+  <text x="400" y="150" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">4-21</text>
+  <text x="400" y="200" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#999999">Anthropic Pro</text>
+  <text x="400" y="218" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#999999">订阅架构暴露</text>
+
+  <!-- OpenAI 4-22 -->
+  <circle cx="600" cy="170" r="6" fill="#FFA500"/>
+  <text x="600" y="150" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">4-22</text>
+  <text x="600" y="200" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">Codex 留 $20</text>
+
+  <!-- 4-23 -->
+  <circle cx="800" cy="170" r="5" fill="#999999"/>
+  <text x="800" y="150" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">4-23</text>
+  <text x="800" y="200" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#999999">GPT-5.5</text>
+
+  <!-- DeepSeek 4-24 -->
+  <circle cx="1000" cy="170" r="6" fill="#222222"/>
+  <text x="1000" y="150" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">4-24</text>
+  <text x="1000" y="200" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">V4 MIT 开源</text>
+
+  <!-- Three columns -->
+  <!-- Column 1: Tiered -->
+  <rect x="80" y="280" width="320" height="380" fill="#F0F4F8" rx="4"/>
+  <text x="240" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">Anthropic</text>
+  <text x="240" y="355" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#2383E2">Tiered</text>
+  <text x="240" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#666666">最强不公开</text>
+
+  <line x1="120" y1="405" x2="360" y2="405" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="110" y="440" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">Tier 0  内部</text>
+  <text x="110" y="465" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">Tier 1  Glasswing 11 家联盟（Mythos）</text>
+  <text x="110" y="490" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">Tier 2  公开商用（Opus 4.7）</text>
+  <text x="110" y="515" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">Tier 3  专业豁免</text>
+
+  <text x="240" y="580" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#222222">押："能力稀缺性"</text>
+  <text x="240" y="610" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666666">把能力作为可分级访问的资产</text>
+  <text x="240" y="640" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666666">维持高价</text>
+
+  <!-- Column 2: $20 anchor -->
+  <rect x="440" y="280" width="320" height="380" fill="#FFF8E0" rx="4"/>
+  <text x="600" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">OpenAI Codex</text>
+  <text x="600" y="355" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#FFA500">$20 锚定</text>
+  <text x="600" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#666666">守住开发者基本盘</text>
+
+  <line x1="480" y1="405" x2="720" y2="405" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="470" y="440" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">"Codex stays in Plus"</text>
+  <text x="470" y="465" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">同周 Anthropic Pro 出事</text>
+  <text x="470" y="490" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">隔 24h 公开声明</text>
+  <text x="470" y="515" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">价格档位本身成了产品</text>
+
+  <text x="600" y="580" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#222222">押："性价比兜底"</text>
+  <text x="600" y="610" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666666">绑定百万开发者的日常选择</text>
+  <text x="600" y="640" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666666">靠生态护盘</text>
+
+  <!-- Column 3: Open -->
+  <rect x="800" y="280" width="320" height="380" fill="#F5F0E8" rx="4"/>
+  <text x="960" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">DeepSeek</text>
+  <text x="960" y="355" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#222222">Open</text>
+  <text x="960" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#666666">最强直接给</text>
+
+  <line x1="840" y1="405" x2="1080" y2="405" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="830" y="440" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">1.6T 参数 · MIT 协议</text>
+  <text x="830" y="465" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">价格降到闭源 14%</text>
+  <text x="830" y="490" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">tech report 全公开</text>
+  <text x="830" y="515" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#666666">回答："你不需要订阅"</text>
+
+  <text x="960" y="580" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#222222">押："开放 + 价格"</text>
+  <text x="960" y="610" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666666">直接压缩对手的定价空间</text>
+  <text x="960" y="640" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" text-anchor="middle" fill="#666666">把整张牌桌掀了</text>
+
+  <text x="600" y="710" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">前两家在打"哪种订阅档位最划算"  ·  DeepSeek 给的回答是不需要订阅</text>
+</svg>

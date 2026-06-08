@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#F7F1E8"/>
+  <text x="400" y="50" font-size="22" font-weight="700" fill="#2A241B" text-anchor="middle">缓存经济学：命中率每涨一档 账单就降一档</text>
+  <text x="400" y="78" font-size="14" fill="#8A8472" text-anchor="middle">4.35 亿输入 token · 按 DeepSeek V4 定价（hit 0.25 / miss 2.5 元每百万）</text>
+
+  <!-- axes -->
+  <line x1="100" y1="420" x2="720" y2="420" stroke="#2A241B" stroke-width="1.5"/>
+  <line x1="100" y1="420" x2="100" y2="120" stroke="#2A241B" stroke-width="1.5"/>
+
+  <!-- y axis labels -->
+  <text x="90" y="425" font-size="12" fill="#8A8472" text-anchor="end">0</text>
+  <text x="90" y="345" font-size="12" fill="#8A8472" text-anchor="end">300 元</text>
+  <text x="90" y="265" font-size="12" fill="#8A8472" text-anchor="end">600 元</text>
+  <text x="90" y="185" font-size="12" fill="#8A8472" text-anchor="end">900 元</text>
+
+  <!-- x axis labels -->
+  <text x="155" y="445" font-size="13" fill="#2A241B" text-anchor="middle">0%</text>
+  <text x="285" y="445" font-size="13" fill="#2A241B" text-anchor="middle">60%</text>
+  <text x="430" y="445" font-size="13" fill="#2A241B" text-anchor="middle">91%</text>
+  <text x="560" y="445" font-size="13" fill="#2A241B" text-anchor="middle">96%</text>
+  <text x="670" y="445" font-size="13" fill="#2A241B" text-anchor="middle">99.82%</text>
+  <text x="410" y="475" font-size="14" fill="#8A8472" text-anchor="middle">缓存命中率</text>
+
+  <!-- bars -->
+  <!-- 0% baseline 1000元 -->
+  <rect x="135" y="153" width="40" height="267" fill="#8A8472"/>
+  <text x="155" y="143" font-size="14" font-weight="600" fill="#2A241B" text-anchor="middle">¥1000</text>
+  <text x="155" y="138" font-size="10" fill="#8A8472" text-anchor="middle">无缓存</text>
+
+  <!-- 60% Cursor通用框架  -->
+  <rect x="265" y="313" width="40" height="107" fill="#8A8472"/>
+  <text x="285" y="303" font-size="14" font-weight="600" fill="#2A241B" text-anchor="middle">¥430</text>
+  <text x="285" y="288" font-size="10" fill="#8A8472" text-anchor="middle">通用框架</text>
+
+  <!-- 91% Flash -->
+  <rect x="410" y="367" width="40" height="53" fill="#B85A3A"/>
+  <text x="430" y="357" font-size="14" font-weight="600" fill="#2A241B" text-anchor="middle">¥197</text>
+  <text x="430" y="342" font-size="10" fill="#8A8472" text-anchor="middle">V4 Flash</text>
+
+  <!-- 96% Pro -->
+  <rect x="540" y="384" width="40" height="36" fill="#B85A3A"/>
+  <text x="560" y="374" font-size="14" font-weight="600" fill="#2A241B" text-anchor="middle">¥143</text>
+  <text x="560" y="359" font-size="10" fill="#8A8472" text-anchor="middle">V4 Pro</text>
+
+  <!-- 99.82% Reasonix -->
+  <rect x="650" y="391" width="40" height="29" fill="#B85A3A"/>
+  <text x="670" y="381" font-size="14" font-weight="700" fill="#B85A3A" text-anchor="middle">¥110</text>
+  <text x="670" y="366" font-size="11" font-weight="600" fill="#B85A3A" text-anchor="middle">Reasonix</text>
+
+  <!-- judgment -->
+  <text x="400" y="115" font-size="14" fill="#2A241B" text-anchor="middle" font-style="italic">从 91% 到 99.82% 看似只多 9 个百分点，miss 比例从 9% 降到 0.18%——50 倍差距</text>
+</svg>

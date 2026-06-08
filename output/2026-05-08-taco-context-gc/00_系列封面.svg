@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="800" height="500" fill="none" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="60" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="34" font-weight="700" fill="#1A1A1A">Agent 学会了倒垃圾</text>
+  <text x="60" y="124" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="400" fill="#555">TACO：上下文从被动撑爆到主动 GC</text>
+
+  <line x1="60" y1="148" x2="200" y2="148" stroke="#2383E2" stroke-width="3"/>
+
+  <!-- Left: dirty context window -->
+  <text x="60" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#888">原始上下文</text>
+  <rect x="60" y="215" width="280" height="220" fill="#FAFAFA" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="74" y="238" font-family="Menlo, monospace" font-size="11" fill="#999">$ apt-get install ...</text>
+  <text x="74" y="254" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-a (1.2.3) ...</text>
+  <text x="74" y="268" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-b (2.4.0) ...</text>
+  <text x="74" y="282" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-c (0.9.1) ...</text>
+  <text x="74" y="296" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-d (3.1.4) ...</text>
+  <text x="74" y="310" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-e (1.0.0) ...</text>
+  <text x="74" y="324" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-f (5.6.7) ...</text>
+  <text x="74" y="338" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-g (8.8.8) ...</text>
+  <text x="74" y="352" font-family="Menlo, monospace" font-size="11" fill="#BBB">Unpacking lib-h ...</text>
+  <text x="74" y="366" font-family="Menlo, monospace" font-size="11" fill="#BBB">[hex dump 5169 chars]</text>
+  <text x="74" y="380" font-family="Menlo, monospace" font-size="11" fill="#BBB">[git progress 200 lines]</text>
+  <text x="74" y="394" font-family="Menlo, monospace" font-size="11" fill="#BBB">...</text>
+  <text x="74" y="420" font-family="PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#D9534F">24.6%–44.1% 是低价值冗余</text>
+
+  <!-- Arrow -->
+  <text x="380" y="328" font-family="PingFang SC, sans-serif" font-size="32" fill="#2383E2">→</text>
+  <text x="368" y="358" font-family="PingFang SC, sans-serif" font-size="13" fill="#2383E2">TACO GC</text>
+
+  <!-- Right: cleaned -->
+  <text x="450" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#888">压缩后上下文</text>
+  <rect x="450" y="215" width="280" height="220" fill="#F0F7FF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="464" y="238" font-family="Menlo, monospace" font-size="11" fill="#1A1A1A">$ apt-get install ...</text>
+  <text x="464" y="256" font-family="Menlo, monospace" font-size="11" fill="#1A1A1A">[228 packages installed OK]</text>
+  <text x="464" y="280" font-family="Menlo, monospace" font-size="11" fill="#1A1A1A">$ objdump -d ./bin</text>
+  <text x="464" y="298" font-family="Menlo, monospace" font-size="11" fill="#1A1A1A">call 0x401230 &lt;auth_check&gt;</text>
+  <text x="464" y="312" font-family="Menlo, monospace" font-size="11" fill="#1A1A1A">call 0x401450 &lt;decrypt&gt;</text>
+  <text x="464" y="336" font-family="Menlo, monospace" font-size="11" fill="#1A1A1A">$ git clone ... done.</text>
+  <text x="464" y="380" font-family="PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#2383E2">Token -10%/step</text>
+  <text x="464" y="402" font-family="PingFang SC, sans-serif" font-size="13" font-weight="600" fill="#2383E2">准确率 +1–4 个点</text>
+
+  <!-- Footer -->
+  <text x="60" y="475" font-family="PingFang SC, sans-serif" font-size="12" fill="#888">arXiv 2604.19572 · TerminalBench 1.0/2.0 · 6 种 200B+ 模型</text>
+</svg>

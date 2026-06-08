@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <text x="600" y="50" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">四列模型 × 七项指标：V4-Pro 拿下四项第一</text>
+  <text x="600" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">数据：Buildfastwithai 独立横评 + DeepSeek tech report + HuggingFace 模型卡（2026-04-24）</text>
+
+  <!-- 表头 -->
+  <g>
+    <rect x="80" y="120" width="320" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="240" y="150" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">Benchmark</text>
+
+    <rect x="400" y="120" width="200" height="50" fill="#FFF3E0" stroke="#FFA500" stroke-width="2"/>
+    <text x="500" y="148" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#37352F">DeepSeek V4-Pro</text>
+    <text x="500" y="164" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFA500">开源 MIT</text>
+
+    <rect x="600" y="120" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="690" y="150" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">Claude Opus 4.6</text>
+
+    <rect x="780" y="120" width="160" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="860" y="150" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">GPT-5.4</text>
+
+    <rect x="940" y="120" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="1030" y="150" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">Gemini-3.1-Pro</text>
+  </g>
+
+  <!-- 数据行 1: SWE-bench Verified -->
+  <g>
+    <rect x="80" y="170" width="320" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="100" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">SWE-bench Verified</text>
+    <text x="100" y="216" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">代码工程</text>
+
+    <rect x="400" y="170" width="200" height="50" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="500" y="203" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">80.6%</text>
+
+    <rect x="600" y="170" width="180" height="50" fill="#E8F4FD" stroke="#2383E2"/>
+    <text x="690" y="203" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#2383E2">80.8%</text>
+    <text x="755" y="200" font-family="PingFang SC, sans-serif" font-size="10" fill="#787774">第一</text>
+
+    <rect x="780" y="170" width="160" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="860" y="203" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+
+    <rect x="940" y="170" width="180" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="1030" y="203" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+  </g>
+
+  <!-- 数据行 2: LiveCodeBench -->
+  <g>
+    <rect x="80" y="220" width="320" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="100" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">LiveCodeBench</text>
+    <text x="100" y="266" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">实时代码</text>
+
+    <rect x="400" y="220" width="200" height="50" fill="#FFE6CC" stroke="#FFA500" stroke-width="2"/>
+    <text x="500" y="253" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFA500">93.5%</text>
+    <text x="565" y="250" font-family="PingFang SC, sans-serif" font-size="10" fill="#FFA500">第一</text>
+
+    <rect x="600" y="220" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="690" y="253" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">88.8%</text>
+
+    <rect x="780" y="220" width="160" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="860" y="253" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">91.7%</text>
+
+    <rect x="940" y="220" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="1030" y="253" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+  </g>
+
+  <!-- 数据行 3: Codeforces -->
+  <g>
+    <rect x="80" y="270" width="320" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="100" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Codeforces Rating</text>
+    <text x="100" y="316" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">算法竞赛</text>
+
+    <rect x="400" y="270" width="200" height="50" fill="#FFE6CC" stroke="#FFA500" stroke-width="2"/>
+    <text x="500" y="303" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFA500">3206</text>
+    <text x="565" y="300" font-family="PingFang SC, sans-serif" font-size="10" fill="#FFA500">第一</text>
+
+    <rect x="600" y="270" width="180" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="690" y="303" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+
+    <rect x="780" y="270" width="160" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="860" y="303" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">3168</text>
+
+    <rect x="940" y="270" width="180" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="1030" y="303" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">3052</text>
+  </g>
+
+  <!-- 数据行 4: Terminal-Bench -->
+  <g>
+    <rect x="80" y="320" width="320" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="100" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Terminal-Bench 2.0</text>
+    <text x="100" y="366" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">终端任务</text>
+
+    <rect x="400" y="320" width="200" height="50" fill="#FFE6CC" stroke="#FFA500" stroke-width="2"/>
+    <text x="500" y="353" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#FFA500">67.9%</text>
+    <text x="565" y="350" font-family="PingFang SC, sans-serif" font-size="10" fill="#FFA500">第一</text>
+
+    <rect x="600" y="320" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="690" y="353" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">65.4%</text>
+
+    <rect x="780" y="320" width="160" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="860" y="353" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+
+    <rect x="940" y="320" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="1030" y="353" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+  </g>
+
+  <!-- 数据行 5: HMMT Math -->
+  <g>
+    <rect x="80" y="370" width="320" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="100" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">HMMT 2026 Math</text>
+    <text x="100" y="416" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">高难度数学</text>
+
+    <rect x="400" y="370" width="200" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="500" y="403" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">95.2%</text>
+
+    <rect x="600" y="370" width="180" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="690" y="403" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">96.2%</text>
+
+    <rect x="780" y="370" width="160" height="50" fill="#E8F4FD" stroke="#2383E2"/>
+    <text x="860" y="403" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#2383E2">97.7%</text>
+    <text x="920" y="400" font-family="PingFang SC, sans-serif" font-size="10" fill="#2383E2">第一</text>
+
+    <rect x="940" y="370" width="180" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="1030" y="403" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+  </g>
+
+  <!-- 数据行 6: HLE -->
+  <g>
+    <rect x="80" y="420" width="320" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="100" y="450" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">HLE</text>
+    <text x="100" y="466" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">人类最后考试</text>
+
+    <rect x="400" y="420" width="200" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="500" y="453" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">37.7%</text>
+
+    <rect x="600" y="420" width="180" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="690" y="453" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">40.0%</text>
+
+    <rect x="780" y="420" width="160" height="50" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="860" y="453" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">39.8%</text>
+
+    <rect x="940" y="420" width="180" height="50" fill="#E8F4FD" stroke="#2383E2"/>
+    <text x="1030" y="453" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#2383E2">44.4%</text>
+    <text x="1095" y="450" font-family="PingFang SC, sans-serif" font-size="10" fill="#2383E2">第一</text>
+  </g>
+
+  <!-- 数据行 7: SimpleQA -->
+  <g>
+    <rect x="80" y="470" width="320" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="100" y="500" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">SimpleQA-Verified</text>
+    <text x="100" y="516" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">事实知识</text>
+
+    <rect x="400" y="470" width="200" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="500" y="503" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#37352F">57.9%</text>
+
+    <rect x="600" y="470" width="180" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="690" y="503" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+
+    <rect x="780" y="470" width="160" height="50" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="860" y="503" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#A0A0A0">—</text>
+
+    <rect x="940" y="470" width="180" height="50" fill="#E8F4FD" stroke="#2383E2"/>
+    <text x="1030" y="503" text-anchor="middle" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="#2383E2">75.6%</text>
+    <text x="1095" y="500" font-family="PingFang SC, sans-serif" font-size="10" fill="#2383E2">第一</text>
+  </g>
+
+  <!-- 底部小结 -->
+  <g>
+    <rect x="80" y="555" width="500" height="100" rx="8" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="100" y="585" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#37352F">V4-Pro 强项（拿下 4 项第一）</text>
+    <text x="100" y="608" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">代码：LiveCodeBench / Codeforces / Terminal-Bench / SWE-bench 几乎咬合</text>
+    <text x="100" y="630" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">SWE-bench 与 Opus 4.6 仅差 0.2 个百分点（统计噪声）</text>
+    <text x="100" y="650" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFA500" font-weight="600">这是开源同代咬合的第一道清晰裂痕</text>
+
+    <rect x="620" y="555" width="500" height="100" rx="8" fill="#E8F4FD" stroke="#2383E2"/>
+    <text x="640" y="585" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#37352F">V4-Pro 弱项（偏科状元）</text>
+    <text x="640" y="608" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">事实知识：SimpleQA 比 Gemini 低 17.7 个百分点</text>
+    <text x="640" y="630" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">通识：HLE 比 Gemini 低 6.7 个百分点</text>
+    <text x="640" y="650" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" font-weight="600">官方话术"trails only Gemini-3.1-Pro"包过去了</text>
+  </g>
+</svg>

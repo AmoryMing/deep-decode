@@ -1,0 +1,43 @@
+<svg width="800" height="480" viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">杠杆 vs 测试成本：一把剪刀</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">100x 是上限不是常态。每加一层抽象，测试笛卡尔积同步膨胀。</text>
+
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="60" y="130" width="320" height="280" rx="12" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="220" y="166" font-size="16" font-weight="700" fill="#2383E2" text-anchor="middle">Shiv 的杠杆公式</text>
+
+    <rect x="100" y="194" width="240" height="42" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="120" y="220" font-size="13" fill="#787774">原子：</text>
+    <text x="320" y="220" font-size="14" font-weight="700" fill="#37352F" text-anchor="end">500 件</text>
+
+    <rect x="100" y="246" width="240" height="42" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="120" y="272" font-size="13" fill="#787774">分子：</text>
+    <text x="320" y="272" font-size="14" font-weight="700" fill="#37352F" text-anchor="end">50 件</text>
+
+    <rect x="100" y="298" width="240" height="42" rx="6" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="120" y="324" font-size="13" fill="#787774">化合物（人驾驶）：</text>
+    <text x="320" y="324" font-size="14" font-weight="700" fill="#37352F" text-anchor="end">5 件</text>
+
+    <text x="220" y="376" font-size="13" fill="#37352F" text-anchor="middle">同样脑 RAM，理论 100× 杠杆</text>
+
+    <rect x="420" y="130" width="320" height="280" rx="12" fill="#FFFFFF" stroke="#FFA500" stroke-width="2"/>
+    <text x="580" y="166" font-size="16" font-weight="700" fill="#FFA500" text-anchor="middle">没说出口的成本</text>
+
+    <rect x="460" y="194" width="240" height="42" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="480" y="220" font-size="13" fill="#787774">原子 evals：</text>
+    <text x="680" y="220" font-size="14" font-weight="700" fill="#37352F" text-anchor="end">50/atom</text>
+
+    <rect x="460" y="246" width="240" height="42" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="480" y="272" font-size="13" fill="#787774">分子 evals：</text>
+    <text x="680" y="272" font-size="14" font-weight="700" fill="#37352F" text-anchor="end">原子笛卡尔积</text>
+
+    <rect x="460" y="298" width="240" height="42" rx="6" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="480" y="324" font-size="13" fill="#787774">化合物 evals：</text>
+    <text x="680" y="324" font-size="14" font-weight="700" fill="#37352F" text-anchor="end">分子笛卡尔积</text>
+
+    <text x="580" y="376" font-size="13" fill="#37352F" text-anchor="middle">实测 3-5× 而非 10×，杠杆 ≈ 45×</text>
+  </g>
+
+  <text x="400" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">autoresearch 是 Shiv 给的解，但它自己就是 compound，递归未解。</text>
+</svg>

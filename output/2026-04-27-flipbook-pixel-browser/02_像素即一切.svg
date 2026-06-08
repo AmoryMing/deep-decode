@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="400" y="38" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">像素即一切的代价 —— 砍掉 HTML 后丢失的四件事</text>
+
+  <!-- traditional pipeline -->
+  <text x="60" y="78" font-size="14" font-weight="600" fill="#787774">传统浏览器管线</text>
+  <rect x="60" y="92" width="120" height="40" fill="#F7F7F5" stroke="#E3E2E0" rx="4"/>
+  <text x="120" y="116" font-size="13" fill="#37352F" text-anchor="middle">HTML/CSS</text>
+  <text x="190" y="116" font-size="14" fill="#787774">→</text>
+  <rect x="210" y="92" width="120" height="40" fill="#F7F7F5" stroke="#E3E2E0" rx="4"/>
+  <text x="270" y="116" font-size="13" fill="#37352F" text-anchor="middle">浏览器引擎</text>
+  <text x="340" y="116" font-size="14" fill="#787774">→</text>
+  <rect x="360" y="92" width="120" height="40" fill="#F7F7F5" stroke="#E3E2E0" rx="4"/>
+  <text x="420" y="116" font-size="13" fill="#37352F" text-anchor="middle">DOM + 像素</text>
+  <text x="490" y="116" font-size="14" fill="#787774">→</text>
+  <rect x="510" y="92" width="120" height="40" fill="#F7F7F5" stroke="#E3E2E0" rx="4"/>
+  <text x="570" y="116" font-size="13" fill="#37352F" text-anchor="middle">屏幕</text>
+
+  <text x="650" y="116" font-size="11" fill="#787774">文字、链接、复制都在 DOM 里</text>
+
+  <!-- flipbook pipeline -->
+  <text x="60" y="172" font-size="14" font-weight="600" fill="#2383E2">flipbook 管线</text>
+  <rect x="60" y="186" width="120" height="40" fill="#EBF5FF" stroke="#2383E2" rx="4"/>
+  <text x="120" y="210" font-size="13" fill="#1A4D8C" text-anchor="middle">点击坐标 + prompt</text>
+  <text x="190" y="210" font-size="14" fill="#787774">→</text>
+  <rect x="210" y="186" width="270" height="40" fill="#EBF5FF" stroke="#2383E2" rx="4"/>
+  <text x="345" y="210" font-size="13" fill="#1A4D8C" text-anchor="middle">视频扩散模型（LTX DiT）</text>
+  <text x="490" y="210" font-size="14" fill="#787774">→</text>
+  <rect x="510" y="186" width="120" height="40" fill="#EBF5FF" stroke="#2383E2" rx="4"/>
+  <text x="570" y="210" font-size="13" fill="#1A4D8C" text-anchor="middle">屏幕（canvas）</text>
+
+  <text x="650" y="210" font-size="11" fill="#2383E2">中间没有 DOM</text>
+
+  <!-- 4 lost things -->
+  <text x="400" y="260" font-size="15" font-weight="600" fill="#1A1A1A" text-anchor="middle">由此丢失的四件事</text>
+
+  <rect x="40" y="278" width="180" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="130" y="306" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">没有可选文字</text>
+  <text x="55" y="334" font-size="12" fill="#37352F">• Cmd+C 失效</text>
+  <text x="55" y="356" font-size="12" fill="#37352F">• 划词翻译失效</text>
+  <text x="55" y="378" font-size="12" fill="#37352F">• 第三方扩展全废</text>
+  <text x="55" y="408" font-size="11" fill="#787774">字是模型画的像素</text>
+  <text x="55" y="428" font-size="11" fill="#787774">不是 text 节点</text>
+
+  <rect x="230" y="278" width="180" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="320" y="306" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">没有 SEO</text>
+  <text x="245" y="334" font-size="12" fill="#37352F">• 爬虫看到空 canvas</text>
+  <text x="245" y="356" font-size="12" fill="#37352F">• 内容无法被搜索</text>
+  <text x="245" y="378" font-size="12" fill="#37352F">• 链接不指向具体帧</text>
+  <text x="245" y="408" font-size="11" fill="#787774">同事下次打开生成</text>
+  <text x="245" y="428" font-size="11" fill="#787774">的可能不是同一帧</text>
+
+  <rect x="420" y="278" width="180" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="510" y="306" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">没有可访问性</text>
+  <text x="435" y="334" font-size="12" fill="#37352F">• 屏幕阅读器空白</text>
+  <text x="435" y="356" font-size="12" fill="#37352F">• 视障用户看不到</text>
+  <text x="435" y="378" font-size="12" fill="#37352F">• WCAG 无效</text>
+  <text x="435" y="408" font-size="11" fill="#787774">不是没适配</text>
+  <text x="435" y="428" font-size="11" fill="#787774">是适配根本不可能</text>
+
+  <rect x="610" y="278" width="180" height="220" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="700" y="306" font-size="14" font-weight="600" fill="#2383E2" text-anchor="middle">幻觉极隐蔽</text>
+  <text x="625" y="334" font-size="12" fill="#37352F">• 视觉自信掩盖错误</text>
+  <text x="625" y="356" font-size="12" fill="#37352F">• 没法复制去 fact-check</text>
+  <text x="625" y="378" font-size="12" fill="#37352F">• 用户没免疫力</text>
+  <text x="625" y="408" font-size="11" fill="#2383E2">Roon 用户 Dadoo:</text>
+  <text x="625" y="428" font-size="11" fill="#2383E2">"挖得越深，幻觉越大"</text>
+
+  <text x="400" y="528" font-size="12" fill="#787774" text-anchor="middle">这四件事不是 bug 不是没做 —— 是"用扩散模型替代渲染层"这个选择的必然代价</text>
+</svg>

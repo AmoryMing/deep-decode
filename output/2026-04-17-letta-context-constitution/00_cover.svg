@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" font-family="PingFang SC, Inter, -apple-system, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="40" y="40" width="720" height="420" fill="none" stroke="#E4E2DF" stroke-width="1" rx="8"/>
+
+  <!-- 左上小标 -->
+  <text x="60" y="80" font-size="13" fill="#6B6864" letter-spacing="2">AI 笔记 0417 / DEEP DECODE</text>
+
+  <!-- 主标题 -->
+  <text x="60" y="180" font-size="52" font-weight="700" fill="#37352F">给 AI 写一份宪法</text>
+  <text x="60" y="232" font-size="22" fill="#6B6864">Letta Context Constitution 深度拆解</text>
+
+  <!-- 分隔 -->
+  <line x1="60" y1="280" x2="200" y2="280" stroke="#2383E2" stroke-width="3"/>
+
+  <!-- 三件事 -->
+  <text x="60" y="320" font-size="15" fill="#37352F">第二人称写给 AI 的元宪法</text>
+  <text x="60" y="348" font-size="15" fill="#37352F">身份 from experience，而不是 from weights</text>
+  <text x="60" y="376" font-size="15" fill="#37352F">首次授权 agent 自主重写自己的 system prompt</text>
+
+  <!-- 右下信源 -->
+  <text x="60" y="432" font-size="12" fill="#6B6864">letta.com/blog/context-constitution  ·  2026-04-02  ·  CC0 License</text>
+
+  <!-- 装饰：document + agent 图标 -->
+  <g transform="translate(580, 120)">
+    <rect x="0" y="0" width="120" height="160" fill="#F7F7F5" stroke="#E4E2DF" stroke-width="1.5" rx="4"/>
+    <line x1="15" y1="30" x2="105" y2="30" stroke="#6B6864" stroke-width="1.5"/>
+    <line x1="15" y1="50" x2="95" y2="50" stroke="#6B6864" stroke-width="1.5"/>
+    <line x1="15" y1="70" x2="100" y2="70" stroke="#6B6864" stroke-width="1.5"/>
+    <line x1="15" y1="90" x2="80" y2="90" stroke="#6B6864" stroke-width="1.5"/>
+    <line x1="15" y1="110" x2="95" y2="110" stroke="#6B6864" stroke-width="1.5"/>
+    <text x="60" y="145" font-size="10" fill="#2383E2" text-anchor="middle" font-weight="600">CONSTITUTION</text>
+  </g>
+  <g transform="translate(620, 300)">
+    <circle cx="40" cy="40" r="36" fill="none" stroke="#2383E2" stroke-width="2.5"/>
+    <circle cx="28" cy="32" r="3.5" fill="#2383E2"/>
+    <circle cx="52" cy="32" r="3.5" fill="#2383E2"/>
+    <path d="M 26 50 Q 40 58 54 50" stroke="#2383E2" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <text x="40" y="100" font-size="11" fill="#6B6864" text-anchor="middle">Letta agent</text>
+  </g>
+</svg>

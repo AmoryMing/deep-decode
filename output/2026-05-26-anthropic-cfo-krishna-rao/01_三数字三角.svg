@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#F7F1E8"/>
+
+  <!-- title -->
+  <text x="800" y="100" font-family="Cormorant Garamond, Songti SC, serif" font-size="48" font-weight="700" fill="#2A241B" text-anchor="middle">三数字必须一起出现，量级才显形</text>
+  <text x="800" y="148" font-family="Cormorant Garamond, Songti SC, serif" font-size="22" font-style="italic" fill="#5C5345" text-anchor="middle">单独看每个都不震撼。叠起来，是公司未来五年现金流的预先押注。</text>
+  <line x1="700" y1="180" x2="900" y2="180" stroke="#B85A3A" stroke-width="2"/>
+
+  <!-- triangle -->
+  <g transform="translate(800, 580)">
+    <!-- 三角连线 -->
+    <line x1="0" y1="-240" x2="-340" y2="180" stroke="#B85A3A" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.7"/>
+    <line x1="0" y1="-240" x2="340" y2="180" stroke="#B85A3A" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.7"/>
+    <line x1="-340" y1="180" x2="340" y2="180" stroke="#B85A3A" stroke-width="2.5" stroke-dasharray="6 6" opacity="0.7"/>
+
+    <!-- top: compute -->
+    <circle cx="0" cy="-240" r="180" fill="#B85A3A"/>
+    <text x="0" y="-280" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#F7F1E8" letter-spacing="4" text-anchor="middle">COMPUTE COMMITMENT</text>
+    <text x="0" y="-220" font-family="Cormorant Garamond, serif" font-size="78" font-weight="700" fill="#F7F1E8" text-anchor="middle">$100B+</text>
+    <text x="0" y="-180" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">三到五年算力承诺</text>
+
+    <!-- bottom left: ARR -->
+    <circle cx="-340" cy="180" r="170" fill="#2A241B"/>
+    <text x="-340" y="140" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#F7F1E8" letter-spacing="4" text-anchor="middle">ARR</text>
+    <text x="-340" y="200" font-family="Cormorant Garamond, serif" font-size="78" font-weight="700" fill="#F7F1E8" text-anchor="middle">$30B</text>
+    <text x="-340" y="240" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">年化收入</text>
+
+    <!-- bottom right: valuation -->
+    <circle cx="340" cy="180" r="170" fill="#5C5345"/>
+    <text x="340" y="140" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#F7F1E8" letter-spacing="4" text-anchor="middle">VALUATION</text>
+    <text x="340" y="200" font-family="Cormorant Garamond, serif" font-size="78" font-weight="700" fill="#F7F1E8" text-anchor="middle">$90B</text>
+    <text x="340" y="240" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">估值（接近 IPO）</text>
+  </g>
+
+  <!-- ratios -->
+  <g transform="translate(120, 880)">
+    <text x="0" y="0" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#2A241B">算力承诺 ≈ 当年 ARR × 3.3</text>
+    <text x="0" y="40" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#2A241B">算力承诺 ≈ 公司估值 × 1.1</text>
+  </g>
+  <g transform="translate(1480, 880)">
+    <text x="0" y="0" font-family="SF Mono, Menlo, monospace" font-size="16" fill="#8A8472" letter-spacing="3" text-anchor="end">FIG. 01 · TRIPLE-SCALE NEXUS</text>
+  </g>
+</svg>

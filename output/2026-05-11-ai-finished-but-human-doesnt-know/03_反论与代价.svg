@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="60" y="48" font-size="22" font-weight="700" fill="#37352F">三条反论 与 一群被划到外面的人</text>
+  <text x="60" y="74" font-size="13" fill="#787774">Anthropic 站得住 ≠ janbam 站不住</text>
+
+  <!-- Three columns: arguments -->
+  <g>
+    <rect x="60" y="110" width="220" height="200" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="80" y="138" font-size="14" font-weight="700" fill="#37352F">数据驱动</text>
+    <text x="80" y="166" font-size="12" fill="#787774">99% 用户不开 ctrl+o</text>
+    <text x="80" y="186" font-size="12" fill="#787774">对多数省成本</text>
+    <text x="80" y="206" font-size="12" fill="#787774">代价：1% 多按两次键</text>
+    <text x="80" y="246" font-size="12" fill="#9B9A97">"interactive users</text>
+    <text x="80" y="264" font-size="12" fill="#9B9A97">rarely open ctrl+o"</text>
+    <text x="80" y="290" font-size="11" fill="#2383E2" font-family="Menlo, monospace">betas.ts:265</text>
+  </g>
+
+  <g>
+    <rect x="290" y="110" width="220" height="200" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="310" y="138" font-size="14" font-weight="700" fill="#37352F">opt-in 已存在</text>
+    <text x="310" y="166" font-size="12" fill="#787774">SDK / -p print 默认带</text>
+    <text x="310" y="186" font-size="12" fill="#787774">改一行 settings.json</text>
+    <text x="310" y="206" font-size="12" fill="#787774">interleaved-thinking 也行</text>
+    <text x="310" y="246" font-size="12" fill="#9B9A97">"showThinkingSummaries"</text>
+    <text x="310" y="264" font-size="12" fill="#9B9A97">true</text>
+    <text x="310" y="290" font-size="11" fill="#2383E2" font-family="Menlo, monospace">settings/types.ts:956</text>
+  </g>
+
+  <g>
+    <rect x="520" y="110" width="220" height="200" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="540" y="138" font-size="14" font-weight="700" fill="#37352F">该用 SDK</text>
+    <text x="540" y="166" font-size="12" fill="#787774">严肃 steering 应写代码</text>
+    <text x="540" y="186" font-size="12" fill="#787774">不是按 ctrl+o 滚屏</text>
+    <text x="540" y="206" font-size="12" fill="#787774">交互式 ≈ 表演式劳动</text>
+    <text x="540" y="246" font-size="12" fill="#9B9A97">"callers may iterate</text>
+    <text x="540" y="264" font-size="12" fill="#9B9A97">over thinking content"</text>
+    <text x="540" y="290" font-size="11" fill="#2383E2" font-family="Menlo, monospace">betas.ts:267</text>
+  </g>
+
+  <!-- Bottom: counter -->
+  <rect x="60" y="350" width="680" height="100" fill="#F7F6F3" stroke="#E3E2E0"/>
+  <text x="80" y="380" font-size="14" font-weight="700" fill="#37352F">但 janbam 这群人</text>
+  <text x="80" y="406" font-size="13" fill="#37352F">"steering and improving Claude's thinking" 是工作本身，不是事后考古</text>
+  <text x="80" y="430" font-size="13" fill="#787774">默认隐身 = 把他们的反馈循环从一秒钟拉长到三步按键</text>
+</svg>

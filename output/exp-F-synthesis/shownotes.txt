@@ -1,0 +1,23 @@
+本期一句话：闭源 AI 的溢价，正在进入收敛期。
+
+DeepSeek V4-Pro 上周开源放出，1.6 万亿参数 MoE，编程能力差 Claude 4.5 Opus 0.2 个百分点，价格只要七分之一。这意味着什么？
+
+【本期聊到】
+- 0.2 个百分点的真实含义：基准里的一格，工作流里可能是好几次返工
+- 21.52 美元 vs 154.5 美元：每百万 token 七倍价差怎么折到团队成本上
+- DeepSeek 把 1.6 万亿参数的训练手册直接白送——这是范式问题，不是开源问题
+- 9 天里出现的三种发布姿势：Codex / Anthropic Compute / DeepSeek
+- 续 Claude Max 的钱到底买的是什么
+- 护城河必须从能力换到工程化和数据上
+
+【对应文字版】
+完整 8 分钟阅读版，含 6 张信息图和原文引用：
+（公众号：AI 文科生 · 标题"0.2 个百分点和 7.2 倍价差"）
+
+【本期信源】
+- DeepSeek V4-Pro 官方发布：api-docs.deepseek.com/news/news260424
+- Hugging Face 模型卡：huggingface.co/deepseek-ai/DeepSeek-V4-Pro
+- 第三方评测：buildfastwithai.com（独立基准对比）
+
+主播：AI 文科生
+栏目：AI 大厂深度拆解 · 一篇文章一期播客

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="780" viewBox="0 0 1200 780">
+  <rect width="1200" height="780" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <text x="600" y="50" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">5 类身份 · 各自的落地动作</text>
+  <text x="600" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">同一份 V4 发布稿，5 张不同的决策表</text>
+
+  <!-- 中心 V4 节点 -->
+  <g>
+    <circle cx="600" cy="380" r="65" fill="#FFA500"/>
+    <text x="600" y="370" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#FFFFFF">DeepSeek V4</text>
+    <text x="600" y="395" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF">2026-04-24</text>
+  </g>
+
+  <!-- 5 个角色卡片 - 围绕中心 -->
+
+  <!-- 1. 应用开发者（左上） -->
+  <g>
+    <line x1="535" y1="380" x2="280" y2="200" stroke="#2383E2" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="60" y="130" width="280" height="180" rx="12" fill="#E8F4FD" stroke="#2383E2" stroke-width="2"/>
+    <text x="80" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#2383E2">① AI 应用开发者</text>
+    <text x="80" y="190" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">本周动作</text>
+    <text x="80" y="210" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">路由层加 V4-Pro 做 A/B 测试</text>
+    <text x="80" y="228" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">3-5 个核心 agent 任务横评</text>
+    <text x="80" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">切换条件</text>
+    <text x="80" y="272" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">通过率 ≥ Opus 4.6 × 95%</text>
+    <text x="80" y="296" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFA500" font-weight="700">→ 70% 成本节约直接落表</text>
+  </g>
+
+  <!-- 2. 创业者/CTO（右上） -->
+  <g>
+    <line x1="665" y1="380" x2="920" y2="200" stroke="#FFA500" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="860" y="130" width="280" height="180" rx="12" fill="#FFF3E0" stroke="#FFA500" stroke-width="2"/>
+    <text x="880" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFA500">② AI 创业者 / CTO</text>
+    <text x="880" y="190" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">成本模型重写</text>
+    <text x="880" y="210" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">模型成本占比 30-40% → 5-10%</text>
+    <text x="880" y="234" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">架构原则</text>
+    <text x="880" y="254" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">开源 + 闭源各两家分散</text>
+    <text x="880" y="272" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">避免单家定价权锁死</text>
+    <text x="880" y="296" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFA500" font-weight="700">→ SLA + 定价层重新设计</text>
+  </g>
+
+  <!-- 3. 企业 IT 决策者（左下） -->
+  <g>
+    <line x1="535" y1="380" x2="280" y2="560" stroke="#4DB6AC" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="60" y="490" width="280" height="180" rx="12" fill="#E8F8F5" stroke="#4DB6AC" stroke-width="2"/>
+    <text x="80" y="520" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#4DB6AC">③ 企业 IT 决策者</text>
+    <text x="80" y="550" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">合规通路打开</text>
+    <text x="80" y="570" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">本地部署 + MIT + 同等性能</text>
+    <text x="80" y="594" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">硬件门槛降低</text>
+    <text x="80" y="614" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">V4-Flash 13B active</text>
+    <text x="80" y="632" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">4×H100 80GB 可推理</text>
+    <text x="80" y="656" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" font-weight="700">→ 纳入供应商评估表</text>
+  </g>
+
+  <!-- 4. 中国 AI 从业者（右下） -->
+  <g>
+    <line x1="665" y1="380" x2="920" y2="560" stroke="#9B51E0" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="860" y="490" width="280" height="180" rx="12" fill="#F4ECFB" stroke="#9B51E0" stroke-width="2"/>
+    <text x="880" y="520" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#9B51E0">④ 中国 AI 从业者</text>
+    <text x="880" y="550" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">双轮输出</text>
+    <text x="880" y="570" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Moonshot PrfaaS（基础设施）</text>
+    <text x="880" y="588" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">+ DeepSeek V4（模型）</text>
+    <text x="880" y="612" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" font-weight="600">叙事换轨</text>
+    <text x="880" y="632" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">"中国 AI 在追赶" 过时</text>
+    <text x="880" y="656" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0" font-weight="700">→ 12 个月路线图记入</text>
+  </g>
+
+  <!-- 5. 投资人（正下方） -->
+  <g>
+    <line x1="600" y1="445" x2="600" y2="700" stroke="#EB5757" stroke-width="2" stroke-dasharray="6,4"/>
+    <rect x="430" y="700" width="340" height="60" rx="12" fill="#FFE8E8" stroke="#EB5757" stroke-width="2"/>
+    <text x="450" y="725" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#EB5757">⑤ 投资人</text>
+    <text x="450" y="747" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">估值锚换：从"模型稀缺性"→"政策护城河 + 应用生态"</text>
+  </g>
+
+  <!-- 角色之间连线（V4 同时撬动 5 个领域） -->
+</svg>

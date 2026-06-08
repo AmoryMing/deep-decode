@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="42" y="42" width="716" height="416" rx="18" fill="#F7FAFC" stroke="#E3E2E0" stroke-width="2"/>
+  <text x="70" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="36" font-weight="700" fill="#111827">状态拟人化</text>
+  <text x="70" y="150" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#4B5563">Codex 为什么需要一只桌宠</text>
+  <rect x="70" y="195" width="380" height="170" rx="14" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="96" y="238" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#2383E2">过去的软件状态</text>
+  <text x="96" y="280" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#374151">spinner / badge / notification</text>
+  <text x="96" y="320" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#6B7280">用户要么盯窗口，要么被打断</text>
+  <rect x="505" y="175" width="158" height="210" rx="22" fill="#FFFFFF" stroke="#2383E2" stroke-width="3"/>
+  <circle cx="584" cy="230" r="42" fill="#EAF3FF" stroke="#2383E2" stroke-width="3"/>
+  <circle cx="570" cy="224" r="5" fill="#111827"/>
+  <circle cx="598" cy="224" r="5" fill="#111827"/>
+  <path d="M568 246 Q584 260 602 246" fill="none" stroke="#111827" stroke-width="4" stroke-linecap="round"/>
+  <rect x="530" y="305" width="108" height="38" rx="19" fill="#2383E2"/>
+  <text x="584" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#FFFFFF">running</text>
+  <path d="M455 280 L492 280" stroke="#FFA500" stroke-width="4" stroke-linecap="round"/>
+  <path d="M482 268 L494 280 L482 292" fill="none" stroke="#FFA500" stroke-width="4" stroke-linecap="round"/>
+  <text x="70" y="415" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#111827">核心判断：桌宠不是装饰，是后台 Agent 的低噪状态层</text>
+</svg>

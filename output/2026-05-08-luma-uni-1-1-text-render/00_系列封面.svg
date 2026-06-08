@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="800" height="6" fill="#2383E2"/>
+  <text x="60" y="100" font-size="14" fill="#787774" letter-spacing="2">CONTENT FACTORY · DECODE</text>
+  <text x="60" y="170" font-size="44" font-weight="700" fill="#37352F">15 个人挤进文生图前三</text>
+  <text x="60" y="225" font-size="44" font-weight="700" fill="#2383E2">Luma Uni-1.1</text>
+  <text x="60" y="280" font-size="22" fill="#37352F">把"图里写字"做成了护城河</text>
+
+  <g transform="translate(60, 340)">
+    <rect width="220" height="100" fill="#F7F6F3" stroke="#E3E2E0" rx="4"/>
+    <text x="20" y="32" font-size="13" fill="#787774">Arena ELO 排名</text>
+    <text x="20" y="72" font-size="32" font-weight="700" fill="#2383E2">第 3 名</text>
+  </g>
+  <g transform="translate(290, 340)">
+    <rect width="220" height="100" fill="#F7F6F3" stroke="#E3E2E0" rx="4"/>
+    <text x="20" y="32" font-size="13" fill="#787774">团队规模</text>
+    <text x="20" y="72" font-size="32" font-weight="700" fill="#2383E2">~15 人</text>
+  </g>
+  <g transform="translate(520, 340)">
+    <rect width="220" height="100" fill="#F7F6F3" stroke="#E3E2E0" rx="4"/>
+    <text x="20" y="32" font-size="13" fill="#787774">广告 case 时间压缩</text>
+    <text x="20" y="72" font-size="32" font-weight="700" fill="#E2722C">220×</text>
+  </g>
+
+  <text x="60" y="475" font-size="12" fill="#9B9A97">2026-05-08 · AI Force · 中数智汇</text>
+</svg>

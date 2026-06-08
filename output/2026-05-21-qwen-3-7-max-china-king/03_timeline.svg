@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <rect width="800" height="460" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="60" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">先挂榜，后发布</text>
+  <text x="60" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">5/14 静默上 Arena 攒分 → 5/20 阿里云峰会官宣。把 LM Arena 当成预 demo 场</text>
+
+  <line x1="60" y1="95" x2="740" y2="95" stroke="#E9E9E7" stroke-width="1"/>
+
+  <!-- Horizontal timeline -->
+  <g transform="translate(0, 200)">
+    <!-- Main line -->
+    <line x1="100" y1="0" x2="700" y2="0" stroke="#E9E9E7" stroke-width="2"/>
+
+    <!-- Node 1: 5/14 silent listing -->
+    <g transform="translate(150, 0)">
+      <circle cx="0" cy="0" r="11" fill="#2383E2"/>
+      <text x="0" y="-90" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">5/14 凌晨</text>
+      <text x="0" y="-68" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">静默挂榜</text>
+      <line x1="0" y1="-55" x2="0" y2="-15" stroke="#9B9A97" stroke-width="1"/>
+      <text x="0" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">qwen3.7-max-preview</text>
+      <text x="0" y="48" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">qwen3.7-plus-preview</text>
+      <text x="0" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B9A97" text-anchor="middle">无官博，无 API</text>
+    </g>
+
+    <!-- Gap label -->
+    <g transform="translate(310, 0)">
+      <rect x="-40" y="-22" width="80" height="44" fill="#FAFAF9" stroke="#E9E9E7" stroke-width="1" rx="4"/>
+      <text x="0" y="-4" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">6 天</text>
+      <text x="0" y="14" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">盲测攒分</text>
+    </g>
+
+    <!-- Node 2: 5/19 Decrypt review -->
+    <g transform="translate(440, 0)">
+      <circle cx="0" cy="0" r="8" fill="#FFFFFF" stroke="#9B9A97" stroke-width="2"/>
+      <text x="0" y="-50" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">5/19</text>
+      <text x="0" y="-32" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Decrypt 实测稿</text>
+      <line x1="0" y1="-22" x2="0" y2="-12" stroke="#9B9A97" stroke-width="1"/>
+      <text x="0" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#9B9A97" text-anchor="middle">第三方背书</text>
+    </g>
+
+    <!-- Node 3: 5/20 launch -->
+    <g transform="translate(620, 0)">
+      <circle cx="0" cy="0" r="14" fill="#E03E3E"/>
+      <text x="0" y="-90" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">5/20</text>
+      <text x="0" y="-68" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">阿里云峰会官宣</text>
+      <line x1="0" y1="-55" x2="0" y2="-18" stroke="#9B9A97" stroke-width="1"/>
+      <text x="0" y="34" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle" font-weight="600">Qwen3.7-Max</text>
+      <text x="0" y="52" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">+ 通义 App + 百炼 API</text>
+      <text x="0" y="70" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B9A97" text-anchor="middle">三件套首次同台</text>
+    </g>
+  </g>
+
+  <!-- Context band: surrounding launches -->
+  <g transform="translate(60, 360)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">同周的美国发布会</text>
+    <rect x="0" y="14" width="680" height="58" fill="#F7F6F3" stroke="#E9E9E7" stroke-width="1" rx="4"/>
+    <text x="16" y="38" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">5/14 Google I/O：Gemini 3.5 Flash + TPU 8t/8i  ·  5 月上旬 Anthropic Opus 4.7  ·  OpenAI 备 GPT-5.5</text>
+    <text x="16" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">阿里挤在两场美国发布会之间，目标是企业 CTO 的 Q3 选型清单</text>
+  </g>
+</svg>

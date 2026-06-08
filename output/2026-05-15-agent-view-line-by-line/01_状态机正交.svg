@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-size="22" font-weight="700" fill="#37352F">两条正交信号：颜色 × 形状</text>
+  <text x="40" y="78" font-size="14" fill="#9B9A97">颜色 = 会话状态（你要不要管）   形状 = 进程是否活着（要不要等）</text>
+
+  <!-- 左：颜色态 -->
+  <text x="40" y="130" font-size="16" font-weight="600" fill="#37352F">颜色 = 状态</text>
+
+  <g transform="translate(40, 150)">
+    <circle cx="14" cy="14" r="8" fill="#2383E2"><animate attributeName="opacity" values="0.5;1;0.5" dur="1.5s" repeatCount="indefinite"/></circle>
+    <text x="40" y="20" font-size="14" fill="#37352F">Working · 动画 · 在跑工具/生成</text>
+  </g>
+  <g transform="translate(40, 185)">
+    <circle cx="14" cy="14" r="8" fill="#FFB020"/>
+    <text x="40" y="20" font-size="14" fill="#37352F">Needs input · 黄 · 等你回答/批权限</text>
+  </g>
+  <g transform="translate(40, 220)">
+    <circle cx="14" cy="14" r="8" fill="#9B9A97" opacity="0.5"/>
+    <text x="40" y="20" font-size="14" fill="#37352F">Idle · 灰暗 · 没事干等下一句</text>
+  </g>
+  <g transform="translate(40, 255)">
+    <circle cx="14" cy="14" r="8" fill="#4DB6AC"/>
+    <text x="40" y="20" font-size="14" fill="#37352F">Completed · 绿 · 任务成功结束</text>
+  </g>
+  <g transform="translate(40, 290)">
+    <circle cx="14" cy="14" r="8" fill="#EB5757"/>
+    <text x="40" y="20" font-size="14" fill="#37352F">Failed · 红 · 出错结束</text>
+  </g>
+  <g transform="translate(40, 325)">
+    <circle cx="14" cy="14" r="8" fill="#9B9A97"/>
+    <text x="40" y="20" font-size="14" fill="#37352F">Stopped · 灰 · 你主动停的</text>
+  </g>
+
+  <!-- 右：形状态 -->
+  <text x="440" y="130" font-size="16" font-weight="600" fill="#37352F">形状 = 进程</text>
+
+  <g transform="translate(440, 150)">
+    <text x="0" y="20" font-size="22" fill="#37352F">✻</text>
+    <text x="40" y="20" font-size="14" fill="#37352F">进程活着 · 秒回</text>
+  </g>
+  <g transform="translate(440, 185)">
+    <text x="0" y="20" font-size="22" fill="#37352F" opacity="0.5">∙</text>
+    <text x="40" y="20" font-size="14" fill="#37352F">进程退了 · 仍可 attach</text>
+    <text x="40" y="38" font-size="12" fill="#9B9A97">supervisor 起新进程从断点恢复</text>
+  </g>
+  <g transform="translate(440, 245)">
+    <text x="0" y="20" font-size="22" fill="#37352F">✢</text>
+    <text x="40" y="20" font-size="14" fill="#37352F">/loop 在两轮间睡觉</text>
+    <text x="40" y="38" font-size="12" fill="#9B9A97">行里显示运行次数 + 倒计时</text>
+  </g>
+
+  <!-- 底部组合示例 -->
+  <line x1="40" y1="395" x2="760" y2="395" stroke="#E0E0E0"/>
+  <text x="40" y="430" font-size="14" font-weight="600" fill="#37352F">组合举例</text>
+
+  <g transform="translate(40, 450)">
+    <circle cx="14" cy="14" r="8" fill="#4DB6AC"/>
+    <text x="40" y="20" font-size="13" fill="#37352F">绿 ✻ = 完成、进程还在 → 可立即继续</text>
+  </g>
+  <g transform="translate(40, 482)">
+    <circle cx="14" cy="14" r="8" fill="#4DB6AC"/>
+    <text x="34" y="20" font-size="22" fill="#37352F" opacity="0.5">∙</text>
+    <text x="60" y="20" font-size="13" fill="#37352F">绿 ∙ = 完成、进程已被 GC → attach 后冷启动</text>
+  </g>
+  <g transform="translate(40, 514)">
+    <circle cx="14" cy="14" r="8" fill="#FFB020"/>
+    <text x="40" y="20" font-size="13" fill="#37352F">黄 ✻ = 等你输入、进程活着 → 回复秒到</text>
+  </g>
+</svg>

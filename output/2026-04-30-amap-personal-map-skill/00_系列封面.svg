@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- left: pin grid representing map -->
+  <g transform="translate(60,80)">
+    <rect x="0" y="0" width="280" height="340" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+    <!-- grid lines -->
+    <g stroke="#E3E2E0" stroke-width="0.8">
+      <line x1="0" y1="85" x2="280" y2="85"/>
+      <line x1="0" y1="170" x2="280" y2="170"/>
+      <line x1="0" y1="255" x2="280" y2="255"/>
+      <line x1="70" y1="0" x2="70" y2="340"/>
+      <line x1="140" y1="0" x2="140" y2="340"/>
+      <line x1="210" y1="0" x2="210" y2="340"/>
+    </g>
+    <!-- pins -->
+    <g fill="#2383E2">
+      <circle cx="55" cy="110" r="8"/>
+      <circle cx="180" cy="60" r="8"/>
+      <circle cx="220" cy="200" r="8"/>
+      <circle cx="100" cy="250" r="8"/>
+      <circle cx="160" cy="300" r="8"/>
+    </g>
+    <text x="140" y="380" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#888" text-anchor="middle">地理空间能力</text>
+  </g>
+
+  <!-- arrow -->
+  <g transform="translate(355,235)">
+    <path d="M0,15 L60,15 M50,5 L60,15 L50,25" stroke="#37352F" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- right: SKILL.md card -->
+  <g transform="translate(440,80)">
+    <rect x="0" y="0" width="300" height="340" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="8"/>
+    <text x="20" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="bold" fill="#37352F">SKILL.md</text>
+    <line x1="20" y1="55" x2="280" y2="55" stroke="#E3E2E0"/>
+    <text x="20" y="85" font-family="Inter, sans-serif" font-size="13" fill="#37352F">references/</text>
+    <g font-family="Inter, sans-serif" font-size="12" fill="#666">
+      <text x="40" y="110">├ geocoder.md</text>
+      <text x="40" y="132">├ search.md</text>
+      <text x="40" y="154">├ routing.md</text>
+      <text x="40" y="176">├ marker.md</text>
+      <text x="40" y="198">├ layers.md</text>
+      <text x="40" y="220">└ security.md</text>
+    </g>
+    <text x="20" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#888">自然语言可调用</text>
+    <text x="20" y="282" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#888">Agent 主动发现</text>
+    <text x="20" y="304" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#888">渐进披露</text>
+  </g>
+
+  <!-- title bar -->
+  <text x="400" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="bold" fill="#37352F" text-anchor="middle">高德把地图变成 Skill</text>
+  <text x="400" y="465" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#888" text-anchor="middle">当 LBS 厂商开始为 Agent 备货</text>
+</svg>

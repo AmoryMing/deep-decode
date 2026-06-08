@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#1F1F1F">Saffer 框架的断点</text>
+  <text x="40" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">确定性界面四件套，在流式响应这一刻全部塞住</text>
+
+  <!-- 左：Saffer 流程 -->
+  <text x="60" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">Saffer 1.0：iPod 静音键</text>
+
+  <rect x="60" y="140" width="120" height="50" rx="4" fill="#F5F5F4" stroke="#E3E2E0"/>
+  <text x="120" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">触发器</text>
+
+  <line x1="180" y1="165" x2="220" y2="165" stroke="#787774" stroke-width="1.5"/>
+  <polygon points="216,160 226,165 216,170" fill="#787774"/>
+
+  <rect x="226" y="140" width="120" height="50" rx="4" fill="#F5F5F4" stroke="#E3E2E0"/>
+  <text x="286" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">规则</text>
+
+  <line x1="346" y1="165" x2="386" y2="165" stroke="#787774" stroke-width="1.5"/>
+  <polygon points="382,160 392,165 382,170" fill="#787774"/>
+
+  <rect x="392" y="140" width="120" height="50" rx="4" fill="#F5F5F4" stroke="#E3E2E0"/>
+  <text x="452" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">反馈</text>
+
+  <line x1="512" y1="165" x2="552" y2="165" stroke="#787774" stroke-width="1.5"/>
+  <polygon points="548,160 558,165 548,170" fill="#787774"/>
+
+  <rect x="558" y="140" width="180" height="50" rx="4" fill="#F5F5F4" stroke="#E3E2E0"/>
+  <text x="648" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">循环模式</text>
+
+  <text x="60" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">100ms 以内 · 结果可枚举 · 一次事件</text>
+
+  <!-- 中间裂缝 -->
+  <line x1="60" y1="248" x2="740" y2="248" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="400" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFA500" text-anchor="middle" font-weight="600">把它放到 ChatGPT 一次回答 → 立刻塞住</text>
+
+  <!-- 右：AI 产品的过程 -->
+  <text x="60" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#2383E2">AI 时代：一次模型调用</text>
+
+  <rect x="60" y="325" width="160" height="50" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+  <text x="140" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle">思考阶段</text>
+  <text x="140" y="365" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">未知时长</text>
+
+  <line x1="220" y1="350" x2="260" y2="350" stroke="#2383E2" stroke-width="1.5"/>
+  <polygon points="256,345 266,350 256,355" fill="#2383E2"/>
+
+  <rect x="266" y="325" width="160" height="50" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+  <text x="346" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle">输出阶段</text>
+  <text x="346" y="365" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">字符流，可能撕裂</text>
+
+  <line x1="426" y1="350" x2="466" y2="350" stroke="#2383E2" stroke-width="1.5"/>
+  <polygon points="462,345 472,350 462,355" fill="#2383E2"/>
+
+  <rect x="472" y="325" width="160" height="50" rx="4" fill="#FFFFFF" stroke="#FFA500"/>
+  <text x="552" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFA500" text-anchor="middle">卡住阶段</text>
+  <text x="552" y="365" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">3 秒后渐变红</text>
+
+  <text x="60" y="410" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">3-30 秒 · 结构未知 · 一段过程</text>
+
+  <!-- 结论 -->
+  <rect x="60" y="435" width="680" height="40" rx="4" fill="#FFF3E0"/>
+  <text x="400" y="461" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">主战场从「装饰」转成「不确定性的可视化」</text>
+</svg>

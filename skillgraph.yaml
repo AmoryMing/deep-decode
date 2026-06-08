@@ -1,0 +1,288 @@
+# skillgraph.yaml — Content Factory 的技能图谱 2.0（声明式三层图）
+#
+# 为什么存在：旧版"写"流程是 CLAUDE.md 里 ~18 步散文，agent 跑深链路会"在某一层悄无声息
+# 走丢"（见 output/2026-04-29-skill-graphs-2/article.md）。本文件把流程从散文变成**声明式图**：
+#   - 节点 = 一个能力，分三层 atom / molecule / compound（capabilities / composites / playbooks）
+#   - 边 = depends_on（拓扑序由 tools/pipeline.py 计算，人不再手数步骤）
+#   - 每个节点的"完成" = 它声明的 produces 产物存在且过 contract（文件即状态 / 失败可见）
+#
+# 谁读它：tools/pipeline.py。它是步骤顺序的唯一权威。人只在 compound 层驾驶（选 playbook + 确认 Strategy Spec）。
+#
+# 三层纪律（深度是约束不是目标）：
+#   atom      单一确定动作，尽量无 agent 判断（一个脚本调用 / 一次 API）
+#   molecule  把若干 atom 编排成一个可交付物（正文 / 一组图 / 一条视频）
+#   compound  一个完整 playbook，人在这一层驾驶（decode / brief / practice / distribute-all）
+#
+# 契约（contract）种类，pipeline.py 逐一实现：
+#   file_exists                 文件存在
+#   min_bytes {min}             文件 ≥ min 字节
+#   json_has_keys {keys}        JSON 顶层含这些 key
+#   frontmatter_has {keys}      markdown frontmatter 含这些 key
+#   glob_min_count {glob,min}   匹配 glob 的文件数 ≥ min
+#   png_for_each_svg {svg,png}  每个 svg 有同名 png
+#   audio_visual_sync           scene_plan_v3 与 captions 音画同步（decode.md § 7）
+#   tone_match {tone}           正文/旁白过语气 lint（禁用词 + voice provider 匹配）
+#   imap_draft                  IMAP Drafts 里有该草稿
+#   channel_draft_ready {chan}  分发渠道到达"可一键发送"状态
+
+version: 2
+
+# ───────────────────────── 可插拔维度（5 原子 + 2 新原子） ─────────────────────────
+# 这些是"插拔点"。spec_lock.config 选变体，节点 gate 校验是否真的用对了。
+axes:
+  content_type:                 # → 决定走哪个 compound + 哪个模板（修复"用错模板"）
+    registry: templates/content/_registry.yaml
+    default: decode
+  reader:                       # 用户画像 → 主导语气（修复"用错语气"）
+    dir: readers
+    default: default
+    tone: readers/{reader}/tone.yaml     # 每个 reader 必须有 tone.yaml
+  style:
+    dir: styles
+    default: default
+  voice:                        # TTS 音色原子（catwu / cosyvoice / 豆包），见 styles/_shared/voices/_registry.yaml
+    registry: styles/_shared/voices/_registry.yaml
+    default: doubao-shuangkuaisisi
+  image_backend:                # 出图后端：svg(代码绘制) | gpt-image(codex-gateway 批量转发)
+    default: svg
+    variants: [svg, gpt-image]
+  knowledge_domains:
+    registry: wiki/_domains.md
+
+# ───────────────────────── ATOMS（capabilities，此前为空的一层） ─────────────────────────
+atoms:
+  - id: a.tavily_search
+    title: 联网补证据
+    run: "skill:anysearch"
+    produces: []                # 旁路：把结果写回 wiki/sources/；无强制产物
+
+  - id: a.svg2png
+    title: SVG→PNG（scale=2）
+    run: "py:cairosvg.svg2png(scale=2)"
+    needs: ["assets/svg/*.svg"]
+    produces:
+      - {path: "assets/png", contract: {kind: png_for_each_svg, svg: "assets/svg/*.svg", png: "assets/png"}}
+
+  - id: a.imagegen
+    title: GPT-Image 批量出图（codex-gateway 转发）
+    run: "script:tools/imagegen_relay.py"
+    needs: ["assets/imagegen_batch.jsonl"]
+    produces:
+      - {path: "assets/gpt-img", contract: {kind: glob_min_count, glob: "assets/gpt-img/*.png", min: 1}}
+    notes: 与 a.svg2png 二选一或并存，由 axes.image_backend 决定
+
+  - id: a.tts
+    title: TTS 合成（音色原子，backend 可插拔）
+    run: "script:tools/tts_atom.py"
+    needs: ["tts_script.txt", "spec_lock.config.voice"]
+    produces:
+      - {path: "podcast.mp3", contract: {kind: min_bytes, min: 100000}}
+      - {path: "podcast_meta.json", contract: {kind: json_has_keys, keys: [provider, voice, params, output, duration_s]}}
+
+  - id: a.whisperx_align
+    title: 字级对齐（VoxCPM/CosyVoice 不返 timestamps 时）
+    run: "py:whisperx large-v3 + align"
+    needs: ["podcast.mp3"]
+    produces:
+      - {path: "captions.json", contract: {kind: json_has_keys, keys: [segments]}}
+
+  - id: a.remotion_render
+    title: Remotion 渲染视频
+    run: "script:tools/build_v3_render.sh"
+    needs: ["scene_plan_v3.json", "podcast.mp3", "captions.json"]
+    produces:
+      - {path: "email_video.mp4", contract: {kind: min_bytes, min: 200000}}
+
+  - id: a.ffmpeg_compress
+    title: 压缩 ≤22MB
+    run: "ffmpeg crf=32 1280x720 aac96k"
+    needs: ["email_video.mp4"]
+    produces:
+      - {path: "email_video_compressed.mp4", contract: {kind: min_bytes, min: 100000}}
+
+  - id: a.email_draft
+    title: 邮件 HTML + IMAP 草稿
+    run: "script:send_email.py --draft"
+    needs: ["article.md", "email_video_compressed.mp4"]
+    produces:
+      - {path: "email_body.html", contract: {kind: min_bytes, min: 2000}}
+      - {path: "_state/email.draft", contract: {kind: channel_draft_ready, chan: email}}
+
+  - id: a.wechat_draft
+    title: 公众号草稿（全内联 CSS）
+    run: "script:.claude/skills/distribute/wechat_publish.py --draft"
+    needs: ["article.md"]
+    produces:
+      - {path: "_state/wechat.draft", contract: {kind: channel_draft_ready, chan: wechat}}
+
+  - id: a.md2xhs
+    title: 小红书 3:4 图卡
+    run: "script:.claude/skills/distribute/md2xhs.py"
+    needs: ["article.md"]
+    produces:
+      - {path: "distribute/xiaohongshu", contract: {kind: glob_min_count, glob: "distribute/xiaohongshu/*.png", min: 1}}
+      - {path: "_state/xhs.draft", contract: {kind: channel_draft_ready, chan: xhs}}
+
+  - id: a.video_vertical
+    title: 9:16 视频号/抖音切版
+    run: "script:tools/build_v3_render.sh --vertical"
+    needs: ["email_video_compressed.mp4"]
+    produces:
+      - {path: "distribute/video/vertical.mp4", contract: {kind: min_bytes, min: 100000}}
+      - {path: "_state/video_channel.draft", contract: {kind: channel_draft_ready, chan: video_channel}}
+
+  - id: a.tone_lint
+    title: 语气 lint（禁用词 + voice 匹配）
+    run: "script:tools/tone_lint.py"
+    needs: ["article.md", "readers/{reader}/tone.yaml"]
+    produces:
+      - {path: "tone_report.json", contract: {kind: json_has_keys, keys: [pass, violations, voice_match]}}
+
+# ───────────────────────── MOLECULES（composites） ─────────────────────────
+molecules:
+  - id: n.router
+    layer: molecule
+    title: 入口路由（5 原子推荐）
+    run: "skill:router"
+    produces:
+      - {path: "phase0_router.yaml", contract: {kind: file_exists}}
+    depends_on: []
+
+  - id: n.strategy
+    layer: molecule
+    title: Strategy Spec（唯一硬停 — 用户确认）
+    run: "agent:主编"
+    hard_stop: true                  # 人在此确认；确认 = spec_lock.strategy_confirmed:true
+    needs: ["spec.md"]
+    produces:
+      - {path: "phase1_strategy.md", contract: {kind: file_exists}}
+      - {path: "spec_lock.yaml", contract: {kind: frontmatter_has, keys: []}}   # 校验 strategy_confirmed 在 pipeline 内做
+    depends_on: [n.router]
+
+  - id: n.evidence
+    layer: molecule
+    title: 一手素材 + 证据
+    run: "agent:研究员 + a.tavily_search"
+    produces:
+      - {path: "phase0_sources.json", contract: {kind: file_exists}}
+      - {path: "phase2_evidence.json", contract: {kind: file_exists}}
+    depends_on: [n.strategy]
+
+  - id: m.article
+    layer: molecule
+    title: 正文执行器
+    run: "skill:deep-decode#article"
+    needs: ["phase1_strategy.md", "phase2_evidence.json"]
+    produces:
+      - {path: "article.md", contract: {kind: min_bytes, min: 1500}}
+      - {path: "article.md", contract: {kind: frontmatter_has, keys: [title, type, voice]}}
+    depends_on: [n.evidence]
+
+  - id: m.tone_gate
+    layer: molecule
+    title: 语气门（修复"用错语气"）
+    run: "atom:a.tone_lint"
+    produces:
+      - {path: "tone_report.json", contract: {kind: tone_match, tone: "readers/{reader}/tone.yaml"}}
+    depends_on: [m.article]
+
+  - id: m.polish
+    layer: molecule
+    title: 结构层 + 散文层打磨
+    run: "skill:polish-pipeline"
+    needs: ["article.md"]
+    produces:
+      - {path: "polish_report.json", contract: {kind: json_has_keys, keys: [structure, prose, verdict]}}
+    depends_on: [m.tone_gate]
+
+  - id: m.factcheck
+    layer: molecule
+    title: 事实核查
+    run: "skill:fact-checker"
+    needs: ["article.md"]
+    produces:
+      - {path: "factcheck.json", contract: {kind: json_has_keys, keys: [claims, verdict]}}
+    depends_on: [m.article]
+
+  - id: m.visual
+    layer: molecule
+    title: 配图（svg 或 gpt-image，由 image_backend 决定）
+    run: "skill:visual-pipeline"
+    needs: ["article.md"]
+    produces:
+      - {path: "assets/png", contract: {kind: glob_min_count, glob: "assets/png/*.png", min: 4}}
+    depends_on: [m.polish]
+
+  - id: m.video
+    layer: molecule
+    title: v3 script-driven 邮件视频
+    run: "skill:video-pipeline"
+    needs: ["article.md", "assets/png"]
+    produces:
+      - {path: "video_script.txt", contract: {kind: min_bytes, min: 500}}
+      - {path: "scene_plan_v3.json", contract: {kind: json_has_keys, keys: [scenes]}}
+      - {path: "tts_script.txt", contract: {kind: file_exists}}
+      - {path: "podcast.mp3", contract: {kind: min_bytes, min: 100000}}
+      - {path: "captions.json", contract: {kind: json_has_keys, keys: [segments]}}
+      - {path: "scene_plan_v3.json", contract: {kind: audio_visual_sync}}
+      - {path: "email_video_compressed.mp4", contract: {kind: min_bytes, min: 100000}}
+    depends_on: [m.visual]
+    optional_when: "artifacts.video_required == false"
+
+  - id: m.email_package
+    layer: molecule
+    title: 邮件成品 + IMAP 草稿
+    run: "atom:a.email_draft"
+    needs: ["article.md", "email_video_compressed.mp4"]
+    produces:
+      - {path: "_state/email.draft", contract: {kind: channel_draft_ready, chan: email}}
+    depends_on: [m.video, m.factcheck]
+
+# ───────────────────────── COMPOUNDS（playbooks — 人在此驾驶） ─────────────────────────
+compounds:
+  c.decode:
+    title: 深度拆解
+    template: templates/content/decode.md
+    # 拓扑序由 depends_on 推导；这里列出该 playbook 纳入的节点集合
+    nodes:
+      - n.router
+      - n.strategy
+      - n.evidence
+      - m.article
+      - m.tone_gate
+      - m.polish
+      - m.factcheck
+      - m.visual
+      - m.video
+      - m.email_package
+      - c.distribute_all
+    gate_summary: "全部节点 done + 所有 distribute 渠道 draft-ready → ready-to-distribute"
+
+  c.brief:
+    title: 情报日报
+    template: templates/content/brief.md
+    nodes: [n.strategy, n.evidence, m.article, m.tone_gate, m.polish, c.distribute_all]
+
+  c.practice:
+    title: 实操指南
+    template: templates/content/practice.md
+    nodes: [n.strategy, n.evidence, m.article, m.tone_gate, m.polish, m.visual, c.distribute_all]
+
+  # 终端 compound：分发必须把所有声明渠道带到"可一键发送"（修复"分发不到最后一步"）
+  c.distribute_all:
+    title: 全渠道草稿就绪（终端）
+    is_terminal: true
+    # 实际跑哪些渠道节点 = spec_lock.config.distribute.channels 的子集
+    channel_nodes:
+      email: m.email_package
+      wechat: a.wechat_draft
+      xhs: a.md2xhs
+      video_channel: a.video_vertical
+      podcast: a.tts            # 小宇宙纯音频
+    produces:
+      - {path: "READY.md", contract: {kind: file_exists}}
+      - {path: "send.sh", contract: {kind: file_exists}}
+    rule: |
+      auto_pipeline 把【所有】声明渠道跑到 draft-ready 后停下（stop_before_distribute 永远 true）。
+      draft-ready（机器）≠ sent（人点 send.sh 里的 --send）。Stage-4 自动发送永不开。
+    on_complete: "回填 schedule/published.md 对应行 '<date>(draft)'；写 READY.md + send.sh"

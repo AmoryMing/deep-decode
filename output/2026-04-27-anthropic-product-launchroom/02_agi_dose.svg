@@ -1,0 +1,24 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">AGI 剂量：产品不能为幻觉中的全能模型而建</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">难点是为当前模型榨出最大能力，而不是提前设计一个万能文本框。</text>
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="54" y="150" width="200" height="210" rx="12" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="154" y="186" font-size="17" font-weight="700" fill="#787774" text-anchor="middle">剂量太低</text>
+    <text x="154" y="226" font-size="14" fill="#37352F" text-anchor="middle">把 AI 当补全工具</text>
+    <text x="154" y="258" font-size="13" fill="#787774" text-anchor="middle">沿用旧流程</text>
+    <text x="154" y="288" font-size="13" fill="#787774" text-anchor="middle">能力被产品卡住</text>
+    <rect x="300" y="128" width="200" height="254" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="3"/>
+    <text x="400" y="166" font-size="18" font-weight="700" fill="#2383E2" text-anchor="middle">正确剂量</text>
+    <text x="400" y="210" font-size="14" fill="#37352F" text-anchor="middle">承认未来很强</text>
+    <text x="400" y="242" font-size="14" fill="#37352F" text-anchor="middle">但为今天补脚手架</text>
+    <text x="400" y="274" font-size="14" fill="#37352F" text-anchor="middle">让用户走黄金路径</text>
+    <text x="400" y="326" font-size="13" fill="#787774" text-anchor="middle">功能随模型升级而删减</text>
+    <rect x="546" y="150" width="200" height="210" rx="12" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="646" y="186" font-size="17" font-weight="700" fill="#787774" text-anchor="middle">剂量太高</text>
+    <text x="646" y="226" font-size="14" fill="#37352F" text-anchor="middle">默认模型全能</text>
+    <text x="646" y="258" font-size="13" fill="#787774" text-anchor="middle">一个文本框解决一切</text>
+    <text x="646" y="288" font-size="13" fill="#787774" text-anchor="middle">当前失败被忽略</text>
+  </g>
+  <text x="400" y="438" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" text-anchor="middle">AI 产品里的很多功能，是当前模型能力的临时外骨骼。</text>
+</svg>

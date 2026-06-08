@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" text-anchor="middle" font-weight="bold">双缓冲区 Diff：只重绘变化的 Cell</text>
+
+  <!-- Frame N (front) -->
+  <rect x="40" y="60" width="300" height="200" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="190" y="85" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle" font-weight="600">frontFrame (上一帧)</text>
+
+  <!-- Grid cells - some highlighted as "same" -->
+  <rect x="60" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="95" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="130" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="165" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="200" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="235" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="270" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+
+  <rect x="60" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="95" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="130" y="125" width="30" height="20" rx="2" fill="#2383E2" stroke="none"/>
+  <rect x="165" y="125" width="30" height="20" rx="2" fill="#2383E2" stroke="none"/>
+  <rect x="200" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="235" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="270" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+
+  <rect x="60" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="95" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="130" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="165" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="200" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="235" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="270" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+
+  <text x="190" y="200" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#787774" text-anchor="middle">Int32Array (只读)</text>
+  <text x="140" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">= 蓝色 cell</text>
+  <text x="250" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">= 灰色 cell</text>
+
+  <!-- Frame N+1 (back) -->
+  <rect x="460" y="60" width="300" height="200" rx="10" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="610" y="85" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2383E2" text-anchor="middle" font-weight="600">backFrame (当前帧)</text>
+
+  <!-- Grid cells - different ones highlighted -->
+  <rect x="480" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="515" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="550" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="585" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="620" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="655" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="690" y="100" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+
+  <rect x="480" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="515" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="550" y="125" width="30" height="20" rx="2" fill="#4DB6AC" stroke="none"/>
+  <rect x="585" y="125" width="30" height="20" rx="2" fill="#4DB6AC" stroke="none"/>
+  <rect x="620" y="125" width="30" height="20" rx="2" fill="#4DB6AC" stroke="none"/>
+  <rect x="655" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="690" y="125" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+
+  <rect x="480" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="515" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="550" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="585" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="620" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="655" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+  <rect x="690" y="150" width="30" height="20" rx="2" fill="#E3E2E0" stroke="none"/>
+
+  <text x="610" y="200" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#787774" text-anchor="middle">Int32Array (写入中)</text>
+  <text x="560" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC">= 绿色 cell (变化)</text>
+
+  <!-- Diff arrow -->
+  <path d="M 345 155 L 455 155" stroke="#EB5757" stroke-width="2" fill="none" marker-end="url(#ad)"/>
+  <text x="400" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle" font-weight="600">diffEach</text>
+
+  <!-- Damage tracking -->
+  <rect x="40" y="280" width="720" height="80" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle" font-weight="600">Damage Tracking：只扫描脏区域</text>
+
+  <!-- Damage rect illustration -->
+  <rect x="80" y="315" width="250" height="30" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <rect x="145" y="318" width="80" height="24" rx="3" fill="#EB5757" opacity="0.2" stroke="#EB5757" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="185" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#EB5757" text-anchor="middle">damage rect</text>
+  <text x="80" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="9" fill="#787774">setCellAt 每次写入更新 damage 矩形</text>
+
+  <rect x="420" y="315" width="300" height="30" rx="4" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="570" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#37352F" text-anchor="middle">diffEach 只遍历 damage 区域，跳过未变化行</text>
+
+  <!-- Output: Patches -->
+  <rect x="120" y="385" width="560" height="70" rx="10" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="400" y="410" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#4DB6AC" text-anchor="middle" font-weight="600">输出：最小 Patch 集</text>
+  <text x="400" y="432" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#37352F" text-anchor="middle">[cursorMove(2,1), styleStr("\e[32m"), stdout("new"), cursorMove(0,1), ...]</text>
+  <text x="400" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">optimizer.ts 再合并相邻 patch → 最终写入 stdout</text>
+
+  <defs>
+    <marker id="ad" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0 0 L 8 3 L 0 6" fill="none" stroke="#EB5757" stroke-width="1.5"/>
+    </marker>
+  </defs>
+</svg>

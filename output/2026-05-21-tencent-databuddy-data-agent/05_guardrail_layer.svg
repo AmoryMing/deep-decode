@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">Agent Guardrail：企业付费的真理由</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">推理与工具调用之间，必须有一层运行时控制层——Forrester AEGIS 框架</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Three-layer stack -->
+  <g transform="translate(120, 140)">
+    <!-- Top: Agent Reasoning -->
+    <rect x="0" y="0" width="560" height="64" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1"/>
+    <text x="20" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">第一层</text>
+    <text x="20" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">Agent 推理层</text>
+    <text x="540" y="42" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">Claude / GPT / 通义 / 混元</text>
+
+    <!-- Arrow down -->
+    <path d="M 280 70 L 280 90" stroke="#787774" stroke-width="1.5" marker-end="url(#dn)"/>
+
+    <!-- Middle: Guardrail -->
+    <rect x="0" y="96" width="560" height="156" rx="8" fill="#37352F"/>
+    <text x="20" y="124" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.7">第二层  ·  云厂商收钱的真理由</text>
+    <text x="20" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">Agent Guardrail  (运行时控制层)</text>
+
+    <!-- Seven pills -->
+    <g transform="translate(20, 168)">
+      <rect x="0" y="0" width="70" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="35" y="16" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">身份</text>
+
+      <rect x="78" y="0" width="86" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="121" y="16" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">数据保护</text>
+
+      <rect x="172" y="0" width="86" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="215" y="16" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">动作授权</text>
+
+      <rect x="266" y="0" width="86" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="309" y="16" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">工具控制</text>
+
+      <rect x="360" y="0" width="100" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="410" y="16" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">自主性边界</text>
+
+      <rect x="468" y="0" width="86" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="511" y="16" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">行为安全</text>
+
+      <rect x="0" y="34" width="100" height="24" rx="12" fill="#FFFFFF" opacity="0.15"/>
+      <text x="50" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">可观测性</text>
+
+      <text x="115" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.6">+  全链路审计  ·  执行隔离  ·  最小权限</text>
+    </g>
+
+    <!-- Arrow down -->
+    <path d="M 280 258 L 280 278" stroke="#787774" stroke-width="1.5" marker-end="url(#dn)"/>
+
+    <!-- Bottom: Tools -->
+    <rect x="0" y="284" width="560" height="64" rx="8" fill="#E8F5F1" stroke="#4DB6AC" stroke-width="1"/>
+    <text x="20" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">第三层</text>
+    <text x="20" y="334" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">工具调用层</text>
+    <text x="540" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">SQL  ·  ETL  ·  权限  ·  外部系统</text>
+  </g>
+
+  <defs>
+    <marker id="dn" markerWidth="8" markerHeight="8" refX="4" refY="6" orient="auto">
+      <path d="M0,0 L4,6 L8,0 Z" fill="#787774"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom -->
+  <rect x="40" y="470" width="720" height="36" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="493" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">企业愿意付云厂商钱，不是模型更强——是这层独立控制层。Anthropic 走训练约束，云厂商走运行时拦截</text>
+</svg>

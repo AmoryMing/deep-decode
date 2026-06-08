@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <defs>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#787774"/>
+    </marker>
+    <marker id="ar2p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#9B51E0"/>
+    </marker>
+  </defs>
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">反应式 agent → 反身式 agent</text>
+  <text x="400" y="68" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">从"有手不会反思"到"睡前回看自己"</text>
+
+  <!-- divider -->
+  <line x1="400" y1="100" x2="400" y2="430" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- LEFT: Reactive -->
+  <text x="200" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#787774">反应式（旧）</text>
+  <text x="200" y="140" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">每次都从零开始</text>
+
+  <!-- reactive loop -->
+  <g transform="translate(80, 170)">
+    <rect x="0" y="0" width="100" height="46" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="50" y="29" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">收到任务</text>
+  </g>
+  <g transform="translate(220, 170)">
+    <rect x="0" y="0" width="100" height="46" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="50" y="29" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">执行</text>
+  </g>
+  <line x1="180" y1="193" x2="218" y2="193" stroke="#787774" stroke-width="1.6" marker-end="url(#ar2)"/>
+
+  <g transform="translate(150, 250)">
+    <rect x="0" y="0" width="100" height="46" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="50" y="29" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">交付</text>
+  </g>
+  <line x1="270" y1="216" x2="220" y2="248" stroke="#787774" stroke-width="1.6" marker-end="url(#ar2)"/>
+
+  <!-- forgetting bin -->
+  <g transform="translate(60, 330)">
+    <rect x="0" y="0" width="280" height="68" rx="8" fill="#FFF7F7" stroke="#EB5757" stroke-dasharray="5,4"/>
+    <text x="140" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">会话结束 = 经验清零</text>
+    <text x="140" y="52" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">下次还在同一个坑里栽一遍</text>
+  </g>
+
+  <!-- RIGHT: Reflective -->
+  <text x="600" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#9B51E0">反身式（新）</text>
+  <text x="600" y="140" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">把昨天的会话当训练集</text>
+
+  <g transform="translate(480, 170)">
+    <rect x="0" y="0" width="100" height="46" rx="8" fill="#F4ECFF" stroke="#9B51E0"/>
+    <text x="50" y="29" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">收到任务</text>
+  </g>
+  <g transform="translate(620, 170)">
+    <rect x="0" y="0" width="100" height="46" rx="8" fill="#F4ECFF" stroke="#9B51E0"/>
+    <text x="50" y="29" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">执行 + 自评</text>
+  </g>
+  <line x1="580" y1="193" x2="618" y2="193" stroke="#9B51E0" stroke-width="1.6" marker-end="url(#ar2p)"/>
+
+  <g transform="translate(550, 250)">
+    <rect x="0" y="0" width="100" height="46" rx="8" fill="#F4ECFF" stroke="#9B51E0"/>
+    <text x="50" y="29" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">交付 + 留痕</text>
+  </g>
+  <line x1="670" y1="216" x2="620" y2="248" stroke="#9B51E0" stroke-width="1.6" marker-end="url(#ar2p)"/>
+
+  <!-- Dream loop back to top -->
+  <path d="M 600 296 Q 760 300 760 230 Q 760 165 580 175"
+        fill="none" stroke="#9B51E0" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#ar2p)"/>
+  <text x="752" y="260" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0">Dreaming：</text>
+  <text x="752" y="276" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0">复盘 → 改提示词</text>
+
+  <!-- Reflective takeaway -->
+  <g transform="translate(460, 330)">
+    <rect x="0" y="0" width="280" height="68" rx="8" fill="#F4ECFF" stroke="#9B51E0"/>
+    <text x="140" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">"上次错在哪"成了一条产品功能</text>
+    <text x="140" y="52" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">harness 第一次开始管"成长"</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="455" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">脑手分离是去年的故事——今年是给 agent 装上了梦</text>
+</svg>

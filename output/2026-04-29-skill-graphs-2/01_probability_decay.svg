@@ -1,0 +1,53 @@
+<svg width="800" height="470" viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="470" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">概率衰减：1.0 必塌不是工程问题</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">单层 90% 正确率 → 5 层 59% → 7 层 48%。指数衰减不靠显式化解决。</text>
+
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <line x1="80" y1="380" x2="740" y2="380" stroke="#37352F" stroke-width="1.5"/>
+    <line x1="80" y1="140" x2="80" y2="380" stroke="#37352F" stroke-width="1.5"/>
+
+    <text x="60" y="146" font-size="11" fill="#787774" text-anchor="end">100%</text>
+    <text x="60" y="266" font-size="11" fill="#787774" text-anchor="end">75%</text>
+    <text x="60" y="386" font-size="11" fill="#787774" text-anchor="end">50%</text>
+
+    <line x1="80" y1="266" x2="740" y2="266" stroke="#E3E2E0" stroke-dasharray="3,3"/>
+
+    <polyline points="155,164 250,193 345,222 440,251 535,283 630,313 725,342" fill="none" stroke="#2383E2" stroke-width="3"/>
+
+    <circle cx="155" cy="164" r="6" fill="#2383E2"/>
+    <text x="155" y="148" font-size="12" font-weight="700" fill="#37352F" text-anchor="middle">90%</text>
+    <text x="155" y="402" font-size="12" fill="#787774" text-anchor="middle">1层</text>
+
+    <circle cx="250" cy="193" r="6" fill="#2383E2"/>
+    <text x="250" y="178" font-size="12" font-weight="700" fill="#37352F" text-anchor="middle">81%</text>
+    <text x="250" y="402" font-size="12" fill="#787774" text-anchor="middle">2层</text>
+
+    <circle cx="345" cy="222" r="6" fill="#2383E2"/>
+    <text x="345" y="208" font-size="12" font-weight="700" fill="#37352F" text-anchor="middle">73%</text>
+    <text x="345" y="402" font-size="12" fill="#787774" text-anchor="middle">3层</text>
+
+    <circle cx="440" cy="251" r="6" fill="#2383E2"/>
+    <text x="440" y="237" font-size="12" font-weight="700" fill="#37352F" text-anchor="middle">66%</text>
+    <text x="440" y="402" font-size="12" fill="#787774" text-anchor="middle">4层</text>
+
+    <circle cx="535" cy="283" r="7" fill="#FFA500"/>
+    <text x="535" y="268" font-size="13" font-weight="700" fill="#FFA500" text-anchor="middle">59%</text>
+    <text x="535" y="402" font-size="12" fill="#787774" text-anchor="middle">5层</text>
+
+    <circle cx="630" cy="313" r="6" fill="#FFA500"/>
+    <text x="630" y="298" font-size="12" font-weight="700" fill="#FFA500" text-anchor="middle">53%</text>
+    <text x="630" y="402" font-size="12" fill="#787774" text-anchor="middle">6层</text>
+
+    <circle cx="725" cy="342" r="6" fill="#FFA500"/>
+    <text x="725" y="328" font-size="12" font-weight="700" fill="#FFA500" text-anchor="middle">48%</text>
+    <text x="725" y="402" font-size="12" fill="#787774" text-anchor="middle">7层</text>
+
+    <text x="400" y="438" font-size="13" fill="#37352F" text-anchor="middle">链路深度（每层独立 LLM 决策）</text>
+  </g>
+
+  <rect x="540" y="148" width="180" height="84" rx="8" fill="#FFF3E0" stroke="#FFA500"/>
+  <text x="630" y="174" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">指数衰减区</text>
+  <text x="630" y="198" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">把 95% 写到极致</text>
+  <text x="630" y="218" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">也只把 5 层拉到 77%</text>
+</svg>

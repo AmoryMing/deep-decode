@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" text-anchor="middle" font-weight="bold">Tesler 定律：精致产品为什么输了</text>
+  <text x="400" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">复杂度不能消灭，只能转移。问题是转给谁。</text>
+
+  <!-- Axes -->
+  <line x1="120" y1="420" x2="720" y2="420" stroke="#37352F" stroke-width="2"/>
+  <line x1="120" y1="420" x2="120" y2="90" stroke="#37352F" stroke-width="2"/>
+
+  <!-- Axis labels -->
+  <text x="420" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle" font-weight="600">能力（Powerful）</text>
+  <text x="710" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">强</text>
+  <text x="150" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">弱</text>
+
+  <text x="70" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle" font-weight="600" transform="rotate(-90, 70, 260)">感知简单</text>
+  <text x="100" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">高</text>
+  <text x="100" y="415" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">低</text>
+
+  <!-- Quadrant labels (subtle) -->
+  <text x="260" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E3E2E0" text-anchor="middle">简单但没用</text>
+  <text x="570" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E3E2E0" text-anchor="middle">简单又强大</text>
+  <text x="260" y="390" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E3E2E0" text-anchor="middle">弱且复杂</text>
+  <text x="570" y="390" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E3E2E0" text-anchor="middle">强但难用</text>
+
+  <!-- Quadrant dividers (subtle) -->
+  <line x1="420" y1="90" x2="420" y2="420" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,4"/>
+  <line x1="120" y1="255" x2="720" y2="255" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,4"/>
+
+  <!-- Dead AI products (top-left, grayed out) -->
+  <rect x="180" y="165" width="130" height="44" rx="8" fill="#FFFFFF" stroke="#EB5757" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="245" y="183" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">Rabbit R1</text>
+  <text x="245" y="199" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="middle">Humane AI Pin</text>
+  <text x="245" y="220" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">"好看，但只能叫 Uber"</text>
+
+  <!-- Pro tools (bottom-right) -->
+  <rect x="520" y="310" width="150" height="44" rx="8" fill="#FFFFFF" stroke="#787774" stroke-width="1.5"/>
+  <text x="595" y="328" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">After Effects / Blender</text>
+  <text x="595" y="344" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">"强大，但祝你好运"</text>
+
+  <!-- Claude Code (top-right, hero element) -->
+  <rect x="490" y="155" width="180" height="60" rx="10" fill="#2383E2" stroke="none"/>
+  <text x="580" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Claude Code</text>
+  <text x="580" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle" opacity="0.9">强大 + 感知简单</text>
+
+  <!-- Movement arrow from coding tool area to top-right -->
+  <path d="M 530 340 Q 500 270 510 215" stroke="#2383E2" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arr-b)"/>
+  <text x="490" y="280" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2" text-anchor="middle">AI 吞掉复杂度</text>
+
+  <!-- Key insight box -->
+  <rect x="140" y="470" width="520" height="36" rx="8" fill="#F7F7F5" stroke="none"/>
+  <text x="400" y="493" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">砍功能 = 砍能力。转移复杂度给 AI = 保能力、降门槛。</text>
+
+  <defs>
+    <marker id="arr-b" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <path d="M 0 0 L 10 3.5 L 0 7" fill="none" stroke="#2383E2" stroke-width="1.5"/>
+    </marker>
+  </defs>
+</svg>

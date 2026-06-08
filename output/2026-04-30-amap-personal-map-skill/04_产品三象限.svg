@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">"个人地图"产品形态对比</text>
+
+  <!-- axes -->
+  <g stroke="#37352F" stroke-width="1.5" fill="none">
+    <line x1="120" y1="430" x2="700" y2="430"/>
+    <line x1="120" y1="90" x2="120" y2="430"/>
+  </g>
+  <!-- axis labels -->
+  <text x="700" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="end">交互方式 →</text>
+  <text x="120" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888">手动操作</text>
+  <text x="650" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888">自然语言</text>
+
+  <text x="105" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="end" transform="rotate(-90 105 90)">产物形态 →</text>
+  <text x="100" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888" text-anchor="end">App 资产</text>
+  <text x="100" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888" text-anchor="end">网页工具</text>
+
+  <!-- gridline middle -->
+  <line x1="410" y1="90" x2="410" y2="430" stroke="#E3E2E0" stroke-dasharray="4,4"/>
+  <line x1="120" y1="260" x2="700" y2="260" stroke="#E3E2E0" stroke-dasharray="4,4"/>
+
+  <!-- bubbles -->
+  <!-- Google My Maps: 手动操作 + 网页工具（左下） -->
+  <g transform="translate(220,360)">
+    <circle r="40" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text y="-2" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#37352F" text-anchor="middle">Google</text>
+    <text y="14" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#37352F" text-anchor="middle">My Maps</text>
+  </g>
+
+  <!-- Felt: 中等交互 + 网页工具（中下） -->
+  <g transform="translate(380,340)">
+    <circle r="36" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text y="6" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#37352F" text-anchor="middle">Felt</text>
+  </g>
+
+  <!-- AMap personal-map Skill: 自然语言 + App 资产（右上） -->
+  <g transform="translate(560,170)">
+    <circle r="55" fill="#FFFFFF" stroke="#2383E2" stroke-width="2.5"/>
+    <text y="-6" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2" text-anchor="middle">高德</text>
+    <text y="14" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2" text-anchor="middle">个人地图 Skill</text>
+  </g>
+
+  <!-- 老高德"我的地图": 手动 + App 资产（左上） -->
+  <g transform="translate(230,170)">
+    <circle r="35" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text y="-2" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">老高德</text>
+    <text y="14" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">"我的地图"</text>
+  </g>
+
+  <text x="400" y="485" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#888" text-anchor="middle">气泡大小 ≈ 终端流量入口的强度</text>
+</svg>

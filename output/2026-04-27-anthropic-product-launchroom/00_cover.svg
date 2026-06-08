@@ -1,0 +1,27 @@
+<svg width="800" height="450" viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="450" fill="#FFFFFF"/>
+  <rect x="40" y="36" width="720" height="378" rx="14" fill="#F7F7F5" stroke="#E3E2E0"/>
+  <text x="70" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#787774">Cat Wu × Lenny 访谈深度拆解</text>
+  <text x="70" y="154" font-family="PingFang SC, Inter, sans-serif" font-size="34" font-weight="700" fill="#37352F">发射台产品学</text>
+  <text x="70" y="202" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#37352F">Anthropic 的 PM 为什么不再守路线图</text>
+  <line x1="70" y1="236" x2="730" y2="236" stroke="#2383E2" stroke-width="3"/>
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="76" y="282" width="150" height="64" rx="10" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="151" y="309" font-size="16" font-weight="700" fill="#2383E2" text-anchor="middle">6个月</text>
+    <text x="151" y="332" font-size="13" fill="#787774" text-anchor="middle">传统周期</text>
+    <path d="M246 314 L308 314" stroke="#2383E2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="328" y="282" width="150" height="64" rx="10" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="403" y="309" font-size="16" font-weight="700" fill="#2383E2" text-anchor="middle">1周</text>
+    <text x="403" y="332" font-size="13" fill="#787774" text-anchor="middle">试验上线</text>
+    <path d="M498 314 L560 314" stroke="#2383E2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="580" y="282" width="150" height="64" rx="10" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="655" y="309" font-size="16" font-weight="700" fill="#37352F" text-anchor="middle">1天</text>
+    <text x="655" y="332" font-size="13" fill="#787774" text-anchor="middle">可回收发射</text>
+  </g>
+  <text x="70" y="386" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F">工程实现变便宜后，最贵的是决定写什么。</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2383E2"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      .ja { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+      .ttl { font-size: 28px; font-weight: 700; fill: #1F1B16; }
+      .lbl { font-size: 18px; font-weight: 700; fill: #1F1B16; }
+      .sub { font-size: 13px; fill: #5b524a; }
+      .meta { font-size: 12px; fill: #8a7d72; }
+      .tag { font-size: 13px; font-weight: 600; fill: #fff; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="0" y="0" width="6" height="500" fill="#DA7756"/>
+
+  <text x="40" y="56" class="ja ttl">connection-first vs schema-first · agent 时代的入口之争</text>
+  <text x="40" y="82" class="ja meta">两家在抢的不是同一档入口，是不同的企业接入场景</text>
+
+  <!-- 左：Anthropic -->
+  <g transform="translate(50, 130)">
+    <rect width="340" height="320" rx="12" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="0" width="340" height="40" rx="12" fill="#DA7756"/>
+    <text x="170" y="26" class="ja tag" text-anchor="middle">Anthropic · connection-first</text>
+
+    <text x="170" y="78" class="ja lbl" text-anchor="middle">MCP Tunnels</text>
+
+    <g transform="translate(30, 110)">
+      <text x="0" y="0" class="ja sub" fill="#1F1B16">→ 客户建反向通道</text>
+      <text x="0" y="28" class="ja sub" fill="#1F1B16">→ agent 通过连接进来</text>
+      <text x="0" y="56" class="ja sub" fill="#1F1B16">→ 网关侧做 quota / 鉴权</text>
+      <text x="0" y="84" class="ja sub" fill="#1F1B16">→ 接 outbound 即可</text>
+    </g>
+
+    <line x1="20" y1="240" x2="320" y2="240" stroke="#DA7756" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <text x="170" y="266" class="ja lbl" text-anchor="middle" fill="#DA7756">适合企业内网接入</text>
+    <text x="170" y="290" class="ja sub" text-anchor="middle">CRM / Jira / 知识库 / 工单</text>
+  </g>
+
+  <!-- VS -->
+  <g transform="translate(395, 270)">
+    <circle r="22" fill="#1F1B16"/>
+    <text x="0" y="6" class="ja tag" text-anchor="middle">VS</text>
+  </g>
+
+  <!-- 右：OpenAI -->
+  <g transform="translate(440, 130)">
+    <rect width="310" height="320" rx="12" fill="#1F1B16"/>
+    <rect x="0" y="0" width="310" height="40" rx="12" fill="#1F1B16"/>
+    <text x="155" y="26" class="ja tag" text-anchor="middle">OpenAI · schema-first</text>
+
+    <text x="155" y="78" class="ja lbl" text-anchor="middle" fill="#f5e9e0">GPT Actions</text>
+
+    <g transform="translate(30, 110)">
+      <text x="0" y="0" class="ja sub" fill="#f5e9e0">→ 你写 OpenAPI spec</text>
+      <text x="0" y="28" class="ja sub" fill="#f5e9e0">→ GPT 读 spec 调你</text>
+      <text x="0" y="56" class="ja sub" fill="#f5e9e0">→ 公开 endpoint 暴露</text>
+      <text x="0" y="84" class="ja sub" fill="#f5e9e0">→ 鉴权走 OAuth</text>
+    </g>
+
+    <line x1="20" y1="240" x2="290" y2="240" stroke="#DA7756" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <text x="155" y="266" class="ja lbl" text-anchor="middle" fill="#DA7756">适合公网 SaaS 接入</text>
+    <text x="155" y="290" class="ja sub" text-anchor="middle" fill="#f5e9e0">Stripe / GitHub / Shopify</text>
+  </g>
+
+  <text x="400" y="480" class="ja meta" text-anchor="middle">同一个 agent 时代，两种企业接入哲学</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="440" fill="#FFFFFF"/>
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#37352F">Uni-1.1 关键数据速查</text>
+  <text x="40" y="72" font-size="14" fill="#787774">2026-05-06 发布</text>
+
+  <g transform="translate(40, 100)">
+    <rect width="230" height="120" fill="#F7F6F3" stroke="#E3E2E0" rx="6"/>
+    <text x="20" y="34" font-size="13" fill="#787774">Arena.ai ELO</text>
+    <text x="20" y="78" font-size="36" font-weight="700" fill="#2383E2">1193</text>
+    <text x="20" y="102" font-size="12" fill="#37352F">全球第 3</text>
+  </g>
+  <g transform="translate(285, 100)">
+    <rect width="230" height="120" fill="#F7F6F3" stroke="#E3E2E0" rx="6"/>
+    <text x="20" y="34" font-size="13" fill="#787774">RISEBench 推理</text>
+    <text x="20" y="78" font-size="36" font-weight="700" fill="#2383E2">第 1</text>
+    <text x="20" y="102" font-size="12" fill="#37352F">空间 / 逻辑双榜</text>
+  </g>
+  <g transform="translate(530, 100)">
+    <rect width="230" height="120" fill="#F7F6F3" stroke="#E3E2E0" rx="6"/>
+    <text x="20" y="34" font-size="13" fill="#787774">参考图上限</text>
+    <text x="20" y="78" font-size="36" font-weight="700" fill="#2383E2">9 张</text>
+    <text x="20" y="102" font-size="12" fill="#37352F">单次调用</text>
+  </g>
+
+  <g transform="translate(40, 240)">
+    <rect width="230" height="120" fill="#FFFFFF" stroke="#2383E2" rx="6"/>
+    <text x="20" y="34" font-size="13" fill="#787774">单张推理</text>
+    <text x="20" y="78" font-size="36" font-weight="700" fill="#37352F">31 秒</text>
+    <text x="20" y="102" font-size="12" fill="#37352F">同类不到一半价格</text>
+  </g>
+  <g transform="translate(285, 240)">
+    <rect width="230" height="120" fill="#FFFFFF" stroke="#2383E2" rx="6"/>
+    <text x="20" y="34" font-size="13" fill="#787774">2048px 文生图</text>
+    <text x="20" y="78" font-size="32" font-weight="700" fill="#37352F">$0.04-0.10</text>
+    <text x="20" y="102" font-size="12" fill="#37352F">Build 计划 / 张</text>
+  </g>
+  <g transform="translate(530, 240)">
+    <rect width="230" height="120" fill="#FFFFFF" stroke="#2383E2" rx="6"/>
+    <text x="20" y="34" font-size="13" fill="#787774">广告 case 对比</text>
+    <text x="20" y="78" font-size="28" font-weight="700" fill="#E2722C">40h / $2万</text>
+    <text x="20" y="102" font-size="12" fill="#37352F">原一年 / $1500 万</text>
+  </g>
+
+  <text x="40" y="400" font-size="13" font-weight="700" fill="#37352F">企业客户:</text>
+  <text x="120" y="400" font-size="13" fill="#37352F">阿迪达斯 · 马自达 · 阳狮 · Serviceplan · Envato · Krea · Comfy · Fal · Magnific</text>
+  <text x="40" y="425" font-size="11" fill="#9B9A97">数据: Luma 官方公告 + 第三方报道整理 · 2026-05-06</text>
+</svg>

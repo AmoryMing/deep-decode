@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">通用 LLM 写不了你公司的元数据</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">DataBuddy 真正的壁垒不是 SQL，是治理——云厂商对抗 ChatGPT/Claude/Gemini 的真护城河</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- 2x2 matrix -->
+  <g transform="translate(140, 140)">
+    <!-- Axes labels -->
+    <text x="270" y="-12" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F" text-anchor="middle">能力类型</text>
+
+    <!-- Column headers -->
+    <text x="135" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">写 SQL</text>
+    <text x="405" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">治理资产</text>
+
+    <!-- Row labels (left) -->
+    <text x="-12" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="end">通用 LLM 能做</text>
+    <text x="-12" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="end">只有云厂商能做</text>
+
+    <!-- Cell 1: 通用 LLM × SQL = 红海 -->
+    <rect x="0" y="40" width="270" height="160" rx="6" fill="#FFEEEE" stroke="#EB5757" stroke-width="1"/>
+    <text x="135" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#EB5757" text-anchor="middle">红海</text>
+    <text x="135" y="112" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">OpenAI Code Interpreter</text>
+    <text x="135" y="132" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">Claude Data Analysis</text>
+    <text x="135" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">谁都进得来</text>
+
+    <!-- Cell 2: 通用 LLM × 治理 = 空集 -->
+    <rect x="280" y="40" width="280" height="160" rx="6" fill="#FAFAF8" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="6,4"/>
+    <text x="420" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#787774" text-anchor="middle">空集</text>
+    <text x="420" y="112" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">拿不到你公司元数据</text>
+    <text x="420" y="132" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">拿不到血缘 / 权限</text>
+    <text x="420" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">不是模型不够强</text>
+
+    <!-- Cell 3: 云厂商 × SQL = 浅护城河 -->
+    <rect x="0" y="220" width="270" height="160" rx="6" fill="#FFF8E1" stroke="#FFB020" stroke-width="1"/>
+    <text x="135" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#FFB020" text-anchor="middle">浅护城河</text>
+    <text x="135" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">有 schema</text>
+    <text x="135" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">比通用模型强一点</text>
+    <text x="135" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">护城河浅</text>
+
+    <!-- Cell 4: 云厂商 × 治理 = 蓝海 -->
+    <rect x="280" y="220" width="280" height="160" rx="6" fill="#F0F7FF" stroke="#2383E2" stroke-width="2"/>
+    <text x="420" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#2383E2" text-anchor="middle">蓝海</text>
+    <text x="420" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">元数据 + 血缘 + 权限</text>
+    <text x="420" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">DataBuddy / Cortex / Genie</text>
+    <text x="420" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">谁都进不来</text>
+  </g>
+
+  <!-- Bottom -->
+  <rect x="40" y="490" width="720" height="36" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="513" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">评估时不要看问数 demo——看上线一个月后能不能持续检测元数据漂移并自动修复</text>
+</svg>

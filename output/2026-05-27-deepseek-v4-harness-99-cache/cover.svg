@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#F7F1E8"/>
+
+  <!-- eyebrow -->
+  <text x="400" y="60" font-size="16" fill="#8A8472" text-anchor="middle" letter-spacing="3">AI 前沿拆解 · 2026-05-27</text>
+
+  <!-- big numbers contrast -->
+  <text x="220" y="200" font-size="72" font-weight="700" fill="#2A241B" text-anchor="middle">$12</text>
+  <text x="220" y="240" font-size="18" fill="#8A8472" text-anchor="middle">单日 4.35 亿 token</text>
+
+  <text x="400" y="200" font-size="40" fill="#B85A3A" text-anchor="middle" font-weight="600">vs</text>
+
+  <text x="580" y="200" font-size="72" font-weight="700" fill="#8A8472" text-anchor="middle" text-decoration="line-through">$61</text>
+  <text x="580" y="240" font-size="18" fill="#8A8472" text-anchor="middle">无缓存优化的代价</text>
+
+  <!-- separator -->
+  <line x1="200" y1="285" x2="600" y2="285" stroke="#B85A3A" stroke-width="2"/>
+
+  <!-- subtitle / hook -->
+  <text x="400" y="330" font-size="26" fill="#2A241B" text-anchor="middle" font-weight="600">99.82% 缓存命中</text>
+  <text x="400" y="365" font-size="18" fill="#2A241B" text-anchor="middle">一个公开放弃通用性的 harness</text>
+  <text x="400" y="390" font-size="18" fill="#2A241B" text-anchor="middle">把 DeepSeek V4 的账单砍掉了 80%</text>
+
+  <!-- footer -->
+  <text x="400" y="455" font-size="14" fill="#8A8472" text-anchor="middle">DeepSeek V4 · Reasonix · 2026-05-25 量子位</text>
+</svg>

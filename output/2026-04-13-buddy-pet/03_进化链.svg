@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="bold" fill="#37352F">三篇深度分析跳过了它</text>
+  <text x="400" y="65" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">工程分析回答"怎么做"，Buddy 回答"想成为什么"</text>
+
+  <!-- HERO: Staircase metaphor - last step dramatically taller -->
+  <!-- Baseline at y=400 -->
+
+  <!-- Step 1: 工具 (short, gray) -->
+  <rect x="80" y="360" width="120" height="40" rx="4" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="140" y="385" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">工具</text>
+  <text x="140" y="355" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#BCBCBC">你说，它做</text>
+
+  <!-- Step 2: 助手 (medium, gray) -->
+  <rect x="220" y="310" width="120" height="90" rx="4" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="280" y="345" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">长期助手</text>
+  <text x="280" y="305" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#BCBCBC">你不在，它还在</text>
+
+  <!-- Step 3: 同事 (taller, gray) -->
+  <rect x="360" y="250" width="120" height="150" rx="4" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="420" y="295" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">AI 同事</text>
+  <text x="420" y="245" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#BCBCBC">它能带团队</text>
+
+  <!-- Step 4: 伙伴 (HERO - dramatically tall, blue) -->
+  <rect x="520" y="110" width="200" height="290" rx="6" fill="#2383E2" opacity="0.08" stroke="#2383E2" stroke-width="2.5"/>
+  <text x="620" y="175" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="26" font-weight="bold" fill="#2383E2">伙伴</text>
+  <text x="620" y="205" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2">Buddy</text>
+
+  <!-- Companion details inside the tall step -->
+  <line x1="555" y1="225" x2="685" y2="225" stroke="#2383E2" stroke-width="0.5" opacity="0.3"/>
+  <text x="620" y="255" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">有名字，有性格</text>
+  <text x="620" y="280" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">记住你的夸奖</text>
+  <text x="620" y="305" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">角色分离：独立观察者</text>
+  <text x="620" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">灵魂一次写入永不重来</text>
+
+  <!-- Height annotation removed: rotated CJK text renders poorly in cairosvg -->
+
+  <!-- Three pillars below staircase -->
+  <text x="400" y="425" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">KAIROS (24/7 常驻) + AutoDream (离线记忆) + Buddy (一张脸) = 伙伴操作系统</text>
+
+  <!-- Bottom insight -->
+  <rect x="170" y="450" width="460" height="35" rx="8" fill="#37352F"/>
+  <text x="400" y="473" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">进化终点不是能力，是关系</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg width="800" height="470" viewBox="0 0 800 470" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="470" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">从路线图到发射台</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">AI 原生 PM 的工作，不是把半年计划排稳，而是降低想法触达用户的摩擦。</text>
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="50" y="140" width="290" height="220" rx="12" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="195" y="174" font-size="18" font-weight="700" fill="#37352F" text-anchor="middle">传统路线图</text>
+    <text x="88" y="220" font-size="14" fill="#787774">季度对齐</text>
+    <text x="88" y="258" font-size="14" fill="#787774">跨团队依赖</text>
+    <text x="88" y="296" font-size="14" fill="#787774">PRD 默认先行</text>
+    <text x="88" y="334" font-size="14" fill="#787774">上线等于长期承诺</text>
+    <path d="M365 250 L435 250" stroke="#2383E2" stroke-width="3" marker-end="url(#arrow)"/>
+    <rect x="460" y="120" width="290" height="260" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="2"/>
+    <text x="605" y="154" font-size="18" font-weight="700" fill="#2383E2" text-anchor="middle">Anthropic 发射台</text>
+    <rect x="500" y="190" width="210" height="42" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="605" y="216" font-size="14" fill="#37352F" text-anchor="middle">清楚目标：用户 / 场景 / 边界</text>
+    <rect x="500" y="248" width="210" height="42" rx="8" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="605" y="274" font-size="14" fill="#37352F" text-anchor="middle">Research Preview 降低承诺</text>
+    <rect x="500" y="306" width="210" height="42" rx="8" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="605" y="332" font-size="14" fill="#37352F" text-anchor="middle">常驻 launch room 隔天跟进</text>
+  </g>
+  <text x="400" y="424" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" text-anchor="middle">流程没有消失，只是被压缩到离发布更近。</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2383E2"/>
+    </marker>
+  </defs>
+</svg>

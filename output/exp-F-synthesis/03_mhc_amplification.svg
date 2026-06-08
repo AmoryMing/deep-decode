@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+
+  <text x="600" y="60" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="#222222">mHC：闭源派最深的护城河之一被填平</text>
+  <text x="600" y="90" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle" fill="#666666">让 1.6 万亿参数训练稳定的工程方案，进了开源 tech report</text>
+
+  <!-- Before -->
+  <text x="300" y="160" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#222222">Before：层间信号失控</text>
+
+  <line x1="180" y1="200" x2="420" y2="200" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="180" y="195" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#999999">输入</text>
+
+  <!-- Amplification curve diverging -->
+  <path d="M 180 350 Q 250 340 280 320 Q 310 290 330 240 Q 350 180 380 100" stroke="#FFA500" stroke-width="3" fill="none"/>
+  <circle cx="180" cy="350" r="5" fill="#FFA500"/>
+  <circle cx="380" cy="100" r="7" fill="#FFA500"/>
+
+  <text x="395" y="105" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#FFA500">3000×</text>
+  <text x="395" y="125" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#999999">放大失控</text>
+
+  <text x="195" y="370" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#666666">前 1 层</text>
+  <text x="370" y="370" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#666666">深层</text>
+
+  <text x="300" y="430" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">→ loss 飞到无穷大  ·  训练崩盘</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="130" x2="600" y2="450" stroke="#E0E0E0" stroke-width="1"/>
+
+  <!-- After -->
+  <text x="900" y="160" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" text-anchor="middle" fill="#222222">After：mHC 限流阀</text>
+
+  <line x1="780" y1="200" x2="1020" y2="200" stroke="#999999" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="780" y="195" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#999999">输入</text>
+
+  <!-- Constrained line -->
+  <path d="M 780 350 L 850 340 L 920 325 L 990 310" stroke="#2383E2" stroke-width="3" fill="none"/>
+  <circle cx="780" cy="350" r="5" fill="#2383E2"/>
+  <circle cx="990" cy="310" r="7" fill="#2383E2"/>
+
+  <text x="1005" y="315" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="700" fill="#2383E2">1.6×</text>
+  <text x="1005" y="335" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#999999">受控</text>
+
+  <text x="795" y="370" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#666666">前 1 层</text>
+  <text x="980" y="370" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#666666">深层</text>
+
+  <text x="900" y="430" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" text-anchor="middle" fill="#666666">→ 1.6 万亿参数稳定收敛</text>
+
+  <!-- Bottom callout -->
+  <line x1="200" y1="500" x2="1000" y2="500" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="600" y="545" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" font-weight="600" text-anchor="middle" fill="#222222">闭源派曾经的核心壁垒：怎么把 1T+ 模型训稳</text>
+  <text x="600" y="575" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" text-anchor="middle" fill="#666666">— 大家都知道怎么做大，没人公开怎么训稳 —</text>
+
+  <text x="600" y="625" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" text-anchor="middle" fill="#FFA500">DeepSeek V4 把方法论写进了开源 tech report</text>
+  <text x="600" y="655" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">下一代开源模型不需要从零摸索这条路</text>
+</svg>

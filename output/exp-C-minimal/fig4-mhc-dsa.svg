@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="900" height="540" fill="#FFFFFF"/>
+  <text x="40" y="50" font-size="20" font-weight="700" fill="#1A1A1A">图 4·V4 拆护城河的两根钢筋</text>
+  <text x="40" y="76" font-size="13" fill="#666">mHC 让 1.6T 参数训练稳定 · DSA 把 1M 上下文成本降一个数量级</text>
+
+  <!-- mHC panel -->
+  <rect x="40" y="110" width="400" height="380" fill="#F5F9FF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="60" y="140" font-size="15" font-weight="700" fill="#2383E2">mHC · 训练稳定性</text>
+  <text x="60" y="160" font-size="12" fill="#666">Manifold-Constrained Hyper-Connections</text>
+
+  <text x="60" y="200" font-size="13" fill="#1A1A1A">层间信号放大：</text>
+
+  <!-- before bar -->
+  <text x="60" y="240" font-size="12" fill="#666">改造前</text>
+  <rect x="60" y="250" width="340" height="20" fill="#2383E2" rx="2"/>
+  <text x="60" y="285" font-size="14" font-weight="700" fill="#2383E2">3000×</text>
+  <text x="120" y="285" font-size="11" fill="#888">→ 千亿级 Dense 模型 collapse 触发器</text>
+
+  <!-- after bar -->
+  <text x="60" y="320" font-size="12" fill="#666">改造后</text>
+  <rect x="60" y="330" width="2.4" height="20" fill="#FFA500" rx="2"/>
+  <text x="60" y="365" font-size="14" font-weight="700" fill="#FFA500">1.6×</text>
+  <text x="120" y="365" font-size="11" fill="#888">→ 1.6T 参数训练稳定可复现</text>
+
+  <line x1="60" y1="395" x2="420" y2="395" stroke="#D0E1F5"/>
+  <text x="60" y="425" font-size="12" fill="#1A1A1A">据 DeepSeek tech report，行业首次公开</text>
+  <text x="60" y="445" font-size="12" fill="#1A1A1A">1T+ 模型训练稳定性的工程方案</text>
+  <text x="60" y="475" font-size="11" fill="#888">闭源派最深壁垒之一进了开源 tech report</text>
+
+  <!-- DSA panel -->
+  <rect x="460" y="110" width="400" height="380" fill="#FFFCF5" stroke="#FFA500" stroke-width="2" rx="6"/>
+  <text x="480" y="140" font-size="15" font-weight="700" fill="#E68A00">DSA · 注意力压缩</text>
+  <text x="480" y="160" font-size="12" fill="#666">DeepSeek Sparse Attention（CSA + HCA）</text>
+
+  <text x="480" y="200" font-size="13" fill="#1A1A1A">1M 上下文 V4 vs V3.2：</text>
+
+  <text x="480" y="240" font-size="12" fill="#666">FLOPs / token</text>
+  <rect x="480" y="250" width="340" height="20" fill="#E0E0E0" rx="2"/>
+  <rect x="480" y="250" width="91.8" height="20" fill="#FFA500" rx="2"/>
+  <text x="480" y="285" font-size="14" font-weight="700" fill="#FFA500">27%</text>
+  <text x="540" y="285" font-size="11" fill="#888">→ 节约 73%</text>
+
+  <text x="480" y="320" font-size="12" fill="#666">KV cache</text>
+  <rect x="480" y="330" width="340" height="20" fill="#E0E0E0" rx="2"/>
+  <rect x="480" y="330" width="34" height="20" fill="#FFA500" rx="2"/>
+  <text x="480" y="365" font-size="14" font-weight="700" fill="#FFA500">10%</text>
+  <text x="540" y="365" font-size="11" fill="#888">→ 节约 90%</text>
+
+  <line x1="480" y1="395" x2="840" y2="395" stroke="#FFE0B0"/>
+  <text x="480" y="425" font-size="12" fill="#1A1A1A">配 Moonshot PrfaaS（4-16）一起读</text>
+  <text x="480" y="445" font-size="12" fill="#1A1A1A">两条线并行压 KV：模型层 + 基础设施层</text>
+  <text x="480" y="475" font-size="11" fill="#888">让 1M 上下文从研究指标变商业可行</text>
+
+  <text x="40" y="525" font-size="10" fill="#999">数据来源：DeepSeek V4 tech report · Buildfastwithai 第三方拆解 · Moonshot PrfaaS 论文（2026-04-16）</text>
+</svg>

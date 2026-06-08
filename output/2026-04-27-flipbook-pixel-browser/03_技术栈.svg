@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="400" y="38" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">为什么必须是视频模型 —— 三件事一起决定</text>
+
+  <!-- stack -->
+  <text x="60" y="80" font-size="14" font-weight="600" fill="#787774">技术栈</text>
+  <rect x="60" y="94" width="680" height="48" fill="#EBF5FF" stroke="#2383E2" rx="6"/>
+  <text x="80" y="124" font-size="14" fill="#1A4D8C">用户浏览器</text>
+  <text x="200" y="124" font-size="13" fill="#787774">←—— WebSocket 1080p/24fps ——→</text>
+  <text x="465" y="124" font-size="14" fill="#1A4D8C">Modal Labs serverless GPU</text>
+  <text x="650" y="124" font-size="13" fill="#787774">运行</text>
+  <text x="690" y="124" font-size="14" font-weight="600" fill="#1A4D8C">LTX DiT</text>
+
+  <!-- 3 reasons grid -->
+  <text x="400" y="180" font-size="15" font-weight="600" fill="#1A1A1A" text-anchor="middle">视频模型 vs 图像模型 —— 为什么 SDXL/Flux 不行</text>
+
+  <!-- reason 1 -->
+  <rect x="40" y="200" width="240" height="280" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="160" y="228" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">1. 帧间一致性</text>
+  <text x="55" y="258" font-size="12" fill="#787774">图像模型（SDXL）：</text>
+  <text x="55" y="280" font-size="12" fill="#37352F">每次推理用不同噪声</text>
+  <text x="55" y="300" font-size="12" fill="#37352F">同一 prompt 出来细节不同</text>
+  <text x="55" y="328" font-size="12" font-weight="600" fill="#C8453C">→ 字体配色全部抖动</text>
+  <text x="55" y="350" font-size="12" font-weight="600" fill="#C8453C">→ 用户看到发癫的 GIF</text>
+  <text x="55" y="382" font-size="12" fill="#787774">视频模型（LTX）：</text>
+  <text x="55" y="404" font-size="12" fill="#37352F">训练时学过"什么该变"</text>
+  <text x="55" y="424" font-size="12" fill="#37352F">"什么不该变"</text>
+  <text x="55" y="452" font-size="12" font-weight="600" fill="#2383E2">→ 原生支持稳定界面</text>
+
+  <!-- reason 2 -->
+  <rect x="290" y="200" width="240" height="280" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="410" y="228" font-size="14" font-weight="700" fill="#1A1A1A" text-anchor="middle">2. 点击响应延迟</text>
+  <text x="305" y="258" font-size="12" fill="#787774">图像模型：</text>
+  <text x="305" y="280" font-size="12" fill="#37352F">单张高质量图 2–5 秒</text>
+  <text x="305" y="300" font-size="12" fill="#37352F">用户点完会以为卡死</text>
+  <text x="305" y="328" font-size="12" font-weight="600" fill="#C8453C">→ 体感像 PPT 不像浏览器</text>
+  <text x="305" y="360" font-size="12" fill="#787774">视频模型：</text>
+  <text x="305" y="382" font-size="12" fill="#37352F">一次出多帧（24fps）</text>
+  <text x="305" y="402" font-size="12" fill="#37352F">动画过渡填补延迟</text>
+  <text x="305" y="430" font-size="12" font-weight="600" fill="#2383E2">→ 用户感觉"在响应"</text>
+
+  <!-- reason 3 -->
+  <rect x="540" y="200" width="240" height="280" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="660" y="228" font-size="14" font-weight="700" fill="#2383E2" text-anchor="middle">3. 文字稳定性</text>
+  <text x="555" y="258" font-size="12" fill="#787774">最反直觉的一点</text>
+  <text x="555" y="282" font-size="12" fill="#37352F">单帧图像模型经常画歪字</text>
+  <text x="555" y="302" font-size="12" fill="#37352F">因为静态图里学的"文字"</text>
+  <text x="555" y="322" font-size="12" fill="#37352F">和真实排版差距太大</text>
+  <text x="555" y="354" font-size="12" fill="#787774">视频模型见过：</text>
+  <text x="555" y="376" font-size="12" fill="#37352F">字幕、电视新闻、网页录屏</text>
+  <text x="555" y="396" font-size="12" fill="#37352F">的连续帧文字数据更多</text>
+  <text x="555" y="424" font-size="12" font-weight="600" fill="#2383E2">→ 文字结构反而更稳</text>
+
+  <text x="400" y="508" font-size="12" fill="#787774" text-anchor="middle">flipbook 这个产品形态 ≠ 任何时候都成立 —— 只有 LTX 这一代 DiT 模型把三个指标推到可用线之上才存在</text>
+</svg>

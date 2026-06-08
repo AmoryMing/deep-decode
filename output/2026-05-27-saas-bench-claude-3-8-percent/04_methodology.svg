@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#F7F1E8"/>
+
+  <text x="60" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472" letter-spacing="2">METHODOLOGY  ·  EVALS  UPGRADE</text>
+  <text x="60" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#2A241B">把评测从答题升到生产环境</text>
+  <text x="60" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#8A8472">23 SaaS  ×  Docker  ×  三类 verifier  =  让作弊变困难</text>
+
+  <line x1="60" y1="155" x2="740" y2="155" stroke="#D8CFB8" stroke-width="1"/>
+
+  <!-- Stage 1: 23 SaaS -->
+  <g transform="translate(60, 185)">
+    <rect x="0" y="0" width="200" height="220" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="100" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#8A8472" text-anchor="middle" letter-spacing="1">23  REAL  SAAS</text>
+    <text x="100" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#2A241B" text-anchor="middle">23 套开源系统</text>
+    <line x1="20" y1="80" x2="180" y2="80" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="20" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">BigCapital  财务</text>
+    <text x="20" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">ERPNext  ERP</text>
+    <text x="20" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">OpenEMR  医疗</text>
+    <text x="20" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">Twenty CRM  客户</text>
+    <text x="20" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">Mattermost  协作</text>
+    <text x="20" y="194" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">code-server  IDE  …</text>
+  </g>
+
+  <text x="280" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#8A8472" text-anchor="middle">→</text>
+
+  <!-- Stage 2: Docker harness -->
+  <g transform="translate(300, 185)">
+    <rect x="0" y="0" width="200" height="220" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="100" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#8A8472" text-anchor="middle" letter-spacing="1">DOCKER  HARNESS</text>
+    <text x="100" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#2A241B" text-anchor="middle">每题起干净容器</text>
+    <line x1="20" y1="80" x2="180" y2="80" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="20" y="104" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">真前端 UI 可点</text>
+    <text x="20" y="122" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">真数据库可查</text>
+    <text x="20" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">真业务约束可触发</text>
+    <text x="20" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">并行容器编排</text>
+    <text x="20" y="176" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">agent 轨迹日志</text>
+    <text x="20" y="194" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2A241B">可复现 · 可审计</text>
+  </g>
+
+  <text x="520" y="305" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#8A8472" text-anchor="middle">→</text>
+
+  <!-- Stage 3: 3 Verifiers -->
+  <g transform="translate(540, 185)">
+    <rect x="0" y="0" width="200" height="220" rx="6" fill="#B85A3A" stroke="#B85A3A" stroke-width="1"/>
+    <text x="100" y="30" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#F7E8DE" text-anchor="middle" letter-spacing="1">THREE  VERIFIERS</text>
+    <text x="100" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">没法靠演过关</text>
+    <line x1="20" y1="80" x2="180" y2="80" stroke="#F7E8DE" stroke-width="1"/>
+    <text x="20" y="106" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">State-Check</text>
+    <text x="20" y="124" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#F7E8DE">直接查数据库 / API 状态</text>
+    <text x="20" y="146" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">Content-Check</text>
+    <text x="20" y="164" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#F7E8DE">字符串 / 正则匹配</text>
+    <text x="20" y="186" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFFFFF">LLM-Judge</text>
+    <text x="20" y="204" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#F7E8DE">开放式输出 LLM 评判</text>
+  </g>
+
+  <!-- Scale row -->
+  <g transform="translate(60, 440)">
+    <rect x="0" y="0" width="680" height="80" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="30" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#8A8472">规模</text>
+    <text x="30" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#2A241B">106 任务  ·  3,971 checkpoint  ·  6 职业领域  ·  93.4% 跨应用</text>
+    <text x="500" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#8A8472">复杂度</text>
+    <text x="500" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#2A241B">97.3% &gt; 100 步</text>
+  </g>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">Write-time vs Query-time — 方法论级别的分歧</text>
+  <text x="400" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">两种路线账算得完全不同 — 税只是换形式</text>
+
+  <!-- 左：Karpathy write-time -->
+  <rect x="40" y="100" width="340" height="380" rx="8" fill="#F7F7F5"/>
+  <text x="60" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#2383E2">Karpathy — Write-time 合成</text>
+  <text x="60" y="150" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">摄入时就把 wiki/ 编好</text>
+
+  <!-- 流程方块 -->
+  <rect x="60" y="170" width="300" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="210" y="193" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">raw/ — 只读源材料</text>
+
+  <defs>
+    <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#787774"/>
+    </marker>
+  </defs>
+
+  <line x1="210" y1="210" x2="210" y2="230" stroke="#787774" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="60" y="236" width="300" height="36" rx="4" fill="#2383E2"/>
+  <text x="210" y="259" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">摄入时 LLM 合成完整 wiki/</text>
+
+  <line x1="210" y1="276" x2="210" y2="296" stroke="#787774" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="60" y="302" width="300" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="210" y="325" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">查询直读 wiki/ — 单次极便宜</text>
+
+  <!-- 账本 -->
+  <text x="60" y="380" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#37352F">优点</text>
+  <text x="60" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">一次合成 N 次复用 — 查询快而便宜</text>
+
+  <text x="60" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#EB5757">代价</text>
+  <text x="60" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">合成层会漂 — 用户看不见漂</text>
+  <text x="60" y="463" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">税交给「守住 schema」的长期守门人</text>
+
+  <!-- 右：foundanand query-time -->
+  <rect x="420" y="100" width="340" height="380" rx="8" fill="#F7F7F5"/>
+  <text x="440" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#9B51E0">foundanand — Query-time 合成</text>
+  <text x="440" y="150" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">摄入只抽元数据，查询时回原文现合成</text>
+
+  <rect x="440" y="170" width="300" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="590" y="193" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">raw/ — 只读源材料</text>
+
+  <line x1="590" y1="210" x2="590" y2="230" stroke="#787774" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="440" y="236" width="300" height="36" rx="4" fill="#9B51E0"/>
+  <text x="590" y="259" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">摄入只抽元数据（实体/关系/tag）</text>
+
+  <line x1="590" y1="276" x2="590" y2="296" stroke="#787774" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+  <rect x="440" y="302" width="300" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="590" y="325" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">查询时回 raw/ 现合成 — 贵而慢</text>
+
+  <text x="440" y="380" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#37352F">优点</text>
+  <text x="440" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">信任链永远短而透明 — 分得清原著</text>
+
+  <text x="440" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#EB5757">代价</text>
+  <text x="440" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">长尾关联跨 500 条笔记时拼不起</text>
+  <text x="440" y="463" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">税交给「每次查询预算」</text>
+
+  <!-- 底部 -->
+  <rect x="40" y="500" width="720" height="40" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="400" y="525" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">分歧本身说明 — 维护税没消失，只是换了形式</text>
+</svg>

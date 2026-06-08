@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420">
+  <rect width="800" height="420" fill="#FFFFFF"/>
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">自然语言到个人地图的五步</text>
+
+  <!-- step blocks -->
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <!-- step 1 -->
+    <g transform="translate(30,120)">
+      <rect width="130" height="120" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+      <circle cx="20" cy="22" r="14" fill="#2383E2"/>
+      <text x="20" y="27" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+      <text x="65" y="60" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">自然语言</text>
+      <text x="65" y="85" font-size="11" fill="#666" text-anchor="middle">三里屯下午</text>
+      <text x="65" y="102" font-size="11" fill="#666" text-anchor="middle">咖啡 + 逛街</text>
+    </g>
+    <!-- arrow -->
+    <path d="M165,180 L195,180 M186,172 L195,180 L186,188" stroke="#37352F" stroke-width="1.5" fill="none"/>
+    <!-- step 2 -->
+    <g transform="translate(200,120)">
+      <rect width="130" height="120" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+      <circle cx="20" cy="22" r="14" fill="#2383E2"/>
+      <text x="20" y="27" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+      <text x="65" y="60" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">Skill 路由</text>
+      <text x="65" y="85" font-size="11" fill="#666" text-anchor="middle">SKILL.md</text>
+      <text x="65" y="102" font-size="11" fill="#666" text-anchor="middle">渐进披露</text>
+    </g>
+    <path d="M335,180 L365,180 M356,172 L365,180 L356,188" stroke="#37352F" stroke-width="1.5" fill="none"/>
+    <!-- step 3 -->
+    <g transform="translate(370,120)">
+      <rect width="130" height="120" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+      <circle cx="20" cy="22" r="14" fill="#2383E2"/>
+      <text x="20" y="27" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+      <text x="65" y="60" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">Web API 调用</text>
+      <text x="65" y="85" font-size="11" fill="#666" text-anchor="middle">地理编码</text>
+      <text x="65" y="102" font-size="11" fill="#666" text-anchor="middle">POI / 路径</text>
+    </g>
+    <path d="M505,180 L535,180 M526,172 L535,180 L526,188" stroke="#37352F" stroke-width="1.5" fill="none"/>
+    <!-- step 4 -->
+    <g transform="translate(540,120)">
+      <rect width="130" height="120" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+      <circle cx="20" cy="22" r="14" fill="#2383E2"/>
+      <text x="20" y="27" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+      <text x="65" y="60" font-size="13" font-weight="bold" fill="#37352F" text-anchor="middle">渲染 + 二维码</text>
+      <text x="65" y="85" font-size="11" fill="#666" text-anchor="middle">个人地图实例</text>
+      <text x="65" y="102" font-size="11" fill="#666" text-anchor="middle">扫码可达</text>
+    </g>
+    <!-- step 5 below -->
+    <path d="M605,250 L605,290 M597,281 L605,290 L613,281" stroke="#37352F" stroke-width="1.5" fill="none"/>
+    <g transform="translate(540,295)">
+      <rect width="130" height="100" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="8"/>
+      <circle cx="20" cy="22" r="14" fill="#2383E2"/>
+      <text x="20" y="27" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+      <text x="65" y="58" font-size="13" font-weight="bold" fill="#2383E2" text-anchor="middle">高德 App</text>
+      <text x="65" y="80" font-size="11" fill="#666" text-anchor="middle">导航 / 分享 / 长存</text>
+    </g>
+  </g>
+
+  <text x="400" y="395" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#888" text-anchor="middle">App 是这条链路的终点，不是入口</text>
+</svg>

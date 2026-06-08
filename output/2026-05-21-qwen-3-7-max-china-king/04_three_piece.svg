@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="60" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">三件套绑定才是真正的产品发布</text>
+  <text x="60" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Qwen3.7-Max 只是封面。模型 + 自研芯片 + 自家云，对标 Google 和 OpenAI 的同型逻辑</text>
+
+  <line x1="60" y1="95" x2="740" y2="95" stroke="#E9E9E7" stroke-width="1"/>
+
+  <!-- Three vertical pillars (Alibaba stack) -->
+  <g transform="translate(60, 130)">
+    <text x="340" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">阿里三件套</text>
+
+    <!-- Pillar 1: Model -->
+    <rect x="0" y="20" width="220" height="150" rx="8" fill="#E7F3FB" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="110" y="48" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" text-anchor="middle" letter-spacing="2">MODEL</text>
+    <text x="110" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">Qwen3.7-Max</text>
+    <text x="110" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">35 小时连续编程</text>
+    <text x="110" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">1158 次工具调用</text>
+    <text x="110" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">432 次内核评估</text>
+
+    <!-- Plus sign -->
+    <text x="240" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="300" fill="#9B9A97" text-anchor="middle">+</text>
+
+    <!-- Pillar 2: Chip -->
+    <rect x="260" y="20" width="220" height="150" rx="8" fill="#FBEEEB" stroke="#E03E3E" stroke-width="1.5"/>
+    <text x="370" y="48" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#E03E3E" text-anchor="middle" letter-spacing="2">CHIP</text>
+    <text x="370" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">平头哥 M890</text>
+    <text x="370" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">真武训推一体</text>
+    <text x="370" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">注意力内核 10x</text>
+    <text x="370" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">vs 官方参考实现</text>
+
+    <text x="500" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="300" fill="#9B9A97" text-anchor="middle">+</text>
+
+    <!-- Pillar 3: Cloud -->
+    <rect x="520" y="20" width="220" height="150" rx="8" fill="#EAF2EC" stroke="#0F7B6C" stroke-width="1.5"/>
+    <text x="630" y="48" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#0F7B6C" text-anchor="middle" letter-spacing="2">CLOUD</text>
+    <text x="630" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">阿里云百炼</text>
+    <text x="630" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">推理框架同源</text>
+    <text x="630" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">API 起价 2.5 元</text>
+    <text x="630" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">/百万 token</text>
+  </g>
+
+  <!-- Comparison table -->
+  <g transform="translate(60, 340)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">同型逻辑对标</text>
+
+    <!-- Header row -->
+    <g transform="translate(0, 18)">
+      <rect x="0" y="0" width="680" height="32" fill="#F7F6F3"/>
+      <text x="100" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">厂商</text>
+      <text x="270" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">模型</text>
+      <text x="440" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">芯片</text>
+      <text x="610" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">云</text>
+    </g>
+
+    <!-- Row 1: Alibaba -->
+    <g transform="translate(0, 50)">
+      <rect x="0" y="0" width="680" height="32" fill="#FFFFFF" stroke="#E9E9E7" stroke-width="0.5"/>
+      <text x="100" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">阿里</text>
+      <text x="270" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" text-anchor="middle" font-weight="600">Qwen3.7-Max</text>
+      <text x="440" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#E03E3E" text-anchor="middle" font-weight="600">平头哥 M890</text>
+      <text x="610" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#0F7B6C" text-anchor="middle" font-weight="600">阿里云百炼</text>
+    </g>
+
+    <!-- Row 2: Google -->
+    <g transform="translate(0, 82)">
+      <rect x="0" y="0" width="680" height="32" fill="#FAFAF9" stroke="#E9E9E7" stroke-width="0.5"/>
+      <text x="100" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">Google</text>
+      <text x="270" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Gemini 3.5</text>
+      <text x="440" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">TPU 8t / 8i</text>
+      <text x="610" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">GCP</text>
+    </g>
+
+    <!-- Row 3: OpenAI -->
+    <g transform="translate(0, 114)">
+      <rect x="0" y="0" width="680" height="32" fill="#FFFFFF" stroke="#E9E9E7" stroke-width="0.5"/>
+      <text x="100" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">OpenAI</text>
+      <text x="270" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">GPT 系列</text>
+      <text x="440" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">NVIDIA</text>
+      <text x="610" y="21" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Azure</text>
+    </g>
+  </g>
+</svg>

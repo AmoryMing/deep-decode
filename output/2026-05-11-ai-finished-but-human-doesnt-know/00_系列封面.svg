@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <!-- Top dim bar suggesting hidden content -->
+  <rect x="60" y="60" width="680" height="36" fill="#F1EFEC" stroke="#E3E2E0"/>
+  <text x="80" y="84" font-size="14" fill="#9B9A97" font-style="italic">✻ Thinking…</text>
+  <text x="720" y="84" font-size="12" fill="#9B9A97" text-anchor="end">redacted_thinking</text>
+
+  <!-- Title -->
+  <text x="60" y="190" font-size="44" font-weight="700" fill="#37352F">thinking 默认隐身</text>
+  <text x="60" y="248" font-size="22" fill="#787774">issue #8477 不是 UX bug</text>
+  <text x="60" y="280" font-size="22" fill="#787774">是 Anthropic 写在源码里的取舍</text>
+
+  <!-- Three keystrokes -->
+  <g font-size="16" fill="#37352F">
+    <rect x="60" y="340" width="80" height="36" fill="#FFFFFF" stroke="#37352F"/>
+    <text x="100" y="364" text-anchor="middle">ctrl+o</text>
+    <text x="158" y="364" font-size="20" fill="#787774">→</text>
+    <rect x="180" y="340" width="80" height="36" fill="#FFFFFF" stroke="#37352F"/>
+    <text x="220" y="364" text-anchor="middle">ctrl+e</text>
+    <text x="278" y="364" font-size="20" fill="#787774">→</text>
+    <rect x="300" y="340" width="120" height="36" fill="#FFFFFF" stroke="#37352F"/>
+    <text x="360" y="364" text-anchor="middle">scroll up</text>
+    <text x="445" y="364" font-size="14" fill="#9B9A97">tedious — janbam</text>
+  </g>
+
+  <!-- Source code reference -->
+  <text x="60" y="430" font-size="13" fill="#9B9A97" font-family="Menlo, monospace">// utils/betas.ts:265</text>
+  <text x="60" y="452" font-size="13" fill="#37352F" font-family="Menlo, monospace">// interactive users rarely open ctrl+o</text>
+
+  <!-- Brand -->
+  <text x="740" y="476" font-size="11" fill="#9B9A97" text-anchor="end">中数智汇 · AI Force</text>
+</svg>

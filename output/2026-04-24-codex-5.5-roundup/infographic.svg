@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 1320" font-family="PingFang SC, Inter, sans-serif">
+  <!-- 背景 -->
+  <rect width="820" height="1320" fill="#F7F7F5"/>
+
+  <!-- ========== 顶部标题区 ========== -->
+  <rect x="0" y="0" width="820" height="110" fill="#FFFFFF"/>
+  <rect x="0" y="108" width="820" height="2" fill="#2D8C6F"/>
+  <text x="410" y="48" text-anchor="middle" font-size="26" font-weight="700" fill="#37352F">分叉领先</text>
+  <text x="410" y="78" text-anchor="middle" font-size="14" fill="#787774">GPT-5.5 与 Claude Opus 4.7 的一周战事 · 2026.04.24 AI Force 情报组</text>
+
+  <!-- ========== Section 1: 一周时间线 ========== -->
+  <text x="40" y="148" font-size="18" font-weight="700" fill="#37352F">一周三事件：AI 编程工具的精准交锋</text>
+
+  <!-- 时间线主轴 -->
+  <line x1="80" y1="230" x2="780" y2="230" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- 节点 1：4-16 Opus 4.7 -->
+  <circle cx="160" cy="230" r="10" fill="#4DB6AC"/>
+  <text x="160" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#4DB6AC">04-16</text>
+  <rect x="85" y="248" width="150" height="80" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="160" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#37352F">Anthropic 先手</text>
+  <text x="160" y="292" text-anchor="middle" font-size="11" fill="#787774">Claude Opus 4.7 GA</text>
+  <text x="160" y="310" text-anchor="middle" font-size="11" fill="#787774">SWE-bench Pro 64.3%</text>
+
+  <!-- 节点 2：4-21 Claude Code 剥离 -->
+  <circle cx="330" cy="230" r="10" fill="#EB5757"/>
+  <text x="330" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#EB5757">04-21</text>
+  <rect x="255" y="248" width="150" height="80" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="330" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#37352F">悄悄剥离</text>
+  <text x="330" y="292" text-anchor="middle" font-size="11" fill="#787774">Pro $20 移除 Claude Code</text>
+  <text x="330" y="310" text-anchor="middle" font-size="11" fill="#787774">HN 截图 1 小时发酵</text>
+
+  <!-- 节点 3：4-22 OpenAI 反击 -->
+  <circle cx="500" cy="230" r="10" fill="#2383E2"/>
+  <text x="500" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#2383E2">04-22</text>
+  <rect x="425" y="248" width="150" height="80" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="500" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#37352F">精准补刀</text>
+  <text x="500" y="292" text-anchor="middle" font-size="11" fill="#787774">&quot;Codex 不从 Plus 移除&quot;</text>
+  <text x="500" y="310" text-anchor="middle" font-size="11" fill="#787774">距离 Anthropic 不到 24h</text>
+
+  <!-- 节点 4：4-23 GPT-5.5 发布 + 三连降智披露 -->
+  <circle cx="680" cy="230" r="10" fill="#2383E2"/>
+  <text x="680" y="200" text-anchor="middle" font-size="12" font-weight="700" fill="#2383E2">04-23</text>
+  <rect x="605" y="248" width="150" height="80" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="680" y="272" text-anchor="middle" font-size="13" font-weight="700" fill="#37352F">终局</text>
+  <text x="680" y="292" text-anchor="middle" font-size="11" fill="#787774">GPT-5.5 发布</text>
+  <text x="680" y="310" text-anchor="middle" font-size="11" fill="#787774">三连降智同日披露</text>
+
+  <!-- ========== Section 2: 分叉领先 benchmark ========== -->
+  <rect x="0" y="360" width="820" height="2" fill="#E3E2E0"/>
+  <text x="40" y="398" font-size="18" font-weight="700" fill="#37352F">不是碾压，是分叉：同一时代，不同强项</text>
+
+  <!-- 左栏：GPT-5.5 强项 -->
+  <rect x="40" y="420" width="360" height="280" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <rect x="40" y="420" width="360" height="44" rx="8" fill="#2383E2"/>
+  <rect x="40" y="450" width="360" height="14" fill="#2383E2"/>
+  <text x="60" y="448" font-size="15" font-weight="700" fill="#FFFFFF">GPT-5.5 领先的 Agent 赛道</text>
+
+  <text x="60" y="488" font-size="13" fill="#37352F">Terminal-Bench 2.0</text>
+  <text x="380" y="488" text-anchor="end" font-size="13" font-weight="700" fill="#2383E2">82.7%</text>
+  <text x="60" y="506" font-size="11" fill="#787774">vs Opus 4.7 · 69.4%（+13.3pp）</text>
+
+  <text x="60" y="540" font-size="13" fill="#37352F">OSWorld-Verified 电脑操控</text>
+  <text x="380" y="540" text-anchor="end" font-size="13" font-weight="700" fill="#2383E2">78.7%</text>
+  <text x="60" y="558" font-size="11" fill="#787774">vs Opus 4.7 · ~65%（+13.7pp）</text>
+
+  <text x="60" y="592" font-size="13" fill="#37352F">MRCR v2 长上下文 1M</text>
+  <text x="380" y="592" text-anchor="end" font-size="13" font-weight="700" fill="#2383E2">74.0%</text>
+  <text x="60" y="610" font-size="11" fill="#787774">vs Opus 4.7 · 32.2%（+41.8pp）</text>
+
+  <text x="60" y="644" font-size="13" fill="#37352F">GDPval 知识工作</text>
+  <text x="380" y="644" text-anchor="end" font-size="13" font-weight="700" fill="#2383E2">84.9%</text>
+  <text x="60" y="662" font-size="11" fill="#787774">vs Opus 4.7 · ~78%（+6.9pp）</text>
+
+  <text x="60" y="686" font-size="11" fill="#787774">关键词：终端 / 电脑操控 / 长上下文</text>
+
+  <!-- 右栏：Claude Opus 4.7 强项 -->
+  <rect x="420" y="420" width="360" height="280" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <rect x="420" y="420" width="360" height="44" rx="8" fill="#9B51E0"/>
+  <rect x="420" y="450" width="360" height="14" fill="#9B51E0"/>
+  <text x="440" y="448" font-size="15" font-weight="700" fill="#FFFFFF">Opus 4.7 守住的代码工程赛道</text>
+
+  <text x="440" y="488" font-size="13" fill="#37352F">SWE-bench Pro 多文件修复</text>
+  <text x="760" y="488" text-anchor="end" font-size="13" font-weight="700" fill="#9B51E0">64.3%</text>
+  <text x="440" y="506" font-size="11" fill="#787774">vs GPT-5.5 · 58.6%（+5.7pp）</text>
+
+  <text x="440" y="540" font-size="13" fill="#37352F">SWE-bench Verified</text>
+  <text x="760" y="540" text-anchor="end" font-size="13" font-weight="700" fill="#9B51E0">87.6%</text>
+  <text x="440" y="558" font-size="11" fill="#787774">vs GPT-5.5 · ~85%（+2.6pp）</text>
+
+  <text x="440" y="592" font-size="13" fill="#37352F">CursorBench IDE 集成</text>
+  <text x="760" y="592" text-anchor="end" font-size="13" font-weight="700" fill="#9B51E0">~70%</text>
+  <text x="440" y="610" font-size="11" fill="#787774">vs GPT-5.5 · ~65%（+5pp）</text>
+
+  <text x="440" y="644" font-size="13" fill="#37352F">GPQA Diamond 科学推理</text>
+  <text x="760" y="644" text-anchor="end" font-size="13" font-weight="700" fill="#9B51E0">94.2%</text>
+  <text x="440" y="662" font-size="11" fill="#787774">vs GPT-5.5 · ~93%（+1.2pp）</text>
+
+  <text x="440" y="686" font-size="11" fill="#787774">关键词：多文件 / IDE 集成 / 高精度提交</text>
+
+  <!-- ========== Section 3: 20 美元战线 ========== -->
+  <rect x="0" y="730" width="820" height="2" fill="#E3E2E0"/>
+  <text x="40" y="768" font-size="18" font-weight="700" fill="#37352F">20 美元战线：模型竞争从 benchmark 挪到月度订阅</text>
+
+  <!-- 定价对比 -->
+  <rect x="40" y="790" width="360" height="170" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="60" y="818" font-size="14" font-weight="700" fill="#EB5757">Anthropic · 流程失控</text>
+  <text x="60" y="846" font-size="13" fill="#37352F">Pro $20/月 → 移除 Claude Code</text>
+  <text x="60" y="868" font-size="12" fill="#787774">新用户需升 Max 5x · $100/月</text>
+  <text x="60" y="888" font-size="12" fill="#787774">或 Max 20x · $200/月（涨 5-10 倍）</text>
+  <text x="60" y="918" font-size="12" fill="#37352F">官方口径：2% 新用户 A/B 测试</text>
+  <text x="60" y="938" font-size="11" fill="#787774">悄悄改文档无公告 · HN 截图发酵后承认</text>
+
+  <rect x="420" y="790" width="360" height="170" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="440" y="818" font-size="14" font-weight="700" fill="#2383E2">OpenAI · 精准应对</text>
+  <text x="440" y="846" font-size="13" fill="#37352F">Codex 留在免费版 + Plus $20</text>
+  <text x="440" y="868" font-size="12" fill="#787774">GPT-5.5 API $5/$30（2x GPT-5.4 定价）</text>
+  <text x="440" y="888" font-size="12" fill="#787774">NVIDIA GB200 每 token 成本降 35x</text>
+  <text x="440" y="918" font-size="12" fill="#37352F">Codex 周活：3M → 4M（两周 +1M）</text>
+  <text x="440" y="938" font-size="11" fill="#787774">Altman 承诺每 100 万用户重置一次上限</text>
+
+  <!-- 核心判断 -->
+  <rect x="40" y="980" width="740" height="60" rx="8" fill="#FFF3E0"/>
+  <text x="410" y="1010" text-anchor="middle" font-size="14" font-weight="700" fill="#37352F">Agent loop 后台长跑打破了按对话次数定价的订阅假设</text>
+  <text x="410" y="1028" text-anchor="middle" font-size="12" fill="#787774">一个重度用户可以消耗 100 个普通用户的资源 · 订阅架构被迫重新设计</text>
+
+  <!-- ========== Section 4: 值得关注的信号 ========== -->
+  <rect x="0" y="1070" width="820" height="2" fill="#E3E2E0"/>
+  <text x="40" y="1108" font-size="18" font-weight="700" fill="#37352F">值得关注的六个信号</text>
+
+  <!-- 6 个信号 2x3 网格 -->
+  <rect x="40" y="1130" width="240" height="74" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="60" y="1154" font-size="13" font-weight="700" fill="#2383E2">分叉领先成为常态</text>
+  <text x="60" y="1174" font-size="11" fill="#787774">"谁更强"这个问题不再好用</text>
+  <text x="60" y="1191" font-size="11" fill="#787774">要按任务路由，不按总分选</text>
+
+  <rect x="290" y="1130" width="240" height="74" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="310" y="1154" font-size="13" font-weight="700" fill="#EB5757">20 美元才是主战场</text>
+  <text x="310" y="1174" font-size="11" fill="#787774">每月 20 美元能买到什么 Agent</text>
+  <text x="310" y="1191" font-size="11" fill="#787774">决定百万开发者的日常选择</text>
+
+  <rect x="540" y="1130" width="240" height="74" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="560" y="1154" font-size="13" font-weight="700" fill="#FFB020">Agent 消费打破假设</text>
+  <text x="560" y="1174" font-size="11" fill="#787774">按小时跑 agent，不按次对话</text>
+  <text x="560" y="1191" font-size="11" fill="#787774">订阅架构正在被重新设计</text>
+
+  <rect x="40" y="1214" width="240" height="74" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="60" y="1238" font-size="13" font-weight="700" fill="#9B51E0">Codex 转向桌面 Agent</text>
+  <text x="60" y="1258" font-size="11" fill="#787774">电脑操控 + 内置浏览器 + iOS</text>
+  <text x="60" y="1275" font-size="11" fill="#787774">从代码工具变后台数字员工</text>
+
+  <rect x="290" y="1214" width="240" height="74" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="310" y="1238" font-size="13" font-weight="700" fill="#4DB6AC">长上下文差距被快速消费</text>
+  <text x="310" y="1258" font-size="11" fill="#787774">MRCR v2 差 41.8pp</text>
+  <text x="310" y="1275" font-size="11" fill="#787774">仓库整塞将成默认做法</text>
+
+  <rect x="540" y="1214" width="240" height="74" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="560" y="1238" font-size="13" font-weight="700" fill="#787774">Anthropic 需要补叙事</text>
+  <text x="560" y="1258" font-size="11" fill="#787774">三连降智 + 剥离 + CEO 沉默</text>
+  <text x="560" y="1275" font-size="11" fill="#787774">硬数据没人讲也会被忘</text>
+</svg>

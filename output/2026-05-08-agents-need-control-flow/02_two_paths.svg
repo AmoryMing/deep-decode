@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="400" y="40" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">两条路线：MANDATORY 党 vs 写代码党</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">同一个问题，两种解法</text>
+
+  <!-- LEFT: Prompt path -->
+  <g transform="translate(40, 95)">
+    <rect x="0" y="0" width="350" height="370" rx="12" fill="#FFF5F5" stroke="#EB5757" stroke-width="2"/>
+    <text x="175" y="32" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#EB5757">路线 A：堆 prompt</text>
+
+    <rect x="20" y="55" width="310" height="120" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+    <text x="35" y="78" font-family="Menlo, monospace" font-size="11" fill="#37352F">SYSTEM PROMPT (5000 字)</text>
+    <text x="35" y="100" font-family="Menlo, monospace" font-size="11" fill="#787774">- MANDATORY: validate before write</text>
+    <text x="35" y="118" font-family="Menlo, monospace" font-size="11" fill="#787774">- DO NOT SKIP step 3 EVER</text>
+    <text x="35" y="136" font-family="Menlo, monospace" font-size="11" fill="#787774">- IMPORTANT!!! check tool output</text>
+    <text x="35" y="154" font-family="Menlo, monospace" font-size="11" fill="#787774">- YOU MUST ALWAYS handle errors</text>
+    <text x="35" y="170" font-family="Menlo, monospace" font-size="11" fill="#EB5757" font-style="italic">... 还有 4500 字</text>
+
+    <text x="20" y="210" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">特征</text>
+    <text x="20" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  控制逻辑写在散文里</text>
+    <text x="20" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  改 bug = 改 prompt</text>
+    <text x="20" y="281" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  无法 unit test</text>
+    <text x="20" y="304" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  改一句可能让八句失效</text>
+    <text x="20" y="327" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  非确定性 × 复杂度 = 崩</text>
+    <text x="20" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" font-style="italic">3 步能跑，30 步全垮</text>
+  </g>
+
+  <!-- RIGHT: Code path -->
+  <g transform="translate(410, 95)">
+    <rect x="0" y="0" width="350" height="370" rx="12" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+    <text x="175" y="32" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2">路线 B：写 harness</text>
+
+    <rect x="20" y="55" width="310" height="120" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+    <text x="35" y="78" font-family="Menlo, monospace" font-size="11" fill="#37352F">SYSTEM PROMPT (20 词)</text>
+    <text x="35" y="100" font-family="Menlo, monospace" font-size="11" fill="#787774">"You are Claude Code..."</text>
+    <text x="35" y="125" font-family="Menlo, monospace" font-size="11" fill="#37352F">+ HARNESS (50 万行 TS)</text>
+    <text x="35" y="143" font-family="Menlo, monospace" font-size="11" fill="#5BA8F0">  · 工具系统 / 权限管线</text>
+    <text x="35" y="161" font-family="Menlo, monospace" font-size="11" fill="#5BA8F0">  · 状态管理 / 验证检查点</text>
+
+    <text x="20" y="210" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">特征</text>
+    <text x="20" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  控制逻辑写在代码里</text>
+    <text x="20" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  改 bug = 提 PR</text>
+    <text x="20" y="281" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  可 unit test</text>
+    <text x="20" y="304" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  确定性可组合</text>
+    <text x="20" y="327" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">·  LLM 只在不得不用时调用</text>
+    <text x="20" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" font-style="italic">能堆到 30 步、300 步</text>
+  </g>
+
+  <!-- Bottom -->
+  <rect x="40" y="490" width="720" height="35" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="513" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-style="italic">Sebastian Raschka: Harness &gt; Model — 模型贡献 60%，Harness 贡献 40%，可工程化的那 40% 决定输赢</text>
+</svg>

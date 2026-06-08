@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#F7F1E8"/>
+
+  <!-- title -->
+  <text x="800" y="100" font-family="Cormorant Garamond, Songti SC, serif" font-size="48" font-weight="700" fill="#2A241B" text-anchor="middle">三套硬件，CFO 主导的可替换层</text>
+  <text x="800" y="148" font-family="Cormorant Garamond, Songti SC, serif" font-size="22" font-style="italic" fill="#5C5345" text-anchor="middle">把"对单一供应商的依赖"这种集中度风险，用工程投入拆掉。</text>
+  <line x1="700" y1="180" x2="900" y2="180" stroke="#B85A3A" stroke-width="2"/>
+
+  <!-- abstraction layer -->
+  <g transform="translate(120, 260)">
+    <rect x="0" y="0" width="1360" height="120" fill="#ECE5D3" stroke="#2A241B" stroke-width="2" rx="6"/>
+    <text x="40" y="50" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#B85A3A" letter-spacing="4">ANTHROPIC TRAINING / INFERENCE STACK</text>
+    <text x="40" y="92" font-family="Cormorant Garamond, serif" font-size="32" font-weight="700" fill="#2A241B">硬件无关抽象层 · fungible compute</text>
+    <text x="1320" y="95" font-family="PingFang SC, sans-serif" font-size="20" fill="#5C5345" text-anchor="end">三套编译路径标准化</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#2A241B" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 320 400 L 320 460"/>
+    <path d="M 800 400 L 800 460"/>
+    <path d="M 1280 400 L 1280 460"/>
+  </g>
+
+  <!-- three vendor stacks -->
+  <g transform="translate(140, 480)">
+    <rect x="0" y="0" width="360" height="360" fill="#B85A3A" rx="6"/>
+    <text x="180" y="60" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#F7F1E8" letter-spacing="4" text-anchor="middle">VENDOR · A</text>
+    <text x="180" y="130" font-family="Cormorant Garamond, serif" font-size="42" font-weight="700" fill="#F7F1E8" text-anchor="middle">NVIDIA GPU</text>
+    <line x1="40" y1="160" x2="320" y2="160" stroke="#F7F1E8" stroke-width="1" opacity="0.4"/>
+    <text x="180" y="210" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">CUDA 编译路径</text>
+    <text x="180" y="250" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">H100 / H200 / B200</text>
+    <text x="180" y="290" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">行业默认选择</text>
+    <text x="180" y="340" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#F7F1E8" text-anchor="middle">最成熟 · 价格高</text>
+  </g>
+
+  <g transform="translate(620, 480)">
+    <rect x="0" y="0" width="360" height="360" fill="#2A241B" rx="6"/>
+    <text x="180" y="60" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#F7F1E8" letter-spacing="4" text-anchor="middle">VENDOR · B</text>
+    <text x="180" y="130" font-family="Cormorant Garamond, serif" font-size="42" font-weight="700" fill="#F7F1E8" text-anchor="middle">Google TPU</text>
+    <line x1="40" y1="160" x2="320" y2="160" stroke="#F7F1E8" stroke-width="1" opacity="0.4"/>
+    <text x="180" y="210" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">XLA 编译路径</text>
+    <text x="180" y="250" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">Trillium / TPU v6</text>
+    <text x="180" y="290" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">Broadcom 联合部署</text>
+    <text x="180" y="340" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#F7F1E8" text-anchor="middle">2027 起 · 大规模上量</text>
+  </g>
+
+  <g transform="translate(1100, 480)">
+    <rect x="0" y="0" width="360" height="360" fill="#5C5345" rx="6"/>
+    <text x="180" y="60" font-family="SF Mono, Menlo, monospace" font-size="18" fill="#F7F1E8" letter-spacing="4" text-anchor="middle">VENDOR · C</text>
+    <text x="180" y="130" font-family="Cormorant Garamond, serif" font-size="42" font-weight="700" fill="#F7F1E8" text-anchor="middle">Amazon Trainium</text>
+    <line x1="40" y1="160" x2="320" y2="160" stroke="#F7F1E8" stroke-width="1" opacity="0.4"/>
+    <text x="180" y="210" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">Neuron 编译路径</text>
+    <text x="180" y="250" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">Trn2 / Project Rainier</text>
+    <text x="180" y="290" font-family="PingFang SC, sans-serif" font-size="20" fill="#F7F1E8" text-anchor="middle">深度战略合作</text>
+    <text x="180" y="340" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#F7F1E8" text-anchor="middle">价格灵活 · 大体量</text>
+  </g>
+
+  <!-- footer -->
+  <text x="120" y="940" font-family="SF Mono, Menlo, monospace" font-size="16" fill="#8A8472" letter-spacing="3">FIG. 03 · FUNGIBLE COMPUTE LAYER</text>
+  <text x="1480" y="940" font-family="Cormorant Garamond, serif" font-size="20" font-style="italic" fill="#5C5345" text-anchor="end">"不被任何一家芯片厂卡脖子。"</text>
+</svg>

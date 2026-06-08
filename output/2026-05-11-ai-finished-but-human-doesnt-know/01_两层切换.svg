@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="460" fill="#FFFFFF"/>
+  <text x="60" y="48" font-size="22" font-weight="700" fill="#37352F">三步按键，两个键位上下文</text>
+  <text x="60" y="74" font-size="13" fill="#787774">defaultBindings.ts:44 / 163 + schema.ts:46 — Transcript 是独立 context</text>
+
+  <!-- Layer 1: Global -->
+  <g>
+    <rect x="60" y="110" width="680" height="120" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="80" y="138" font-size="14" font-weight="700" fill="#37352F">Global 上下文</text>
+    <text x="80" y="160" font-size="13" fill="#787774">日常聊天主屏 — thinking 内容不渲染，只在 spinner 上显示 "thinking…"</text>
+    <rect x="80" y="178" width="120" height="32" fill="#FFFFFF" stroke="#37352F"/>
+    <text x="140" y="199" text-anchor="middle" font-size="13" fill="#37352F">ctrl+o</text>
+    <text x="220" y="199" font-size="13" fill="#787774">→ app:toggleTranscript</text>
+  </g>
+
+  <!-- Arrow -->
+  <text x="400" y="258" font-size="22" fill="#2383E2" text-anchor="middle">↓ 跨上下文跳转</text>
+
+  <!-- Layer 2: Transcript -->
+  <g>
+    <rect x="60" y="280" width="680" height="150" fill="#F7F6F3" stroke="#E3E2E0"/>
+    <text x="80" y="308" font-size="14" font-weight="700" fill="#37352F">Transcript 上下文</text>
+    <text x="80" y="330" font-size="13" fill="#787774">默认仍只显示最近一次 thinking — Messages.tsx:229 hidePastThinking</text>
+    <rect x="80" y="348" width="120" height="32" fill="#FFFFFF" stroke="#37352F"/>
+    <text x="140" y="369" text-anchor="middle" font-size="13" fill="#37352F">ctrl+e</text>
+    <text x="220" y="369" font-size="13" fill="#787774">→ transcript:toggleShowAll</text>
+    <text x="80" y="408" font-size="13" fill="#787774">最后还要手动 scroll up 找到上一次的 thinking 块</text>
+  </g>
+</svg>

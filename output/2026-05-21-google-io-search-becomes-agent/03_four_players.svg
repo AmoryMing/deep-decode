@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">入口替换战  ·  四家挑了四个不同的"输入框"</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">攻的是同一件事：把"操作 GUI 控件"换成"描述意图 + Agent 现场执行"</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- 4 player cards 2x2 -->
+  <!-- Perplexity -->
+  <g transform="translate(40, 130)">
+    <rect x="0" y="0" width="350" height="190" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="190" fill="#4DB6AC"/>
+    <text x="22" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Perplexity  ·  Comet</text>
+    <text x="22" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">改浏览器地址栏</text>
+    <text x="22" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">最激进：整个砍掉 URL 栏</text>
+    <text x="22" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">主视图被 prompt box 占据</text>
+    <text x="22" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2025-07 Win/Mac</text>
+    <text x="22" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2025-11 Android  ·  2026-03 iOS</text>
+  </g>
+
+  <!-- OpenAI -->
+  <g transform="translate(410, 130)">
+    <rect x="0" y="0" width="350" height="190" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="190" fill="#FFB020"/>
+    <text x="22" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">OpenAI  ·  Atlas + Codex + ChatGPT</text>
+    <text x="22" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">改桌面层</text>
+    <text x="22" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">先抢操作系统级控制权</text>
+    <text x="22" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">桌面 superapp 才是终点</text>
+    <text x="22" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2025-10 Atlas macOS</text>
+    <text x="22" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2026-03 三件套合并 superapp</text>
+  </g>
+
+  <!-- Anthropic -->
+  <g transform="translate(40, 340)">
+    <rect x="0" y="0" width="350" height="190" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+    <rect x="0" y="0" width="6" height="190" fill="#EB5757"/>
+    <text x="22" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Anthropic  ·  Claude Design</text>
+    <text x="22" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">改专业工具入口</text>
+    <text x="22" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">最克制：从设计师/PM 工具切入</text>
+    <text x="22" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">没碰浏览器和操作系统</text>
+    <text x="22" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">2026-04 Claude.ai 侧边栏</text>
+    <text x="22" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">左对话 · 右 live canvas</text>
+  </g>
+
+  <!-- Google -->
+  <g transform="translate(410, 340)">
+    <rect x="0" y="0" width="350" height="190" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="2"/>
+    <rect x="0" y="0" width="6" height="190" fill="#2383E2"/>
+    <text x="22" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Google  ·  Search + Generative UI</text>
+    <text x="22" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">改搜索框</text>
+    <text x="22" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">挑了最大的存量入口</text>
+    <text x="22" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">AI Mode 10 亿 MAU  ·  每季度翻倍</text>
+    <text x="22" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">吞吐量 > 浏览器+桌面+Figma 总和</text>
+    <text x="22" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" font-weight="600">2026-05 I/O keynote</text>
+  </g>
+</svg>

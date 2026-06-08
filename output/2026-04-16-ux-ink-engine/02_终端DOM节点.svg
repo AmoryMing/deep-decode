@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" text-anchor="middle" font-weight="bold">浏览器 DOM vs 终端 DOM</text>
+
+  <!-- LEFT: Browser DOM -->
+  <rect x="40" y="55" width="340" height="370" rx="12" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="210" y="82" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#787774" text-anchor="middle" font-weight="600">浏览器</text>
+
+  <rect x="80" y="100" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="122" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#37352F" text-anchor="middle">&lt;html&gt;  根节点</text>
+
+  <rect x="80" y="146" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="168" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#37352F" text-anchor="middle">&lt;div&gt;  布局容器</text>
+
+  <rect x="80" y="192" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="214" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#37352F" text-anchor="middle">&lt;span&gt;  文本</text>
+
+  <rect x="80" y="238" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="260" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#37352F" text-anchor="middle">&lt;a&gt;  链接</text>
+
+  <rect x="80" y="284" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="306" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#787774" text-anchor="middle">&lt;progress&gt;  进度条</text>
+
+  <!-- Browser layout engine -->
+  <rect x="80" y="340" width="260" height="34" rx="6" fill="#E3E2E0" stroke="none"/>
+  <text x="210" y="362" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">布局引擎: Blink / WebKit</text>
+
+  <text x="210" y="405" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">单位: 像素 (px)</text>
+  <text x="210" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">渲染: GPU 光栅化</text>
+
+  <!-- RIGHT: Terminal DOM -->
+  <rect x="420" y="55" width="340" height="370" rx="12" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="590" y="82" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#2383E2" text-anchor="middle" font-weight="600">Claude Code 终端</text>
+
+  <rect x="460" y="100" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="590" y="122" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#2383E2" text-anchor="middle">ink-root  根节点</text>
+
+  <rect x="460" y="146" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="590" y="168" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#2383E2" text-anchor="middle">ink-box  布局容器</text>
+
+  <rect x="460" y="192" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="590" y="214" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#2383E2" text-anchor="middle">ink-text  文本</text>
+
+  <rect x="460" y="238" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="590" y="260" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#37352F" text-anchor="middle">ink-link  超链接 (OSC 8)</text>
+
+  <rect x="460" y="284" width="260" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="590" y="306" font-family="SF Mono, Menlo, monospace" font-size="12" fill="#37352F" text-anchor="middle">ink-virtual-text / ink-raw-ansi</text>
+
+  <!-- Terminal layout engine -->
+  <rect x="460" y="340" width="260" height="34" rx="6" fill="#2383E2" stroke="none"/>
+  <text x="590" y="362" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">布局引擎: Yoga (Flexbox)</text>
+
+  <text x="590" y="405" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">单位: 字符格 (中文=2格)</text>
+  <text x="590" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">渲染: ANSI 转义序列</text>
+
+  <!-- Connection arrows -->
+  <line x1="345" y1="117" x2="455" y2="117" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="345" y1="163" x2="455" y2="163" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="345" y1="209" x2="455" y2="209" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="345" y1="255" x2="455" y2="255" stroke="#E3E2E0" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Key difference callout -->
+  <rect x="180" y="440" width="440" height="30" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="460" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">关键区别：每个终端节点自带 yogaNode，布局计算和 DOM 操作绑定在一起</text>
+</svg>

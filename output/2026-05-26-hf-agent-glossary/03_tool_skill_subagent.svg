@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="'PingFang SC','Hiragino Sans GB','Noto Sans SC',sans-serif">
+  <rect width="1200" height="750" fill="#F7F1E8"/>
+
+  <text x="80" y="70" font-size="14" letter-spacing="5" fill="#B85A3A" font-weight="600">FIGURE 03 · TOOL / SKILL / SUB-AGENT</text>
+  <text x="80" y="120" font-size="34" font-weight="700" fill="#2A241B" font-family="'Cormorant Garamond','Songti SC',serif">三阶递进：function call → packaged knowledge → reasoning agent</text>
+  <text x="80" y="155" font-size="15" fill="#5C5345" font-style="italic">把功能误判一阶，工程量翻 5-10 倍</text>
+
+  <!-- Three columns -->
+  <g transform="translate(80,220)">
+
+    <!-- Tool column -->
+    <g>
+      <rect x="0" y="0" width="320" height="440" rx="10" fill="#FFFEFA" stroke="#B85A3A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="320" height="60" rx="10" fill="#ECE5D3"/>
+      <text x="160" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#2A241B" font-family="'Cormorant Garamond','Songti SC',serif">Tool</text>
+
+      <text x="160" y="92" text-anchor="middle" font-size="13" letter-spacing="3" fill="#B85A3A">ONE ACTION</text>
+
+      <g font-size="14" fill="#2A241B" transform="translate(22,130)">
+        <text x="0" y="0" font-weight="700">是什么</text>
+        <text x="0" y="22">一个 function call，</text>
+        <text x="0" y="42">deterministic 的"输入 → 输出"</text>
+
+        <text x="0" y="86" font-weight="700">例子</text>
+        <text x="0" y="108">run_bash("ls -la")</text>
+        <text x="0" y="128">get_weather("Shanghai")</text>
+        <text x="0" y="148">search_web(query)</text>
+
+        <text x="0" y="192" font-weight="700">谁判断</text>
+        <text x="0" y="214">model 决定调不调</text>
+        <text x="0" y="234">tool 自己不思考</text>
+
+        <text x="0" y="278" font-weight="700">工程量</text>
+        <text x="0" y="300">几小时 - 几天</text>
+      </g>
+    </g>
+
+    <!-- Skill column -->
+    <g transform="translate(360,0)">
+      <rect x="0" y="0" width="320" height="440" rx="10" fill="#FFFEFA" stroke="#B85A3A" stroke-width="1.5"/>
+      <rect x="0" y="0" width="320" height="60" rx="10" fill="#E8C9B6"/>
+      <text x="160" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#2A241B" font-family="'Cormorant Garamond','Songti SC',serif">Skill</text>
+
+      <text x="160" y="92" text-anchor="middle" font-size="13" letter-spacing="3" fill="#B85A3A">PACKAGED KNOWLEDGE</text>
+
+      <g font-size="14" fill="#2A241B" transform="translate(22,130)">
+        <text x="0" y="0" font-weight="700">是什么</text>
+        <text x="0" y="22">为达成目标打包的</text>
+        <text x="0" y="42">多步动作 + 上下文 + 检查项</text>
+
+        <text x="0" y="86" font-weight="700">例子</text>
+        <text x="0" y="108">"调查这个 bug、</text>
+        <text x="0" y="128">提出假设、</text>
+        <text x="0" y="148">写出修复"（按手册跑）</text>
+
+        <text x="0" y="192" font-weight="700">谁判断</text>
+        <text x="0" y="214">手册 + 模型按步走</text>
+        <text x="0" y="234">skill 本身不"再思考"</text>
+
+        <text x="0" y="278" font-weight="700">工程量</text>
+        <text x="0" y="300">几天 - 一两周</text>
+      </g>
+    </g>
+
+    <!-- Sub-agent column -->
+    <g transform="translate(720,0)">
+      <rect x="0" y="0" width="320" height="440" rx="10" fill="#FFFEFA" stroke="#B85A3A" stroke-width="2.5"/>
+      <rect x="0" y="0" width="320" height="60" rx="10" fill="#2A241B"/>
+      <text x="160" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#F7F1E8" font-family="'Cormorant Garamond','Songti SC',serif">Sub-agent</text>
+
+      <text x="160" y="92" text-anchor="middle" font-size="13" letter-spacing="3" fill="#B85A3A">REASONING AGENT</text>
+
+      <g font-size="14" fill="#2A241B" transform="translate(22,130)">
+        <text x="0" y="0" font-weight="700">是什么</text>
+        <text x="0" y="22">独立 agent：</text>
+        <text x="0" y="42">自己 model + scaffold + harness</text>
+
+        <text x="0" y="86" font-weight="700">例子</text>
+        <text x="0" y="108">Claude Code 派出</text>
+        <text x="0" y="128">research-subagent</text>
+        <text x="0" y="148">让它自己跑 5 步</text>
+
+        <text x="0" y="192" font-weight="700">谁判断</text>
+        <text x="0" y="214">sub-agent 自己推理，</text>
+        <text x="0" y="234">还能再调 tool / sub-agent</text>
+
+        <text x="0" y="278" font-weight="700">工程量</text>
+        <text x="0" y="300">几周以上</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="80" y="710" font-size="12" fill="#8A8472" letter-spacing="2">PRD 里把所有交互写成 "agent 调用" = 工程会无差别按 sub-agent 拆，做出比需求重 10 倍的系统</text>
+</svg>

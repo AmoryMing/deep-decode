@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      .ja { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+      .ttl { font-size: 28px; font-weight: 700; fill: #1F1B16; }
+      .lbl { font-size: 18px; font-weight: 700; fill: #1F1B16; }
+      .sub { font-size: 13px; fill: #5b524a; }
+      .meta { font-size: 12px; fill: #8a7d72; }
+      .badge { font-size: 11px; font-weight: 600; fill: #fff; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="0" y="0" width="6" height="500" fill="#DA7756"/>
+
+  <text x="40" y="56" class="ja ttl">第一批 sandbox provider · 没有 AWS</text>
+  <text x="40" y="82" class="ja meta">sub-second startup + per-ms billing + API-native security</text>
+
+  <!-- 4 cards -->
+  <g transform="translate(50, 130)">
+    <rect width="170" height="200" rx="12" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="0" width="170" height="36" rx="12" fill="#DA7756"/>
+    <text x="85" y="24" class="ja badge" text-anchor="middle">Cloudflare</text>
+    <text x="85" y="78" class="ja lbl" text-anchor="middle">MicroVM</text>
+    <text x="85" y="112" class="ja sub" text-anchor="middle">zero-trust</text>
+    <text x="85" y="132" class="ja sub" text-anchor="middle">secrets 注入</text>
+    <text x="85" y="170" class="ja meta" text-anchor="middle">edge 优先</text>
+  </g>
+
+  <g transform="translate(240, 130)">
+    <rect width="170" height="200" rx="12" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="0" width="170" height="36" rx="12" fill="#DA7756"/>
+    <text x="85" y="24" class="ja badge" text-anchor="middle">Daytona</text>
+    <text x="85" y="78" class="ja lbl" text-anchor="middle">有状态机器</text>
+    <text x="85" y="112" class="ja sub" text-anchor="middle">SSH 可进</text>
+    <text x="85" y="132" class="ja sub" text-anchor="middle">支持暂停</text>
+    <text x="85" y="170" class="ja meta" text-anchor="middle">长任务友好</text>
+  </g>
+
+  <g transform="translate(430, 130)">
+    <rect width="170" height="200" rx="12" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="0" width="170" height="36" rx="12" fill="#DA7756"/>
+    <text x="85" y="24" class="ja badge" text-anchor="middle">Modal</text>
+    <text x="85" y="78" class="ja lbl" text-anchor="middle">亚秒级冷启动</text>
+    <text x="85" y="112" class="ja sub" text-anchor="middle">GPU 可调</text>
+    <text x="85" y="132" class="ja sub" text-anchor="middle">serverless 出身</text>
+    <text x="85" y="170" class="ja meta" text-anchor="middle">推理密集</text>
+  </g>
+
+  <g transform="translate(620, 130)">
+    <rect width="170" height="200" rx="12" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="0" width="170" height="36" rx="12" fill="#DA7756"/>
+    <text x="85" y="24" class="ja badge" text-anchor="middle">Vercel</text>
+    <text x="85" y="78" class="ja lbl" text-anchor="middle">毫秒级启动</text>
+    <text x="85" y="112" class="ja sub" text-anchor="middle">VPC peering</text>
+    <text x="85" y="132" class="ja sub" text-anchor="middle">function 复用</text>
+    <text x="85" y="170" class="ja meta" text-anchor="middle">边缘 + web 栈</text>
+  </g>
+
+  <!-- 缺席队 -->
+  <g transform="translate(50, 370)">
+    <text x="0" y="0" class="ja lbl">缺席的：</text>
+    <g transform="translate(110, -22)">
+      <rect width="100" height="32" rx="16" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="50" y="21" class="ja sub" text-anchor="middle" fill="#999">AWS</text>
+    </g>
+    <g transform="translate(220, -22)">
+      <rect width="100" height="32" rx="16" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="50" y="21" class="ja sub" text-anchor="middle" fill="#999">GCP</text>
+    </g>
+    <g transform="translate(330, -22)">
+      <rect width="100" height="32" rx="16" fill="none" stroke="#aaa" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <text x="50" y="21" class="ja sub" text-anchor="middle" fill="#999">Azure</text>
+    </g>
+    <text x="0" y="40" class="ja meta">cold start 慢、IAM 模型陈旧、按分钟计费——不匹配 agent 调工具的高频短任务负载</text>
+  </g>
+</svg>

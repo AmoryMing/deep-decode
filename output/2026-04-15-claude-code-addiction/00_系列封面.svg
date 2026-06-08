@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title area -->
+  <text x="400" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle" font-weight="500">DEEP DECODE</text>
+  <line x1="340" y1="72" x2="460" y2="72" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Slot machine visual metaphor -->
+  <!-- Machine body -->
+  <rect x="260" y="100" width="280" height="300" rx="16" fill="#F7F7F5" stroke="#37352F" stroke-width="2.5"/>
+
+  <!-- Screen area with terminal -->
+  <rect x="290" y="130" width="220" height="120" rx="8" fill="#1a1a1a"/>
+  <!-- Terminal cursor and text -->
+  <text x="310" y="158" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#4DB6AC">$</text>
+  <text x="325" y="158" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#cccccc">claude "fix the bug"</text>
+  <text x="310" y="178" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#787774">Reading files...</text>
+  <text x="310" y="193" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#787774">Writing code...</text>
+  <text x="310" y="208" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC">Done in 12s</text>
+  <rect x="310" y="218" width="8" height="14" fill="#4DB6AC" opacity="0.7"/>
+
+  <!-- Three reels showing reward distribution -->
+  <rect x="295" y="268" width="60" height="50" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <rect x="370" y="268" width="60" height="50" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+  <rect x="445" y="268" width="60" height="50" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+
+  <!-- Reel symbols -->
+  <text x="325" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#4DB6AC" text-anchor="middle">OK</text>
+  <text x="400" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#2383E2" text-anchor="middle" font-weight="bold">!</text>
+  <text x="475" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="22" fill="#EB5757" text-anchor="middle">X</text>
+
+  <!-- Labels under reels -->
+  <text x="325" y="334" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">80%</text>
+  <text x="400" y="334" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">10%</text>
+  <text x="475" y="334" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">10%</text>
+
+  <!-- Lever -->
+  <line x1="570" y1="180" x2="570" y2="290" stroke="#37352F" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="570" cy="170" r="14" fill="#EB5757" stroke="#37352F" stroke-width="2"/>
+  <text x="570" y="175" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle" font-weight="bold">Go</text>
+
+  <!-- Bottom label -->
+  <text x="400" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">"just one more prompt"</text>
+
+  <!-- Main title -->
+  <text x="400" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="26" fill="#37352F" text-anchor="middle" font-weight="bold">老虎机效应</text>
+  <text x="400" y="460" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#787774" text-anchor="middle">一个终端工具凭什么让人通宵</text>
+  <text x="400" y="485" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" text-anchor="middle">Source: Enrico Tartarotti | 2026-04-14</text>
+</svg>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#F7F1E8"/>
+
+  <text x="60" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472" letter-spacing="2">CHECKPOINT  VS  END-TO-END</text>
+  <text x="60" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#2A241B">11 倍落差才是诊断书</text>
+  <text x="60" y="128" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#8A8472">Claude Opus 4.7 · 同一道 benchmark 的两个数字</text>
+
+  <line x1="60" y1="155" x2="740" y2="155" stroke="#D8CFB8" stroke-width="1"/>
+
+  <!-- Big bar 43.9% -->
+  <g transform="translate(60, 190)">
+    <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#2A241B">中间环节 checkpoint</text>
+    <text x="0" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">每过一个验证点给一个分 · 10–20 个/任务</text>
+    <rect x="220" y="0" width="439" height="48" rx="3" fill="#2A241B"/>
+    <text x="234" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#F7F1E8">43.9%</text>
+    <text x="670" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472">片段对得多</text>
+  </g>
+
+  <!-- Big bar 3.8% -->
+  <g transform="translate(60, 280)">
+    <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#2A241B">端到端 end-to-end</text>
+    <text x="0" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">从头到尾交付一份合格产物 · 106 道里 4 道</text>
+    <rect x="220" y="0" width="38" height="48" rx="3" fill="#B85A3A"/>
+    <text x="268" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#B85A3A">3.8%</text>
+    <text x="350" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472">整条流程跑完 · 几乎跑不完</text>
+  </g>
+
+  <!-- Math annotation -->
+  <g transform="translate(60, 380)">
+    <rect x="0" y="0" width="680" height="100" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="20" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2A241B">为什么会有 11 倍落差</text>
+    <text x="20" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">单步 90%  →  100 步累乘  =  0.003%</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B">单步 99%  →  100 步累乘  =  37%</text>
+    <text x="380" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472">→ 端到端要 50%</text>
+    <text x="380" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472">→ 单步要 99.3%</text>
+  </g>
+
+  <text x="60" y="500" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">单步对 ≠ 流程对  ·  Long-Horizon Fragility 是 paradigm 的物理上限</text>
+</svg>

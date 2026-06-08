@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+  <text x="40" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">上下文压缩家族：TACO 的位置</text>
+  <line x1="40" y1="58" x2="180" y2="58" stroke="#2383E2" stroke-width="3"/>
+
+  <!-- Quadrant -->
+  <line x1="400" y1="100" x2="400" y2="440" stroke="#888" stroke-width="1.5"/>
+  <line x1="80" y1="270" x2="720" y2="270" stroke="#888" stroke-width="1.5"/>
+
+  <!-- Axis labels -->
+  <text x="400" y="92" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#888">面向具体场景的适配能力 ↑</text>
+  <text x="730" y="274" font-family="PingFang SC, sans-serif" font-size="12" fill="#888">需训练 →</text>
+  <text x="78" y="274" text-anchor="end" font-family="PingFang SC, sans-serif" font-size="12" fill="#888">不训练 →</text>
+  <text x="400" y="455" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#888">通用程度 ↓</text>
+
+  <!-- Top-left: TACO -->
+  <rect x="200" y="120" width="180" height="120" fill="#F0F7FF" stroke="#2383E2" stroke-width="2"/>
+  <text x="290" y="148" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="18" font-weight="700" fill="#2383E2">TACO</text>
+  <text x="290" y="170" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">不训练 + 动态适配</text>
+  <text x="290" y="188" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">规则可读 / 跨任务复用</text>
+  <text x="290" y="210" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">heap GC 层</text>
+  <text x="290" y="228" text-anchor="middle" font-family="Menlo, monospace" font-size="10" fill="#888">arXiv 2604.19572</text>
+
+  <!-- Top-right: ACON -->
+  <rect x="420" y="120" width="180" height="120" fill="#FAFAFA" stroke="#888" stroke-width="1"/>
+  <text x="510" y="148" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">ACON</text>
+  <text x="510" y="170" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">训练专用压缩模块</text>
+  <text x="510" y="188" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">长程 Agent 优化</text>
+  <text x="510" y="210" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">需权重 / 迁移成本高</text>
+  <text x="510" y="228" text-anchor="middle" font-family="Menlo, monospace" font-size="10" fill="#888">arXiv 2510.00615</text>
+
+  <!-- Bottom-left: Auto-compaction -->
+  <rect x="80" y="290" width="180" height="120" fill="#FAFAFA" stroke="#888" stroke-width="1"/>
+  <text x="170" y="318" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">Auto-Compaction</text>
+  <text x="170" y="340" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">窗口满时摘要历史</text>
+  <text x="170" y="358" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">不可逆 / 全局有损</text>
+  <text x="170" y="380" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">OOM swap 层</text>
+  <text x="170" y="398" text-anchor="middle" font-family="Menlo, monospace" font-size="10" fill="#888">Claude Code 内置</text>
+
+  <!-- Bottom-right: Prompt Caching -->
+  <rect x="290" y="290" width="180" height="120" fill="#FAFAFA" stroke="#888" stroke-width="1"/>
+  <text x="380" y="318" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">Prompt Caching</text>
+  <text x="380" y="340" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">prefix attention 复用</text>
+  <text x="380" y="358" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">压计算不压长度</text>
+  <text x="380" y="380" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">L2 cache 层</text>
+  <text x="380" y="398" text-anchor="middle" font-family="Menlo, monospace" font-size="10" fill="#888">Anthropic / DeepSeek</text>
+
+  <rect x="500" y="290" width="180" height="120" fill="#FAFAFA" stroke="#888" stroke-width="1"/>
+  <text x="590" y="318" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">External Session</text>
+  <text x="590" y="340" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">Session 拆出容器</text>
+  <text x="590" y="358" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">按需切片读回</text>
+  <text x="590" y="380" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">归档区，不是工作集</text>
+  <text x="590" y="398" text-anchor="middle" font-family="Menlo, monospace" font-size="10" fill="#888">Anthropic Managed Agents</text>
+
+  <!-- Footer -->
+  <rect x="40" y="460" width="720" height="60" fill="#FFF3E0"/>
+  <text x="60" y="484" font-family="PingFang SC, sans-serif" font-size="13" font-weight="700" fill="#1A1A1A">分层关系（类比 OS 内存管理）</text>
+  <text x="60" y="506" font-family="PingFang SC, sans-serif" font-size="12" fill="#555">KV cache (L1) · Prompt cache (L2) · TACO heap GC · Auto-compaction (OOM swap) · External Session (归档)</text>
+</svg>

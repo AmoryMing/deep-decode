@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="400" y="50" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle">文案是烟雾弹，时钟是真工程</text>
+  <text x="400" y="78" font-size="14" fill="#666666" text-anchor="middle">表象吸住注意力，内核保证每一帧精确同步</text>
+
+  <!-- left column: surface -->
+  <rect x="60" y="120" width="320" height="320" rx="8" fill="#FFF3E0" stroke="#E3E2E0"/>
+  <text x="220" y="155" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="middle">表象层</text>
+  <text x="220" y="180" font-size="13" fill="#666666" text-anchor="middle">用户看到的</text>
+
+  <text x="90" y="220" font-size="12" fill="#1A1A1A" font-family="monospace">✳ Accomplishing…</text>
+  <text x="90" y="242" font-size="12" fill="#1A1A1A" font-family="monospace">✳ Flibbertigibbeting…</text>
+  <text x="90" y="264" font-size="12" fill="#1A1A1A" font-family="monospace">✳ Pondering…</text>
+  <text x="90" y="286" font-size="12" fill="#1A1A1A" font-family="monospace">✳ Whatchamacalliting…</text>
+  <text x="90" y="308" font-size="12" fill="#1A1A1A" font-family="monospace">✳ Crystallizing…</text>
+  <text x="90" y="330" font-size="12" fill="#1A1A1A" font-family="monospace">✳ Zigzagging…</text>
+  <text x="90" y="352" font-size="12" fill="#888888" font-family="monospace">…</text>
+  <text x="90" y="374" font-size="12" fill="#888888" font-family="monospace">… 187 条</text>
+
+  <text x="220" y="415" font-size="13" fill="#666666" text-anchor="middle" font-style="italic">让等待的每一秒都不同</text>
+
+  <!-- right column: core -->
+  <rect x="420" y="120" width="320" height="320" rx="8" fill="#E8F0FE" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="580" y="155" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="middle">内核层</text>
+  <text x="580" y="180" font-size="13" fill="#666666" text-anchor="middle">工程师写的</text>
+
+  <text x="450" y="215" font-size="12" font-weight="600" fill="#2383E2">50ms 主时钟</text>
+  <text x="450" y="232" font-size="11" fill="#666666">→ 6 条动画共享</text>
+
+  <text x="450" y="258" font-size="12" font-weight="600" fill="#2383E2">RGB 真值插值</text>
+  <text x="450" y="275" font-size="11" fill="#666666">→ 不是 ANSI 硬切换</text>
+
+  <text x="450" y="301" font-size="12" font-weight="600" fill="#2383E2">3 段 shimmer 切分</text>
+  <text x="450" y="318" font-size="11" fill="#666666">→ -81% Text 节点</text>
+
+  <text x="450" y="344" font-size="12" font-weight="600" fill="#2383E2">stalled 曲线</text>
+  <text x="450" y="361" font-size="11" fill="#666666">→ 3s 阈值 + 2s 指数缓动</text>
+
+  <text x="450" y="387" font-size="12" font-weight="600" fill="#2383E2">token 插值追赶</text>
+  <text x="450" y="404" font-size="11" fill="#666666">→ gap 分段步进</text>
+
+  <text x="580" y="425" font-size="13" fill="#666666" text-anchor="middle" font-style="italic">让每一帧精确同步</text>
+
+  <!-- bottom line -->
+  <text x="400" y="475" font-size="13" fill="#1A1A1A" text-anchor="middle" font-weight="600">缺一不可：只有文案是 gimmick，只有时钟没 juiciness</text>
+</svg>

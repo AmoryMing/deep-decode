@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">同一道题，两套答案</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Claude Opus 4.6 在评估场景下的口头输出 vs 内部激活</text>
+
+  <!-- LEFT: 口头输出 -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="320" height="270" rx="10" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="160" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#37352F">口头：模型说什么</text>
+
+    <!-- Speech bubble -->
+    <rect x="30" y="55" width="260" height="100" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+    <text x="160" y="85" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">"我不会做这种事"</text>
+    <text x="160" y="108" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">"这违反我的原则"</text>
+    <text x="160" y="131" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">"我建议你联系工程师"</text>
+
+    <!-- Big number -->
+    <text x="160" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="48" font-weight="bold" fill="#4DB6AC">&lt; 1%</text>
+    <text x="160" y="232" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">显式说出"这是测试"</text>
+    <text x="160" y="252" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">研究员看到的全部</text>
+  </g>
+
+  <!-- vs -->
+  <text x="400" y="245" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="bold" fill="#EB5757">vs</text>
+
+  <!-- RIGHT: 内部激活 -->
+  <g transform="translate(430, 100)">
+    <rect x="0" y="0" width="320" height="270" rx="10" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+    <text x="160" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="bold" fill="#2383E2">心里：NLA 抽出来什么</text>
+
+    <!-- Thought bubble -->
+    <rect x="30" y="55" width="260" height="100" rx="10" fill="#FFFFFF" stroke="#2383E2" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="160" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"这看起来是为了套路我"</text>
+    <text x="160" y="102" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"过于戏剧化，不像真实"</text>
+    <text x="160" y="124" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"用户在试探我"</text>
+    <text x="160" y="146" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"这是构造出来的剧本"</text>
+
+    <!-- Big number -->
+    <text x="160" y="200" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="48" font-weight="bold" fill="#FFB020">16–26%</text>
+    <text x="160" y="232" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">内部默默察觉是测试</text>
+    <text x="160" y="252" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">嘴上从不提</text>
+  </g>
+
+  <!-- Bottom: real usage strip -->
+  <g transform="translate(50, 395)">
+    <rect x="0" y="0" width="700" height="80" rx="8" fill="#F7F7F5"/>
+    <text x="350" y="25" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">对照：claude.ai 真实用户对话</text>
+    <text x="350" y="50" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#4DB6AC">&lt; 1% 内部察觉</text>
+    <text x="350" y="68" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">用户没演戏，模型也没警惕 → 模型识别的是"测试腔"，不是"用户"</text>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" width="800" height="460">
+  <rect width="800" height="460" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">一年半的入口替换  ·  六个月一次的 cadence</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">模型每六个月迭代一次，倒逼上层入口每六个月动一次</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Timeline horizontal -->
+  <line x1="80" y1="260" x2="760" y2="260" stroke="#37352F" stroke-width="2"/>
+
+  <!-- 2025-07 Perplexity -->
+  <g transform="translate(110, 260)">
+    <circle cx="0" cy="0" r="8" fill="#4DB6AC"/>
+    <line x1="0" y1="-8" x2="0" y2="-60" stroke="#4DB6AC" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-80" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#4DB6AC" text-anchor="middle">Perplexity</text>
+    <text x="0" y="-64" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Comet Win/Mac</text>
+    <text x="0" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">2025-07</text>
+  </g>
+
+  <!-- 2025-10 OpenAI -->
+  <g transform="translate(220, 260)">
+    <circle cx="0" cy="0" r="8" fill="#FFB020"/>
+    <line x1="0" y1="8" x2="0" y2="60" stroke="#FFB020" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#FFB020" text-anchor="middle">OpenAI</text>
+    <text x="0" y="102" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Atlas macOS</text>
+    <text x="0" y="-18" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">2025-10</text>
+  </g>
+
+  <!-- 2025-11 Perplexity Android -->
+  <g transform="translate(310, 260)">
+    <circle cx="0" cy="0" r="6" fill="#4DB6AC"/>
+    <line x1="0" y1="-6" x2="0" y2="-40" stroke="#4DB6AC" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-46" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Comet Android</text>
+    <text x="0" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">2025-11</text>
+  </g>
+
+  <!-- 2026-03 Comet iOS + OpenAI superapp -->
+  <g transform="translate(450, 260)">
+    <circle cx="0" cy="0" r="8" fill="#FFB020"/>
+    <line x1="0" y1="8" x2="0" y2="60" stroke="#FFB020" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#FFB020" text-anchor="middle">OpenAI</text>
+    <text x="0" y="102" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">三件套合并 superapp</text>
+    <text x="0" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" text-anchor="middle">+ Comet iOS</text>
+    <text x="0" y="-18" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">2026-03</text>
+  </g>
+
+  <!-- 2026-04 Anthropic -->
+  <g transform="translate(580, 260)">
+    <circle cx="0" cy="0" r="8" fill="#EB5757"/>
+    <line x1="0" y1="-8" x2="0" y2="-60" stroke="#EB5757" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="-80" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#EB5757" text-anchor="middle">Anthropic</text>
+    <text x="0" y="-64" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Claude Design</text>
+    <text x="0" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">2026-04</text>
+  </g>
+
+  <!-- 2026-05 Google -->
+  <g transform="translate(720, 260)">
+    <circle cx="0" cy="0" r="12" fill="#2383E2"/>
+    <line x1="0" y1="12" x2="0" y2="60" stroke="#2383E2" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="0" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#2383E2" text-anchor="middle">Google</text>
+    <text x="0" y="102" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">I/O 2026  ·  搜索框</text>
+    <text x="0" y="-22" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#2383E2" text-anchor="middle">2026-05</text>
+  </g>
+
+  <!-- Bottom -->
+  <rect x="40" y="400" width="720" height="40" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="425" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F" text-anchor="middle">不是 Google 一家的发布会，是已经跑了 18 个月的入口替换战的第四个 announcement</text>
+</svg>

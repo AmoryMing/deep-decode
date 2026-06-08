@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#1F1F1F">流式 Markdown 的稳定边界</text>
+  <text x="40" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">每帧只重解析最后一个未闭合块，前面全部封冻</text>
+
+  <!-- 长条文本带 -->
+  <rect x="40" y="110" width="720" height="60" rx="4" fill="#F5F5F4" stroke="#E3E2E0"/>
+  <text x="50" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">模型流式吐字（5000 字回答的某一帧）</text>
+
+  <!-- stable prefix segment -->
+  <rect x="50" y="143" width="540" height="20" rx="2" fill="#2383E2" opacity="0.85"/>
+  <text x="320" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">stable prefix（已经成段，一次也不再解析）</text>
+
+  <!-- unstable suffix segment -->
+  <rect x="590" y="143" width="160" height="20" rx="2" fill="#FFA500"/>
+  <text x="670" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">unstable（每帧重解析）</text>
+
+  <!-- 边界指针 -->
+  <line x1="590" y1="172" x2="590" y2="200" stroke="#1F1F1F" stroke-width="1.5"/>
+  <text x="590" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#1F1F1F" text-anchor="middle">stablePrefixRef（只往前不往后）</text>
+
+  <!-- 三层优化清单 -->
+  <text x="40" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#1F1F1F">三层叠加，每帧工作量降到极小</text>
+
+  <rect x="40" y="290" width="240" height="120" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="55" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2">1. 稳定边界</text>
+  <text x="55" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">monotonic ref</text>
+  <text x="55" y="355" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">O(全文) → O(增量)</text>
+  <text x="55" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">opt-out React Compiler memo</text>
+
+  <rect x="290" y="290" width="220" height="120" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="305" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2">2. LRU 缓存</text>
+  <text x="305" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Map(hash → tokens)</text>
+  <text x="305" y="355" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">unmount→remount 不重算</text>
+  <text x="305" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">issue #24180 回归后补</text>
+
+  <rect x="520" y="290" width="240" height="120" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="535" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2">3. 快速通道</text>
+  <text x="535" y="335" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">前 500 字扫一遍</text>
+  <text x="535" y="355" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">无 markdown 直接 paragraph</text>
+  <text x="535" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">每次省 ~3ms（一帧时长）</text>
+
+  <!-- 结论带 -->
+  <rect x="40" y="435" width="720" height="40" rx="4" fill="#FFF3E0"/>
+  <text x="400" y="461" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">AI 时代的微交互一半已经下沉到数据流处理层</text>
+</svg>

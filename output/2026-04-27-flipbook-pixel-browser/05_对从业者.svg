@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="400" y="38" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">对从业者：判断你的位置在哪条曲线上</text>
+
+  <!-- top: 3 substitution curves -->
+  <text x="400" y="76" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">"AI 取代前端"的三种路径 —— 替代曲线完全不同</text>
+
+  <rect x="40" y="92" width="240" height="120" fill="#F7F7F5" stroke="#E3E2E0" rx="6"/>
+  <text x="160" y="118" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">路径 A：AI 帮你写代码</text>
+  <text x="55" y="142" font-size="11" fill="#787774">代表：Copilot / Cursor</text>
+  <text x="55" y="166" font-size="12" fill="#37352F">效果：</text>
+  <text x="55" y="186" font-size="12" fill="#37352F">初级前端工作量减少</text>
+
+  <rect x="290" y="92" width="240" height="120" fill="#F7F7F5" stroke="#E3E2E0" rx="6"/>
+  <text x="410" y="118" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">路径 B：AI 直接出代码</text>
+  <text x="305" y="142" font-size="11" fill="#787774">代表：v0 / Bolt</text>
+  <text x="305" y="166" font-size="12" fill="#37352F">效果：</text>
+  <text x="305" y="186" font-size="12" fill="#37352F">前端从职业变成审稿人</text>
+
+  <rect x="540" y="92" width="240" height="120" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="660" y="118" font-size="13" font-weight="700" fill="#2383E2" text-anchor="middle">路径 C：AI 直接出像素</text>
+  <text x="555" y="142" font-size="11" fill="#787774">代表：flipbook.page</text>
+  <text x="555" y="166" font-size="12" fill="#37352F">效果：</text>
+  <text x="555" y="186" font-size="12" font-weight="600" fill="#2383E2">某些场景整个工种消失</text>
+
+  <!-- bottom: scenario triage -->
+  <text x="400" y="252" font-size="14" font-weight="600" fill="#1A1A1A" text-anchor="middle">盲区判断：什么场景永远不会被吃</text>
+  <text x="400" y="274" font-size="12" fill="#787774" text-anchor="middle">问一句话就够 —— "这件事最后需不需要文字证据？"</text>
+
+  <rect x="40" y="290" width="240" height="220" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="160" y="318" font-size="13" font-weight="700" fill="#2383E2" text-anchor="middle">射程内（会被吃）</text>
+  <text x="55" y="346" font-size="12" fill="#37352F">• 百科信息浏览</text>
+  <text x="55" y="368" font-size="12" fill="#37352F">• 教育 / 儿童读物</text>
+  <text x="55" y="390" font-size="12" fill="#37352F">• 仪表盘类 SaaS</text>
+  <text x="55" y="412" font-size="12" fill="#37352F">• 营销页 / 产品手册</text>
+  <text x="55" y="446" font-size="11" fill="#787774">特征：</text>
+  <text x="55" y="466" font-size="11" fill="#787774">信息密度低 / 结构灵活</text>
+  <text x="55" y="486" font-size="11" fill="#787774">幻觉容忍度高</text>
+
+  <rect x="290" y="290" width="240" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="410" y="318" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">缓冲区（暂时安全）</text>
+  <text x="305" y="346" font-size="12" fill="#37352F">• 表单 / 审批流</text>
+  <text x="305" y="368" font-size="12" fill="#37352F">• 编辑 / 翻译</text>
+  <text x="305" y="390" font-size="12" fill="#37352F">• 研究 / 写作</text>
+  <text x="305" y="412" font-size="12" fill="#37352F">• 编码 IDE（Shah 押会）</text>
+  <text x="305" y="446" font-size="11" fill="#787774">特征：</text>
+  <text x="305" y="466" font-size="11" fill="#787774">需要复制粘贴 / 字符级精确</text>
+  <text x="305" y="486" font-size="11" fill="#787774">模型今天做不到</text>
+
+  <rect x="540" y="290" width="240" height="220" fill="#FFFFFF" stroke="#E3E2E0" rx="6"/>
+  <text x="660" y="318" font-size="13" font-weight="700" fill="#1A1A1A" text-anchor="middle">永久安全区</text>
+  <text x="555" y="346" font-size="12" fill="#37352F">• 金融交易</text>
+  <text x="555" y="368" font-size="12" fill="#37352F">• 医疗记录</text>
+  <text x="555" y="390" font-size="12" fill="#37352F">• 法律合同</text>
+  <text x="555" y="412" font-size="12" fill="#37352F">• 政府文书</text>
+  <text x="555" y="446" font-size="11" fill="#787774">特征：</text>
+  <text x="555" y="466" font-size="11" fill="#787774">UI 要被日志记录</text>
+  <text x="555" y="486" font-size="11" fill="#787774">要被法庭质证 / 监管抽检</text>
+
+  <text x="400" y="528" font-size="11" fill="#787774" text-anchor="middle">像素流没有可序列化的事件日志，没有可比对的文本快照 —— 这一类场景结构性免疫</text>
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7F1E8"/>
+      <stop offset="1" stop-color="#ECE5D3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#paper)"/>
+
+  <!-- top hairlines -->
+  <line x1="120" y1="120" x2="1480" y2="120" stroke="#2A241B" stroke-width="2"/>
+  <line x1="120" y1="138" x2="1480" y2="138" stroke="#2A241B" stroke-width="0.7" opacity="0.45"/>
+
+  <!-- eyebrow -->
+  <text x="120" y="190" font-family="SF Mono, Menlo, monospace" font-size="20" letter-spacing="6" fill="#B85A3A" font-weight="600">AI 前沿拆解 · 5-26 · DECODE 471</text>
+
+  <!-- main title -->
+  <text x="120" y="320" font-family="Cormorant Garamond, Songti SC, Noto Serif SC, serif" font-size="86" font-weight="700" fill="#2A241B">Anthropic 的 CFO</text>
+  <text x="120" y="420" font-family="Cormorant Garamond, Songti SC, Noto Serif SC, serif" font-size="86" font-weight="700" fill="#2A241B" font-style="italic">不是预算看门人。</text>
+
+  <!-- accent rule -->
+  <rect x="120" y="460" width="80" height="4" fill="#B85A3A"/>
+
+  <!-- deck -->
+  <text x="120" y="540" font-family="Cormorant Garamond, Songti SC, serif" font-size="34" font-style="italic" fill="#5C5345">他在管 1000 亿美元算力的双向死亡——</text>
+  <text x="120" y="588" font-family="Cormorant Garamond, Songti SC, serif" font-size="34" font-style="italic" fill="#5C5345">买多了破产，买少了丢领先。</text>
+
+  <!-- three numbers row -->
+  <g transform="translate(120, 680)">
+    <rect x="0" y="0" width="380" height="120" fill="#B85A3A" rx="4"/>
+    <text x="190" y="48" font-family="Cormorant Garamond, serif" font-size="30" fill="#F7F1E8" text-anchor="middle" letter-spacing="3">COMPUTE COMMITMENT</text>
+    <text x="190" y="100" font-family="Cormorant Garamond, serif" font-size="52" fill="#F7F1E8" font-weight="700" text-anchor="middle">$100B+</text>
+
+    <rect x="440" y="0" width="380" height="120" fill="#2A241B" rx="4"/>
+    <text x="630" y="48" font-family="Cormorant Garamond, serif" font-size="30" fill="#F7F1E8" text-anchor="middle" letter-spacing="3">ANNUALIZED REVENUE</text>
+    <text x="630" y="100" font-family="Cormorant Garamond, serif" font-size="52" fill="#F7F1E8" font-weight="700" text-anchor="middle">$30B</text>
+
+    <rect x="880" y="0" width="380" height="120" fill="#5C5345" rx="4"/>
+    <text x="1070" y="48" font-family="Cormorant Garamond, serif" font-size="30" fill="#F7F1E8" text-anchor="middle" letter-spacing="3">VALUATION</text>
+    <text x="1070" y="100" font-family="Cormorant Garamond, serif" font-size="52" fill="#F7F1E8" font-weight="700" text-anchor="middle">$90B</text>
+  </g>
+
+  <!-- source line -->
+  <text x="120" y="850" font-family="SF Mono, Menlo, monospace" font-size="16" fill="#8A8472" letter-spacing="3">SOURCE · INVEST LIKE THE BEST EP.471 · 2026-05-13</text>
+</svg>

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle" font-weight="500">CLAUDE CODE UX 源码拆解 #1</text>
+  <line x1="320" y1="52" x2="480" y2="52" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Terminal window frame -->
+  <rect x="120" y="75" width="560" height="320" rx="12" fill="#1a1a1a" stroke="#37352F" stroke-width="2"/>
+  <!-- Title bar -->
+  <circle cx="148" cy="95" r="6" fill="#EB5757"/>
+  <circle cx="168" cy="95" r="6" fill="#FFB020"/>
+  <circle cx="188" cy="95" r="6" fill="#4DB6AC"/>
+  <text x="400" y="99" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#787774" text-anchor="middle">src/ink/ -- 96 files</text>
+
+  <!-- Inside: rendering pipeline layers -->
+  <rect x="160" y="120" width="480" height="36" rx="6" fill="#2383E2" opacity="0.9"/>
+  <text x="400" y="143" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle" font-weight="600">React JSX</text>
+
+  <text x="400" y="170" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">reconciler.ts</text>
+
+  <rect x="160" y="180" width="480" height="36" rx="6" fill="#37352F" opacity="0.8"/>
+  <text x="400" y="203" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">Custom DOM (ink-box / ink-text)</text>
+
+  <text x="400" y="230" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">layout/yoga.ts</text>
+
+  <rect x="160" y="240" width="480" height="36" rx="6" fill="#37352F" opacity="0.6"/>
+  <text x="400" y="263" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">Yoga Flexbox Layout</text>
+
+  <text x="400" y="290" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">screen.ts (1487 lines)</text>
+
+  <rect x="160" y="300" width="480" height="36" rx="6" fill="#37352F" opacity="0.4"/>
+  <text x="400" y="323" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF" text-anchor="middle">Packed TypedArray Screen Buffer</text>
+
+  <text x="400" y="350" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">diff + optimizer</text>
+
+  <rect x="160" y="358" width="480" height="28" rx="6" fill="#4DB6AC" opacity="0.7"/>
+  <text x="400" y="377" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" text-anchor="middle">ANSI Escape Sequences -> stdout</text>
+
+  <!-- Title -->
+  <text x="400" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="24" fill="#37352F" text-anchor="middle" font-weight="bold">终端里的浏览器</text>
+  <text x="400" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle">Ink 渲染引擎 96 个文件逐行拆解</text>
+</svg>

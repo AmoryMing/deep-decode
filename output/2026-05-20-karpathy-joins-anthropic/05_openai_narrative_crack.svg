@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">对 OpenAI 意味着什么：叙事层的一道裂缝</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">杀伤力不在头数 · 在故事 · 在二阶效应</text>
+
+  <!-- Original narrative box -->
+  <rect x="40" y="110" width="720" height="60" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1" rx="4"/>
+  <text x="60" y="138" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">过去两年的对外故事</text>
+  <text x="60" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"基础模型由我们定义，所有人在追我们。"</text>
+
+  <!-- Three events stack -->
+  <rect x="40" y="200" width="230" height="110" fill="#FFF4ED" stroke="#DA7756" stroke-width="1.5" rx="4"/>
+  <text x="56" y="226" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">事件 1</text>
+  <text x="56" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">联创第二次离开</text>
+  <text x="56" y="272" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">且第二次去对家做</text>
+  <text x="56" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#DA7756">最核心的 pre-training</text>
+
+  <rect x="285" y="200" width="230" height="110" fill="#FFF4ED" stroke="#DA7756" stroke-width="1.5" rx="4"/>
+  <text x="301" y="226" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">事件 2</text>
+  <text x="301" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Mira Murati 之后</text>
+  <text x="301" y="272" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">资深 IC 持续流失</text>
+  <text x="301" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#DA7756">招新一拨追不齐叙事</text>
+
+  <rect x="530" y="200" width="230" height="110" fill="#FFF4ED" stroke="#DA7756" stroke-width="1.5" rx="4"/>
+  <text x="546" y="226" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">事件 3</text>
+  <text x="546" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Sutskever 走后</text>
+  <text x="546" y="272" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">资深 research lead 空位</text>
+  <text x="546" y="292" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#DA7756">至今没人填</text>
+
+  <!-- Arrow down -->
+  <line x1="400" y1="320" x2="400" y2="360" stroke="#DA7756" stroke-width="2.5"/>
+  <polygon points="395,350 400,362 405,350" fill="#DA7756"/>
+
+  <!-- 2nd order effects -->
+  <rect x="40" y="370" width="720" height="110" fill="#37352F" rx="6"/>
+  <text x="60" y="398" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">叙事裂缝的二阶效应</text>
+  <text x="60" y="424" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020">• 下一批顶级 PhD 的 offer 选择</text>
+  <text x="60" y="446" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020">• 投资人对"基础模型只剩 OpenAI 一家有戏"的估值耐心</text>
+  <text x="60" y="468" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFB020">• 内部研究员"我能不能在这里做我想做的"的隐性判断</text>
+</svg>

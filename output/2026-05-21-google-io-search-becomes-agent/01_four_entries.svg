@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">同时被改的四个口子</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Google 这次不是发新模型，是把四个不同层级的入口一起翻了一遍</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Row 1: 搜索框 -->
+  <g transform="translate(40, 130)">
+    <rect x="0" y="0" width="60" height="60" rx="6" fill="#2383E2"/>
+    <text x="30" y="38" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+    <text x="80" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">搜索框本身</text>
+    <text x="80" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">"intuitive, dynamically expanding" — 文本/图片/文件/视频/Chrome 标签都能进</text>
+    <text x="80" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">从关键词补全 → 意图补全；框随描述自己拉高</text>
+  </g>
+
+  <!-- Row 2: 结果页 -->
+  <g transform="translate(40, 220)">
+    <rect x="0" y="0" width="60" height="60" rx="6" fill="#2383E2"/>
+    <text x="30" y="38" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+    <text x="80" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">搜索结果页  ·  Generative UI</text>
+    <text x="80" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">结果不再是十条蓝链接，是模型按 query 现场拼出来的 mini-app</text>
+    <text x="80" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">爱范儿实测：问物理题 → 直接调用 Antigravity 写互动 Web 演示</text>
+  </g>
+
+  <!-- Row 3: 后台 -->
+  <g transform="translate(40, 310)">
+    <rect x="0" y="0" width="60" height="60" rx="6" fill="#2383E2"/>
+    <text x="30" y="38" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+    <text x="80" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">后台  ·  Information Agents</text>
+    <text x="80" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">24/7 跑在 Google 这边；用户设多个 agent 盯股价/新闻/价格</text>
+    <text x="80" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">夏季给 Pro 和 Ultra 订阅者</text>
+  </g>
+
+  <!-- Row 4: 桌面 -->
+  <g transform="translate(40, 400)">
+    <rect x="0" y="0" width="60" height="60" rx="6" fill="#2383E2"/>
+    <text x="30" y="38" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+    <text x="80" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">桌面层  ·  Spark + Antigravity 2.0</text>
+    <text x="80" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Spark 常驻个人 Agent，跑在 Google Cloud 专属 VM</text>
+    <text x="80" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Antigravity 2.0 升级独立桌面 app，"built around agent orchestration"</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <rect x="40" y="495" width="720" height="48" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="525" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F" text-anchor="middle">四个口子一起被改，不是一次产品更新，是一次范式切换</text>
+</svg>

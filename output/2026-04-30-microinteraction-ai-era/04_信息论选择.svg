@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#1F1F1F">Spinner vs Skeleton：按可知信息量选</text>
+  <text x="40" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">反馈的设计要匹配可预测的结构数量</text>
+
+  <!-- 表头 -->
+  <rect x="40" y="105" width="720" height="40" fill="#F5F5F4"/>
+  <text x="55" y="131" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">等待类型</text>
+  <text x="240" y="131" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">已知信息</text>
+  <text x="500" y="131" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">合适的微交互</text>
+
+  <!-- 行 1 -->
+  <rect x="40" y="145" width="720" height="60" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="55" y="170" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">列表加载</text>
+  <text x="55" y="190" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Linkedin / 商品流</text>
+  <text x="240" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">条数已知 · 每条结构已知</text>
+  <text x="500" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2">Skeleton 屏</text>
+
+  <!-- 行 2 -->
+  <rect x="40" y="205" width="720" height="60" fill="#F9F9F8" stroke="#E3E2E0"/>
+  <text x="55" y="230" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">表单提交</text>
+  <text x="55" y="250" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">登录 / 支付</text>
+  <text x="240" y="240" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">结果只有成功/失败两种</text>
+  <text x="500" y="240" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2">进度条 + 状态</text>
+
+  <!-- 行 3 (highlight) -->
+  <rect x="40" y="265" width="720" height="80" fill="#FFF3E0" stroke="#FFA500" stroke-width="1.5"/>
+  <text x="55" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">AI 回答</text>
+  <text x="55" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Claude / ChatGPT / Cursor</text>
+  <text x="240" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">时长未知 · 结构未知</text>
+  <text x="240" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">可能失败 · 可能卡住</text>
+  <text x="500" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#FFA500">Spinner</text>
+  <text x="500" y="315" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ 187 文案 + token 计数</text>
+  <text x="500" y="332" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">+ stalled 红色渐变</text>
+
+  <!-- 三通道分工 -->
+  <text x="40" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#1F1F1F">每秒钟的信息分配</text>
+
+  <rect x="40" y="400" width="220" height="60" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+  <text x="150" y="424" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">在干嘛</text>
+  <text x="150" y="446" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">187 条文案切换</text>
+
+  <rect x="270" y="400" width="220" height="60" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+  <text x="380" y="424" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">健康度</text>
+  <text x="380" y="446" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">stalled 红色渐变</text>
+
+  <rect x="500" y="400" width="220" height="60" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+  <text x="610" y="424" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">产出量</text>
+  <text x="610" y="446" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">token 计数器追赶</text>
+
+  <text x="400" y="488" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">骨架屏在 AI 场景下会变成一种说谎 — 它给用户一个不存在的结构预期</text>
+</svg>

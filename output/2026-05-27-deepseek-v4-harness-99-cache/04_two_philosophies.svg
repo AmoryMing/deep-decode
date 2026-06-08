@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#F7F1E8"/>
+  <text x="400" y="50" font-size="22" font-weight="700" fill="#2A241B" text-anchor="middle">两条 harness 路线：模型无关 vs 模型专用</text>
+  <text x="400" y="78" font-size="14" fill="#8A8472" text-anchor="middle">2026 年的 harness 哲学分叉</text>
+
+  <!-- left column: 模型无关 -->
+  <rect x="80" y="120" width="320" height="360" fill="#FFFFFF" stroke="#8A8472" stroke-width="1.5" rx="6"/>
+  <text x="240" y="155" font-size="18" font-weight="700" fill="#2A241B" text-anchor="middle">模型无关</text>
+  <text x="240" y="180" font-size="13" fill="#8A8472" text-anchor="middle">Claude Code / Cursor / aider</text>
+
+  <text x="100" y="220" font-size="14" font-weight="600" fill="#2A241B">主张</text>
+  <text x="100" y="245" font-size="13" fill="#2A241B">绑死任何一家 = vendor lock-in 风险</text>
+  <text x="100" y="265" font-size="13" fill="#2A241B">通过抽象层兼容多家模型</text>
+
+  <text x="100" y="305" font-size="14" font-weight="600" fill="#2A241B">代价</text>
+  <text x="100" y="330" font-size="13" fill="#8A8472">每家模型的特性都吃不到极致</text>
+  <text x="100" y="350" font-size="13" fill="#8A8472">命中率：30-60%（通用 IDE 插件实测）</text>
+
+  <text x="100" y="390" font-size="14" font-weight="600" fill="#2A241B">收益</text>
+  <text x="100" y="415" font-size="13" fill="#2A241B">模型涨价 / 下线可平滑切</text>
+  <text x="100" y="435" font-size="13" fill="#2A241B">用户挑模型，harness 不干预</text>
+
+  <!-- right column: 模型专用 -->
+  <rect x="420" y="120" width="320" height="360" fill="#FFFFFF" stroke="#B85A3A" stroke-width="2" rx="6"/>
+  <text x="580" y="155" font-size="18" font-weight="700" fill="#B85A3A" text-anchor="middle">模型专用</text>
+  <text x="580" y="180" font-size="13" fill="#8A8472" text-anchor="middle">Reasonix（只绑 DeepSeek）</text>
+
+  <text x="440" y="220" font-size="14" font-weight="600" fill="#2A241B">主张</text>
+  <text x="440" y="245" font-size="13" fill="#2A241B">模型 lock-in 不是风险 是杠杆</text>
+  <text x="440" y="265" font-size="13" fill="#2A241B">三层抽象都吃透一家特性</text>
+
+  <text x="440" y="305" font-size="14" font-weight="600" fill="#2A241B">代价</text>
+  <text x="440" y="330" font-size="13" fill="#8A8472">DeepSeek 涨价 / 下线 → 整套重写</text>
+  <text x="440" y="350" font-size="13" fill="#8A8472">不能切其他模型</text>
+
+  <text x="440" y="390" font-size="14" font-weight="600" fill="#B85A3A">收益</text>
+  <text x="440" y="415" font-size="13" font-weight="600" fill="#B85A3A">99.82% 命中率（实测）</text>
+  <text x="440" y="435" font-size="13" font-weight="600" fill="#B85A3A">账单是通用框架的 1/5</text>
+
+  <!-- footer -->
+  <text x="400" y="500" font-size="13" fill="#2A241B" text-anchor="middle" font-style="italic">通用 harness 的"灵活性"溢价 在便宜模型时代被压扁了——开始要算账</text>
+</svg>

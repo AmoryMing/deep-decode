@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-size="22" font-weight="700" fill="#37352F">Supervisor 进程：把会话从终端剥下来</text>
+  <text x="40" y="78" font-size="14" fill="#9B9A97">per-user 守护进程 · 自动起 · 空闲会自动退 · auto-update 时热重启不丢会话</text>
+
+  <!-- 用户层 -->
+  <text x="40" y="120" font-size="13" fill="#9B9A97" letter-spacing="1">用户接触面（可临时挂上/下）</text>
+  <g>
+    <rect x="40" y="135" width="180" height="80" rx="8" fill="#F7F7F5" stroke="#E0E0E0"/>
+    <text x="55" y="165" font-size="14" font-weight="600" fill="#37352F">终端 A</text>
+    <text x="55" y="190" font-size="12" fill="#9B9A97">claude agents</text>
+    <text x="55" y="206" font-size="12" fill="#9B9A97">→ Agent View</text>
+  </g>
+  <g>
+    <rect x="240" y="135" width="180" height="80" rx="8" fill="#F7F7F5" stroke="#E0E0E0"/>
+    <text x="255" y="165" font-size="14" font-weight="600" fill="#37352F">终端 B</text>
+    <text x="255" y="190" font-size="12" fill="#9B9A97">claude attach 7c5dcf5d</text>
+  </g>
+  <g>
+    <rect x="440" y="135" width="180" height="80" rx="8" fill="#F7F7F5" stroke="#E0E0E0"/>
+    <text x="455" y="165" font-size="14" font-weight="600" fill="#37352F">已关闭的终端</text>
+    <text x="455" y="190" font-size="12" fill="#9B9A97">（不影响后台）</text>
+  </g>
+
+  <!-- Supervisor -->
+  <text x="40" y="265" font-size="13" fill="#9B9A97" letter-spacing="1">用户级守护进程（你不直接管）</text>
+  <rect x="40" y="280" width="720" height="70" rx="8" fill="#2383E2" opacity="0.08" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="60" y="312" font-size="18" font-weight="700" fill="#2383E2">supervisor process</text>
+  <text x="60" y="335" font-size="12" fill="#37352F" opacity="0.7">~/.claude/daemon.log  ·  roster.json 跟踪所有会话  ·  watch 二进制热升级</text>
+
+  <!-- Sessions -->
+  <text x="40" y="385" font-size="13" fill="#9B9A97" letter-spacing="1">每会话 = 独立 Claude Code 进程</text>
+
+  <g>
+    <rect x="40" y="400" width="160" height="120" rx="8" fill="#FFFFFF" stroke="#2383E2"/>
+    <circle cx="60" cy="425" r="6" fill="#2383E2"/>
+    <text x="80" y="430" font-size="13" font-weight="600" fill="#37352F">bug-fix-A</text>
+    <text x="55" y="455" font-size="11" fill="#9B9A97">~/.claude/jobs/7c5dcf5d</text>
+    <text x="55" y="475" font-size="11" fill="#9B9A97">state.json + transcript</text>
+    <text x="55" y="500" font-size="11" fill="#37352F">在 worktree 里编辑</text>
+  </g>
+
+  <g>
+    <rect x="220" y="400" width="160" height="120" rx="8" fill="#FFFFFF" stroke="#FFB020"/>
+    <circle cx="240" cy="425" r="6" fill="#FFB020"/>
+    <text x="260" y="430" font-size="13" font-weight="600" fill="#37352F">pr-review-B</text>
+    <text x="235" y="455" font-size="11" fill="#9B9A97">~/.claude/jobs/3a2b...</text>
+    <text x="235" y="475" font-size="11" fill="#9B9A97">state.json + transcript</text>
+    <text x="235" y="500" font-size="11" fill="#37352F">等你回答问题</text>
+  </g>
+
+  <g>
+    <rect x="400" y="400" width="160" height="120" rx="8" fill="#FFFFFF" stroke="#9B9A97" stroke-dasharray="4,4"/>
+    <text x="420" y="430" font-size="22" fill="#9B9A97">∙</text>
+    <text x="445" y="430" font-size="13" font-weight="600" fill="#37352F">flaky-test-C</text>
+    <text x="415" y="455" font-size="11" fill="#9B9A97">~/.claude/jobs/9f1e...</text>
+    <text x="415" y="475" font-size="11" fill="#9B9A97">state 在盘上</text>
+    <text x="415" y="500" font-size="11" fill="#9B9A97">完成 + 闲置 ~1h GC 了</text>
+  </g>
+
+  <g>
+    <rect x="580" y="400" width="180" height="120" rx="8" fill="#FFFFFF" stroke="#4DB6AC"/>
+    <circle cx="600" cy="425" r="6" fill="#4DB6AC"/>
+    <text x="620" y="430" font-size="13" font-weight="600" fill="#37352F">/loop scout</text>
+    <text x="600" y="455" font-size="22" fill="#37352F">✢</text>
+    <text x="625" y="475" font-size="11" fill="#9B9A97">两轮间睡觉</text>
+    <text x="595" y="500" font-size="11" fill="#37352F">下轮 in 14m</text>
+  </g>
+
+  <!-- 连线 supervisor → sessions -->
+  <line x1="120" y1="350" x2="120" y2="400" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="300" y1="350" x2="300" y2="400" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+  <line x1="480" y1="350" x2="480" y2="400" stroke="#2383E2" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  <line x1="670" y1="350" x2="670" y2="400" stroke="#2383E2" stroke-width="1" opacity="0.5"/>
+
+  <!-- 连线 terminal → supervisor -->
+  <line x1="130" y1="215" x2="130" y2="280" stroke="#9B9A97" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="330" y1="215" x2="330" y2="280" stroke="#9B9A97" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="40" y="550" font-size="11" fill="#EB5757">⚠ 唯一真死亡场景：机器睡眠/关机 → `claude respawn --all` 复活</text>
+</svg>

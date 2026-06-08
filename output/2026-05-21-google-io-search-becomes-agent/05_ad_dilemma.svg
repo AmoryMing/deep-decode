@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">范式革命要先撞翻自家广告业务</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">"十个蓝链接"广告位，是 Generative UI 第一个被吃掉的库存</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Stack of revenue numbers -->
+  <g transform="translate(40, 130)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">现金流体量</text>
+
+    <rect x="0" y="20" width="340" height="60" rx="6" fill="#F0F7FF"/>
+    <text x="20" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Q1 2026 搜索广告</text>
+    <text x="20" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#2383E2">$60B  ·  YoY +19%</text>
+
+    <rect x="0" y="92" width="340" height="60" rx="6" fill="#F0F7FF"/>
+    <text x="20" y="116" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">2025 全年搜索广告</text>
+    <text x="20" y="140" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#2383E2">$198B  ·  占 Alphabet 60%</text>
+  </g>
+
+  <!-- Right: dependency chain -->
+  <g transform="translate(420, 130)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">广告生意的朴素假设</text>
+
+    <rect x="0" y="20" width="340" height="32" rx="6" fill="#FAFAF9" stroke="#E3E2E0"/>
+    <text x="170" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">用户点链接</text>
+
+    <text x="170" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774" text-anchor="middle">+</text>
+
+    <rect x="0" y="80" width="340" height="32" rx="6" fill="#FAFAF9" stroke="#E3E2E0"/>
+    <text x="170" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">链接旁边挂广告</text>
+
+    <text x="170" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#EB5757" text-anchor="middle">→</text>
+
+    <rect x="0" y="142" width="340" height="32" rx="6" fill="#FFEDED" stroke="#EB5757"/>
+    <text x="170" y="162" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#EB5757" text-anchor="middle">链接 → 现场组装组件，广告挂哪？</text>
+  </g>
+
+  <!-- Bridge: Google's hedge -->
+  <g transform="translate(40, 340)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">过渡解  ·  两条腿走路</text>
+
+    <rect x="0" y="20" width="350" height="120" rx="6" fill="#F0F7FF"/>
+    <text x="20" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">A  在 AI Mode 里测试新广告位</text>
+    <text x="20" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">把"链接旁边"换成"模型回答里"</text>
+
+    <line x1="20" y1="86" x2="330" y2="86" stroke="#E3E2E0"/>
+
+    <text x="20" y="108" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">B  把 Checkout 集成进 AI Mode</text>
+    <text x="20" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">从"广告费"切到"交易抽成"</text>
+
+    <rect x="370" y="20" width="350" height="120" rx="6" fill="#FFF8E1"/>
+    <text x="390" y="46" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="600" fill="#37352F">为什么 Google 会比 Perplexity 慢</text>
+    <text x="390" y="72" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">唯一一家既要做范式革命</text>
+    <text x="390" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">又要保护现金流的玩家</text>
+    <text x="390" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Generative UI 全量铺开 = 自家广告库存做减法</text>
+  </g>
+
+  <!-- Bottom -->
+  <rect x="40" y="495" width="720" height="36" rx="6" fill="#FFEDED"/>
+  <text x="400" y="518" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#EB5757" text-anchor="middle">"reduces incentive for users to visit source websites"  ·  对内容站和 SEO 业是判决书</text>
+</svg>

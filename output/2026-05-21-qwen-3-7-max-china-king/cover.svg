@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <!-- Top label -->
+  <text x="60" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#9B9A97" letter-spacing="3">2026 / 05 / 21  ·  DECODE  ·  QWEN 3.7-MAX</text>
+
+  <!-- Main title -->
+  <text x="60" y="115" font-family="PingFang SC, Inter, sans-serif" font-size="34" font-weight="700" fill="#37352F">1475 分的中国闭源最高位</text>
+  <text x="60" y="152" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="400" fill="#787774">Qwen3.7-Max 不是新模王，是阵营换挡</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="180" x2="740" y2="180" stroke="#E9E9E7" stroke-width="1"/>
+
+  <!-- Three big numbers row -->
+  <g transform="translate(60, 215)">
+    <!-- Box 1: Qwen score -->
+    <rect x="0" y="0" width="210" height="160" rx="6" fill="#F7F6F3" stroke="#E9E9E7" stroke-width="1"/>
+    <text x="105" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Qwen3.7-Max · LM Arena</text>
+    <text x="105" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="56" font-weight="700" fill="#2383E2" text-anchor="middle">1475</text>
+    <text x="105" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">全球第 13 名</text>
+    <text x="105" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">中国闭源最高位</text>
+
+    <!-- Box 2: Gap to top -->
+    <rect x="225" y="0" width="210" height="160" rx="6" fill="#F7F6F3" stroke="#E9E9E7" stroke-width="1"/>
+    <text x="330" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">距 Claude Opus 4.6 Thinking</text>
+    <text x="330" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="56" font-weight="700" fill="#E03E3E" text-anchor="middle">-26</text>
+    <text x="330" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">头部仍领先 1501</text>
+    <text x="330" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">绝对差未缩小</text>
+
+    <!-- Box 3: Half year delta -->
+    <rect x="450" y="0" width="210" height="160" rx="6" fill="#F7F6F3" stroke="#E9E9E7" stroke-width="1"/>
+    <text x="555" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">半年涨幅 vs Qwen3.5-Max</text>
+    <text x="555" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="56" font-weight="700" fill="#0F7B6C" text-anchor="middle">+11</text>
+    <text x="555" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">同期头部 +7</text>
+    <text x="555" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">相对差缩小</text>
+  </g>
+
+  <!-- Bottom strip -->
+  <g transform="translate(60, 410)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">真正的发布不是分数，是阵营换挡</text>
+    <text x="0" y="24" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">旗舰闭源 · 中段开源 · 长尾蒸馏  ·  Qwen + 平头哥 M890 + 阿里云百炼三件套</text>
+  </g>
+</svg>

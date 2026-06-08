@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" text-anchor="middle" font-weight="bold">JSX 到终端像素：完整渲染管线</text>
+
+  <!-- Step 1: JSX -->
+  <rect x="60" y="55" width="280" height="50" rx="8" fill="#2383E2"/>
+  <text x="200" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="600">&lt;Box&gt; &lt;Text&gt; JSX 组件</text>
+  <text x="200" y="94" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#FFFFFF" text-anchor="middle" opacity="0.8">components/Box.tsx, Text.tsx</text>
+
+  <!-- File count badge -->
+  <rect x="460" y="55" width="280" height="50" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle" font-weight="600">388 个 UI 组件</text>
+  <text x="600" y="94" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">构建在这套管线之上</text>
+
+  <!-- Arrow -->
+  <line x1="200" y1="105" x2="200" y2="125" stroke="#37352F" stroke-width="1.5" marker-end="url(#a1)"/>
+  <text x="280" y="120" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774">reconciler.ts (512 行)</text>
+
+  <!-- Step 2: Custom DOM -->
+  <rect x="60" y="128" width="280" height="50" rx="8" fill="#37352F"/>
+  <text x="200" y="149" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="600">自定义 DOM 树</text>
+  <text x="200" y="167" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">dom.ts: 7 种节点 + dirty 标记</text>
+
+  <rect x="460" y="128" width="280" height="50" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="149" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">ink-root / ink-box / ink-text</text>
+  <text x="600" y="167" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">ink-virtual-text / ink-link / ink-raw-ansi</text>
+
+  <line x1="200" y1="178" x2="200" y2="198" stroke="#37352F" stroke-width="1.5" marker-end="url(#a1)"/>
+  <text x="280" y="193" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774">layout/yoga.ts (309 行)</text>
+
+  <!-- Step 3: Yoga Layout -->
+  <rect x="60" y="201" width="280" height="50" rx="8" fill="#37352F" opacity="0.85"/>
+  <text x="200" y="222" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="600">Yoga Flexbox 布局</text>
+  <text x="200" y="240" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">setWidth(terminalColumns)</text>
+
+  <rect x="460" y="201" width="280" height="50" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="222" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">measure-text.ts: CJK/emoji 宽度</text>
+  <text x="600" y="240" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">中文 = 2 格, emoji = 2 格</text>
+
+  <line x1="200" y1="251" x2="200" y2="271" stroke="#37352F" stroke-width="1.5" marker-end="url(#a1)"/>
+  <text x="280" y="266" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774">render-node-to-output.ts</text>
+
+  <!-- Step 4: Output Buffer -->
+  <rect x="60" y="274" width="280" height="50" rx="8" fill="#37352F" opacity="0.7"/>
+  <text x="200" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="600">Output 操作队列</text>
+  <text x="200" y="313" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#4DB6AC" text-anchor="middle">write / blit / clip / clear / shift</text>
+
+  <rect x="460" y="274" width="280" height="50" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">output.ts: charCache 跨帧复用</text>
+  <text x="600" y="313" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">大部分行不变 = cache hit</text>
+
+  <line x1="200" y1="324" x2="200" y2="344" stroke="#37352F" stroke-width="1.5" marker-end="url(#a1)"/>
+  <text x="280" y="339" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774">screen.ts (1487 行)</text>
+
+  <!-- Step 5: Screen Buffer (HERO) -->
+  <rect x="50" y="347" width="300" height="65" rx="10" fill="#F7F7F5" stroke="#2383E2" stroke-width="2.5"/>
+  <text x="200" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#2383E2" text-anchor="middle" font-weight="bold">Screen TypedArray</text>
+  <text x="200" y="390" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#37352F" text-anchor="middle">cell = [charId:i32][style|link|w:i32]</text>
+  <text x="200" y="405" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">24000 cells = 192KB, 零对象分配</text>
+
+  <rect x="460" y="347" width="280" height="65" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="367" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle" font-weight="600">三大优化</text>
+  <text x="600" y="385" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">CharPool ASCII 快速路径</text>
+  <text x="600" y="399" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">StylePool bit-0 可见性标记</text>
+  <text x="600" y="413" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">Damage Tracking 脏区域追踪</text>
+
+  <line x1="200" y1="412" x2="200" y2="432" stroke="#37352F" stroke-width="1.5" marker-end="url(#a1)"/>
+  <text x="280" y="427" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#787774">diffEach + optimizer.ts</text>
+
+  <!-- Step 6: Terminal -->
+  <rect x="60" y="435" width="280" height="44" rx="8" fill="#4DB6AC"/>
+  <text x="200" y="462" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#FFFFFF" text-anchor="middle" font-weight="600">ANSI -> process.stdout</text>
+
+  <rect x="460" y="435" width="280" height="44" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="600" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">hit-test.ts: 鼠标事件反向传播</text>
+  <text x="600" y="470" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">(col,row) -> DOM 节点 -> onClick</text>
+
+  <!-- Bottom summary -->
+  <rect x="120" y="500" width="560" height="32" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="521" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">不是 console.log 加了颜色。是一个完整的渲染引擎。</text>
+
+  <defs>
+    <marker id="a1" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0 0 L 8 3 L 0 6" fill="none" stroke="#37352F" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

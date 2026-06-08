@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="50" font-size="22" font-weight="700" fill="#37352F">为什么"图里写字"决定 AI 能不能进广告主链路</text>
+  <text x="40" y="78" font-size="14" fill="#787774">同一张广告物料，文字错一个字，整张图作废</text>
+
+  <g transform="translate(40, 110)">
+    <rect width="350" height="340" fill="#FBEDED" stroke="#E0AAAA" rx="6"/>
+    <text x="20" y="35" font-size="16" font-weight="700" fill="#A82A2A">扩散模型时代</text>
+    <text x="20" y="60" font-size="13" fill="#5A2B2B">字写错 / 字模糊 / 字漂浮</text>
+
+    <rect x="20" y="80" width="310" height="170" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="40" y="115" font-size="22" fill="#999" font-style="italic">"Adidos" 限时 5O%</text>
+    <text x="40" y="150" font-size="14" fill="#999">活功日期: 2O26.O5</text>
+    <text x="40" y="185" font-size="14" fill="#999">字符堆在错误的位置...</text>
+    <text x="40" y="220" font-size="11" fill="#C0392B">[模型把 logo 拼成涂鸦]</text>
+
+    <text x="20" y="285" font-size="13" fill="#37352F">流程:</text>
+    <text x="20" y="308" font-size="13" fill="#5A2B2B">AI 生底图 → 人工 PS 加文字 → 校对 → 返工</text>
+    <text x="20" y="328" font-size="12" fill="#787774">单张物料周期以天计</text>
+  </g>
+
+  <g transform="translate(410, 110)">
+    <rect width="350" height="340" fill="#E8F1FB" stroke="#2383E2" rx="6"/>
+    <text x="20" y="35" font-size="16" font-weight="700" fill="#2383E2">Uni-1.1 多语言渲染</text>
+    <text x="20" y="60" font-size="13" fill="#37352F">中/日/阿拉伯文 接近零排印错误</text>
+
+    <rect x="20" y="80" width="310" height="170" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="40" y="115" font-size="22" font-weight="700" fill="#37352F">adidas 限时 50% OFF</text>
+    <text x="40" y="148" font-size="14" fill="#37352F">活动日期: 2026.05.06-12</text>
+    <text x="40" y="178" font-size="13" fill="#37352F">合规: 商品最终解释权归商家所有</text>
+    <text x="40" y="220" font-size="13" fill="#2383E2">中文 / English / العربية / 日本語</text>
+
+    <text x="20" y="285" font-size="13" fill="#37352F">流程:</text>
+    <text x="20" y="308" font-size="13" fill="#37352F">prompt → 终稿 → 句子级微调</text>
+    <text x="20" y="328" font-size="12" fill="#2383E2">广告 campaign: 40 小时 / &lt;$2 万</text>
+  </g>
+
+  <text x="400" y="490" text-anchor="middle" font-size="11" fill="#9B9A97">数据: Luma 公告 + 行业 case · 2026-05-06</text>
+</svg>

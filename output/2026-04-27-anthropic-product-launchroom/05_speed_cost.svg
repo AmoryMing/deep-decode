@@ -1,0 +1,24 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">速度的代价：一致性会被压缩</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">快速发布不是免费午餐，新用户会为重叠功能和最佳实践追版本。</text>
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="56" y="130" width="310" height="260" rx="12" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="211" y="166" font-size="18" font-weight="700" fill="#37352F" text-anchor="middle">速度收益</text>
+    <rect x="92" y="205" width="238" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="211" y="232" font-size="14" fill="#37352F" text-anchor="middle">真实用户反馈更快</text>
+    <rect x="92" y="263" width="238" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="211" y="290" font-size="14" fill="#37352F" text-anchor="middle">模型能力升级可立即吸收</text>
+    <rect x="92" y="321" width="238" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="211" y="348" font-size="14" fill="#37352F" text-anchor="middle">团队保持行动优势</text>
+    <rect x="434" y="130" width="310" height="260" rx="12" fill="#FFF7E8" stroke="#FFA500"/>
+    <text x="589" y="166" font-size="18" font-weight="700" fill="#37352F" text-anchor="middle">一致性成本</text>
+    <rect x="470" y="205" width="238" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="589" y="232" font-size="14" fill="#37352F" text-anchor="middle">功能路径重叠</text>
+    <rect x="470" y="263" width="238" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="589" y="290" font-size="14" fill="#37352F" text-anchor="middle">新用户不知道最佳路径</text>
+    <rect x="470" y="321" width="238" height="42" rx="8" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="589" y="348" font-size="14" fill="#37352F" text-anchor="middle">需要内置教育和回收机制</text>
+  </g>
+  <text x="400" y="438" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" text-anchor="middle">核心任务稳定，外围形态试验，才是可持续的快。</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">为什么不是 AWS、Google、CoreWeave？</text>
+  <text x="40" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">"已经亮着" 是 2026 年最稀缺的属性</text>
+
+  <!-- Three rows: each option, build time, status -->
+  <g transform="translate(40, 100)">
+    <!-- Header -->
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#787774">候选上游</text>
+    <text x="240" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#787774">新增 300MW 可用时间</text>
+    <text x="540" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#787774">Anthropic 的判断</text>
+
+    <line x1="0" y1="14" x2="720" y2="14" stroke="#E3E2E0" stroke-width="1"/>
+
+    <!-- Row 1: AWS / Google -->
+    <g transform="translate(0, 40)">
+      <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">AWS / Google</text>
+      <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">已签长期合约</text>
+      <rect x="240" y="-6" width="180" height="20" fill="#FFE0E0"/>
+      <text x="246" y="9" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">18-24 个月（资本支出周期）</text>
+      <text x="540" y="6" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">等不起</text>
+    </g>
+
+    <line x1="0" y1="80" x2="720" y2="80" stroke="#E3E2E0" stroke-width="1"/>
+
+    <!-- Row 2: CoreWeave / Lambda -->
+    <g transform="translate(0, 110)">
+      <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">CoreWeave / Lambda</text>
+      <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">已是核心客户</text>
+      <rect x="240" y="-6" width="140" height="20" fill="#FFF3E0"/>
+      <text x="246" y="9" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">6-12 个月（机柜上架）</text>
+      <text x="540" y="6" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">远水救不了近火</text>
+    </g>
+
+    <line x1="0" y1="150" x2="720" y2="150" stroke="#E3E2E0" stroke-width="1"/>
+
+    <!-- Row 3: SpaceXAI Colossus 1 -->
+    <g transform="translate(0, 180)">
+      <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2">SpaceXAI · Colossus 1</text>
+      <text x="0" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">2024 年 122 天点亮，已闲置</text>
+      <rect x="240" y="-6" width="100" height="20" fill="#E0F2E9"/>
+      <text x="246" y="9" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" font-weight="bold">本月内点亮</text>
+      <text x="540" y="6" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#2383E2">唯一选择</text>
+    </g>
+  </g>
+
+  <!-- Bottom note -->
+  <rect x="40" y="380" width="720" height="80" rx="6" fill="#F7F7F5"/>
+  <text x="60" y="408" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">护城河不是研究、不是数据、不是模型质量。</text>
+  <text x="60" y="432" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">最近这一波，护城河是<tspan font-weight="bold" fill="#2383E2">插座</tspan>——已经接好电、马上能跑推理的整套设施。</text>
+  <text x="60" y="452" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">坊间合同价：约 $5B / 年。够 SpaceXAI 把 Colossus 1 的折旧覆盖掉。</text>
+</svg>

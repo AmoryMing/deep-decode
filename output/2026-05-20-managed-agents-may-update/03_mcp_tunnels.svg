@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      .ja { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+      .ttl { font-size: 28px; font-weight: 700; fill: #1F1B16; }
+      .lbl { font-size: 16px; font-weight: 600; fill: #1F1B16; }
+      .sub { font-size: 13px; fill: #5b524a; }
+      .meta { font-size: 12px; fill: #8a7d72; }
+      .tag { font-size: 12px; font-weight: 600; fill: #fff; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="0" y="0" width="6" height="500" fill="#DA7756"/>
+
+  <text x="40" y="56" class="ja ttl">MCP Tunnels · outbound-only 反向通道</text>
+  <text x="40" y="82" class="ja meta">企业内网的 MCP server 不再需要开放入站端口</text>
+
+  <!-- Anthropic Console -->
+  <g transform="translate(60, 170)">
+    <rect width="220" height="180" rx="10" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="0" width="220" height="34" rx="10" fill="#DA7756"/>
+    <text x="110" y="22" class="ja tag" text-anchor="middle">Anthropic Console</text>
+    <text x="110" y="80" class="ja lbl" text-anchor="middle">agent</text>
+    <text x="110" y="115" class="ja sub" text-anchor="middle">通过 tunnel 反向</text>
+    <text x="110" y="135" class="ja sub" text-anchor="middle">调用企业 MCP server</text>
+    <text x="110" y="160" class="ja meta" text-anchor="middle">公网侧入口</text>
+  </g>
+
+  <!-- 防火墙 -->
+  <g transform="translate(330, 200)">
+    <rect width="40" height="140" fill="#1F1B16"/>
+    <text x="20" y="80" class="ja tag" text-anchor="middle" transform="rotate(-90 20 80)">FIREWALL</text>
+  </g>
+
+  <!-- 客户侧 -->
+  <g transform="translate(420, 170)">
+    <rect width="320" height="180" rx="10" fill="#1F1B16"/>
+    <rect x="0" y="0" width="320" height="34" rx="10" fill="#1F1B16"/>
+    <text x="160" y="22" class="ja tag" text-anchor="middle">客户企业网</text>
+
+    <g transform="translate(20, 56)">
+      <rect width="120" height="100" rx="6" fill="#3a2f25" stroke="#DA7756" stroke-width="1.5"/>
+      <text x="60" y="40" class="ja lbl" text-anchor="middle" fill="#f5e9e0">轻量 daemon</text>
+      <text x="60" y="62" class="ja sub" text-anchor="middle" fill="#DA7756">主动 outbound</text>
+      <text x="60" y="82" class="ja sub" text-anchor="middle" fill="#f5e9e0">只需一条连接</text>
+    </g>
+
+    <g transform="translate(170, 56)">
+      <rect width="130" height="30" rx="4" fill="#3a2f25"/>
+      <text x="65" y="20" class="ja sub" text-anchor="middle" fill="#f5e9e0">内部 CRM</text>
+      <rect y="35" width="130" height="30" rx="4" fill="#3a2f25"/>
+      <text x="65" y="55" class="ja sub" text-anchor="middle" fill="#f5e9e0">私有 API</text>
+      <rect y="70" width="130" height="30" rx="4" fill="#3a2f25"/>
+      <text x="65" y="90" class="ja sub" text-anchor="middle" fill="#f5e9e0">知识库 / 工单</text>
+    </g>
+  </g>
+
+  <!-- 连接线 -->
+  <line x1="280" y1="260" x2="440" y2="260" stroke="#DA7756" stroke-width="2.5" stroke-dasharray="8 4"/>
+  <polygon points="280,254 270,260 280,266" fill="#DA7756"/>
+  <text x="360" y="248" class="ja sub" text-anchor="middle">tunnel (反向)</text>
+  <text x="360" y="282" class="ja meta" text-anchor="middle">只开 outbound，无入站端口</text>
+
+  <!-- 对比 -->
+  <g transform="translate(60, 400)">
+    <text x="0" y="0" class="ja lbl">技术不新（ngrok/Cloudflare Tunnel 用了多年）—— 但 Anthropic 把它产品化的瞬间：</text>
+    <text x="0" y="28" class="ja sub" fill="#DA7756">协议设计者 + 协议运营者 合一</text>
+    <text x="0" y="50" class="ja meta">MCP 从开源协议演化为被 Anthropic Console 运营的连接层</text>
+  </g>
+</svg>

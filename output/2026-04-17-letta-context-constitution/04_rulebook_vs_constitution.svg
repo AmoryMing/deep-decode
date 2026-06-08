@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="PingFang SC, Inter, -apple-system, sans-serif">
+  <rect width="800" height="580" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">规则手册  vs  宪法 + 授权书</text>
+  <text x="400" y="66" font-size="13" fill="#6B6864" text-anchor="middle">CLAUDE.md 和 Context Constitution 的本质差别</text>
+
+  <!-- 左栏标题 -->
+  <rect x="60" y="100" width="320" height="60" fill="#F7F7F5" stroke="#FFB020" stroke-width="2" rx="6"/>
+  <text x="220" y="128" font-size="17" font-weight="700" fill="#37352F" text-anchor="middle">CLAUDE.md</text>
+  <text x="220" y="150" font-size="12" fill="#6B6864" text-anchor="middle">Claude Code 规则手册</text>
+
+  <!-- 右栏标题 -->
+  <rect x="420" y="100" width="320" height="60" fill="#F7F7F5" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="580" y="128" font-size="17" font-weight="700" fill="#37352F" text-anchor="middle">Context Constitution</text>
+  <text x="580" y="150" font-size="12" fill="#6B6864" text-anchor="middle">Letta 宪法 + 授权书</text>
+
+  <!-- 对比行 -->
+  <g font-size="12">
+    <!-- Row 1: 读者 -->
+    <text x="30" y="205" font-size="11" fill="#6B6864" font-weight="600">读者</text>
+    <rect x="60" y="190" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="220" y="215" fill="#37352F" text-anchor="middle">AI 读（简短规则）</text>
+    <rect x="420" y="190" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="580" y="210" fill="#37352F" text-anchor="middle">AI 读（第二人称 "you"）</text>
+    <text x="580" y="224" font-size="10" fill="#6B6864" text-anchor="middle">落款 "from the Letta humans"</text>
+
+    <!-- Row 2: 写者 -->
+    <text x="30" y="265" font-size="11" fill="#6B6864" font-weight="600">写者</text>
+    <rect x="60" y="250" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="220" y="275" fill="#37352F" text-anchor="middle">人写</text>
+    <rect x="420" y="250" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="580" y="275" fill="#37352F" text-anchor="middle">人写底层元规则</text>
+
+    <!-- Row 3: 修改权 -->
+    <text x="30" y="325" font-size="11" fill="#6B6864" font-weight="600">修改权</text>
+    <rect x="60" y="310" width="320" height="50" fill="#F7F7F5" stroke="#E4E2DF" rx="4"/>
+    <text x="220" y="330" fill="#37352F" text-anchor="middle">人改；AI 写回受</text>
+    <text x="220" y="347" font-size="11" fill="#EB5757" text-anchor="middle" font-weight="600">Strict Write Discipline 限制</text>
+    <rect x="420" y="310" width="320" height="50" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5" rx="4"/>
+    <text x="580" y="330" fill="#37352F" text-anchor="middle">AI 被授权</text>
+    <text x="580" y="347" font-size="11" fill="#2383E2" text-anchor="middle" font-weight="600">自主重写 system prompt</text>
+
+    <!-- Row 4: 身份观 -->
+    <text x="30" y="395" font-size="11" fill="#6B6864" font-weight="600">身份观</text>
+    <rect x="60" y="380" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="220" y="405" fill="#37352F" text-anchor="middle">每次 session 由 CLAUDE.md 定义</text>
+    <rect x="420" y="380" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="580" y="405" fill="#37352F" text-anchor="middle">身份 from experience ＞ model</text>
+
+    <!-- Row 5: 冲突处理 -->
+    <text x="30" y="455" font-size="11" fill="#6B6864" font-weight="600">冲突处理</text>
+    <rect x="60" y="440" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="220" y="465" fill="#37352F" text-anchor="middle">用户指令优先</text>
+    <rect x="420" y="440" width="320" height="40" fill="#FFFFFF" stroke="#E4E2DF" rx="4"/>
+    <text x="580" y="462" fill="#37352F" text-anchor="middle">agent 可</text>
+    <text x="620" y="462" fill="#2383E2" font-weight="600">advocate for itself</text>
+  </g>
+
+  <!-- 底部结论 -->
+  <rect x="80" y="505" width="640" height="50" fill="#F7F7F5" stroke="#2383E2" rx="4"/>
+  <text x="400" y="528" font-size="14" font-weight="700" fill="#37352F" text-anchor="middle">CLAUDE.md = 规则手册    ·    Context Constitution = 宪法 + 授权书</text>
+  <text x="400" y="546" font-size="11" fill="#6B6864" text-anchor="middle">前者决定"这次对话遵守什么"；后者决定"所有未来对话里你作为持续实体如何塑造自己"</text>
+</svg>

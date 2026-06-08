@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 540" width="800" height="540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="60" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">五家中国 AI 厂商的阵营分布</text>
+  <text x="60" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">2026 年：从"开源换地位"切到"闭源换毛利"，旗舰是否闭源成新分水岭</text>
+
+  <line x1="60" y1="95" x2="740" y2="95" stroke="#E9E9E7" stroke-width="1"/>
+
+  <!-- 2x2 Matrix axes -->
+  <!-- X axis: 旗舰开源 ←→ 旗舰闭源 -->
+  <!-- Y axis: 单轨 ←→ 双轨 (中段是否开源) -->
+
+  <g transform="translate(140, 140)">
+    <!-- Quadrant frame -->
+    <rect x="0" y="0" width="540" height="320" fill="#FAFAF9" stroke="#E9E9E7" stroke-width="1"/>
+
+    <!-- Cross lines -->
+    <line x1="270" y1="0" x2="270" y2="320" stroke="#E9E9E7" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="0" y1="160" x2="540" y2="160" stroke="#E9E9E7" stroke-width="1" stroke-dasharray="4,4"/>
+
+    <!-- Axis labels -->
+    <text x="135" y="-12" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">旗舰开源</text>
+    <text x="405" y="-12" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">旗舰闭源</text>
+    <text x="-12" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="end">中段闭源</text>
+    <text x="-12" y="244" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="end">中段开源</text>
+
+    <!-- Quadrant labels (subtle) -->
+    <text x="135" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#C2C1BC" text-anchor="middle">全开源派</text>
+    <text x="405" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#C2C1BC" text-anchor="middle">全闭源派</text>
+    <text x="135" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#C2C1BC" text-anchor="middle">开源旗舰 + 开源中段</text>
+    <text x="405" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#C2C1BC" text-anchor="middle">闭源旗舰 + 开源中段</text>
+
+    <!-- Bubbles -->
+    <!-- 阿里：闭源旗舰 + 开源中段 (右下) -->
+    <circle cx="410" cy="210" r="44" fill="#2383E2" opacity="0.92"/>
+    <text x="410" y="206" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">阿里</text>
+    <text x="410" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Qwen3.7-Max</text>
+
+    <!-- 字节：闭源旗舰 + 闭源中段 (右上) -->
+    <circle cx="450" cy="80" r="38" fill="#0F7B6C" opacity="0.92"/>
+    <text x="450" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">字节</text>
+    <text x="450" y="94" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Doubao 1.6</text>
+
+    <!-- DeepSeek：跨界双轨 (中右下) -->
+    <circle cx="310" cy="235" r="40" fill="#D9730D" opacity="0.92"/>
+    <text x="310" y="231" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">DeepSeek</text>
+    <text x="310" y="249" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">V4 / V4 Pro 双轨</text>
+
+    <!-- 智谱 GLM：开源旗舰 + 开源中段 (左下) -->
+    <circle cx="135" cy="220" r="34" fill="#9065B0" opacity="0.92"/>
+    <text x="135" y="216" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">智谱</text>
+    <text x="135" y="233" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">GLM-5</text>
+
+    <!-- Moonshot Kimi：开源旗舰 + 开源中段 (左下偏上) -->
+    <circle cx="80" cy="125" r="34" fill="#E03E3E" opacity="0.92"/>
+    <text x="80" y="121" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">Moonshot</text>
+    <text x="80" y="138" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFFFFF" text-anchor="middle">Kimi K2.6</text>
+  </g>
+
+  <!-- Legend / Key insight -->
+  <g transform="translate(60, 490)">
+    <rect x="0" y="0" width="680" height="34" fill="#F7F6F3" stroke="#E9E9E7" stroke-width="1" rx="4"/>
+    <text x="16" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">判断商业化决心的方法：从"有没有开源"变成"有没有把旗舰从开源里拿走"。阿里这次拿走了。</text>
+  </g>
+</svg>

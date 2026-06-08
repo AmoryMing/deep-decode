@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+  <text x="40" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">TACO 三层规则进化机制</text>
+  <line x1="40" y1="58" x2="180" y2="58" stroke="#2383E2" stroke-width="3"/>
+
+  <!-- Layer 1: Global Rule Pool -->
+  <rect x="40" y="90" width="720" height="120" fill="#FAFAFA" stroke="#E3E2E0"/>
+  <text x="60" y="116" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">① 全局规则池 Global Rule Pool</text>
+  <text x="60" y="136" font-family="PingFang SC, sans-serif" font-size="12" fill="#555">冷启动 6 条种子规则，随任务自动扩张，跨任务复用</text>
+
+  <rect x="60" y="150" width="100" height="44" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="110" y="176" text-anchor="middle" font-family="Menlo, monospace" font-size="12" fill="#1A1A1A">git</text>
+  <rect x="170" y="150" width="100" height="44" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="220" y="176" text-anchor="middle" font-family="Menlo, monospace" font-size="12" fill="#1A1A1A">apt</text>
+  <rect x="280" y="150" width="100" height="44" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="330" y="176" text-anchor="middle" font-family="Menlo, monospace" font-size="12" fill="#1A1A1A">heredoc</text>
+  <rect x="390" y="150" width="100" height="44" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="440" y="176" text-anchor="middle" font-family="Menlo, monospace" font-size="12" fill="#1A1A1A">pip</text>
+  <rect x="500" y="150" width="100" height="44" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="550" y="176" text-anchor="middle" font-family="Menlo, monospace" font-size="12" fill="#1A1A1A">compiler</text>
+  <rect x="610" y="150" width="100" height="44" fill="#FFFFFF" stroke="#2383E2" stroke-width="1"/>
+  <text x="660" y="176" text-anchor="middle" font-family="Menlo, monospace" font-size="12" fill="#1A1A1A">openssl</text>
+
+  <!-- Arrow down -->
+  <text x="395" y="234" font-family="PingFang SC, sans-serif" font-size="22" fill="#888">↓ retrieve top-30</text>
+
+  <!-- Layer 2: Intra-task -->
+  <rect x="40" y="250" width="720" height="140" fill="#F0F7FF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="60" y="276" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">② 任务内进化 Intra-Task Evolution</text>
+  <text x="60" y="296" font-family="PingFang SC, sans-serif" font-size="12" fill="#555">当前任务运行中，LLM 根据上下文挑选/合并/重写规则</text>
+
+  <rect x="60" y="312" width="220" height="62" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="74" y="332" font-family="PingFang SC, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">触发新规则</text>
+  <text x="74" y="350" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">现有规则压不住的</text>
+  <text x="74" y="365" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">高输出命令出现</text>
+
+  <rect x="290" y="312" width="220" height="62" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="304" y="332" font-family="PingFang SC, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">触发回滚</text>
+  <text x="304" y="350" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">Agent 重复请求完整</text>
+  <text x="304" y="365" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">输出，判定压过头了</text>
+
+  <rect x="520" y="312" width="220" height="62" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="534" y="332" font-family="PingFang SC, sans-serif" font-size="12" font-weight="600" fill="#1A1A1A">规则保守边界</text>
+  <text x="534" y="350" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">错误信息、tracebacks</text>
+  <text x="534" y="365" font-family="PingFang SC, sans-serif" font-size="11" fill="#555">永不压缩</text>
+
+  <!-- Arrow back up -->
+  <text x="395" y="414" font-family="PingFang SC, sans-serif" font-size="22" fill="#888">↑ 沉淀有效规则 + confidence</text>
+
+  <!-- Layer 3: Convergence -->
+  <rect x="40" y="430" width="720" height="80" fill="#FAFAFA" stroke="#E3E2E0"/>
+  <text x="60" y="456" font-family="PingFang SC, sans-serif" font-size="15" font-weight="700" fill="#1A1A1A">③ 收敛判据 Retention</text>
+  <text x="60" y="478" font-family="PingFang SC, sans-serif" font-size="12" fill="#555">Top-30 规则跨任务稳定比例 ≥ 90% → 压缩前沿稳定</text>
+  <text x="60" y="497" font-family="PingFang SC, sans-serif" font-size="11" fill="#888">这是一个让进化能停下来的硬指标，不是永远在「学习」的玄学</text>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">明星个体迁徙作为路线信号</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">研究员的脚比研究员的嘴更值钱 · 四个去向 = 四个判断</text>
+
+  <!-- Karpathy node (center top) -->
+  <rect x="320" y="100" width="160" height="56" fill="#DA7756" rx="6"/>
+  <text x="400" y="124" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF" text-anchor="middle">Andrej Karpathy</text>
+  <text x="400" y="144" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" text-anchor="middle">2026 的选择</text>
+
+  <!-- Branches: 4 options -->
+  <!-- Option 1: SSI (rejected) -->
+  <rect x="40" y="210" width="170" height="120" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1.5" rx="4"/>
+  <text x="56" y="234" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#787774">SSI</text>
+  <text x="56" y="256" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">百亿估值 · 纯 pre-training</text>
+  <text x="56" y="276" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">不做产品</text>
+  <line x1="56" y1="290" x2="194" y2="290" stroke="#E0E0DE"/>
+  <text x="56" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#DA7756">未选 = 不认这种押法</text>
+
+  <!-- Option 2: Google DeepMind (rejected) -->
+  <rect x="225" y="210" width="170" height="120" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1.5" rx="4"/>
+  <text x="241" y="234" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#787774">Google DeepMind</text>
+  <text x="241" y="256" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">Gemini 3 · 资源最多</text>
+  <text x="241" y="276" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">技术最接近 OpenAI</text>
+  <line x1="241" y1="290" x2="379" y2="290" stroke="#E0E0DE"/>
+  <text x="241" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#DA7756">未选 = 大厂 overhead 拖累</text>
+
+  <!-- Option 3: Eureka Labs (paused) -->
+  <rect x="410" y="210" width="170" height="120" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1.5" rx="4"/>
+  <text x="426" y="234" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#787774">Eureka Labs</text>
+  <text x="426" y="256" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">自己 2024 创办</text>
+  <text x="426" y="276" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">AI-native 教育</text>
+  <line x1="426" y1="290" x2="564" y2="290" stroke="#E0E0DE"/>
+  <text x="426" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#DA7756">中断 = 教育追不上前沿</text>
+
+  <!-- Option 4: Anthropic (CHOSEN, highlight) -->
+  <rect x="595" y="210" width="170" height="120" fill="#FFF4ED" stroke="#DA7756" stroke-width="2" rx="4"/>
+  <text x="611" y="234" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">Anthropic</text>
+  <text x="611" y="256" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">pre-training team</text>
+  <text x="611" y="276" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">AI-assisted research</text>
+  <line x1="611" y1="290" x2="749" y2="290" stroke="#DA7756"/>
+  <text x="611" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="700" fill="#DA7756">选了 = 三层重合的判断</text>
+
+  <!-- Connection lines from center to 4 options -->
+  <line x1="400" y1="156" x2="125" y2="210" stroke="#E0E0DE" stroke-width="1"/>
+  <line x1="400" y1="156" x2="310" y2="210" stroke="#E0E0DE" stroke-width="1"/>
+  <line x1="400" y1="156" x2="495" y2="210" stroke="#E0E0DE" stroke-width="1"/>
+  <line x1="400" y1="156" x2="680" y2="210" stroke="#DA7756" stroke-width="2.5"/>
+
+  <!-- Bottom takeaway -->
+  <rect x="40" y="380" width="720" height="130" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1" rx="6"/>
+  <text x="60" y="410" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#37352F">研究员选下家，只兼顾一件事</text>
+  <text x="60" y="436" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">——他在哪里能做他想做的科研问题。</text>
+  <text x="60" y="466" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">所以他选的方向，等于他用自己未来三五年时间下注的方向。</text>
+  <text x="60" y="494" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">公司讲路线必糊，研究员的脚不会糊。</text>
+</svg>

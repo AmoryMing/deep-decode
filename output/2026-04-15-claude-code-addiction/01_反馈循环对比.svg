@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" width="800" height="440">
+  <rect width="800" height="440" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#37352F" text-anchor="middle" font-weight="bold">反馈循环：ChatGPT vs Claude Code</text>
+
+  <!-- LEFT: ChatGPT loop (long, reward is mental) -->
+  <rect x="40" y="60" width="340" height="330" rx="12" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+  <text x="210" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#787774" text-anchor="middle" font-weight="600">ChatGPT 模式</text>
+
+  <!-- Steps -->
+  <rect x="80" y="110" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="133" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">写 prompt</text>
+
+  <line x1="210" y1="146" x2="210" y2="162" stroke="#787774" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="80" y="164" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="187" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">读 AI 的回答</text>
+
+  <line x1="210" y1="200" x2="210" y2="216" stroke="#787774" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="80" y="218" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="210" y="241" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" text-anchor="middle" font-weight="600">自己动手执行</text>
+
+  <line x1="210" y1="254" x2="210" y2="270" stroke="#787774" stroke-width="1.5" marker-end="url(#arrow-gray)"/>
+
+  <rect x="80" y="272" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="210" y="295" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">验证结果</text>
+
+  <!-- Verdict -->
+  <text x="210" y="340" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">奖赏在脑子里</text>
+  <text x="210" y="358" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" text-anchor="middle">循环长，中间有断裂</text>
+
+  <!-- RIGHT: Claude Code loop (short, reward is visible) -->
+  <rect x="420" y="60" width="340" height="330" rx="12" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="590" y="90" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#2383E2" text-anchor="middle" font-weight="600">Claude Code 模式</text>
+
+  <!-- Steps -->
+  <rect x="460" y="110" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="590" y="133" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">写 prompt</text>
+
+  <line x1="590" y1="146" x2="590" y2="162" stroke="#2383E2" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <rect x="460" y="164" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="590" y="187" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">看 AI 动手执行</text>
+
+  <line x1="590" y1="200" x2="590" y2="216" stroke="#2383E2" stroke-width="1.5" marker-end="url(#arrow-blue)"/>
+
+  <rect x="460" y="218" width="260" height="36" rx="6" fill="#FFFFFF" stroke="#4DB6AC" stroke-width="1.5"/>
+  <text x="590" y="241" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#4DB6AC" text-anchor="middle" font-weight="600">看到结果（文件/项目）</text>
+
+  <!-- Return arrow -->
+  <path d="M 720 240 Q 750 200 720 133" stroke="#2383E2" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow-blue)"/>
+  <text x="758" y="195" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2" text-anchor="middle">再来</text>
+
+  <!-- Verdict -->
+  <text x="590" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">奖赏在屏幕上</text>
+  <text x="590" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#2383E2" text-anchor="middle">循环短，无断裂</text>
+  <text x="590" y="342" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">文件树在长大 = 可见进度</text>
+  <text x="590" y="360" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">没有自然停止点 = 开放地图</text>
+
+  <!-- Bottom insight -->
+  <text x="400" y="420" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">让人上瘾的不是模型聪明，是"行动→结果"的间隔够短</text>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrow-gray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0 0 L 8 3 L 0 6" fill="none" stroke="#787774" stroke-width="1"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M 0 0 L 8 3 L 0 6" fill="none" stroke="#2383E2" stroke-width="1"/>
+    </marker>
+  </defs>
+</svg>

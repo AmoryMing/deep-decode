@@ -1,0 +1,31 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">Eval 不是 QA，是产品定义</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">把“好用”写成可重复任务，AI 产品才知道自己有没有变好。</text>
+  <g font-family="PingFang SC, Inter, sans-serif" font-size="14">
+    <rect x="70" y="180" width="150" height="64" rx="10" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="145" y="207" font-weight="700" fill="#37352F" text-anchor="middle">成功标准</text>
+    <text x="145" y="229" fill="#787774" text-anchor="middle">不是一句需求</text>
+    <path d="M230 212 L310 212" stroke="#2383E2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="320" y="180" width="150" height="64" rx="10" fill="#FFFFFF" stroke="#2383E2" stroke-width="2"/>
+    <text x="395" y="207" font-weight="700" fill="#2383E2" text-anchor="middle">10 个好 eval</text>
+    <text x="395" y="229" fill="#787774" text-anchor="middle">覆盖核心失败</text>
+    <path d="M480 212 L560 212" stroke="#2383E2" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="570" y="180" width="150" height="64" rx="10" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="645" y="207" font-weight="700" fill="#37352F" text-anchor="middle">模型行为</text>
+    <text x="645" y="229" fill="#787774" text-anchor="middle">跑出证据</text>
+    <path d="M650 255 C650 345 150 345 150 255" fill="none" stroke="#FFA500" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <rect x="248" y="326" width="304" height="74" rx="12" fill="#FFF3E0" stroke="#FFA500"/>
+    <text x="400" y="356" font-size="15" font-weight="700" fill="#37352F" text-anchor="middle">问模型为什么失败</text>
+    <text x="400" y="382" font-size="13" fill="#787774" text-anchor="middle">找出系统提示、子代理、验证环节的误导点</text>
+  </g>
+  <text x="400" y="444" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" text-anchor="middle">谁能定义完成标准，谁就在定义产品。</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2383E2"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#FFA500"/>
+    </marker>
+  </defs>
+</svg>

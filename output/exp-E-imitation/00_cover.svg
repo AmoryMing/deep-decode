@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#2383E2"/>
+  <text x="80" y="120" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="46" font-weight="700" fill="#1a1a1a">DeepSeek V4</text>
+  <text x="80" y="180" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" font-weight="600" fill="#1a1a1a">不是开源追赶——</text>
+  <text x="80" y="225" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" font-weight="600" fill="#1a1a1a">是把闭源派的定价锚撬出地基</text>
+
+  <line x1="80" y1="270" x2="1120" y2="270" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="80" y="335" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#666">SWE-bench Verified</text>
+  <text x="80" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="56" font-weight="700" fill="#2383E2">80.6</text>
+  <text x="220" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" fill="#999">vs</text>
+  <text x="290" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="56" font-weight="700" fill="#999">80.8</text>
+  <text x="80" y="415" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" fill="#999">V4-Pro / Opus 4.6（差 0.2 个百分点）</text>
+
+  <text x="600" y="335" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#666">每百万输出 token 价格</text>
+  <text x="600" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="56" font-weight="700" fill="#FFA500">$3.48</text>
+  <text x="780" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" fill="#999">vs</text>
+  <text x="850" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="56" font-weight="700" fill="#999">$25</text>
+  <text x="600" y="415" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" fill="#999">V4-Pro / Opus 4.6（14%）</text>
+
+  <line x1="80" y1="470" x2="1120" y2="470" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="80" y="525" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" fill="#1a1a1a">1.6T 参数  /  MIT 协议  /  33T tokens 训练  /  1M context  /  4-24 发布</text>
+  <text x="80" y="565" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" fill="#999">2026-04-25  ·  AI Force 内容工厂</text>
+</svg>

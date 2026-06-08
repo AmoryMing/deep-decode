@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="100%" stop-color="#2b1c12"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DA7756"/>
+      <stop offset="100%" stop-color="#E89A7C"/>
+    </linearGradient>
+    <style>
+      .ja { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+      .ttl { font-size: 44px; font-weight: 700; fill: #f5e9e0; }
+      .sub { font-size: 20px; font-weight: 500; fill: #DA7756; letter-spacing: 2px; }
+      .tag { font-size: 14px; font-weight: 600; fill: #1a1a1a; }
+      .meta { font-size: 13px; fill: #a89789; letter-spacing: 1px; }
+      .small { font-size: 12px; fill: #6b5d52; }
+    </style>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- 左侧暖橙竖条 -->
+  <rect x="0" y="0" width="6" height="450" fill="url(#warm)"/>
+
+  <!-- 顶部副标题 -->
+  <text x="40" y="68" class="ja sub">CHAPTER · 02</text>
+  <text x="40" y="92" class="ja meta">MANAGED AGENTS 续集 / 2026-05-19</text>
+
+  <!-- 主标题 -->
+  <text x="40" y="180" class="ja ttl">agent 长出了</text>
+  <text x="40" y="232" class="ja ttl">独立的手脚</text>
+
+  <!-- 副段 -->
+  <text x="40" y="278" class="ja meta">Self-Hosted Sandboxes · MCP Tunnels</text>
+  <text x="40" y="302" class="ja small">两面托管：脑在 Anthropic，手伸到你的机房</text>
+
+  <!-- 功能标签 -->
+  <g transform="translate(40, 350)">
+    <rect x="0" y="0" width="135" height="32" rx="16" fill="url(#warm)"/>
+    <text x="67" y="21" class="ja tag" text-anchor="middle">Self-Hosted Sandbox</text>
+
+    <rect x="148" y="0" width="105" height="32" rx="16" fill="#DA7756" opacity="0.85"/>
+    <text x="200" y="21" class="ja tag" text-anchor="middle">MCP Tunnels</text>
+
+    <rect x="265" y="0" width="100" height="32" rx="16" fill="none" stroke="#DA7756" stroke-width="1.5"/>
+    <text x="315" y="21" class="ja tag" text-anchor="middle" fill="#DA7756">两面托管</text>
+
+    <rect x="376" y="0" width="115" height="32" rx="16" fill="none" stroke="#DA7756" stroke-width="1.5"/>
+    <text x="433" y="21" class="ja tag" text-anchor="middle" fill="#DA7756">连接器即 lock-in</text>
+  </g>
+
+  <!-- 右侧装饰：两面托管图 -->
+  <g transform="translate(560, 130)" opacity="0.92">
+    <!-- 编排面 -->
+    <rect x="0" y="0" width="170" height="80" rx="6" fill="none" stroke="#DA7756" stroke-width="2"/>
+    <text x="85" y="32" class="ja" text-anchor="middle" fill="#DA7756" font-size="13" font-weight="600">Orchestration plane</text>
+    <text x="85" y="54" class="ja" text-anchor="middle" fill="#a89789" font-size="11">Anthropic 这边</text>
+
+    <!-- 连接线 -->
+    <line x1="85" y1="80" x2="85" y2="120" stroke="#DA7756" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <circle cx="85" cy="100" r="3" fill="#DA7756"/>
+
+    <!-- 执行面 -->
+    <rect x="0" y="120" width="170" height="80" rx="6" fill="#DA7756" opacity="0.2"/>
+    <rect x="0" y="120" width="170" height="80" rx="6" fill="none" stroke="#DA7756" stroke-width="2"/>
+    <text x="85" y="152" class="ja" text-anchor="middle" fill="#f5e9e0" font-size="13" font-weight="600">Execution plane</text>
+    <text x="85" y="174" class="ja" text-anchor="middle" fill="#f5e9e0" font-size="11">你的机房 / sandbox</text>
+  </g>
+
+  <!-- 底部署名 -->
+  <text x="40" y="425" class="ja small">内容工厂 · 深度拆解 #2026-05-20</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="80" y="60" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="700" fill="#1a1a1a">定价权易手：一条 5000 万 token / 月的 agent 流水线算式</text>
+  <text x="80" y="92" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">同一条工作流，两种成本</text>
+
+  <rect x="80" y="140" width="500" height="180" fill="#F7F7F5" rx="6"/>
+  <text x="110" y="180" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#2383E2">DeepSeek V4-Pro</text>
+  <text x="110" y="215" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">$3.48 / MTok 输出  ×  50M / 月</text>
+  <text x="110" y="265" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="48" font-weight="700" fill="#2383E2">$174 / 月</text>
+  <text x="110" y="295" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999">MIT 协议 / 同代性能 / API 中国基础设施</text>
+
+  <rect x="620" y="140" width="500" height="180" fill="#F7F7F5" rx="6"/>
+  <text x="650" y="180" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#999">Claude Opus 4.6</text>
+  <text x="650" y="215" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">$25 / MTok 输出  ×  50M / 月</text>
+  <text x="650" y="265" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="48" font-weight="700" fill="#999">$1,250 / 月</text>
+  <text x="650" y="295" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999">闭源 / Tier 2 / Mythos 锁联盟</text>
+
+  <line x1="80" y1="370" x2="1120" y2="370" stroke="#E0E0E0"/>
+
+  <text x="80" y="420" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#666">差额（per developer / per month）</text>
+  <text x="600" y="425" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" font-weight="700" fill="#FFA500">$1,076</text>
+
+  <text x="80" y="475" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#666">年差额（per developer / per year）</text>
+  <text x="600" y="480" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" font-weight="700" fill="#FFA500">$12,912</text>
+
+  <text x="80" y="530" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" fill="#666">50 人团队年差额</text>
+  <text x="600" y="535" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="32" font-weight="700" fill="#FFA500">$645,600</text>
+
+  <line x1="80" y1="580" x2="1120" y2="580" stroke="#E0E0E0"/>
+
+  <text x="80" y="625" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#1a1a1a">边际溢价空间（per MTok 输出）：$25 - $3.48 =</text>
+  <text x="800" y="625" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" font-weight="700" fill="#FFA500">$21.52</text>
+  <text x="80" y="655" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999">这是闭源派在性能差异收敛到误差范围的前提下，能维持的全部边际溢价</text>
+</svg>

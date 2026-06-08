@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="400" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="18" fill="#37352F" text-anchor="middle" font-weight="bold">Screen 打包 Cell：零对象分配的秘密</text>
+
+  <!-- Traditional approach (crossed out) -->
+  <rect x="40" y="55" width="340" height="180" rx="12" fill="#FFF5F5" stroke="#EB5757" stroke-width="1.5"/>
+  <text x="210" y="82" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#EB5757" text-anchor="middle" font-weight="600">传统方式：JS 对象数组</text>
+
+  <rect x="70" y="100" width="280" height="60" rx="6" fill="#FFFFFF" stroke="#EB5757" stroke-width="1"/>
+  <text x="210" y="118" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#37352F" text-anchor="middle">cells = [</text>
+  <text x="210" y="133" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#37352F" text-anchor="middle">  { char: "H", style: {...}, link: "..." },</text>
+  <text x="210" y="148" font-family="SF Mono, Menlo, monospace" font-size="10" fill="#37352F" text-anchor="middle">  { char: "e", style: {...}, link: "..." }, ...</text>
+
+  <text x="210" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" text-anchor="middle">200x120 = 24,000 个 JS 对象</text>
+  <text x="210" y="203" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" text-anchor="middle">每帧 GC 压力巨大</text>
+  <!-- X mark -->
+  <line x1="60" y1="75" x2="340" y2="210" stroke="#EB5757" stroke-width="2" opacity="0.3"/>
+
+  <!-- Claude Code approach -->
+  <rect x="420" y="55" width="340" height="180" rx="12" fill="#F7F7F5" stroke="#2383E2" stroke-width="1.5"/>
+  <text x="590" y="82" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2383E2" text-anchor="middle" font-weight="600">Claude Code：打包 TypedArray</text>
+
+  <!-- Packed layout diagram -->
+  <rect x="450" y="100" width="140" height="36" rx="4" fill="#2383E2"/>
+  <text x="520" y="123" font-family="SF Mono, Menlo, monospace" font-size="11" fill="#FFFFFF" text-anchor="middle">word0: charId</text>
+  <rect x="600" y="100" width="140" height="36" rx="4" fill="#37352F"/>
+  <text x="670" y="115" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#FFFFFF" text-anchor="middle">styleId[31:17]</text>
+  <text x="670" y="129" font-family="SF Mono, Menlo, monospace" font-size="9" fill="#4DB6AC" text-anchor="middle">linkId[16:2] w[1:0]</text>
+
+  <text x="590" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">1 cell = 2 x Int32 = 8 bytes</text>
+  <text x="590" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" text-anchor="middle" font-weight="600">24,000 cells = 192KB 连续内存</text>
+  <text x="590" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC" text-anchor="middle">零对象，零 GC</text>
+
+  <!-- Three optimizations -->
+  <text x="400" y="265" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#37352F" text-anchor="middle" font-weight="bold">三大 intern 池</text>
+
+  <!-- CharPool -->
+  <rect x="40" y="285" width="230" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="155" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">CharPool</text>
+  <text x="155" y="330" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">ASCII: Int32Array[128] 直接查表</text>
+  <text x="155" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">CJK/emoji: Map 去重</text>
+  <text x="155" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">screen.ts 第 21-53 行</text>
+
+  <!-- StylePool -->
+  <rect x="285" y="285" width="230" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">StylePool</text>
+  <text x="400" y="330" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">ANSI 样式 intern</text>
+  <text x="400" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">bit-0 = "空格上可见?" (1 bit!)</text>
+  <text x="400" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">screen.ts 第 112-260 行</text>
+
+  <!-- HyperlinkPool -->
+  <rect x="530" y="285" width="230" height="100" rx="8" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="645" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2383E2" text-anchor="middle" font-weight="600">HyperlinkPool</text>
+  <text x="645" y="330" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">OSC 8 超链接 intern</text>
+  <text x="645" y="348" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F" text-anchor="middle">index 0 = 无链接</text>
+  <text x="645" y="370" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774" text-anchor="middle">screen.ts 第 57-75 行</text>
+
+  <!-- Bottom insight -->
+  <rect x="120" y="410" width="560" height="70" rx="8" fill="#F7F7F5"/>
+  <text x="400" y="435" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle" font-weight="600">为什么这么做？</text>
+  <text x="400" y="458" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">终端 UI 每秒十几帧，每帧读写 24000 cell。对象分配 + GC = 卡顿。</text>
+  <text x="400" y="475" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">TypedArray = 连续内存 + 零 GC + JIT 友好的紧凑循环。</text>
+</svg>

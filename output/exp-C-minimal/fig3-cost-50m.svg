@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="900" height="500" fill="#FFFFFF"/>
+  <text x="40" y="50" font-size="20" font-weight="700" fill="#1A1A1A">图 3·50M 输出 token / 月 的成本对照</text>
+  <text x="40" y="76" font-size="13" fill="#666">同一条 agent coding 流水线，月度账单的实际差距</text>
+
+  <!-- Scenario callout -->
+  <rect x="40" y="100" width="820" height="42" fill="#F5F9FF" rx="3"/>
+  <text x="56" y="128" font-size="13" fill="#1A1A1A">场景：生产环境 agent coding 流水线 · 每月输出 5000 万 token · 来自 Buildfastwithai 算例</text>
+
+  <!-- V4-Pro -->
+  <text x="40" y="180" font-size="14" font-weight="600" fill="#1A1A1A">V4-Pro</text>
+  <rect x="160" y="166" width="56" height="26" fill="#FFA500" rx="2"/>
+  <text x="226" y="184" font-size="15" font-weight="700" fill="#1A1A1A">$174 / 月</text>
+
+  <!-- Opus 4.6 -->
+  <text x="40" y="225" font-size="14" font-weight="600" fill="#1A1A1A">Opus 4.6</text>
+  <rect x="160" y="211" width="400" height="26" fill="#2383E2" rx="2"/>
+  <text x="570" y="229" font-size="15" font-weight="700" fill="#1A1A1A">$1,250 / 月</text>
+
+  <!-- Differential -->
+  <line x1="40" y1="265" x2="860" y2="265" stroke="#E0E0E0"/>
+  <text x="40" y="295" font-size="14" font-weight="600" fill="#1A1A1A">月差额</text>
+  <text x="160" y="295" font-size="22" font-weight="700" fill="#FFA500">$1,076</text>
+
+  <text x="40" y="335" font-size="14" font-weight="600" fill="#1A1A1A">年差额</text>
+  <text x="160" y="335" font-size="22" font-weight="700" fill="#FFA500">$12,912</text>
+
+  <text x="40" y="375" font-size="14" font-weight="600" fill="#1A1A1A">50 人团队 / 年</text>
+  <text x="200" y="375" font-size="22" font-weight="700" fill="#FFA500">$645,600</text>
+
+  <!-- Conclusion strip -->
+  <rect x="40" y="410" width="820" height="50" fill="#FFF3E0" rx="3"/>
+  <text x="56" y="436" font-size="13" font-weight="600" fill="#1A1A1A">闭源在性能差落入误差范围之后还能维持的溢价空间 = $21.52 / MTok 输出</text>
+  <text x="56" y="453" font-size="11" fill="#666">这是闭源派现在必须自己算清楚的题</text>
+
+  <text x="40" y="488" font-size="10" fill="#999">数学校验：50×3.48=174 · 50×25=1250 · 1250-174=1076 · 1076×12=12912 · 12912×50=645600</text>
+</svg>

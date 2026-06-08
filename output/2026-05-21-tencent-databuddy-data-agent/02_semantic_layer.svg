@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">统一语义层从可选变必选</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">过去四年是可选基础设施，2026 Q2 起变成 Agent 原生模式的前置条件</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Left: 旧位置 -->
+  <g transform="translate(40, 130)">
+    <text x="170" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">过去四年  ·  可选基础设施</text>
+
+    <rect x="0" y="40" width="340" height="280" rx="8" fill="#FAFAF8" stroke="#E3E2E0" stroke-width="1"/>
+
+    <rect x="20" y="60" width="300" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="170" y="83" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">BI 工具 / 分析师</text>
+
+    <rect x="20" y="110" width="300" height="36" rx="4" fill="#F0F0EE" stroke="#E3E2E0" stroke-dasharray="4,3"/>
+    <text x="170" y="133" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">语义层  (可选)</text>
+    <text x="320" y="133" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757" text-anchor="end">x</text>
+
+    <rect x="20" y="160" width="300" height="36" rx="4" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="170" y="183" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">数据仓库</text>
+
+    <text x="170" y="230" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">对不上口径  →  Excel 糊弄过去</text>
+    <text x="170" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">dbt / Cube / AtScale / MetricFlow</text>
+    <text x="170" y="274" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">企业一直当可选</text>
+    <text x="170" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F" text-anchor="middle">基准准确率  45-51%</text>
+  </g>
+
+  <!-- Arrow middle -->
+  <g transform="translate(400, 280)">
+    <line x1="0" y1="0" x2="38" y2="0" stroke="#2383E2" stroke-width="2"/>
+    <path d="M 32 -6 L 40 0 L 32 6 Z" fill="#2383E2"/>
+  </g>
+
+  <!-- Right: 新位置 -->
+  <g transform="translate(450, 130)">
+    <text x="155" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2" text-anchor="middle">Agent 时代  ·  前置条件</text>
+
+    <rect x="0" y="40" width="310" height="280" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1.5"/>
+
+    <rect x="20" y="60" width="270" height="36" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="155" y="83" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">Data Agent  (自然语言)</text>
+
+    <rect x="20" y="110" width="270" height="36" rx="4" fill="#2383E2"/>
+    <text x="155" y="133" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="middle">统一语义层  (必选)</text>
+
+    <rect x="20" y="160" width="270" height="36" rx="4" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="155" y="183" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">数据仓库</text>
+
+    <text x="155" y="230" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Agent 不会问口径  →  直接写 SQL</text>
+    <text x="155" y="252" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">没语义层  →  用最像的列编答案</text>
+    <text x="155" y="274" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">DataBuddy / Cortex / Genie 共识</text>
+    <text x="155" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2" text-anchor="middle">提升至  68-69%</text>
+  </g>
+
+  <!-- Bottom evidence -->
+  <rect x="40" y="450" width="720" height="36" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="473" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">arxiv 2604.25149：4KB 语义层文档让首发命中率从 45-51% 提升至 68-69%  ·  幻觉是数据架构问题，不是 LLM 问题</text>
+</svg>

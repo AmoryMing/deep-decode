@@ -1,0 +1,68 @@
+<svg width="800" height="500" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <text x="40" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="24" font-weight="700" fill="#37352F">本工厂自审：8 个 skill 重新归档</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">capabilities 层是空的。deep-decode 撞到 8-10 上限，是失败率最高的一层。</text>
+
+  <g font-family="PingFang SC, Inter, sans-serif">
+    <rect x="50" y="120" width="220" height="340" rx="12" fill="#FFF3E0" stroke="#FFA500" stroke-width="2"/>
+    <text x="160" y="152" font-size="16" font-weight="700" fill="#FFA500" text-anchor="middle">capabilities</text>
+    <text x="160" y="174" font-size="12" fill="#787774" text-anchor="middle">原子层 · 隐患</text>
+
+    <rect x="70" y="194" width="180" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4,3"/>
+    <text x="160" y="216" font-size="12" fill="#787774" text-anchor="middle">send_email.py（藏）</text>
+
+    <rect x="70" y="234" width="180" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4,3"/>
+    <text x="160" y="256" font-size="12" fill="#787774" text-anchor="middle">md2xhs.py（藏）</text>
+
+    <rect x="70" y="274" width="180" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4,3"/>
+    <text x="160" y="296" font-size="12" fill="#787774" text-anchor="middle">wechat_publish（藏）</text>
+
+    <rect x="70" y="314" width="180" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4,3"/>
+    <text x="160" y="336" font-size="12" fill="#787774" text-anchor="middle">tavily 搜索（藏）</text>
+
+    <rect x="70" y="354" width="180" height="34" rx="6" fill="#FFFFFF" stroke="#E3E2E0" stroke-dasharray="4,3"/>
+    <text x="160" y="376" font-size="12" fill="#787774" text-anchor="middle">SVG→PNG（藏）</text>
+
+    <text x="160" y="430" font-size="11" fill="#FFA500" text-anchor="middle">散在 molecule 内部</text>
+    <text x="160" y="446" font-size="11" fill="#FFA500" text-anchor="middle">未独立测试</text>
+
+    <rect x="290" y="120" width="220" height="340" rx="12" fill="#FFFFFF" stroke="#2383E2" stroke-width="2"/>
+    <text x="400" y="152" font-size="16" font-weight="700" fill="#2383E2" text-anchor="middle">composites</text>
+    <text x="400" y="174" font-size="12" fill="#787774" text-anchor="middle">分子层 · 最稳</text>
+
+    <rect x="310" y="194" width="180" height="34" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="400" y="216" font-size="12" fill="#37352F" text-anchor="middle">distribute</text>
+
+    <rect x="310" y="234" width="180" height="34" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="400" y="256" font-size="12" fill="#37352F" text-anchor="middle">polish-pipeline</text>
+
+    <rect x="310" y="274" width="180" height="34" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="400" y="296" font-size="12" fill="#37352F" text-anchor="middle">visual-pipeline</text>
+
+    <rect x="310" y="314" width="180" height="34" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="400" y="336" font-size="12" fill="#37352F" text-anchor="middle">podcast-pipeline</text>
+
+    <rect x="310" y="354" width="180" height="34" rx="6" fill="#F7F7F5" stroke="#E3E2E0"/>
+    <text x="400" y="376" font-size="12" fill="#37352F" text-anchor="middle">fact-checker</text>
+
+    <text x="400" y="430" font-size="11" fill="#2383E2" text-anchor="middle">显式编排，复用合理</text>
+
+    <rect x="530" y="120" width="220" height="340" rx="12" fill="#F7F7F5" stroke="#FFA500" stroke-width="2" stroke-dasharray="6,4"/>
+    <text x="640" y="152" font-size="16" font-weight="700" fill="#FFA500" text-anchor="middle">playbooks</text>
+    <text x="640" y="174" font-size="12" fill="#787774" text-anchor="middle">化合物层 · 最不稳</text>
+
+    <rect x="550" y="208" width="180" height="64" rx="8" fill="#FFF3E0" stroke="#FFA500" stroke-width="2"/>
+    <text x="640" y="234" font-size="14" font-weight="700" fill="#37352F" text-anchor="middle">deep-decode</text>
+    <text x="640" y="256" font-size="11" fill="#787774" text-anchor="middle">编排 6 个 molecule</text>
+
+    <text x="640" y="304" font-size="12" fill="#37352F" text-anchor="middle">拆解 → 写 → polish</text>
+    <text x="640" y="324" font-size="12" fill="#37352F" text-anchor="middle">→ visual → podcast</text>
+    <text x="640" y="344" font-size="12" fill="#37352F" text-anchor="middle">→ distribute</text>
+
+    <text x="640" y="394" font-size="11" font-weight="700" fill="#FFA500" text-anchor="middle">逼近 8-10 上限</text>
+    <text x="640" y="412" font-size="11" fill="#787774" text-anchor="middle">隐式判断点过多</text>
+    <text x="640" y="430" font-size="11" fill="#787774" text-anchor="middle">下次失败定位困难</text>
+  </g>
+
+  <text x="400" y="484" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" text-anchor="middle">下一步：把藏起来的 atom 显式化，让 deep-decode 在每个判断点暴露 yes/no。</text>
+</svg>

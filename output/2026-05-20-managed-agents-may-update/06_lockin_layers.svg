@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <style>
+      .ja { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif; }
+      .ttl { font-size: 28px; font-weight: 700; fill: #1F1B16; }
+      .lbl { font-size: 15px; font-weight: 700; fill: #1F1B16; }
+      .sub { font-size: 13px; fill: #5b524a; }
+      .meta { font-size: 12px; fill: #8a7d72; }
+      .tag { font-size: 11px; font-weight: 600; fill: #fff; }
+    </style>
+  </defs>
+  <rect width="800" height="500" fill="#ffffff"/>
+  <rect x="0" y="0" width="6" height="500" fill="#DA7756"/>
+
+  <text x="40" y="56" class="ja ttl">lock-in 五层 · 从模型不让换到基建不让换</text>
+  <text x="40" y="82" class="ja meta">每加一个产品功能，多埋一层锁——锁不在模型，在拓扑里</text>
+
+  <!-- Pyramid stack -->
+  <g transform="translate(120, 130)">
+    <!-- Layer 1 -->
+    <rect x="0" y="0" width="560" height="50" fill="#FBEFE7" stroke="#DA7756" stroke-width="1.5"/>
+    <rect x="0" y="0" width="80" height="50" fill="#DA7756"/>
+    <text x="40" y="32" class="ja tag" text-anchor="middle">第 1 层</text>
+    <text x="100" y="22" class="ja lbl">session 格式</text>
+    <text x="100" y="42" class="ja sub">agent 会话状态的序列化结构 · 首发埋下</text>
+
+    <!-- Layer 2 -->
+    <rect x="0" y="55" width="560" height="50" fill="#fff" stroke="#DA7756" stroke-width="1.5"/>
+    <rect x="0" y="55" width="80" height="50" fill="#DA7756" opacity="0.85"/>
+    <text x="40" y="87" class="ja tag" text-anchor="middle">第 2 层</text>
+    <text x="100" y="77" class="ja lbl">prompt 更新格式</text>
+    <text x="100" y="97" class="ja sub">prompt 版本演化的兼容契约 · 首发埋下</text>
+
+    <!-- Layer 3 -->
+    <rect x="0" y="110" width="560" height="50" fill="#FBEFE7" stroke="#DA7756" stroke-width="1.5"/>
+    <rect x="0" y="110" width="80" height="50" fill="#DA7756" opacity="0.85"/>
+    <text x="40" y="142" class="ja tag" text-anchor="middle">第 3 层</text>
+    <text x="100" y="132" class="ja lbl">Outcomes rubric</text>
+    <text x="100" y="152" class="ja sub">grader 评估口径 · 5-08 首发埋下</text>
+
+    <!-- Layer 4 -->
+    <rect x="0" y="165" width="560" height="50" fill="#fff" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="165" width="80" height="50" fill="#DA7756"/>
+    <text x="40" y="197" class="ja tag" text-anchor="middle">第 4 层</text>
+    <text x="100" y="187" class="ja lbl" fill="#DA7756">sandbox provider 适配层</text>
+    <text x="100" y="207" class="ja sub">5-19 新埋 · 选定 Cloudflare/Daytona/Modal/Vercel 的接口契约</text>
+
+    <!-- Layer 5 -->
+    <rect x="0" y="220" width="560" height="50" fill="#FBEFE7" stroke="#DA7756" stroke-width="2"/>
+    <rect x="0" y="220" width="80" height="50" fill="#DA7756"/>
+    <text x="40" y="252" class="ja tag" text-anchor="middle">第 5 层</text>
+    <text x="100" y="242" class="ja lbl" fill="#DA7756">MCP Tunnels 连接器拓扑</text>
+    <text x="100" y="262" class="ja sub">5-19 新埋 · 企业内网 20 个连接重建成本</text>
+  </g>
+
+  <!-- 注释 -->
+  <text x="400" y="450" class="ja meta" text-anchor="middle">每往上走一层，搬到别家的迁移成本指数增加</text>
+  <text x="400" y="476" class="ja sub" fill="#DA7756" text-anchor="middle">lock-in 不再是"模型不让你换"，是"基础设施不让你换"</text>
+</svg>

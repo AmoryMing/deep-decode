@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F" text-anchor="middle">同样的能力，三种包装</text>
+
+  <!-- column 1: API -->
+  <g transform="translate(40,90)">
+    <rect x="0" y="0" width="220" height="320" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+    <text x="110" y="35" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F" text-anchor="middle">Web API</text>
+    <text x="110" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888" text-anchor="middle">2010s 起</text>
+    <line x1="20" y1="78" x2="200" y2="78" stroke="#E3E2E0"/>
+    <text x="20" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">面向</text>
+    <text x="20" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">人类开发者</text>
+    <text x="20" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">交付物</text>
+    <text x="20" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">REST 端点 + 文档</text>
+    <text x="20" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">调用方式</text>
+    <text x="20" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">手写胶水代码</text>
+    <text x="20" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">计费</text>
+    <text x="20" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">按调用次数 / QPS</text>
+  </g>
+
+  <!-- column 2: MCP -->
+  <g transform="translate(290,90)">
+    <rect x="0" y="0" width="220" height="320" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+    <text x="110" y="35" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F" text-anchor="middle">MCP Server</text>
+    <text x="110" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888" text-anchor="middle">高德 2025-05</text>
+    <line x1="20" y1="78" x2="200" y2="78" stroke="#E3E2E0"/>
+    <text x="20" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">面向</text>
+    <text x="20" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">大模型 Agent</text>
+    <text x="20" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">交付物</text>
+    <text x="20" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">工具签名 schema</text>
+    <text x="20" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">调用方式</text>
+    <text x="20" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">模型自主组合</text>
+    <text x="20" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">局限</text>
+    <text x="20" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">没有场景化用法</text>
+  </g>
+
+  <!-- column 3: Skill -->
+  <g transform="translate(540,90)">
+    <rect x="0" y="0" width="220" height="320" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="8"/>
+    <text x="110" y="35" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#2383E2" text-anchor="middle">Skill</text>
+    <text x="110" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#888" text-anchor="middle">高德 2026-03 起</text>
+    <line x1="20" y1="78" x2="200" y2="78" stroke="#E3E2E0"/>
+    <text x="20" y="105" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">面向</text>
+    <text x="20" y="125" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">Agent + 终端用户</text>
+    <text x="20" y="160" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">交付物</text>
+    <text x="20" y="180" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">SKILL.md + references</text>
+    <text x="20" y="215" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">调用方式</text>
+    <text x="20" y="235" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">标准玩法 + 渐进披露</text>
+    <text x="20" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">优势</text>
+    <text x="20" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#666">场景化 + 可靠</text>
+  </g>
+
+  <text x="400" y="455" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#888" text-anchor="middle">从"给零件"到"给说明书"</text>
+</svg>

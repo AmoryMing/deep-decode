@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #FFFFFF; }
+    .h1 { font: 700 20px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .h2 { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .label { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #37352F; }
+    .desc { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #666; }
+    .tag { font: 500 11px 'PingFang SC', Inter, sans-serif; fill: #888; }
+    .box-old { fill: #FFF5F5; stroke: #EB5757; stroke-width: 2; }
+    .box-new { fill: #F0F9F6; stroke: #4DB6AC; stroke-width: 2; }
+    .box-inner { fill: #FFFFFF; stroke: #CCC; stroke-width: 1.5; }
+    .arrow-thick { stroke: #EB5757; stroke-width: 5; fill: none; }
+    .arrow-thin { stroke: #4DB6AC; stroke-width: 1.5; fill: none; stroke-dasharray: 4 3; }
+    .gpu { fill: #E3F1FF; stroke: #2383E2; stroke-width: 1.2; }
+    .gpu-h200 { fill: #FFF4E0; stroke: #FFB020; stroke-width: 1.2; }
+    .section-title { font: 700 18px 'PingFang SC', Inter, sans-serif; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="38">PD 分离的物理边界：从"一栋楼"到"跨城"</text>
+  <text class="desc" x="40" y="60">Mooncake 解决了同机房 KVCache 池化，PrfaaS 把它推到跨数据中心</text>
+
+  <!-- Before: single cluster -->
+  <text class="section-title" x="40" y="100" fill="#EB5757">BEFORE · 单集群 · RDMA 胖管道</text>
+  <rect class="box-old" x="40" y="115" width="340" height="180" rx="10"/>
+  <text class="tag" x="55" y="135">同一栋楼 · RDMA 400Gbps</text>
+
+  <rect class="box-inner" x="60" y="150" width="130" height="120" rx="6"/>
+  <text class="h2" x="75" y="170">Prefill 节点</text>
+  <rect class="gpu-h200" x="75" y="182" width="45" height="28" rx="3"/>
+  <text class="label" x="82" y="201">H200</text>
+  <rect class="gpu-h200" x="130" y="182" width="45" height="28" rx="3"/>
+  <text class="label" x="137" y="201">H200</text>
+  <text class="desc" x="75" y="232">算力密集</text>
+  <text class="desc" x="75" y="250">matrix 重算</text>
+
+  <rect class="box-inner" x="230" y="150" width="130" height="120" rx="6"/>
+  <text class="h2" x="245" y="170">Decode 节点</text>
+  <rect class="gpu" x="245" y="182" width="45" height="28" rx="3"/>
+  <text class="label" x="255" y="201">H20</text>
+  <rect class="gpu" x="300" y="182" width="45" height="28" rx="3"/>
+  <text class="label" x="310" y="201">H20</text>
+  <text class="desc" x="245" y="232">带宽密集</text>
+  <text class="desc" x="245" y="250">吐 token</text>
+
+  <!-- fat pipe arrow -->
+  <line class="arrow-thick" x1="190" y1="210" x2="230" y2="210"/>
+  <polygon points="228,205 238,210 228,215" fill="#EB5757"/>
+  <text class="label" x="180" y="288" fill="#EB5757">KVCache 传输 @ 400Gbps RDMA</text>
+
+  <!-- After: cross-dc -->
+  <text class="section-title" x="420" y="100" fill="#4DB6AC">AFTER · 跨数据中心 · 商用以太网</text>
+  <rect class="box-new" x="420" y="115" width="340" height="340" rx="10"/>
+
+  <!-- PrfaaS 集群 -->
+  <rect class="box-inner" x="440" y="140" width="140" height="130" rx="6"/>
+  <text class="tag" x="450" y="158">数据中心 A</text>
+  <text class="h2" x="450" y="178">PrfaaS 集群</text>
+  <rect class="gpu-h200" x="450" y="188" width="55" height="26" rx="3"/>
+  <text class="label" x="460" y="206">H200</text>
+  <rect class="gpu-h200" x="513" y="188" width="55" height="26" rx="3"/>
+  <text class="label" x="523" y="206">H200</text>
+  <text class="desc" x="450" y="232">专做长请求 prefill</text>
+  <text class="desc" x="450" y="250">算力密度最大化</text>
+
+  <!-- 本地 PD 集群 -->
+  <rect class="box-inner" x="600" y="300" width="140" height="130" rx="6"/>
+  <text class="tag" x="610" y="318">数据中心 B</text>
+  <text class="h2" x="610" y="338">本地 PD 集群</text>
+  <rect class="gpu" x="610" y="348" width="55" height="26" rx="3"/>
+  <text class="label" x="625" y="366">H20</text>
+  <rect class="gpu" x="673" y="348" width="55" height="26" rx="3"/>
+  <text class="label" x="688" y="366">H20</text>
+  <text class="desc" x="610" y="392">短请求就地处理</text>
+  <text class="desc" x="610" y="410">带宽密集 decode</text>
+
+  <!-- thin pipe -->
+  <path class="arrow-thin" d="M 510 270 Q 550 310 600 330"/>
+  <polygon points="596,325 605,332 600,338" fill="#4DB6AC"/>
+
+  <text class="label" x="440" y="455" fill="#4DB6AC">仅传长请求 KVCache @ ~13Gbps 商用以太网</text>
+  <text class="desc" x="440" y="477">阈值 t=19.4K tokens，50% 请求被卸载</text>
+  <text class="desc" x="440" y="495">物理距离可拉长到跨机房甚至跨城</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="800" height="8" fill="#2383E2"/>
+
+  <text x="60" y="100" font-size="18" fill="#9B9A97" letter-spacing="3">CLAUDE CODE · 逐句解读</text>
+
+  <text x="60" y="170" font-size="44" font-weight="700" fill="#37352F">Agent View</text>
+  <text x="60" y="220" font-size="44" font-weight="700" fill="#37352F">把会话从终端剥下来</text>
+
+  <text x="60" y="280" font-size="20" fill="#37352F" opacity="0.7">原句 → 译 → 解读</text>
+  <text x="60" y="310" font-size="20" fill="#37352F" opacity="0.7">230+ 句，一句不跳</text>
+
+  <line x1="60" y1="370" x2="200" y2="370" stroke="#2383E2" stroke-width="3"/>
+  <text x="60" y="410" font-size="16" fill="#9B9A97">code.claude.com/docs/en/agent-view</text>
+  <text x="60" y="435" font-size="14" fill="#9B9A97">2026-05-15</text>
+
+  <g transform="translate(580, 130)">
+    <rect x="0" y="0" width="160" height="14" rx="2" fill="#FFB020" opacity="0.8"/>
+    <rect x="0" y="22" width="160" height="14" rx="2" fill="#2383E2" opacity="0.8"/>
+    <rect x="0" y="44" width="160" height="14" rx="2" fill="#4DB6AC" opacity="0.8"/>
+    <rect x="0" y="66" width="160" height="14" rx="2" fill="#EB5757" opacity="0.6"/>
+    <rect x="0" y="88" width="160" height="14" rx="2" fill="#9B9A97" opacity="0.5"/>
+    <text x="0" y="130" font-size="12" fill="#9B9A97">Needs input · Working</text>
+    <text x="0" y="148" font-size="12" fill="#9B9A97">Completed · Failed · Stopped</text>
+  </g>
+</svg>

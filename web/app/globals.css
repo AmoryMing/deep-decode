@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #18181b;
+  --color-ink-soft: #3f3f46;
+  --color-muted: #71717a;
+  --color-line: #e4e4e7;
+  --color-paper: #fafaf9;
+  --color-accent: #d4541e;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-serif: "Songti SC", "Noto Serif SC", Georgia, serif;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* 文章正文排版 */
+.prose-article {
+  font-size: 1.0625rem;
+  line-height: 1.85;
+  color: var(--color-ink-soft);
+}
+.prose-article h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 2.4rem 0 1rem;
+  padding-top: 0.4rem;
+  border-top: 2px solid var(--color-ink);
+  display: inline-block;
+}
+.prose-article h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 1.8rem 0 0.8rem;
+}
+.prose-article p {
+  margin: 1.05rem 0;
+}
+.prose-article a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-article strong {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+.prose-article img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1.8rem 0;
+  border: 1px solid var(--color-line);
+  background: #fff;
+}
+.prose-article ul,
+.prose-article ol {
+  margin: 1.05rem 0;
+  padding-left: 1.4rem;
+}
+.prose-article li {
+  margin: 0.4rem 0;
+}
+.prose-article blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1rem;
+  margin: 1.4rem 0;
+  color: var(--color-muted);
+}
+.prose-article code {
+  background: #f4f4f5;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+.prose-article pre {
+  background: #18181b;
+  color: #e4e4e7;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 1.4rem 0;
+}
+.prose-article pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+.prose-article table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.4rem 0;
+  font-size: 0.95rem;
+}
+.prose-article th,
+.prose-article td {
+  border: 1px solid var(--color-line);
+  padding: 0.55rem 0.8rem;
+  text-align: left;
+}
+.prose-article th {
+  background: #f4f4f5;
+  font-weight: 700;
+}

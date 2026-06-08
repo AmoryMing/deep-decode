@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">Scaling vs. Efficiency：两条路线的人事化对比</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">押效率路线的代表性个体 + 代表性公司 + 最纯粹效率项目 · 三层重合</text>
+
+  <!-- Left column: Scaling -->
+  <rect x="40" y="110" width="350" height="380" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1.5" rx="6"/>
+  <text x="60" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F">Scale 派</text>
+  <text x="60" y="164" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">更多数据 · 更大集群 · 更长上下文</text>
+
+  <text x="60" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">代表公司</text>
+  <text x="60" y="222" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">OpenAI · xAI · SSI</text>
+
+  <text x="60" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">核心假设</text>
+  <text x="60" y="280" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">scaling laws 仍未触顶</text>
+  <text x="60" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">边际收益 = 加更多 GPU</text>
+
+  <text x="60" y="336" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">代表个体</text>
+  <text x="60" y="358" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Sutskever（SSI）</text>
+  <text x="60" y="378" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">百亿估值 · 只做 pre-training</text>
+
+  <text x="60" y="426" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">Karpathy 没去</text>
+
+  <!-- Right column: Efficiency (highlight) -->
+  <rect x="410" y="110" width="350" height="380" fill="#FFF4ED" stroke="#DA7756" stroke-width="2" rx="6"/>
+  <text x="430" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#DA7756">Efficiency 派</text>
+  <text x="430" y="164" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">结构改进 · 数据质量 · AI-assisted</text>
+
+  <text x="430" y="200" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">代表公司</text>
+  <text x="430" y="222" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Anthropic · DeepMind · 学术派</text>
+
+  <text x="430" y="258" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">核心假设</text>
+  <text x="430" y="280" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">同样算力可挤更多空间</text>
+  <text x="430" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">让模型自己加速训练</text>
+
+  <text x="430" y="336" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#37352F">代表个体</text>
+  <text x="430" y="358" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">Karpathy（nanoGPT · llm.c · nanochat）</text>
+  <text x="430" y="378" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">数据效率被低估这条线的代表作</text>
+
+  <rect x="430" y="404" width="310" height="64" fill="#DA7756" rx="4"/>
+  <text x="445" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF">Karpathy 选了 Anthropic pre-training</text>
+  <text x="445" y="452" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF">最纯粹的"用模型加速模型"效率项目</text>
+
+  <!-- Bottom synthesis -->
+  <text x="400" y="514" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F" text-anchor="middle">效率派的代表个体 + 代表公司 + 代表项目 = 三层重合</text>
+</svg>

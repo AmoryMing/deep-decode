@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <defs>
+    <style>
+      .title { font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif; font-weight: 700; }
+      .sub { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 400; }
+      .en { font-family: 'PingFang SC', 'Inter', 'Helvetica Neue', sans-serif; font-weight: 500; }
+    </style>
+  </defs>
+  <rect width="800" height="540" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="8" fill="#CC785C"/>
+
+  <text x="48" y="50" class="en" font-size="13" fill="#7A6B5A" letter-spacing="2">05 · BLIND SPOT</text>
+  <text x="48" y="92" class="title" font-size="26" fill="#1F1B16">道德叙事 + 咨询公司</text>
+  <text x="48" y="124" class="title" font-size="26" fill="#1F1B16">出现在同一篇博客里</text>
+
+  <!-- left: 道德 -->
+  <g transform="translate(48, 170)">
+    <rect x="0" y="0" width="320" height="180" fill="#CC785C" fill-opacity="0.85"/>
+    <text x="20" y="40" class="en" font-size="12" fill="#FFE8DE" letter-spacing="2">LEFT HAND</text>
+    <text x="20" y="72" class="title" font-size="20" fill="#FFFFFF">和神职人员谈</text>
+    <text x="20" y="100" class="title" font-size="20" fill="#FFFFFF">道德形成</text>
+    <text x="20" y="138" class="sub" font-size="13" fill="#FFE8DE">15+ religious and</text>
+    <text x="20" y="158" class="sub" font-size="13" fill="#FFE8DE">cross-cultural groups</text>
+  </g>
+
+  <!-- 加号 -->
+  <text x="394" y="278" text-anchor="middle" class="title" font-size="40" fill="#1F1B16">+</text>
+
+  <!-- right: 咨询 -->
+  <g transform="translate(432, 170)">
+    <rect x="0" y="0" width="320" height="180" fill="#1F1B16"/>
+    <text x="20" y="40" class="en" font-size="12" fill="#CC785C" letter-spacing="2">RIGHT HAND</text>
+    <text x="20" y="72" class="title" font-size="20" fill="#FAF8F5">和 KPMG / PwC</text>
+    <text x="20" y="100" class="title" font-size="20" fill="#FAF8F5">谈企业合规</text>
+    <text x="20" y="138" class="sub" font-size="13" fill="#D9CFC3">咨询公司 = 企业合规</text>
+    <text x="20" y="158" class="sub" font-size="13" fill="#D9CFC3">和政府咨询的传导带</text>
+  </g>
+
+  <!-- bottom: 未回答 -->
+  <g transform="translate(48, 380)">
+    <text x="0" y="0" class="en" font-size="12" fill="#CC785C" letter-spacing="2">UNANSWERED QUESTIONS</text>
+    <text x="0" y="28" class="title" font-size="16" fill="#1F1B16">公告里没承诺的程序细节</text>
+
+    <g transform="translate(0, 60)">
+      <circle cx="6" cy="6" r="4" fill="#CC785C"/>
+      <text x="22" y="11" class="sub" font-size="13" fill="#37352F">15 个被邀请群体是怎么选出来的？</text>
+    </g>
+    <g transform="translate(0, 86)">
+      <circle cx="6" cy="6" r="4" fill="#CC785C"/>
+      <text x="22" y="11" class="sub" font-size="13" fill="#37352F">对话纪要谁审？反对意见是否同等收录？</text>
+    </g>
+    <g transform="translate(0, 112)">
+      <circle cx="6" cy="6" r="4" fill="#CC785C"/>
+      <text x="22" y="11" class="sub" font-size="13" fill="#37352F">被引用方有权决定怎么被引用吗？</text>
+    </g>
+    <g transform="translate(380, 60)">
+      <circle cx="6" cy="6" r="4" fill="#CC785C"/>
+      <text x="22" y="11" class="sub" font-size="13" fill="#37352F">议程谁定、结论怎么形成共识？</text>
+    </g>
+    <g transform="translate(380, 86)">
+      <circle cx="6" cy="6" r="4" fill="#CC785C"/>
+      <text x="22" y="11" class="sub" font-size="13" fill="#37352F">结构性不对称是否被披露并控制？</text>
+    </g>
+    <g transform="translate(380, 112)">
+      <circle cx="6" cy="6" r="4" fill="#CC785C"/>
+      <text x="22" y="11" class="sub" font-size="13" fill="#37352F">现在公告里：没有任何程序承诺。</text>
+    </g>
+  </g>
+</svg>

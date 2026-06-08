@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">xAI 解散：从前沿模型公司到 neocloud</text>
+  <text x="40" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">2026-05-06 同日完成的两个动作 · 估值故事的结构调整</text>
+
+  <!-- Before/After -->
+  <g transform="translate(40, 100)">
+    <!-- BEFORE -->
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#787774">5 月 6 日之前</text>
+    <rect x="0" y="14" width="320" height="220" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="2"/>
+    <text x="20" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#37352F">xAI（独立公司）</text>
+    <text x="20" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">定位：前沿模型公司</text>
+    <line x1="20" y1="84" x2="300" y2="84" stroke="#E3E2E0" stroke-width="1"/>
+
+    <text x="20" y="108" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">· 训练 Grok 4 / 5</text>
+    <text x="20" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">· Colossus 1 满载训练</text>
+    <text x="20" y="152" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">· 对标 OpenAI / Anthropic</text>
+    <text x="20" y="174" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">· 估值靠"下一代模型"叙事</text>
+    <text x="20" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">2 月：Musk 称 Anthropic "evil"</text>
+  </g>
+
+  <!-- Arrow -->
+  <g transform="translate(380, 200)">
+    <line x1="0" y1="0" x2="50" y2="0" stroke="#2383E2" stroke-width="3"/>
+    <polygon points="50,0 38,-7 38,7" fill="#2383E2"/>
+    <text x="25" y="-12" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" font-weight="bold">同日</text>
+  </g>
+
+  <!-- AFTER -->
+  <g transform="translate(450, 100)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2">5 月 6 日之后</text>
+    <rect x="0" y="14" width="310" height="220" rx="8" fill="#2383E2"/>
+    <text x="20" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">SpaceXAI（SpaceX 子部门）</text>
+    <text x="20" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.85">定位：neocloud · GPU 出租商</text>
+    <line x1="20" y1="84" x2="290" y2="84" stroke="#FFFFFF" stroke-width="1" opacity="0.3"/>
+
+    <text x="20" y="108" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF">· Colossus 1 整租给 Anthropic</text>
+    <text x="20" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF">· Colossus 2 训练 Grok</text>
+    <text x="20" y="152" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF">· 对标 CoreWeave / AWS Bedrock</text>
+    <text x="20" y="174" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF">· SpaceXAI 总估值 $1.25T</text>
+    <text x="20" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.85">5 月：Musk 称 "impressed"</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <rect x="40" y="370" width="720" height="100" rx="6" fill="#F7F7F5"/>
+  <text x="60" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#37352F">读法：</text>
+  <text x="60" y="424" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">不是情绪化退场。是 Musk 承认前沿模型那条路在 5 月 6 日走不通，把估值故事重做一遍。</text>
+  <text x="60" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">CoreWeave $70B · 加上星舰、Starlink、轨道数据中心愿景，SpaceXAI $1.25T 才有支撑物。</text>
+</svg>

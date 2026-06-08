@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+  <text x="60" y="48" font-size="22" font-weight="700" fill="#37352F">两刀，两个时间点，同一个方向</text>
+  <text x="60" y="74" font-size="13" fill="#787774">UI 砍渲染 + API 砍内容 — 都指向 "interactive users rarely open ctrl+o"</text>
+
+  <!-- Two side-by-side cards -->
+  <!-- Left: v2.0.0 UI cut -->
+  <g>
+    <rect x="60" y="110" width="330" height="320" fill="#FFFFFF" stroke="#37352F"/>
+    <text x="80" y="142" font-size="16" font-weight="700" fill="#37352F">第一刀 · v2.0.0</text>
+    <text x="80" y="164" font-size="12" fill="#9B9A97">（2025 年下半年，issue 提出时已生效）</text>
+    <text x="80" y="200" font-size="13" fill="#37352F">主屏不再渲染 thinking 内容</text>
+    <text x="80" y="222" font-size="13" fill="#37352F">Spinner 只剩 "thinking…" 字符串</text>
+    <text x="80" y="244" font-size="13" fill="#37352F">Transcript 也只保留最近一次</text>
+    <text x="80" y="284" font-size="12" fill="#9B9A97" font-family="Menlo, monospace">Messages.tsx:229</text>
+    <text x="80" y="304" font-size="12" fill="#9B9A97" font-family="Menlo, monospace">SpinnerAnimationRow.tsx:171</text>
+    <text x="80" y="356" font-size="13" fill="#787774">thinking 仍在 API response 里</text>
+    <text x="80" y="376" font-size="13" fill="#787774">只是 UI 不画</text>
+    <text x="80" y="412" font-size="12" fill="#2383E2">作用层：客户端渲染</text>
+  </g>
+
+  <!-- Right: 2026-02-12 API cut -->
+  <g>
+    <rect x="410" y="110" width="330" height="320" fill="#F7F6F3" stroke="#37352F"/>
+    <text x="430" y="142" font-size="16" font-weight="700" fill="#37352F">第二刀 · 2026-02-12</text>
+    <text x="430" y="164" font-size="12" fill="#9B9A97">（redact-thinking-2026-02-12 beta）</text>
+    <text x="430" y="200" font-size="13" fill="#37352F">API 端 Haiku 摘要器跳过</text>
+    <text x="430" y="222" font-size="13" fill="#37352F">返回签名占位 redacted_thinking</text>
+    <text x="430" y="244" font-size="13" fill="#37352F">UI 渲染 ✻ Thinking… 三字</text>
+    <text x="430" y="284" font-size="12" fill="#9B9A97" font-family="Menlo, monospace">betas.ts:265</text>
+    <text x="430" y="304" font-size="12" fill="#9B9A97" font-family="Menlo, monospace">RedactedThinkingMessage.tsx</text>
+    <text x="430" y="356" font-size="13" fill="#787774">thinking 内容根本不返回</text>
+    <text x="430" y="376" font-size="13" fill="#787774">省 Haiku 一次推理</text>
+    <text x="430" y="412" font-size="12" fill="#2383E2">作用层：API 请求头</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="400" y="462" font-size="13" fill="#37352F" text-anchor="middle">两刀都被 showThinkingSummaries=true 关闭，但默认仍在生效</text>
+</svg>

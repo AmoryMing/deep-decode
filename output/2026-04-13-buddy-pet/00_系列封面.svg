@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#FAFAF8"/>
+
+  <!-- Series label -->
+  <rect x="30" y="25" width="108" height="26" rx="4" fill="#2383E2"/>
+  <text x="84" y="43" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">AI 前沿拆解</text>
+
+  <!-- Terminal window (Context metaphor: creature in unexpected place) -->
+  <g transform="translate(250, 80)">
+    <!-- Window chrome -->
+    <rect x="0" y="0" width="300" height="200" rx="10" fill="#1E1E1E"/>
+    <rect x="0" y="0" width="300" height="28" rx="10" fill="#333333"/>
+    <rect x="0" y="18" width="300" height="10" fill="#333333"/>
+    <circle cx="18" cy="14" r="5" fill="#FF5F57"/>
+    <circle cx="36" cy="14" r="5" fill="#FEBC2E"/>
+    <circle cx="54" cy="14" r="5" fill="#28C840"/>
+    <text x="150" y="18" text-anchor="middle" font-family="monospace" font-size="10" fill="#999999">claude-code v2.1.89</text>
+
+    <!-- Terminal content -->
+    <text x="18" y="58" font-family="monospace" font-size="12" fill="#4DB6AC">$</text>
+    <text x="32" y="58" font-family="monospace" font-size="12" fill="#CCCCCC">/buddy</text>
+
+    <!-- Buddy peeking out from terminal -->
+    <text x="100" y="90" font-family="monospace" font-size="15" fill="#4DB6AC">    /\_/\</text>
+    <text x="100" y="108" font-family="monospace" font-size="15" fill="#4DB6AC">   ( o.o )</text>
+    <text x="100" y="126" font-family="monospace" font-size="15" fill="#4DB6AC">    > ^ &lt;</text>
+
+    <!-- Speech bubble -->
+    <rect x="195" y="72" width="90" height="30" rx="8" fill="#2383E2" opacity="0.15"/>
+    <text x="240" y="92" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">Pebblecrab!</text>
+
+    <!-- Soul generation line -->
+    <text x="18" y="158" font-family="monospace" font-size="11" fill="#787774">Generating soul...</text>
+    <text x="18" y="175" font-family="monospace" font-size="11" fill="#9B51E0">Soul written. Name: Nimbus</text>
+    <text x="18" y="192" font-family="monospace" font-size="11" fill="#4DB6AC">"A curious watcher with sharp eyes"</text>
+  </g>
+
+  <!-- Title (hero text) -->
+  <text x="400" y="330" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="30" font-weight="bold" fill="#37352F">五个文件，一整套灵魂</text>
+  <text x="400" y="360" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Claude Code 里藏了一个不是彩蛋的电子宠物</text>
+
+  <!-- Bottom bar -->
+  <line x1="100" y1="390" x2="700" y2="390" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="400" y="415" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Buddy 系统深度拆解 | 2026-04-13</text>
+
+  <!-- Tags -->
+  <g transform="translate(400, 440)">
+    <rect x="-175" y="-11" width="80" height="22" rx="11" fill="#2383E2" opacity="0.1"/>
+    <text x="-135" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#2383E2">Claude Code</text>
+    <rect x="-80" y="-11" width="65" height="22" rx="11" fill="#9B51E0" opacity="0.1"/>
+    <text x="-48" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#9B51E0">留存设计</text>
+    <rect x="0" y="-11" width="65" height="22" rx="11" fill="#4DB6AC" opacity="0.1"/>
+    <text x="32" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#4DB6AC">情感计算</text>
+    <rect x="80" y="-11" width="65" height="22" rx="11" fill="#FFB020" opacity="0.1"/>
+    <text x="112" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#FFB020">产品战略</text>
+  </g>
+</svg>

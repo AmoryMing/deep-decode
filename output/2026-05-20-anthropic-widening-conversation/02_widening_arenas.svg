@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <defs>
+    <style>
+      .title { font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif; font-weight: 700; }
+      .sub { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 400; }
+      .en { font-family: 'PingFang SC', 'Inter', 'Helvetica Neue', sans-serif; font-weight: 500; }
+    </style>
+  </defs>
+  <rect width="800" height="540" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="8" fill="#CC785C"/>
+
+  <text x="48" y="50" class="en" font-size="13" fill="#7A6B5A" letter-spacing="2">02 · WIDENING ARENAS</text>
+  <text x="48" y="92" class="title" font-size="28" fill="#1F1B16">把对话向谁打开——</text>
+  <text x="48" y="126" class="title" font-size="28" fill="#1F1B16">名单本身就是定位动作。</text>
+
+  <!-- 已完成 -->
+  <g transform="translate(48, 170)">
+    <text x="0" y="0" class="en" font-size="12" fill="#CC785C" letter-spacing="1">DONE  ·  Round 1</text>
+    <text x="0" y="26" class="title" font-size="16" fill="#1F1B16">已完成的对话对象</text>
+    <text x="0" y="50" class="sub" font-size="13" fill="#7A6B5A">15+ religious and cross-cultural groups</text>
+
+    <g transform="translate(0, 70)">
+      <rect x="0" y="0" width="170" height="36" fill="#CC785C" fill-opacity="0.85"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#FFFFFF">宗教学者</text>
+    </g>
+    <g transform="translate(180, 70)">
+      <rect x="0" y="0" width="170" height="36" fill="#CC785C" fill-opacity="0.85"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#FFFFFF">神职人员</text>
+    </g>
+    <g transform="translate(0, 116)">
+      <rect x="0" y="0" width="170" height="36" fill="#CC785C" fill-opacity="0.85"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#FFFFFF">哲学家</text>
+    </g>
+    <g transform="translate(180, 116)">
+      <rect x="0" y="0" width="170" height="36" fill="#CC785C" fill-opacity="0.85"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#FFFFFF">伦理学家</text>
+    </g>
+  </g>
+
+  <!-- 即将扩展 -->
+  <g transform="translate(432, 170)">
+    <text x="0" y="0" class="en" font-size="12" fill="#7A6B5A" letter-spacing="1">NEXT  ·  Round 2</text>
+    <text x="0" y="26" class="title" font-size="16" fill="#1F1B16">下一轮要加的对象</text>
+    <text x="0" y="50" class="sub" font-size="13" fill="#7A6B5A">legal · psychology · writers · civic</text>
+
+    <g transform="translate(0, 70)">
+      <rect x="0" y="0" width="170" height="36" fill="none" stroke="#1F1B16" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#1F1B16">法律学者</text>
+    </g>
+    <g transform="translate(180, 70)">
+      <rect x="0" y="0" width="170" height="36" fill="none" stroke="#1F1B16" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#1F1B16">心理学家</text>
+    </g>
+    <g transform="translate(0, 116)">
+      <rect x="0" y="0" width="170" height="36" fill="none" stroke="#1F1B16" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#1F1B16">作家</text>
+    </g>
+    <g transform="translate(180, 116)">
+      <rect x="0" y="0" width="170" height="36" fill="none" stroke="#1F1B16" stroke-width="1.5" stroke-dasharray="4 4"/>
+      <text x="85" y="23" text-anchor="middle" class="title" font-size="13" fill="#1F1B16">公民机构</text>
+    </g>
+  </g>
+
+  <!-- 共同特征 -->
+  <g transform="translate(48, 380)">
+    <rect x="0" y="0" width="704" height="120" fill="#1F1B16"/>
+    <text x="20" y="32" class="en" font-size="12" fill="#CC785C" letter-spacing="2">COMMON TRAIT</text>
+    <text x="20" y="64" class="title" font-size="20" fill="#FAF8F5">在监管议题里有道德合法性，</text>
+    <text x="20" y="94" class="title" font-size="20" fill="#FAF8F5">但没有商业利益。</text>
+    <text x="450" y="64" class="sub" font-size="13" fill="#D9CFC3">立法者听证时最容易被</text>
+    <text x="450" y="86" class="sub" font-size="13" fill="#D9CFC3">邀请、引用、视作</text>
+    <text x="450" y="108" class="sub" font-size="13" fill="#D9CFC3">"代表社会"的群体。</text>
+  </g>
+</svg>

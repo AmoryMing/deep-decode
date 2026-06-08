@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="38" font-size="20" font-weight="700" fill="#1A1A1A" text-anchor="middle">flipbook 不是 Gamma 的对手 —— 改的是不同层</text>
+
+  <!-- left card: Gamma -->
+  <rect x="40" y="70" width="350" height="370" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1.5" rx="8"/>
+  <text x="215" y="100" font-size="16" font-weight="700" fill="#1A1A1A" text-anchor="middle">Gamma / Tome</text>
+  <text x="215" y="124" font-size="12" fill="#787774" text-anchor="middle">AI 帮你填模板</text>
+
+  <rect x="60" y="146" width="310" height="60" fill="#F7F7F5" rx="4"/>
+  <text x="74" y="170" font-size="13" fill="#37352F">用户需求 → AI 改文字/选图/调色</text>
+  <text x="74" y="190" font-size="13" fill="#37352F">→ HTML 模板照常渲染 → 网页/PDF</text>
+
+  <text x="60" y="232" font-size="12" fill="#787774">改的是：</text>
+  <text x="60" y="252" font-size="14" fill="#1A1A1A">• 内容（文字、图、配色）</text>
+
+  <text x="60" y="282" font-size="12" fill="#787774">不动的是：</text>
+  <text x="60" y="302" font-size="14" fill="#1A1A1A">• HTML / CSS / JS</text>
+  <text x="60" y="322" font-size="14" fill="#1A1A1A">• 浏览器渲染层</text>
+  <text x="60" y="342" font-size="14" fill="#1A1A1A">• 导出（PDF / 网页）</text>
+
+  <text x="60" y="378" font-size="12" fill="#787774">商业模式：</text>
+  <text x="60" y="398" font-size="14" font-weight="600" fill="#1A1A1A">$8/月 SaaS（卖产品）</text>
+
+  <!-- right card: flipbook -->
+  <rect x="410" y="70" width="350" height="370" fill="#FFFFFF" stroke="#2383E2" stroke-width="2" rx="8"/>
+  <text x="585" y="100" font-size="16" font-weight="700" fill="#2383E2" text-anchor="middle">flipbook.page</text>
+  <text x="585" y="124" font-size="12" fill="#787774" text-anchor="middle">AI 替代渲染层本身</text>
+
+  <rect x="430" y="146" width="310" height="60" fill="#EBF5FF" rx="4"/>
+  <text x="444" y="170" font-size="13" fill="#1A4D8C">用户点击 → 坐标喂回模型</text>
+  <text x="444" y="190" font-size="13" fill="#1A4D8C">→ 模型直接输出像素流 → 屏幕</text>
+
+  <text x="430" y="232" font-size="12" fill="#787774">改的是：</text>
+  <text x="430" y="252" font-size="14" fill="#1A1A1A">• 整个输出层（每个像素）</text>
+
+  <text x="430" y="282" font-size="12" fill="#787774">没有的是：</text>
+  <text x="430" y="302" font-size="14" fill="#1A1A1A">• HTML / DOM / CSS</text>
+  <text x="430" y="322" font-size="14" fill="#1A1A1A">• 复制粘贴 / SEO / 可访问性</text>
+  <text x="430" y="342" font-size="14" fill="#1A1A1A">• 导出（不能保存）</text>
+
+  <text x="430" y="378" font-size="12" fill="#787774">商业模式：</text>
+  <text x="430" y="398" font-size="14" font-weight="600" fill="#2383E2">没有 —— 在验证命题</text>
+
+  <!-- bottom note -->
+  <text x="400" y="460" font-size="12" fill="#787774" text-anchor="middle">把 flipbook 当 Gamma 对手分析，等于拿 Tesla Roadster 比凯美瑞油耗 —— 测的不是同一回事</text>
+</svg>

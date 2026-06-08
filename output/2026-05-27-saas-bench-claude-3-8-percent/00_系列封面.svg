@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#F7F1E8"/>
+
+  <text x="60" y="60" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#8A8472" letter-spacing="3">2026 / 05 / 27  ·  DECODE  ·  SAAS-BENCH</text>
+
+  <text x="60" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="38" font-weight="700" fill="#2A241B">3.8%</text>
+  <text x="170" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="500" fill="#2A241B">Computer-Use 的全自动办公幻象</text>
+  <text x="60" y="155" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="500" fill="#2A241B">被 23 套真 SaaS 击穿</text>
+
+  <line x1="60" y1="185" x2="740" y2="185" stroke="#D8CFB8" stroke-width="1"/>
+
+  <g transform="translate(60, 215)">
+    <rect x="0" y="0" width="210" height="160" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="105" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472" text-anchor="middle">Claude Opus 4.7 · 端到端</text>
+    <text x="105" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="56" font-weight="700" fill="#B85A3A" text-anchor="middle">3.8%</text>
+    <text x="105" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2A241B" text-anchor="middle">106 道完整做完 4 道</text>
+    <text x="105" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472" text-anchor="middle">榜首 = 96.2% 干不完</text>
+
+    <rect x="225" y="0" width="210" height="160" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="330" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472" text-anchor="middle">Claude Opus 4.7 · 中间环节</text>
+    <text x="330" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="56" font-weight="700" fill="#2A241B" text-anchor="middle">43.9%</text>
+    <text x="330" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2A241B" text-anchor="middle">checkpoint 分数</text>
+    <text x="330" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472" text-anchor="middle">片段对 ≠ 流程对</text>
+
+    <rect x="450" y="0" width="210" height="160" rx="6" fill="#FFFFFF" stroke="#D8CFB8" stroke-width="1"/>
+    <text x="555" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472" text-anchor="middle">两数之间的落差</text>
+    <text x="555" y="92" font-family="PingFang SC, Inter, sans-serif" font-size="56" font-weight="700" fill="#B85A3A" text-anchor="middle">11×</text>
+    <text x="555" y="120" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2A241B" text-anchor="middle">Long-Horizon Fragility</text>
+    <text x="555" y="142" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472" text-anchor="middle">这一代 paradigm 天花板</text>
+  </g>
+
+  <g transform="translate(60, 410)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#2A241B" font-weight="600">UniPat AI 把 BigCapital · ERPNext · OpenEMR 装进 Docker</text>
+    <text x="0" y="24" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#8A8472">23 SaaS  ·  106 任务  ·  3,971 checkpoint  ·  6 职业领域  ·  93.4% 跨应用</text>
+  </g>
+</svg>

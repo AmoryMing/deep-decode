@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="400" y="38" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">NLA 三件套：让模型自己解释自己</text>
+  <text x="400" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">激活 → 自然语言 → 重建激活，靠重建误差打分</text>
+
+  <!-- Three stages laid out horizontally -->
+
+  <!-- Stage 1: Target Model (left) -->
+  <g transform="translate(40, 110)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#F7F7F5" stroke="#E3E2E0" stroke-width="1.5"/>
+    <text x="90" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">目标模型</text>
+    <text x="90" y="46" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Target Model · 冻结</text>
+
+    <!-- Stack of layers -->
+    <rect x="30" y="70" width="120" height="20" rx="4" fill="#E3E2E0"/>
+    <rect x="30" y="95" width="120" height="20" rx="4" fill="#E3E2E0"/>
+    <rect x="30" y="120" width="120" height="20" rx="4" fill="#2383E2" opacity="0.85"/>
+    <text x="90" y="135" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF">中间层激活</text>
+    <rect x="30" y="145" width="120" height="20" rx="4" fill="#E3E2E0"/>
+    <rect x="30" y="170" width="120" height="20" rx="4" fill="#E3E2E0"/>
+
+    <text x="90" y="208" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">抽出一条向量</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(225, 220)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#37352F" stroke-width="2" marker-end="url(#arrA)"/>
+  </g>
+
+  <!-- Stage 2: Activation Verbalizer (middle) -->
+  <g transform="translate(275, 110)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#EBF5FF" stroke="#2383E2" stroke-width="2"/>
+    <text x="90" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#2383E2">激活翻译器</text>
+    <text x="90" y="46" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Activation Verbalizer</text>
+
+    <!-- Speech bubble showing text -->
+    <rect x="20" y="70" width="140" height="120" rx="8" fill="#FFFFFF" stroke="#E3E2E0" stroke-width="1"/>
+    <text x="90" y="92" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">"模型在想：</text>
+    <text x="90" y="110" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">这看起来是</text>
+    <text x="90" y="128" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">一个套路我的</text>
+    <text x="90" y="146" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">剧本设定"</text>
+
+    <text x="90" y="208" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">输出一段自然语言</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(460, 220)">
+    <line x1="0" y1="0" x2="40" y2="0" stroke="#37352F" stroke-width="2" marker-end="url(#arrA)"/>
+  </g>
+
+  <!-- Stage 3: Activation Reconstructor (right) -->
+  <g transform="translate(510, 110)">
+    <rect x="0" y="0" width="180" height="220" rx="10" fill="#FFF8E1" stroke="#FFB020" stroke-width="2"/>
+    <text x="90" y="28" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#E6A010">激活重建器</text>
+    <text x="90" y="46" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">Activation Reconstructor</text>
+
+    <!-- Reconstructed activation -->
+    <rect x="30" y="70" width="120" height="20" rx="4" fill="#E3E2E0"/>
+    <rect x="30" y="95" width="120" height="20" rx="4" fill="#E3E2E0"/>
+    <rect x="30" y="120" width="120" height="20" rx="4" fill="#FFB020" opacity="0.85"/>
+    <text x="90" y="135" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF">重建的激活</text>
+    <rect x="30" y="145" width="120" height="20" rx="4" fill="#E3E2E0"/>
+    <rect x="30" y="170" width="120" height="20" rx="4" fill="#E3E2E0"/>
+
+    <text x="90" y="208" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">只读文字反推向量</text>
+  </g>
+
+  <!-- Loop arrow back -->
+  <g transform="translate(0, 0)">
+    <path d="M 700 110 Q 770 110 770 240 Q 770 380 400 380 Q 130 380 130 320" fill="none" stroke="#EB5757" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrB)"/>
+    <text x="400" y="375" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757">对比：重建越像 = 翻译越准</text>
+  </g>
+
+  <defs>
+    <marker id="arrA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#37352F"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#EB5757"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom insight -->
+  <rect x="60" y="420" width="680" height="40" rx="6" fill="#F7F7F5"/>
+  <text x="400" y="446" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-style="italic">重建误差 = 解释质量的代理。模型自己评分，研究员省去手工标注。</text>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <rect width="1200" height="800" fill="#FFFFFF"/>
+
+  <text x="600" y="120" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="36" font-weight="700" text-anchor="middle" fill="#222222">你上周押的那个赌</text>
+  <text x="600" y="170" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="36" font-weight="700" text-anchor="middle" fill="#222222">现在该怎么看</text>
+
+  <text x="600" y="230" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" text-anchor="middle" fill="#666666">DeepSeek V4 拆解  ·  2026-04-25</text>
+
+  <line x1="200" y1="280" x2="1000" y2="280" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="300" y="360" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666666">SWE-bench Verified</text>
+  <text x="300" y="430" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="72" font-weight="700" fill="#2383E2">0.2</text>
+  <text x="380" y="430" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#666666">百分点</text>
+  <text x="300" y="460" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#999999">V4-Pro 80.6 vs Opus 4.6 80.8</text>
+  <text x="300" y="485" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999999">＝ 测评行业的统计噪声范围</text>
+
+  <line x1="600" y1="320" x2="600" y2="500" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="700" y="360" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666666">输出价格 $/MTok</text>
+  <text x="700" y="430" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="72" font-weight="700" fill="#FFA500">7.2</text>
+  <text x="800" y="430" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" fill="#666666">倍</text>
+  <text x="700" y="460" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#999999">V4-Pro $3.48 vs Opus 4.6 $25</text>
+  <text x="700" y="485" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999999">＝ 闭源派每百万 token 多收 $21.52</text>
+
+  <line x1="200" y1="560" x2="1000" y2="560" stroke="#E0E0E0" stroke-width="1"/>
+
+  <text x="600" y="620" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="600" text-anchor="middle" fill="#222222">技术差距落进噪声范围  ·  价格差距落到企业财报</text>
+
+  <text x="600" y="660" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="16" text-anchor="middle" fill="#666666">闭源派 "更强所以更贵" 的锚点失效</text>
+
+  <text x="600" y="740" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" text-anchor="middle" fill="#999999">数据：Buildfastwithai 横向评测  ·  DeepSeek tech report</text>
+</svg>

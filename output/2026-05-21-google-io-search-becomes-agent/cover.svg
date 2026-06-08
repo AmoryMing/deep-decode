@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <!-- Top label -->
+  <text x="40" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" letter-spacing="2">2026 / 05 / 21  ·  DECODE</text>
+
+  <!-- Main title -->
+  <text x="40" y="118" font-family="PingFang SC, Inter, sans-serif" font-size="38" font-weight="700" fill="#37352F">谷歌 I/O 之后</text>
+  <text x="40" y="166" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="500" fill="#37352F">搜索框正在变成 Agent 入口</text>
+
+  <line x1="40" y1="200" x2="760" y2="200" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Pichai quote -->
+  <text x="40" y="232" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Pichai 在 keynote 原话</text>
+  <text x="40" y="260" font-family="PingFang SC, Inter, sans-serif" font-size="17" font-weight="600" fill="#2383E2">"25 年来对这个标志性搜索框最大的一次升级"</text>
+
+  <!-- 4 boxes: 同时被改的四个口子 -->
+  <g transform="translate(40, 300)">
+    <rect x="0" y="0" width="170" height="100" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1"/>
+    <text x="85" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">入口 1</text>
+    <text x="85" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F" text-anchor="middle">搜索框</text>
+    <text x="85" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">变通用对话框</text>
+
+    <rect x="184" y="0" width="170" height="100" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1"/>
+    <text x="269" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">入口 2</text>
+    <text x="269" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F" text-anchor="middle">结果页</text>
+    <text x="269" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Generative UI</text>
+
+    <rect x="368" y="0" width="170" height="100" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1"/>
+    <text x="453" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">入口 3</text>
+    <text x="453" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F" text-anchor="middle">后台</text>
+    <text x="453" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Information Agents</text>
+
+    <rect x="552" y="0" width="168" height="100" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1"/>
+    <text x="636" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">入口 4</text>
+    <text x="636" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#37352F" text-anchor="middle">桌面层</text>
+    <text x="636" y="80" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">Spark · Antigravity</text>
+  </g>
+
+  <!-- Bottom stat -->
+  <text x="40" y="445" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">AI Mode 10 亿 MAU  ·  Q1 2026 搜索广告 $60B  ·  Polymarket 上 Anthropic 96%、Google 1%</text>
+</svg>

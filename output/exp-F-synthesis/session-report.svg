@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <style>
+      .bg { fill: #FAFAF7; }
+      .card { fill: #FFFFFF; stroke: #E5E5E0; stroke-width: 1; }
+      .title { font-size: 38px; font-weight: 700; fill: #1A1A1A; }
+      .subtitle { font-size: 16px; fill: #666; }
+      .h2 { font-size: 22px; font-weight: 600; fill: #1A1A1A; }
+      .body { font-size: 14px; fill: #333; }
+      .small { font-size: 12px; fill: #666; }
+      .ok { fill: #1F8A4C; }
+      .fail { fill: #C53030; }
+      .accent { fill: #2383E2; }
+      .orange { fill: #E67E22; }
+      .mono { font-family: SF Mono, Menlo, monospace; font-size: 12px; fill: #444; }
+      .iter-num { font-size: 13px; font-weight: 700; fill: #fff; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1600" height="1000"/>
+
+  <!-- Header -->
+  <text class="title" x="60" y="65">本场 Session 复盘 · 抖音 + 小宇宙 上传 跑通</text>
+  <text class="subtitle" x="60" y="92">2026-05-08 · 内容工厂 · DeepSeek V4 拆解四件套分发</text>
+  <line x1="60" y1="115" x2="1540" y2="115" stroke="#E5E5E0" stroke-width="1"/>
+
+  <!-- Three columns -->
+
+  <!-- Column 1: 沉淀的资产 -->
+  <g transform="translate(60, 145)">
+    <text class="h2" x="0" y="0">一、沉淀的资产</text>
+    <text class="small" x="0" y="22">脚本 + 知识 + 凭证</text>
+
+    <rect class="card" x="0" y="40" width="460" height="140" rx="8"/>
+    <text class="body" font-weight="600" x="20" y="68">3 个新脚本</text>
+    <text class="mono" x="20" y="92">.claude/skills/distribute/</text>
+    <text class="mono" x="40" y="113">├ login_bootstrap.py · 通用登录</text>
+    <text class="mono" x="40" y="132">├ upload_douyin.py · 200 行</text>
+    <text class="mono" x="40" y="151">└ upload_xiaoyuzhou.py · 改造 +state</text>
+    <text class="small" x="20" y="170">storage_state JSON 复用，不冲突 Chrome</text>
+
+    <rect class="card" x="0" y="200" width="460" height="118" rx="8"/>
+    <text class="body" font-weight="600" x="20" y="228">通用弹窗 dismiss 函数</text>
+    <text class="small" x="20" y="252">DISMISS_KEYWORDS · 20 个关键词</text>
+    <text class="mono" x="20" y="273">我知道了 / 我接受 / 确定 / 完成 /</text>
+    <text class="mono" x="20" y="290">应用 / 同意 / 跳过 / 关闭 / OK ...</text>
+    <text class="small" x="20" y="308">5 个检查点接入 + Escape 兜底</text>
+
+    <rect class="card" x="0" y="338" width="460" height="118" rx="8"/>
+    <text class="body" font-weight="600" x="20" y="366">知识沉淀</text>
+    <text class="small" x="20" y="390">style/gotchas.md v1.2</text>
+    <text class="mono" x="20" y="411">37-42 条新坑</text>
+    <text class="small" x="20" y="432">style/feedback.md</text>
+    <text class="mono" x="20" y="450">CLI &gt; Playwright 偏好铁律</text>
+
+    <rect class="card" x="0" y="476" width="460" height="98" rx="8"/>
+    <text class="body" font-weight="600" x="20" y="504">登录态 (一次性人工)</text>
+    <text class="mono" x="20" y="528">~/.content-factory/state/</text>
+    <text class="mono" x="40" y="547">├ douyin.json · 38 KB</text>
+    <text class="mono" x="40" y="566">└ xiaoyuzhou.json · 6 KB</text>
+  </g>
+
+  <!-- Column 2: 迭代轨迹 -->
+  <g transform="translate(560, 145)">
+    <text class="h2" x="0" y="0">二、5 次抖音上传的迭代</text>
+    <text class="small" x="0" y="22">从 fail 到 exit 0 的卡点路径</text>
+
+    <!-- Iteration timeline -->
+    <g transform="translate(0, 50)">
+      <!-- Vertical line -->
+      <line x1="20" y1="0" x2="20" y2="540" stroke="#E5E5E0" stroke-width="2"/>
+
+      <!-- 1 -->
+      <circle cx="20" cy="20" r="16" fill="#C53030"/>
+      <text class="iter-num" x="20" y="25" text-anchor="middle">1</text>
+      <text class="body" font-weight="600" x="50" y="15">进不了页面</text>
+      <text class="small fail" x="50" y="34">goto timeout 30s · creator.douyin.com 加载慢</text>
+      <text class="mono" x="50" y="52">→ timeout 60s, wait_until=commit</text>
+
+      <!-- 2 -->
+      <circle cx="20" cy="115" r="16" fill="#C53030"/>
+      <text class="iter-num" x="20" y="120" text-anchor="middle">2</text>
+      <text class="body" font-weight="600" x="50" y="110">找不到草稿按钮</text>
+      <text class="small fail" x="50" y="129">"存草稿" 不存在 · 实际叫 "暂存离开"</text>
+      <text class="mono" x="50" y="147">→ selector 列表加 "暂存离开"</text>
+
+      <!-- 3 -->
+      <circle cx="20" cy="210" r="16" fill="#C53030"/>
+      <text class="iter-num" x="20" y="215" text-anchor="middle">3</text>
+      <text class="body" font-weight="600" x="50" y="205">空跑 10 分钟假等</text>
+      <text class="small fail" x="50" y="224">没"上传成功"标识 · 硬等到超时</text>
+      <text class="mono" x="50" y="242">→ 检测"暂存离开" enabled 即跳出</text>
+
+      <!-- 4 -->
+      <circle cx="20" cy="305" r="16" fill="#C53030"/>
+      <text class="iter-num" x="20" y="310" text-anchor="middle">4</text>
+      <text class="body" font-weight="600" x="50" y="300">按钮被 modal 挡住</text>
+      <text class="small fail" x="50" y="319">封面裁切 semi-modal-wrap 拦截 click</text>
+      <text class="mono" x="50" y="337">→ 关键词补 完成/应用 + Escape 兜底</text>
+
+      <!-- 5 -->
+      <circle cx="20" cy="400" r="16" fill="#1F8A4C"/>
+      <text class="iter-num" x="20" y="405" text-anchor="middle">5</text>
+      <text class="body" font-weight="600" x="50" y="395">exit 0 · 跑通</text>
+      <text class="small ok" x="50" y="414">final url: upload?enter_from=publish</text>
+      <text class="mono" x="50" y="432">⚠ 兜底点了"取消"按钮 · 封面待验证</text>
+    </g>
+
+    <!-- 关键洞察 -->
+    <rect class="card" x="0" y="640" width="460" height="160" rx="8" fill="#FFF7E6" stroke="#E67E22"/>
+    <text class="body" font-weight="600" x="20" y="668" fill="#7A4A00">每次失败都长一颗 selector</text>
+    <text class="small" x="20" y="694" fill="#7A4A00">这就是 playwright 的天花板：</text>
+    <text class="small" x="20" y="714" fill="#7A4A00">UI 一变 → selector 失效 → 补丁 → 下次再来</text>
+    <text class="small" x="20" y="744" fill="#7A4A00">用户原话："弹窗永远会有新的"</text>
+    <text class="small" x="20" y="772" fill="#7A4A00">→ 偏好铁律已存 feedback.md：</text>
+    <text class="small" x="20" y="790" fill="#7A4A00">  CLI &gt; 社区 framework &gt; 自写 playwright</text>
+  </g>
+
+  <!-- Column 3: 7 渠道战果 -->
+  <g transform="translate(1080, 145)">
+    <text class="h2" x="0" y="0">三、7 渠道分发战果</text>
+    <text class="small" x="0" y="22">DeepSeek V4 拆解一篇 · 全渠道入库</text>
+
+    <rect class="card" x="0" y="50" width="460" height="510" rx="8"/>
+
+    <!-- Header row -->
+    <text class="small" x="20" y="80" fill="#999">渠道</text>
+    <text class="small" x="220" y="80" fill="#999">状态</text>
+    <text class="small" x="290" y="80" fill="#999">备注</text>
+    <line x1="20" y1="92" x2="440" y2="92" stroke="#E5E5E0"/>
+
+    <!-- rows -->
+    <g transform="translate(0, 110)">
+      <text class="body" x="20" y="0">公众号</text>
+      <text class="body ok" x="220" y="0">✓</text>
+      <text class="small" x="290" y="0">之前已 · mp 草稿</text>
+    </g>
+    <g transform="translate(0, 150)">
+      <text class="body" x="20" y="0">邮件</text>
+      <text class="body ok" x="220" y="0">✓</text>
+      <text class="small" x="290" y="0">之前已 · exmail 草稿</text>
+    </g>
+    <g transform="translate(0, 190)">
+      <text class="body" x="20" y="0">小红书</text>
+      <text class="body ok" x="220" y="0">✓</text>
+      <text class="small" x="290" y="0">14 张 · title/topics 漏</text>
+    </g>
+    <g transform="translate(0, 230)">
+      <text class="body" x="20" y="0">bilibili</text>
+      <text class="body ok" x="220" y="0">✓</text>
+      <text class="small" x="290" y="0">直连 web API · BV1HRoQB...</text>
+    </g>
+    <line x1="20" y1="250" x2="440" y2="250" stroke="#E5E5E0" stroke-dasharray="3,3"/>
+
+    <g transform="translate(0, 280)">
+      <text class="body" font-weight="600" x="20" y="0" fill="#2383E2">抖音</text>
+      <text class="body ok" font-weight="600" x="220" y="0">✓ 新</text>
+      <text class="small" x="290" y="0">本 session · 封面待验证</text>
+    </g>
+    <g transform="translate(0, 320)">
+      <text class="body" font-weight="600" x="20" y="0" fill="#2383E2">小宇宙</text>
+      <text class="body ok" font-weight="600" x="220" y="0">✓ 新</text>
+      <text class="small" x="290" y="0">本 session · 手动+脚本混合</text>
+    </g>
+    <line x1="20" y1="340" x2="440" y2="340" stroke="#E5E5E0" stroke-dasharray="3,3"/>
+
+    <g transform="translate(0, 370)">
+      <text class="body" x="20" y="0">视频号</text>
+      <text class="body fail" x="220" y="0">✗</text>
+      <text class="small" x="290" y="0">仍无自动化</text>
+    </g>
+
+    <!-- Score -->
+    <g transform="translate(20, 430)">
+      <text class="small" x="0" y="0" fill="#666">本 session 增量</text>
+      <text x="0" y="32" font-size="44" font-weight="700" fill="#1F8A4C">+2</text>
+      <text class="body" x="80" y="32">渠道</text>
+      <text class="small" x="0" y="65" fill="#666">累计 6 / 7 渠道入库</text>
+    </g>
+
+    <!-- 数字进度条 -->
+    <g transform="translate(180, 460)">
+      <rect x="0" y="0" width="240" height="14" rx="7" fill="#F0F0EC"/>
+      <rect x="0" y="0" width="206" height="14" rx="7" fill="#1F8A4C"/>
+      <text class="small" x="120" y="38" text-anchor="middle" fill="#1F8A4C" font-weight="600">86%</text>
+    </g>
+  </g>
+
+  <!-- Footer 下一步 -->
+  <g transform="translate(60, 800)">
+    <line x1="0" y1="0" x2="1480" y2="0" stroke="#E5E5E0"/>
+    <text class="h2" x="0" y="35">下一步</text>
+    <text class="body" x="0" y="65">1. 验证抖音草稿封面是不是 00_cover.svg.png · 进 creator.douyin.com/creator-micro/content/manage 看</text>
+    <text class="body" x="0" y="93">2. 修封面 modal 的精确 selector · 避免下次又被"取消"兜底吃掉</text>
+    <text class="body" x="0" y="121">3. 视频号留白 · 微信生态没 web 自动化路径，下篇再议</text>
+    <text class="body" x="0" y="149">4. 下一篇拆解直接复用三件套 · 登录态有效期一般 30-90 天</text>
+  </g>
+</svg>

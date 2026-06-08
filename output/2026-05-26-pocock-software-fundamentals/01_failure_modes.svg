@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="1200" height="750" fill="#F7F1E8"/>
+
+  <text x="80" y="80" font-size="34" font-weight="700" fill="#2A241B">五个失败模式 ↔ 五个 skill</text>
+  <text x="80" y="116" font-size="16" fill="#5C5345" font-style="italic" font-family="Cormorant Garamond, Songti SC, serif">Pocock 没有发明新东西，他给老的软件基本功重新贴了 AI 时代的价签</text>
+  <line x1="80" y1="138" x2="280" y2="138" stroke="#B85A3A" stroke-width="2"/>
+
+  <!-- column headers -->
+  <text x="100" y="190" font-family="SF Mono, Menlo, monospace" font-size="12" letter-spacing="3" fill="#B85A3A" font-weight="600">FAILURE MODE</text>
+  <text x="700" y="190" font-family="SF Mono, Menlo, monospace" font-size="12" letter-spacing="3" fill="#B85A3A" font-weight="600">SKILL · 出处</text>
+
+  <!-- row 1 -->
+  <g transform="translate(80,210)">
+    <rect x="0" y="0" width="540" height="80" fill="#FFFEFA" stroke="#ECE5D3" stroke-width="1" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">1 · AI 不知道你想要什么</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">"我有个好主意，AI 做出来完全是另一个东西"</text>
+  </g>
+  <text x="630" y="240" font-size="22" fill="#B85A3A">→</text>
+  <g transform="translate(680,210)">
+    <rect x="0" y="0" width="440" height="80" fill="#ECE5D3" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">grill-me</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">Brooks《Design of Design》· 13k+ stars</text>
+  </g>
+
+  <!-- row 2 -->
+  <g transform="translate(80,310)">
+    <rect x="0" y="0" width="540" height="80" fill="#FFFEFA" stroke="#ECE5D3" stroke-width="1" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">2 · AI 太啰嗦</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">用太多词解释一件简单的事 — 没有共享词汇</text>
+  </g>
+  <text x="630" y="340" font-size="22" fill="#B85A3A">→</text>
+  <g transform="translate(680,310)">
+    <rect x="0" y="0" width="440" height="80" fill="#ECE5D3" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">ubiquitous-language</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">Evans · DDD 1.0 的 AI 时代复活</text>
+  </g>
+
+  <!-- row 3 -->
+  <g transform="translate(80,410)">
+    <rect x="0" y="0" width="540" height="80" fill="#FFFEFA" stroke="#ECE5D3" stroke-width="1" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">3 · AI 做出来不工作</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">"outrun own headlights" — 步长比反馈速率快</text>
+  </g>
+  <text x="630" y="440" font-size="22" fill="#B85A3A">→</text>
+  <g transform="translate(680,410)">
+    <rect x="0" y="0" width="440" height="80" fill="#ECE5D3" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">TDD · 反馈驱动</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">Pragmatic Programmer · 不是测试覆盖率</text>
+  </g>
+
+  <!-- row 4 -->
+  <g transform="translate(80,510)">
+    <rect x="0" y="0" width="540" height="80" fill="#FFFEFA" stroke="#ECE5D3" stroke-width="1" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">4 · 测试很难写</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">shallow module 太多，AI 一进去就迷路</text>
+  </g>
+  <text x="630" y="540" font-size="22" fill="#B85A3A">→</text>
+  <g transform="translate(680,510)">
+    <rect x="0" y="0" width="440" height="80" fill="#ECE5D3" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">deep modules</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">Ousterhout · A Philosophy of Software Design</text>
+  </g>
+
+  <!-- row 5 -->
+  <g transform="translate(80,610)">
+    <rect x="0" y="0" width="540" height="80" fill="#FFFEFA" stroke="#ECE5D3" stroke-width="1" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">5 · 脑子顶不住</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">代码出得快，但人需要审每一行 — 复利反过来</text>
+  </g>
+  <text x="630" y="640" font-size="22" fill="#B85A3A">→</text>
+  <g transform="translate(680,610)">
+    <rect x="0" y="0" width="440" height="80" fill="#ECE5D3" rx="4"/>
+    <text x="22" y="34" font-size="18" font-weight="700" fill="#2A241B">design the interface</text>
+    <text x="22" y="62" font-size="13" fill="#5C5345">Kent Beck · 灰盒委托 · 接口固化语义</text>
+  </g>
+
+  <text x="80" y="725" font-family="SF Mono, Menlo, monospace" font-size="10" letter-spacing="3" fill="#8A8472">AI FORCE · 慕铭整理 · SOURCE: AI ENGINEER CONFERENCE 2026</text>
+</svg>

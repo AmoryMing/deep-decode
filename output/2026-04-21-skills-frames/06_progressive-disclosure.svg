@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <defs>
+    <marker id="parr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2383E2"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">渐进式披露：三级加载机制</text>
+  <text x="400" y="66" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">元数据常驻 → 正文按需 → 附件再按需</text>
+
+  <!-- Level 1：元数据 -->
+  <g transform="translate(100, 120)">
+    <rect x="0" y="0" width="600" height="90" rx="8" fill="#2383E2" opacity="0.12" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="20" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" font-weight="700">LEVEL 1 · 启动即加载</text>
+    <text x="20" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" font-weight="700">YAML 元数据</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">name + description，告诉 Claude "这个 Skill 是干什么的"</text>
+
+    <!-- 容量标签 -->
+    <rect x="480" y="28" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="530" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">占用 token</text>
+    <text x="530" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#2383E2" text-anchor="middle" font-weight="700">极少</text>
+  </g>
+
+  <!-- 箭头 1 -->
+  <g transform="translate(400, 225)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="#2383E2" stroke-width="2" marker-end="url(#parr)"/>
+    <text x="15" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">任务相关时</text>
+  </g>
+
+  <!-- Level 2：SKILL.md 正文 -->
+  <g transform="translate(100, 265)">
+    <rect x="0" y="0" width="600" height="90" rx="8" fill="#2383E2" opacity="0.25" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="20" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" font-weight="700">LEVEL 2 · 按需加载</text>
+    <text x="20" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" font-weight="700">SKILL.md 正文</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">完整使用说明、步骤、坑点总结 -- 模型判断相关才拉进上下文</text>
+
+    <rect x="480" y="28" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="530" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">占用 token</text>
+    <text x="530" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#2383E2" text-anchor="middle" font-weight="700">中等</text>
+  </g>
+
+  <!-- 箭头 2 -->
+  <g transform="translate(400, 370)">
+    <line x1="0" y1="0" x2="0" y2="28" stroke="#2383E2" stroke-width="2" marker-end="url(#parr)"/>
+    <text x="15" y="20" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">深度执行时</text>
+  </g>
+
+  <!-- Level 3：附件 -->
+  <g transform="translate(100, 410)">
+    <rect x="0" y="0" width="600" height="90" rx="8" fill="#2383E2" opacity="0.4" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="20" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" font-weight="700">LEVEL 3 · 最后按需</text>
+    <text x="20" y="54" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#37352F" font-weight="700">scripts/ · references/ · assets/</text>
+    <text x="20" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">脚本、参考资料、模板 -- 真要执行具体动作才读</text>
+
+    <rect x="480" y="28" width="100" height="48" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="530" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">占用 token</text>
+    <text x="530" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#2383E2" text-anchor="middle" font-weight="700">多</text>
+  </g>
+</svg>

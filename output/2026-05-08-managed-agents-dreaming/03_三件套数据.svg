@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#37352F">三件套：各自一个数字</text>
+  <text x="400" y="68" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Dreaming · Outcomes · Multiagent — 不是 PPT 的功能列表，是产品改动</text>
+
+  <!-- Card 1: Dreaming -->
+  <g transform="translate(60, 110)">
+    <rect x="0" y="0" width="220" height="320" rx="14" fill="#F4ECFF" stroke="#9B51E0" stroke-width="2"/>
+    <text x="20" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#9B51E0">Dreaming</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">回看历史 · 自改提示词</text>
+    <line x1="20" y1="74" x2="200" y2="74" stroke="#9B51E0" stroke-opacity="0.3"/>
+
+    <text x="110" y="160" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="64" font-weight="bold" fill="#9B51E0">6×</text>
+    <text x="110" y="190" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Harvey 任务完成率</text>
+
+    <line x1="20" y1="220" x2="200" y2="220" stroke="#9B51E0" stroke-opacity="0.3"/>
+    <text x="20" y="246" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">证据：法律 AI Harvey</text>
+    <text x="20" y="266" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">在长任务上的对比测试</text>
+    <text x="20" y="294" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">机制：闲时跑复盘 agent</text>
+    <text x="20" y="310" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">输出系统提示更新建议</text>
+  </g>
+
+  <!-- Card 2: Outcomes -->
+  <g transform="translate(290, 110)">
+    <rect x="0" y="0" width="220" height="320" rx="14" fill="#EAF4FE" stroke="#2383E2" stroke-width="2"/>
+    <text x="20" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2">Outcomes</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">写好成功标准 · 自评自纠</text>
+    <line x1="20" y1="74" x2="200" y2="74" stroke="#2383E2" stroke-opacity="0.3"/>
+
+    <text x="110" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="50" font-weight="bold" fill="#2383E2">+10pp</text>
+    <text x="110" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">总任务成功率</text>
+
+    <line x1="20" y1="210" x2="200" y2="210" stroke="#2383E2" stroke-opacity="0.3"/>
+    <g transform="translate(20, 240)">
+      <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">细分提升：</text>
+      <text x="0" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">.docx</text>
+      <text x="180" y="22" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2">+8.4%</text>
+      <text x="0" y="44" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">.pptx</text>
+      <text x="180" y="44" text-anchor="end" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#2383E2">+10.1%</text>
+    </g>
+    <text x="20" y="306" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">grader 独立上下文，不当裁判员</text>
+  </g>
+
+  <!-- Card 3: Multiagent -->
+  <g transform="translate(520, 110)">
+    <rect x="0" y="0" width="220" height="320" rx="14" fill="#E8F7F4" stroke="#4DB6AC" stroke-width="2"/>
+    <text x="20" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="bold" fill="#4DB6AC">Multiagent</text>
+    <text x="20" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">主 agent 拆解 · 子 agent 并行</text>
+    <line x1="20" y1="74" x2="200" y2="74" stroke="#4DB6AC" stroke-opacity="0.3"/>
+
+    <text x="110" y="155" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="50" font-weight="bold" fill="#4DB6AC">数百</text>
+    <text x="110" y="180" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">并行子 agent / 任务</text>
+
+    <line x1="20" y1="210" x2="200" y2="210" stroke="#4DB6AC" stroke-opacity="0.3"/>
+    <text x="20" y="240" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">案例：Netflix 构建日志分析</text>
+    <text x="20" y="262" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">主 agent 把日志切片</text>
+    <text x="20" y="280" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">子 agent 并行扫</text>
+    <text x="20" y="304" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">主 agent 汇总反常项</text>
+  </g>
+
+  <!-- Bottom Spiral case -->
+  <g transform="translate(60, 450)">
+    <rect x="0" y="0" width="680" height="50" rx="8" fill="#FFF8E8" stroke="#FFB020"/>
+    <text x="20" y="22" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#FFB020">Spiral 案例：分层成本</text>
+    <text x="20" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">Haiku 接请求 + 路由 → Opus 跑核心推理 · 同一套 harness 里两种 token 价位混搭</text>
+  </g>
+</svg>

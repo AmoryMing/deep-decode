@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580">
+  <defs>
+    <style>
+      .title { font-family: 'PingFang SC', 'Microsoft YaHei', 'Hiragino Sans GB', sans-serif; font-weight: 700; }
+      .sub { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; font-weight: 400; }
+      .en { font-family: 'PingFang SC', 'Inter', 'Helvetica Neue', sans-serif; font-weight: 500; }
+    </style>
+  </defs>
+  <rect width="800" height="580" fill="#FAF8F5"/>
+  <rect x="0" y="0" width="800" height="8" fill="#CC785C"/>
+
+  <text x="48" y="50" class="en" font-size="13" fill="#7A6B5A" letter-spacing="2">06 · WHAT IT MEANS FOR YOU</text>
+  <text x="48" y="92" class="title" font-size="26" fill="#1F1B16">对从业者意味着什么</text>
+
+  <!-- 1 政策研究 -->
+  <g transform="translate(48, 130)">
+    <rect x="0" y="0" width="704" height="68" fill="#CC785C" fill-opacity="0.10"/>
+    <rect x="0" y="0" width="4" height="68" fill="#CC785C"/>
+    <text x="20" y="28" class="title" font-size="14" fill="#CC785C">AI 政策研究者</text>
+    <text x="20" y="52" class="sub" font-size="13" fill="#37352F">追踪 "moral formation"/"safe other" 是否进入立法草案——扩音器策略的生效证据。</text>
+  </g>
+
+  <!-- 2 产品负责人 -->
+  <g transform="translate(48, 210)">
+    <rect x="0" y="0" width="704" height="68" fill="#CC785C" fill-opacity="0.10"/>
+    <rect x="0" y="0" width="4" height="68" fill="#CC785C"/>
+    <text x="20" y="28" class="title" font-size="14" fill="#CC785C">AI 产品负责人</text>
+    <text x="20" y="52" class="sub" font-size="13" fill="#37352F">合规文档会从"技术披露"扩展到"价值观训练文档"——提前写一份"道德冲突处理"内部材料。</text>
+  </g>
+
+  <!-- 3 模型公司战略 -->
+  <g transform="translate(48, 290)">
+    <rect x="0" y="0" width="704" height="68" fill="#CC785C" fill-opacity="0.10"/>
+    <rect x="0" y="0" width="4" height="68" fill="#CC785C"/>
+    <text x="20" y="28" class="title" font-size="14" fill="#CC785C">模型公司战略</text>
+    <text x="20" y="52" class="sub" font-size="13" fill="#37352F">OpenAI / xAI 若 2026 下半年不补一套价值观叙事，监管语言将默认采用 Anthropic 版本。</text>
+  </g>
+
+  <!-- 4 一般从业者 -->
+  <g transform="translate(48, 370)">
+    <rect x="0" y="0" width="704" height="68" fill="#1F1B16" fill-opacity="0.06"/>
+    <rect x="0" y="0" width="4" height="68" fill="#1F1B16"/>
+    <text x="20" y="28" class="title" font-size="14" fill="#1F1B16">一般 AI 从业者</text>
+    <text x="20" y="52" class="sub" font-size="13" fill="#37352F">看到新"AI 安全"术语，先问它最初解决工程问题还是讲故事——两者距离就是定位战的位移量。</text>
+  </g>
+
+  <!-- 5 学者 -->
+  <g transform="translate(48, 450)">
+    <rect x="0" y="0" width="704" height="68" fill="#1F1B16" fill-opacity="0.06"/>
+    <rect x="0" y="0" width="4" height="68" fill="#1F1B16"/>
+    <text x="20" y="28" class="title" font-size="14" fill="#1F1B16">学术研究者 / 学者</text>
+    <text x="20" y="52" class="sub" font-size="13" fill="#37352F">接到模型公司"对话邀请"，先问议程谁定、纪要谁审、反对意见怎么记录——再决定是否参与。</text>
+  </g>
+
+  <!-- footer -->
+  <g transform="translate(48, 530)">
+    <rect x="0" y="0" width="704" height="34" fill="#1F1B16"/>
+    <text x="20" y="22" class="sub" font-size="12" fill="#D9CFC3">2026-05-20  ·  decode  ·  anthropic.com/news/widening-conversation-ai</text>
+  </g>
+</svg>

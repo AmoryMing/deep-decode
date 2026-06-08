@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="400" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F" text-anchor="middle">维护税 — 80 年里都在收，只是税基变了</text>
+  <text x="400" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774" text-anchor="middle">人力 vs token — 非线性累加 vs 线性可预算</text>
+
+  <!-- 左侧：人力税（非线性） -->
+  <rect x="40" y="100" width="340" height="360" rx="8" fill="#F7F7F5" stroke="#EB5757" stroke-width="1"/>
+  <text x="210" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#EB5757" text-anchor="middle">税基：人力（时间与注意力）</text>
+
+  <!-- 非线性曲线示意 -->
+  <path d="M 80 400 Q 170 395 220 350 Q 280 280 340 140" fill="none" stroke="#EB5757" stroke-width="3"/>
+  <text x="345" y="145" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#EB5757">断崖</text>
+
+  <!-- X 轴标签 -->
+  <line x1="70" y1="420" x2="350" y2="420" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="85" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">第 1 天</text>
+  <text x="195" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">第 50 天</text>
+  <text x="330" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">第 200 天</text>
+
+  <text x="210" y="470" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">每多一条笔记，整理成本 × N</text>
+  <text x="210" y="488" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">Evernote / Notion / Roam / Obsidian 同款流失曲线</text>
+
+  <!-- 右侧：token 税（线性） -->
+  <rect x="420" y="100" width="340" height="360" rx="8" fill="#F7F7F5" stroke="#4DB6AC" stroke-width="1"/>
+  <text x="590" y="130" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#4DB6AC" text-anchor="middle">税基：token（可预算的 API 费）</text>
+
+  <!-- 线性直线 -->
+  <line x1="460" y1="400" x2="720" y2="280" stroke="#4DB6AC" stroke-width="3"/>
+  <text x="725" y="285" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">可预算</text>
+
+  <line x1="450" y1="420" x2="730" y2="420" stroke="#E3E2E0" stroke-width="1"/>
+  <text x="465" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">第 1 天</text>
+  <text x="575" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">第 50 天</text>
+  <text x="710" y="440" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="end">第 200 天</text>
+
+  <text x="590" y="470" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" text-anchor="middle">一次 compaction 多少钱清清楚楚</text>
+  <text x="590" y="488" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">凌晨跑完交差 — 写进月度预算</text>
+
+  <!-- 中间箭头 -->
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2383E2"/>
+    </marker>
+  </defs>
+  <line x1="382" y1="280" x2="418" y2="280" stroke="#2383E2" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="400" y="265" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#2383E2" text-anchor="middle">拐点</text>
+</svg>

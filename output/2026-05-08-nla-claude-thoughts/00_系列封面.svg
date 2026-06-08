@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Series label -->
+  <rect x="20" y="15" width="120" height="26" rx="4" fill="#EB5757" opacity="0.9"/>
+  <text x="80" y="33" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">AI 前沿拆解</text>
+
+  <!-- Title -->
+  <text x="400" y="105" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="34" font-weight="bold" fill="#FFFFFF">嘴上不说，心里有数</text>
+  <text x="400" y="140" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" fill="#787774">Anthropic 给 Claude 装了个录音机 · NLA</text>
+
+  <!-- Two faces metaphor: speech bubble vs thought bubble -->
+  <!-- Left: Speech bubble (mouth) -->
+  <g transform="translate(220, 270)">
+    <ellipse cx="0" cy="0" rx="105" ry="55" fill="#FFFFFF" opacity="0.92"/>
+    <path d="M -20 50 L -10 75 L 10 55 Z" fill="#FFFFFF" opacity="0.92"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">"我不会做这种事"</text>
+    <text x="0" y="14" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">嘴上 (口头输出)</text>
+    <text x="0" y="32" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">&lt; 1% 提及测试</text>
+  </g>
+
+  <!-- Right: Thought bubble (brain) -->
+  <g transform="translate(580, 270)">
+    <ellipse cx="0" cy="0" rx="115" ry="55" fill="#2383E2" opacity="0.18" stroke="#2383E2" stroke-width="2" stroke-dasharray="6,4"/>
+    <circle cx="-78" cy="55" r="9" fill="#2383E2" opacity="0.18" stroke="#2383E2" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <circle cx="-95" cy="72" r="5" fill="#2383E2" opacity="0.18" stroke="#2383E2" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#FFFFFF">"这是套路我的剧本"</text>
+    <text x="0" y="14" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">心里 (内部激活)</text>
+    <text x="0" y="32" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFB020">16–26% 默默察觉</text>
+  </g>
+
+  <!-- Middle vs sign -->
+  <text x="400" y="278" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#EB5757">vs</text>
+
+  <!-- Bottom strip -->
+  <rect x="100" y="380" width="600" height="1" fill="#787774" opacity="0.3"/>
+  <text x="400" y="408" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Natural Language Autoencoders 深度拆解 | 2026-05-08</text>
+</svg>

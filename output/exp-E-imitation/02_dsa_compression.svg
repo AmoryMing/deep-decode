@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="1200" height="680">
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="80" y="60" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="700" fill="#1a1a1a">DSA：1M 上下文的成本被重写</text>
+  <text x="80" y="92" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">CSA + HCA 双段压缩 / V4-Pro vs V3.2 / 1M token 设置下</text>
+
+  <text x="80" y="160" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">单 token 推理 FLOPs</text>
+  <rect x="80" y="180" width="800" height="60" fill="#E5E5E5"/>
+  <text x="700" y="218" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">V3.2 baseline 100%</text>
+
+  <rect x="80" y="270" width="216" height="60" fill="#2383E2"/>
+  <text x="305" y="308" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1a1a1a">V4-Pro: 27%（节约 73%）</text>
+
+  <text x="80" y="380" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">KV cache 占用</text>
+  <rect x="80" y="400" width="800" height="60" fill="#E5E5E5"/>
+  <text x="700" y="438" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">V3.2 baseline 100%</text>
+
+  <rect x="80" y="490" width="80" height="60" fill="#FFA500"/>
+  <text x="170" y="528" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="600" fill="#1a1a1a">V4-Pro: 10%（节约 90%）</text>
+
+  <line x1="80" y1="595" x2="1120" y2="595" stroke="#E0E0E0"/>
+
+  <text x="80" y="635" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">CSA（Compressed Sparse Attention）处理近端高频信号  ·  HCA（Heavily Compressed）处理远端稀疏信号</text>
+  <text x="80" y="660" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">两段不同压缩比并行运行——让 1M 上下文从「研究指标」走进「定价表」</text>
+</svg>

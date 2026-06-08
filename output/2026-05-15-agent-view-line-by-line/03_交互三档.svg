@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-size="22" font-weight="700" fill="#37352F">三档介入：watch → peek → attach</text>
+  <text x="40" y="78" font-size="14" fill="#9B9A97">注意力调度的好范式 · 大多数场景止步 peek</text>
+
+  <!-- 三档卡片 -->
+  <g>
+    <rect x="40" y="120" width="230" height="320" rx="10" fill="#F7F7F5" stroke="#E0E0E0"/>
+    <text x="60" y="155" font-size="14" fill="#9B9A97">档位 1</text>
+    <text x="60" y="190" font-size="26" font-weight="700" fill="#37352F">watch</text>
+    <text x="60" y="218" font-size="13" fill="#37352F">扫一眼那一行</text>
+
+    <line x1="60" y1="240" x2="250" y2="240" stroke="#E0E0E0"/>
+    <text x="60" y="265" font-size="12" fill="#9B9A97">动作</text>
+    <text x="60" y="285" font-size="13" fill="#37352F">↑↓ 移动光标</text>
+
+    <text x="60" y="315" font-size="12" fill="#9B9A97">看什么</text>
+    <text x="60" y="335" font-size="13" fill="#37352F">名字 · 当前活动</text>
+    <text x="60" y="353" font-size="13" fill="#37352F">状态图标 · 时间</text>
+    <text x="60" y="371" font-size="13" fill="#37352F">PR 状态点</text>
+
+    <text x="60" y="405" font-size="12" fill="#9B9A97">能干什么</text>
+    <text x="60" y="425" font-size="13" fill="#37352F">只看不动</text>
+  </g>
+
+  <g>
+    <rect x="290" y="120" width="230" height="320" rx="10" fill="#2383E2" opacity="0.06" stroke="#2383E2"/>
+    <text x="310" y="155" font-size="14" fill="#2383E2">档位 2 · 默认推荐</text>
+    <text x="310" y="190" font-size="26" font-weight="700" fill="#37352F">peek</text>
+    <text x="310" y="218" font-size="13" fill="#37352F">瞥一眼面板</text>
+
+    <line x1="310" y1="240" x2="500" y2="240" stroke="#2383E2" opacity="0.3"/>
+    <text x="310" y="265" font-size="12" fill="#9B9A97">动作</text>
+    <text x="310" y="285" font-size="13" fill="#37352F">Space 打开</text>
+
+    <text x="310" y="315" font-size="12" fill="#9B9A97">看什么</text>
+    <text x="310" y="335" font-size="13" fill="#37352F">最近输出</text>
+    <text x="310" y="353" font-size="13" fill="#37352F">它在等的问题</text>
+    <text x="310" y="371" font-size="13" fill="#37352F">已开的 PR</text>
+
+    <text x="310" y="405" font-size="12" fill="#9B9A97">能干什么</text>
+    <text x="310" y="425" font-size="13" fill="#37352F">回复 · Tab 建议 · !bash</text>
+  </g>
+
+  <g>
+    <rect x="540" y="120" width="230" height="320" rx="10" fill="#F7F7F5" stroke="#E0E0E0"/>
+    <text x="560" y="155" font-size="14" fill="#9B9A97">档位 3 · 少数场景</text>
+    <text x="560" y="190" font-size="26" font-weight="700" fill="#37352F">attach</text>
+    <text x="560" y="218" font-size="13" fill="#37352F">完整接入</text>
+
+    <line x1="560" y1="240" x2="750" y2="240" stroke="#E0E0E0"/>
+    <text x="560" y="265" font-size="12" fill="#9B9A97">动作</text>
+    <text x="560" y="285" font-size="13" fill="#37352F">Enter 或 → 进入</text>
+
+    <text x="560" y="315" font-size="12" fill="#9B9A97">看什么</text>
+    <text x="560" y="335" font-size="13" fill="#37352F">完整 transcript</text>
+    <text x="560" y="353" font-size="13" fill="#37352F">+ "你不在时"recap</text>
+
+    <text x="560" y="405" font-size="12" fill="#9B9A97">能干什么</text>
+    <text x="560" y="425" font-size="13" fill="#37352F">所有命令都可用</text>
+  </g>
+
+  <!-- 箭头 -->
+  <path d="M 270 280 L 290 280" stroke="#9B9A97" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 520 280 L 540 280" stroke="#9B9A97" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#9B9A97"/>
+    </marker>
+  </defs>
+
+  <!-- 底部 detach 提示 -->
+  <line x1="40" y1="465" x2="760" y2="465" stroke="#E0E0E0"/>
+  <text x="40" y="488" font-size="12" fill="#9B9A97">退出：←（空 prompt） · 弹窗占焦用 Ctrl+Z · /exit / Ctrl+C / Ctrl+D 都不会停后台会话 · 真停要 /stop</text>
+</svg>

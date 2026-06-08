@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <rect width="1200" height="700" fill="#FFFFFF"/>
+  <text x="80" y="60" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="26" font-weight="700" fill="#1a1a1a">护城河迁移：闭源派叙事的隐藏主线</text>
+  <text x="80" y="92" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#666">能力维度 → 政策合规 + 应用生态 + 企业部署稳定性</text>
+
+  <rect x="80" y="140" width="450" height="450" fill="#F7F7F5" rx="6"/>
+  <text x="105" y="180" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#999">迁移前</text>
+  <text x="105" y="205" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999">2023 - 2025</text>
+
+  <line x1="105" y1="225" x2="510" y2="225" stroke="#E0E0E0"/>
+
+  <text x="105" y="260" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">护城河 1：模型能力领先 X 代</text>
+  <text x="105" y="285" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">"我们更强 / 我们更快 / 我们的</text>
+  <text x="105" y="305" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666"> benchmark 更高"</text>
+
+  <text x="105" y="350" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">护城河 2：参数规模 + 训练成本</text>
+  <text x="105" y="375" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">"训 1T+ 模型只有头部三家做得到"</text>
+
+  <text x="105" y="420" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">护城河 3：定价权</text>
+  <text x="105" y="445" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">"更强所以更贵"</text>
+
+  <text x="105" y="510" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#FFA500" font-weight="600">→ 都被 V4 同时踩碎</text>
+  <text x="105" y="535" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#999">  · 0.2 点同代等价</text>
+  <text x="105" y="555" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#999">  · mHC 训练栈开源</text>
+  <text x="105" y="575" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#999">  · 14% 价格</text>
+
+  <text x="555" y="370" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="40" fill="#2383E2">→</text>
+
+  <rect x="640" y="140" width="450" height="450" fill="#F7F7F5" rx="6"/>
+  <text x="665" y="180" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="18" font-weight="700" fill="#2383E2">迁移后</text>
+  <text x="665" y="205" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#999">2026 - 2027</text>
+
+  <line x1="665" y1="225" x2="1070" y2="225" stroke="#E0E0E0"/>
+
+  <text x="665" y="260" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">护城河 1：政策合规护栏</text>
+  <text x="665" y="285" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">RSP / Glasswing 联盟 / Cyber</text>
+  <text x="665" y="305" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">Verification Program</text>
+
+  <text x="665" y="350" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">护城河 2：应用生态 bundle</text>
+  <text x="665" y="375" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">Claude Design / 数字员工 /</text>
+  <text x="665" y="395" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">企业上下文工程</text>
+
+  <text x="665" y="440" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="600" fill="#1a1a1a">护城河 3：企业部署稳定性</text>
+  <text x="665" y="465" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#666">SLA / 多区可用 / 合规审计</text>
+
+  <text x="665" y="525" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#2383E2" font-weight="600">→ IPO pitch 必须重写</text>
+  <text x="665" y="550" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#999">  · Anthropic Series G $30B @ $380B</text>
+  <text x="665" y="570" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#999">  · 行业分析师预期 2026-10 IPO</text>
+
+  <text x="80" y="660" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#1a1a1a">边际溢价空间被压成一个具体数字：</text>
+  <text x="430" y="660" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="20" font-weight="700" fill="#FFA500">$21.52 / MTok 输出</text>
+  <text x="80" y="685" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#999">据公开融资文件 + 行业分析师观察</text>
+</svg>

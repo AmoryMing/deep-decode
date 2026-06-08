@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- 顶部标签 -->
+  <rect x="40" y="40" width="180" height="28" rx="4" fill="#F5F5F4" stroke="#E3E2E0"/>
+  <text x="55" y="59" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Claude Code 源码拆解 · 04</text>
+
+  <!-- 主标题 -->
+  <text x="40" y="135" font-family="PingFang SC, Inter, sans-serif" font-size="40" font-weight="700" fill="#1F1F1F">微交互在 AI 产品里失效了</text>
+  <text x="40" y="185" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="500" fill="#37352F">从一道稳定边界算法看新设计语言</text>
+
+  <!-- 中段对比 -->
+  <line x1="40" y1="225" x2="760" y2="225" stroke="#E3E2E0" stroke-width="1"/>
+
+  <text x="40" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">Saffer 1.0（2013）</text>
+  <text x="40" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="600" fill="#1F1F1F">触发器 → 规则 → 反馈 → 循环</text>
+  <text x="40" y="328" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">100ms 内可枚举的状态切换</text>
+
+  <text x="420" y="270" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#2383E2">AI 时代（2026）</text>
+  <text x="420" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="600" fill="#2383E2">不确定性反馈 + 协作中断</text>
+  <text x="420" y="328" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">3-30 秒过程的可视化与建模</text>
+
+  <line x1="40" y1="355" x2="760" y2="355" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- 底部数据带 -->
+  <text x="40" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="700" fill="#FFA500">12</text>
+  <text x="80" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Spinner 文件</text>
+
+  <text x="200" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="700" fill="#FFA500">187</text>
+  <text x="260" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">等待文案</text>
+
+  <text x="380" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="700" fill="#FFA500">-81%</text>
+  <text x="465" y="400" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Shimmer 渲染开销</text>
+
+  <text x="40" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="700" fill="#FFA500">3s</text>
+  <text x="80" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Stalled 阈值</text>
+
+  <text x="200" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="700" fill="#FFA500">4×</text>
+  <text x="240" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">Material 3 识别速度</text>
+
+  <text x="40" y="475" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Anthropic Claude Code · Material 3 Expressive · Smashing Magazine 2026-02</text>
+</svg>

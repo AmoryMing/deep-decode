@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect width="900" height="560" fill="#FFFFFF"/>
+  <text x="40" y="50" font-size="20" font-weight="700" fill="#1A1A1A">图 2·9 天三叉发布范式</text>
+  <text x="40" y="76" font-size="13" fill="#666">同周三家给出三种"最强模型怎么发"的答案 — 三种押注未来 12 个月谁能定价</text>
+
+  <!-- Anthropic / Tiered -->
+  <rect x="40" y="110" width="260" height="320" fill="#F5F9FF" stroke="#2383E2" stroke-width="2" rx="6"/>
+  <text x="60" y="140" font-size="15" font-weight="700" fill="#2383E2">Tiered Release</text>
+  <text x="60" y="160" font-size="12" fill="#666">Anthropic · 4-16 / 4-21 / 4-23</text>
+
+  <text x="60" y="195" font-size="12" fill="#1A1A1A">• Tier 0 内部不发布</text>
+  <text x="60" y="218" font-size="12" fill="#1A1A1A">• Tier 1 联盟限制（Mythos）</text>
+  <text x="60" y="241" font-size="12" fill="#1A1A1A">• Tier 2 公开商用（Opus 4.7）</text>
+  <text x="60" y="264" font-size="12" fill="#1A1A1A">• Tier 3 专业豁免</text>
+
+  <line x1="60" y1="285" x2="280" y2="285" stroke="#D0E1F5" stroke-width="1"/>
+
+  <text x="60" y="310" font-size="11" font-weight="600" fill="#666">押注</text>
+  <text x="60" y="332" font-size="13" fill="#1A1A1A">能力稀缺性</text>
+  <text x="60" y="350" font-size="11" fill="#888">最强模型作为分级访问资产</text>
+
+  <text x="60" y="390" font-size="11" font-weight="600" fill="#666">护城河</text>
+  <text x="60" y="412" font-size="12" fill="#1A1A1A">Glasswing 11 家联盟</text>
+
+  <!-- OpenAI / $20 anchor -->
+  <rect x="320" y="110" width="260" height="320" fill="#FFFCF5" stroke="#FFA500" stroke-width="2" rx="6"/>
+  <text x="340" y="140" font-size="15" font-weight="700" fill="#E68A00">$20 锚定</text>
+  <text x="340" y="160" font-size="12" fill="#666">OpenAI Codex · 4-22</text>
+
+  <text x="340" y="195" font-size="12" fill="#1A1A1A">• Free 计划留 Codex</text>
+  <text x="340" y="218" font-size="12" fill="#1A1A1A">• Plus $20/月留 Codex</text>
+  <text x="340" y="241" font-size="12" fill="#1A1A1A">• 把"性价比可达"钉死</text>
+  <text x="340" y="264" font-size="12" fill="#1A1A1A">• 同周发 GPT-5.5</text>
+
+  <line x1="340" y1="285" x2="560" y2="285" stroke="#FFE0B0" stroke-width="1"/>
+
+  <text x="340" y="310" font-size="11" font-weight="600" fill="#666">押注</text>
+  <text x="340" y="332" font-size="13" fill="#1A1A1A">价格档位 + 生态</text>
+  <text x="340" y="350" font-size="11" fill="#888">守开发者基本盘</text>
+
+  <text x="340" y="390" font-size="11" font-weight="600" fill="#666">护城河</text>
+  <text x="340" y="412" font-size="12" fill="#1A1A1A">订阅 + Codex 集成</text>
+
+  <!-- DeepSeek / Open -->
+  <rect x="600" y="110" width="260" height="320" fill="#FFFCF5" stroke="#FFA500" stroke-width="2" rx="6"/>
+  <text x="620" y="140" font-size="15" font-weight="700" fill="#E68A00">Open Release</text>
+  <text x="620" y="160" font-size="12" fill="#666">DeepSeek V4 · 4-24</text>
+
+  <text x="620" y="195" font-size="12" fill="#1A1A1A">• 1.6T 参数权重 MIT</text>
+  <text x="620" y="218" font-size="12" fill="#1A1A1A">• Tech Report 公开 mHC/DSA</text>
+  <text x="620" y="241" font-size="12" fill="#1A1A1A">• 输出价 = 闭源 14%</text>
+  <text x="620" y="264" font-size="12" fill="#1A1A1A">• 1M 上下文默认开</text>
+
+  <line x1="620" y1="285" x2="840" y2="285" stroke="#FFE0B0" stroke-width="1"/>
+
+  <text x="620" y="310" font-size="11" font-weight="600" fill="#666">押注</text>
+  <text x="620" y="332" font-size="13" fill="#1A1A1A">开放性 + 价格</text>
+  <text x="620" y="350" font-size="11" fill="#888">压缩对手定价空间</text>
+
+  <text x="620" y="390" font-size="11" font-weight="600" fill="#666">护城河</text>
+  <text x="620" y="412" font-size="12" fill="#1A1A1A">权重 + 生态规模</text>
+
+  <!-- Bottom strip -->
+  <rect x="40" y="460" width="820" height="50" fill="#FFF3E0" rx="3"/>
+  <text x="56" y="486" font-size="13" font-weight="600" fill="#1A1A1A">三种范式不是产品策略选择，是对"未来 12 个月谁能定价"的三种押注</text>
+  <text x="56" y="503" font-size="11" fill="#666">分叉领先框架（A 类领先 vs B 类领先）本周扩成三叉 — 加上 V4 这条开源轨</text>
+
+  <text x="40" y="540" font-size="10" fill="#999">时间窗：2026-04-16 至 2026-04-24（共 9 天）</text>
+</svg>

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 440" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="440" fill="#FFFFFF"/>
+  <text x="400" y="50" font-size="24" font-weight="700" fill="#1A1A1A" text-anchor="middle">Stalled 检测：第 3 秒开始变焦虑</text>
+  <text x="400" y="78" font-size="14" fill="#666666" text-anchor="middle">3 秒阈值 + 2 秒 RGB 插值，指数缓动每帧吃掉 10% 差值</text>
+
+  <!-- timeline -->
+  <line x1="80" y1="220" x2="720" y2="220" stroke="#E3E2E0" stroke-width="2"/>
+
+  <!-- phase 1: 0-3s normal -->
+  <rect x="80" y="195" width="200" height="50" fill="#2383E2" opacity="0.85"/>
+  <text x="180" y="227" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">正常色</text>
+
+  <!-- phase 2: 3-5s gradient -->
+  <defs>
+    <linearGradient id="fade" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2383E2" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#AB2B3F" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect x="280" y="195" width="240" height="50" fill="url(#fade)"/>
+  <text x="400" y="227" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">2 秒 RGB 渐变</text>
+
+  <!-- phase 3: 5s+ red -->
+  <rect x="520" y="195" width="200" height="50" fill="#AB2B3F"/>
+  <text x="620" y="227" font-size="14" font-weight="600" fill="#FFFFFF" text-anchor="middle">完全警觉色</text>
+
+  <!-- time markers -->
+  <line x1="80" y1="195" x2="80" y2="265" stroke="#888888" stroke-width="1"/>
+  <text x="80" y="285" font-size="12" fill="#666666" text-anchor="middle">0s</text>
+  <text x="80" y="300" font-size="10" fill="#888888" text-anchor="middle">开始等待</text>
+
+  <line x1="280" y1="195" x2="280" y2="265" stroke="#888888" stroke-width="1"/>
+  <text x="280" y="285" font-size="12" fill="#666666" text-anchor="middle">3s</text>
+  <text x="280" y="300" font-size="10" fill="#888888" text-anchor="middle">触发 isStalled</text>
+
+  <line x1="520" y1="195" x2="520" y2="265" stroke="#888888" stroke-width="1"/>
+  <text x="520" y="285" font-size="12" fill="#666666" text-anchor="middle">5s</text>
+  <text x="520" y="300" font-size="10" fill="#888888" text-anchor="middle">intensity=1</text>
+
+  <line x1="720" y1="195" x2="720" y2="265" stroke="#888888" stroke-width="1"/>
+  <text x="720" y="285" font-size="12" fill="#666666" text-anchor="middle">5s+</text>
+
+  <!-- example spinners -->
+  <text x="180" y="355" font-size="22" fill="#2383E2" text-anchor="middle" font-family="monospace">✳ Crystallizing…</text>
+  <text x="400" y="355" font-size="22" fill="#6C5480" text-anchor="middle" font-family="monospace">✳ Crystallizing…</text>
+  <text x="620" y="355" font-size="22" fill="#AB2B3F" text-anchor="middle" font-family="monospace">✳ Crystallizing…</text>
+
+  <text x="400" y="410" font-size="13" fill="#666666" text-anchor="middle">hasActiveTools 为真时重置 timer — 工具在跑不算卡住</text>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="56" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">Omni 的"渠道优先"打法</text>
+  <text x="40" y="84" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">先上 YouTube Shorts + Gemini app + Flow，几周后再开 API</text>
+
+  <!-- Divider -->
+  <line x1="40" y1="105" x2="760" y2="105" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Two columns -->
+  <!-- Left: OpenAI 模式 -->
+  <g transform="translate(40, 130)">
+    <rect width="340" height="340" rx="8" fill="#FAFAF9" stroke="#E3E2E0" stroke-width="1"/>
+    <text x="20" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="600" fill="#37352F">OpenAI 模式：API-first</text>
+
+    <!-- Flow -->
+    <rect x="20" y="60" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="170" y="88" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">模型发布 (GPT-4o / Sora 2)</text>
+
+    <text x="170" y="128" font-family="Inter, sans-serif" font-size="20" fill="#787774" text-anchor="middle">↓</text>
+
+    <rect x="20" y="140" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="170" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">开发者接 API → 包成产品</text>
+
+    <text x="170" y="208" font-family="Inter, sans-serif" font-size="20" fill="#787774" text-anchor="middle">↓</text>
+
+    <rect x="20" y="220" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#E3E2E0"/>
+    <text x="170" y="248" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">三个月后进 ChatGPT</text>
+
+    <rect x="20" y="282" width="300" height="40" rx="6" fill="#FFF3E0"/>
+    <text x="170" y="307" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757" text-anchor="middle">用户接触前，开发者先咀嚼一遍</text>
+  </g>
+
+  <!-- Right: Google 模式 -->
+  <g transform="translate(420, 130)">
+    <rect width="340" height="340" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="20" y="36" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="600" fill="#2383E2">Google 模式：渠道优先</text>
+
+    <rect x="20" y="60" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="170" y="88" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">Omni 发布</text>
+
+    <text x="170" y="128" font-family="Inter, sans-serif" font-size="20" fill="#2383E2" text-anchor="middle">↓</text>
+
+    <rect x="20" y="140" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="170" y="168" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">同日上 YouTube Shorts（25 亿 MAU）</text>
+
+    <text x="170" y="208" font-family="Inter, sans-serif" font-size="20" fill="#2383E2" text-anchor="middle">↓</text>
+
+    <rect x="20" y="220" width="300" height="44" rx="6" fill="#FFFFFF" stroke="#2383E2"/>
+    <text x="170" y="248" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#37352F" text-anchor="middle">几周后开 API（开发者最后吃）</text>
+
+    <rect x="20" y="282" width="300" height="40" rx="6" fill="#E8F4E1"/>
+    <text x="170" y="307" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#4DB6AC" text-anchor="middle">十亿级用户即刻拿到数据飞轮</text>
+  </g>
+
+  <text x="40" y="500" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">本质差异：模型公司向消费者扩散 vs 平台公司向模型变现</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560">
+  <rect width="800" height="560" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="60" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#1A1A1A">三层默认值 · 思考链是怎么被默认隐藏的</text>
+  <text x="60" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#5F5F5F">每一层单独看都讲得通 · 叠在一起就把用户钉死在「看不见」上</text>
+
+  <!-- Layer 1: Server default -->
+  <g transform="translate(60, 110)">
+    <rect x="0" y="0" width="680" height="120" fill="#FAFAFA" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="120" fill="#2383E2" rx="3"/>
+    <text x="24" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">第 1 层 · 服务端默认</text>
+    <text x="24" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">Opus 4.5: display 默认 = summarized · 思考摘要会回来</text>
+    <text x="24" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">Opus 4.7: display 默认 = omitted · 响应里有 thinking 块但内容是空字符串</text>
+    <text x="24" y="100" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#888">+ 客户端默认加 redact-thinking-2026-02-12 beta header · betas.ts:264-277</text>
+  </g>
+
+  <!-- Layer 2: Client request body -->
+  <g transform="translate(60, 246)">
+    <rect x="0" y="0" width="680" height="120" fill="#FAFAFA" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="120" fill="#2383E2" rx="3"/>
+    <text x="24" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">第 2 层 · 客户端请求体</text>
+    <text x="24" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">claude.ts:1611 只发 { type: "adaptive" } · 不传 display 字段</text>
+    <text x="24" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">「不传」从「靠服务端默认拿到」悄悄变成「靠服务端默认丢掉」</text>
+    <text x="24" y="100" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#888">客户端没出 bug · 模型升级翻转了同一份代码的行为</text>
+  </g>
+
+  <!-- Layer 3: !isInteractive gate -->
+  <g transform="translate(60, 382)">
+    <rect x="0" y="0" width="680" height="120" fill="#FAFAFA" stroke="#E3E2E0" stroke-width="1.5" rx="6"/>
+    <rect x="0" y="0" width="6" height="120" fill="#2383E2" rx="3"/>
+    <text x="24" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#1A1A1A">第 3 层 · 非交互会话 gate</text>
+    <text x="24" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">VS Code / SDK / -p 模式即使打开 showThinkingSummaries · client 也不会升级 display</text>
+    <text x="24" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">betas.ts:273 的 !getIsNonInteractiveSession() 把它们排除在 client upgrade 之外</text>
+    <text x="24" y="100" font-family="ui-monospace, Menlo, monospace" font-size="11" fill="#888">设置打开了 · beta header 也对了 · 服务端却不再主动给摘要 · 静默地坏掉</text>
+  </g>
+
+  <!-- Bottom result -->
+  <g transform="translate(60, 525)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="600" fill="#2383E2">合成效果：</text>
+    <text x="80" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#3F3F3F">三种典型路径都拿不到完整思考 · 拿到的只是 ∴ Thinking 的 pill</text>
+  </g>
+</svg>

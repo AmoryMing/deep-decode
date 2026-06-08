@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <rect width="800" height="540" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">Eureka Labs 的中断 + 五类从业者的提取</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">"回大厂是认输吗"是个错题 · 真正的问题是节奏</text>
+
+  <!-- Top: Eureka -->
+  <rect x="40" y="110" width="720" height="110" fill="#FAF9F7" stroke="#E0E0DE" stroke-width="1" rx="6"/>
+  <text x="60" y="138" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFB020">Eureka Labs / nanochat / LLM101n</text>
+  <text x="60" y="162" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">已经把"个人能做的最有影响力的 AI 教育产品"做到了它能到的位置。</text>
+  <text x="60" y="184" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">再往前不是产品力问题，是基础模型本身能不能撑出新东西。</text>
+  <text x="60" y="208" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="700" fill="#DA7756">→ 回到节奏的源头，等下一轮跃迁再重启教育层</text>
+
+  <!-- Bottom: 5 takeaways grid (2x3) -->
+  <!-- Card 1: Job seekers -->
+  <rect x="40" y="244" width="230" height="130" fill="#FFFFFF" stroke="#DA7756" stroke-width="1.5" rx="4"/>
+  <text x="56" y="268" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">对求职者</text>
+  <text x="56" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">盯三个数据点：</text>
+  <text x="56" y="308" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">• 顶级研究员去了谁家</text>
+  <text x="56" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">• 离开了谁家</text>
+  <text x="56" y="344" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">• 嘴上 vs. 脚下</text>
+  <text x="56" y="364" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">比读估值新闻有用</text>
+
+  <!-- Card 2: Content creators -->
+  <rect x="285" y="244" width="230" height="130" fill="#FFFFFF" stroke="#2383E2" stroke-width="1.5" rx="4"/>
+  <text x="301" y="268" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2">对内容创作者</text>
+  <text x="301" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">前沿移动比解释更快。</text>
+  <text x="301" y="312" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">要么参与前沿；</text>
+  <text x="301" y="332" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">要么把内容做到"解释清</text>
+  <text x="301" y="350" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">原理后可长期复用"</text>
+  <text x="301" y="368" font-family="PingFang SC, Inter, sans-serif" font-size="10" fill="#787774">的层次</text>
+
+  <!-- Card 3: Anthropic customers -->
+  <rect x="530" y="244" width="230" height="130" fill="#FFFFFF" stroke="#FFB020" stroke-width="1.5" rx="4"/>
+  <text x="546" y="268" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFB020">对 Anthropic 客户</text>
+  <text x="546" y="290" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">未来 1-2 年最重要的</text>
+  <text x="546" y="308" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">产品可能不给你用，</text>
+  <text x="546" y="326" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">给自己研究员用。</text>
+  <text x="546" y="346" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">迭代变快 + 新能力</text>
+  <text x="546" y="364" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">更不可预测</text>
+
+  <!-- Card 4: OpenAI -->
+  <rect x="160" y="384" width="230" height="130" fill="#FFFFFF" stroke="#DA7756" stroke-width="1.5" rx="4"/>
+  <text x="176" y="408" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#DA7756">对 OpenAI</text>
+  <text x="176" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">联创二次离开</text>
+  <text x="176" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">+ 资深 IC 流失</text>
+  <text x="176" y="466" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">+ Sutskever 空位未填</text>
+  <text x="176" y="486" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="700" fill="#DA7756">三件合起来 = 叙事裂缝</text>
+
+  <!-- Card 5: Strategists -->
+  <rect x="410" y="384" width="230" height="130" fill="#FFFFFF" stroke="#37352F" stroke-width="1.5" rx="4"/>
+  <text x="426" y="408" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#37352F">对路线判断者</text>
+  <text x="426" y="430" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">把这次放进 12 个月</text>
+  <text x="426" y="448" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">明星研究员流向图。</text>
+  <text x="426" y="466" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#37352F">效率派 vs. scale 派</text>
+  <text x="426" y="486" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="700" fill="#37352F">看谁吸走的明星更多</text>
+</svg>

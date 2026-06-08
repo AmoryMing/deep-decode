@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+  <text x="50" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="28" font-weight="700" fill="#111827">旁路观察者架构</text>
+  <rect x="70" y="135" width="190" height="90" rx="14" fill="#F7FAFC" stroke="#E3E2E0"/>
+  <text x="165" y="172" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#111827">主 Agent</text>
+  <text x="165" y="201" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#6B7280">执行任务、调用工具</text>
+  <rect x="320" y="135" width="190" height="90" rx="14" fill="#EAF3FF" stroke="#2383E2" stroke-width="2"/>
+  <text x="415" y="172" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#2383E2">状态总线</text>
+  <text x="415" y="201" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#374151">线程、阶段、等待点</text>
+  <rect x="570" y="135" width="160" height="90" rx="14" fill="#FFF7E8" stroke="#FFA500" stroke-width="2"/>
+  <text x="650" y="172" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#9A5B00">桌宠</text>
+  <text x="650" y="201" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#6B4E16">短提示、低噪反馈</text>
+  <path d="M260 180 L318 180" stroke="#2383E2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M306 168 L320 180 L306 192" fill="none" stroke="#2383E2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M510 180 L568 180" stroke="#FFA500" stroke-width="4" stroke-linecap="round"/>
+  <path d="M556 168 L570 180 L556 192" fill="none" stroke="#FFA500" stroke-width="4" stroke-linecap="round"/>
+  <rect x="155" y="320" width="490" height="88" rx="14" fill="#FFFFFF" stroke="#E3E2E0"/>
+  <text x="400" y="354" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="17" font-weight="700" fill="#111827">边界原则</text>
+  <text x="400" y="385" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#374151">主 Agent 解决问题，桌宠表达状态；两个角色不能抢话</text>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" font-family="PingFang SC, Inter, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7F1E8"/>
+      <stop offset="100%" stop-color="#ECE5D3"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- eyebrow -->
+  <g transform="translate(80,90)">
+    <rect x="0" y="14" width="36" height="2" fill="#B85A3A"/>
+    <text x="52" y="20" font-family="SF Mono, Menlo, monospace" font-size="14" letter-spacing="4" fill="#B85A3A" font-weight="600">AI 前沿拆解 · 5-26</text>
+  </g>
+
+  <!-- vertical accent bar -->
+  <rect x="80" y="150" width="6" height="120" fill="#B85A3A"/>
+
+  <!-- title -->
+  <text x="120" y="200" font-size="62" font-weight="700" fill="#2A241B" letter-spacing="-1">坏代码现在</text>
+  <text x="120" y="270" font-size="62" font-weight="700" fill="#2A241B" letter-spacing="-1">是最贵的</text>
+
+  <!-- deck -->
+  <text x="120" y="340" font-size="26" fill="#5C5345" font-style="italic" font-family="Cormorant Garamond, Songti SC, serif">AI 让"软件基本功"第一次被显性定价。</text>
+  <text x="120" y="378" font-size="26" fill="#5C5345" font-style="italic" font-family="Cormorant Garamond, Songti SC, serif">坏 codebase 接上 Claude Code，是熵的放大器。</text>
+
+  <!-- divider -->
+  <line x1="120" y1="430" x2="380" y2="430" stroke="#2A241B" stroke-width="1"/>
+
+  <!-- byline -->
+  <text x="120" y="465" font-family="SF Mono, Menlo, monospace" font-size="13" letter-spacing="3" fill="#8A8472">MATT POCOCK · AI ENGINEER 大会</text>
+
+  <!-- formula card -->
+  <g transform="translate(120,540)">
+    <rect x="0" y="0" width="960" height="140" fill="#FFFEFA" stroke="#B85A3A" stroke-width="1" rx="6"/>
+    <text x="40" y="50" font-size="22" fill="#2A241B" font-weight="600">好 codebase × AI</text>
+    <text x="40" y="84" font-size="36" fill="#B85A3A" font-weight="700">= 产出 × 5</text>
+
+    <line x1="500" y1="20" x2="500" y2="120" stroke="#ECE5D3" stroke-width="2"/>
+
+    <text x="540" y="50" font-size="22" fill="#2A241B" font-weight="600">坏 codebase × AI</text>
+    <text x="540" y="84" font-size="36" fill="#B85A3A" font-weight="700">= 熵 × 5</text>
+  </g>
+
+  <!-- footer -->
+  <text x="80" y="715" font-family="SF Mono, Menlo, monospace" font-size="11" letter-spacing="3" fill="#8A8472">AI FORCE · 智能体研究员 · 慕铭</text>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <!-- Title -->
+  <text x="60" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#37352F">单榜冠军 vs 多榜中位</text>
+  <text x="60" y="76" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">Arena 的中国第一是 Qwen3.7-Max，BenchLM 综合榜的中国第一是 DeepSeek V4 Pro。不是同一个</text>
+
+  <line x1="60" y1="95" x2="740" y2="95" stroke="#E9E9E7" stroke-width="1"/>
+
+  <!-- Two-column comparison -->
+  <g transform="translate(60, 130)">
+    <!-- LEFT: LM Arena -->
+    <rect x="0" y="0" width="320" height="320" rx="6" fill="#FAFAF9" stroke="#E9E9E7" stroke-width="1"/>
+    <text x="20" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" letter-spacing="2">LM ARENA · 盲测对决</text>
+    <text x="20" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#37352F">中国第一</text>
+
+    <rect x="20" y="80" width="280" height="48" rx="4" fill="#2383E2"/>
+    <text x="36" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">1. Qwen3.7-Max</text>
+    <text x="284" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="end">1475</text>
+    <text x="36" y="116" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#D3E5EF">阿里  ·  闭源</text>
+
+    <text x="20" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">子榜表现</text>
+    <g font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" transform="translate(20, 180)">
+      <text x="0" y="0">数学</text>
+      <text x="280" y="0" text-anchor="end">#7</text>
+      <line x1="0" y1="10" x2="280" y2="10" stroke="#E9E9E7"/>
+      <text x="0" y="32">Expert Prompts</text>
+      <text x="280" y="32" text-anchor="end">#9</text>
+      <line x1="0" y1="42" x2="280" y2="42" stroke="#E9E9E7"/>
+      <text x="0" y="64">Software/IT</text>
+      <text x="280" y="64" text-anchor="end">#9</text>
+      <line x1="0" y1="74" x2="280" y2="74" stroke="#E9E9E7"/>
+      <text x="0" y="96">Coding</text>
+      <text x="280" y="96" text-anchor="end">#10</text>
+    </g>
+    <text x="20" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B9A97">每个子类都进前 10，每个都不是冠军</text>
+
+    <!-- RIGHT: BenchLM -->
+    <rect x="360" y="0" width="320" height="320" rx="6" fill="#FAFAF9" stroke="#E9E9E7" stroke-width="1"/>
+    <text x="380" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" letter-spacing="2">BENCHLM · 综合榜</text>
+    <text x="380" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="18" font-weight="700" fill="#37352F">中国第一</text>
+
+    <rect x="380" y="80" width="280" height="48" rx="4" fill="#D9730D"/>
+    <text x="396" y="100" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">1. DeepSeek V4 Pro</text>
+    <text x="644" y="114" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#FFFFFF" text-anchor="end">87</text>
+    <text x="396" y="116" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FCE5D6">DeepSeek  ·  API</text>
+
+    <text x="380" y="158" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">国产排名（综合分）</text>
+    <g font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F" transform="translate(380, 180)">
+      <text x="0" y="0">1. DeepSeek V4 Pro</text>
+      <text x="280" y="0" text-anchor="end">87</text>
+      <line x1="0" y1="10" x2="280" y2="10" stroke="#E9E9E7"/>
+      <text x="0" y="32">2. Kimi K2.6</text>
+      <text x="280" y="32" text-anchor="end">84</text>
+      <line x1="0" y1="42" x2="280" y2="42" stroke="#E9E9E7"/>
+      <text x="0" y="64">3. GLM-5.1</text>
+      <text x="280" y="64" text-anchor="end">83</text>
+      <line x1="0" y1="74" x2="280" y2="74" stroke="#E9E9E7"/>
+      <text x="0" y="96">3. GLM-5 Reasoning</text>
+      <text x="280" y="96" text-anchor="end">83</text>
+    </g>
+    <text x="380" y="300" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B9A97">综合分以加权多 benchmark 算</text>
+  </g>
+
+  <!-- Footer insight -->
+  <g transform="translate(60, 465)">
+    <text x="0" y="0" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#37352F">"国产第一"省略了维度。选型不看单榜，看多榜交集。</text>
+  </g>
+</svg>

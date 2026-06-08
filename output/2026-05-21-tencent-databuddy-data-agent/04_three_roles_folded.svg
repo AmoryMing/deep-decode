@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <rect width="800" height="500" fill="#FFFFFF"/>
+
+  <text x="40" y="50" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">三个工种被一个对话框折叠</text>
+  <text x="40" y="78" font-family="PingFang SC, Inter, sans-serif" font-size="14" fill="#787774">未来 18 个月：三栈分离  →  一栈两端，中间重复执行型岗位被吃掉</text>
+
+  <line x1="40" y1="100" x2="760" y2="100" stroke="#E3E2E0" stroke-width="1"/>
+
+  <!-- Three input role boxes (left) -->
+  <g transform="translate(40, 140)">
+    <rect x="0" y="0" width="200" height="76" rx="6" fill="#F0F7FF" stroke="#2383E2" stroke-width="1"/>
+    <text x="100" y="24" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">业务分析</text>
+    <text x="100" y="48" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#37352F" text-anchor="middle">数据分析师</text>
+    <text x="100" y="66" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">问数 / 归因 / 报告 / 看板</text>
+
+    <rect x="0" y="100" width="200" height="76" rx="6" fill="#FFF8E1" stroke="#FFB020" stroke-width="1"/>
+    <text x="100" y="124" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">数据治理</text>
+    <text x="100" y="148" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#37352F" text-anchor="middle">数据治理员</text>
+    <text x="100" y="166" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">编目 / 语义 / 质量 / 血缘</text>
+
+    <rect x="0" y="200" width="200" height="76" rx="6" fill="#E8F5F1" stroke="#4DB6AC" stroke-width="1"/>
+    <text x="100" y="224" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774" text-anchor="middle">数据工程</text>
+    <text x="100" y="248" font-family="PingFang SC, Inter, sans-serif" font-size="15" font-weight="700" fill="#37352F" text-anchor="middle">数仓工程师</text>
+    <text x="100" y="266" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774" text-anchor="middle">接入 / 分层 / ETL / 调度</text>
+  </g>
+
+  <!-- Arrows -->
+  <g stroke="#787774" stroke-width="1.5" fill="none">
+    <path d="M 245 178 L 310 240" marker-end="url(#arr)"/>
+    <path d="M 245 240 L 310 246" marker-end="url(#arr)"/>
+    <path d="M 245 308 L 310 252" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- Center chat box -->
+  <g transform="translate(320, 200)">
+    <rect x="0" y="0" width="200" height="100" rx="12" fill="#37352F"/>
+    <text x="100" y="34" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#FFFFFF" opacity="0.65" text-anchor="middle">同一对话框</text>
+    <text x="100" y="64" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="700" fill="#FFFFFF" text-anchor="middle">DataBuddy</text>
+    <text x="100" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFFFFF" opacity="0.6" text-anchor="middle">用户提目标，平台拆任务</text>
+  </g>
+
+  <!-- Arrow right -->
+  <g transform="translate(530, 250)">
+    <line x1="0" y1="0" x2="32" y2="0" stroke="#2383E2" stroke-width="2"/>
+    <path d="M 26 -6 L 34 0 L 26 6 Z" fill="#2383E2"/>
+  </g>
+
+  <!-- Right: 一栈两端 -->
+  <g transform="translate(570, 140)">
+    <rect x="0" y="0" width="190" height="220" rx="8" fill="#F0F7FF" stroke="#2383E2" stroke-width="1.5"/>
+    <text x="95" y="28" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-weight="700" fill="#2383E2" text-anchor="middle">一栈两端</text>
+
+    <line x1="20" y1="44" x2="170" y2="44" stroke="#E3E2E0"/>
+
+    <text x="20" y="68" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="600" fill="#37352F">前端  (业务)</text>
+    <text x="20" y="86" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">在一个对话框里</text>
+    <text x="20" y="102" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">做完所有事</text>
+
+    <text x="20" y="138" font-family="PingFang SC, Inter, sans-serif" font-size="11" font-weight="600" fill="#37352F">后端  (核心工程)</text>
+    <text x="20" y="156" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">维护语义层</text>
+    <text x="20" y="172" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">维护 Agent 配置</text>
+    <text x="20" y="188" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">维护 Guardrail 规则</text>
+  </g>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#787774"/>
+    </marker>
+  </defs>
+
+  <!-- Bottom -->
+  <rect x="40" y="450" width="720" height="36" rx="6" fill="#FFF8E1"/>
+  <text x="400" y="473" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="600" fill="#37352F" text-anchor="middle">CDO 该重新算编制：扩"维护元数据/语义层/Agent 配置"的人，收"重复跑 SQL / 拉看板"的人</text>
+</svg>

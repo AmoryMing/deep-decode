@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="800" height="480">
+  <rect width="800" height="480" fill="#FFFFFF"/>
+
+  <text x="40" y="40" font-family="PingFang SC, Inter, sans-serif" font-size="20" font-weight="bold" fill="#37352F">用户层看到的：限流不是策略，是机房不够</text>
+  <text x="40" y="62" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">2026-05-06 当天生效的三项调整 · 同时也是 Anthropic 的一次"承认"</text>
+
+  <!-- Three changes -->
+  <g transform="translate(40, 100)">
+    <!-- Change 1: Claude Code -->
+    <rect x="0" y="0" width="720" height="100" rx="8" fill="#F7F7F5"/>
+    <rect x="0" y="0" width="6" height="100" fill="#2383E2"/>
+    <text x="24" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">1. Claude Code 5 小时滚动窗口</text>
+    <text x="24" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">变化：所有 Pro / Max / Team / Enterprise 席位</text>
+    <text x="500" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="36" font-weight="bold" fill="#2383E2">×2</text>
+    <text x="500" y="84" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">配额翻倍</text>
+    <text x="640" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">早上 9 点</text>
+    <text x="640" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">不再被踢</text>
+  </g>
+
+  <g transform="translate(40, 220)">
+    <!-- Change 2: Peak hours -->
+    <rect x="0" y="0" width="720" height="100" rx="8" fill="#F7F7F5"/>
+    <rect x="0" y="0" width="6" height="100" fill="#2383E2"/>
+    <text x="24" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">2. 高峰期降速</text>
+    <text x="24" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">变化：Pro / Max 在工作日下午不再被限速</text>
+    <text x="500" y="65" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="bold" fill="#2383E2">取消</text>
+    <text x="500" y="84" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">不再有"降速时段"</text>
+    <text x="640" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">下午 3 点</text>
+    <text x="640" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">不再卡顿</text>
+  </g>
+
+  <g transform="translate(40, 340)">
+    <!-- Change 3: Opus API -->
+    <rect x="0" y="0" width="720" height="100" rx="8" fill="#F7F7F5"/>
+    <rect x="0" y="0" width="6" height="100" fill="#2383E2"/>
+    <text x="24" y="32" font-family="PingFang SC, Inter, sans-serif" font-size="14" font-weight="bold" fill="#37352F">3. Opus API 速率上限</text>
+    <text x="24" y="58" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Tier 1 输入：30k → 500k tokens / 分钟</text>
+    <text x="500" y="65" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="bold" fill="#2383E2">×16</text>
+    <text x="500" y="84" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">输入扩 16×，输出扩 10×</text>
+    <text x="640" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">企业接入</text>
+    <text x="640" y="80" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F">门槛大降</text>
+  </g>
+
+  <text x="40" y="468" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#787774">承认这件事的代价：token-based 计费假设崩了。下一步预期：所有大客户开始按 GPU 小时买。</text>
+</svg>

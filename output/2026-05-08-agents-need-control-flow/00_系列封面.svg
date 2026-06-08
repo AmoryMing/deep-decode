@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Series label -->
+  <rect x="20" y="15" width="120" height="26" rx="4" fill="#EB5757" opacity="0.9"/>
+  <text x="80" y="33" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF">AI 前沿拆解</text>
+
+  <!-- Title -->
+  <text x="400" y="120" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF">当你开始写 "MANDATORY"</text>
+  <text x="400" y="160" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF">agent 就已经塌了</text>
+
+  <!-- Decorative prompt vs code split -->
+  <g transform="translate(400, 245)">
+    <!-- Left: failed prompt -->
+    <g transform="translate(-200, 0)">
+      <rect x="-90" y="-40" width="180" height="80" rx="10" fill="#EB5757" opacity="0.12" stroke="#EB5757" stroke-width="1.5" stroke-dasharray="6,4"/>
+      <text x="0" y="-12" text-anchor="middle" font-family="Menlo, monospace" font-size="13" fill="#EB5757">MANDATORY:</text>
+      <text x="0" y="6" text-anchor="middle" font-family="Menlo, monospace" font-size="13" fill="#EB5757">DO NOT SKIP</text>
+      <text x="0" y="24" text-anchor="middle" font-family="Menlo, monospace" font-size="13" fill="#EB5757">IMPORTANT!!!</text>
+      <text x="0" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#EB5757">prompt 散文</text>
+    </g>
+
+    <!-- Arrow -->
+    <text x="0" y="6" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="20" fill="#787774">→</text>
+
+    <!-- Right: deterministic code -->
+    <g transform="translate(200, 0)">
+      <rect x="-90" y="-40" width="180" height="80" rx="10" fill="#2383E2" opacity="0.18" stroke="#2383E2" stroke-width="1.5"/>
+      <text x="0" y="-12" text-anchor="middle" font-family="Menlo, monospace" font-size="13" fill="#5BA8F0">if not validate(x):</text>
+      <text x="0" y="6" text-anchor="middle" font-family="Menlo, monospace" font-size="13" fill="#5BA8F0">  raise Error()</text>
+      <text x="0" y="24" text-anchor="middle" font-family="Menlo, monospace" font-size="13" fill="#5BA8F0">return next_step(x)</text>
+      <text x="0" y="62" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#5BA8F0">control flow 代码</text>
+    </g>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="400" y="370" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="15" fill="#FFFFFF" opacity="0.75">Brian @ Bear Blog · HN 热帖 153 条评论 · 2026-05-08 拆解</text>
+
+  <!-- Tags -->
+  <g transform="translate(400, 410)">
+    <rect x="-200" y="-12" width="90" height="24" rx="12" fill="#2383E2" opacity="0.18"/>
+    <text x="-155" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#5BA8F0">control flow</text>
+    <rect x="-95" y="-12" width="80" height="24" rx="12" fill="#4DB6AC" opacity="0.18"/>
+    <text x="-55" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#4DB6AC">harness</text>
+    <rect x="0" y="-12" width="90" height="24" rx="12" fill="#FFB020" opacity="0.18"/>
+    <text x="45" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#FFB020">prompt 工程</text>
+    <rect x="105" y="-12" width="90" height="24" rx="12" fill="#9B51E0" opacity="0.18"/>
+    <text x="150" y="4" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="11" fill="#9B51E0">软件工程</text>
+  </g>
+</svg>

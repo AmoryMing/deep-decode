@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <rect width="800" height="520" fill="#FFFFFF"/>
+
+  <text x="400" y="44" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="22" font-weight="700" fill="#37352F">选择题选手 vs 解答题选手</text>
+  <text x="400" y="70" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#787774">AI 时代最贵的一件事，是放弃 "标准答案思维"</text>
+
+  <!-- 左：选择题选手 -->
+  <g>
+    <rect x="40" y="100" width="340" height="340" rx="10" fill="#FDF2F0" stroke="#EB5757" stroke-dasharray="4 3"/>
+    <rect x="40" y="100" width="340" height="44" rx="10" fill="#EB5757"/>
+    <text x="210" y="130" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">选择题选手</text>
+
+    <text x="60" y="172" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">心态</text>
+    <text x="60" y="193" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">执着于找标准答案，默认题目有"对的那一个"</text>
+
+    <text x="60" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">典型问题</text>
+    <text x="60" y="246" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">Claude 和 GPT 哪个好？</text>
+    <text x="60" y="266" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">LangChain 还是 CrewAI？</text>
+    <text x="60" y="286" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">微调和 RAG 哪个对？</text>
+
+    <text x="60" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">行为</text>
+    <text x="60" y="339" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">先研究所有工具</text>
+    <text x="60" y="359" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">再问自己要解决什么</text>
+
+    <rect x="55" y="380" width="310" height="46" rx="6" fill="#FFFFFF" stroke="#EB5757"/>
+    <text x="210" y="402" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" font-weight="600">结果：等他想清楚问题</text>
+    <text x="210" y="420" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#EB5757" font-weight="600">时代已经换了两代</text>
+  </g>
+
+  <!-- 中间 vs 标识 -->
+  <circle cx="400" cy="260" r="28" fill="#FFB020"/>
+  <text x="400" y="267" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">vs</text>
+
+  <!-- 右：解答题选手 -->
+  <g>
+    <rect x="420" y="100" width="340" height="340" rx="10" fill="#F0F7F5" stroke="#4DB6AC"/>
+    <rect x="420" y="100" width="340" height="44" rx="10" fill="#4DB6AC"/>
+    <text x="590" y="130" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="16" font-weight="700" fill="#FFFFFF">解答题选手</text>
+
+    <text x="440" y="172" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">心态</text>
+    <text x="440" y="193" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">承认没有标准答案，自己切、自己试、自己迭代</text>
+
+    <text x="440" y="225" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">典型问题</text>
+    <text x="440" y="246" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">我要解决哪个业务问题？</text>
+    <text x="440" y="266" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">用哪个最小组合能跑通？</text>
+    <text x="440" y="286" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">哪个环节真实反馈最强？</text>
+
+    <text x="440" y="318" font-family="PingFang SC, Inter, sans-serif" font-size="13" fill="#37352F" font-weight="600">行为</text>
+    <text x="440" y="339" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">先把业务问题描述清楚</text>
+    <text x="440" y="359" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#787774">再拿工具拼一个满足解</text>
+
+    <rect x="435" y="380" width="310" height="46" rx="6" fill="#FFFFFF" stroke="#4DB6AC"/>
+    <text x="590" y="402" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" font-weight="600">结果：Burbn → Instagram</text>
+    <text x="590" y="420" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="12" fill="#4DB6AC" font-weight="600">砍掉 90% 功能留下真实需要的</text>
+  </g>
+
+  <!-- 底部金句 -->
+  <rect x="40" y="460" width="720" height="36" fill="#F7F7F5" rx="6"/>
+  <text x="400" y="483" text-anchor="middle" font-family="PingFang SC, Inter, sans-serif" font-size="13" font-style="italic" fill="#37352F">人是"有限理性"的。与其追完美解，不如交付一个能 work 的 80 分。—— 赫伯特·西蒙</text>
+</svg>

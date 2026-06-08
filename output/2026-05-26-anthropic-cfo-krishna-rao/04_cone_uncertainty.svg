@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="1600" height="1000">
+  <rect width="1600" height="1000" fill="#F7F1E8"/>
+
+  <!-- title -->
+  <text x="800" y="100" font-family="Cormorant Garamond, Songti SC, serif" font-size="48" font-weight="700" fill="#2A241B" text-anchor="middle">不确定性锥：放弃单点预测</text>
+  <text x="800" y="148" font-family="Cormorant Garamond, Songti SC, serif" font-size="22" font-style="italic" fill="#5C5345" text-anchor="middle">指数级业务的财务规划不画曲线，画情景区间。</text>
+  <line x1="700" y1="180" x2="900" y2="180" stroke="#B85A3A" stroke-width="2"/>
+
+  <!-- chart area -->
+  <g transform="translate(160, 240)">
+    <!-- axes -->
+    <line x1="0" y1="600" x2="1280" y2="600" stroke="#2A241B" stroke-width="2"/>
+    <line x1="0" y1="600" x2="0" y2="0" stroke="#2A241B" stroke-width="2"/>
+
+    <!-- y axis label -->
+    <text x="-60" y="10" font-family="SF Mono, Menlo, monospace" font-size="14" fill="#5C5345" letter-spacing="2">REVENUE / SCALE</text>
+    <!-- x axis label -->
+    <text x="1280" y="640" font-family="SF Mono, Menlo, monospace" font-size="14" fill="#5C5345" letter-spacing="2" text-anchor="end">→ TIME (YEARS)</text>
+
+    <!-- baseline label "now" -->
+    <text x="0" y="630" font-family="SF Mono, Menlo, monospace" font-size="14" fill="#5C5345" letter-spacing="2">2026</text>
+    <text x="640" y="630" font-family="SF Mono, Menlo, monospace" font-size="14" fill="#5C5345" letter-spacing="2" text-anchor="middle">+2y</text>
+    <text x="1280" y="630" font-family="SF Mono, Menlo, monospace" font-size="14" fill="#5C5345" letter-spacing="2" text-anchor="end">+4y</text>
+
+    <!-- traditional linear forecast (single curve) — dashed grey for contrast -->
+    <path d="M 0 500 Q 320 380 640 280 T 1280 100"
+          stroke="#8A8472" stroke-width="2.5" stroke-dasharray="8 6" fill="none"/>
+    <circle cx="0" cy="500" r="6" fill="#8A8472"/>
+    <text x="1280" y="95" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#8A8472" text-anchor="end">传统线性预测（单点）</text>
+
+    <!-- cone of uncertainty: shaded area -->
+    <path d="M 0 500
+             L 1280 30
+             L 1280 380
+             L 0 500 Z"
+          fill="#B85A3A" opacity="0.18"/>
+
+    <!-- top-end scenario -->
+    <path d="M 0 500 Q 320 320 640 180 T 1280 30"
+          stroke="#B85A3A" stroke-width="3.5" fill="none"/>
+    <text x="1280" y="22" font-family="Cormorant Garamond, serif" font-size="22" fill="#B85A3A" text-anchor="end" font-weight="700">top-end · 决策瞄准</text>
+
+    <!-- baseline scenario -->
+    <path d="M 0 500 Q 320 430 640 320 T 1280 200"
+          stroke="#2A241B" stroke-width="3" fill="none"/>
+    <text x="1280" y="190" font-family="Cormorant Garamond, serif" font-size="22" fill="#2A241B" text-anchor="end" font-weight="700">中性情景</text>
+
+    <!-- worst-case scenario (compute discipline holds the floor) -->
+    <path d="M 0 500 Q 320 490 640 460 T 1280 380"
+          stroke="#5C5345" stroke-width="3" fill="none"/>
+    <text x="1280" y="375" font-family="Cormorant Garamond, serif" font-size="22" fill="#5C5345" text-anchor="end" font-weight="700">下行 · 算力纪律托底</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(160, 880)">
+    <text x="0" y="0" font-family="Cormorant Garamond, serif" font-size="22" font-style="italic" fill="#2A241B">决策瞄准 top-end · 不可让渡基线卡下行 · 单一曲线不存在</text>
+    <text x="1320" y="0" font-family="SF Mono, Menlo, monospace" font-size="16" fill="#8A8472" letter-spacing="3" text-anchor="end">FIG. 04 · CONE OF UNCERTAINTY</text>
+  </g>
+</svg>

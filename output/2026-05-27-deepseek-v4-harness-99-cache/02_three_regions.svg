@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="PingFang SC, Inter, sans-serif">
+  <rect width="800" height="520" fill="#F7F1E8"/>
+  <text x="400" y="50" font-size="22" font-weight="700" fill="#2A241B" text-anchor="middle">把上下文切成三个固定区域</text>
+  <text x="400" y="78" font-size="14" fill="#8A8472" text-anchor="middle">Reasonix 的 cache-first loop：old context stays fixed, new messages are only appended</text>
+
+  <!-- 前缀区 -->
+  <rect x="100" y="120" width="600" height="100" fill="#2A241B" rx="6"/>
+  <text x="120" y="148" font-size="16" font-weight="700" fill="#F7F1E8">前缀区 · session 期内永不变</text>
+  <text x="120" y="175" font-size="13" fill="#F7F1E8">系统提示 + 工具 schema + 项目 onboarding</text>
+  <text x="120" y="200" font-size="12" fill="#8A8472">焊死。任何修改都让整个前缀失效。</text>
+  <text x="680" y="175" font-size="13" fill="#F7F1E8" text-anchor="end">100% hit</text>
+
+  <!-- 中部区 -->
+  <rect x="100" y="240" width="600" height="100" fill="#B85A3A" rx="6"/>
+  <text x="120" y="268" font-size="16" font-weight="700" fill="#F7F1E8">中部区 · session 内不变 session 间重写</text>
+  <text x="120" y="295" font-size="13" fill="#F7F1E8">长期记忆：README、ARCHITECTURE、最近三次 commit</text>
+  <text x="120" y="320" font-size="12" fill="#FBE6D8">一次写定 → session 结束才更新</text>
+  <text x="680" y="295" font-size="13" fill="#F7F1E8" text-anchor="end">≈100% hit</text>
+
+  <!-- 末尾区 -->
+  <rect x="100" y="360" width="600" height="120" fill="#F7F1E8" stroke="#2A241B" stroke-width="2" rx="6" stroke-dasharray="4 4"/>
+  <text x="120" y="388" font-size="16" font-weight="700" fill="#2A241B">末尾区 · 只追加 永不修改</text>
+  <text x="120" y="415" font-size="13" fill="#2A241B">用户输入 → AI 回复 → 工具调用 → 工具结果</text>
+  <text x="120" y="440" font-size="12" fill="#8A8472">要纠正？append。不改历史。</text>
+  <text x="120" y="465" font-size="12" fill="#8A8472">要清理？开新 session。不压缩。</text>
+  <text x="680" y="415" font-size="13" fill="#2A241B" text-anchor="end">本轮 miss</text>
+
+  <!-- arrows -->
+  <text x="50" y="170" font-size="14" fill="#8A8472" transform="rotate(-90 50 170)">焊死</text>
+</svg>
