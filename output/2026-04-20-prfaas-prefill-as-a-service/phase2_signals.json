@@ -1,0 +1,30 @@
+{
+  "signals": [
+    {
+      "source": "Mooncake (arXiv:2407.00079, OSDI 2025)",
+      "role": "前作/技术血统",
+      "evidence": "Mooncake 首次把 KVCache 作为一等系统资源处理，在 vLLM/SGLang/Dynamo 中被吸收。PrfaaS 把该思想推到跨 DC 场景。",
+      "原文引用": "At Moonshot AI, Mooncake helped push this shift into practice by treating KVCache as a first-class systems resource"
+    },
+    {
+      "source": "Kimi Linear / Ring-2.5-1T / MiniMax-M2.5 架构对比",
+      "role": "竞品/行业横向",
+      "evidence": "hybrid attention (Kimi Linear KDA:MLA 3:1, Ring Lightning:MLA 7:1) 相比 dense attention (MiniMax) 在 32K 上下文的 KV 吞吐需求有 13-23 倍差距。",
+      "数据": "Kimi Linear 3.87 Gbps vs MiniMax-M2.5 59.93 Gbps @ 32K tokens"
+    },
+    {
+      "source": "NVIDIA Rubin CPX + Groq LPU 硬件趋势",
+      "role": "硬件产业佐证",
+      "evidence": "硬件也在往相位专业化走，prefill 需要算力密度，decode 需要极端内存带宽。与 PrfaaS 的软件分离思想合拍。",
+      "原文引用": "NVIDIA Rubin CPX explicitly targets high-throughput long-context prefill, while architectures such as Groq's Language Processing Unit (LPU) emphasize the extreme memory bandwidth required for decode."
+    },
+    {
+      "source": "Moonshot 最近生态动态",
+      "role": "公司近况",
+      "evidence": "Kimi-k2.5 被 Cursor Composer 2 采用作为底层模型（2026-03-20 Simon Willison 报道），说明 Moonshot 的开源+系统工程组合拳在商业化上已打通。"
+    }
+  ],
+  "internal_vault_refs": [
+    "vault/1-knowledge/ai-frontier/intel-2026-04-17-quoting-kimi-ai-kimi-moonshot.md (Kimi-k2.5 + Cursor)"
+  ]
+}

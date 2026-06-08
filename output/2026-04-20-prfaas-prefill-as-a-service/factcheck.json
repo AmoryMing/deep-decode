@@ -1,0 +1,23 @@
+{
+  "checks": [
+    {"claim": "arxiv ID 2604.15039", "verified": true, "source": "WebFetch 返回一致"},
+    {"claim": "作者 Ruoyu Qin, Weiran He 等 Moonshot + 清华 Mingxing Zhang/Weimin Zheng/Yongwei Wu", "verified": true, "source": "arxiv abs 页"},
+    {"claim": "发布日期 2026-04-16", "verified": true, "source": "arxiv 元数据"},
+    {"claim": "Table 3 数据 MiniMax-M2.5 59.93 Gbps / Ring-2.5-1T 2.59 Gbps @ 32K", "verified": true, "source": "论文原文 Table 3"},
+    {"claim": "23 倍差距 = 59.93/2.59", "verified": true, "note": "实际 23.14，文章表述 23×"},
+    {"claim": "阈值 t=19.4K, 约 50% 请求卸载", "verified": true, "source": "Figure 5 寻优结果"},
+    {"claim": "54% 吞吐 / 32% naive heterogeneous 提升", "verified": true, "source": "Table 6 + WebFetch"},
+    {"claim": "TTFT mean 2.22s vs 4.44s, P90 3.51s vs 9.73s", "verified": true, "source": "Table 6"},
+    {"claim": "Rubin CPX + Groq LPU 原文引用", "verified": true, "source": "§5 Discussion"},
+    {"claim": "Mooncake 获 OSDI'25 Best Paper", "verified": false, "action": "FIX — 无法确认 Best Paper 身份，改为中性表述: 'Mooncake 论文被 vLLM/SGLang/Dynamo 吸收为标准做法'"},
+    {"claim": "Kimi-k2.5 被 Cursor Composer 2 采用", "verified": true, "source": "vault/1-knowledge/ai-frontier/intel-2026-04-17 from Simon Willison 2026-03-20"},
+    {"claim": "'别人难以复制的护城河'", "verified": false, "action": "FIX — 主观表述改为更客观的推断: '组合在商业侧已开始被验证'"},
+    {"claim": "'naive 异构'", "verified": true, "action": "CLARIFY — 在表格说明处补解释: 指不做选择性卸载、所有请求都往 PrfaaS 丢的朴素异构方案"}
+  ],
+  "subjective_language_review": [
+    {"phrase": "撕开物理边界", "status": "accepted", "reason": "隐喻表达，有数据支持（跨 DC 从不可行到可行）"},
+    {"phrase": "原创框架：相位地理解耦", "status": "accepted", "reason": "已标注为'论文本身没给这个名字'的作者造词"},
+    {"phrase": "系统工程在全球持续领先", "status": "softened", "action": "改为：'Mooncake 是 PD 分离的标杆实现' + 具体事例，不做整体判断"}
+  ],
+  "summary": "3 个需要修正项：Mooncake OSDI Best Paper（无证据）/ 护城河表述（主观）/ naive 异构（需补解释）。其他事实项全部有原文/表格支撑。"
+}

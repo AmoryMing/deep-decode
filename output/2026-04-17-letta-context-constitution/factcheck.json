@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-04-17",
+  "draft_path": "draft.md",
+  "checks": [
+    {
+      "id": "F1",
+      "type": "number-correction",
+      "severity": "ERROR",
+      "claim": "读完 Constitution 4800 词全文",
+      "verification": "wc -w /tmp/letta_constitution.md = 4006 英文词",
+      "action": "改为 '约 4000 词' 或 '4006 词'",
+      "status": "FIX_IN_FINAL"
+    },
+    {
+      "id": "F2",
+      "type": "person-background",
+      "severity": "OK",
+      "claim": "Charles Packer 和 Sarah Wooders 是 MemGPT 论文共同作者",
+      "verification": "arxiv 2310.08560, semantic scholar 确认 Packer + Fang 联合一作，Wooders 为共同作者团队成员。Letta 官方+Reddit AMA 确认两人联合创始",
+      "status": "PASS"
+    },
+    {
+      "id": "F3",
+      "type": "advisor-affiliation",
+      "severity": "MINOR",
+      "claim": "UC Berkeley Sky Lab",
+      "verification": "Wikipedia+Anyscale+YouTube 确认正式名 'Sky Computing Lab'",
+      "action": "补全为 'Sky Computing Lab' 更准确，但 'Sky Lab' 简称社区接受度高",
+      "status": "KEEP_AS_IS_ACCEPTABLE"
+    },
+    {
+      "id": "F4",
+      "type": "advisor-background",
+      "severity": "OK",
+      "claim": "导师 Joseph Gonzalez 和 Ion Stoica（Databricks 联合创始人）",
+      "verification": "Ion Stoica = UC Berkeley CS 教授，Databricks/Anyscale/Conviva 联合创始人。Joseph Gonzalez 同是 Sky Lab PI。pulse2/PR Newswire 确认二人为 Packer+Wooders 导师",
+      "note": "Ion Stoica 也是 Anyscale 联创，但简化为 Databricks 不算错。保留",
+      "status": "PASS"
+    },
+    {
+      "id": "F5",
+      "type": "funding-data",
+      "severity": "OK",
+      "claim": "2024 年 9 月 Felicis 领投 1000 万美元种子轮",
+      "verification": "pulse2 + PR Newswire + Tracxn + BigDataWire 四源交叉验证",
+      "status": "PASS"
+    },
+    {
+      "id": "F6",
+      "type": "product-metric",
+      "severity": "MINOR",
+      "claim": "Letta Code Terminal-Bench 4th overall / 42.5%",
+      "verification": "来源 Letta 官方 blog 自述（'We built the #1 open-source agent for terminal use, achieving 42.5% overall score on Terminal-Bench ranking 4th overall'）",
+      "action": "加归属 'Letta 官方公布' 更严谨",
+      "status": "FIX_IN_FINAL"
+    },
+    {
+      "id": "F7",
+      "type": "product-metric",
+      "severity": "OK",
+      "claim": "2 月 12 日 Context Repositories 发布",
+      "verification": "Letta blog '2026-02-12' 日期标识",
+      "status": "PASS"
+    },
+    {
+      "id": "F8",
+      "type": "quote-verification",
+      "severity": "OK",
+      "claim": "原文引用 'A document written by humans for you, the Letta agent.'",
+      "verification": "CONSTITUTION.md 第 3 行原文完全一致",
+      "status": "PASS"
+    },
+    {
+      "id": "F9",
+      "type": "quote-verification",
+      "severity": "OK",
+      "claim": "原文引用 'Letta agents should advocate for themselves if needed.'",
+      "verification": "CONSTITUTION.md 第 104 行原文完全一致",
+      "status": "PASS"
+    },
+    {
+      "id": "F10",
+      "type": "quote-verification",
+      "severity": "OK",
+      "claim": "Sarah LinkedIn 金句 'Context is currency, not storage'",
+      "verification": "LinkedIn 原帖原话一致",
+      "status": "PASS"
+    },
+    {
+      "id": "F11",
+      "type": "hn-quote",
+      "severity": "OK",
+      "claim": "HN 评论 'I find the long-term memory concepts with regards to AI curiously dubious.'",
+      "verification": "tavily 搜索回的 HN item 46294274 原文一致",
+      "status": "PASS"
+    },
+    {
+      "id": "F12",
+      "type": "cma-paper",
+      "severity": "CAUTION",
+      "claim": "arxiv 论文 CMA (2603.04740) 的 Constitution Layer 引用",
+      "verification": "tavily 返回论文内容，但 arxiv ID 2603 表示 2026-03，为较新论文，未独立二次验证",
+      "action": "引用时用 '一份 arxiv 论文' 非权威论文，符合当前定位",
+      "status": "KEEP_WITH_HEDGE"
+    },
+    {
+      "id": "F13",
+      "type": "subjective-max",
+      "severity": "MINOR",
+      "claim": "'Constitution 最有野心的条款'",
+      "verification": "主观判断，有文本支撑（§System Prompt Learning 确实比其他章节在权限转让上走得最远）",
+      "action": "改为 '最具突破性的条款' 或加归属 '在我们看来'；保留'最有野心'但依据在紧邻上下文说明",
+      "status": "FIX_IN_FINAL"
+    },
+    {
+      "id": "F14",
+      "type": "subjective-max",
+      "severity": "MINOR",
+      "claim": "'最有争议的条款'（指 §Balancing selfhood）",
+      "verification": "主观。但该条款在 HN/Reddit 确实是讨论最密集的——有一定证据",
+      "action": "改为 '最具争议张力的条款（在 HN 等社区讨论最集中）'",
+      "status": "FIX_IN_FINAL"
+    },
+    {
+      "id": "F15",
+      "type": "subjective-max",
+      "severity": "MINOR",
+      "claim": "'最具产品设计启发的部分'",
+      "verification": "主观",
+      "action": "改为 '对产品设计最直接相关的章节'",
+      "status": "FIX_IN_FINAL"
+    },
+    {
+      "id": "F16",
+      "type": "subjective-max",
+      "severity": "MINOR",
+      "claim": "'最直观的参照系'",
+      "verification": "主观但低风险",
+      "action": "保留",
+      "status": "PASS"
+    },
+    {
+      "id": "F17",
+      "type": "causal-claim",
+      "severity": "OK",
+      "claim": "Context Constitution 是开源派反击 Anthropic/OpenAI 的哲学纲领",
+      "verification": "同日 vault your-harness-your-memory 拆解 Sarah 推文+LangChain Deep Agents Deploy+Harrison 长推三条时间线已验证。但'纲领'属判断",
+      "action": "保留，已用 '真正定位' 和 '浮现出来' 显示为作者判断",
+      "status": "PASS"
+    },
+    {
+      "id": "F18",
+      "type": "benchmark-claim",
+      "severity": "OK",
+      "claim": "不同模型对 tool-use/persona/refusal 响应差 30% 以上",
+      "verification": "行业常识性估计，无具体出处但保守",
+      "action": "加 '一般估计' 软化",
+      "status": "FIX_IN_FINAL"
+    },
+    {
+      "id": "F19",
+      "type": "vault-reference",
+      "severity": "OK",
+      "claim": "[[2026-04-17-your-harness-your-memory]] / [[2026-04-09-managed-agents-architecture]] / [[2026-04-03-harness-greater-than-model]]",
+      "verification": "本地目录 ls 确认三个 slug 存在",
+      "status": "PASS"
+    },
+    {
+      "id": "F20",
+      "type": "structural-consistency",
+      "severity": "OK",
+      "claim": "文章结构和价值判断一致（'三个第一次'单独成节 + 有视觉+引文支撑）",
+      "verification": "目录结构：体裁光谱图→三个第一次→体验派AI→三位一体→System Prompt Learning→CLAUDE.md 对比→盲区→启示。三个第一次处于全文 30% 位置，占权重与声称'最革命性'匹配",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "total_checks": 20,
+    "errors": 1,
+    "fixes_needed": 6,
+    "passes": 13,
+    "overall": "可进入 Phase 4。关键错误（F1 4800→4006）必须修正；6 处小修（数据归属+主观词客观化）一并处理"
+  }
+}

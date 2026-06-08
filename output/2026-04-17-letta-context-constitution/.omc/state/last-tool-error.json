@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd \\\"/home/super/stuff_AI_force/stuff/muming/vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-17-letta-context-constitution\\\" && node material/create_doc.js 2>&1 |...",
+  "error": "Exit code 2\n    at Module.load (node:internal/modules/cjs/loader:1275:32)\n    at Module._load (node:internal/modules/cjs/loader:1096:12)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/home/super/stuff_AI_force/stuff/muming/vault/1-knowledge/project/content_creation企媒内容生产/pipelines/decode/2026-04-17-letta-context-constitution/material/create_doc.js'\n  ]\n}\n\nNode.js v20.19.0",
+  "timestamp": "2026-04-17T11:29:31.463Z",
+  "retry_count": 1
+}
