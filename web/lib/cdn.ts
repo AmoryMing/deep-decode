@@ -4,15 +4,15 @@
  * - 视频：GitHub raw（mp4 常超 jsDelivr 单文件 20MB 上限）
  * 路径段做 percent-encode 以兼容中文文件名（如 00_系列封面.png）。
  *
- * 注意：内容当前在 cleanup 分支（main 为空），故默认指向 @cleanup。
- * 合并到 main 后把下面两个默认值（及 Vercel 环境变量）改回 @main 即可。
+ * 内容推送在孤儿分支 deploy（cleanup 的历史含 600MB+ 大 commit，
+ * 经代理推不动；deploy 用分批小 commit 推送），故默认指向 @deploy。
  */
 const CDN_BASE =
   process.env.NEXT_PUBLIC_CDN_BASE ||
-  "https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@cleanup";
+  "https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy";
 const RAW_BASE =
   process.env.NEXT_PUBLIC_RAW_BASE ||
-  "https://raw.githubusercontent.com/AmoryMing/deep-decode/cleanup";
+  "https://raw.githubusercontent.com/AmoryMing/deep-decode/deploy";
 
 function enc(repoRelPath: string): string {
   return repoRelPath

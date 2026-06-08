@@ -11,39 +11,53 @@
 ## 架构要点
 
 - **Next.js 15（App Router）+ TypeScript + Tailwind v4**，全站 SSG。
-- **媒体零部署**：图片 ~2.4G、音视频 ~2.2G 不进部署包。数据层在 build 时只读 markdown 文本，把 `![](xx.png)` 重写成 **jsDelivr CDN**（图片/音频）/ **GitHub raw**（视频）地址，仓库已在 GitHub，零额外存储。
+- **媒体零部署**：图片 ~2.6G、音视频 ~0.5G 不进部署包。数据层 build 时只读 markdown 文本，把 `![](xx.png)` 重写成 **jsDelivr CDN**（图片/音频）/ **GitHub raw**（视频）地址，仓库已在 GitHub，零额外存储。
 - **内容数据在仓库根**：`web/` 是子目录，`lib/` 用 `fs` 读上一级的 `output/` `schedule/`。`next.config.ts` 已把 `outputFileTracingRoot` 指向仓库根。
 - **后台认证**：HMAC 签名 cookie（`lib/auth.ts`），`middleware.ts` 保护 `/admin`。默认 `muming` / `muming`。
+
+## 分支说明（重要）
+
+内容与媒体推送在**孤儿分支 `deploy`**，不是 `cleanup`/`main`。原因：`cleanup` 历史含 600MB+ 的大 commit，经国内代理推送会触发 GitHub HTTP 408 超时；`deploy` 用一连串小 commit 分批推送，可穿过波动的代理。
+
+- Vercel 的 **Production Branch 必须设为 `deploy`**。
+- CDN 默认指向 `@deploy`（见 `lib/cdn.ts`）。
+- 内容更新后，把改动同步到 `deploy` 分支再分批推（脚本见下）。
 
 ## 本地开发
 
 ```bash
 cd web
 npm install
-cp .env.example .env.local   # 可改后台密码 / 锁定 CDN 分支
+cp .env.example .env.local
 npm run dev                  # http://localhost:3000
 ```
 
 ## 部署到 Vercel
 
-1. 把整个仓库（含 `web/`）push 到 GitHub `AmoryMing/deep-decode`。
+1. 仓库已在 GitHub `AmoryMing/deep-decode`，内容在 `deploy` 分支。
 2. Vercel → New Project → 选该仓库。
-3. **Root Directory** 设为 `web`，并开启 **Include source files outside of the Root Directory in the Build Step**（让 build 能读 `../output`）。
-4. Framework 自动识别为 Next.js，保持默认 build 命令。
-5. **Environment Variables**：
+3. **Root Directory** 设为 `web`，开启 **Include source files outside of the Root Directory in the Build Step**。
+4. **Production Branch** 设为 `deploy`（Settings → Git）。
+5. Framework 自动识别 Next.js，保持默认。
+6. **Environment Variables**：
 
    | 变量 | 值 |
    |---|---|
    | `ADMIN_USER` | `muming` |
    | `ADMIN_PASS` | `muming`（建议改强）|
    | `AUTH_SECRET` | 一段随机长字符串 |
-   | `NEXT_PUBLIC_CDN_BASE` | `https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@main` |
-   | `NEXT_PUBLIC_RAW_BASE` | `https://raw.githubusercontent.com/AmoryMing/deep-decode/main` |
+   | `NEXT_PUBLIC_CDN_BASE` | `https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy` |
+   | `NEXT_PUBLIC_RAW_BASE` | `https://raw.githubusercontent.com/AmoryMing/deep-decode/deploy` |
 
-6. Deploy。
+7. Deploy。
 
-> CDN 取的是 GitHub `@main` 分支的内容。新内容须先 push 到 main，jsDelivr 才能拉到（首次访问会触发缓存，约数秒）。要预览未合并分支，把 `@main` 换成 `@<分支名>` 或 `@<commit-sha>`。
+> 媒体走 jsDelivr `@deploy`，新文件 push 后首次访问触发缓存（约数秒）。媒体仍在分批推送时，已推的图片可见，未推的暂时 404，推完即补齐。
 
 ## 更新内容
 
-内容更新（新拆解、改排期）后 `git push`，Vercel 自动重新构建即可刷新站点与后台数据。
+```bash
+# 把当前内容同步到 deploy 分支并分批推送
+git checkout deploy
+git checkout cleanup -- output schedule wiki skillgraph.yaml index.md web
+# 然后分批 git add output/<目录> + commit + push（小批，穿过代理）
+```
