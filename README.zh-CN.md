@@ -12,12 +12,13 @@
 ![Decoded pieces](https://img.shields.io/badge/已产出-155%2B%20篇-blue?style=for-the-badge)
 ![Built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-da7756?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/web-Next.js%2015-black?style=for-the-badge&logo=next.js)
+![License](https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge)
 
 [English](README.md) · **简体中文**
 
 <br/>
 
-<img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-29-skill-graphs-2/00_cover.png" width="780" alt="Deep-Decode 内容工厂" />
+<a href="output/2026-06-03-dynamic-workflows-harness/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-03-dynamic-workflows-harness/assets/gpt-img/03_six_patterns.png" width="820" alt="Deep-Decode — 配图全部由 GPT-Image（img2）后端生成" /></a>
 
 </div>
 
@@ -45,27 +46,22 @@
 
 ## 产品速览
 
-直接来自流水线的真实产物（点图看成品）。
+下面每一张图都由 **GPT-Image（`img2`）后端**生成——中文渲染准确、配色统一、版式杂志级。全是近期真实成品（2026 年 6 月），直接来自流水线。点图看拆解。
 
 <table>
 <tr>
-<td width="33%"><a href="output/2026-04-29-skill-graphs-2/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-29-skill-graphs-2/00_cover.png" alt="封面"/></a><br/><b>系列封面</b><br/><i>每篇都有一张为社交流设计的封面。</i></td>
-<td width="33%"><a href="output/2026-04-17-letta-context-constitution/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-17-letta-context-constitution/00_cover.png" alt="封面"/></a><br/><b>概念封面</b><br/><i>一个钩子，一个关键词，一个承诺。</i></td>
-<td width="33%"><a href="output/2026-04-27-anthropic-product-launchroom/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-27-anthropic-product-launchroom/00_cover.png" alt="封面"/></a><br/><b>选题封面</b><br/><i>从单一 URL 拆解而来。</i></td>
+<td width="33%"><a href="output/2026-06-03-dynamic-workflows-harness/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-03-dynamic-workflows-harness/assets/gpt-img/00_cover.png" alt="裁判和球员不能是同一个人"/></a><br/><b>「裁判和球员不能是同一个人」</b><br/><i>为什么 agent 需要一副马具，而不是更乖的模型。</i></td>
+<td width="33%"><a href="output/2026-06-03-ai-native-engineering-org/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-03-ai-native-engineering-org/assets/gpt-img/00_cover.png" alt="瓶颈搬家了"/></a><br/><b>「瓶颈搬家了」</b><br/><i>当写代码免费，约束落在哪条线。</i></td>
+<td width="33%"><a href="output/2026-06-05-ideogram-v4/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-05-ideogram-v4/assets/gpt-img/00_cover.png" alt="Ideogram v4.0"/></a><br/><b>Ideogram v4.0</b><br/><i>文生图学会「把字写对」和听结构化指令。</i></td>
 </tr>
 <tr>
-<td><a href="output/2026-04-29-skill-graphs-2/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-29-skill-graphs-2/02_three_layers.png" alt="架构图"/></a><br/><b>架构信息图</b><br/><i>把复杂逻辑压进一张图。</i></td>
-<td><a href="output/2026-04-17-letta-context-constitution/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-17-letta-context-constitution/02_three_piece_timeline.png" alt="时间线"/></a><br/><b>时间线信息图</b><br/><i>叙事用画的，不用 bullet 堆。</i></td>
-<td><a href="output/2026-04-27-anthropic-product-launchroom/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-04-27-anthropic-product-launchroom/03_eval_loop.png" alt="流程图"/></a><br/><b>流程信息图</b><br/><i>SVG 代码绘制，再 2× 转 PNG。</i></td>
+<td><a href="output/2026-06-05-feifei-world-models/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-05-feifei-world-models/assets/gpt-img/00_cover.png" alt="李飞飞 世界模型"/></a><br/><b>李飞飞 · 世界模型</b><br/><i>一套概念分类学，画成一张环形图。</i></td>
+<td><a href="output/2026-06-03-anthropic-partner-hub/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-03-anthropic-partner-hub/assets/gpt-img/00_cover.png" alt="Anthropic Partner Hub"/></a><br/><b>Anthropic Partner Hub</b><br/><i>分级阶梯 + 核心数字。</i></td>
+<td><a href="output/2026-06-04-zhipu-star-market-ipo/article.md"><img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-06-04-zhipu-star-market-ipo/assets/gpt-img/00_cover.png" alt="智谱 Z.AI vs Anthropic IPO"/></a><br/><b>智谱 Z.AI ⟷ Anthropic</b><br/><i>双栏对照，两条 IPO 路径。</i></td>
 </tr>
 </table>
 
-除信息图外，每次深拆还可产出一套 **GPT-Image** 配图、**播客**（`podcast.mp3`）、**视频**（`video.mp4`）、**图文 Word 文档**（`.docx`）、**小红书卡片**——全部由同一个 `output/<slug>/` 契约寻址。
-
-<div align="center">
-<img src="https://cdn.jsdelivr.net/gh/AmoryMing/deep-decode@deploy/output/2026-05-08-codex-pets-state-personification/00_gpt_image_hero.png" width="600" alt="GPT-Image 后端示例"/>
-<br/><i>GPT-Image 后端——每个项目可通过 <code>image_backend: gpt-image</code> 切换。</i>
-</div>
+每次深拆都产出一整套 **`img2` 配图**（封面 + 每章节配图，就像上面的[主视觉网格](output/2026-06-03-dynamic-workflows-harness/article.md)），外加**播客**（`podcast.mp3`）、**视频**（`video.mp4`）、**图文 Word 文档**（`.docx`）、**杂志风小红书卡片**——全部由同一个 `output/<slug>/` 契约寻址。后端可通过 `image_backend: gpt-image` 按项目切换。
 
 ## 它怎么跑——技能图谱
 
@@ -106,12 +102,13 @@ python3 ../../tools/pipeline.py gate m.article   # 校验产物契约
 
 | 篇目 | 拆解来源 |
 |---|---|
-| [Skill Graph 1.0 必塌：人为什么不该在原子层驾驶 Agent](output/2026-04-29-skill-graphs-2/article.md) | 一条推文长 thread |
+| [裁判和球员不能是同一个人：为什么 Claude 要给自己造一副马具](output/2026-06-03-dynamic-workflows-harness/article.md) | Claude Code 博客 |
+| [瓶颈搬家了：当写代码免费，工程组织该按哪条线重排](output/2026-06-03-ai-native-engineering-org/article.md) | 工程长文 |
+| [李飞飞给「世界模型」立规矩：它不是文生视频，是一套 POMDP 循环](output/2026-06-05-feifei-world-models/article.md) | 李飞飞 |
+| [Ideogram v4.0：当文生图开始「把字写对」和听结构化指令](output/2026-06-05-ideogram-v4/article.md) | 发布 + 评测 |
+| [智谱回 A 还要改名 Z.AI：中国大模型走出第二条资本路](output/2026-06-04-zhipu-star-market-ipo/article.md) | 招股 + 报道 |
 | [Karpathy 加入 Anthropic：明星个体迁徙作为路线信号](output/2026-05-20-karpathy-joins-anthropic/article.md) | TechCrunch |
 | [0.2 个百分点和 7 倍价差——DeepSeek V4 把范式之争压成一道数学题](output/2026-04-25-deepseek-v4-paradigm-shift/article.md) | 官方 + 第三方评测 |
-| [17 分 5 秒——菲尔兹奖得主把数学博士论文的下限交给了 GPT-5.5 Pro](output/2026-05-10-gowers-gpt-5-5-math-research/article.md) | 研究纪要 |
-| [给 AI 写一份宪法](output/2026-04-17-letta-context-constitution/article.md) | Letta 博客 |
-| [Claude Code 上瘾：反馈循环的老虎机效应](output/2026-04-15-claude-code-addiction/article.md) | 博客 |
 
 全部成品在 `output/`，或用下面的 web 工作台浏览。
 
@@ -167,7 +164,7 @@ Deep-Decode 跑在 [Claude Code](https://claude.com/claude-code) 上，是一套
 
 ## 许可
 
-暂无 license 文件——若想使用或改造这套流水线，开个 issue，我们谈。
+[Apache-2.0](LICENSE) © 2026 AmoryMing。流水线、技能与工具可自由使用和改造。`output/` 下的拆解文章与生成媒体是示例，请勿原样转载。
 
 ---
 
