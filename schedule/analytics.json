@@ -1,0 +1,22 @@
+{
+  "updatedAt": "2026-06-08",
+  "source": "小红书创作者后台快照 · 近7日(06-01~06-07)",
+  "platforms": [
+    {
+      "platform": "小红书",
+      "followers": 589,
+      "newFollowers": 73,
+      "reads": 115000,
+      "views": 22000,
+      "likes": 709,
+      "collects": 1021,
+      "comments": 36,
+      "shares": 392,
+      "posts": 77,
+      "updatedAt": "2026-06-08"
+    },
+    { "platform": "邮件", "posts": 77 },
+    { "platform": "公众号", "posts": 23 },
+    { "platform": "抖音", "posts": 2 }
+  ]
+}

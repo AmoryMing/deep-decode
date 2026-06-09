@@ -1,30 +1,27 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import { logout } from "../actions";
+import { AdminNav } from "@/components/AdminNav";
 
 export default function PanelLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-8">
-      <header className="mb-7 flex items-center justify-between border-b border-line pb-4">
-        <div>
-          <h1 className="text-xl font-bold text-ink">运营后台</h1>
-          <p className="text-xs text-muted">内容工厂 · 仅本人可见</p>
+    <div className="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 sm:flex-row">
+      <aside className="w-full shrink-0 sm:sticky sm:top-4 sm:h-fit sm:w-56">
+        <div className="mb-4">
+          <h1 className="text-lg font-bold text-ink">运营工作台</h1>
+          <p className="text-xs text-muted">内容闭环 · 仅本人可见</p>
         </div>
-        <div className="flex items-center gap-3 text-sm">
-          <Link
-            href="/"
-            className="text-muted transition-colors hover:text-accent"
-          >
+        <AdminNav />
+        <div className="mt-4 flex items-center gap-3 border-t border-line pt-3 text-xs text-muted">
+          <Link href="/" className="transition-colors hover:text-accent">
             ← 看门户
           </Link>
           <form action={logout}>
-            <button className="rounded-lg border border-line bg-white px-3 py-1.5 text-ink-soft transition-colors hover:border-ink/40">
-              登出
-            </button>
+            <button className="transition-colors hover:text-accent">登出</button>
           </form>
         </div>
-      </header>
-      {children}
+      </aside>
+      <main className="min-w-0 flex-1">{children}</main>
     </div>
   );
 }

@@ -1,170 +1,172 @@
 import type { Metadata } from "next";
-import {
-  getScheduleSummary,
-  getPublished,
-  getInProgress,
-  getQueue,
-  getRevenue,
-} from "@/lib/schedule";
+import Link from "next/link";
+import { getTopicStats } from "@/lib/topics";
 import { getFactoryStats } from "@/lib/content";
-import { TableView } from "@/components/TableView";
-import type { MdTable } from "@/lib/schedule";
+import { getComplianceSummary } from "@/lib/compliance";
+import { getCalendarStats } from "@/lib/calendar";
+import { getScheduleSummary } from "@/lib/schedule";
+import { getAnalytics } from "@/lib/analytics";
 
 export const metadata: Metadata = {
-  title: "后台",
+  title: "总览",
   robots: { index: false, follow: false },
 };
 
-export default function Dashboard() {
-  const summary = getScheduleSummary();
-  const stats = getFactoryStats();
-  const revenue = getRevenue();
-  const published = getPublished();
-  const inProgress = getInProgress();
-  const queue = getQueue();
+export default function Overview() {
+  const topics = getTopicStats();
+  const factory = getFactoryStats();
+  const compliance = getComplianceSummary();
+  const cal = getCalendarStats();
+  const sched = getScheduleSummary();
+  const analytics = getAnalytics();
+
+  const stages = [
+    {
+      num: 1,
+      label: "选题",
+      href: "/admin/discover",
+      metric: String(topics.total),
+      unit: "个选题",
+      sub: `${sched.queueCount} 待写`,
+    },
+    {
+      num: 2,
+      label: "产出",
+      href: "/admin/produce",
+      metric: String(factory.total),
+      unit: "篇成稿",
+      sub: `${sched.inProgressCount} 在写`,
+    },
+    {
+      num: 3,
+      label: "合规",
+      href: "/admin/compliance",
+      metric: String(compliance.error + compliance.warn),
+      unit: "待处理",
+      sub: `${compliance.pass} 通过`,
+    },
+    {
+      num: 4,
+      label: "投放",
+      href: "/admin/calendar",
+      metric: String(cal.published),
+      unit: "已发布",
+      sub: `${cal.scheduled} 排期中`,
+    },
+    {
+      num: 5,
+      label: "数据",
+      href: "/admin/analytics",
+      metric: `¥${analytics.revenueTotal}`,
+      unit: "营收",
+      sub: `${analytics.platforms.length} 平台`,
+    },
+  ];
 
   return (
-    <div className="flex flex-col gap-10">
-      {/* 概览 */}
-      <section>
-        <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted">
-          概览
-        </h2>
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-          <Metric n={summary.queueCount} label="待写" />
-          <Metric n={summary.inProgressCount} label="在写" />
-          <Metric n={stats.total} label="已成稿" />
-          <Metric n={stats.withPodcast} label="带播客" />
-          <Metric n={stats.withVideo} label="带视频" />
-          <Metric
-            n={summary.revenueThisMonth}
-            label={`营收 ${revenue[0]?.month ?? ""}`}
-            prefix="¥"
-          />
-        </div>
-      </section>
-
-      {/* 营收 */}
-      {revenue.length > 0 && (
-        <section>
-          <h2 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted">
-            营收明细
-          </h2>
-          <div className="overflow-x-auto rounded-lg border border-line bg-white">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-line bg-paper">
-                  <th className="px-3 py-2 text-left text-xs font-semibold text-muted">
-                    月份
-                  </th>
-                  <th className="px-3 py-2 text-left text-xs font-semibold text-muted">
-                    渠道
-                  </th>
-                  <th className="px-3 py-2 text-right text-xs font-semibold text-muted">
-                    金额
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {revenue.map((r, i) => (
-                  <tr
-                    key={i}
-                    className="border-b border-line/60 last:border-0"
-                  >
-                    <td className="px-3 py-2 text-ink-soft">{r.month}</td>
-                    <td className="px-3 py-2 text-ink-soft">{r.channel}</td>
-                    <td className="px-3 py-2 text-right font-medium tabular-nums text-ink">
-                      ¥{r.amount}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
-      )}
-
-      {/* 发布进度 */}
-      <TableGroup
-        title="发布进度"
-        hint="平台列空 = 未发；日期 = 已发；draft = 草稿待点发。"
-        tables={published}
-        collapseFrom={1}
-      />
-
-      {/* 在写 */}
-      <TableGroup title="在写队列" tables={inProgress} collapseFrom={99} />
-
-      {/* 待写 */}
-      <TableGroup title="待写队列" tables={queue} collapseFrom={99} />
-    </div>
-  );
-}
-
-function Metric({
-  n,
-  label,
-  prefix,
-}: {
-  n: number;
-  label: string;
-  prefix?: string;
-}) {
-  return (
-    <div className="rounded-xl border border-line bg-white p-4">
-      <div className="text-2xl font-bold tabular-nums text-ink">
-        {prefix}
-        {n}
+    <div className="flex flex-col gap-8">
+      <div>
+        <h2 className="text-2xl font-bold text-ink">内容生产闭环</h2>
+        <p className="mt-1 text-sm text-muted">
+          选题 → 产出 → 合规 → 投放 → 数据分析，数据回流再驱动选题。
+        </p>
       </div>
-      <div className="mt-0.5 text-xs text-muted">{label}</div>
+
+      {/* 闭环流程条 */}
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-5">
+        {stages.map((s, i) => (
+          <Link
+            key={s.num}
+            href={s.href}
+            className="group relative flex flex-col rounded-xl border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:shadow-sm"
+          >
+            <div className="mb-2 flex items-center gap-2">
+              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-ink text-xs font-bold text-paper">
+                {s.num}
+              </span>
+              <span className="text-sm font-semibold text-ink">{s.label}</span>
+            </div>
+            <div className="text-2xl font-bold tabular-nums text-ink">
+              {s.metric}
+            </div>
+            <div className="text-xs text-muted">{s.unit}</div>
+            <div className="mt-1 text-xs text-accent">{s.sub}</div>
+            {i < stages.length - 1 && (
+              <span className="absolute -right-2.5 top-1/2 z-10 hidden -translate-y-1/2 text-muted md:block">
+                →
+              </span>
+            )}
+          </Link>
+        ))}
+      </div>
+
+      {/* 关键提醒 */}
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <Card title="待办" href="/admin/produce">
+          <Line label="待写选题" value={sched.queueCount} />
+          <Line label="在写中" value={sched.inProgressCount} />
+          <Line label="合规待处理" value={compliance.error + compliance.warn} accent />
+        </Card>
+        <Card title="本月营收" href="/admin/analytics">
+          <div className="text-3xl font-bold text-ink">
+            ¥{analytics.revenueByMonth[0]?.amount ?? 0}
+          </div>
+          <p className="mt-1 text-xs text-muted">
+            {analytics.revenueByMonth[0]?.month ?? "—"} ·
+            累计 ¥{analytics.revenueTotal}
+          </p>
+        </Card>
+        <Card title="内容资产" href="/">
+          <Line label="已发拆解" value={factory.total} />
+          <Line label="播客" value={factory.withPodcast} />
+          <Line label="信息图" value={factory.totalImages} />
+        </Card>
+      </div>
     </div>
   );
 }
 
-function TableGroup({
+function Card({
   title,
-  hint,
-  tables,
-  collapseFrom,
+  href,
+  children,
 }: {
   title: string;
-  hint?: string;
-  tables: MdTable[];
-  collapseFrom: number;
+  href: string;
+  children: React.ReactNode;
 }) {
-  const live = tables.filter(
-    (t) => t.rows.filter((r) => !/^~~/.test(r[0] || "")).length > 0,
-  );
-  if (live.length === 0) return null;
   return (
-    <section>
-      <h2 className="mb-1 text-sm font-bold uppercase tracking-wider text-muted">
-        {title}
-      </h2>
-      {hint && <p className="mb-3 text-xs text-muted">{hint}</p>}
-      <div className="flex flex-col gap-4">
-        {live.map((t, i) =>
-          i >= collapseFrom ? (
-            <details key={i} className="rounded-lg border border-line bg-white">
-              <summary className="cursor-pointer px-3 py-2 text-sm font-medium text-ink-soft">
-                {t.caption || `表 ${i + 1}`}
-              </summary>
-              <div className="p-2">
-                <TableView table={t} />
-              </div>
-            </details>
-          ) : (
-            <div key={i}>
-              {t.caption && (
-                <p className="mb-1.5 text-xs font-medium text-ink-soft">
-                  {t.caption}
-                </p>
-              )}
-              <TableView table={t} />
-            </div>
-          ),
-        )}
+    <div className="rounded-xl border border-line bg-white p-5">
+      <div className="mb-3 flex items-center justify-between">
+        <h3 className="text-sm font-bold uppercase tracking-wider text-muted">
+          {title}
+        </h3>
+        <Link href={href} className="text-xs text-accent hover:underline">
+          查看 →
+        </Link>
       </div>
-    </section>
+      <div className="flex flex-col gap-2">{children}</div>
+    </div>
+  );
+}
+
+function Line({
+  label,
+  value,
+  accent,
+}: {
+  label: string;
+  value: number;
+  accent?: boolean;
+}) {
+  return (
+    <div className="flex items-baseline justify-between">
+      <span className="text-sm text-ink-soft">{label}</span>
+      <span
+        className={`text-lg font-bold tabular-nums ${accent ? "text-accent" : "text-ink"}`}
+      >
+        {value}
+      </span>
+    </div>
   );
 }
