@@ -67,16 +67,28 @@ def chat(cfg: dict, node_id: str, messages: list[dict], max_tokens: int | None =
     cap = max_tokens or cfg.get("budget", {}).get("max_tokens_per_call", 8000)
     body = json.dumps({"model": model, "messages": messages, "max_tokens": cap},
                       ensure_ascii=False).encode("utf-8")
-    req = urllib.request.Request(
-        base + "/chat/completions", data=body,
-        headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
-    try:
-        with urllib.request.urlopen(req, timeout=180) as r:
-            data = json.loads(r.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        raise RuntimeError(f"{node_id}: HTTP {e.code} {e.read()[:200]}")
-    msg = data["choices"][0]["message"]
-    return (msg.get("content") or "").strip()
+    # 瞬时网络/限流错误指数退避重试（生产可靠性，呼应 OPTIMIZATION_BACKLOG 成本/稳定）
+    import time
+    last = None
+    for attempt in range(3):
+        req = urllib.request.Request(
+            base + "/chat/completions", data=body,
+            headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
+        try:
+            with urllib.request.urlopen(req, timeout=180) as r:
+                data = json.loads(r.read().decode("utf-8"))
+            msg = data["choices"][0]["message"]
+            return (msg.get("content") or "").strip()
+        except urllib.error.HTTPError as e:
+            code = e.code
+            last = RuntimeError(f"{node_id}: HTTP {code}")
+            if code not in (429, 500, 502, 503, 504):
+                raise last  # 4xx（非限流）不重试
+        except Exception as e:
+            last = e  # 网络中断/超时 → 重试
+        if attempt < 2:
+            time.sleep(2 * (attempt + 1))
+    raise last or RuntimeError(f"{node_id}: 调用失败")
 
 
 def fetch_url_text(url: str, limit: int = 12000) -> str:
