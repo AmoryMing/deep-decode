@@ -73,6 +73,49 @@ export function getRadar(): RadarReport[] {
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
+export interface RadarItem {
+  rank: number;
+  title: string;
+  url: string;
+  summary: string;
+  source: string;
+  category: string;
+  score: number;
+  signals: string[];
+  relevance: number | null;
+  relevance_why: string | null;
+  angle: string | null;
+  content_type: string | null;
+  hook: string | null;
+}
+export interface RadarDay {
+  date: string;
+  reader: string;
+  total_fetched: number;
+  scored: number;
+  items: RadarItem[];
+}
+
+/** 读最新的结构化 radar JSON（scout2 产物）——选题收件箱的数据源。 */
+export function getLatestRadar(): RadarDay | null {
+  const dir = radarDir();
+  if (!fs.existsSync(dir)) return null;
+  const jsons = fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort()
+    .reverse();
+  if (jsons.length === 0) return null;
+  try {
+    const raw = fs.readFileSync(path.join(dir, jsons[0]), "utf8");
+    const d = JSON.parse(raw) as RadarDay;
+    d.items = Array.isArray(d.items) ? d.items : [];
+    return d;
+  } catch {
+    return null;
+  }
+}
+
 export interface TopicStats {
   total: number;
   byStatus: { status: string; count: number }[];

@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { getTopics, getRadar, getTopicStats } from "@/lib/topics";
+import { getTopics, getRadar, getTopicStats, getLatestRadar } from "@/lib/topics";
 import { getQueue } from "@/lib/schedule";
 import { TableView } from "@/components/TableView";
+import { RadarInbox } from "@/components/RadarInbox";
 
 export const metadata: Metadata = {
   title: "选题",
   robots: { index: false, follow: false },
 };
 
+export const dynamic = "force-dynamic";
+
 export default function Discover() {
   const topics = getTopics();
   const stats = getTopicStats();
   const radar = getRadar();
   const queue = getQueue();
+  const latestRadar = getLatestRadar();
 
   return (
     <div className="flex flex-col gap-8">
@@ -22,6 +26,16 @@ export default function Discover() {
           雷达扫信源 → 选题库沉淀 → 待写队列。共 {stats.total} 个选题。
         </p>
       </header>
+
+      {/* 选题收件箱（scout2 结构化雷达 → 一键建项目） */}
+      {latestRadar && latestRadar.items.length > 0 && (
+        <section>
+          <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted">
+            选题收件箱 · 多信号+AI 打分
+          </h3>
+          <RadarInbox items={latestRadar.items} date={latestRadar.date} />
+        </section>
+      )}
 
       {/* 雷达：内容发现 */}
       <section>

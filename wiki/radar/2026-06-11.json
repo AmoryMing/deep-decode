@@ -1,0 +1,605 @@
+{
+ "date": "2026-06-11",
+ "reader": "default",
+ "generated_by": "scout2",
+ "total_fetched": 240,
+ "scored": 30,
+ "items": [
+  {
+   "rank": 1,
+   "title": "Claude Fable 5",
+   "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+   "summary": "System Card [pdf]: <a href=\"https:&#x2F;&#x2F;www-cdn.anthropic.com&#x2F;d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf\" rel=\"nofollow\">https:&#x2F;&#x2F;www-cdn.anthropic.com&#x2F;d00db56fa754a1b115b6dd7cb2e3c3...</a>",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T00:58:01",
+   "score": 29.5,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 9.0,
+   "relevance_why": "Anthropic新模型，直接决定模型选型",
+   "angle": "从System Card中Anthropic对模型“主动拒绝”行为的分类和阈值设定，反推其安全对齐策略的底层哲学——是追求绝对无害还是可控越狱？",
+   "content_type": "decode",
+   "hook": "Anthropic的System Card泄露了秘密：Claude Fable 5在哪些任务上‘主动投降’？"
+  },
+  {
+   "rank": 2,
+   "title": "AWS Bedrock to require sharing data with Anthropic for Mythos and future models",
+   "url": "https://news.ycombinator.com/item?id=48473166",
+   "summary": "&gt; For Fable 5, Mythos 5, and future models on Bedrock with similar or higher capability levels, Anthropic will require 30-day retention for all traffic on Mythos-class models. Retaining data for a limited period allows Anthropic to detect patterns of misuse that are not visibl",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T16:21:38",
+   "score": 29.5,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 9.0,
+   "relevance_why": "云平台数据共享政策，影响合规与成本决策",
+   "angle": "AWS Bedrock要求共享数据给Anthropic，表面是合规条款，实则是模型供应商为了获取后训练反馈而设计的隐形数据飞轮——企业用户的数据主权正在被技术垄断重新定义。",
+   "content_type": "decode",
+   "hook": "用Claude就得交出数据？AWS Bedrock的‘数据换模型’协议背后"
+  },
+  {
+   "rank": 3,
+   "title": "用好 Claude Design 的一些经验",
+   "url": "https://x.com/dotey/status/2064601571397185639",
+   "summary": "宝玉分享了5点心得：1. 加入设计系统（如 Adobe Spectrum 2）可避免 AI 味，设为默认后可专注布局与交互。2. 先搭建少量功能，再通过左侧聊天框逐步调整。3. 用 Markup 框选局部评论，Edit 可手动调整元素树。4. 注意上下文管理，新任务创建新会话。5. 通过 Tweaks 面板调整主题、布局、加载状态，也可添加导航快速切换界面。",
+   "source": "AI HOT 精选",
+   "category": "tip",
+   "published": "2026-06-10T06:52:27.000Z",
+   "score": 29.0,
+   "signals": [
+    "src+9",
+    "concept:claude design",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "实用经验，直接可验证的Claude设计实践",
+   "angle": "宝玉提到的“加入设计系统避免AI味”本质上是将人类品牌风格矩阵编码成约束条件，这一经验可升维为一种通用范式：如何用规则嵌入让生成式AI的输出从“自由创作”转向“受控生产”。",
+   "content_type": "practice",
+   "hook": "让Claude Design告别‘AI味’：设计系统如何成为隐形咒语"
+  },
+  {
+   "rank": 4,
+   "title": "VoxCPM2 技术报告发布",
+   "url": "https://x.com/OpenBMB/status/2063991963133903317",
+   "summary": "面壁智能 OpenBMB 发布 VoxCPM2 技术报告。该模型为最新语音生成模型，拥有 2B 参数，基于超 200 万小时多语言语音数据训练，支持 30 种语言和 9 种中文方言。具备自然语言语音设计、可控及高保真延续性语音克隆能力。技术报告涵盖架构设计、统一序列公式、AudioVAE 高保真语音重建、大规模训练评估，以及零样本和指令跟随 TTS 基准结果。采用 16kHz 语义编码 + 48kHz 波形重建，在公开 TTS 基准上达到 SOTA 或极具竞争力。模型权重、微调代码和推理工具以 Apache 2.0 开源。",
+   "source": "AI HOT 模型发布",
+   "category": "ai-models",
+   "published": "2026-06-08T14:30:05.000Z",
+   "score": 29.0,
+   "signals": [
+    "src+8",
+    "hot:ai-models",
+    "concept:voxcpm",
+    "recent"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "技术报告，前沿模型内部机制值得深度解读",
+   "angle": "VoxCPM2以2B参数覆盖9种中文方言，其背后是方言数据稀缺下的语音压缩与迁移学习突破——对比Whisper的方言短板，说明小参数模型在边缘部署的方言差异化优势。",
+   "content_type": "decode",
+   "hook": "2B参数搞定9种中文方言？VoxCPM2的方言训练玄机"
+  },
+  {
+   "rank": 5,
+   "title": "Claude Mythos 即将发布，Fable 精简版同日登场",
+   "url": "https://x.com/kimmonismus/status/2064362469632405807",
+   "summary": "确认，Claude Mythos 将在接下来几小时内揭晓。\n\n【引用 @steph_palazzolo】：\n独家：一个名为 Claude Fable 的精简版 Mythos 今天推出。它价格昂贵--是 Opus 的两倍--但或许不像人们从最初 Mythos 定价（Opus 的 5 倍）所想的那样昂贵。\n\n更多内容及 Apple WWDC 见 AI Agenda：\n\nhttps：//www.theinformation.com/newsletters/ai-agenda/anthropics-mythos-coming-today-apple-pursue",
+   "source": "AI HOT 模型发布",
+   "category": "ai-models",
+   "published": "2026-06-09T15:02:21.000Z",
+   "score": 28.5,
+   "signals": [
+    "src+8",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 9.0,
+   "relevance_why": "Claude系列发布，核心模型决策依据",
+   "angle": "Anthropic推出Fable作为Mythos的精简版，且定价昂贵——这不仅是产品分层，更暗示其算力成本结构发生了根本变化：推理效率提升让低价高质成为可能，但Anthropic选择走高价路线来维持品牌调性。",
+   "content_type": "decode",
+   "hook": "Claude为何推出‘穷人版’Mythos？Fable的定价背后藏着Anthropic的算牌"
+  },
+  {
+   "rank": 6,
+   "title": "Google DeepMind 发布 Gemma 4 12B：统一的无编码器多模态模型",
+   "url": "https://deepmind.google/blog/introducing-gemma-4-12b-a-unified-encoder-free-multimodal-model",
+   "summary": "Gemma 4 12B 是 Google DeepMind 最新推出的中等规模多模态模型，采用无编码器统一架构，原生支持音频输入。其基准测试性能接近 26B MoE 模型，但内存占用不到一半，仅需 16GB 显存或统一内存即可在消费级笔记本上本地运行。模型内置多 token 预测（MTP）drafter 以降低延迟，基于 Apache 2.0 开源许可发布，已累计超过 1.5 亿次下载。",
+   "source": "AI HOT 模型发布",
+   "category": "ai-models",
+   "published": "2026-06-09T14:10:19.000Z",
+   "score": 28.5,
+   "signals": [
+    "src+8",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 9.0,
+   "relevance_why": "DeepMind多模态模型，技术趋势关键",
+   "angle": "Gemma 4 12B的无编码器多模态统一架构，放弃了独立音频编码器，改为在共享空间内直接处理原始波形——这本质上是一种“强制模态融合”，技术代价是训练数据需要高度对齐，但换来了极低的推理内存。",
+   "content_type": "decode",
+   "hook": "抛弃编码器！Gemma 4如何用12B参数硬刚26B MoE"
+  },
+  {
+   "rank": 7,
+   "title": "German ruling declares Google liable for false answers in AI Overviews",
+   "url": "https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T09:44:13",
+   "score": 28.0,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "AI法律责任先例，合规风险需关注",
+   "angle": "德国法院判Google为AI Overviews的虚假答案担责，这打破了“算法中立”的传统护身符，将AI视为出版者而非工具。这对国内大厂意味着：若参照此逻辑，大模型幻觉不再只是技术问题，而是法律合规红线。",
+   "content_type": "decode",
+   "hook": "德国法院判Google为AI幻觉买单，中国大模型该慌吗？"
+  },
+  {
+   "rank": 8,
+   "title": "DiffusionGemma：4倍速输出，整块文本同时生成",
+   "url": "https://x.com/GoogleDeepMind/status/2064741061352636762",
+   "summary": "DiffusionGemma 是我们新的实验性开放模型，在专用 GPU 上输出速度最高可提升 4 倍。\n\n它不是逐词预测，而是同时生成整块文本。这让模型能够自我纠正，并实时格式化复杂 Markdown。",
+   "source": "AI HOT 精选",
+   "category": "ai-models",
+   "published": "2026-06-10T16:06:44.000Z",
+   "score": 28.0,
+   "signals": [
+    "src+9",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "Gemma生成速度突破，直接影响推理效率",
+   "angle": "DiffusionGemma采用整块文本并行生成，其自我纠正机制本质上是将扩散模型的去噪过程适配到离散文本空间——这比自回归更擅长处理长文本的结构一致性（如Markdown排版），但牺牲了局部细粒度控制。",
+   "content_type": "decode",
+   "hook": "告别逐字生成！DiffusionGemma如何让AI一秒写完整篇文章"
+  },
+  {
+   "rank": 9,
+   "title": "摩尔线程开源 MusaCoder 代码大模型，9B/27B 参数基于国产 GPU 全链路训练",
+   "url": "https://www.ithome.com/0/962/509.htm",
+   "summary": "摩尔线程发布并开源 MusaCoder 代码大模型，含 9B 和 27B 两个参数规模，是业内首个基于国产 GPU 算力底座完成全链路训练与验证的开源模型。后训练流程在基于 MTT S5000 的夸娥智算集群上完成，支持从 PyTorch 标准算子自动生成高性能 CUDA/MUSA 原生 Kernel 代码。在 KernelBench 评测中，MusaCoder-27B-RL 以 Overall Pass@8 93.2%、Avg.@8 88.60% 超越 Claude Opus、DeepSeek-V4 Pro、GLM-5.1、Kimi K2.6 等主流 ",
+   "source": "AI HOT 精选",
+   "category": "ai-models",
+   "published": "2026-06-10T08:21:45.000Z",
+   "score": 28.0,
+   "signals": [
+    "src+9",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "国产模型与GPU生态，自主可控选项",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 10,
+   "title": "Cohere发布North Mini Code：面向开发者的开源编码模型",
+   "url": "https://huggingface.co/blog/CohereLabs/introducing-north-mini-code",
+   "summary": "Cohere发布North Mini Code，一款30B参数MoE模型（3B活跃参数），Apache 2.0开源。在Artificial Analysis Coding Index上得分33.4，超越Qwen3.5、Gemma 4等同类模型。后训练采用两阶段SFT和RLVR，在SWE-Bench Verified上pass@10达80.2%，Terminal-Bench v2上达55.1%。支持64K/128K上下文长度，专为智能体编码任务优化。",
+   "source": "AI HOT 模型发布",
+   "category": "ai-models",
+   "published": "2026-06-09T15:56:23.000Z",
+   "score": 27.0,
+   "signals": [
+    "src+8",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "开源编码模型，丰富代码能力选项",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 11,
+   "title": "小米 MiMo 与 TileRT 联合发布 UltraSpeed 模式，1T 模型输出突破 1000 tokens/s",
+   "url": "https://mp.weixin.qq.com/s/EZvmrx8xfM9MZNCMDwImFQ",
+   "summary": "小米 MiMo 与 TileRT 联合发布 MiMo-V2.5-Pro-UltraSpeed 模式，使 1T 参数旗舰模型输出速度首次突破 1000 tokens/s。模型侧采用 FP4 混合量化（仅量化 MoE Expert）与 DFlash 块级 masked 并行推测解码（coding 场景平均接受长度 6.30 tokens）；系统侧 TileRT 引入常驻内核引擎与异构流水线协作。API 限时开放（2026 年 6 月 9 日至 23 日），定价为 MiMo-V2.5-Pro 的 3 倍，速度提升约 10 倍。FP4 权重与 DFlash 模型",
+   "source": "AI HOT 模型发布",
+   "category": "ai-models",
+   "published": "2026-06-09T03:31:32.000Z",
+   "score": 27.0,
+   "signals": [
+    "src+8",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "推理加速实现高吞吐，实操价值大",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 12,
+   "title": "Rich Sutton on AI creativity and discovery",
+   "url": "https://twitter.com/RichardSSutton/status/2061216087744946656",
+   "summary": "<a href=\"https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=K5LAFEjTlBA\" rel=\"nofollow\">https:&#x2F;&#x2F;www.youtube.com&#x2F;watch?v=K5LAFEjTlBA</a>",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T10:25:24",
+   "score": 26.1,
+   "signals": [
+    "src+7",
+    "hn+4.7",
+    "today"
+   ],
+   "relevance": 7.0,
+   "relevance_why": "AI思想领袖观点，辅助战略判断",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 13,
+   "title": "Gemini 3.5 Live Translate 发布",
+   "url": "https://x.com/GoogleDeepMind/status/2064366504745828689",
+   "summary": "说 hello， hola， 你好--欢迎 Gemini 3.5 Live Translate：我们最新的音频模型，专为快速跨语言交流而构建。🌐",
+   "source": "AI HOT 模型发布",
+   "category": "ai-models",
+   "published": "2026-06-09T15:18:23.000Z",
+   "score": 25.5,
+   "signals": [
+    "src+8",
+    "hot:ai-models",
+    "today"
+   ],
+   "relevance": 7.0,
+   "relevance_why": "多模态翻译模型更新，可评估集成价值",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 14,
+   "title": "macOS Container Machines",
+   "url": "https://github.com/apple/container/blob/main/docs/container-machine.md",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T08:29:01",
+   "score": 25.0,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 6.0,
+   "relevance_why": "容器技术间接影响AI部署环境",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 15,
+   "title": "Google将保存用户的Lens图片、Search Live录音和Translate音频用于AI训练",
+   "url": "https://www.theverge.com/tech/947836/google-search-privacy-settings-images-audio",
+   "summary": "Google更新搜索交互数据保存方式，新增\"Search Services History\"设置，用于保存用户搜索时使用的图片、文件、音频和视频，包括Google Lens搜索的图片、实时搜索工具Search Live的录音、语音搜索和Translate中的语音片段。这些数据将被用于\"提供、改进和开发AI模型\"。用户可关闭该设置并禁用\"Save Media\"选项以避免保存。",
+   "source": "AI HOT 精选",
+   "category": "ai-products",
+   "published": "2026-06-10T16:18:45.000Z",
+   "score": 25.0,
+   "signals": [
+    "src+9",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "用户数据用于训练，隐私合规重要信号",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 16,
+   "title": "通过语言服务器为 GitHub Copilot CLI 提供真正的代码智能",
+   "url": "https://github.blog/ai-and-ml/github-copilot/give-github-copilot-cli-real-code-intelligence-with-language-servers",
+   "summary": "GitHub Copilot CLI 现在可以通过安装和配置 LSP（Language Server Protocol）服务器来替代原始的暴力 grep 或反编译方式，从而获得真正的代码智能。",
+   "source": "AI HOT 精选",
+   "category": "tip",
+   "published": "2026-06-10T16:00:00.000Z",
+   "score": 25.0,
+   "signals": [
+    "src+9",
+    "today"
+   ],
+   "relevance": 8.0,
+   "relevance_why": "Copilot代码智能提升，开发者效率直接相关",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 17,
+   "title": "Chrome is looking to permanently drop MV2 extension",
+   "url": "https://www.neowin.net/news/google-chrome-is-killing-all-ublock-origin-bypasses-microsoft-edge-opera-to-follow/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T13:50:07",
+   "score": 23.5,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 5.0,
+   "relevance_why": "浏览器扩展政策，可能影响AI工具链",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 18,
+   "title": "RIP software hackathons. Long live the hardware hackathon",
+   "url": "https://blog.oscars.dev/posts/rip-software-hackathons-long-live-the-hardware-hackathon/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T06:35:57",
+   "score": 23.5,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 5.0,
+   "relevance_why": "活动趋势观察，非核心决策信息",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 19,
+   "title": "OpenRouter 推出 Activity explorer 活动探索器",
+   "url": "https://x.com/OpenRouter/status/2064730000956489889",
+   "summary": "今天，我们在 OpenRouter 上推出了新的 Activity explorer。\n\n这是查看你和团队在每个模型上花费了多少的最佳方式，还包括 token、缓存命中率、智能体以及趋势。所有数据实时更新。\n\n看看我们的团队如何使用 Fable 和其他模型 👇",
+   "source": "AI HOT 精选",
+   "category": "ai-products",
+   "published": "2026-06-10T15:22:47.000Z",
+   "score": 23.5,
+   "signals": [
+    "src+9",
+    "today"
+   ],
+   "relevance": 7.0,
+   "relevance_why": "多模型API监控工具，实用辅助",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 20,
+   "title": "Building an HTML-first site doubled our users overnight",
+   "url": "https://mohkohn.co.uk/writing/html-first/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T20:45:47",
+   "score": 22.0,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 4.0,
+   "relevance_why": "前端优化案例，非AI主题",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 21,
+   "title": "毕业典礼频现\"谈 AI 色变\"，微软总裁史密斯呼吁行业必须回应公众担忧",
+   "url": "https://www.ithome.com/0/962/680.htm",
+   "summary": "近几周多场毕业典礼上，演讲者宣传AI技术时遭学生嘘声。普林斯顿应届毕业生曾否决一款疑似借助AI设计的毕业典礼夹克。微软总裁布拉德·史密斯回应称，行业必须严肃可信地回答问题。史密斯主张AI应增强人而非取代人，认为实用AI渗透经济的速度可能比行业乐观预期更慢。微软今年计划投入约1900亿美元资本支出，主要用于数据中心。微软AI负责人穆斯塔法·苏莱曼修正此前\"大多数白领工作18个月内自动化\"的说法，表示仅指AI执行单项任务的能力。上月微软CFO艾米·胡德在杜克大学演讲全程未提AI，未遭嘘声。",
+   "source": "AI HOT 精选",
+   "category": "tip",
+   "published": "2026-06-10T15:22:02.000Z",
+   "score": 22.0,
+   "signals": [
+    "src+9",
+    "today"
+   ],
+   "relevance": 6.0,
+   "relevance_why": "公众舆论与行业回应，需关注风险",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 22,
+   "title": "AMA: I'm Eric Ries (The Lean Startup) & Author of New Bestseller Incorruptible",
+   "url": "https://news.ycombinator.com/item?id=48477135",
+   "summary": "Hey gang, you may remember me from such books as _The Lean Startup_ and _The Startup Way_.<p>It&#x27;s been fifteen years since I wrote The Lean Startup, and in that time I&#x27;ve seen some things. In both big companies and tiny startups, NGOs and governments, in almost every in",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T22:47:52",
+   "score": 21.9,
+   "signals": [
+    "src+7",
+    "hn+3.4",
+    "today"
+   ],
+   "relevance": 5.0,
+   "relevance_why": "创业方法论访谈，非AI技术决策",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 23,
+   "title": "Upcoming breaking changes for npm v12",
+   "url": "https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T05:01:00",
+   "score": 20.5,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 3.0,
+   "relevance_why": "npm版本变更，对AI项目影响有限",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 24,
+   "title": "Surprise, pay $1000",
+   "url": "https://forestwalk.ai/blog/surprise-blacksmith-costs/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T06:01:15",
+   "score": 20.5,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 3.0,
+   "relevance_why": "标题模糊，信息不明确",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 25,
+   "title": "US Consumer Price Index up 4.2%",
+   "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T23:10:40",
+   "score": 19.4,
+   "signals": [
+    "src+7",
+    "hn+2.4",
+    "today"
+   ],
+   "relevance": 4.0,
+   "relevance_why": "通胀数据间接影响预算，非核心",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 26,
+   "title": "Mercedes‑Benz starts large‑scale production of electric axial flux motor",
+   "url": "https://media.mercedes-benz.com/en/article/bebac2af-acdc-465a-9538-adb0bf3d8ccf",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T15:44:49",
+   "score": 19.0,
+   "signals": [
+    "src+7",
+    "hn+5.0",
+    "today"
+   ],
+   "relevance": 2.0,
+   "relevance_why": "汽车电机，与AI无关",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 27,
+   "title": "PgDog is funded and coming to a database near you",
+   "url": "https://pgdog.dev/blog/our-funding-announcement",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T22:02:59",
+   "score": 19.0,
+   "signals": [
+    "src+7",
+    "hn+3.5",
+    "today"
+   ],
+   "relevance": 3.0,
+   "relevance_why": "数据库工具，与AI无直接关系",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 28,
+   "title": "All 9,300 Japanese train station, animated by the year it opened (1872–2026)",
+   "url": "https://jivx.com/eki",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T20:11:28",
+   "score": 16.6,
+   "signals": [
+    "src+7",
+    "hn+2.6",
+    "today"
+   ],
+   "relevance": 2.0,
+   "relevance_why": "数据可视化趣味项目，无AI价值",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 29,
+   "title": "I Hate (Most) Keyboard 'Fn' Keys",
+   "url": "https://danq.me/2026/06/09/fn-keys/",
+   "summary": "",
+   "source": "Hacker News front page",
+   "category": "",
+   "published": "2026-06-10T21:22:52",
+   "score": 15.9,
+   "signals": [
+    "src+7",
+    "hn+3.4",
+    "today"
+   ],
+   "relevance": 1.0,
+   "relevance_why": "键盘偏好吐槽，完全无关",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  },
+  {
+   "rank": 30,
+   "title": "ChatGPT 推头发变国旗颜色功能",
+   "url": "https://x.com/ChatGPTapp/status/2064728793785450526",
+   "summary": "Go #MessiMode\n\n上传一张你的照片并尝试这个提示词：\"将我的头发变成本国国旗的颜色，但要看起来自然。如果没有提供国家或图片，请询问。\"",
+   "source": "AI HOT 精选",
+   "category": "tip",
+   "published": "2026-06-10T15:17:59.000Z",
+   "score": 14.5,
+   "signals": [
+    "src+9",
+    "today"
+   ],
+   "relevance": 1.0,
+   "relevance_why": "娱乐功能，无决策参考价值",
+   "angle": null,
+   "content_type": null,
+   "hook": null
+  }
+ ]
+}

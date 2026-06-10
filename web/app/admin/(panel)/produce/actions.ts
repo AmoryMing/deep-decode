@@ -52,11 +52,12 @@ export async function createProject(
   const voice = String(formData.get("voice") || "").trim();
   const inputType = String(formData.get("input_type") || "url").trim();
   const source = String(formData.get("source") || "").trim();
-  const channels = formData.getAll("channels").map(String).filter(Boolean);
+  const angle = String(formData.get("angle") || "").trim();
+  let channels = formData.getAll("channels").map(String).filter(Boolean);
 
   if (!title) return { ok: false, message: "标题/选题不能为空" };
-  if (channels.length === 0)
-    return { ok: false, message: "至少选一个分发渠道" };
+  // 从选题收件箱一键建时用默认渠道
+  if (channels.length === 0) channels = ["email", "wechat", "xhs"];
 
   const base = kebab(slugRaw) || kebab(title) || "draft";
   const root = repoRoot();
@@ -95,7 +96,7 @@ export async function createProject(
       image_backend: "gpt-image",
     },
     strategy: {
-      title_angle: "",
+      title_angle: angle,
       thesis: "",
       counter_thesis: "",
       red_lines: [
