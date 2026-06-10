@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const NAV = [
   { href: "/admin", label: "总览", num: "", desc: "闭环全景" },
+  { href: "/admin/setup", label: "接入", num: "0", desc: "资产盘点" },
   { href: "/admin/discover", label: "选题", num: "1", desc: "内容发现" },
   { href: "/admin/produce", label: "产出", num: "2", desc: "文图播客视频" },
   { href: "/admin/runs", label: "运行", num: "3", desc: "流水线进度" },
