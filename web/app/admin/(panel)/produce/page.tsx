@@ -2,12 +2,20 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllPosts, getFactoryStats } from "@/lib/content";
 import { getInProgress } from "@/lib/schedule";
+import {
+  getProjectStates,
+  listPipelineProjects,
+} from "@/lib/projectState";
 import { TableView } from "@/components/TableView";
+import { PipelineProgress } from "@/components/PipelineProgress";
 
 export const metadata: Metadata = {
   title: "产出",
   robots: { index: false, follow: false },
 };
+
+// 进度要实时（跑 runner 取），不能静态化
+export const dynamic = "force-dynamic";
 
 function Dot({ on, label }: { on: boolean; label: string }) {
   return (
@@ -22,10 +30,24 @@ function Dot({ on, label }: { on: boolean; label: string }) {
   );
 }
 
-export default function Produce() {
+export default async function Produce() {
   const posts = getAllPosts();
   const stats = getFactoryStats();
   const inProgress = getInProgress();
+
+  // 真实流水线进度：跑 runner 取每个已进 runner（有 spec_lock）的项目状态
+  const pipelineSlugs = listPipelineProjects();
+  const states = await getProjectStates(pipelineSlugs.slice(0, 20));
+  const liveStates = pipelineSlugs
+    .map((s) => states.get(s))
+    .filter((s): s is NonNullable<typeof s> => !!s)
+    .sort((a, b) => {
+      // 没跑完的排前面，再按进度从低到高（最需要推进的在最上）
+      const af = a.ready_to_distribute ? 1 : 0;
+      const bf = b.ready_to_distribute ? 1 : 0;
+      if (af !== bf) return af - bf;
+      return a.progress.done / a.progress.total - b.progress.done / b.progress.total;
+    });
 
   return (
     <div className="flex flex-col gap-8">
@@ -36,6 +58,20 @@ export default function Produce() {
           {stats.withPodcast} 带播客，{stats.withVideo} 带视频。
         </p>
       </header>
+
+      {/* 流水线实时进度（runner 驱动） */}
+      {liveStates.length > 0 && (
+        <section>
+          <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted">
+            流水线进度 · runner 实时（{liveStates.length} 个项目）
+          </h3>
+          <div className="flex flex-col gap-3">
+            {liveStates.map((st) => (
+              <PipelineProgress key={st.slug} state={st} />
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* 在写 */}
       <section>
