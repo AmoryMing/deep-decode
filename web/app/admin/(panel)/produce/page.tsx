@@ -6,8 +6,10 @@ import {
   getProjectStates,
   listPipelineProjects,
 } from "@/lib/projectState";
+import { getSetupInventory } from "@/lib/setup";
 import { TableView } from "@/components/TableView";
 import { PipelineProgress } from "@/components/PipelineProgress";
+import { NewProjectForm } from "@/components/NewProjectForm";
 
 export const metadata: Metadata = {
   title: "产出",
@@ -36,6 +38,7 @@ export default async function Produce() {
   const inProgress = getInProgress();
 
   // 真实流水线进度：跑 runner 取每个已进 runner（有 spec_lock）的项目状态
+  const inv = getSetupInventory();
   const pipelineSlugs = listPipelineProjects();
   const states = await getProjectStates(pipelineSlugs.slice(0, 20));
   const liveStates = pipelineSlugs
@@ -58,6 +61,16 @@ export default async function Produce() {
           {stats.withPodcast} 带播客，{stats.withVideo} 带视频。
         </p>
       </header>
+
+      {/* 新建项目：配置 5 原子 → 写 spec_lock → 可启动 */}
+      <NewProjectForm
+        opts={{
+          readers: inv.readers.map((r) => ({ key: r.key, displayName: r.displayName })),
+          styles: inv.styles.map((s) => ({ key: s.key })),
+          contentTypes: inv.contentTypes.map((c) => ({ key: c.key, title: c.title })),
+          channels: inv.channels,
+        }}
+      />
 
       {/* 流水线实时进度（runner 驱动） */}
       {liveStates.length > 0 && (

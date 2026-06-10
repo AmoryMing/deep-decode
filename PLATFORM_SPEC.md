@@ -77,10 +77,11 @@
 
 ### M5 · 配置台 + 批量启动
 **目标**：「select channel/output/reader-style…press start…parallel batches」。
-- [ ] 配置台：每个选中选题选 channel(s) / 产物(文图播客视频) / reader / style / voice / 动效要求 → 写 spec_lock
-- [ ] Strategy Spec 确认仍是唯一硬停，但做成 UI 卡片确认（不进终端）
-- [ ] 「开始」批量入队 M2 的 driver，回到 `/admin/runs` 看并行进度
-- 验收：3 个选题各配不同渠道，一键启动，三条进度条并行推进
+- [x] 新建项目表单（`/admin/produce`）：标题/输入/content_type/reader/style/voice/渠道 → 写合法 spec_lock → 建 output 目录 ✅ 已验证（UI 建的 spec_lock 被 runner 正确解析成 13 节点）
+- [x] 建好即出现在产出页进度列表，可点「▶ 开始」入队 M2 driver → `/admin/runs` 看进度
+- [ ] Strategy Spec 确认做成 UI 卡片确认（当前 strategy_confirmed 仍需手动/CLI；UI 确认按钮待接）
+- [ ] 批量：选多个选题一次配置 + 一键全启动（单建已通，批量待加）
+- 验收（单条）：UI 新建 → 出现在列表 → 点开始 → driver 自跑到 blocked ✅
 
 ### M6 · 发布日历 + 数据闭环
 **目标**：「publish calendar」+「what performs good/bad → 反哺」。
