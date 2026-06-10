@@ -1,0 +1,73 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# Graphify output (regeneratable, can be huge)
+graphify-out/
+
+# Obsidian workspace state (keep config but not workspace cursor)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Temp / scratch
+tmp/
+.superpowers/
+*.bak
+*.tmp
+
+# Large media in raw/ — track filenames via LFS or skip
+# (uncomment if raw/ blows up the repo)
+# raw/**/*.mp4
+# raw/**/*.mov
+# raw/**/*.zip
+
+# Regeneratable video intermediates — the *_compressed.mp4 is the deliverable,
+# the uncompressed Remotion output (50-80MB each) is rebuildable from scene_plan + assets
+output/**/email_video.mp4
+output/**/podcast_raw.mp3
+
+# Secrets
+.env
+*.key
+.claude/skills/chinadaas-email/config.yaml
+.agents/skills/chinadaas-email/config.yaml
+# Platform session credentials (uploader login state) — leaked once 2026-06-10, never track
+**/cookies.json
+**/*cookies*.json
+**/token_info*.json
+**/account.json
+
+# Claude Code worktrees (embedded git repos)
+.claude/worktrees/
+.worktrees/
+
+# voxcpm-tuner runtime workspace (per-session, not tracked)
+voxcpm-workspace/
+**/voxcpm-workspace/
+
+# voice-lab runtime audio (personal recordings + generated samples + datasets)
+voice-lab/blend/inputs/
+voice-lab/blend/outputs/
+voice-lab/dataset/
+
+# Regeneratable TTS / video intermediates (keep only podcast.mp3 + *_compressed.mp4)
+output/**/tts_segments/
+output/**/tts_segments_doubao/
+output/**/tts_segments_voxcpm2/
+output/**/tts_segments_w4a3/
+output/**/video_work/
+output/**/video_frames*/
