@@ -61,10 +61,10 @@
 - **D1 · 选题引擎 v2 核心**：`tools/scout2.py`（融合打分 + flash 相关性 + 去重）→ 结构化 radar JSON。复活 cron。
 - **D2 · 灵感层**：top-N 角度生成 + 建议配置，写进 radar JSON。
 - **D3 · 选题收件箱 UI**：`/admin/discover` 读 JSON → 排序卡 + 勾选建项目（复用 createProject）。
-- **D4 · 数据时序 + 单篇归因**：analytics 按日追加 + slug↔帖ID + performance.json。
-- **D5 · 真实拉取**：小红书 note 指标 API（优雅降级手填）。
-- **D6 · 数据中心合并**：analytics+xhs 合并，单篇排行 + 异常告警。
-- **D7 · 闭环**：performance_priors → scout2 打分加权 + discover 解释。
+- **D4 · 数据时序 + 单篇归因** ✅：`tools/analytics_snapshot.py`（账号快照按日追加 `schedule/analytics/<date>.json` 时序）+ `output/<slug>/performance.json` 契约 + `tools/perf_record.py` 记录器（手填，记完自动重算先验）。
+- **D7 · 闭环** ✅ 已通：`tools/perf_priors.py`（单篇表现按概念/类型归因 → `wiki/_performance_priors.json`）+ scout2 加 `perf_prior` 信号。**实测**：爆款概念热点 +3.5、翻车概念 −3.5；无数据优雅降级。
+- **D5 · 真实拉取**（待续）：小红书 note 指标 API（Spider_XHS 本地签名）→ 自动填 performance.json，替代手填。
+- **D6 · 数据中心**（待续）：web 展示时序趋势 + 单篇表现排行 + 先验"高赢面概念" + 异常告警；合并 analytics/xhs 看板。
 
 ## 决策记录
 - 打分用 deepseek-v4-flash（便宜），不用 pro（选题打分不需要推理深度）；批量+上限控成本。

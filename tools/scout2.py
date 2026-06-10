@@ -79,7 +79,19 @@ def days_old(published: str) -> int:
     return 99
 
 
-def cheap_score(it: dict, reader_kws: set, concepts: set, covered: list[set]) -> tuple[float, list]:
+def load_perf_priors() -> dict:
+    """读爆款先验（perf_priors.py 产出）。无则空。"""
+    p = REPO / "wiki" / "_performance_priors.json"
+    if not p.exists():
+        return {}
+    try:
+        return json.loads(p.read_text(encoding="utf-8")) or {}
+    except Exception:
+        return {}
+
+
+def cheap_score(it: dict, reader_kws: set, concepts: set, covered: list[set],
+                priors: dict | None = None) -> tuple[float, list]:
     score = float(it.get("_weight", 5))
     reasons = [f"src+{it.get('_weight', 5)}"]
     t = (it.get("title", "") + " " + it.get("summary", "")).lower()
@@ -96,6 +108,16 @@ def cheap_score(it: dict, reader_kws: set, concepts: set, covered: list[set]) ->
     hit_c = next((c for c in concepts if c in t), None)
     if hit_c:
         score += 4; reasons.append(f"concept:{hit_c}")
+    # 爆款先验：命中高赢面概念的新热点加权（闭环：表现→选题）
+    if priors:
+        pc = priors.get("concepts", {}) or {}
+        best = 0.0; best_c = None
+        for c, info in pc.items():
+            if c in t and abs(info.get("weight", 0)) > abs(best):
+                best = info.get("weight", 0); best_c = c
+        if best_c:
+            score += best * 4  # weight∈[-1,1] → ±4 分
+            reasons.append(f"perf:{best_c}{'+' if best >= 0 else ''}{best:.2f}")
     # 时效
     d = days_old(it.get("published", ""))
     if d <= 1:
@@ -184,6 +206,7 @@ def run(date: str, reader: str, prerank_n: int, angle_n: int, use_llm: bool) -> 
     reader_kws = reader_keywords(reader)
     concepts = concept_names()
     covered = covered_title_tokens()
+    priors = load_perf_priors()
 
     all_items: list[dict] = []
     seen_urls = set()
@@ -200,7 +223,7 @@ def run(date: str, reader: str, prerank_n: int, angle_n: int, use_llm: bool) -> 
             seen_urls.add(u)
             it["_source"] = s["name"]
             it["_weight"] = s.get("weight", 5)
-            sc, reasons = cheap_score(it, reader_kws, concepts, covered)
+            sc, reasons = cheap_score(it, reader_kws, concepts, covered, priors)
             it["_cheap"] = sc
             it["_reasons"] = reasons
             all_items.append(it)

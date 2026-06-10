@@ -1,0 +1,52 @@
+{
+ "date": "2026-06-11",
+ "xhs_account": {
+  "handle": "fantastic_ming",
+  "name": "AI文科生",
+  "bio": "英专出身的 AI PM 分享自建app和觉着有意思的AI故事 希望读到我内容的人都能少一点AI焦虑 多一分AI行动力",
+  "following": 151,
+  "followers": 589,
+  "followerGoal": 1000,
+  "totalLikesCollects": 8055
+ },
+ "xhs_metrics": {
+  "impressions": 116000,
+  "views": 22000,
+  "coverCtr": 18.7,
+  "likes": 709,
+  "collects": 1023,
+  "comments": 36,
+  "shares": 395,
+  "netFollowers": 73,
+  "newFollows": 74,
+  "unfollows": 3,
+  "visitors": 384
+ },
+ "platforms": [
+  {
+   "platform": "小红书",
+   "followers": 589,
+   "newFollowers": 73,
+   "reads": 116000,
+   "views": 22000,
+   "likes": 709,
+   "collects": 1023,
+   "comments": 36,
+   "shares": 395,
+   "posts": 77,
+   "updatedAt": "2026-06-10"
+  },
+  {
+   "platform": "邮件",
+   "posts": 77
+  },
+  {
+   "platform": "公众号",
+   "posts": 23
+  },
+  {
+   "platform": "抖音",
+   "posts": 2
+  }
+ ]
+}
