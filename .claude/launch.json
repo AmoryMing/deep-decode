@@ -10,8 +10,9 @@
     {
       "name": "web-dev",
       "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "cd /Users/muming/项目/内容/web && exec npm run dev"],
-      "port": 3000
+      "runtimeArgs": ["-c", "cd /Users/muming/项目/内容/web && exec npm run dev -- --port 3100"],
+      "port": 3100,
+      "autoPort": true
     }
   ]
 }

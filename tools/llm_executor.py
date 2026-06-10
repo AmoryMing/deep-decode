@@ -27,6 +27,19 @@ def now_date() -> str:
     return datetime.datetime.now().strftime("%Y-%m-%d")
 
 
+def _tone_violations(root: Path) -> list:
+    """跑 tone_lint 取违规清单（供 article 自检）。无违规/跑不动返回 []。"""
+    import subprocess
+    try:
+        subprocess.run([sys.executable, str(REPO / "tools" / "tone_lint.py"),
+                        "--root", str(root), "--article", "article.md"],
+                       capture_output=True, text=True, timeout=60)
+        rep = json.loads((root / "tone_report.json").read_text(encoding="utf-8"))
+        return rep.get("violations", []) if not rep.get("pass") else []
+    except Exception:
+        return []
+
+
 # ── 配置 ────────────────────────────────────────────────
 def load_config() -> dict | None:
     f = REPO / "factory.config.yaml"
@@ -185,7 +198,23 @@ def exec_article(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
     }
     front = "---\n" + yaml.safe_dump(fm, allow_unicode=True, sort_keys=False) + "---\n\n"
     (root / "article.md").write_text(front + body, encoding="utf-8")
-    return True, f"article.md 已写（{len(body)} 字）"
+
+    # 自检：文章必须过自己的语气门，否则带着违规清单定向重写一次（gate 在 polish 之前，
+    # 不自检会卡死）。这让 article 节点对自己的产物负责。
+    fixed_note = ""
+    viols = _tone_violations(root)
+    if viols:
+        fix_msg = (
+            "下面这篇正文触犯了语气门，请只做最小修改消除这些违规，保持判断/结构/字数不变，"
+            f"直接输出修订后的完整正文 markdown（从 # 开始）：\n违规：{viols}\n\n正文：\n{body}")
+        body2 = chat(cfg, "m.article", [{"role": "system", "content": sys_msg},
+                                        {"role": "user", "content": fix_msg}], max_tokens=8000)
+        body2 = re.sub(r"^```\w*\s*|\s*```$", "", body2.strip())
+        if len(body2) > 400:
+            (root / "article.md").write_text(front + body2, encoding="utf-8")
+            body = body2
+            fixed_note = f"，语气修订1次（原违规 {len(viols)}）"
+    return True, f"article.md 已写（{len(body)} 字）{fixed_note}"
 
 
 def exec_evidence(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:

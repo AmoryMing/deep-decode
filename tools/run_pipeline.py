@@ -181,11 +181,16 @@ def drive(root: Path, once: bool = False, dry: bool = False, max_steps: int = 40
                 run["blocked_reason"] = f"{nid} — 已达单 run LLM 调用上限 {cap}"
                 break
             run["current"] = nid; write_run(root, run)  # 标注"生成中"
-            try:
-                ok, msg = llm_executor.run_node(root, spec, nid)
-            except Exception:
-                ok, msg = False, "生成异常：" + traceback.format_exc()[-400:]
-            run["llm_calls"] = run.get("llm_calls", 0) + 1
+            ok, msg = False, ""
+            for attempt in range(2):  # 节点级重试：长链偶发瞬时失败，整节点重跑一次
+                try:
+                    ok, msg = llm_executor.run_node(root, spec, nid)
+                except Exception:
+                    ok, msg = False, "生成异常：" + traceback.format_exc()[-300:]
+                run["llm_calls"] = run.get("llm_calls", 0) + 1
+                if ok:
+                    break
+                import time as _t; _t.sleep(3)
             # seedance 出片满足 m.video（不走 remotion 的 podcast/scene_plan 契约）
             if ok and nid == "m.video" and (root / "seedance_video.mp4").exists() \
                     and (root / "seedance_video.mp4").stat().st_size > 50000:
