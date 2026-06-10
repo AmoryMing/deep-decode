@@ -21,6 +21,7 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 sys.path.insert(0, str(HERE))
 import pipeline  # noqa: E402  复用 runner 的图加载 / 状态计算 / 契约校验
+import llm_executor  # noqa: E402  BYOK 生成执行器（M2.5）
 
 
 def now() -> str:
@@ -103,18 +104,35 @@ def drive(root: Path, once: bool = False, dry: bool = False, max_steps: int = 40
         write_run(root, run)
 
         if nxt is None:
-            run["status"] = "done"
-            run["history"].append({"node": None, "action": "done", "ok": True, "at": now(),
-                                    "msg": "ready-to-distribute"})
+            prog = status["progress"]
+            if prog["done"] >= prog["total"]:
+                run["status"] = "done"
+                run["history"].append({"node": None, "action": "done", "ok": True, "at": now(),
+                                        "msg": "ready-to-distribute"})
+            else:
+                # 无可推进节点但未全完成 = 卡住（多半 Strategy 未确认 / 缺上游产物），不是 done
+                run["status"] = "blocked"
+                run["blocked_reason"] = (
+                    f"无可推进节点但仅 {prog['done']}/{prog['total']} 完成"
+                    "——多半 Strategy 未确认（去产出页确认）或上游缺产物")
+                run["history"].append({"node": None, "action": "stalled", "ok": False,
+                                       "at": now(), "msg": run["blocked_reason"]})
             break
 
         nid = nxt["id"]
         # 取完整节点（含 run / hard_stop）
         node = next((n for n in pipeline.expand_compound(graph, spec) if n["id"] == nid), nxt)
 
-        if nid in SAFE_AUTORUN and not dry:
+        # 解析 atom: 别名（如 m.tone_gate 的 run=atom:a.tone_lint → 跑 a.tone_lint）
+        autorun_fn = SAFE_AUTORUN.get(nid)
+        if autorun_fn is None:
+            rf = (node.get("run") or "")
+            if rf.startswith("atom:"):
+                autorun_fn = SAFE_AUTORUN.get(rf.split(":", 1)[1].strip())
+
+        if autorun_fn and not dry:
             try:
-                ok, msg = SAFE_AUTORUN[nid](root)
+                ok, msg = autorun_fn(root)
             except Exception:
                 ok, msg = False, "执行异常：" + traceback.format_exc()[-400:]
             # 旁路节点（无 produces）跑成功 → 标 state done，否则永远 pending
@@ -134,6 +152,38 @@ def drive(root: Path, once: bool = False, dry: bool = False, max_steps: int = 40
             if once:
                 run["status"] = "running"
                 break
+            continue
+        elif nid in llm_executor.EXECUTORS and not dry and not node.get("hard_stop"):
+            cfg = llm_executor.load_config()
+            if not llm_executor.has_key(cfg):
+                reason = "需要 factory.config.yaml 填模型 key 才能跑生成节点"
+                run["status"] = "blocked"; run["blocked_reason"] = f"{nid} — {reason}"
+                run["history"].append({"node": nid, "action": "blocked", "ok": False,
+                                       "at": now(), "msg": reason}); break
+            # 成本护栏：单 run 的 LLM 调用上限
+            cap = (cfg.get("budget", {}) or {}).get("max_calls_per_run", 12)
+            if run.get("llm_calls", 0) >= cap:
+                run["status"] = "blocked"
+                run["blocked_reason"] = f"{nid} — 已达单 run LLM 调用上限 {cap}"
+                break
+            run["current"] = nid; write_run(root, run)  # 标注"生成中"
+            try:
+                ok, msg = llm_executor.run_node(root, spec, nid)
+            except Exception:
+                ok, msg = False, "生成异常：" + traceback.format_exc()[-400:]
+            run["llm_calls"] = run.get("llm_calls", 0) + 1
+            spec2 = pipeline.load_spec(root)
+            n2 = next((n for n in pipeline.expand_compound(graph, spec2) if n["id"] == nid), node)
+            st2, det = pipeline.node_status(root, spec2, n2)
+            passed = st2 == "done"
+            run["history"].append({"node": nid, "action": "generated", "ok": passed,
+                                   "at": now(), "msg": (msg or "")[-300:]})
+            if not passed:
+                run["status"] = "blocked"
+                run["blocked_reason"] = f"{nid} 生成完但契约未过：{'; '.join(det)[:300]}"
+                break
+            if once:
+                run["status"] = "running"; break
             continue
         else:
             reason = classify_block(node)

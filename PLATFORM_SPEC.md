@@ -50,13 +50,15 @@
 - [x] 并行批次：多 run 各自 run.json，`/admin/runs` 一屏看全部，活跃排前
 - 验收：UI 点开始 → driver 自跑 → 正确停在生成节点 `n.router`，进度条 + 卡住原因实时显示 ✅ 已浏览器验证
 
-### M2.5 · BYOK 生成执行器（让 run 真正产出，不止于 block）▶ 高价值
-**目标**：生成节点（router/evidence/article/polish…）由 LLM API 自动跑，run 能真正推到 draft-ready。
-- [ ] `factory.config.yaml`：模型 provider + key（DeepSeek/Claude/豆包）+ 每节点模型选择
-- [ ] generative executor：按节点 `run:` + 模板/reader/wiki 组 prompt → 调 API → 落产物 → 过契约
-- [ ] 成本护栏：每 run token 上限、缓存、dry-run 估价（呼应 OPTIMIZATION_BACKLOG 成本 2 分）
-- [ ] 接进 driver：SAFE_AUTORUN 之外，生成节点走 executor 而非 block
-- 验收：一个 decode 项目从 router 一路自动跑到 article 过 tone/polish 契约，全程无人工
+### M2.5 · BYOK 生成执行器（让 run 真正产出，不止于 block）✅ 核心打通
+**目标**：生成节点由 LLM API 自动跑，run 能真正推到 draft-ready。
+- [x] `factory.config.yaml`：DeepSeek key（用户提供）+ 分级路由（分类 v4-flash / 写稿 v4-pro），gitignore
+- [x] `tools/llm_executor.py`：OpenAI 兼容调用（urllib 无新依赖）+ 执行器 router/evidence/article/strategy；URL 抓正文做一手素材
+- [x] 成本护栏：单次 max_tokens + 单 run max_calls，读 factory.config.budget
+- [x] 接进 driver：生成节点走 executor；atom: 别名解析（tone_gate 自动跑 tone_lint）；修了"Strategy 未确认却误报 done"的 bug
+- [x] UI Strategy 确认按钮（生成草案 + 置 confirmed，放行下游）
+- 验收：decode 项目 driver 自动 router→evidence→article→tone_gate（5/11），**DeepSeek 写的 3600 字文章 0 违规过 tone_lint**，停在 m.polish（待接 executor）✅ 已验证
+- [ ] 待接执行器：m.polish / m.factcheck（DeepSeek）、m.visual（gpt-image）、m.video（Seedance）
 
 ### M3 · 接入创作者资产（onboarding）
 **目标**：创作者插自己的 wiki + 模板 + 读者画像，全在 UI。

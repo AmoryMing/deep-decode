@@ -2,11 +2,15 @@
 
 import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import fs from "node:fs";
 import path from "node:path";
 import yaml from "js-yaml";
 import { SESSION_COOKIE, verifyToken } from "@/lib/auth";
 import { repoRoot } from "@/lib/repo";
+
+const execFileP = promisify(execFile);
 
 export interface CreateState {
   ok: boolean;
@@ -127,4 +131,48 @@ export async function createProject(
 
   revalidatePath("/admin/produce");
   return { ok: true, message: `已建 ${slug}`, slug };
+}
+
+/**
+ * 确认 Strategy（唯一硬停）：用 DeepSeek 生成 phase1_strategy.md 草案 + 置
+ * strategy_confirmed=true，放行下游。一步「生成并确认」。
+ */
+export async function confirmStrategy(
+  _prev: CreateState,
+  formData: FormData,
+): Promise<CreateState> {
+  const store = await cookies();
+  if (!(await verifyToken(store.get(SESSION_COOKIE)?.value))) {
+    return { ok: false, message: "未登录" };
+  }
+  const slug = String(formData.get("slug") || "").trim();
+  if (!/^[A-Za-z0-9_-]+$/.test(slug)) return { ok: false, message: "无效项目" };
+  const root = repoRoot();
+  const dir = path.join(root, "output", slug);
+  const specPath = path.join(dir, "spec_lock.yaml");
+  if (!fs.existsSync(specPath)) return { ok: false, message: "缺 spec_lock" };
+
+  try {
+    // 1) 生成 Strategy 草案（DeepSeek，~30s）
+    await execFileP(
+      "python3",
+      ["tools/llm_executor.py", "--root", dir, "--node", "n.strategy"],
+      { cwd: root, timeout: 120000 },
+    );
+    // 2) 置 strategy_confirmed=true（正则替换，保留格式）
+    let spec = fs.readFileSync(specPath, "utf8");
+    if (/strategy_confirmed:\s*false/.test(spec)) {
+      spec = spec.replace(/strategy_confirmed:\s*false/, "strategy_confirmed: true");
+    } else if (!/strategy_confirmed:/.test(spec)) {
+      spec = spec.replace(
+        /(project:\s*\n)/,
+        `$1  strategy_confirmed: true\n`,
+      );
+    }
+    fs.writeFileSync(specPath, spec, "utf8");
+  } catch {
+    return { ok: false, message: "确认失败：python/key 不可用或超时" };
+  }
+  revalidatePath("/admin/produce");
+  return { ok: true, message: "已确认，下游可跑", slug };
 }

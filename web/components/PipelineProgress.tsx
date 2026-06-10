@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ProjectState } from "@/lib/projectState";
 import { StartRunButton } from "./StartRunButton";
+import { ConfirmStrategyButton } from "./ConfirmStrategyButton";
 
 const LAYER_LABEL: Record<string, string> = {
   molecule: "m",
@@ -58,7 +59,11 @@ export function PipelineProgress({ state }: { state: ProjectState }) {
         </span>
         {!state.ready_to_distribute && (
           <span className="shrink-0">
-            <StartRunButton slug={state.slug} />
+            {state.confirmed ? (
+              <StartRunButton slug={state.slug} />
+            ) : (
+              <ConfirmStrategyButton slug={state.slug} />
+            )}
           </span>
         )}
       </div>
