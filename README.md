@@ -9,7 +9,7 @@ produced by a deterministic **skill-graph** pipeline, then driven to publish-rea
 
 [![Stars](https://img.shields.io/github/stars/AmoryMing/deep-decode?style=for-the-badge&logo=github&color=da7756)](https://github.com/AmoryMing/deep-decode/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/AmoryMing/deep-decode/deploy?style=for-the-badge&color=2b7489)](https://github.com/AmoryMing/deep-decode/commits/deploy)
-![Decoded pieces](https://img.shields.io/badge/decoded%20pieces-155%2B-blue?style=for-the-badge)
+![Decoded pieces](https://img.shields.io/badge/decoded%20pieces-130%2B-blue?style=for-the-badge)
 ![Built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-da7756?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/web-Next.js%2015-black?style=for-the-badge&logo=next.js)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge)
@@ -32,7 +32,7 @@ Give it a blog post, a tweet, a product, a person, or a trending topic. It resea
 
 The whole run is orchestrated by a declarative **skill graph** and a deterministic runner that *refuses to advance until each step's artifact passes its contract*. No silently-skipped steps. File = state. Failure is visible.
 
-This is not a demo. The `output/` folder holds **155+ real pieces** shipped through the pipeline.
+This is not a demo. The `output/` folder holds **130+ finished pieces** shipped through the pipeline.
 
 ## Why it's different from "ask an LLM to write a post"
 
@@ -98,7 +98,7 @@ python3 ../../tools/pipeline.py gate m.article   # verify the artifact contract
 
 ## Examples
 
-A few of the 155+ pieces (titles translated; sources are decoded in Chinese):
+A few of the 130+ pieces (titles translated; sources are decoded in Chinese):
 
 | Piece | Source decoded |
 |---|---|
@@ -138,7 +138,7 @@ deep-decode/
 ├── .claude/skills/   # the skills: deep-decode, polish, visual, podcast, video, distribute…
 ├── skillgraph.yaml   # the declarative 3-layer graph (single source of step order)
 ├── tools/            # pipeline.py runner + atoms (tone_lint, tts_atom, imagegen_relay…)
-├── output/           # 155+ shipped pieces — one folder each (article + media)
+├── output/           # 130+ finished pieces — one folder each (article + media)
 ├── wiki/             # structured knowledge: topics / sources / concepts / published
 ├── schedule/         # queue · in-progress · published · calendar
 ├── styles/           # voice + feedback + best-of, multiple kits

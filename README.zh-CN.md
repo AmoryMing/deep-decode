@@ -9,7 +9,7 @@
 
 [![Stars](https://img.shields.io/github/stars/AmoryMing/deep-decode?style=for-the-badge&logo=github&color=da7756)](https://github.com/AmoryMing/deep-decode/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/AmoryMing/deep-decode/deploy?style=for-the-badge&color=2b7489)](https://github.com/AmoryMing/deep-decode/commits/deploy)
-![Decoded pieces](https://img.shields.io/badge/已产出-155%2B%20篇-blue?style=for-the-badge)
+![Decoded pieces](https://img.shields.io/badge/已产出-130%2B%20篇-blue?style=for-the-badge)
 ![Built with Claude Code](https://img.shields.io/badge/built%20with-Claude%20Code-da7756?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/web-Next.js%2015-black?style=for-the-badge&logo=next.js)
 ![License](https://img.shields.io/badge/license-Apache--2.0-green?style=for-the-badge)
@@ -32,7 +32,7 @@
 
 整条链路由声明式**技能图谱**编排，确定性 runner *在每一步产物通过契约校验之前绝不放行*。不会有被悄悄跳过的步骤。文件即状态，失败可见。
 
-这不是 demo。`output/` 里有 **155+ 篇**真实跑出来的成品。
+这不是 demo。`output/` 里有 **130+ 篇**真实跑出来的成品。
 
 ## 和"让大模型写一篇"有什么不同
 
@@ -98,7 +98,7 @@ python3 ../../tools/pipeline.py gate m.article   # 校验产物契约
 
 ## 示例
 
-155+ 篇里的几篇（原文均为中文深度拆解）：
+130+ 篇里的几篇（原文均为中文深度拆解）：
 
 | 篇目 | 拆解来源 |
 |---|---|
@@ -138,7 +138,7 @@ deep-decode/
 ├── .claude/skills/   # 技能：deep-decode、polish、visual、podcast、video、distribute…
 ├── skillgraph.yaml   # 声明式三层图（步骤顺序的唯一来源）
 ├── tools/            # pipeline.py runner + 原子（tone_lint、tts_atom、imagegen_relay…）
-├── output/           # 155+ 篇成品——一篇一目录（文章 + 媒体）
+├── output/           # 130+ 篇成品——一篇一目录（文章 + 媒体）
 ├── wiki/             # 结构化知识：topics / sources / concepts / published
 ├── schedule/         # queue · in-progress · published · calendar
 ├── styles/           # voice + feedback + best，多套风格

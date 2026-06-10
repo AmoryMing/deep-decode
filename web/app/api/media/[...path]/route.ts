@@ -25,7 +25,13 @@ const TYPES: Record<string, string> = {
   ".mp3": "audio/mpeg",
   ".wav": "audio/wav",
   ".mp4": "video/mp4",
+  // 审核队列的预览：邮件 HTML / READY.md。会在审稿期间反复变，不能 immutable 缓存
+  ".html": "text/html; charset=utf-8",
+  ".md": "text/plain; charset=utf-8",
+  ".txt": "text/plain; charset=utf-8",
 };
+
+const NO_CACHE_EXT = new Set([".html", ".md", ".txt"]);
 
 export async function GET(
   _req: NextRequest,
@@ -36,7 +42,9 @@ export async function GET(
   const ext = path.extname(rel).toLowerCase();
   const headers = {
     "Content-Type": TYPES[ext] || "application/octet-stream",
-    "Cache-Control": "public, max-age=31536000, immutable",
+    "Cache-Control": NO_CACHE_EXT.has(ext)
+      ? "no-cache"
+      : "public, max-age=31536000, immutable",
   };
 
   // 1) 本地文件优先
