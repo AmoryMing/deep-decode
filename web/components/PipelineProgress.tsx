@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ProjectState } from "@/lib/projectState";
+import { StartRunButton } from "./StartRunButton";
 
 const LAYER_LABEL: Record<string, string> = {
   molecule: "m",
@@ -55,6 +56,11 @@ export function PipelineProgress({ state }: { state: ProjectState }) {
         <span className="shrink-0 font-mono text-xs text-muted">
           {done}/{total} · {pct}%
         </span>
+        {!state.ready_to_distribute && (
+          <span className="shrink-0">
+            <StartRunButton slug={state.slug} />
+          </span>
+        )}
       </div>
 
       {/* 当前卡在哪 */}

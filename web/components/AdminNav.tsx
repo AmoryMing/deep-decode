@@ -7,10 +7,11 @@ const NAV = [
   { href: "/admin", label: "总览", num: "", desc: "闭环全景" },
   { href: "/admin/discover", label: "选题", num: "1", desc: "内容发现" },
   { href: "/admin/produce", label: "产出", num: "2", desc: "文图播客视频" },
-  { href: "/admin/compliance", label: "合规", num: "3", desc: "发布前审查" },
-  { href: "/admin/queue", label: "审核", num: "4", desc: "全平台待发清单" },
-  { href: "/admin/calendar", label: "投放", num: "5", desc: "发布日历" },
-  { href: "/admin/analytics", label: "数据", num: "6", desc: "拉取 + AI 分析" },
+  { href: "/admin/runs", label: "运行", num: "3", desc: "流水线进度" },
+  { href: "/admin/compliance", label: "合规", num: "4", desc: "发布前审查" },
+  { href: "/admin/queue", label: "审核", num: "5", desc: "全平台待发清单" },
+  { href: "/admin/calendar", label: "投放", num: "6", desc: "发布日历" },
+  { href: "/admin/analytics", label: "数据", num: "7", desc: "拉取 + AI 分析" },
 ];
 
 export function AdminNav() {

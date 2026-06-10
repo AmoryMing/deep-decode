@@ -82,6 +82,7 @@ export function listPipelineProjects(): string[] {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
+    .filter((s) => !s.startsWith("_") && !s.startsWith("exp-"))
     .filter((s) => fs.existsSync(path.join(dir, s, "spec_lock.yaml")))
     .sort()
     .reverse();

@@ -64,6 +64,9 @@ voice-lab/blend/inputs/
 voice-lab/blend/outputs/
 voice-lab/dataset/
 
+# Pipeline run state (runtime — written by run_pipeline.py driver, per-machine)
+output/**/_state/
+
 # Regeneratable TTS / video intermediates (keep only podcast.mp3 + *_compressed.mp4)
 output/**/tts_segments/
 output/**/tts_segments_doubao/

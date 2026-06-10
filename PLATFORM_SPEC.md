@@ -41,14 +41,22 @@
 - [x] 产出页 `/admin/produce` 对在写项目显示真实**节点级进度条**（不再只是"四件套齐全度"的静态点）
 - 验收：打开产出页能看到某 in-progress 项目"7/14 节点"的进度条 + 卡在哪个节点 ✅ 已验证
 
-### M2 · 从 UI 启动一次 run + 进度轮询
+### M2 · 从 UI 启动一次 run + 进度轮询 ✅
 **目标**：「press start」+「progress bar」。
-- [ ] run 状态模型：`output/<slug>/_state/run.json`（status=queued|running|blocked|done|failed, 当前节点, 时间戳, 日志尾巴）
-- [ ] `tools/run_pipeline.py`：driver——循环 `next` → 跑该节点的确定性实现 → `gate` → 写 run.json；遇到 hard_stop / 需 agent 的生成节点则停在 blocked 并标注原因
-- [ ] 确定性原子自动跑（tone_lint / svg→png / tts / imagegen / 打包）；生成节点（article/evidence）走 BYOK LLM 调用（DeepSeek/Claude，读 `factory.config.yaml`）或排队给操作者
-- [ ] web server action `startRun(slug)` 后台 spawn driver；`/admin/runs` 实时进度页（轮询 run.json）
-- [ ] 并行批次：多个 run 各自 run.json，`/admin/runs` 一屏看全部进度条
-- 验收：UI 点「开始」，一个只含确定性步骤的项目能自己跑到 blocked/done，进度条实时动
+- [x] run 状态模型：`output/<slug>/_state/run.json`（status / 当前节点 / 进度 / blocked_reason / history / log_tail；gitignore）
+- [x] `tools/run_pipeline.py`：driver——循环问 `build_status` → 安全确定性原子自动跑 → mark/gate → 写 run.json；生成/agent/重原子停在 blocked 并写**精确原因**（绝不静默跳过）。带 `--once/--dry-run/--node` 定向重跑
+- [x] 确定性原子自动跑：`a.tone_lint` 已接（幂等白名单 SAFE_AUTORUN）；其余重原子（tts/imagegen/video/各渠道）默认 block 说明，待显式启用
+- [x] web server action `startRun(slug)`（detached spawn，防穿越）；`/admin/runs` 实时进度页（每 3s 轮询 `/api/runs`）；产出卡片「▶ 开始」按钮
+- [x] 并行批次：多 run 各自 run.json，`/admin/runs` 一屏看全部，活跃排前
+- 验收：UI 点开始 → driver 自跑 → 正确停在生成节点 `n.router`，进度条 + 卡住原因实时显示 ✅ 已浏览器验证
+
+### M2.5 · BYOK 生成执行器（让 run 真正产出，不止于 block）▶ 高价值
+**目标**：生成节点（router/evidence/article/polish…）由 LLM API 自动跑，run 能真正推到 draft-ready。
+- [ ] `factory.config.yaml`：模型 provider + key（DeepSeek/Claude/豆包）+ 每节点模型选择
+- [ ] generative executor：按节点 `run:` + 模板/reader/wiki 组 prompt → 调 API → 落产物 → 过契约
+- [ ] 成本护栏：每 run token 上限、缓存、dry-run 估价（呼应 OPTIMIZATION_BACKLOG 成本 2 分）
+- [ ] 接进 driver：SAFE_AUTORUN 之外，生成节点走 executor 而非 block
+- 验收：一个 decode 项目从 router 一路自动跑到 article 过 tone/polish 契约，全程无人工
 
 ### M3 · 接入创作者资产（onboarding）
 **目标**：创作者插自己的 wiki + 模板 + 读者画像，全在 UI。
