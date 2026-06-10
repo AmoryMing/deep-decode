@@ -63,8 +63,8 @@
 - **D3 · 选题收件箱 UI**：`/admin/discover` 读 JSON → 排序卡 + 勾选建项目（复用 createProject）。
 - **D4 · 数据时序 + 单篇归因** ✅：`tools/analytics_snapshot.py`（账号快照按日追加 `schedule/analytics/<date>.json` 时序）+ `output/<slug>/performance.json` 契约 + `tools/perf_record.py` 记录器（手填，记完自动重算先验）。
 - **D7 · 闭环** ✅ 已通：`tools/perf_priors.py`（单篇表现按概念/类型归因 → `wiki/_performance_priors.json`）+ scout2 加 `perf_prior` 信号。**实测**：爆款概念热点 +3.5、翻车概念 −3.5；无数据优雅降级。
-- **D5 · 真实拉取**（待续）：小红书 note 指标 API（Spider_XHS 本地签名）→ 自动填 performance.json，替代手填。
-- **D6 · 数据中心**（待续）：web 展示时序趋势 + 单篇表现排行 + 先验"高赢面概念" + 异常告警；合并 analytics/xhs 看板。
+- **D6 · 数据中心** ✅：`/admin/analytics` 加"数据中心"段（`web/lib/dataCenter.ts` + `DataCenterPanel`）——账号趋势 sparkline + 高/低赢面概念（先验可视）+ 单篇表现排行（按互动率 + 藏赞比）。无数据各段优雅引导用 perf_record。**实测**：种 3 篇 → 赢面概念 deepseek/karpathy +0.31、排行按互动率 29%/22%/8% 正确呈现。
+- **D5 · 真实拉取**（受限，记录在案）：Spider_XHS 的 note 指标接口（`get_user_notes_detail`）走**蒲公英 pgy.xiaohongshu.com**，需品牌/MCN 账号，非创作者自己的登录态可读；创作者自有数据要 creator dashboard 私有接口（Spider_XHS 未封装）。**结论**：自有 note 表现的现实入口是 `perf_record.py` 手填（创作者抄后台数）；自动拉取待品牌账号或 dashboard 接口逆向。基础设施（签名/登录态/契约）已就绪，接口一通即接。
 
 ## 决策记录
 - 打分用 deepseek-v4-flash（便宜），不用 pro（选题打分不需要推理深度）；批量+上限控成本。

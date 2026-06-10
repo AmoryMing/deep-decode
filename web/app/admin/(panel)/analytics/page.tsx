@@ -2,18 +2,23 @@ import type { Metadata } from "next";
 import { getAnalytics, getAIInsight } from "@/lib/analytics";
 import { getFactoryStats } from "@/lib/content";
 import { getCalendarStats } from "@/lib/calendar";
+import { getDataCenter } from "@/lib/dataCenter";
 import { AnalyticsPanel } from "@/components/AnalyticsPanel";
+import { DataCenterPanel } from "@/components/DataCenterPanel";
 
 export const metadata: Metadata = {
   title: "数据分析",
   robots: { index: false, follow: false },
 };
 
+export const dynamic = "force-dynamic";
+
 export default function AnalyticsPage() {
   const data = getAnalytics();
   const insight = getAIInsight();
   const factory = getFactoryStats();
   const cal = getCalendarStats();
+  const dc = getDataCenter();
 
   const aiInput = {
     platforms: data.platforms.map((p) => ({
@@ -36,6 +41,15 @@ export default function AnalyticsPage() {
         </p>
       </header>
       <AnalyticsPanel data={data} aiInput={aiInput} insight={insight} />
+
+      {/* 数据中心：时序趋势 + 赢面概念 + 单篇排行（闭环可视） */}
+      <section className="border-t border-line pt-6">
+        <h3 className="mb-1 text-lg font-bold text-ink">数据中心 · 闭环</h3>
+        <p className="mb-4 text-sm text-muted">
+          账号趋势 + 单篇表现归因 → "哪类概念赢面高" → 自动给相关新热点在选题页加权。
+        </p>
+        <DataCenterPanel dc={dc} />
+      </section>
     </div>
   );
 }
