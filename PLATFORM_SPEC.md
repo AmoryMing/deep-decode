@@ -60,7 +60,8 @@
 
 ### M3 · 接入创作者资产（onboarding）
 **目标**：创作者插自己的 wiki + 模板 + 读者画像，全在 UI。
-- [ ] `factory.config.yaml`（+ `.example`）：路径/渠道/模型 key/默认原子，单一配置源
+- [x] `factory.config.yaml.example`：路径/渠道/模型 key/成本护栏/默认原子，单一配置源（gitignore 真文件）
+- [ ] `/admin/setup` 页：展示 config 状态 + reader/style/template/渠道 清单（先只读盘点）
 - [ ] 读者画像编辑器：`/admin/setup/reader` 读写 `readers/<r>/{persona.md,tone.yaml}`
 - [ ] 知识库接入：UI 导入 → 走 ingest skill 写 `wiki/sources|concepts`（先支持粘贴/文件，RSS 留 M4）
 - [ ] 模板选择：content_type ↔ 模板在 UI 可视、可选（读 `templates/content/_registry.yaml`）

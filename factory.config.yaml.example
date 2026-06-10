@@ -1,0 +1,60 @@
+# factory.config.yaml — open-content 单一配置源（路径 / 模型 / 渠道 / 默认原子）
+# 复制为 factory.config.yaml 并填好；factory.config.yaml 已 gitignore（含 key，不入库）。
+# 这是 M2.5 生成执行器 + M3 onboarding 的共同依赖。
+
+# ── 模型（BYOK：自带 key）─────────────────────────────────
+# 生成步骤（router / evidence / article / polish…）调这些。全部 OpenAI 兼容端点。
+models:
+  # 默认 provider；每个节点可在 nodes 里覆盖
+  default: deepseek
+  providers:
+    deepseek:
+      base_url: https://api.deepseek.com/v1
+      api_key: ""            # 填你的 key（sk-...）
+      model: deepseek-chat
+    claude:
+      base_url: https://api.anthropic.com/v1
+      api_key: ""
+      model: claude-opus-4-8
+    doubao:
+      base_url: https://ark.cn-beijing.volces.com/api/v3
+      api_key: ""
+      model: ""             # 填推理接入点 ID
+  # 按节点选模型（可选；不写则用 default）
+  nodes:
+    n.router: deepseek          # 路由分类，便宜模型够用
+    m.article: claude           # 正文要好模型
+    m.polish: claude
+
+# ── 成本护栏 ──────────────────────────────────────────────
+budget:
+  max_tokens_per_run: 200000    # 单篇 run 的 output token 上限，超了 driver 停
+  dry_run_estimate: true        # 启动前先估价
+
+# ── 视频后端（M7）────────────────────────────────────────
+video:
+  backend: remotion             # remotion | seedance | open-design-html
+  seedance:
+    api_key: ""
+    base_url: ""
+
+# ── 渠道默认（分发；发送永远人审后）──────────────────────
+channels:
+  default: [email, wechat, xhs]
+  # 凭证仍在各自 skill 的 config（如 .claude/skills/chinadaas-email/config.yaml），不在这
+
+# ── 默认原子（新建项目的 spec_lock 起手值）────────────────
+defaults:
+  content_type: decode          # decode | brief | practice
+  reader: default               # readers/<r>/
+  style: default                # styles/<s>/
+  voice: null                   # styles/_shared/voices/<v>/；null = 不配音色
+  image_backend: gpt-image      # svg | gpt-image
+
+# ── 路径（一般不用改）────────────────────────────────────
+paths:
+  output: output
+  wiki: wiki
+  readers: readers
+  styles: styles
+  templates: templates

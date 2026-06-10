@@ -43,6 +43,7 @@ output/**/podcast_raw.mp3
 # Secrets
 .env
 *.key
+factory.config.yaml
 .claude/skills/chinadaas-email/config.yaml
 .agents/skills/chinadaas-email/config.yaml
 # Platform session credentials (uploader login state) — leaked once 2026-06-10, never track
