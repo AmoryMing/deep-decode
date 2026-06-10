@@ -33,10 +33,15 @@ budget:
 
 # ── 视频后端（M7）────────────────────────────────────────
 video:
-  backend: remotion             # remotion | seedance | open-design-html
-  seedance:
-    api_key: ""
-    base_url: ""
+  backend: seedance             # remotion(旁白长视频) | seedance(生成式短片,已通) | open-design-html(本地HTML→MP4,无需API)
+  seedance:                     # 火山引擎视觉 API（AK/SK V4 签名），需开通"即梦视频生成"
+    access_key: ""
+    secret_key: ""
+    host: visual.volcengineapi.com
+    region: cn-north-1
+    service: cv
+    req_key: jimeng_t2v_v30_1080p   # 视频生成3.0 1080P（已验证可用）
+  # open-design-html 后端：github.com/nexu-io/html-video（本地 Node+ffmpeg+Playwright，无需 key）
 
 # ── 渠道默认（分发；发送永远人审后）──────────────────────
 channels:

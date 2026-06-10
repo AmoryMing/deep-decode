@@ -186,6 +186,12 @@ def drive(root: Path, once: bool = False, dry: bool = False, max_steps: int = 40
             except Exception:
                 ok, msg = False, "生成异常：" + traceback.format_exc()[-400:]
             run["llm_calls"] = run.get("llm_calls", 0) + 1
+            # seedance 出片满足 m.video（不走 remotion 的 podcast/scene_plan 契约）
+            if ok and nid == "m.video" and (root / "seedance_video.mp4").exists() \
+                    and (root / "seedance_video.mp4").stat().st_size > 50000:
+                sp = pipeline.load_spec(root)
+                sp.setdefault("pipeline_state", {}).setdefault(nid, {})["status"] = "satisfied"
+                pipeline.save_spec(root, sp)
             spec2 = pipeline.load_spec(root)
             n2 = next((n for n in pipeline.expand_compound(graph, spec2) if n["id"] == nid), node)
             st2, det = pipeline.node_status(root, spec2, n2)

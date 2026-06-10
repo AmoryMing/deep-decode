@@ -62,11 +62,14 @@
 - [x] m.visual（gpt-image，可配置后端）✅ 实测出 5 张 1024×1536 PNG 过 glob≥4 契约；修了本地代理 SSL EOF（NO_PROXY）
 - [x] m.video（Seedance AK/SK V4 签名，tools/seedance_atom.py）✅ 签名通过；**账号需在火山控制台开通视频模型权限**（当前 50400 Access Denied）
 
-### M7 · 视频后端（Seedance + 可配置）✅ 代码就绪
-- [x] `video.backend` 可插拔：remotion | seedance（factory.config 配置，UI 可改）
-- [x] `tools/seedance_atom.py`：火山视觉 API CVSync2AsyncSubmitTask→GetResult，V4 签名纯标准库；--probe 干检
-- [x] req_key=jimeng_ti2v_v30_pro（文档固定值），frames 121/241、aspect 多档
-- [ ] 待你在火山控制台开通即梦视频生成权限后实测出片（签名已验证，开通即可用）
+### M7 · 视频后端（Seedance + 可配置）✅ 全通
+- [x] `video.backend` 可插拔：remotion | seedance | open-design-html（factory.config，UI 可改）
+- [x] `tools/seedance_atom.py`：火山视觉 API 提交→轮询→下载，V4 签名纯标准库
+- [x] **实测出片**：req_key=`jimeng_t2v_v30_1080p`（账号已开通 3.0 1080P），提交→轮询→下载 **7.7MB 真 MP4** ✅
+- [x] m.video 契约 backend-aware：seedance 出片 → node_status 认 `satisfied` → 不卡 remotion 的 podcast/scene_plan 契约
+- [x] driver 实测：article→m.video(seedance 出片)→satisfied→推进到分发 ✅ 8/11
+- [ ] Pro（3.0Pro 1080P）req_key 未定（jimeng_ti2v_v30_pro 仍 Access Denied）——查产品接入文档；3.0 1080P 已够用
+- [ ] open-design-html 后端（github.com/nexu-io/html-video，本地无 key）——更适合"动画信息图视频"，留作第三后端
 
 ### M3b · UI 配置编辑器 ✅
 - [x] `/admin/setup` 顶部配置卡：模型 key/provider、按节点模型、visual/video backend、渠道，写 factory.config.yaml

@@ -243,9 +243,14 @@ def check_tone(root: Path, spec: dict, contract: dict) -> tuple[bool, str]:
 # ───────────────────────── 节点状态 ─────────────────────────
 def node_status(root: Path, spec: dict, node: dict) -> tuple[str, list[str]]:
     """返回 (done|todo|fail, 明细)。无 produces 的旁路节点按 state 标记判定。"""
-    # 显式 skipped（如创作者关掉视频）→ 即便有 produces 也算完成，让流水线绕过可选节点
-    if (spec.get("pipeline_state", {}) or {}).get(node["id"], {}).get("status") == "skipped":
+    # 显式 skipped / satisfied → 即便有 produces 也算完成：
+    #   skipped = 创作者关掉该节点（如视频）；satisfied = 别的后端已满足（如 seedance 出片，
+    #   不走 remotion 那套 podcast/scene_plan 契约）。让流水线绕过/认可可插拔后端。
+    _st = (spec.get("pipeline_state", {}) or {}).get(node["id"], {}).get("status")
+    if _st == "skipped":
         return ("done", ["(已跳过 — 配置为非必需)"])
+    if _st == "satisfied":
+        return ("done", ["(已由可插拔后端满足)"])
     produces = node.get("produces", []) or []
     if not produces:
         st = (spec.get("pipeline_state", {}) or {}).get(node["id"], {}).get("status", "pending")
