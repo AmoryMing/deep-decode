@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { getSetupInventory } from "@/lib/setup";
+import { getSetupInventory, getEditableConfig } from "@/lib/setup";
+import { ConfigEditor } from "@/components/ConfigEditor";
 
 export const metadata: Metadata = {
   title: "接入",
@@ -44,6 +45,7 @@ function Pill({ on, children }: { on: boolean; children: React.ReactNode }) {
 
 export default function Setup() {
   const inv = getSetupInventory();
+  const editable = getEditableConfig();
 
   return (
     <div className="flex flex-col gap-8">
@@ -55,7 +57,12 @@ export default function Setup() {
         </p>
       </header>
 
-      {/* 配置源 */}
+      {/* 可编辑配置（UI 写 factory.config.yaml） */}
+      <Card title="⚙ 配置（UI 可改 → 写 factory.config.yaml）" hint="key 不入库">
+        <ConfigEditor cfg={editable} />
+      </Card>
+
+      {/* 配置源盘点 */}
       <Card
         title="① 配置源 factory.config.yaml"
         hint={inv.configSource || "未找到"}

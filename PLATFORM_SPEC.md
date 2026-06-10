@@ -58,7 +58,19 @@
 - [x] 接进 driver：生成节点走 executor；atom: 别名解析（tone_gate 自动跑 tone_lint）；修了"Strategy 未确认却误报 done"的 bug
 - [x] UI Strategy 确认按钮（生成草案 + 置 confirmed，放行下游）
 - 验收：decode 项目 driver 自动 router→evidence→article→tone_gate（5/11），**DeepSeek 写的 3600 字文章 0 违规过 tone_lint**，停在 m.polish（待接 executor）✅ 已验证
-- [ ] 待接执行器：m.polish / m.factcheck（DeepSeek）、m.visual（gpt-image）、m.video（Seedance）
+- [x] m.polish / m.factcheck（DeepSeek）✅ 产物过契约（polish_report structure/prose/verdict；factcheck claims/verdict）
+- [x] m.visual（gpt-image，可配置后端）✅ 实测出 5 张 1024×1536 PNG 过 glob≥4 契约；修了本地代理 SSL EOF（NO_PROXY）
+- [x] m.video（Seedance AK/SK V4 签名，tools/seedance_atom.py）✅ 签名通过；**账号需在火山控制台开通视频模型权限**（当前 50400 Access Denied）
+
+### M7 · 视频后端（Seedance + 可配置）✅ 代码就绪
+- [x] `video.backend` 可插拔：remotion | seedance（factory.config 配置，UI 可改）
+- [x] `tools/seedance_atom.py`：火山视觉 API CVSync2AsyncSubmitTask→GetResult，V4 签名纯标准库；--probe 干检
+- [x] req_key=jimeng_ti2v_v30_pro（文档固定值），frames 121/241、aspect 多档
+- [ ] 待你在火山控制台开通即梦视频生成权限后实测出片（签名已验证，开通即可用）
+
+### M3b · UI 配置编辑器 ✅
+- [x] `/admin/setup` 顶部配置卡：模型 key/provider、按节点模型、visual/video backend、渠道，写 factory.config.yaml
+- [x] key 写入式（留空保持不变，不回传明文），保存往返保 key 完整 ✅ 已验证
 
 ### M3 · 接入创作者资产（onboarding）
 **目标**：创作者插自己的 wiki + 模板 + 读者画像，全在 UI。

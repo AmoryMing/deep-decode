@@ -208,6 +208,156 @@ def exec_evidence(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
     return True, f"证据已抽取（{len(ev.get('claims', []))} 个论点）"
 
 
+def exec_polish(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
+    """结构层 + 散文层润色：重写 article.md + 产 polish_report.json（structure/prose/verdict）。"""
+    art = root / "article.md"
+    if not art.exists():
+        return False, "缺 article.md"
+    text = art.read_text(encoding="utf-8")
+    m = re.match(r"^(---\n.*?\n---\n)(.*)$", text, re.S)
+    front, body = (m.group(1), m.group(2)) if m else ("", text)
+    prompt = (
+        "你是中文深度稿的资深编辑。对下面正文做两层润色：\n"
+        "1) 结构层：删填充词（'值得注意的是''基本上'等）、修翻译腔、去 emoji/自封原创、补缺失论证。\n"
+        "2) 散文层：逐段重写让句子更紧、节奏更稳，但不改判断、不加事实。\n"
+        "输出 JSON（无代码围栏）：{\"article\":\"润色后的完整正文 markdown\","
+        "\"structure\":{\"filler_removed\":n,\"artifacts_fixed\":n},"
+        "\"prose\":{\"paragraphs_rewritten\":n},\"verdict\":\"pass|need_human\"}\n\n正文：\n" + body[:9000])
+    out = chat(cfg, "m.polish", [{"role": "user", "content": prompt}], max_tokens=8000)
+    out = re.sub(r"^```\w*\s*|\s*```$", "", out.strip())
+    try:
+        data = json.loads(out)
+        new_body = (data.get("article") or "").strip()
+        if len(new_body) > 400:
+            art.write_text((front + new_body) if front else new_body, encoding="utf-8")
+        report = {"structure": data.get("structure", {}), "prose": data.get("prose", {}),
+                  "verdict": data.get("verdict", "pass")}
+    except Exception:
+        report = {"structure": {}, "prose": {}, "verdict": "need_human", "raw": out[:500]}
+    (root / "polish_report.json").write_text(
+        json.dumps(report, ensure_ascii=False, indent=1), encoding="utf-8")
+    return True, f"润色完成（verdict={report['verdict']}）"
+
+
+def exec_factcheck(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
+    """核查正文事实声明：产 factcheck.json（claims/verdict）。"""
+    art = root / "article.md"
+    if not art.exists():
+        return False, "缺 article.md"
+    body = art.read_text(encoding="utf-8")[:9000]
+    ev = ""
+    ep = root / "phase2_evidence.json"
+    if ep.exists():
+        ev = ep.read_text(encoding="utf-8")[:2000]
+    prompt = (
+        "核查下面文章里的关键事实声明（数字、时间、引用、断言）。结合已有证据，对每条标注"
+        " verified | uncertain | wrong 并给依据。只输出 JSON（无代码围栏）："
+        "{\"claims\":[{\"claim\":\"...\",\"status\":\"verified|uncertain|wrong\",\"evidence\":\"...\"}],"
+        "\"verdict\":\"pass|need_review\"}\n\n"
+        + (f"【已有证据】\n{ev}\n\n" if ev else "") + f"【文章】\n{body}")
+    out = chat(cfg, "m.factcheck", [{"role": "user", "content": prompt}], max_tokens=4000)
+    out = re.sub(r"^```\w*\s*|\s*```$", "", out.strip())
+    try:
+        data = json.loads(out)
+        data.setdefault("verdict", "need_review")
+        data.setdefault("claims", [])
+    except Exception:
+        data = {"claims": [], "verdict": "need_review", "raw": out[:500]}
+    data["checked_at"] = now_date()
+    (root / "factcheck.json").write_text(
+        json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    n_bad = sum(1 for c in data["claims"] if isinstance(c, dict) and c.get("status") in ("wrong", "uncertain"))
+    return True, f"核查 {len(data['claims'])} 条，{n_bad} 条存疑"
+
+
+def exec_visual(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
+    """配图：LLM 出每章出图 prompt → 走 factory.config.visual.backend（gpt-image）批量出图 → assets/png/。"""
+    import os, subprocess
+    vcfg = cfg.get("visual", {}) or {}
+    backend = vcfg.get("backend", "gpt-image")
+    n_min = int(vcfg.get("images_min", 4))
+    art = root / "article.md"
+    if not art.exists():
+        return False, "缺 article.md"
+    body = art.read_text(encoding="utf-8")[:7000]
+    title = (spec.get("project", {}) or {}).get("title", "")
+    preset = {}
+    pp = REPO / "skills-dist" / "ppt-image-gen" / "scripts" / "style_presets.json"
+    if pp.exists():
+        try:
+            pj = json.loads(pp.read_text(encoding="utf-8"))
+            preset = {"style": (pj.get("styles", {}) or {}).get("editorial-paper", ""),
+                      "suffix": pj.get("common_suffix", "")}
+        except Exception:
+            pass
+    prompt = (
+        f"为这篇文章设计 {n_min + 1} 张信息图（1 封面 + 各章概念图）。每张一句英文出图 prompt，"
+        "画面是抽象信息图/概念图，禁止整段文字（最多 3-5 个英文标签词）。\n"
+        f"统一风格：{preset.get('style', 'clean editorial infographic, cream background')}\n"
+        f"标题：{title}\n只输出 JSON（无围栏）：{{\"images\":[{{\"role\":\"cover|section\",\"prompt\":\"...\"}}]}}\n\n"
+        f"文章：\n{body}")
+    out = chat(cfg, "m.visual", [{"role": "user", "content": prompt}], max_tokens=3000)
+    out = re.sub(r"^```\w*\s*|\s*```$", "", out.strip())
+    try:
+        imgs = json.loads(out).get("images", [])
+    except Exception:
+        return False, f"出图 prompt 解析失败：{out[:120]}"
+    if len(imgs) < n_min:
+        return False, f"prompt 数不足（{len(imgs)} < {n_min}）"
+    if backend == "svg":
+        return False, "svg 后端走 visual-pipeline skill；executor 暂只实现 gpt-image"
+    gi = vcfg.get("gpt_image", {}) or {}
+    size = gi.get("size", "1024x1536")
+    suffix = preset.get("suffix", "")
+    lines = [json.dumps({"prompt": (im.get("prompt", "") + ", " + suffix).strip(", "),
+                         "out": f"assets/png/{i:02d}.png", "size": size, "quality": "high"},
+                        ensure_ascii=False) for i, im in enumerate(imgs)]
+    (root / "_img_batch.jsonl").write_text("\n".join(lines), encoding="utf-8")
+    # 绕开本地代理（Clash 等会让网关 SSL EOF）——剥离 proxy 变量 + NO_PROXY
+    env = {k: v for k, v in os.environ.items() if "proxy" not in k.lower()}
+    env["NO_PROXY"] = "*"
+    env["no_proxy"] = "*"
+    for k, ek in [("base_url", "IMAGEGEN_BASE_URL"), ("api_key", "IMAGEGEN_API_KEY"),
+                  ("api_key_fallback", "IMAGEGEN_API_KEY_FALLBACK"), ("model", "IMAGEGEN_MODEL")]:
+        if gi.get(k):
+            env[ek] = gi[k]
+    try:
+        r = subprocess.run(
+            [sys.executable, str(REPO / "tools" / "imagegen_relay.py"),
+             "--batch", str(root / "_img_batch.jsonl"), "--root", str(root), "--concurrency", "3"],
+            capture_output=True, text=True, timeout=900, env=env)
+        tail = ((r.stdout or "") + (r.stderr or "")).strip()[-120:]
+    except Exception as e:
+        return False, f"出图执行异常：{e}"
+    pdir = root / "assets" / "png"
+    n_png = len(list(pdir.glob("*.png"))) if pdir.exists() else 0
+    return (n_png >= n_min, f"出图 {n_png}/{n_min}（{tail}）")
+
+
+def exec_video(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
+    """视频：按 factory.config.video.backend 路由。seedance 走 seedance_atom（生成式短片）。"""
+    import subprocess
+    vcfg = cfg.get("video", {}) or {}
+    backend = vcfg.get("backend", "remotion")
+    if backend != "seedance":
+        return False, f"video.backend={backend}（非 seedance）走 video-pipeline skill"
+    title = (spec.get("project", {}) or {}).get("title", "")
+    body = (root / "article.md").read_text(encoding="utf-8")[:1500] if (root / "article.md").exists() else title
+    vp = chat(cfg, "m.article",
+              [{"role": "user", "content": "为这篇文章写一句 5 秒短视频的画面 prompt（中文、画面感强、"
+                f"无文字）。只输出一句：\n{title}\n{body}"}], max_tokens=400).strip()
+    out = root / "seedance_video.mp4"
+    try:
+        r = subprocess.run(
+            [sys.executable, str(REPO / "tools" / "seedance_atom.py"),
+             "--prompt", vp or title, "--frames", "121", "--aspect", "9:16", "--out", str(out)],
+            capture_output=True, text=True, timeout=1200)
+        tail = ((r.stdout or "") + (r.stderr or "")).strip()[-160:]
+    except Exception as e:
+        return False, f"seedance 异常：{e}"
+    return (out.exists() and out.stat().st_size > 50000, f"seedance：{tail}")
+
+
 def exec_strategy(root: Path, spec: dict, cfg: dict) -> tuple[bool, str]:
     """生成 Strategy Spec 草案 phase1_strategy.md。这是唯一硬停：只由 UI「确认」动作触发，
     自动 driver 不会跑它（写出 phase1 = 确认 = 放行下游）。"""
@@ -237,6 +387,10 @@ EXECUTORS = {
     "n.router": exec_router,
     "n.evidence": exec_evidence,
     "m.article": exec_article,
+    "m.polish": exec_polish,
+    "m.factcheck": exec_factcheck,
+    "m.visual": exec_visual,
+    "m.video": exec_video,
 }
 
 # 仅由 UI「确认」动作触发，不进自动 driver
