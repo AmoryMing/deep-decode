@@ -123,6 +123,20 @@ def drive(root: Path, once: bool = False, dry: bool = False, max_steps: int = 40
         # 取完整节点（含 run / hard_stop）
         node = next((n for n in pipeline.expand_compound(graph, spec) if n["id"] == nid), nxt)
 
+        # 可选节点按 spec 跳过（创作者关掉视频/播客 → 不 block 在这）
+        arts = spec.get("artifacts", {}) or {}
+        optional_off = {
+            "m.video": arts.get("video_required") is False,
+            "m.podcast": arts.get("podcast_required") is False,
+        }
+        if optional_off.get(nid) and not dry:
+            sp = pipeline.load_spec(root)
+            sp.setdefault("pipeline_state", {}).setdefault(nid, {})["status"] = "skipped"
+            pipeline.save_spec(root, sp)
+            run["history"].append({"node": nid, "action": "skipped", "ok": True,
+                                   "at": now(), "msg": "配置为非必需，跳过"})
+            continue
+
         # 解析 atom: 别名（如 m.tone_gate 的 run=atom:a.tone_lint → 跑 a.tone_lint）
         autorun_fn = SAFE_AUTORUN.get(nid)
         if autorun_fn is None:

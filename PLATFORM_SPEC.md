@@ -119,6 +119,17 @@
 - [ ] 双语 README（产品向，非作品集向）+ 架构图
 - 验收：在干净目录 `init.sh` → 填 config → 跑通一篇 demo
 
+## 🎯 端到端验收（2026-06-10）
+一句选题 → 全自动产出内容包，**9/13 节点无人工**（仅 Strategy 一次 UI 确认）：
+- Strategy(确认) → router → evidence → article → tone_gate → polish → factcheck → visual → (跳过video) → 停在分发打包 ✅
+- 成品：6355 字文章**过 tone_lint 0 违规**（有"本期关键词"、评论员视角）+ polish_report(pass) + factcheck.json + **5 张 1024×1536 杂志风配图**
+- 全程 DeepSeek（文）+ gpt-image（图），配置全在 factory.config.yaml（UI 可改）
+- 可选节点按 spec 跳过（创作者关掉视频/播客 → 不 block）：driver skip + node_status 认 skipped
+- **停在 m.email_package（分发打包）= 人审边界**（合规铁律：成稿到 draft-ready 即停，人审后发 → 走「审核」队列）
+
+**唯一外部阻塞**：Seedance 视频需你在火山控制台开通"即梦视频生成"权限（当前 50400 Access Denied）。签名+提交+轮询+下载代码已就绪并验证，开通即可用。
+**一个收尾项**：m.video 节点契约目前是 remotion 专属（podcast/scene_plan/captions）；seedance 后端要满足它需加一个 backend-aware 的契约变体（小改 skillgraph）。
+
 ## 决策记录
 - 框架名 = **open-content**（用户 2026-06-10 拍板）
 - 发送动作永远人审后（合规 + 痛点教训）；driver 跑到 draft-ready 即停
