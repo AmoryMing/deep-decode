@@ -13,6 +13,7 @@ const NAV = [
   { href: "/admin/queue", label: "审核", num: "5", desc: "全平台待发清单" },
   { href: "/admin/calendar", label: "投放", num: "6", desc: "发布日历" },
   { href: "/admin/analytics", label: "数据", num: "7", desc: "拉取 + AI 分析" },
+  { href: "/admin/xhs", label: "小红书", num: "", desc: "数据监控看板" },
 ];
 
 export function AdminNav() {

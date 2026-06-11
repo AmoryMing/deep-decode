@@ -2,14 +2,9 @@ import Link from "next/link";
 import type { ProjectState } from "@/lib/projectState";
 import { StartRunButton } from "./StartRunButton";
 import { ConfirmStrategyButton } from "./ConfirmStrategyButton";
+import { nodeLabel, humanize } from "@/lib/nodeLabels";
 
-const LAYER_LABEL: Record<string, string> = {
-  molecule: "m",
-  atom: "a",
-  compound: "C",
-};
-
-/** 单个项目的节点级进度条 —— 数据来自 runner，不是 web 自算。 */
+/** 单个项目的节点级进度条 —— 数据来自自动流水线，不是 web 自算。 */
 export function PipelineProgress({ state }: { state: ProjectState }) {
   const { done, total } = state.progress;
   const pct = total > 0 ? Math.round((done / total) * 100) : 0;
@@ -31,7 +26,7 @@ export function PipelineProgress({ state }: { state: ProjectState }) {
             </span>
           ) : !state.confirmed ? (
             <span className="ml-2 rounded border border-amber-300 bg-amber-100 px-1.5 py-0.5 text-amber-900">
-              待确认 Strategy
+              等你拍板
             </span>
           ) : null}
         </span>
@@ -43,7 +38,7 @@ export function PipelineProgress({ state }: { state: ProjectState }) {
           {state.nodes.map((n) => (
             <span
               key={n.id}
-              title={`${n.title} — ${n.status}`}
+              title={`${humanize(n.title)} — ${n.status === "done" ? "已完成" : n.blocked ? "等你处理" : "待办"}`}
               className={`h-full flex-1 border-r border-white/60 last:border-0 ${
                 n.status === "done"
                   ? "bg-ink/85"
@@ -72,15 +67,15 @@ export function PipelineProgress({ state }: { state: ProjectState }) {
       {state.next && (
         <div className="mt-2 flex items-center gap-2 text-xs">
           <span className="text-muted">下一步</span>
-          <span className="rounded bg-paper px-1.5 py-0.5 font-mono text-ink-soft">
-            [{LAYER_LABEL[state.next.id.split(".")[0]] ?? "·"}] {state.next.id}
+          <span className="rounded bg-paper px-1.5 py-0.5 text-ink-soft">
+            {nodeLabel(state.next.id)}
           </span>
           <span className="min-w-0 flex-1 truncate text-ink-soft">
-            {state.next.title}
+            {humanize(state.next.title)}
           </span>
           {state.next.hard_stop && (
             <span className="shrink-0 rounded border border-amber-300 bg-amber-100 px-1.5 py-0.5 text-amber-900">
-              硬停
+              等你拍板
             </span>
           )}
         </div>

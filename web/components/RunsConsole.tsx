@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import type { RunState } from "@/lib/runs";
+import { nodeLabel, humanize } from "@/lib/nodeLabels";
 
 const STATUS_CHIP: Record<RunState["status"], string> = {
   running: "bg-sky-100 text-sky-900 border border-sky-300",
@@ -53,19 +54,33 @@ function RunRow({ run }: { run: RunState }) {
 
       {run.current && run.status !== "done" && (
         <div className="mt-2 text-xs text-muted">
-          当前 <span className="font-mono text-ink-soft">{run.current}</span>
+          当前 <span className="text-ink-soft">{nodeLabel(run.current)}</span>
         </div>
       )}
-      {run.status === "blocked" && run.blocked_reason && (
-        <div className="mt-1.5 rounded border border-amber-200 bg-amber-50 px-2 py-1 text-[11px] text-amber-900">
-          ⏸ {run.blocked_reason}
+      {run.status === "blocked" && (
+        <div
+          data-cta="blocked"
+          className="mt-1.5 flex flex-wrap items-center gap-2 rounded border border-amber-200 bg-amber-50 px-2 py-1.5 text-xs text-amber-900"
+        >
+          <span className="min-w-0 flex-1">
+            ⏸ {humanize(run.blocked_reason) || "这一步要你先处理一下"}
+          </span>
+          <Link
+            href="/admin/setup"
+            className="shrink-0 rounded border border-amber-300 bg-white px-2 py-0.5 text-amber-900 hover:bg-amber-100"
+          >
+            去接入设置
+          </Link>
+          <span className="shrink-0 rounded border border-amber-300 bg-white px-2 py-0.5 text-amber-900">
+            重试这一步
+          </span>
         </div>
       )}
       {run.log_tail && run.log_tail.length > 0 && (
-        <details className="mt-2 text-[11px] text-muted">
-          <summary className="cursor-pointer select-none">日志</summary>
-          <pre className="mt-1 overflow-x-auto whitespace-pre-wrap break-all rounded bg-paper px-2 py-1 font-mono">
-            {run.log_tail.join("\n")}
+        <details className="mt-2 text-xs text-muted">
+          <summary className="cursor-pointer select-none">运行明细</summary>
+          <pre className="mt-1 overflow-x-auto whitespace-pre-wrap break-all rounded bg-paper px-2 py-1">
+            {humanize(run.log_tail.join("\n"))}
           </pre>
         </details>
       )}
@@ -101,17 +116,22 @@ export function RunsConsole({ initial }: { initial: RunState[] }) {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2 text-xs text-muted">
-        <span>{active} 个进行中 / 共 {runs.length} 条 run</span>
+        <span>{active} 个进行中 / 共 {runs.length} 个任务</span>
         <button
           type="button"
           onClick={() => setLive((v) => !v)}
+          title="只控制这个页面的自动刷新，AI 仍在后台继续跑"
           className={`ml-auto rounded px-2 py-0.5 ${
             live ? "bg-sky-100 text-sky-900" : "bg-line/40 text-muted"
           }`}
         >
-          {live ? "● 实时（每 3s）" : "○ 已暂停"}
+          {live ? "● 自动刷新（每 3s）" : "○ 已停自动刷新"}
         </button>
       </div>
+      <p className="text-xs text-muted">
+        关掉页面也没关系——任务在后台跑，你可以离开，回来接着看进度（断点续跑）。
+        每个任务都会显示已用的 AI 调用次数。
+      </p>
       {runs.length === 0 ? (
         <div className="rounded-lg border border-dashed border-line bg-white px-4 py-8 text-center text-sm text-muted">
           还没有 run。去「产出」页点某个项目的「开始」，它会出现在这里。
