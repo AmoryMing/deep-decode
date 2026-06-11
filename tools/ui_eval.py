@@ -74,9 +74,10 @@ def score_jargon(texts: dict) -> tuple[float, list]:
                 leaks.append({"page": path, "term": m.group(0)})
     n = len(leaks)
     base = load_baseline().get("jargon_leaks")
-    if base is None:
+    if not base:
         base = max(n, 1)
-    pts = 25 * max(0.0, 1 - n / base)
+    base = max(base, 1)
+    pts = 20 * max(0.0, 1 - n / base)
     return round(pts, 1), leaks
 
 
@@ -109,7 +110,44 @@ def score_bugs(texts: dict, raw: dict) -> tuple[float, list]:
     chk("刷新按钮不误称暂停AI", "AI 仍在后台" in runs_raw or "自动刷新" in runs_raw or "实时（每" in runs_raw)
 
     passed = sum(1 for c in checks if c["pass"])
-    pts = 25 * passed / len(checks)
+    pts = 20 * passed / len(checks)
+    return round(pts, 1), checks
+
+
+def score_visual() -> tuple[float, list]:
+    """E 视觉美观/一致性(20)：纯静态扫 web/ 源码，机器可判。"""
+    checks = []
+
+    def chk(name, ok):
+        checks.append({"check": name, "pass": bool(ok)})
+
+    comp_files = list((WEB / "components").glob("*.tsx")) + \
+        list((WEB / "app").rglob("page.tsx"))
+    allsrc = "\n".join(f.read_text(encoding="utf-8") for f in comp_files if f.exists())
+
+    # 1) 圆角收敛：不同 rounded-* 档 ≤ 4
+    radii = set(re.findall(r"rounded-(sm|md|lg|xl|2xl|3xl|full)", allsrc))
+    chk("圆角档数≤4", len(radii) <= 4)
+    # 2) 字号地板：text-[10px]/[11px] 数量不高于 baseline
+    tiny = len(re.findall(r"text-\[1[01]px\]", allsrc))
+    base_tiny = load_baseline().get("tiny_font", max(tiny, 1))
+    chk("小字号(≤11px)不增", tiny <= base_tiny)
+    # 3) 状态色语义冲突：violet 二义性消除（queue/runs 不再同用 violet 表相反义）
+    qb = (WEB / "components" / "QueueBoard.tsx")
+    rc = (WEB / "components" / "RunsConsole.tsx")
+    qv = "violet" in qb.read_text(encoding="utf-8") if qb.exists() else False
+    rv = "violet" in rc.read_text(encoding="utf-8") if rc.exists() else False
+    chk("violet 不再跨页二义", not (qv and rv))
+    # 4) "未动"不再用 red（red 只留失败）
+    qtext = qb.read_text(encoding="utf-8") if qb.exists() else ""
+    none_red = bool(re.search(r'none:\s*"[^"]*red', qtext))
+    chk('"未动"非红色', not none_red)
+    # 5) 集中状态色映射（出现共享 statusColors 模块 = 一致性治理）
+    chk("有集中状态色/标签映射模块",
+        (WEB / "lib" / "nodeLabels.ts").exists() or (WEB / "lib" / "statusColors.ts").exists())
+
+    passed = sum(1 for c in checks if c["pass"])
+    pts = 20 * passed / len(checks)
     return round(pts, 1), checks
 
 
@@ -131,7 +169,7 @@ def score_trust(texts: dict, raw: dict) -> tuple[float, list]:
     chk("blocked 有断点续跑/可离开说明", "后台" in runs or "可以离开" in runs or "断点" in runs)
 
     passed = sum(1 for c in checks if c["pass"])
-    pts = 25 * passed / len(checks)
+    pts = 20 * passed / len(checks)
     return round(pts, 1), checks
 
 
@@ -166,27 +204,33 @@ def main():
         for path, txt in texts.items():
             for pat in JARGON:
                 leaks += [m.group(0) for m in re.finditer(pat, txt)]
+        comp_files = list((WEB / "components").glob("*.tsx")) + list((WEB / "app").rglob("page.tsx"))
+        allsrc = "\n".join(f.read_text(encoding="utf-8") for f in comp_files if f.exists())
+        tiny = len(re.findall(r"text-\[1[01]px\]", allsrc))
         BASELINE_F.write_text(json.dumps(
-            {"jargon_leaks": len(leaks), "frozen": time.strftime("%Y-%m-%d"),
+            {"jargon_leaks": len(leaks), "tiny_font": tiny, "frozen": time.strftime("%Y-%m-%d"),
              "click_baseline_create_to_run": 5, "click_baseline_draft_to_send": 999},
             ensure_ascii=False, indent=1))
-        print(f"baseline 冻结：jargon_leaks={len(leaks)}")
+        print(f"baseline 冻结：jargon_leaks={len(leaks)} tiny_font={tiny}")
 
     a_pts, leaks = score_jargon(texts)
     b_pts, bugs = score_bugs(texts, raw)
     d_pts, trust = score_trust(texts, raw)
-    # C 动线：需 playwright 实测点击数；缺则按 baseline 占位（不奖不罚，给中位 12.5）
-    c_pts = 12.5
-    total = round(a_pts + b_pts + c_pts + d_pts, 1)
+    e_pts, visual = score_visual()
+    # C 动线：需 playwright 实测点击数；缺则占位 10（满分20的中位）
+    c_pts = 10.0
+    total = round(a_pts + b_pts + c_pts + d_pts + e_pts, 1)
 
     out = {
         "ui_score": total,
-        "breakdown": {"A_jargon": a_pts, "B_bugs": b_pts, "C_flow": c_pts, "D_trust": d_pts},
+        "breakdown": {"A_jargon": a_pts, "B_bugs": b_pts, "C_flow": c_pts,
+                      "D_trust": d_pts, "E_visual": e_pts},
         "jargon_leaks": len(leaks),
         "jargon_sample": leaks[:15],
         "bug_checks": bugs,
         "trust_checks": trust,
-        "note": "C(动线)需 playwright 实测，当前占位 12.5；A/B/D 全自动判定",
+        "visual_checks": visual,
+        "note": "5维各20分；C(动线)需playwright,占位10；A/B/D/E全自动判定",
     }
     print(json.dumps(out, ensure_ascii=False, indent=1))
 
