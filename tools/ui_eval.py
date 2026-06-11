@@ -11,8 +11,10 @@ A 黑话泄漏(25) + B 工程bug(25) + C 动线(25,需 playwright，缺则按 ba
   python3 tools/ui_eval.py --port 3100 --freeze-baseline   # 首次：把当前泄漏数冻结为 baseline
 """
 from __future__ import annotations
-import argparse, hashlib, hmac, html, json, re, time, urllib.request
+import argparse, hashlib, hmac, html, json, os, re, subprocess, time, urllib.request
 from pathlib import Path
+
+HOME = Path.home()
 
 REPO = Path(__file__).resolve().parents[1]
 WEB = REPO / "web"
@@ -67,11 +69,38 @@ def fetch(port: int, path: str, token: str) -> str:
 
 
 def visible_text(html_str: str) -> str:
-    """粗取可见文本：去 script/style/标签，留文本节点。"""
+    """粗取可见文本：去 script/style/标签，留文本节点。（仅 --no-dom 回退用）"""
     s = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", html_str)
     s = re.sub(r"(?s)<[^>]+>", " ", s)
     s = html.unescape(s)
     return re.sub(r"\s+", " ", s)
+
+
+def dom_extract(port: int, token: str) -> dict | None:
+    """用 playwright 取渲染后真实 DOM 的 innerText + 动线信号。
+    解决客户端组件文本进 RSC <script> 的盲区。失败返回 None（调用方回退）。"""
+    state = {"cookies": [{"name": "cf_session", "value": token, "domain": "localhost",
+                          "path": "/", "expires": int(time.time()) + 86400,
+                          "httpOnly": True, "secure": False, "sameSite": "Lax"}],
+             "origins": []}
+    Path("/tmp/ui-critique").mkdir(parents=True, exist_ok=True)
+    Path("/tmp/ui-critique/state.json").write_text(json.dumps(state))
+    env = dict(os.environ)
+    env["UI_PORT"] = str(port)
+    # playwright 装在 ~/node_modules（全局解析）
+    env["NODE_PATH"] = str(HOME / "node_modules")
+    for k in list(env):
+        if "proxy" in k.lower():
+            env.pop(k)
+    env["NO_PROXY"] = "*"
+    try:
+        r = subprocess.run(["node", str(REPO / "tools" / "ui_eval_dom.mjs")],
+                           capture_output=True, text=True, timeout=180, env=env, cwd=str(HOME))
+        if r.returncode != 0 or not r.stdout.strip():
+            return None
+        return json.loads(r.stdout)
+    except Exception:
+        return None
 
 
 def score_jargon(texts: dict) -> tuple[float, list]:
@@ -81,12 +110,26 @@ def score_jargon(texts: dict) -> tuple[float, list]:
             for m in re.finditer(pat, txt):
                 leaks.append({"page": path, "term": m.group(0)})
     n = len(leaks)
-    base = load_baseline().get("jargon_leaks")
-    if not base:
-        base = max(n, 1)
-    base = max(base, 1)
-    pts = 20 * max(0.0, 1 - n / base)
+    # 绝对刻度（不依赖 baseline，换测量方式也不失真）：0 泄漏=满分，≥30 泄漏=0
+    pts = 20 * max(0.0, 1 - n / 30)
     return round(pts, 1), leaks
+
+
+def score_flow(flow: dict) -> tuple[float, list]:
+    """C 动线(20)：从真实 DOM 信号判关键路径是否可达/几步。"""
+    checks = []
+
+    def chk(name, ok):
+        checks.append({"check": name, "pass": bool(ok)})
+
+    # 发布动作可达：有「发送」按钮(好) 且 不靠终端命令(坏)
+    chk("发布动作按钮化(非终端)", flow.get("publish_button") and not flow.get("publish_terminal"))
+    chk("发布不依赖复制终端命令", not flow.get("publish_terminal"))
+    chk("选题页一键建项目", flow.get("discover_oneclick_create"))
+    chk("产出页就地确认(不跨页)", flow.get("inline_confirm"))
+    passed = sum(1 for c in checks if c["pass"])
+    pts = 20 * passed / len(checks)
+    return round(pts, 1), checks
 
 
 def score_bugs(texts: dict, raw: dict) -> tuple[float, list]:
@@ -194,18 +237,28 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=3100)
     ap.add_argument("--freeze-baseline", action="store_true")
+    ap.add_argument("--no-dom", action="store_true", help="跳过 playwright，回退 fetch+剥标签")
     a = ap.parse_args()
 
     token = mint_token()
     raw, texts = {}, {}
+    # raw HTML 仍需（B 维查源码串/属性）
     for p in ADMIN_PAGES + PUBLIC_PAGES:
         try:
-            h = fetch(a.port, p, token)
-            raw[p] = h
-            texts[p] = visible_text(h)
+            raw[p] = fetch(a.port, p, token)
         except Exception as e:
-            raw[p] = ""; texts[p] = ""
+            raw[p] = ""
             print(f"  ! 取 {p} 失败：{str(e)[:60]}")
+    # 可见文本优先用 playwright 真实 DOM（覆盖客户端组件）；失败回退剥标签
+    dom = None if a.no_dom else dom_extract(a.port, token)
+    flow = {}
+    if dom:
+        texts = dom.get("pages", {})
+        flow = dom.get("flow", {})
+        text_src = "playwright 真实 DOM"
+    else:
+        texts = {p: visible_text(raw[p]) for p in raw}
+        text_src = "回退：fetch+剥标签（客户端文本可能漏；装 playwright 更准）"
 
     if a.freeze_baseline:
         leaks = []
@@ -225,12 +278,15 @@ def main():
     b_pts, bugs = score_bugs(texts, raw)
     d_pts, trust = score_trust(texts, raw)
     e_pts, visual = score_visual()
-    # C 动线：需 playwright 实测点击数；缺则占位 10（满分20的中位）
-    c_pts = 10.0
+    if dom:
+        c_pts, flow_checks = score_flow(flow)
+    else:
+        c_pts, flow_checks = 10.0, [{"check": "需 playwright 实测", "pass": False}]
     total = round(a_pts + b_pts + c_pts + d_pts + e_pts, 1)
 
     out = {
         "ui_score": total,
+        "text_source": text_src,
         "breakdown": {"A_jargon": a_pts, "B_bugs": b_pts, "C_flow": c_pts,
                       "D_trust": d_pts, "E_visual": e_pts},
         "jargon_leaks": len(leaks),
@@ -238,7 +294,8 @@ def main():
         "bug_checks": bugs,
         "trust_checks": trust,
         "visual_checks": visual,
-        "note": "5维各20分；C(动线)需playwright,占位10；A/B/D/E全自动判定",
+        "flow_checks": flow_checks,
+        "note": "5维各20分；A=真实DOM绝对刻度(0泄漏满分,≥30为0)；C=真实动线信号",
     }
     print(json.dumps(out, ensure_ascii=False, indent=1))
 
