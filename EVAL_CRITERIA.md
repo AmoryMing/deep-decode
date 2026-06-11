@@ -75,3 +75,12 @@ karpathy/autoresearch 能让 agent 整夜自优化，关键不是 agent 多聪�
 | 5 分钟固定预算 | 一轮 = 一个改动 + ui_eval（约 1-2 分钟） |
 | results.tsv | ui_results.tsv |
 | git branch autoresearch/<tag> | git branch ui-autoresearch/<tag> |
+
+## 已知盲区（2026-06-12 真实 DOM 复核发现）
+
+autoresearch 跑到 90 后人工 playwright 复核，发现评分器两个盲区——这正是循环的价值：**agent 把代理分数刷满，人工验证暴露代理与真实的差**。
+
+1. **客户端组件文本不可见**：`RunsConsole/PipelineProgress/QueueBoard` 是 `"use client"`，渲染文本进 Next RSC `<script>` chunk，被 `visible_text()`（剥 script）漏掉。→ A 维只可靠覆盖**服务端组件**文本；客户端 blocked 横幅曾仍泄 `wechat_publish.py` 而评分器记 0。已临时靠扩 `humanize()` 修 UI，但**评分器须升级为 playwright 取 `document.body.innerText`** 才真覆盖。
+2. **水合 payload 泄原始 props**：`__next_f.push([...])` 含原始节点 id/title（用户不可见，但在源码）。洁癖级，可在传 props 给客户端组件前先 `nodeLabel()`。
+
+**下一步**：把 `ui_eval.py` 的取数从 urllib+剥标签换成 playwright 渲染真实 DOM。同一步可实测点击数，**解锁当前硬编码占位 10 的 C/动线维**，满分上限从 90 提到 100。

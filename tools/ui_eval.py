@@ -29,7 +29,15 @@ JARGON = [
     r"\.yaml\b", r"factory\.config", r"perf_record", r"analytics_snapshot",
     r"\bcron\b", r"ANTHROPIC_API_KEY", r"gitignore", r"READY\.md", r"send_email\.py",
     r"硬停", r"契约", r"原子推荐",
+    # 2026-06-12 真实 DOM 复核新增（blocked 原因里漏的）：
+    r"script:", r"\batom:", r"\bskill:", r"agent/LLM", r"确定性节点",
 ]
+
+# 已知盲区（待 playwright 版评分器补）：
+#   1. 客户端组件（"use client"）渲染文本走 Next RSC <script> chunk，被 visible_text 当 script 剥掉
+#      → 当前 A 维只可靠覆盖服务端组件文本。客户端文本须用 playwright 取 innerText 才准。
+#   2. 水合 payload（__next_f.push）含原始 props（节点 id/title），用户不可见但在页面源码里。
+#   两者都要求评分器升级为"渲染真实 DOM"而非"fetch+剥标签"。见 EVAL_CRITERIA「盲区」节。
 
 
 def b64url(b: bytes) -> str:
