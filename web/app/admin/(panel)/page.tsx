@@ -70,6 +70,9 @@ export default function Overview() {
         <p className="mt-1 text-sm text-muted">
           选题 → 产出 → 合规 → 投放 → 数据分析，数据回流再驱动选题。
         </p>
+        <p className="mt-1.5 text-xs text-muted">
+          全程 AI 只出草稿；任何发布都要你人工审核后手动确认，发布永远不会自动发生。
+        </p>
       </div>
 
       {/* 闭环流程条 */}

@@ -14,12 +14,16 @@ export function StartRunButton({ slug }: { slug: string }) {
       <button
         type="submit"
         disabled={pending}
-        className="rounded bg-ink px-2.5 py-0.5 text-[11px] text-paper hover:opacity-85 disabled:opacity-50"
+        title="后台自动跑约几分钟，只生成草稿，不会自动发布到任何平台"
+        className="rounded bg-ink px-2.5 py-0.5 text-xs text-paper hover:opacity-85 disabled:opacity-50"
       >
         {pending ? "启动中…" : "▶ 开始"}
       </button>
+      <span className="text-xs text-muted">
+        约几分钟 · 只出草稿 · 不会自动发布
+      </span>
       {state.message && (
-        <span className={`text-[11px] ${state.ok ? "text-muted" : "text-red-700"}`}>
+        <span className={`text-xs ${state.ok ? "text-muted" : "text-red-700"}`}>
           {state.message}
           {state.ok && state.message === "已启动" && (
             <>

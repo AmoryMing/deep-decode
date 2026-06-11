@@ -60,6 +60,9 @@ export default async function Produce() {
           每篇拆解 = 文章 + 信息图 + 播客 + 视频。共 {stats.total} 篇成稿，
           {stats.withPodcast} 带播客，{stats.withVideo} 带视频。
         </p>
+        <p className="mt-1.5 inline-flex rounded bg-paper px-2 py-1 text-xs text-ink-soft">
+          AI 只生成草稿；要不要发、发到哪，永远由你人工拍板，发布动作 100% 在人审之后。
+        </p>
       </header>
 
       {/* 新建项目：配置 5 原子 → 写 spec_lock → 可启动 */}
