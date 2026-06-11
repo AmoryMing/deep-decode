@@ -38,7 +38,7 @@ export function NewProjectForm({ opts }: { opts: Opts }) {
       >
         <span className="rounded bg-ink px-2 py-0.5 text-xs text-paper">＋ 新建项目</span>
         <span className="text-sm text-muted">
-          选内容类型 / 读者 / 风格 / 渠道 → 生成 spec_lock，回到列表点「开始」
+          选内容类型 / 读者 / 风格 / 渠道 → 生成生产卡，回到列表点「开始」
         </span>
         <span className="ml-auto text-xs text-muted">{open ? "▲" : "▼"}</span>
       </button>

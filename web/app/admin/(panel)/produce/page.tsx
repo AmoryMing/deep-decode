@@ -76,7 +76,7 @@ export default async function Produce() {
       {liveStates.length > 0 && (
         <section>
           <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-muted">
-            流水线进度 · runner 实时（{liveStates.length} 个项目）
+            流水线进度 · 实时（{liveStates.length} 个项目）
           </h3>
           <div className="flex flex-col gap-3">
             {liveStates.map((st) => (

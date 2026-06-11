@@ -65,7 +65,7 @@ export default function Setup() {
       {/* 配置源盘点 */}
       <Card
         title="① 工厂设置"
-        hint={inv.configSource || "未找到"}
+        hint={inv.configExists ? "已就位（本地）" : "未找到"}
       >
         {inv.configExists ? (
           <p className="text-sm text-ink-soft">
