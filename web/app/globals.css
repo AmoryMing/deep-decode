@@ -6,7 +6,9 @@
   --color-muted: #71717a;
   --color-line: #e4e4e7;
   --color-paper: #fafaf9;
-  --color-accent: #d4541e;
+  /* accent 收紧到 ≥4.5:1 对比度（旧 #d4541e 仅 3.7:1，小字读不清） */
+  --color-accent: #b8420f;
+  --color-accent-strong: #98370c;
   --font-sans: ui-sans-serif, system-ui, -apple-system, "PingFang SC",
     "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --font-serif: "Songti SC", "Noto Serif SC", Georgia, serif;

@@ -32,6 +32,25 @@ export interface Post extends PostMeta {
 
 const outputDir = () => path.join(repoRoot(), "output");
 
+/**
+ * 归一化日期为 YYYY-MM-DD。
+ * gray-matter 会把未加引号的 YAML 日期解析成 JS Date，String(Date) 会渲染成
+ * "Wed May 27 2026 08:00:00 GMT+0800"（门户两行 + 字典序乱排的根因）。
+ * 这里统一拍平成纯日期串，既消 GMT 串，也让卡片按日期正确降序。
+ */
+function normalizeDate(v: unknown): string {
+  if (v instanceof Date && !isNaN(v.getTime())) {
+    const y = v.getFullYear();
+    const m = String(v.getMonth() + 1).padStart(2, "0");
+    const d = String(v.getDate()).padStart(2, "0");
+    return `${y}-${m}-${d}`;
+  }
+  const s = String(v ?? "").trim();
+  const m = s.match(/(\d{4})[-/](\d{2})[-/](\d{2})/);
+  if (m) return `${m[1]}-${m[2]}-${m[3]}`;
+  return s;
+}
+
 function firstImage(md: string, slug: string): string | undefined {
   const m = md.match(/!\[[^\]]*\]\(([^)]+)\)/);
   if (!m) return undefined;
@@ -85,7 +104,7 @@ export function getPostMeta(slug: string): PostMeta | null {
   return {
     slug,
     title: data.title ? String(data.title) : slug,
-    date: String(data.date || data.decoded || dateFromSlug || ""),
+    date: normalizeDate(data.date || data.decoded || dateFromSlug),
     decoded: data.decoded ? String(data.decoded) : undefined,
     author: data.author ? String(data.author) : undefined,
     source: data.source ? String(data.source) : undefined,
@@ -96,6 +115,7 @@ export function getPostMeta(slug: string): PostMeta | null {
     excerpt: makeExcerpt(content),
     hasPodcast: dirFiles.includes("podcast.mp3"),
     hasVideo:
+      dirFiles.includes("video.mp4") ||
       dirFiles.includes("video_horizontal.mp4") ||
       dirFiles.includes("video_vertical.mp4"),
     imageCount,
