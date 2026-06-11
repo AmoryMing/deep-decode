@@ -5,9 +5,10 @@ import Link from "next/link";
 import type { RunState } from "@/lib/runs";
 import { nodeLabel, humanize } from "@/lib/nodeLabels";
 
+// 状态色语义固定：sky=机器在跑 / amber=等人 / ink=完成 / red=失败 / 灰=未排
 const STATUS_CHIP: Record<RunState["status"], string> = {
   running: "bg-sky-100 text-sky-900 border border-sky-300",
-  queued: "bg-violet-100 text-violet-900 border border-violet-300",
+  queued: "bg-sky-50 text-sky-800 border border-sky-200",
   blocked: "bg-amber-100 text-amber-900 border border-amber-300",
   done: "bg-ink/90 text-paper",
   failed: "bg-red-100 text-red-800 border border-red-300",

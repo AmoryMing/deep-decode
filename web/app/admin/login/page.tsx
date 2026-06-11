@@ -14,7 +14,7 @@ export default async function LoginPage({
   const { from } = await searchParams;
   return (
     <div className="mx-auto flex min-h-[70vh] max-w-sm flex-col justify-center px-5">
-      <div className="rounded-2xl border border-line bg-white p-7">
+      <div className="rounded-xl border border-line bg-white p-7">
         <h1 className="text-xl font-bold text-ink">运营后台</h1>
         <p className="mb-6 mt-1 text-sm text-muted">
           仅本人可见，请登录。

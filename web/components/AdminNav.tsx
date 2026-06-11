@@ -32,7 +32,7 @@ export function AdminNav() {
             }`}
           >
             <span
-              className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md text-xs font-bold ${
+              className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${
                 active
                   ? "bg-paper/20 text-paper"
                   : n.num

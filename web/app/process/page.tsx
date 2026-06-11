@@ -192,7 +192,7 @@ function Layer({
           <span
             key={n.id}
             title={n.id}
-            className="rounded-md border border-line bg-paper px-2 py-1 text-xs text-ink-soft"
+            className="rounded-lg border border-line bg-paper px-2 py-1 text-xs text-ink-soft"
           >
             {n.title}
           </span>

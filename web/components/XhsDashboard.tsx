@@ -96,7 +96,7 @@ export function XhsDashboard({
   return (
     <div className="flex flex-col gap-6">
       {/* 账号头部 */}
-      <div className="rounded-2xl border border-line bg-white p-5">
+      <div className="rounded-xl border border-line bg-white p-5">
         <div className="flex flex-wrap items-start justify-between gap-4">
           <div className="min-w-0">
             <div className="flex items-center gap-2">

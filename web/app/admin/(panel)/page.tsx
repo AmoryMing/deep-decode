@@ -81,7 +81,7 @@ export default function Overview() {
             className="group relative flex flex-col rounded-xl border border-line bg-white p-4 transition-all hover:-translate-y-0.5 hover:border-ink/30 hover:shadow-sm"
           >
             <div className="mb-2 flex items-center gap-2">
-              <span className="flex h-6 w-6 items-center justify-center rounded-md bg-ink text-xs font-bold text-paper">
+              <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-ink text-xs font-bold text-paper">
                 {s.num}
               </span>
               <span className="text-sm font-semibold text-ink">{s.label}</span>
