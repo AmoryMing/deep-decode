@@ -15,12 +15,13 @@ const STATUS_LABEL: Record<CellStatus, string> = {
   other: "其他",
 };
 
+// 状态色语义固定：amber=等人动手 / sky=已排期 / ink=已完成 / 灰=未动或跳过（非错误）
 const STATUS_CHIP: Record<CellStatus, string> = {
   published: "bg-ink/90 text-paper",
   draft: "bg-amber-100 text-amber-900 border border-amber-300",
   scheduled: "bg-sky-100 text-sky-900 border border-sky-300",
-  ready: "bg-violet-100 text-violet-900 border border-violet-300",
-  none: "bg-white text-red-700 border border-red-300 border-dashed",
+  ready: "bg-amber-50 text-amber-800 border border-amber-200",
+  none: "bg-white text-muted border border-line border-dashed",
   skip: "bg-line/40 text-muted line-through",
   other: "bg-paper text-ink-soft border border-line",
 };

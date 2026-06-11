@@ -36,8 +36,8 @@ export function DataCenterPanel({ dc }: { dc: DataCenter }) {
         </h3>
         {dc.trend.length < 2 ? (
           <p className="rounded-lg border border-dashed border-line bg-white px-4 py-3 text-xs text-muted">
-            还只有 {dc.trend.length} 个快照。每天跑 <code>tools/analytics_snapshot.py</code>{" "}
-            积累趋势（cron 自动）。当前粉丝 {last?.followers ?? "—"}。
+            还只有 {dc.trend.length} 天数据。每天自动记一次账号数据，攒几天就能看趋势了。
+            当前粉丝 {last?.followers ?? "—"}。
           </p>
         ) : (
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -66,9 +66,8 @@ export function DataCenterPanel({ dc }: { dc: DataCenter }) {
         </h3>
         {dc.priorsComputedFrom === 0 ? (
           <p className="rounded-lg border border-dashed border-line bg-white px-4 py-3 text-xs text-muted">
-            还没有单篇表现数据。发布后用{" "}
-            <code>tools/perf_record.py --slug … --likes … --collects …</code>{" "}
-            记录，系统会算出"哪类概念赢面高"并自动给相关新热点在选题页加权。
+            还没有单篇表现数据。文章发布后回来填一次它的点赞、收藏数，
+            系统就会算出"哪类话题更受欢迎"，并自动给相关的新热点在选题页加权。
           </p>
         ) : (
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">

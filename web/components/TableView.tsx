@@ -1,12 +1,14 @@
 import type { MdTable } from "@/lib/schedule";
+import { humanize } from "@/lib/nodeLabels";
 
 function cleanCell(s: string): string {
-  return s
+  const stripped = s
     .replace(/~~(.*?)~~/g, "$1")
     .replace(/\*\*(.*?)\*\*/g, "$1")
     .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
     .replace(/`/g, "")
     .trim();
+  return humanize(stripped);
 }
 
 function cellClass(text: string): string {
@@ -48,7 +50,7 @@ export function TableView({ table }: { table: MdTable }) {
                       text,
                     )}`}
                   >
-                    {text || "·"}
+                    {text || <span aria-hidden="true">·</span>}
                   </td>
                 );
               })}

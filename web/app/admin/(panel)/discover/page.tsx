@@ -3,6 +3,7 @@ import { getTopics, getRadar, getTopicStats, getLatestRadar } from "@/lib/topics
 import { getQueue } from "@/lib/schedule";
 import { TableView } from "@/components/TableView";
 import { RadarInbox } from "@/components/RadarInbox";
+import { humanize } from "@/lib/nodeLabels";
 
 export const metadata: Metadata = {
   title: "选题",
@@ -114,14 +115,14 @@ export default function Discover() {
             >
               <div className="mb-1 flex items-start justify-between gap-2">
                 <h4 className="text-sm font-semibold leading-snug text-ink">
-                  {t.title}
+                  {humanize(t.title)}
                 </h4>
-                <span className="shrink-0 rounded bg-line/70 px-1.5 py-0.5 text-[10px] text-muted">
+                <span className="shrink-0 rounded bg-line/70 px-1.5 py-0.5 text-[11px] text-muted">
                   {t.status}
                 </span>
               </div>
               {t.angle && (
-                <p className="line-clamp-2 text-xs text-muted">{t.angle}</p>
+                <p className="line-clamp-2 text-xs text-muted">{humanize(t.angle)}</p>
               )}
               {t.tags.length > 0 && (
                 <div className="mt-2 flex flex-wrap gap-1">
