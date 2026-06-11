@@ -73,22 +73,30 @@ function MarkForm({ slug, platform }: { slug: string; platform: Platform }) {
 }
 
 export function QueueBoard({ items }: { items: QueueItem[] }) {
-  const [onlyPending, setOnlyPending] = useState(true);
+  // 默认只看「真正待发」——有草稿/已排期/素材就绪。纯「未动」的历史不默认摊开（降噪）。
+  const [actionableOnly, setActionableOnly] = useState(true);
   const [platform, setPlatform] = useState<Platform | "全部">("全部");
   const [open, setOpen] = useState<string | null>(null);
 
-  const shown = useMemo(
+  const [showAll, setShowAll] = useState(false);
+  const CAP = 30; // 默认最多 30 行，避免上百行历史糊脸
+  const isActionable = (it: QueueItem) =>
+    it.cells.some((c) => ["draft", "scheduled", "ready"].includes(c.status));
+
+  const filtered = useMemo(
     () =>
       items.filter((it) => {
-        if (onlyPending && it.pendingCount === 0) return false;
+        if (actionableOnly && !isActionable(it)) return false;
         if (platform === "全部") return true;
         const c = it.cells.find((x) => x.platform === platform);
         return (
           !!c && c.status !== "published" && c.status !== "skip"
         );
       }),
-    [items, onlyPending, platform],
+    [items, actionableOnly, platform],
   );
+  const shown = showAll ? filtered : filtered.slice(0, CAP);
+  const hiddenCount = filtered.length - shown.length;
 
   const platforms = ["全部", "邮件", "公众号", "小红书", "视频号", "抖音"] as const;
 
@@ -99,10 +107,10 @@ export function QueueBoard({ items }: { items: QueueItem[] }) {
         <label className="inline-flex items-center gap-1.5 text-ink-soft">
           <input
             type="checkbox"
-            checked={onlyPending}
-            onChange={(e) => setOnlyPending(e.target.checked)}
+            checked={actionableOnly}
+            onChange={(e) => setActionableOnly(e.target.checked)}
           />
-          只看有待办
+          只看真正待发（藏未动历史）
         </label>
         <span className="text-line">|</span>
         {platforms.map((p) => (
@@ -260,6 +268,15 @@ export function QueueBoard({ items }: { items: QueueItem[] }) {
           <div className="px-4 py-8 text-center text-sm text-muted">
             没有匹配的行——要么真清零了，要么把过滤器放宽。
           </div>
+        )}
+        {hiddenCount > 0 && (
+          <button
+            type="button"
+            onClick={() => setShowAll(true)}
+            className="w-full border-t border-line/60 px-4 py-2.5 text-center text-xs text-muted hover:bg-paper"
+          >
+            还有 {hiddenCount} 篇历史 · 点开看全部
+          </button>
         )}
       </div>
     </div>

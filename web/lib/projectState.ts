@@ -20,6 +20,7 @@ export interface RunNode {
 
 export interface ProjectState {
   slug: string;
+  title?: string;
   content_type: string | null;
   reader: string | null;
   style: string | null;

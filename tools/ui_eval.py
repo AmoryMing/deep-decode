@@ -203,6 +203,21 @@ def score_visual() -> tuple[float, list]:
     return round(pts, 1), checks
 
 
+def score_content(content: dict) -> tuple[float, list]:
+    """F 内容呈现/降噪(20)：成品图文混排 + 列表显标题非slug + 队列默认降噪。"""
+    checks = []
+
+    def chk(name, ok):
+        checks.append({"check": name, "pass": bool(ok)})
+
+    chk("成品页图文混排(正文≥3图)", (content.get("post_figures") or 0) >= 3)
+    chk("产出列表显中文标题(非裸slug)", not content.get("produce_shows_slug", True))
+    chk("审核队列默认降噪(≤40行)", (content.get("queue_rows_default") or 999) <= 40)
+    passed = sum(1 for c in checks if c["pass"])
+    pts = 20 * passed / len(checks)
+    return round(pts, 1), checks
+
+
 def score_trust(texts: dict, raw: dict) -> tuple[float, list]:
     checks = []
 
@@ -281,22 +296,27 @@ def main():
     e_pts, visual = score_visual()
     if dom:
         c_pts, flow_checks = score_flow(flow)
+        f_pts, content_checks = score_content(dom.get("content", {}))
     else:
         c_pts, flow_checks = 10.0, [{"check": "需 playwright 实测", "pass": False}]
-    total = round(a_pts + b_pts + c_pts + d_pts + e_pts, 1)
+        f_pts, content_checks = 10.0, [{"check": "需 playwright 实测", "pass": False}]
+    # 6 维各满 20（共 120）→ 归一化到 100
+    raw_sum = a_pts + b_pts + c_pts + d_pts + e_pts + f_pts
+    total = round(raw_sum / 120 * 100, 1)
 
     out = {
         "ui_score": total,
+        "raw_sum_of_6dims": round(raw_sum, 1),
         "text_source": text_src,
         "breakdown": {"A_jargon": a_pts, "B_bugs": b_pts, "C_flow": c_pts,
-                      "D_trust": d_pts, "E_visual": e_pts},
+                      "D_trust": d_pts, "E_visual": e_pts, "F_content": f_pts},
         "jargon_leaks": len(leaks),
-        "jargon_sample": leaks[:15],
         "bug_checks": bugs,
         "trust_checks": trust,
         "visual_checks": visual,
         "flow_checks": flow_checks,
-        "note": "5维各20分；A=真实DOM绝对刻度(0泄漏满分,≥30为0)；C=真实动线信号",
+        "content_checks": content_checks,
+        "note": "6维各20分(共120)归一化到100；A=真实DOM绝对刻度；C/F=真实DOM信号",
     }
     print(json.dumps(out, ensure_ascii=False, indent=1))
 

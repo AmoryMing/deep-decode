@@ -69,5 +69,33 @@ try {
       /确认|按这个写|查看策略|策略草案|草案/.test((b.textContent || "").trim())));
 } catch (e) { /* ignore */ }
 
+// F 内容呈现/降噪
+const content = {};
+try {
+  // 图文混排：随便找一篇有图的成品看正文里有没有配图
+  await page.goto(BASE + "/post/2026-06-10-content-factory-demo", { waitUntil: "networkidle", timeout: 30000 });
+  await page.waitForTimeout(1500);
+  content.post_figures = await page.evaluate(() =>
+    document.querySelectorAll(".prose-article img, article figure img").length);
+} catch (e) { content.post_figures = 0; }
+try {
+  await page.goto(BASE + "/admin/produce", { waitUntil: "networkidle", timeout: 30000 });
+  await page.waitForTimeout(1200);
+  // slug→标题：进度卡主行是否还在裸用 2026-..-slug（坏）vs 显示中文标题
+  content.produce_shows_slug = await page.evaluate(() => {
+    const rows = [...document.querySelectorAll("section a, section .font-mono")]
+      .map((e) => (e.textContent || "").trim()).filter(Boolean);
+    const slugLike = rows.filter((t) => /^20\d{2}-\d{2}-\d{2}-[a-z]/.test(t)).length;
+    return slugLike >= 3; // 还有≥3 行裸 slug = 没换标题
+  });
+} catch (e) { content.produce_shows_slug = true; }
+try {
+  await page.goto(BASE + "/admin/queue", { waitUntil: "networkidle", timeout: 30000 });
+  await page.waitForTimeout(1200);
+  // 队列降噪：默认是否把上百行历史全摊出来
+  content.queue_rows_default = await page.evaluate(() =>
+    document.querySelectorAll('div.overflow-hidden > div').length);
+} catch (e) { content.queue_rows_default = 999; }
+
 await browser.close();
-process.stdout.write(JSON.stringify({ pages, flow }));
+process.stdout.write(JSON.stringify({ pages, flow, content }));

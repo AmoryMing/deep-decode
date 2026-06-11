@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getAllSlugs, getPost } from "@/lib/content";
 import { PostMedia } from "@/components/PostMedia";
+import { ArticleWithFigures } from "@/components/ArticleWithFigures";
 
 export const dynamicParams = false;
 
@@ -98,10 +99,7 @@ export default async function PostPage({
         videoV={post.videoV}
       />
 
-      <div
-        className="prose-article"
-        dangerouslySetInnerHTML={{ __html: post.html }}
-      />
+      <ArticleWithFigures html={post.html} images={post.images} title={post.title} />
 
       <footer className="mt-12 border-t border-line pt-6">
         <Link

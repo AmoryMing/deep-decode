@@ -14,9 +14,11 @@ export function PipelineProgress({ state }: { state: ProjectState }) {
       <div className="flex items-center gap-3">
         <Link
           href={`/post/${state.slug}`}
-          className="min-w-0 flex-1 truncate font-mono text-xs text-ink hover:underline"
+          title={state.slug}
+          className="min-w-0 flex-1 truncate text-sm text-ink hover:underline"
         >
-          {state.slug}
+          {state.title ||
+            state.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "").replace(/-/g, " ")}
         </Link>
         <span className="shrink-0 text-xs text-muted">
           {state.content_type} · {state.reader}

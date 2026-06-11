@@ -134,11 +134,26 @@ export function getPost(slug: string): Post | null {
   if (!meta) return null;
   const file = path.join(outputDir(), slug, "article.md");
   const { content } = matter(fs.readFileSync(file, "utf8"));
-  const dirFiles = fs.readdirSync(path.join(outputDir(), slug));
-  const images = dirFiles
-    .filter((f) => /\.(png|jpe?g|svg|webp)$/i.test(f))
-    .sort()
-    .map((f) => cdnUrl(`output/${slug}/${f}`));
+  const slugDir = path.join(outputDir(), slug);
+  const dirFiles = fs.readdirSync(slugDir);
+  // 配图可能在顶层，也可能在 assets/gpt-img（杂志图，优先）/ assets/png / assets。
+  const imgExt = /\.(png|jpe?g|webp)$/i; // 正文混排优先位图，svg 不进正文（常与 png 重复）
+  const collect = (rel: string): string[] => {
+    const abs = path.join(slugDir, rel);
+    if (!fs.existsSync(abs) || !fs.statSync(abs).isDirectory()) return [];
+    return fs
+      .readdirSync(abs)
+      .filter((f) => imgExt.test(f))
+      .sort()
+      .map((f) => `${rel}/${f}`.replace(/^\.\//, ""));
+  };
+  // 优先级：gpt-img 杂志图 > png > 顶层散图
+  let relImgs = collect("assets/gpt-img");
+  if (relImgs.length === 0) relImgs = collect("assets/png");
+  if (relImgs.length === 0) relImgs = collect("assets");
+  if (relImgs.length === 0)
+    relImgs = dirFiles.filter((f) => imgExt.test(f)).sort();
+  const images = relImgs.map((r) => cdnUrl(`output/${slug}/${r}`));
   return {
     ...meta,
     html: rewriteAndRender(content, slug),

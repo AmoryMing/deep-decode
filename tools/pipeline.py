@@ -340,6 +340,7 @@ def build_status(root, graph, spec) -> dict:
     done_n = sum(1 for s in status_map.values() if s == "done")
     return {
         "slug": spec.get("project", {}).get("slug") or root.name,
+        "title": spec.get("project", {}).get("title") or "",
         "content_type": cfg.get("content_type"),
         "reader": cfg.get("reader"),
         "style": cfg.get("style"),
