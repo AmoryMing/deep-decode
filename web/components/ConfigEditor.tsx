@@ -64,27 +64,27 @@ export function ConfigEditor({ cfg }: { cfg: EditableConfig }) {
           </select>
         </label>
         <label className="flex flex-col gap-1">
-          <span className="text-xs text-muted">写稿模型（m.article，可空）</span>
+          <span className="text-xs text-muted">写稿模型（可空）</span>
           <input name="model_article" defaultValue={cfg.nodeModels["m.article"] || ""} placeholder="deepseek-v4-pro" className={fieldCls} />
         </label>
         <label className="flex flex-col gap-1">
-          <span className="text-xs text-muted">路由模型（n.router，可空）</span>
+          <span className="text-xs text-muted">选题模型（可空）</span>
           <input name="model_router" defaultValue={cfg.nodeModels["n.router"] || ""} placeholder="deepseek-v4-flash" className={fieldCls} />
         </label>
 
         {/* 视觉后端 */}
         <label className="flex flex-col gap-1">
-          <span className="text-xs text-muted">配图后端 visual.backend</span>
+          <span className="text-xs text-muted">配图引擎</span>
           <select name="visualBackend" defaultValue={cfg.visualBackend} className={fieldCls}>
-            <option value="gpt-image">gpt-image（AI 出图）</option>
-            <option value="svg">svg（代码绘制）</option>
+            <option value="gpt-image">AI 出图</option>
+            <option value="svg">代码绘制</option>
           </select>
         </label>
-        <KeyField name="gptImageKey" label="gpt-image 网关 Key" isSet={cfg.gptImageKeySet} />
+        <KeyField name="gptImageKey" label="AI 出图服务 Key" isSet={cfg.gptImageKeySet} />
 
         {/* 视频后端 */}
         <label className="flex flex-col gap-1">
-          <span className="text-xs text-muted">视频后端 video.backend</span>
+          <span className="text-xs text-muted">视频引擎</span>
           <select name="videoBackend" defaultValue={cfg.videoBackend} className={fieldCls}>
             <option value="remotion">remotion（旁白长视频）</option>
             <option value="seedance">seedance（即梦生成式短片）</option>
@@ -121,8 +121,8 @@ export function ConfigEditor({ cfg }: { cfg: EditableConfig }) {
             {state.message}
           </span>
         )}
-        <span className="ml-auto text-[11px] text-muted">
-          写入 factory.config.yaml（gitignore，key 不入库）
+        <span className="ml-auto text-xs text-muted">
+          只写到本地工厂设置，你的 Key 不会上传、不进代码库
         </span>
       </div>
     </form>

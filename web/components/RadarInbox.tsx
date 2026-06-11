@@ -3,6 +3,7 @@
 import { useActionState, useState } from "react";
 import { createProject, type CreateState } from "@/app/admin/(panel)/produce/actions";
 import type { RadarItem } from "@/lib/topics";
+import { humanize } from "@/lib/nodeLabels";
 
 function InboxCard({ item }: { item: RadarItem }) {
   const [state, action, pending] = useActionState<CreateState, FormData>(
@@ -29,8 +30,8 @@ function InboxCard({ item }: { item: RadarItem }) {
       {item.angle && (
         <p className="mt-1.5 text-xs text-ink-soft">
           <span className="text-muted">角度：</span>
-          {item.angle}
-          <span className="ml-1 rounded bg-paper px-1 text-[10px] text-muted">{ct}</span>
+          {humanize(item.angle)}
+          <span className="ml-1 rounded bg-paper px-1 text-[11px] text-muted">{ct}</span>
         </p>
       )}
       <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[10px] text-muted">
@@ -76,7 +77,7 @@ export function RadarInbox({ items, date }: { items: RadarItem[]; date: string }
   return (
     <div className="flex flex-col gap-3">
       <div className="flex items-center gap-2 text-xs text-muted">
-        <span>{date} · 按分排序 · 勾选热点一键建项目</span>
+        <span>{date} · 按推荐分排序 · 点「建项目」一键开写</span>
         <span className="ml-auto">显示前 {shown.length}/{items.length}</span>
       </div>
       <div className="grid grid-cols-1 gap-2.5 lg:grid-cols-2">

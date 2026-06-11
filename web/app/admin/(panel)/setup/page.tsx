@@ -57,14 +57,14 @@ export default function Setup() {
         </p>
       </header>
 
-      {/* 可编辑配置（UI 写 factory.config.yaml） */}
-      <Card title="⚙ 配置（UI 可改 → 写 factory.config.yaml）" hint="key 不入库">
+      {/* 可编辑配置（UI 写工厂设置） */}
+      <Card title="⚙ 工厂设置（这里改，自动保存）" hint="你的 Key 只存本地，不上传">
         <ConfigEditor cfg={editable} />
       </Card>
 
       {/* 配置源盘点 */}
       <Card
-        title="① 配置源 factory.config.yaml"
+        title="① 工厂设置"
         hint={inv.configSource || "未找到"}
       >
         {inv.configExists ? (
@@ -75,25 +75,24 @@ export default function Setup() {
           </p>
         ) : (
           <p className="text-sm text-amber-800">
-            ⚠ 还在用 <span className="font-mono">.example</span> 模板。复制为{" "}
-            <span className="font-mono">factory.config.yaml</span> 并填 key
-            后，生成步骤才能自动跑（M2.5）。
+            ⚠ 还在用示例模板。在上面「工厂设置」里填好模型 Key
+            后，生成步骤才能自动跑。
           </p>
         )}
         <div className="mt-3 flex flex-wrap gap-2">
           {inv.providers.map((p) => (
             <Pill key={p.key} on={p.hasKey}>
-              {p.key} {p.model && `· ${p.model}`} {p.hasKey ? "✓key" : "缺key"}
+              {p.key} {p.model && `· ${p.model}`} {p.hasKey ? "✓ 已填 Key" : "缺 Key"}
             </Pill>
           ))}
           {inv.providers.length === 0 && (
-            <span className="text-xs text-muted">无模型 provider 配置</span>
+            <span className="text-xs text-muted">还没配模型</span>
           )}
         </div>
       </Card>
 
       {/* 读者画像 */}
-      <Card title="② 读者画像 readers/" hint="决定语气（tone.yaml 主导轴）">
+      <Card title="② 读者画像" hint="决定写给谁、用什么语气">
         <div className="flex flex-col gap-2">
           {inv.readers.map((r) => (
             <div key={r.key} className="flex items-center gap-2 text-sm">
@@ -103,15 +102,15 @@ export default function Setup() {
               <span className="min-w-0 flex-1 truncate text-ink-soft">
                 {r.displayName}
               </span>
-              <Pill on={r.hasTone}>tone</Pill>
-              <Pill on={r.hasPersona}>persona</Pill>
+              <Pill on={r.hasTone}>语气</Pill>
+              <Pill on={r.hasPersona}>画像</Pill>
             </div>
           ))}
         </div>
       </Card>
 
       {/* 风格 */}
-      <Card title="③ 风格套件 styles/" hint="决定写作者气质（voice + 反馈记忆）">
+      <Card title="③ 风格套件" hint="决定写作者的气质和遣词">
         <div className="flex flex-col gap-2">
           {inv.styles.map((s) => (
             <div key={s.key} className="flex items-center gap-2 text-sm">
@@ -119,15 +118,15 @@ export default function Setup() {
                 {s.key}
               </span>
               <span className="min-w-0 flex-1" />
-              <Pill on={s.hasVoice}>voice</Pill>
-              <Pill on={s.hasFeedback}>feedback</Pill>
+              <Pill on={s.hasVoice}>声音</Pill>
+              <Pill on={s.hasFeedback}>反馈记忆</Pill>
             </div>
           ))}
         </div>
       </Card>
 
       {/* 内容类型 */}
-      <Card title="④ 内容类型 templates/content/" hint="决定跑哪个 playbook">
+      <Card title="④ 内容类型" hint="决定走哪套写作流程">
         <div className="flex flex-wrap gap-2">
           {inv.contentTypes.map((c) => (
             <span
@@ -142,7 +141,7 @@ export default function Setup() {
       </Card>
 
       {/* 知识库 */}
-      <Card title="⑤ 知识库 wiki/" hint="选题 + 写作的素材底座">
+      <Card title="⑤ 知识库" hint="选题和写作的素材底座">
         <p className="text-sm text-ink-soft">
           信源 <b>{inv.wikiCounts.sources}</b> · 概念{" "}
           <b>{inv.wikiCounts.concepts}</b> · 选题 <b>{inv.wikiCounts.topics}</b>
