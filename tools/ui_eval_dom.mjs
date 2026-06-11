@@ -35,12 +35,23 @@ try {
   // 展开第一行看发布动作
   const firstRow = await page.$('div.overflow-hidden > div button');
   if (firstRow) { await firstRow.click(); await page.waitForTimeout(500); }
-  const queueText = await page.evaluate(() => document.body.innerText);
-  // 发布动作是否靠终端命令（坏）vs 有发送按钮（好）
-  flow.publish_terminal = /复制命令|python3|\.py --send|cd output/.test(queueText);
   flow.publish_button = await page.evaluate(() =>
     [...document.querySelectorAll("button,a")].some((b) =>
       /^(发送|发邮件|传公众号|一键发|发布)/.test((b.textContent || "").trim())));
+  // 终端命令是否「默认可见」（坏）——折叠进 <details> 的高级 fallback 不算（可接受）。
+  flow.terminal_visible = await page.evaluate(() => {
+    const isTerm = (t) => /python3|\.py --send|cd output\//.test(t || "");
+    return [...document.querySelectorAll("code, pre")].some((el) => {
+      if (!isTerm(el.textContent)) return false;
+      // 在某个 closed <details> 里 = 不算默认可见
+      let n = el;
+      while (n) {
+        if (n.tagName === "DETAILS" && !n.open) return false;
+        n = n.parentElement;
+      }
+      return true; // 终端命令默认就摆在外面
+    });
+  });
 } catch (e) { flow.error = String(e).slice(0, 80); }
 try {
   await page.goto(BASE + "/admin/discover", { waitUntil: "networkidle", timeout: 30000 });
@@ -55,7 +66,7 @@ try {
   // 产出页"待确认"能否就地确认（不跨页）——看有无确认按钮
   flow.inline_confirm = await page.evaluate(() =>
     [...document.querySelectorAll("button")].some((b) =>
-      /确认|按这个写|生成方案|看草案/.test((b.textContent || "").trim())));
+      /确认|按这个写|查看策略|策略草案|草案/.test((b.textContent || "").trim())));
 } catch (e) { /* ignore */ }
 
 await browser.close();

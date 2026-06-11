@@ -4,6 +4,7 @@ import { useActionState, useMemo, useState } from "react";
 import Link from "next/link";
 import type { CellStatus, Platform, QueueItem } from "@/lib/queue";
 import { markPublished, type MarkState } from "@/app/admin/(panel)/queue/actions";
+import { SendButton } from "./SendButton";
 
 const STATUS_LABEL: Record<CellStatus, string> = {
   published: "已发",
@@ -230,17 +231,23 @@ export function QueueBoard({ items }: { items: QueueItem[] }) {
                               {c.raw}
                             </span>
                           )}
-                          <span className="ml-auto">
+                          <span className="ml-auto flex items-center gap-2">
+                            <SendButton slug={it.slug} platform={c.platform} />
                             <MarkForm slug={it.slug} platform={c.platform} />
                           </span>
                         </div>
                         {c.nextStep && (
-                          <div className="flex items-start gap-2">
-                            <code className="min-w-0 flex-1 whitespace-pre-wrap break-all rounded bg-paper px-2 py-1 font-mono text-[11px] text-ink-soft">
-                              {c.nextStep}
-                            </code>
-                            <CopyBtn text={c.nextStep} />
-                          </div>
+                          <details className="text-[11px] text-muted">
+                            <summary className="cursor-pointer select-none">
+                              高级：手动命令
+                            </summary>
+                            <div className="mt-1 flex items-start gap-2">
+                              <code className="min-w-0 flex-1 whitespace-pre-wrap break-all rounded bg-paper px-2 py-1 font-mono text-ink-soft">
+                                {c.nextStep}
+                              </code>
+                              <CopyBtn text={c.nextStep} />
+                            </div>
+                          </details>
                         )}
                       </div>
                     ))}

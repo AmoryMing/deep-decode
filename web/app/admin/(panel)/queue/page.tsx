@@ -19,7 +19,7 @@ export default function Queue() {
       <header>
         <h2 className="text-xl font-bold text-ink">④ 审核 · 全平台待发清单</h2>
         <p className="mt-1 text-sm text-muted">
-          一页看完每篇 × 每平台还差什么。预览 → 复制命令在终端发 / 平台后台点发布
+          一页看完每篇 × 每平台还差什么。预览 → 点「发送」按钮发布
           → 回来「标记已发」。发送动作永远在人审之后。
         </p>
       </header>

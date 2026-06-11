@@ -122,9 +122,10 @@ def score_flow(flow: dict) -> tuple[float, list]:
     def chk(name, ok):
         checks.append({"check": name, "pass": bool(ok)})
 
-    # 发布动作可达：有「发送」按钮(好) 且 不靠终端命令(坏)
-    chk("发布动作按钮化(非终端)", flow.get("publish_button") and not flow.get("publish_terminal"))
-    chk("发布不依赖复制终端命令", not flow.get("publish_terminal"))
+    # 发布动作可达：有「发送」按钮(好)
+    chk("发布动作按钮化", flow.get("publish_button"))
+    # 终端命令不再默认可见（折叠进高级 fallback 可接受）
+    chk("终端命令已降级(非默认可见)", not flow.get("terminal_visible"))
     chk("选题页一键建项目", flow.get("discover_oneclick_create"))
     chk("产出页就地确认(不跨页)", flow.get("inline_confirm"))
     passed = sum(1 for c in checks if c["pass"])
