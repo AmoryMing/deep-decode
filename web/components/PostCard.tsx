@@ -22,8 +22,13 @@ export function PostCard({ post }: { post: PostMeta }) {
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           />
         ) : (
-          <div className="flex h-full items-center justify-center text-muted">
-            {post.title.slice(0, 2)}
+          <div className="flex h-full flex-col justify-between bg-ink p-4 text-paper">
+            <span className="text-[10px] uppercase tracking-widest text-paper/50">
+              DEEP DECODE
+            </span>
+            <span className="line-clamp-3 text-base font-bold leading-snug">
+              {post.title}
+            </span>
           </div>
         )}
         <div className="absolute left-2 top-2 flex gap-1">

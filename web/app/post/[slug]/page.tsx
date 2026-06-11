@@ -69,14 +69,18 @@ export default async function PostPage({
         {post.source && (
           <p className="mt-3 text-sm">
             <span className="text-muted">原文：</span>
-            <a
-              href={post.source}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="break-all text-accent underline underline-offset-2"
-            >
-              {post.source}
-            </a>
+            {/^https?:\/\//.test(post.source) ? (
+              <a
+                href={post.source}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="break-all text-accent underline underline-offset-2"
+              >
+                {post.source}
+              </a>
+            ) : (
+              <span className="text-ink-soft">{post.source}</span>
+            )}
           </p>
         )}
         {post.tags.length > 0 && (
