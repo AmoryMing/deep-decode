@@ -105,7 +105,7 @@ export function getPostMeta(slug: string): PostMeta | null {
     slug,
     title: data.title ? String(data.title) : slug,
     date: normalizeDate(data.date || data.decoded || dateFromSlug),
-    decoded: data.decoded ? String(data.decoded) : undefined,
+    decoded: data.decoded ? normalizeDate(data.decoded) : undefined,
     author: data.author ? String(data.author) : undefined,
     source: data.source ? String(data.source) : undefined,
     type: data.type ? String(data.type) : undefined,
