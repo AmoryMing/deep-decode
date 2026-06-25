@@ -4,14 +4,29 @@
     {
       "name": "web",
       "runtimeExecutable": "bash",
-      "runtimeArgs": ["-c", "cd /Users/muming/项目/内容/web && exec npm start"],
-      "port": 3000
+      "runtimeArgs": ["-c", "cd /Users/muming/项目/内容/web && exec npm run dev -- --port 3000"],
+      "port": 3000,
+      "autoPort": false
     },
     {
       "name": "web-dev",
       "runtimeExecutable": "bash",
       "runtimeArgs": ["-c", "cd /Users/muming/项目/内容/web && exec npm run dev -- --port 3100"],
       "port": 3100,
+      "autoPort": true
+    },
+    {
+      "name": "radar-web",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/muming/项目/内容/tools/topic-radar/web && exec npm run dev -- --port 5173"],
+      "port": 5173,
+      "autoPort": true
+    },
+    {
+      "name": "mingmu-site",
+      "runtimeExecutable": "bash",
+      "runtimeArgs": ["-c", "cd /Users/muming/项目/个人网站/site && exec npx --yes serve -l 4600"],
+      "port": 4600,
       "autoPort": true
     }
   ]

@@ -6,7 +6,10 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "拆解" },
   { href: "/process", label: "流程" },
-  { href: "/admin", label: "运营" },
+  // 运营入口仅本地可见；公开站（NEXT_PUBLIC_AIDEEP_PUBLIC=1）隐藏
+  ...(process.env.NEXT_PUBLIC_AIDEEP_PUBLIC === "1"
+    ? []
+    : [{ href: "/admin", label: "运营" }]),
 ];
 
 export function Nav() {
@@ -16,10 +19,10 @@ export function Nav() {
       <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-5">
         <Link href="/" className="flex items-baseline gap-2">
           <span className="text-base font-bold tracking-tight text-ink">
-            内容工厂
+            AIDEEP
           </span>
-          <span className="text-[11px] uppercase tracking-[0.2em] text-muted">
-            Deep&nbsp;Decode
+          <span className="text-[11px] tracking-[0.2em] text-muted">
+            AI&nbsp;深度拆解
           </span>
         </Link>
         <nav className="flex items-center gap-1 text-sm">

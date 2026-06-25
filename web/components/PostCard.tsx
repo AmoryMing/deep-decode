@@ -24,7 +24,7 @@ export function PostCard({ post }: { post: PostMeta }) {
         ) : (
           <div className="flex h-full flex-col justify-between bg-ink p-4 text-paper">
             <span className="text-[10px] uppercase tracking-widest text-paper/50">
-              DEEP DECODE
+              AIDEEP
             </span>
             <span className="line-clamp-3 text-base font-bold leading-snug">
               {post.title}

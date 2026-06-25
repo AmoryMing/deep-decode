@@ -1,0 +1,7 @@
+{
+  "tts": "doubao",
+  "voice": "zh_female_roumeinvyou_emo_v2_mars_bigtts",
+  "segments": 6,
+  "duration_s": 385.9,
+  "output_file": "podcast.mp3"
+}
