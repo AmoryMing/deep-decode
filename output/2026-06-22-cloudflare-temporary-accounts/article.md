@@ -10,8 +10,6 @@ tags: [Cloudflare, AI智能体, Workers, Wrangler, 临时账户, 无账户部署
 
 # 一句命令，机器人自己开了个账户上线——Cloudflare 把"注册门槛"为 AI 重写了
 
-![Cloudflare 临时账户:AI agent 敲一句 wrangler deploy --temporary,几秒拿到在线 Worker,60 分钟内由人认领否则销毁](assets/gpt-img/00_cover.png)
-
 **本期关键词:临时账户 / 认领窗口（claim window）/ 无账户部署（anonymous deploy）**
 
 2026 年 6 月 19 日，做网络服务起家的 Cloudflare 上线了一个听起来很小、其实信号很大的功能:让一个 AI 程序（业内叫"智能体 / agent"，就是能自己干活、不用你一步步盯着的软件）敲一句命令，就能凭空开一个账户、把代码发布上线，几秒钟后拿到一个真实能访问的网址。
@@ -31,8 +29,6 @@ tags: [Cloudflare, AI智能体, Workers, Wrangler, 临时账户, 无账户部署
 - **`wrangler deploy --temporary`** = 这次的主角命令。平时 `deploy` 的意思是"用我的账户发布"；这次新加了个开关 `--temporary`，意思变成"我没有账户，请临时给我开一个，让我先发出去"。
 
 记住一句话就够:**普通发布要先有账户，这条新命令是"先发布、账户临时现开"。** 一个技术细节先摆在这:用它得把 Wrangler 升级到 4.102.0 或更新的版本，而且必须处于"登出"状态——因为它专为"手里没有凭证的 agent"准备，不能和已有账户混用。
-
-![三个零件:Workers=共享厨房(代码就近出餐)、Wrangler=传菜窗口(敲命令的工具)、deploy=上菜(发布);新开关 --temporary=没账户也先发](assets/gpt-img/01_three_parts.png)
 
 ---
 
@@ -56,8 +52,6 @@ tags: [Cloudflare, AI智能体, Workers, Wrangler, 临时账户, 无账户部署
 
 "deploy elsewhere"（跑去别家部署）这半句是关键。**这意味着 Cloudflare 已经把 agent 当成一个会流失的"客户"在抢了。** 一句话总结它的目标，官方原话是:"Our goal? Let your agent code and ship."（我们的目标?让你的 agent 写代码、然后直接发出去。）
 
-![一道只认人脸的旋转门:人顺畅穿过四道闸(浏览器登录/点控制台/复制密钥/过二次验证),agent 在第一道闸前撞墙卡死,红字"可能转头去别家部署"](assets/gpt-img/02_wall.png)
-
 ---
 
 ## 第二步:临时账户怎么运转——秒级拿号、60 分钟认领、不认领就删
@@ -79,8 +73,6 @@ Cloudflare 的解法，是"先发一个一次性账户，再让人事后认领"�
 
 而且这 60 分钟不是"发一次就完"。官方说明书写明，窗口期内 agent 可以反复折腾:"the agent can verify the Worker, redeploy changes, and return both the live Worker URL and claim URL."（agent 可以验证这个网站、重新部署改动，并把在线网址和认领链接一起返回。）**这正好对上 Cloudflare 反复强调的一句话:"Agents need a tight write → deploy → verify loop."（agent 需要一个紧凑的"写→发布→验证"闭环。）** 机器靠反复试错干活，发布一次要等半天，它的反馈回路就断了——所以必须降到秒级。
 
-![临时账户流程:T0敲--temporary→几秒拿到在线网址+认领链接→60分钟内可反复改→人点认领=永久/不认领=自动删除;区分两个数字:秒级上线 vs 60分钟窗口](assets/gpt-img/03_flow.png)
-
 ---
 
 ## 第三步:它不是完整账户——配额、防薅，和一个别人没有的东西
@@ -100,8 +92,6 @@ Cloudflare 的解法，是"先发一个一次性账户，再让人事后认领"�
 > 来源:Cloudflare Blog，2026-06-19，https://blog.cloudflare.com/temporary-accounts/
 
 这句话的分量在于:agent 在临时账户里搭的不是一个空壳网页，而是一个**带数据库、能存东西的真应用**;满意了，人去"柜台"认领正装，连试用时配好的数据库一起打包带走。还有一个安全提醒别漏——那条认领链接本身就是账户的钥匙。官方专门标了一句:"Claim URLs grant ownership of the account. Treat them as sensitive."（认领链接会授予账户所有权，请把它当敏感信息对待。）谁拿到链接，谁就拥有这个账户。
-
-![临时账户=缩水版:内圈"能用但配额小"(网页≤1000文件、D1数据库1个≤100MB、队列≤10),外圈护栏"防滥用三件套:工作量证明/限流/滥用检查";侧栏:能认领数据库+绑定,不只静态网页](assets/gpt-img/04_quota.png)
 
 ---
 
@@ -123,8 +113,6 @@ Cloudflare 的解法，是"先发一个一次性账户，再让人事后认领"�
 
 所以这三家像三种快递柜:**Netlify 和 Cloudflare 是"不用注册先存件、一小时内来认领"，Cloudflare 的柜子还能存"冷链"（带数据库的真应用）;Vercel 是"必须先实名办卡才能用柜"。** 一个求快、一个求"快且后端可带走"、一个求"可管可追责"。这不是谁对谁错，是同一个问题（agent 怎么部署）的两种价值取向。
 
-![三家对比矩阵:Netlify(3/31,无账户,1小时认领,偏静态)/Cloudflare(6/19,无账户,60分钟认领,可带数据库)/Vercel(6/17,要可验证身份);高亮:Cloudflare可认领后端、Vercel要身份](assets/gpt-img/05_three_clouds.png)
-
 ---
 
 ## 对从业者意味着什么:获客对象，第一次从人变成了机器
@@ -132,8 +120,6 @@ Cloudflare 的解法，是"先发一个一次性账户，再让人事后认领"�
 把时间线连起来看就清楚了:3 月 Netlify 开了头，4 月 30 日 Cloudflare 先做了"重型版"——借支付公司 Stripe 当身份背书，让 agent 自动开"永久付费"账户、甚至买域名（同一拨作者写的，临时账户是它的轻量前置版）;6 月 17 日 Vercel 宣布 agent 已经驱动了它超过一半的部署（半年前还不到 3%）;6 月 19 日 Cloudflare 补上这块临时账户的拼图。
 
 这条趋势线指向一个判断:**平台争抢的"新客户"，正在从人变成机器，整个注册、上线、认领的漏斗都在为机器重写。**
-
-![趋势时间线:3/31 Netlify无账户→4/30 Cloudflare借Stripe开永久账户→6/17 Vercel(agent已占其50%部署)→6/19 Cloudflare临时账户;一条"为agent重写部署"的趋势线,箭头指向"获客对象:人→机器"](assets/gpt-img/06_trend.png)
 
 这对不同的人意味着不同的事:
 
