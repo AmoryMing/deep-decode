@@ -91,6 +91,35 @@ export function getAllSlugs(): string[] {
     .filter((name) => fs.existsSync(path.join(dir, name, "article.md")));
 }
 
+// 收集组件交错用的配图（gpt-img 杂志图 > png > assets > 顶层散图），返回相对路径。
+// getPost 用它出图、剥内联；getPostMeta 用它做封面回退。统一一处，避免两边逻辑漂移。
+function collectFigures(slug: string): string[] {
+  const slugDir = path.join(outputDir(), slug);
+  if (!fs.existsSync(slugDir)) return [];
+  const imgExt = /\.(png|jpe?g|webp)$/i;
+  const collect = (rel: string): string[] => {
+    const abs = path.join(slugDir, rel);
+    if (!fs.existsSync(abs) || !fs.statSync(abs).isDirectory()) return [];
+    return fs
+      .readdirSync(abs)
+      .filter((f) => imgExt.test(f))
+      .sort()
+      .map((f) => `${rel}/${f}`.replace(/^\.\//, ""));
+  };
+  let rel = collect("assets/gpt-img");
+  if (rel.length === 0) rel = collect("assets/png");
+  if (rel.length === 0) rel = collect("assets");
+  if (rel.length === 0)
+    rel = fs.readdirSync(slugDir).filter((f) => imgExt.test(f)).sort();
+  return rel;
+}
+
+// 卡片封面：正文无内联图时，回退到资产首图（如 00_cover）。
+function figureCover(slug: string): string | undefined {
+  const f = collectFigures(slug)[0];
+  return f ? cdnUrl(`output/${slug}/${f}`) : undefined;
+}
+
 export function getPostMeta(slug: string): PostMeta | null {
   const file = path.join(outputDir(), slug, "article.md");
   if (!fs.existsSync(file)) return null;
@@ -111,7 +140,7 @@ export function getPostMeta(slug: string): PostMeta | null {
     type: data.type ? String(data.type) : undefined,
     status: data.status ? String(data.status) : undefined,
     tags: Array.isArray(data.tags) ? data.tags.map(String) : [],
-    cover: firstImage(content, slug),
+    cover: firstImage(content, slug) ?? figureCover(slug),
     excerpt: makeExcerpt(content),
     hasPodcast: dirFiles.includes("podcast.mp3"),
     hasVideo:
@@ -136,27 +165,17 @@ export function getPost(slug: string): Post | null {
   const { content } = matter(fs.readFileSync(file, "utf8"));
   const slugDir = path.join(outputDir(), slug);
   const dirFiles = fs.readdirSync(slugDir);
-  // 配图可能在顶层，也可能在 assets/gpt-img（杂志图，优先）/ assets/png / assets。
-  const imgExt = /\.(png|jpe?g|webp)$/i; // 正文混排优先位图，svg 不进正文（常与 png 重复）
-  const collect = (rel: string): string[] => {
-    const abs = path.join(slugDir, rel);
-    if (!fs.existsSync(abs) || !fs.statSync(abs).isDirectory()) return [];
-    return fs
-      .readdirSync(abs)
-      .filter((f) => imgExt.test(f))
-      .sort()
-      .map((f) => `${rel}/${f}`.replace(/^\.\//, ""));
-  };
-  // 优先级：gpt-img 杂志图 > png > 顶层散图
-  let relImgs = collect("assets/gpt-img");
-  if (relImgs.length === 0) relImgs = collect("assets/png");
-  if (relImgs.length === 0) relImgs = collect("assets");
-  if (relImgs.length === 0)
-    relImgs = dirFiles.filter((f) => imgExt.test(f)).sort();
-  const images = relImgs.map((r) => cdnUrl(`output/${slug}/${r}`));
+  const images = collectFigures(slug).map((r) => cdnUrl(`output/${slug}/${r}`));
+  // 有配图资产时，ArticleWithFigures 组件会自动按章交错插图；
+  // 因此剥掉正文里的内联图 ![]（多为整行），避免与组件各插一次造成图片重复。
+  // 无资产的文章（images 为空）保留内联图——那是它唯一的图源。
+  const body =
+    images.length > 0
+      ? content.replace(/^[ \t]*!\[[^\]]*\]\([^)]*\)[ \t]*$/gm, "")
+      : content;
   return {
     ...meta,
-    html: rewriteAndRender(content, slug),
+    html: rewriteAndRender(body, slug),
     podcast: dirFiles.includes("podcast.mp3")
       ? cdnUrl(`output/${slug}/podcast.mp3`)
       : undefined,
