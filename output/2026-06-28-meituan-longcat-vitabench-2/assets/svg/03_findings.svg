@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .idx { font: 800 28px Inter, sans-serif; fill: #D9CFBE; }
+    .ftitle { font: 700 17px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .fbody { font: 400 13.5px 'PingFang SC', Inter, sans-serif; fill: #6B6256; }
+    .bignum { font: 800 34px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .numlabel { font: 500 12px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .vs { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #6B6256; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="44">三个反直觉发现</text>
+  <text class="desc" x="40" y="68">头号瓶颈不是「猜不准」，是「猜准了也用不好」</text>
+
+  <!-- Finding 1 -->
+  <g>
+    <rect class="card" x="40" y="92" width="720" height="120" rx="14"/>
+    <text class="idx" x="62" y="128">01</text>
+    <text class="ftitle" x="110" y="124">给了真值偏好（ground truth），成绩还是 50%</text>
+    <text class="fbody" x="110" y="152">直接把正确用户偏好喂给模型、省掉推断这一步——成绩依然卡在 50% 左右。</text>
+    <text class="fbody" x="110" y="174">问题不在「猜不准」，而在对偏好做推理、排优先级、跨任务一致应用的能力不足。</text>
+    <rect x="600" y="116" width="138" height="76" rx="10" fill="#EFE6D6"/>
+    <text class="bignum" x="669" y="158" text-anchor="middle">~50%</text>
+    <text class="numlabel" x="669" y="180" text-anchor="middle">喂真值后成功率</text>
+  </g>
+
+  <!-- Finding 2 -->
+  <g>
+    <rect class="card" x="40" y="226" width="720" height="120" rx="14"/>
+    <text class="idx" x="62" y="262">02</text>
+    <text class="ftitle" x="110" y="258">开 thinking 模式，并不稳定地带来更好成绩</text>
+    <text class="fbody" x="110" y="286">最强 thinking 模型 Opus-4.6 是 0.503，最强 non-thinking 的 DeepSeek-V4-Pro 是 0.456。</text>
+    <text class="fbody" x="110" y="308">差距没想象中大——长期个性化和通用推理不是同一条能力曲线。</text>
+    <rect x="600" y="250" width="138" height="76" rx="10" fill="#EFE6D6"/>
+    <text class="bignum" x="669" y="288" text-anchor="middle">.503</text>
+    <text class="numlabel" x="669" y="308" text-anchor="middle">vs .456 non-think</text>
+  </g>
+
+  <!-- Finding 3 -->
+  <g>
+    <rect class="card" x="40" y="360" width="720" height="130" rx="14"/>
+    <text class="idx" x="62" y="396">03</text>
+    <text class="ftitle" x="110" y="392">主动性是全场最低分——模型不知道自己该先问一句</text>
+    <text class="fbody" x="110" y="420">信息不足的任务上，领先模型只有 27%-28%，远低于个性化任务的 44%-50%。</text>
+    <text class="fbody" x="110" y="442">模型意识不到信息不够就硬猜。会替你订餐的助理，最危险的不是订错，</text>
+    <text class="fbody" x="110" y="464">是它不知道该先问你一句——这是当前 agent 的系统性盲点。</text>
+    <rect x="600" y="386" width="138" height="86" rx="10" fill="#B85A3A"/>
+    <text class="bignum" x="669" y="428" text-anchor="middle" fill="#F7F1E8">27%</text>
+    <text class="numlabel" x="669" y="450" text-anchor="middle" fill="#F7F1E8">主动性 全场最低</text>
+  </g>
+</svg>

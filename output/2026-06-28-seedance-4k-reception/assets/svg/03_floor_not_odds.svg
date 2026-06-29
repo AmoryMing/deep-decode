@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .key { font: 800 20px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .label { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .praise { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.4; }
+    .blame { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.4; }
+    .card-good { fill: #B85A3A; }
+    .card-waste { fill: #EFE7D8; stroke: #D9CFBE; stroke-width: 1; }
+    .footer { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #8A7E6B; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">口碑两极，吵的是同一件事的两面</text>
+  <text class="desc" x="40" y="68">4K 提高的是「抽中那一条」的下限，不是「抽中」的概率</text>
+
+  <!-- 抽卡可视化：一排卡，一张好九张废 -->
+  <text class="label" x="40" y="108">抽卡：同一句提示词生成多次，时好时坏</text>
+  <!-- 好卡 -->
+  <rect class="card-good" x="40" y="122" width="64" height="84" rx="8"/>
+  <text x="72" y="156" text-anchor="middle" font="700 13px 'PingFang SC',sans-serif" fill="#F7F1E8">抽中</text>
+  <text x="72" y="178" text-anchor="middle" font="800 16px Inter,sans-serif" fill="#F7F1E8">4K</text>
+  <text x="72" y="198" text-anchor="middle" font="400 11px 'PingFang SC',sans-serif" fill="#F7F1E8">惊艳</text>
+  <!-- 废卡们 -->
+  <g>
+    <rect class="card-waste" x="120" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="184" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="248" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="312" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="376" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="440" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="504" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="568" y="122" width="56" height="84" rx="8"/>
+    <rect class="card-waste" x="632" y="122" width="56" height="84" rx="8"/>
+  </g>
+  <text x="158" y="170" text-anchor="middle" class="small" fill="#8A7E6B">废</text>
+  <text x="404" y="170" text-anchor="middle" class="small" fill="#8A7E6B">废 · 废 · 废 …</text>
+  <text class="small" x="40" y="226" fill="#8A7E6B">抽中一条惊艳的，背后是抽掉的十条废片——这一点 4K 一点没碰</text>
+
+  <!-- 左：赞 -->
+  <rect class="praise" x="40" y="252" width="350" height="190" rx="12"/>
+  <text class="key" x="60" y="284" font-size="18">赞 · 管线视角</text>
+  <text class="label" x="60" y="312">关键词：音画同步 + 一致性</text>
+  <text class="small" x="60" y="338">双分支扩散：嘴型对台词、脚步声踩落地帧</text>
+  <text class="small" x="60" y="360">解决了「整容」（角色每镜不一样）与</text>
+  <text class="small" x="60" y="382">「默片」（有画没声）两大痛点</text>
+  <text class="small" x="60" y="412" fill="#B85A3A">看到的是：一旦抽中，就能直接上大屏交付</text>
+  <text class="small" x="60" y="432">→「从玩具级推向工业生产力阶段」</text>
+
+  <!-- 右：骂 -->
+  <rect class="blame" x="410" y="252" width="350" height="190" rx="12"/>
+  <text class="key" x="430" y="284" font-size="18" fill="#8A7E6B">骂 · 单镜头视角</text>
+  <text class="label" x="430" y="312">关键词：概率游戏</text>
+  <text class="small" x="430" y="338">语音错乱、画面文字乱码客观存在</text>
+  <text class="small" x="430" y="360">连「开门」这种动作都奇奇怪怪</text>
+  <text class="small" x="430" y="382">得反复重生成才挑得到一条能用的</text>
+  <text class="small" x="430" y="412" fill="#8A7E6B">看到的是：为了抽中那条，要烧多少次</text>
+  <text class="small" x="430" y="432">→「AI 视频仍是概率游戏」(36氪)</text>
+
+  <text class="footer" x="40" y="476">2.5 的 50 参考素材 + 区域级局部编辑，才是直接冲着「降随机」去的解法</text>
+</svg>

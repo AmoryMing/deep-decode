@@ -138,6 +138,14 @@ atoms:
     produces:
       - {path: "tone_report.json", contract: {kind: json_has_keys, keys: [pass, violations, voice_match]}}
 
+  - id: a.deepseek_polish
+    title: DeepSeek 中文语感润色（发布前终稿）
+    run: "script:tools/deepseek_polish.py article.md"
+    needs: ["article.md"]
+    produces:
+      - {path: "deepseek_polish_report.json", contract: {kind: json_has_keys, keys: [verdict, polished, model]}}
+    notes: 只磨语感/去机翻腔，不动事实/结构/引用/段序；原稿备份到 article.md.pre-deepseek
+
 # ───────────────────────── MOLECULES（composites） ─────────────────────────
 molecules:
   - id: n.router
@@ -195,6 +203,15 @@ molecules:
       - {path: "polish_report.json", contract: {kind: json_has_keys, keys: [structure, prose, verdict]}}
     depends_on: [m.tone_gate]
 
+  - id: m.deepseek_polish
+    layer: molecule
+    title: 中文语感终稿（DeepSeek 母语顺稿，发布前最后一道）
+    run: "atom:a.deepseek_polish"
+    needs: ["article.md"]
+    produces:
+      - {path: "deepseek_polish_report.json", contract: {kind: json_has_keys, keys: [verdict, polished, model]}}
+    depends_on: [m.polish]
+
   - id: m.factcheck
     layer: molecule
     title: 事实核查
@@ -211,7 +228,7 @@ molecules:
     needs: ["article.md"]
     produces:
       - {path: "assets/png", contract: {kind: glob_min_count, glob: "assets/png/*.png", min: 4}}
-    depends_on: [m.polish]
+    depends_on: [m.deepseek_polish]
 
   - id: m.video
     layer: molecule
@@ -251,6 +268,7 @@ compounds:
       - m.article
       - m.tone_gate
       - m.polish
+      - m.deepseek_polish
       - m.factcheck
       - m.visual
       - m.video
@@ -261,12 +279,12 @@ compounds:
   c.brief:
     title: 情报日报
     template: templates/content/brief.md
-    nodes: [n.strategy, n.evidence, m.article, m.tone_gate, m.polish, c.distribute_all]
+    nodes: [n.strategy, n.evidence, m.article, m.tone_gate, m.polish, m.deepseek_polish, c.distribute_all]
 
   c.practice:
     title: 实操指南
     template: templates/content/practice.md
-    nodes: [n.strategy, n.evidence, m.article, m.tone_gate, m.polish, m.visual, c.distribute_all]
+    nodes: [n.strategy, n.evidence, m.article, m.tone_gate, m.polish, m.deepseek_polish, m.visual, c.distribute_all]
 
   # 终端 compound：分发必须把所有声明渠道带到"可一键发送"（修复"分发不到最后一步"）
   c.distribute_all:

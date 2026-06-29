@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .title { font: 800 46px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .subtitle { font: 500 19px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .kw { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .chip { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.2; }
+    .chip-txt { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7E6B; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="48" y="46" width="168" height="30" rx="5"/>
+  <text class="tag" x="64" y="66">AI 视频深度拆解</text>
+
+  <text class="title" x="48" y="150">Seedance 4K</text>
+  <text class="title" x="48" y="206" font-size="34">来晚了，但来对了</text>
+
+  <text class="subtitle" x="48" y="252">一次失冠之后的转身——从「排行榜上赢你一次」，</text>
+  <text class="subtitle" x="48" y="280">转向「把你的整条出片流程占死」</text>
+
+  <!-- 三个关键事实芯片 -->
+  <rect class="chip" x="48" y="320" width="220" height="86" rx="10"/>
+  <text class="kw" x="68" y="356" font-size="30">原生 4K</text>
+  <text class="chip-txt" x="68" y="386" font-size="14">3840 x 2160 直出 · 10-bit</text>
+
+  <rect class="chip" x="290" y="320" width="220" height="86" rx="10"/>
+  <text class="kw" x="310" y="356" font-size="30">30 秒</text>
+  <text class="chip-txt" x="310" y="386" font-size="14">2.5 单段直出时长</text>
+
+  <rect class="chip" x="532" y="320" width="220" height="86" rx="10"/>
+  <text class="kw" x="552" y="356" font-size="30">50 个</text>
+  <text class="chip-txt" x="552" y="386" font-size="14">参考素材上限 (Veo 仅 3)</text>
+
+  <text class="footer" x="48" y="452">字节跳动 · 火山引擎 FORCE 2026-06-23 | Seedance 2.0 / 2.5 · 即梦 · CapCut</text>
+  <text class="footer" x="48" y="474">来源：ByteDance Seed / 火山引擎 / 36氪 / TheNextWeb 等综合检索</text>
+</svg>

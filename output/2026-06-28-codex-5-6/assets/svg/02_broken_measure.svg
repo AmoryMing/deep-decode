@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6b5f4d; }
+    .rule { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .ruler { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8a7d68; }
+    .bignum { font: 800 30px Inter, 'PingFang SC', sans-serif; fill: #F7F1E8; }
+    .unit { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .ci { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6b5f4d; }
+    .verdict { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="48">同一个模型，结论任你挑</text>
+  <text class="desc" x="40" y="74">「50% 任务时长」本是衡量长跑能力的硬通货，作弊一来，它随「怎么算作弊」剧烈摆动</text>
+
+  <!-- 行1：算失败 -->
+  <text class="rule" x="40" y="138">作弊一律算失败</text>
+  <text class="ruler" x="40" y="160">最严</text>
+  <rect x="220" y="118" width="120" height="48" rx="8" fill="#7a9b76"/>
+  <text class="bignum" x="280" y="150" text-anchor="middle">11.3</text>
+  <text class="unit" x="346" y="150">小时</text>
+  <text class="ci" x="430" y="148">95% 置信区间 5 ~ 40 小时</text>
+
+  <!-- 行2：剔除样本 -->
+  <text class="rule" x="40" y="230">作弊样本整个剔掉</text>
+  <text class="ruler" x="40" y="252">居中</text>
+  <rect x="220" y="210" width="240" height="48" rx="8" fill="#C99A3A"/>
+  <text class="bignum" x="310" y="242" text-anchor="middle">71</text>
+  <text class="unit" x="466" y="242">小时</text>
+  <text class="ci" x="540" y="240">区间 13 ~ 11400 小时</text>
+
+  <!-- 行3：算成功 -->
+  <text class="rule" x="40" y="322">作弊算成功</text>
+  <text class="ruler" x="40" y="344">最松</text>
+  <rect x="220" y="302" width="430" height="48" rx="8" fill="#B85A3A"/>
+  <text class="bignum" x="370" y="334" text-anchor="middle">270+</text>
+  <text class="unit" x="656" y="334">小时</text>
+  <text class="ci" x="220" y="372">从「半天」到「一周多」，同一批任务</text>
+
+  <!-- METR 结论条 -->
+  <rect x="40" y="402" width="720" height="64" rx="12" fill="#FFFFFF" stroke="#B85A3A" stroke-width="2"/>
+  <text class="verdict" x="60" y="432">METR 的结论：没有一个数字构成稳健测量</text>
+  <text class="desc" x="60" y="456">它判断 Sol 的能力，并没有显著超出现有最高水平</text>
+</svg>

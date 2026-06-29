@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A8170; }
+    .layer-t { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .layer-d { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6B6356; }
+    .layer-tag { font: 600 12px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .actor { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .path { font: 500 12px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .L1 { fill: #FBEFE9; stroke: #B85A3A; stroke-width: 2; }
+    .L2 { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .L3 { fill: #F2EADC; stroke: #C7B79A; stroke-width: 1.5; }
+    .tagbox { fill: #B85A3A; }
+    .tagbox2 { fill: #C7B79A; }
+  </style>
+  <rect class="bg" width="800" height="540"/>
+  <text class="h1" x="40" y="44">OpenKnowledge 的三层架构</text>
+  <text class="desc" x="40" y="66">关键在中间和最上层是分开的：人看富文本视图，agent 看底层纯文本 + 专用工具</text>
+
+  <!-- Layer 1: agent 工具层 (top) -->
+  <rect class="L3" x="180" y="100" width="460" height="100" rx="12"/>
+  <rect class="tagbox2" x="200" y="118" width="120" height="26" rx="5"/>
+  <text class="layer-tag" x="214" y="136">agent 工具层</text>
+  <text class="layer-t" x="200" y="172">MCP + skills</text>
+  <text class="layer-d" x="200" y="192">让 AI 搜索、吸收、组织、维护整套知识库</text>
+
+  <!-- Layer 2: 编辑层 (middle) -->
+  <rect class="L2" x="180" y="220" width="460" height="100" rx="12"/>
+  <rect class="tagbox2" x="200" y="238" width="96" height="26" rx="5"/>
+  <text class="layer-tag" x="214" y="256">编辑层</text>
+  <text class="layer-t" x="200" y="292">真·所见即所得（WYSIWYG）</text>
+  <text class="layer-d" x="200" y="312">手感同 Notion，可塞 Mermaid / LaTeX / HTML / 视频</text>
+
+  <!-- Layer 3: 内容层 (bottom, the truth) -->
+  <rect class="L1" x="180" y="340" width="460" height="100" rx="12"/>
+  <rect class="tagbox" x="200" y="358" width="96" height="26" rx="5"/>
+  <text class="layer-tag" x="214" y="376">内容层</text>
+  <text class="layer-t" x="200" y="412">纯 markdown / mdx + git</text>
+  <text class="layer-d" x="200" y="432" fill="#B85A3A">唯一的真相来源（single source of truth）</text>
+
+  <!-- 人的入口 (left, points to 编辑层) -->
+  <text class="actor" x="40" y="266">人</text>
+  <text class="layer-d" x="40" y="288">读富文本</text>
+  <line x1="100" y1="270" x2="175" y2="270" stroke="#6B6356" stroke-width="2"/>
+  <polygon points="173,265 183,270 173,275" fill="#6B6356"/>
+
+  <!-- agent 的入口 (right, bypasses to 内容层) -->
+  <text class="actor" x="700" y="156">agent</text>
+  <text class="layer-d" x="668" y="178">外部模型</text>
+  <!-- agent goes in at tool layer and reaches straight down to content -->
+  <line x1="690" y1="150" x2="645" y2="150" stroke="#B85A3A" stroke-width="2"/>
+  <polygon points="647,145 637,150 647,155" fill="#B85A3A"/>
+  <path d="M 710 200 Q 752 290 710 390 L 648 390" fill="none" stroke="#B85A3A" stroke-width="2" stroke-dasharray="5 4"/>
+  <polygon points="650,385 640,390 650,395" fill="#B85A3A"/>
+  <text class="path" x="658" y="300">同一份</text>
+  <text class="path" x="658" y="318">纯文本</text>
+  <text class="path" x="658" y="336">直读底层</text>
+
+  <text class="desc" x="40" y="480">"为 agent 重做" 的字面意思——不是在人的界面旁加 AI，而是给 AI 单开一条进库的路</text>
+</svg>

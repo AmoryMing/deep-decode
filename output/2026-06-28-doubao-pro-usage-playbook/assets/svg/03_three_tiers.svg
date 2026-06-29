@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .row { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .badge { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .tier-t { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .tier-d { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+    .case { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #4A4339; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+  </style>
+  <rect class="bg" width="800" height="540"/>
+
+  <text class="h1" x="40" y="48">把所有用法分成三层</text>
+  <text class="desc" x="40" y="74">交付级真回本，兜底级能用但不能放手，噱头级压根是免费版能力被裹进来卖。</text>
+
+  <!-- 第一层 交付级 -->
+  <rect class="row" x="40" y="100" width="720" height="118" rx="10"/>
+  <rect x="40" y="100" width="8" height="118" rx="4" fill="#3E8E5A"/>
+  <rect x="66" y="122" width="160" height="30" rx="6" fill="#3E8E5A"/>
+  <text class="badge" x="82" y="143">交付级 · 真回本</text>
+  <text class="tier-d" x="66" y="178">边界清楚、可验证、浏览器内闭环</text>
+  <text class="tier-d" x="66" y="200">放手让它干</text>
+  <text class="case" x="270" y="134">· 批量文件归档（327 张图 3 分钟）</text>
+  <text class="case" x="270" y="160">· 找数据、填表、出摘要（财报对比）</text>
+  <text class="case" x="270" y="186">· 定时抓取与推送（每日财经新闻）</text>
+  <text class="case" x="540" y="160">· 浏览器自动化采集</text>
+  <text class="case" x="540" y="186">· 做 PPT、文本转表格</text>
+
+  <!-- 第二层 兜底级 -->
+  <rect class="row" x="40" y="230" width="720" height="118" rx="10"/>
+  <rect x="40" y="230" width="8" height="118" rx="4" fill="#C99A2E"/>
+  <rect x="66" y="252" width="190" height="30" rx="6" fill="#C99A2E"/>
+  <text class="badge" x="82" y="273">兜底级 · 守在旁边</text>
+  <text class="tier-d" x="66" y="308">它出八成你补两成</text>
+  <text class="tier-d" x="66" y="330">效率仍为正</text>
+  <text class="case" x="300" y="288">· 任何涉及开放事实的输出（会编价格）</text>
+  <text class="case" x="300" y="314">· PPT 的配图（偶尔开天窗）</text>
+  <text class="case" x="300" y="340">· 长文档、复杂研报的深度判断</text>
+
+  <!-- 第三层 噱头级 -->
+  <rect class="row" x="40" y="360" width="720" height="118" rx="10"/>
+  <rect x="40" y="360" width="8" height="118" rx="4" fill="#9A8E7C"/>
+  <rect x="66" y="382" width="220" height="30" rx="6" fill="#9A8E7C"/>
+  <text class="badge" x="82" y="403">噱头级 · 别为它升级</text>
+  <text class="tier-d" x="66" y="438">其实是免费版的能力</text>
+  <text class="tier-d" x="66" y="460">被裹进来卖</text>
+  <text class="case" x="320" y="404">· 手机端 P 图（70 多种预设）</text>
+  <text class="case" x="320" y="430">· Seedream 生图 / Seedance 视频</text>
+  <text class="case" x="320" y="456">· 数字分身、做小红书同款</text>
+
+  <text class="footer" x="40" y="512">真正属于专业版的，只有「2.1 Pro 办公任务模式 ＋ 更高额度 ＋ 不排队」</text>
+</svg>

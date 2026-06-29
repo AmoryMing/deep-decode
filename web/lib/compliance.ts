@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 import { repoRoot } from "./repo";
-import { getAllSlugs } from "./content";
+import { getAllSlugs, articleFile } from "./content";
 
 // 中国《广告法》绝对化用语（极限词）——发布前必查
 const AD_LAW_WORDS = [
@@ -105,11 +105,10 @@ function reviewedSet(): Set<string> {
 
 export function getComplianceReport(): ComplianceResult[] {
   const reviewed = reviewedSet();
-  const out = path.join(repoRoot(), "output");
   return getAllSlugs()
     .map((slug) => {
-      const file = path.join(out, slug, "article.md");
-      const raw = fs.readFileSync(file, "utf8");
+      const file = articleFile(slug);
+      const raw = file ? fs.readFileSync(file, "utf8") : "";
       const { data, content } = matter(raw);
       const issues = checkArticle(slug, data, content);
       const hasError = issues.some((i) => i.severity === "error");

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .title { font: 800 40px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .subtitle { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .big-num { font: 800 52px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .num-label { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .num-sub { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8F7C; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #9A8F7C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="40" y="38" width="170" height="28" rx="5"/>
+  <text class="tag" x="56" y="57">AI 大厂深度拆解</text>
+
+  <text class="title" x="40" y="128">DeepSeek · DSpark</text>
+  <text class="subtitle" x="40" y="162">让 V4 吐字快 85%，却一字未改它的智商</text>
+  <text class="subtitle" x="40" y="188">优化的是你的账单，不是模型的脑子</text>
+
+  <!-- 三个数字卡片 -->
+  <g>
+    <rect class="card" x="40" y="240" width="230" height="170" rx="12"/>
+    <text class="big-num" x="58" y="318">+85%</text>
+    <text class="num-label" x="58" y="350">单用户吐字提速</text>
+    <text class="num-label" x="58" y="372">V4-Flash 上限</text>
+    <text class="num-sub" x="58" y="394">质量一字不变</text>
+  </g>
+
+  <g>
+    <rect class="card" x="285" y="240" width="230" height="170" rx="12"/>
+    <text class="big-num" x="303" y="318">661%</text>
+    <text class="num-label" x="303" y="350">吞吐量提升峰值</text>
+    <text class="num-label" x="303" y="372">仅在最严 SLA 下</text>
+    <text class="num-sub" x="303" y="394">是基线先崩，非普遍</text>
+  </g>
+
+  <g>
+    <rect class="card" x="530" y="240" width="230" height="170" rx="12"/>
+    <text class="big-num" x="548" y="318">MIT</text>
+    <text class="num-label" x="548" y="350">DeepSpec 全套开源</text>
+    <text class="num-label" x="548" y="372">代码 + 权重 + 脚本</text>
+    <text class="num-sub" x="548" y="394">把护城河挖了又填平</text>
+  </g>
+
+  <text class="footer" x="40" y="452">来源：Hugging Face 官方卡片 · DeepSeek 联合北京大学 · 2026-06-27</text>
+  <text class="footer" x="40" y="474">核心：同一套权重，外挂推测解码模块，省的是算力不是精度</text>
+</svg>

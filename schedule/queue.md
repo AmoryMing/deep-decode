@@ -19,6 +19,25 @@ updated: 2026-05-11
 | 5 | mythos-3-experienced-mountain-guide | Mythos | default | TBD | Anthropic Risk Report | 系列篇三 |
 | 6 | mythos-4-anthropic-self-trial | Mythos | default | TBD | Anthropic Risk Report | 系列篇四 |
 
+## 2026-06-28 用户批量选题（10 篇 · 独立成篇 · 走 happypath + DeepSeek 语感润色）
+
+> 用户 2026-06-28 指定。每条独立成篇，深检索用 anysearch + firecrawl/web。发布前必过 `m.deepseek_polish`（已入 skillgraph）。选 1~3 篇出 web-video-presentation 动画视频。
+>
+> **状态：10 篇正文全部成稿 + DeepSeek 语感润色✓（2026-06-28），已移 `schedule/published.md`「当前未完结」。** 余下：出图 / 播客 / 1~3 篇动画视频 / 分发草稿。下表保留作存档。
+
+| slug | 类型 | 套件 | 来源/检索关键词 | 独家角度（待研究后定稿） |
+|---|---|---|---|---|
+| 2026-06-28-claude-tag | decode | default | Anthropic / claude-tag | 待研究 |
+| 2026-06-28-adrafinil-mac-agent-awake | decode | default | Adrafinil 菜单栏 App（仅 AI agent 工作时阻止 Mac 睡眠） | 待研究 |
+| 2026-06-28-deepseek-dspark | decode | default | DeepSeek Dspark | 待研究 |
+| 2026-06-28-codex-5-6 | decode | default(developer) | OpenAI Codex 5.6 | 待研究 |
+| 2026-06-28-fable-gradual-rollout | decode | default | Claude Fable 5 逐步放开 | 待研究 |
+| 2026-06-28-meituan-longcat-vitabench-2 | decode | default(developer) | 美团 LongCat 开源 VitaBench 2.0（长期动态智能体基准） | 待研究 |
+| 2026-06-28-openknowledge-ai-notes | decode | default | OpenKnowledge（开源 AI-first Obsidian/Notion 替代） | 已转 in-progress（草稿✓） |
+| 2026-06-28-figma-config-2026 | decode | creative | Figma Config 2026 大会 | 已转 in-progress（草稿✓） |
+| 2026-06-28-doubao-pro-usage-playbook | decode | default | 豆包专业版全网用法大收集 | 已转 in-progress（草稿✓） |
+| 2026-06-28-seedance-4k-reception | decode | creative | Seedance 4K 全网评论 + 精彩表现 | article.md 终稿✓（转 published） |
+
 ## 雷达入库候选（2026-06-06 · AI 提选，优先级待你定）
 
 > 来自 `tmp/decode-radar-2026-06-06.md`。选题页已写入 `wiki/topics/`，一手信源已核（含口径修正，详见各页「一手信源」节）。挑想写的 → 移到 `in-progress.md` 开写即可。

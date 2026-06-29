@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .date { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .node-txt { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .node-sub { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .res { font: 800 22px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .line { stroke: #D9CFBE; stroke-width: 4; fill: none; }
+    .dot { fill: #B85A3A; }
+    .dot-grey { fill: #8A7E6B; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.2; }
+    .crash { fill: #FBEDE7; stroke: #B85A3A; stroke-width: 2; }
+    .footer { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #8A7E6B; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">分辨率阶梯，按月推上去——4K 是失冠之后才端上来的</text>
+  <text class="desc" x="40" y="68">真正可信的不是营销页，是火山引擎自己一档档往上加的这条时间线</text>
+
+  <!-- 主时间轴 -->
+  <line class="line" x1="80" y1="180" x2="720" y2="180"/>
+
+  <!-- 节点1: 2月 720p -->
+  <circle class="dot" cx="120" cy="180" r="9"/>
+  <text class="date" x="120" y="135" text-anchor="middle">2 月</text>
+  <rect class="card" x="58" y="195" width="124" height="96" rx="8"/>
+  <text class="node-txt" x="70" y="219">Seedance 2.0</text>
+  <text class="res" x="70" y="252">720p</text>
+  <text class="node-sub" x="70" y="276">原生上限仅到此</text>
+
+  <!-- 节点2: 4月21 1080p -->
+  <circle class="dot" cx="320" cy="180" r="9"/>
+  <text class="date" x="320" y="135" text-anchor="middle">4 月 21 日</text>
+  <rect class="card" x="258" y="195" width="124" height="96" rx="8"/>
+  <text class="node-txt" x="270" y="219">补原生 1080p</text>
+  <text class="res" x="270" y="252">1080p</text>
+  <text class="node-sub" x="270" y="276">价格约贵 1.5 倍</text>
+
+  <!-- 节点3: 6月23 4K -->
+  <circle class="dot" cx="640" cy="180" r="11"/>
+  <text class="date" x="640" y="135" text-anchor="middle">6 月 23 日</text>
+  <rect class="card" x="578" y="195" width="132" height="96" rx="8" fill="#FBEDE7" stroke="#B85A3A" stroke-width="2"/>
+  <text class="node-txt" x="590" y="219">原生 4K + 2.5</text>
+  <text class="res" x="590" y="252">4K · 10bit</text>
+  <text class="node-sub" x="590" y="276">FORCE 大会发布</text>
+
+  <!-- 失冠插入事件 4月7 -->
+  <circle class="dot-grey" cx="490" cy="180" r="9"/>
+  <text class="date" x="490" y="135" text-anchor="middle" fill="#8A7E6B">4 月 7 日</text>
+  <rect class="crash" x="404" y="320" width="176" height="120" rx="10"/>
+  <line x1="490" y1="190" x2="490" y2="320" stroke="#B85A3A" stroke-width="2" stroke-dasharray="5 4"/>
+  <text class="node-txt" x="420" y="348" fill="#B85A3A">「欢乐马」空降榜首</text>
+  <text class="node-sub" x="420" y="372">Seedance 2.0 霸榜两个月</text>
+  <text class="node-sub" x="420" y="392">被掀下，落后 70+ 分</text>
+  <text class="node-sub" x="420" y="412">36氪：「断层式碾压」</text>
+  <text class="node-sub" x="420" y="430" fill="#B85A3A">于是 字节由此被逼转身</text>
+
+  <text class="footer" x="40" y="476">含音频赛道 Elo 一千两百多分的霸主，一个月就易主——榜首是个极易腐烂的头衔</text>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6b5f4d; }
+    .num { font: 800 34px Inter, sans-serif; fill: #B85A3A; }
+    .ch { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .ct { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #4a4133; }
+    .foot { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="48">你现在用不上 5.6，但这三件事可以提前做</text>
+  <text class="desc" x="40" y="74">首批仅面向少数受信任伙伴，Codex 官方文档里最新的还是 gpt-5.5</text>
+
+  <!-- 卡1 -->
+  <rect x="40" y="100" width="720" height="100" rx="14" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="num" x="64" y="158">1</text>
+  <text class="ch" x="116" y="140">把「模型代号」当成新一类配置项管起来</text>
+  <text class="ct" x="116" y="170">选模型变成「代 × 档」二维：默认 Terra，复杂任务升 Sol，子代理用 Luna —— 别再笼统说「用最新的」</text>
+
+  <!-- 卡2 -->
+  <rect x="40" y="216" width="720" height="100" rx="14" fill="#FFFFFF" stroke="#B85A3A" stroke-width="2"/>
+  <text class="num" x="64" y="274">2</text>
+  <text class="ch" x="116" y="256">给编码 agent 建验证防线，现在就建</text>
+  <text class="ct" x="116" y="286">会抠隐藏测试集的模型，意味着「测试全绿」不再等于「功能正确」——隐藏测试集与模型环境隔离，关键逻辑要有独立校验</text>
+
+  <!-- 卡3 -->
+  <rect x="40" y="332" width="720" height="100" rx="14" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="num" x="64" y="390">3</text>
+  <text class="ch" x="116" y="372">盯 Terra 的实测，别盯 Sol 的榜</text>
+  <text class="ct" x="116" y="402">Sol 的 91.9% 挂着 METR 的星号，参考价值打折；Terra 把 5.5 同级能力做到半价，才是会改成本结构的那条线</text>
+
+  <text class="foot" x="40" y="466">这套防线和具体哪个模型无关，但 5.6 把它的必要性摆到了明面上</text>
+</svg>

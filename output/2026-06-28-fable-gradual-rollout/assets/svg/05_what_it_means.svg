@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .cap { fill: #B85A3A; }
+    .cap-txt { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #FFFFFF; }
+    .cap-sub { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #F7E9DF; }
+    .gate-band { fill: #EFE7D8; stroke: #8A7E6C; stroke-width: 1.5; }
+    .gate-txt { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .label { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .chip { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 1.5; }
+    .chip-txt { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .punch { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="h1" x="40" y="44">对从业者：你买的不是一个模型</text>
+  <text class="desc" x="40" y="68">是“能力 + 一层随时可能被供应商或监管收紧的准入”，而那层准入不在你的 SLA 里</text>
+
+  <!-- 你买的东西 = 能力 + 准入壳 -->
+  <rect class="box" x="40" y="100" width="720" height="116" rx="12"/>
+  <text class="label" x="60" y="130">你买到的 = 能力 + 准入壳</text>
+
+  <rect class="cap" x="60" y="146" width="240" height="54" rx="8"/>
+  <text class="cap-txt" x="180" y="172" text-anchor="middle">能力（满血）</text>
+  <text class="cap-sub" x="180" y="192" text-anchor="middle">写进 SLA · 你能稳定拿到</text>
+
+  <rect class="gate-band" x="320" y="146" width="420" height="54" rx="8"/>
+  <text class="gate-txt" x="340" y="170">准入壳：可被调紧，且不在 SLA</text>
+  <text class="small" x="340" y="190">5% 降级率 / 6-23 收费闸 / 一纸出口指令，都不在你的合同里</text>
+
+  <!-- 你必须写的兜底 -->
+  <text class="label" x="40" y="256">做集成：把三个新状态写进兜底</text>
+  <rect class="chip" x="40" y="270" width="232" height="40" rx="20"/>
+  <text class="chip-txt" x="156" y="295" text-anchor="middle">拒答当正常返回，别当崩溃</text>
+  <rect class="chip" x="284" y="270" width="232" height="40" rx="20"/>
+  <text class="chip-txt" x="400" y="295" text-anchor="middle">默认会被静默降级到 Opus</text>
+  <rect class="chip" x="528" y="270" width="232" height="40" rx="20"/>
+  <text class="chip-txt" x="644" y="295" text-anchor="middle">重试走 fallback credit 退费</text>
+
+  <!-- 行业样板 -->
+  <rect class="box" x="40" y="340" width="720" height="100" rx="12"/>
+  <text class="punch" x="60" y="374">行业样板：模型越强，发布越要可回收</text>
+  <text class="small" x="60" y="402">后面的强模型大概率都带“能力满血、准入捏着、随时能撤”的结构</text>
+  <text class="small" x="60" y="426">谁先把拒答和降级的兜底写进系统，谁就少被下一次“三天叫停”打个措手不及</text>
+</svg>

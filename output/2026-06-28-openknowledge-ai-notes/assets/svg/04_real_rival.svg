@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A8170; }
+    .card-t { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6B6356; }
+    .vs { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .rival { fill: #FBEFE9; stroke: #B85A3A; stroke-width: 2.5; }
+    .bet { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .free { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+  <text class="h1" x="40" y="44">真正的对手不是 Notion</text>
+  <text class="desc" x="40" y="66">它想同时要 Notion 的体验和 Obsidian 的可移植性，但最难缠的是第三个</text>
+
+  <!-- vs Obsidian -->
+  <rect class="vs" x="40" y="92" width="220" height="150" rx="12"/>
+  <text class="card-t" x="60" y="124">对 Obsidian</text>
+  <text class="bet" x="60" y="150">赌 UI 和协作</text>
+  <text class="small" x="60" y="176">Obsidian 编辑器偏极客</text>
+  <text class="small" x="60" y="196">协作弱、AI 全靠插件硬接</text>
+  <text class="small" x="60" y="222" fill="#B85A3A">给 Notion 级所见即所得</text>
+
+  <!-- vs Notion -->
+  <rect class="vs" x="290" y="92" width="220" height="150" rx="12"/>
+  <text class="card-t" x="310" y="124">对 Notion</text>
+  <text class="bet" x="310" y="150">赌不锁定</text>
+  <text class="small" x="310" y="176">Notion 内容压在闭源云</text>
+  <text class="small" x="310" y="196">导出二等、AI 是黑盒</text>
+  <text class="small" x="310" y="222" fill="#B85A3A">git / GitHub 同步，文件归你</text>
+
+  <!-- 真正对手：零成本组合 -->
+  <rect class="rival" x="540" y="92" width="220" height="150" rx="12"/>
+  <text class="card-t" x="560" y="124" fill="#B85A3A">真正的对手</text>
+  <text class="free" x="560" y="150">一分钱没花的组合</text>
+  <text class="small" x="560" y="176">VS Code 打开 markdown 文件夹</text>
+  <text class="small" x="560" y="196">+ Cursor / Claude Code</text>
+  <text class="small" x="560" y="222" fill="#B85A3A">已经是 AI 能读写的知识库</text>
+
+  <!-- HN 大白话 -->
+  <rect x="40" y="270" width="720" height="70" rx="10" fill="#F2E2D8"/>
+  <text class="small" x="64" y="302" fill="#2A241B" font-weight="600" font-size="14">HN 原话：</text>
+  <text class="small" x="148" y="302" font-size="14">"我直接拿 VS Code 打开 Obsidian 文件夹，BOOM，它就对 AI 友好了。"</text>
+  <text class="small" x="64" y="326">如果你的笔记已是 markdown、又已在用 Cursor，那这套零成本组合你早就有了。</text>
+
+  <!-- OpenKnowledge 要证明的增量 -->
+  <text class="card-t" x="40" y="384">OpenKnowledge 要证明：在零成本组合之外，多给的东西值得专门换软件</text>
+  <rect x="40" y="400" width="172" height="40" rx="8" fill="#FFFFFF" stroke="#D9CFBE"/>
+  <text class="small" x="58" y="425" font-size="13">真·WYSIWYG</text>
+  <rect x="224" y="400" width="172" height="40" rx="8" fill="#FFFFFF" stroke="#D9CFBE"/>
+  <text class="small" x="242" y="425" font-size="13">graph 视图</text>
+  <rect x="408" y="400" width="172" height="40" rx="8" fill="#FFFFFF" stroke="#D9CFBE"/>
+  <text class="small" x="426" y="425" font-size="13">调过的 MCP / skills</text>
+  <rect x="592" y="400" width="168" height="40" rx="8" fill="#FFFFFF" stroke="#D9CFBE"/>
+  <text class="small" x="610" y="425" font-size="13">agentic search</text>
+
+  <text class="desc" x="40" y="474">这个证明，目前还没完全做完。省到了时间就换，没省到你本来就有 AI-first 知识库。</text>
+</svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .title { font: 800 40px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .pill { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .pill-on { fill: #B85A3A; }
+    .pill-off { fill: #D9CFBE; }
+    .pill-txt-on { fill: #F7F1E8; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8C74; }
+    .code { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="48" y="44" width="170" height="30" rx="6"/>
+  <text class="tag" x="64" y="64">AI 工具深度拆解</text>
+
+  <text class="title" x="48" y="146">一个用提神药命名的小工具</text>
+  <text class="sub" x="48" y="186">把"别睡"这件事，交给了 AI agent 自己决定</text>
+
+  <!-- 核心隐喻：状态条上的开关，随 agent 那一轮亮灭 -->
+  <text class="pill" x="48" y="262">老工具：你点一下，机器一直醒</text>
+  <rect class="pill-off" x="48" y="280" width="320" height="40" rx="20"/>
+  <text class="code" x="68" y="305">常开 · 你得记得关</text>
+
+  <text class="pill" x="48" y="372">Adrafinil：agent 干活才醒</text>
+  <rect class="pill-on" x="48" y="390" width="200" height="40" rx="20"/>
+  <text class="pill-txt-on" x="68" y="415" style="font:600 14px 'PingFang SC',Inter">这一轮 · 亮</text>
+  <rect class="pill-off" x="256" y="390" width="112" height="40" rx="20"/>
+  <text class="code" x="276" y="415" fill="#9A8C74">归零 · 灭</text>
+
+  <!-- 右侧：合盖走人的画面 -->
+  <g transform="translate(470,250)">
+    <rect x="0" y="40" width="260" height="150" rx="10" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="2"/>
+    <rect x="20" y="60" width="220" height="110" rx="6" fill="#2A241B"/>
+    <text x="130" y="120" text-anchor="middle" style="font:600 15px 'PingFang SC',Inter" fill="#B85A3A">屏幕已黑 · 包里在跑</text>
+    <text x="130" y="146" text-anchor="middle" style="font:400 12px 'PingFang SC',Inter" fill="#9A8C74">合盖 · 不插电 · 不接屏</text>
+    <text x="130" y="222" text-anchor="middle" class="sub">"看着那个跑了一半的活儿"</text>
+  </g>
+
+  <text class="footer" x="48" y="468">kageroumado/adrafinil · Show HN 108 分 · v1.1.2 · 抓取于 2026-06-28</text>
+</svg>

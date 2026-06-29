@@ -32,6 +32,18 @@ export interface Post extends PostMeta {
 
 const outputDir = () => path.join(repoRoot(), "output");
 
+// 文章正文文件：优先 article.md，回退到旧命名 <slug>.md（早期产出未统一文件名，
+// 如 2026-04-20-prfaas/2026-04-20-prfaas.md）。早期成稿因此前被首页统计与详情页
+// 一起漏掉——这里统一一处解析，让计数准确、旧文也能打开。
+export function articleFile(slug: string): string | null {
+  const dir = path.join(outputDir(), slug);
+  const primary = path.join(dir, "article.md");
+  if (fs.existsSync(primary)) return primary;
+  const legacy = path.join(dir, `${slug}.md`);
+  if (fs.existsSync(legacy)) return legacy;
+  return null;
+}
+
 /**
  * 归一化日期为 YYYY-MM-DD。
  * gray-matter 会把未加引号的 YAML 日期解析成 JS Date，String(Date) 会渲染成
@@ -88,7 +100,7 @@ export function getAllSlugs(): string[] {
         return false;
       }
     })
-    .filter((name) => fs.existsSync(path.join(dir, name, "article.md")));
+    .filter((name) => articleFile(name) !== null);
 }
 
 // 收集组件交错用的配图（gpt-img 杂志图 > png > assets > 顶层散图），返回相对路径。
@@ -121,8 +133,8 @@ function figureCover(slug: string): string | undefined {
 }
 
 export function getPostMeta(slug: string): PostMeta | null {
-  const file = path.join(outputDir(), slug, "article.md");
-  if (!fs.existsSync(file)) return null;
+  const file = articleFile(slug);
+  if (!file) return null;
   const raw = fs.readFileSync(file, "utf8");
   const { data, content } = matter(raw);
   const dirFiles = fs.readdirSync(path.join(outputDir(), slug));
@@ -161,7 +173,7 @@ export function getAllPosts(): PostMeta[] {
 export function getPost(slug: string): Post | null {
   const meta = getPostMeta(slug);
   if (!meta) return null;
-  const file = path.join(outputDir(), slug, "article.md");
+  const file = articleFile(slug)!;
   const { content } = matter(fs.readFileSync(file, "utf8"));
   const slugDir = path.join(outputDir(), slug);
   const dirFiles = fs.readdirSync(slugDir);

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .card-top { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .card-en { font: 600 12px Inter, sans-serif; fill: #B85A3A; }
+    .card-body { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6B6256; }
+    .badge-txt { font: 600 12px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .note { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .note-strong { font: 700 14px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">真正的考点：记忆架构怎么搭</text>
+  <text class="desc" x="40" y="68">同一批任务，跑三种记忆设置作对照——记忆机制本身成了变量</text>
+
+  <!-- Full Context -->
+  <g>
+    <rect class="card" x="40" y="92" width="230" height="200" rx="14"/>
+    <rect x="40" y="92" width="230" height="40" rx="14" fill="#D9CFBE"/>
+    <rect x="40" y="118" width="230" height="14" fill="#D9CFBE"/>
+    <text class="card-top" x="60" y="118">Full Context</text>
+    <text class="card-en" x="60" y="158">全历史塞进 prompt</text>
+    <text class="card-body" x="60" y="186">把用户全部历史拼进</text>
+    <text class="card-body" x="60" y="206">上下文窗口</text>
+    <text class="card-body" x="60" y="240" fill="#B85A3A" font-weight="700">能力上界</text>
+    <text class="card-body" x="60" y="262">但成本极高，</text>
+    <text class="card-body" x="60" y="282">生产里几乎不会真用</text>
+  </g>
+
+  <!-- Agentic Memory -->
+  <g>
+    <rect class="card" x="285" y="92" width="230" height="200" rx="14"/>
+    <rect x="285" y="92" width="230" height="40" rx="14" fill="#B85A3A"/>
+    <rect x="285" y="118" width="230" height="14" fill="#B85A3A"/>
+    <text class="card-top" x="305" y="118" fill="#F7F1E8">Agentic Memory</text>
+    <text class="card-en" x="305" y="158">自维护用户档案</text>
+    <text class="card-body" x="305" y="186">agent 自己决定记什么、</text>
+    <text class="card-body" x="305" y="206">改什么，维护结构化档案</text>
+    <text class="card-body" x="305" y="240" fill="#B85A3A" font-weight="700">生产真实方案</text>
+    <text class="card-body" x="305" y="262">主动建模用户，</text>
+    <text class="card-body" x="305" y="282">但很吃模型自身能力</text>
+  </g>
+
+  <!-- RAG Memory -->
+  <g>
+    <rect class="card" x="530" y="92" width="230" height="200" rx="14"/>
+    <rect x="530" y="92" width="230" height="40" rx="14" fill="#B85A3A"/>
+    <rect x="530" y="118" width="230" height="14" fill="#B85A3A"/>
+    <text class="card-top" x="550" y="118" fill="#F7F1E8">RAG Memory</text>
+    <text class="card-en" x="550" y="158">向量检索召回</text>
+    <text class="card-body" x="550" y="186">历史切片做向量索引，</text>
+    <text class="card-body" x="550" y="206">用到时按相似度检索回来</text>
+    <text class="card-body" x="550" y="240" fill="#B85A3A" font-weight="700">生产真实方案</text>
+    <text class="card-body" x="550" y="262">最常见的工程做法，</text>
+    <text class="card-body" x="550" y="282">瓶颈常被误判</text>
+  </g>
+
+  <!-- arrows down to conclusion -->
+  <text x="155" y="318" font-size="22" fill="#8A8073" text-anchor="middle">↓</text>
+  <text x="400" y="318" font-size="22" fill="#8A8073" text-anchor="middle">↓</text>
+  <text x="645" y="318" font-size="22" fill="#8A8073" text-anchor="middle">↓</text>
+
+  <!-- conclusion bar -->
+  <rect x="40" y="336" width="720" height="130" rx="14" fill="#EFE6D6" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="note-strong" x="60" y="372">结论：换上记忆机制，大部分模型都从上界掉分</text>
+  <text class="note" x="60" y="402">论文判断——记忆机制对长期建模是必需的，但当前 agent 还不会有效利用记忆。</text>
+  <text class="note" x="60" y="428">翻成工程语言：你的 RAG 召回 + 拼 prompt 方案，瓶颈大概率不在召回率，</text>
+  <text class="note" x="60" y="450">而在模型拿到召回结果之后「不会用」。它等于一个免费的记忆方案对照实验台。</text>
+</svg>

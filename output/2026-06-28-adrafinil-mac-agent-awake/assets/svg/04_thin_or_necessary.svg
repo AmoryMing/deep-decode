@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .label { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .code { font: 600 13px Inter, monospace; fill: #B85A3A; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 2; }
+    .box-accent { fill: #FBF0EA; stroke: #B85A3A; stroke-width: 2; }
+    .core { fill: #2A241B; }
+    .big { font: 800 34px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .blind { fill: #F1E7D6; stroke: #C9BBA2; stroke-width: 1.5; stroke-dasharray: 6 4; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">15000 行干一件小事：哪些是过度，哪些是必要</text>
+  <text class="desc" x="40" y="70">内核就一句"有 agent 就 disablesleep 1，没了就 0"——质疑站得住一半</text>
+
+  <!-- 内核一句话 -->
+  <rect class="core" x="40" y="100" width="720" height="64" rx="10"/>
+  <text x="64" y="140" style="font:700 16px 'PingFang SC',Inter" fill="#F7F1E8">内核本质</text>
+  <text x="180" y="140" fill="#F7F1E8" style="font:600 15px 'PingFang SC',Inter,sans-serif">有 agent 在跑，就 pmset disablesleep 1；没了就 0</text>
+
+  <!-- 左：薄/过度 -->
+  <rect class="box" x="40" y="190" width="350" height="170" rx="12"/>
+  <text class="label" x="60" y="222" fill="#9A8C74">薄在哪 · 过度工程的一面</text>
+  <text class="big" x="60" y="278">~15000</text>
+  <text class="small" x="200" y="266">行 Swift</text>
+  <text class="small" x="200" y="286">包一条系统命令</text>
+  <text class="small" x="60" y="316">• 名字是营销梗：撞名 modafinil App</text>
+  <text class="small" x="60" y="340">• 一排同类工具同期冒出，功能高度重叠</text>
+
+  <!-- 右：必要成本 -->
+  <rect class="box-accent" x="410" y="190" width="350" height="170" rx="12"/>
+  <text class="label" x="430" y="222" fill="#B85A3A">值在哪 · 把脏活做干净的成本</text>
+  <text class="small" x="430" y="252">• 热保护 + 电量兜底（不变暖手宝）</text>
+  <text class="small" x="430" y="278">• 引用计数（按 turn 精确开合）</text>
+  <text class="small" x="430" y="304">• 三层权限：只一个 root helper 碰睡眠 API</text>
+  <text class="small" x="430" y="334" fill="#B85A3A">这就是"几行脚本"和"敢塞包里跑一晚"的距离</text>
+
+  <!-- 底：盲区 -->
+  <rect class="blind" x="40" y="386" width="720" height="94" rx="12"/>
+  <text class="label" x="60" y="416">盲区 · 这个品类会不会被收编</text>
+  <text class="small" x="60" y="442">押的是"agent 在本地跑、而 OS 不够聪明"这个窗口期；窗口多宽，现在看不清</text>
+  <text class="small" x="60" y="466">数字（159 star / 108 分 / 50 毫秒 / 15000 行）来自 README 与 HN，未独立复现，会变</text>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .good-box { fill: #FFFFFF; stroke: #3E8E5A; stroke-width: 2; }
+    .bad-box { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2; }
+    .good-t { font: 700 19px 'PingFang SC', Inter, sans-serif; fill: #3E8E5A; }
+    .bad-t { font: 700 19px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .crit { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .item { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #4A4339; }
+    .midlbl { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="48">一条分界线，决定它干漂亮还是翻车</text>
+  <text class="desc" x="40" y="74">凡是工具链能在「云端＋浏览器」里闭环的活，它干得好；要它碰本地客户端或对开放事实负责，就掉链子。</text>
+
+  <!-- 中间分界 -->
+  <line x1="400" y1="100" x2="400" y2="460" stroke="#B85A3A" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="338" y="96" width="124" height="28" rx="14" fill="#B85A3A"/>
+  <text class="midlbl" x="356" y="115" fill="#F7F1E8">分界线</text>
+
+  <!-- 左：能交付 -->
+  <rect class="good-box" x="40" y="140" width="330" height="300" rx="10"/>
+  <text class="good-t" x="60" y="174">舒适区 · 接近交付级</text>
+  <text class="crit" x="60" y="204">任务边界清楚 · 答案可验证</text>
+  <text class="item" x="60" y="244">在浏览器里闭环</text>
+  <text class="item" x="60" y="276">结构固定、只需抓取和填充</text>
+  <text class="item" x="60" y="308">本地文件读写移动（路径明确）</text>
+  <text class="item" x="60" y="340">重复一个验证过的流程</text>
+  <line x1="60" y1="368" x2="350" y2="368" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="crit" x="60" y="402" fill="#3E8E5A">当不排队、高额度、能动手的实习生</text>
+  <text class="item" x="60" y="426">这类活越高频，68 块回本越快</text>
+
+  <!-- 右：要兜底 -->
+  <rect class="bad-box" x="430" y="140" width="330" height="300" rx="10"/>
+  <text class="bad-t" x="450" y="174">翻车区 · 必须人工兜底</text>
+  <text class="crit" x="450" y="204">要原创判断 · 对事实负责</text>
+  <text class="item" x="450" y="244">操作本地某个具体客户端</text>
+  <text class="item" x="450" y="276">开放事实：数字、价格、陈述</text>
+  <text class="item" x="450" y="308">深度研报要锋利的结论</text>
+  <text class="item" x="450" y="340">PPT 配图（偶尔开天窗）</text>
+  <line x1="450" y1="368" x2="740" y2="368" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="crit" x="450" y="402" fill="#B85A3A">它出八成，你守着补两成</text>
+  <text class="item" x="450" y="426">凡它给的数字事实，默认当草稿核</text>
+
+  <text class="footer" x="40" y="480">澎湃总结：结构化、模版化任务表现最好，需要准确性的开放领域稳定性不够</text>
+</svg>

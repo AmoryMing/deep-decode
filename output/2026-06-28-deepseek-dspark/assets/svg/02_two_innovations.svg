@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .num-badge { fill: #B85A3A; }
+    .num-t { font: 800 20px Inter, sans-serif; fill: #F7F1E8; }
+    .h2 { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .en { font: 400 12px Inter, sans-serif; fill: #9A8F7C; }
+    .label { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .stat { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .block-par { fill: #EAD9CF; stroke: #B85A3A; stroke-width: 1.2; }
+    .block-seq { fill: #F7F1E8; stroke: #C9BEA8; stroke-width: 1.2; }
+    .blk-t { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .gauge-bg { fill: #EFE6D6; }
+    .gauge-fill { fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="540"/>
+
+  <text class="h1" x="40" y="44">DSpark 真正自己加的两样东西</text>
+  <text class="desc" x="40" y="68">都在治同一个老毛病：草稿模型猜得不够准</text>
+
+  <!-- Card 1: semi-autoregressive -->
+  <rect class="card" x="40" y="92" width="345" height="400" rx="14"/>
+  <rect class="num-badge" x="62" y="116" width="34" height="34" rx="8"/>
+  <text class="num-t" x="72" y="140">1</text>
+  <text class="h2" x="108" y="132">半自回归</text>
+  <text class="en" x="108" y="150">semi-autoregressive</text>
+
+  <text class="small" x="62" y="184">把两派草稿模型缝在一起：</text>
+
+  <!-- parallel backbone row -->
+  <text class="label" x="62" y="218">并行主干 · 一次打出 5 个字初稿</text>
+  <rect class="block-par" x="62" y="230" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="83" y="252">字</text>
+  <rect class="block-par" x="124" y="230" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="145" y="252">字</text>
+  <rect class="block-par" x="186" y="230" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="207" y="252">字</text>
+  <rect class="block-par" x="248" y="230" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="269" y="252">字</text>
+  <rect class="block-par" x="310" y="230" width="50" height="34" rx="6"/>
+  <text class="blk-t" x="328" y="252">字</text>
+  <text class="small" x="62" y="284">快，但靠后越猜越不准（没看到前文）</text>
+
+  <!-- arrow down -->
+  <line x1="200" y1="296" x2="200" y2="320" stroke="#B85A3A" stroke-width="2.5"/>
+  <polygon points="195,316 200,328 205,316" fill="#B85A3A"/>
+
+  <!-- sequential module row -->
+  <text class="label" x="62" y="352">轻量串行模块 · 逐字补回前缀依赖</text>
+  <rect class="block-seq" x="62" y="364" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="83" y="386">推</text>
+  <rect class="block-seq" x="124" y="364" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="145" y="386">测</text>
+  <rect class="block-seq" x="186" y="364" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="207" y="386">解</text>
+  <rect class="block-seq" x="248" y="364" width="56" height="34" rx="6"/>
+  <text class="blk-t" x="269" y="386">码</text>
+  <rect class="block-seq" x="310" y="364" width="50" height="34" rx="6"/>
+  <text class="blk-t" x="328" y="386">的</text>
+  <text class="small" x="62" y="418">把"前面定下的字"这条信息补回去</text>
+
+  <text class="stat" x="62" y="452">采纳草稿长度比 Eagle3 高 26%-31%</text>
+  <text class="small" x="62" y="476">比自家旧 DFlash 高 16%-18%</text>
+
+  <!-- Card 2: confidence scheduling -->
+  <rect class="card" x="415" y="92" width="345" height="400" rx="14"/>
+  <rect class="num-badge" x="437" y="116" width="34" height="34" rx="8"/>
+  <text class="num-t" x="447" y="140">2</text>
+  <text class="h2" x="483" y="132">置信度调度</text>
+  <text class="en" x="483" y="150">confidence scheduling</text>
+
+  <text class="small" x="437" y="184">给每个草稿字打分，再看显卡忙闲下注：</text>
+
+  <!-- GPU idle row -->
+  <text class="label" x="437" y="222">显卡闲着，多猜几个赌一把</text>
+  <rect class="gauge-bg" x="437" y="232" width="300" height="18" rx="9"/>
+  <rect class="gauge-fill" x="437" y="232" width="240" height="18" rx="9"/>
+  <text class="small" x="437" y="270">算力不花白不花，押注换更多收益</text>
+
+  <!-- GPU busy row -->
+  <text class="label" x="437" y="312">显卡满载排队，少猜稳延迟</text>
+  <rect class="gauge-bg" x="437" y="322" width="300" height="18" rx="9"/>
+  <rect class="gauge-fill" x="437" y="322" width="90" height="18" rx="9"/>
+  <text class="small" x="437" y="360">守住每个人的吐字速度，不让队伍崩</text>
+
+  <!-- calibration -->
+  <text class="label" x="437" y="404">打分校准：预测与实际的误差</text>
+  <text class="stat" x="437" y="436">从 3%-8% 压到约 1%</text>
+  <text class="small" x="437" y="462">打分准了，赌才赌得对</text>
+
+  <text class="desc" x="40" y="522">生产配置叫 DSpark-5：一次猜 5 个字，配 Markov 头</text>
+</svg>

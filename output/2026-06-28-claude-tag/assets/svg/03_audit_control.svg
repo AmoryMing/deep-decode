@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="440" viewBox="0 0 800 440">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .title { font: 700 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 400 15px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .icon { fill: #B85A3A; }
+    .clabel { font: 700 17px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .cdesc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .q { font: 600 16px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+  </style>
+  <rect class="bg" width="800" height="440"/>
+
+  <text class="title" x="48" y="56">它动真东西时，你怎么不丢掉控制权</text>
+  <text class="sub" x="48" y="82">独立身份的副作用：四样企业真正用得上的东西</text>
+
+  <!-- 卡1 独立审计 -->
+  <g>
+    <rect class="card" x="48" y="118" width="170" height="180" rx="14"/>
+    <circle class="icon" cx="133" cy="166" r="22"/>
+    <rect x="124" y="156" width="18" height="22" rx="2" fill="#F7F1E8"/>
+    <text class="clabel" x="133" y="222" text-anchor="middle">独立审计</text>
+    <text class="cdesc" x="133" y="250" text-anchor="middle">每个动作记成</text>
+    <text class="cdesc" x="133" y="270" text-anchor="middle">"这个 agent 干的"</text>
+    <text class="cdesc" x="133" y="290" text-anchor="middle">不混进员工名下</text>
+  </g>
+
+  <!-- 卡2 一键撤权 -->
+  <g>
+    <rect class="card" x="238" y="118" width="170" height="180" rx="14"/>
+    <circle class="icon" cx="323" cy="166" r="22"/>
+    <rect x="314" y="159" width="18" height="14" rx="3" fill="none" stroke="#F7F1E8" stroke-width="2.5"/>
+    <line x1="323" y1="159" x2="323" y2="153" stroke="#F7F1E8" stroke-width="2.5"/>
+    <text class="clabel" x="323" y="222" text-anchor="middle">一键撤权</text>
+    <text class="cdesc" x="323" y="250" text-anchor="middle">停用这个身份</text>
+    <text class="cdesc" x="323" y="270" text-anchor="middle">散落各处的口子</text>
+    <text class="cdesc" x="323" y="290" text-anchor="middle">一起关</text>
+  </g>
+
+  <!-- 卡3 消费上限 -->
+  <g>
+    <rect class="card" x="428" y="118" width="170" height="180" rx="14"/>
+    <circle class="icon" cx="513" cy="166" r="22"/>
+    <text x="513" y="173" text-anchor="middle" font="800 22px Inter, sans-serif" fill="#F7F1E8">$</text>
+    <text class="clabel" x="513" y="222" text-anchor="middle">消费上限</text>
+    <text class="cdesc" x="513" y="250" text-anchor="middle">月度 token 闸</text>
+    <text class="cdesc" x="513" y="270" text-anchor="middle">组织级 + 频道级</text>
+    <text class="cdesc" x="513" y="290" text-anchor="middle">都能设</text>
+  </g>
+
+  <!-- 卡4 全程留痕 -->
+  <g>
+    <rect class="card" x="618" y="118" width="170" height="180" rx="14"/>
+    <circle class="icon" cx="703" cy="166" r="22"/>
+    <text x="703" y="174" text-anchor="middle" font="800 24px Inter, sans-serif" fill="#F7F1E8">≡</text>
+    <text class="clabel" x="703" y="222" text-anchor="middle">全程留痕</text>
+    <text class="cdesc" x="703" y="250" text-anchor="middle">任务 / 记忆更新</text>
+    <text class="cdesc" x="703" y="270" text-anchor="middle">网络请求都记</text>
+    <text class="cdesc" x="703" y="290" text-anchor="middle">看得到发起人</text>
+  </g>
+
+  <!-- 底条 -->
+  <rect x="48" y="332" width="740" height="76" rx="12" fill="#2A241B"/>
+  <text class="q" x="74" y="368">出了事能查到：是谁、在哪个频道、让它做了什么</text>
+  <text class="cdesc" x="74" y="392" fill="#D9CFBE">比"Claude 又聪明了多少"更实用 —— 解决的是把 AI 放进生产环境的控制权问题</text>
+</svg>

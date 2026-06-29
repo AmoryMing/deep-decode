@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .col-title { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .box-keep { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.8; }
+    .box-open { fill: #FBEFE9; stroke: #B85A3A; stroke-width: 1.8; }
+    .label { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .baseline { stroke: #C9BEA8; stroke-width: 2; stroke-dasharray: 6 4; }
+    .baseline-new { stroke: #B85A3A; stroke-width: 2.5; }
+    .axis-t { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .flag { fill: #B85A3A; }
+    .flag-t { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .accent { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="h1" x="40" y="44">把护城河挖了又填平</text>
+  <text class="desc" x="40" y="68">推理加速本可捂着当私有优势。DeepSeek 反着来：连代码带权重一起 MIT 开源</text>
+
+  <!-- Left: the intuitive choice -->
+  <text class="col-title" x="60" y="112">直觉做法：捂着不放</text>
+  <rect class="box-keep" x="40" y="128" width="320" height="120" rx="12"/>
+  <text class="label" x="60" y="160">同样的模型、同样的显卡</text>
+  <text class="small" x="60" y="186">谁能多服务一倍用户，谁就能</text>
+  <text class="small" x="60" y="208">把 API 价压更低、利润做更高</text>
+  <text class="small" x="60" y="234">这是实打实的成本护城河</text>
+
+  <!-- Right: what DeepSeek did -->
+  <text class="col-title" x="460" y="112">DeepSeek 做法：全套开源</text>
+  <rect class="box-open" x="440" y="128" width="320" height="120" rx="12"/>
+  <text class="label" x="460" y="160">DeepSpec 仓库 · MIT 协议</text>
+  <text class="small" x="460" y="186">DSpark / DFlash / Eagle3 三套</text>
+  <text class="small" x="460" y="208">训练代码 + 评估脚本 + 模型权重</text>
+  <text class="small" x="460" y="234">别人可照着给自家模型训一套</text>
+
+  <!-- Bottom: the cost-baseline diagram -->
+  <text class="col-title" x="40" y="300">为什么这么做：把整个行业成本基线往下拽</text>
+
+  <!-- y axis label -->
+  <text class="axis-t" x="40" y="330">成本</text>
+  <line x1="80" y1="320" x2="80" y2="440" stroke="#C9BEA8" stroke-width="1.5"/>
+  <line x1="80" y1="440" x2="760" y2="440" stroke="#C9BEA8" stroke-width="1.5"/>
+  <text class="axis-t" x="690" y="462">时间推移</text>
+
+  <!-- old baseline (high) -->
+  <line class="baseline" x1="90" y1="350" x2="750" y2="350"/>
+  <text class="axis-t" x="560" y="344">行业旧成本基线</text>
+
+  <!-- new baseline (low) after open source -->
+  <line class="baseline-new" x1="90" y1="418" x2="750" y2="418"/>
+  <text class="accent" x="560" y="412">开源后被拽低的新基线</text>
+
+  <!-- DeepSeek flag at front of the trench -->
+  <line x1="150" y1="350" x2="150" y2="418" stroke="#B85A3A" stroke-width="2.5"/>
+  <polygon points="150,350 150,372 200,361" class="flag"/>
+  <text class="flag-t" x="158" y="365">前沿</text>
+  <text class="small" x="92" y="436">DeepSeek 站在自己挖的这条沟最前面</text>
+
+  <text class="accent" x="40" y="474">当性价比是你的主张，公开降本方法 = 把全行业拖进你最擅长的战场</text>
+</svg>

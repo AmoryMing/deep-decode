@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .col-title { font: 700 17px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .col-titleR { font: 700 17px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .col-sub { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .row-key { font: 700 13px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .row-old { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .row-new { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .band { fill: #FFFFFF; }
+    .band-alt { fill: #EFE6D6; }
+    .note { font: 500 13.5px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+  </style>
+  <rect class="bg" width="800" height="540"/>
+
+  <text class="h1" x="40" y="42">为什么「长期」是 agent 基准的下一个战场</text>
+  <text class="desc" x="40" y="66">τ-bench / WebArena 测单次任务；真实产品里的 agent 服务同一个人好几年</text>
+
+  <!-- 列标题 -->
+  <text class="row-key" x="40" y="104">对照维度</text>
+  <text class="col-title" x="250" y="100">单次任务基准（上一代）</text>
+  <text class="col-sub" x="250" y="118">τ-bench · WebArena · AgentBench</text>
+  <text class="col-titleR" x="525" y="100">长期基准 VitaBench 2.0</text>
+  <text class="col-sub" x="525" y="118">长期 · 多会话 · 强个性化</text>
+
+  <!-- 分隔列竖线 -->
+  <line x1="235" y1="130" x2="235" y2="438" stroke="#D9CFBE" stroke-width="1.5"/>
+  <line x1="510" y1="130" x2="510" y2="438" stroke="#D9CFBE" stroke-width="1.5"/>
+
+  <!-- Row 1 -->
+  <rect class="band" x="40" y="134" width="720" height="74" rx="8"/>
+  <text class="row-key" x="58" y="176">用户假设</text>
+  <text class="row-old" x="252" y="168">无状态：每道题都是</text>
+  <text class="row-old" x="252" y="188">全新的人，没有过去</text>
+  <text class="row-new" x="527" y="168">有状态：同一用户跨</text>
+  <text class="row-new" x="527" y="188">平均 1580 天、多会话</text>
+
+  <!-- Row 2 -->
+  <rect class="band-alt" x="40" y="212" width="720" height="74" rx="8"/>
+  <text class="row-key" x="58" y="254">决定体验的</text>
+  <text class="row-old" x="252" y="246">单次任务工具调用链</text>
+  <text class="row-old" x="252" y="266">对不对</text>
+  <text class="row-new" x="527" y="246">记忆架构 + 不确定时</text>
+  <text class="row-new" x="527" y="266">的主动策略</text>
+
+  <!-- Row 3 -->
+  <rect class="band" x="40" y="290" width="720" height="74" rx="8"/>
+  <text class="row-key" x="58" y="332">已不是瓶颈</text>
+  <text class="row-old" x="252" y="324">工具编排</text>
+  <text class="row-old" x="252" y="344">（仍是核心难点）</text>
+  <text class="row-new" x="527" y="324">工具调用错误率</text>
+  <text class="row-new" x="527" y="344">已显著下降</text>
+
+  <!-- Row 4 -->
+  <rect class="band-alt" x="40" y="368" width="720" height="70" rx="8"/>
+  <text class="row-key" x="58" y="407">vs 旧记忆基准</text>
+  <text class="row-old" x="252" y="399">LoCoMo / LongMemEval</text>
+  <text class="row-old" x="252" y="419">只测记住对话</text>
+  <text class="row-new" x="527" y="399">长期记忆 + 真工具 +</text>
+  <text class="row-new" x="527" y="419">偏好漂移 + 主动性</text>
+
+  <!-- 底部注 -->
+  <rect x="40" y="452" width="720" height="74" rx="12" fill="#B85A3A" opacity="0.10"/>
+  <text class="note" x="60" y="484">为什么是美团做：外卖、到店、旅游天然就是长期、多会话、强个性化的生意，</text>
+  <text class="note" x="60" y="508">自家业务给了别人没有的真实场景模具——第一次把这四件事焊在一个评测里。</text>
+</svg>

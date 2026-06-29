@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .col-title { font: 700 18px 'PingFang SC', Inter, sans-serif; }
+    .label { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .sand { fill: #FFFFFF; stroke: #8A7E6B; stroke-width: 1.6; stroke-dasharray: 6 4; }
+    .rock { fill: #FBEDE7; stroke: #B85A3A; stroke-width: 2; }
+    .pill { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 1.3; }
+    .footer { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #8A7E6B; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="h1" x="40" y="44">跑分赢一次只上热搜，工作流赢长久才上结算单</text>
+  <text class="desc" x="40" y="68">丢冠后字节没去抢回分数，而是抢一个更难被一夜超越的位置</text>
+
+  <!-- 左：流沙上的房子 -->
+  <rect class="sand" x="40" y="92" width="340" height="356" rx="12"/>
+  <text class="col-title" x="60" y="124" fill="#8A7E6B">绑死「当前榜一」</text>
+  <text class="small" x="60" y="148">= 在流沙上盖房子</text>
+
+  <rect x="60" y="170" width="300" height="56" rx="8" fill="#EFE7D8"/>
+  <text class="label" x="78" y="195">Video Arena 真人盲投</text>
+  <text class="small" x="78" y="216">没法刷题，但榜首极易腐烂</text>
+
+  <rect x="60" y="240" width="300" height="56" rx="8" fill="#EFE7D8"/>
+  <text class="label" x="78" y="265">从二月霸到四月初</text>
+  <text class="small" x="78" y="286">含音频 Elo 一千两百多分</text>
+
+  <rect x="60" y="310" width="300" height="56" rx="8" fill="#EFE7D8"/>
+  <text class="label" x="78" y="335" fill="#8A7E6B">四月七日「欢乐马」掀翻</text>
+  <text class="small" x="78" y="356">一个月第一名就易主</text>
+
+  <text class="small" x="60" y="400" fill="#8A7E6B">今天的 SOTA，下个月可能</text>
+  <text class="small" x="60" y="422" fill="#8A7E6B">被一匹来路不明的马掀翻</text>
+
+  <!-- 右：磐石上的管线 -->
+  <rect class="rock" x="410" y="92" width="350" height="356" rx="12"/>
+  <text class="col-title" x="430" y="124" fill="#B85A3A">把流程占死 = 工作流护城河</text>
+  <text class="small" x="430" y="148">脚本进 → 可交付成片出，中间少切工具</text>
+
+  <!-- 功能药丸 -->
+  <rect class="pill" x="430" y="168" width="155" height="34" rx="17"/>
+  <text class="small" x="448" y="190" fill="#B85A3A">原生 4K · 10-bit</text>
+  <rect class="pill" x="595" y="168" width="145" height="34" rx="17"/>
+  <text class="small" x="613" y="190" fill="#B85A3A">单段 30 秒不崩</text>
+  <rect class="pill" x="430" y="212" width="155" height="34" rx="17"/>
+  <text class="small" x="448" y="234" fill="#B85A3A">50 个参考素材</text>
+  <rect class="pill" x="595" y="212" width="145" height="34" rx="17"/>
+  <text class="small" x="613" y="234" fill="#B85A3A">区域级局部编辑</text>
+  <rect class="pill" x="430" y="256" width="155" height="34" rx="17"/>
+  <text class="small" x="448" y="278" fill="#B85A3A">3D 白模预览</text>
+  <rect class="pill" x="595" y="256" width="145" height="34" rx="17"/>
+  <text class="small" x="613" y="278" fill="#B85A3A">授权 IP 商业化</text>
+
+  <text class="label" x="430" y="318" fill="#B85A3A">两样别人没有的底气</text>
+  <rect x="430" y="332" width="310" height="48" rx="8" fill="#FFFFFF" stroke="#B85A3A" stroke-width="1.2"/>
+  <text class="small" x="446" y="354">分发：CapCut 月活约 4 亿，生成、剪辑、</text>
+  <text class="small" x="446" y="373">分发垂直整合，成片有现成下游消化</text>
+  <rect x="430" y="388" width="310" height="48" rx="8" fill="#FFFFFF" stroke="#B85A3A" stroke-width="1.2"/>
+  <text class="small" x="446" y="410">版权：2.5 推授权平台，率先跟周星驰等</text>
+  <text class="small" x="446" y="429">IP 合作——把 AI 视频从「自己玩」推向商用</text>
+
+  <text class="footer" x="40" y="468">同一逻辑，本仓库拆 Kling 原生 4K 时已论证过；只是字节这次转得更被动——被欢乐马逼的</text>
+</svg>

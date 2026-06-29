@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .myth-box { fill: #F0E9DC; stroke: #D9CFBE; stroke-width: 1.5; }
+    .real-box { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2; }
+    .myth-t { font: 600 17px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+    .real-t { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .item-t { font: 600 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .item-d { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .num { font: 800 30px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="h1" x="40" y="48">68 块买的不是「更聪明」</text>
+  <text class="desc" x="40" y="74">专业版搭 2.1 Pro，免费版搭 2.1 Turbo，但免费版原有功能不缩水。你付的是三样具体的东西。</text>
+
+  <!-- 误区 -->
+  <rect class="myth-box" x="40" y="100" width="220" height="330" rx="10"/>
+  <text class="myth-t" x="60" y="134">很多人以为买的是</text>
+  <text class="item-t" x="60" y="178" fill="#9A8E7C">豆包变聪明了</text>
+  <text class="item-d" x="60" y="206">基础聊天、写作、生图</text>
+  <text class="item-d" x="60" y="228">视频这些原有能力</text>
+  <text class="item-d" x="60" y="250">免费版一样能用</text>
+  <text class="item-d" x="60" y="290">日常问问题、写文案</text>
+  <text class="item-d" x="60" y="312">偶尔生张图</text>
+  <text class="real-t" x="60" y="356" fill="#9A8E7C">升级 = 纯浪费</text>
+
+  <!-- 箭头 -->
+  <text class="num" x="280" y="280" fill="#D9CFBE">→</text>
+
+  <!-- 真实 -->
+  <rect class="real-box" x="330" y="100" width="430" height="330" rx="10"/>
+  <text class="real-t" x="352" y="134">68 块真正买到的</text>
+
+  <text class="num" x="352" y="194">1</text>
+  <text class="item-t" x="400" y="180">2.1 Pro 的「办公任务模式」</text>
+  <text class="item-d" x="400" y="204">能动手干活的 Agent，专业版独有</text>
+
+  <text class="num" x="352" y="270">2</text>
+  <text class="item-t" x="400" y="256">更高的高算力额度</text>
+  <text class="item-d" x="400" y="280">PPT、表格、深入研究、录音纪要 5 倍起</text>
+
+  <text class="num" x="352" y="346">3</text>
+  <text class="item-t" x="400" y="332">高峰期优先使用权</text>
+  <text class="item-d" x="400" y="356">不排队的体验</text>
+
+  <line x1="352" y1="380" x2="738" y2="380" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="item-d" x="352" y="408" fill="#B85A3A">值得升级的只有一类人：高频跑办公任务模式、要它替你动手的人</text>
+
+  <text class="footer" x="40" y="462">三档：标准版 68 元 / 加强版 200 元 / 高级版 500 元，认证大学生 38 元</text>
+</svg>

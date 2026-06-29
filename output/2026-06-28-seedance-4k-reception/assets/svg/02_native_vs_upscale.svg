@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .col-title { font: 700 19px 'PingFang SC', Inter, sans-serif; }
+    .label { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5C5345; }
+    .card-bad { fill: #FFFFFF; stroke: #8A7E6B; stroke-width: 1.6; }
+    .card-good { fill: #FBEDE7; stroke: #B85A3A; stroke-width: 2; }
+    .step { fill: #EFE7D8; stroke: #D9CFBE; stroke-width: 1.2; }
+    .step-good { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 1.4; }
+    .footer { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #8A7E6B; }
+  </style>
+  <rect class="bg" width="800" height="460"/>
+
+  <text class="h1" x="40" y="44">原生 4K 不解决「清不清楚」，解决「能不能直接交付」</text>
+  <text class="desc" x="40" y="68">同样是 3840 x 2160，纹理是「补」出来的还是「长」出来的，一上大屏就分高下</text>
+
+  <!-- 左列: 升采样 -->
+  <rect class="card-bad" x="40" y="92" width="350" height="320" rx="12"/>
+  <text class="col-title" x="60" y="126" fill="#8A7E6B">升采样 / 超分</text>
+  <text class="small" x="60" y="150">先出低分辨率，再靠算法猜着放大</text>
+
+  <rect class="step" x="60" y="170" width="120" height="60" rx="8"/>
+  <text class="label" x="78" y="196">出 1080p</text>
+  <text class="small" x="78" y="218" font-size="12">细节有限</text>
+  <line x1="180" y1="200" x2="222" y2="200" stroke="#8A7E6B" stroke-width="3"/>
+  <polygon points="220,194 232,200 220,206" fill="#8A7E6B"/>
+  <rect class="step" x="232" y="170" width="138" height="60" rx="8"/>
+  <text class="label" x="250" y="196">算法放大到 4K</text>
+  <text class="small" x="250" y="218" font-size="12">细节靠猜</text>
+
+  <text class="label" x="60" y="268" fill="#8A7E6B">结果：边缘软、发糊</text>
+  <text class="small" x="60" y="294">小屏看差别不大，</text>
+  <text class="small" x="60" y="316">4K 大屏一放大就露馅</text>
+  <rect x="60" y="338" width="310" height="52" rx="8" fill="#EFE7D8"/>
+  <text class="small" x="76" y="362">还要额外跑一道二次超分处理，</text>
+  <text class="small" x="76" y="382">脏活、费时，进不了下游链路</text>
+
+  <!-- 右列: 原生 -->
+  <rect class="card-good" x="410" y="92" width="350" height="320" rx="12"/>
+  <text class="col-title" x="430" y="126" fill="#B85A3A">原生 4K（Seedance）</text>
+  <text class="small" x="430" y="150">扩散过程直接在 3840 x 2160 画布上生成</text>
+
+  <rect class="step-good" x="430" y="170" width="300" height="60" rx="8"/>
+  <text class="label" x="448" y="196" fill="#B85A3A">一次生成 = 原生 4K + 10-bit 高位深</text>
+  <text class="small" x="448" y="218" font-size="12">发丝 / 织物 / 皮肤纹理在生成时就存在</text>
+
+  <text class="label" x="430" y="268" fill="#B85A3A">结果：边缘锐、过渡平滑</text>
+  <text class="small" x="430" y="294">纹理是「长」出来的，不是「补」的；</text>
+  <text class="small" x="430" y="316">10-bit 给后期调色留更大空间</text>
+  <rect x="430" y="338" width="310" height="52" rx="8" fill="#FFFFFF" stroke="#B85A3A" stroke-width="1.2"/>
+  <text class="label" x="446" y="362" fill="#B85A3A">直接进剪辑 / 调色下游链路</text>
+  <text class="small" x="446" y="382">冲着大屏、院线、户外屏、广告片去</text>
+
+  <text class="footer" x="40" y="440">火山引擎原话：原生高分辨率「可直接进入下游链路，不再依赖繁琐的二次超分处理」</text>
+</svg>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .title { font: 700 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 400 15px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .panel-l { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .panel-r { fill: #2A241B; }
+    .ptitle-l { font: 700 19px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .ptitle-r { font: 700 19px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .pitem-l { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .pitem-r { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #D9CFBE; }
+    .switch { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .dot-l { fill: #B85A3A; }
+    .dot-r { fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="450"/>
+
+  <text class="title" x="48" y="56">ambient：便利和监听，是同一个开关</text>
+  <text class="sub" x="48" y="82">开了之后，Claude 不等你 @ —— 持续读全频道、主动插话</text>
+
+  <!-- 左：便利 -->
+  <g>
+    <rect class="panel-l" x="48" y="116" width="320" height="240" rx="14"/>
+    <text class="ptitle-l" x="76" y="156">看作 · 一个会操心的同事</text>
+    <circle class="dot-l" cx="84" cy="196" r="4"/>
+    <text class="pitem-l" x="100" y="201">主动提示你该知道的事</text>
+    <circle class="dot-l" cx="84" cy="232" r="4"/>
+    <text class="pitem-l" x="100" y="237">跟进没人收尾的线程</text>
+    <circle class="dot-l" cx="84" cy="268" r="4"/>
+    <text class="pitem-l" x="100" y="273">不用每次显式下命令</text>
+    <circle class="dot-l" cx="84" cy="304" r="4"/>
+    <text class="pitem-l" x="100" y="309">在所有人眼前产出工作</text>
+  </g>
+
+  <!-- 中间开关 -->
+  <rect x="372" y="220" width="56" height="32" rx="16" fill="#B85A3A"/>
+  <circle cx="412" cy="236" r="12" fill="#F7F1E8"/>
+  <text class="sub" x="400" y="280" text-anchor="middle" fill="#B85A3A">同一开关</text>
+
+  <!-- 右：监听 -->
+  <g>
+    <rect class="panel-r" x="432" y="116" width="320" height="240" rx="14"/>
+    <text class="ptitle-r" x="460" y="156">实为 · 一个永远在线的账号</text>
+    <circle class="dot-r" cx="468" cy="196" r="4"/>
+    <text class="pitem-r" x="484" y="201">持续在读全频道内容</text>
+    <circle class="dot-r" cx="468" cy="232" r="4"/>
+    <text class="pitem-r" x="484" y="237">不下令也分析组织数据</text>
+    <circle class="dot-r" cx="468" cy="268" r="4"/>
+    <text class="pitem-r" x="484" y="273">prompt 注入最舒服的面</text>
+    <circle class="dot-r" cx="468" cy="304" r="4"/>
+    <text class="pitem-r" x="484" y="309">喂得越深，越难离开</text>
+  </g>
+
+  <!-- 底条 -->
+  <text class="sub" x="400" y="400" text-anchor="middle">默认别开 —— 想清楚监听换来的便利值不值，再决定</text>
+  <text class="sub" x="400" y="424" text-anchor="middle" fill="#8A7C66">开 ambient、交哪些频道，是事前要算的账，不是事后补</text>
+</svg>

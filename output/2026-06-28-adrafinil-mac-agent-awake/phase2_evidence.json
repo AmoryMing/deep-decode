@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "core_judgment": "Adrafinil 不是又一个防睡眠工具——它把防睡眠从『常开开关』改成了『按 agent 工作状态自动开合的阀门』。这是 agent 工作流给桌面操作系统提出的新需求：机器要在『人不在、agent 在干活』这段时间保持清醒，活儿一干完就立刻回到正常省电。caffeinate/Amphetamine 这类老工具是『一直醒着』，对人是负担、对电池是浪费；Adrafinil 把唤醒的生命周期绑到 agent 的 turn 生命周期上。",
+  "counter_or_blindspot": "1) 这是个极小众、极薄的工具（功能本质就是『有 agent 在跑就 pmset disablesleep 1，没了就 0』），HN 上有人质疑用 15000 行 Swift 干一件几行脚本就能干的事是否过度工程。2) 命名是噱头，撞车——HN 有人指出一个叫 modafinil 的同类 App 先到。3) 依赖 hook 接入，agent 不支持 hook 时退化为进程嗅探，覆盖面有边界。4) 系统级风险真实存在：合盖后内屏可能全亮空烧电、低电量时 macOS 仍会强制睡眠——作者用热保护和电量保护兜底，但这恰恰说明『骗操作系统一直别睡』本身是带刺的操作。",
+  "key_facts": [
+    {"claim": "Adrafinil 是 macOS 菜单栏 App，只在 AI 编码 agent 有活跃 session 时阻止系统睡眠，包括合盖(clamshell)睡眠；没有 agent 在跑时恢复正常睡眠包括合盖即睡。", "evidence": "README 原文：prevents system sleep — including clamshell (lid-closed) sleep — exclusively while an AI coding agent has an active session. Zero sessions → normal sleep, including lid-close.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "作者是 GitHub 用户 kageroumado，2026-06 在 Hacker News 发 Show HN。", "evidence": "Show HN by kageroumado；提交文与 README 一致。", "source_url": "https://news.ycombinator.com/item?id=48701512"},
+    {"claim": "一键安装把 Adrafinil 接入 9 个 agent 的 hook 系统：Claude Code、Codex、Cursor、Gemini CLI、Aider、Hermes、OpenCode、Cline、Pi。", "evidence": "README: One-click installer wires Adrafinil into the hook systems of Claude Code, Codex, Cursor, Gemini CLI, Aider, Hermes, OpenCode, Cline, and Pi.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "感知机制是『活动级』而非『session 级』：以 Claude Code 为例，在 UserPromptSubmit 时 acquire，在 Stop 时 release；daemon 按 session key 引用计数，计数大于 0 时阻止睡眠。另有可选的进程嗅探，检测到已知 agent 二进制运行时自动 acquire。", "evidence": "README: acquires on UserPromptSubmit, releases on Stop. The daemon reference-counts by session key. Process Sniffing (Optional): daemon auto-acquires when detecting known agent binaries running, even without hooks.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "acquire/release CLI 往返 daemon 低于 50ms，不卡 agent 工作流。", "evidence": "README: round-trip to the daemon in under 50ms, so they never stall an agent's workflow. (Sub-50ms CLI)", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "底层用 pmset disablesleep 对付合盖睡眠（公开的 IOPMAssertion 类型打不过合盖睡眠），同时持一个标准 IOPMAssertion 对付 idle 睡眠。", "evidence": "README: Uses pmset disablesleep for clamshell sleep (since public IOPMAssertion types don't beat lid-closed sleep). Also holds a standard IOPMAssertion for idle sleep.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "三层权限架构：菜单栏 App(用户) + Daemon(用户级 LaunchAgent，引用计数/进程监视/温度监视/盖子状态监视) + Helper(root 级 LaunchDaemon，唯一碰睡眠 API 的组件，只暴露 setSleepBlocked(Bool))。", "evidence": "README three-tier privilege model.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "合盖时播放提示音确认 assertion 已持有（屏幕已关，没法弹通知）；开盖后显示离开期间跑了什么、峰值温度、是否触发热保护。", "evidence": "README: On lid-close, a chime confirms an assertion is held. Reopening shows what ran while away, peak temperature, and thermal cutout status.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "热保护(thermal cutout)：合盖期间表皮/CPU 温度越过阈值时强制释放所有 assertion，防止包里的 Mac 过热。", "evidence": "README: If skin/CPU temperature crosses threshold while the lid is closed, all assertions force-release to prevent a bag-bound Mac from overheating.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "支持时间盒持有：adrafinil hold --for 30m --reason \"deploy\"，最多保持唤醒 30 分钟后自动释放；适用于回答结束后仍在跑的长构建/部署。", "evidence": "README: adrafinil hold --for 30m --reason \"deploy\".", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "内置 MCP 工具：adrafinil mcp 在 stdio 上说 Model Context Protocol，让 MCP 能力的 agent 自己请求时间盒持有。", "evidence": "README: adrafinil mcp speaks the Model Context Protocol on stdio.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "Swift 100%，Xcode 26+/Swift 6 严格并发；签名+公证的 dmg 分发；macOS Tahoe 26.4+；MIT 许可。GitHub 约 159 stars，最新 v1.1.2(2026-06-22)。", "evidence": "README repo metadata.", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"claim": "caffeinate 的合盖防睡眠(-s)只在接电时有效；Apple Silicon 上 caffeinate 不抵合盖睡眠。", "evidence": "Masset 博客：-s flag works only while plugged into power；Macworld/社区：caffeinate doesn't work with display closed.", "source_url": "https://www.getmasset.com/resources/blog/keep-your-mac-awake-for-ai-agents"},
+    {"claim": "pmset disablesleep 设置内核级 SleepDisabled 标志，在 Apple Silicon 上能穿透合盖事件、即使没外接显示器也能保持唤醒；但合盖后内屏可能全亮空烧电，且电量过低时 macOS 仍在硬件层强制睡眠。", "evidence": "Macworld + 社区共识：SleepDisabled flag persists through lid-close on Apple Silicon, recognized by IOPMrootDomain as a veto. 但 raw pmset 会让内屏全亮、低电量强制睡眠。", "source_url": "https://www.macworld.com/article/673295/how-to-use-macbook-with-lid-closed-stop-closed-mac-sleeping.html"},
+    {"claim": "本地 agent 跑在你自己的 Mac 上而非云端，Mac 一睡 agent 就停。这是『防睡眠工具让本地 AI 可靠』的根因。", "evidence": "Masset: When that computer sleeps, your worker clocks out. A sleeping Mac quietly kills your overnight automations.", "source_url": "https://www.getmasset.com/resources/blog/keep-your-mac-awake-for-ai-agents"},
+    {"claim": "『agent 感知的防睡眠』已是一个拥挤的小赛道：agents-sleep-preventer(Rust+Swift,进程检测,~8 star)、NoSleepAgent、Macchiato、Lidless、StayUp、owly 等多款同期出现。", "evidence": "GitHub 搜索结果多款同类；agents-sleep-preventer 用进程检测。", "source_url": "https://github.com/CharlonTank/agents-sleep-preventer"}
+  ],
+  "quotes": [
+    {"en_or_zh": "prevents system sleep — including clamshell (lid-closed) sleep — exclusively while an AI coding agent has an active session.", "zh_translation": "只在 AI 编码 agent 有活跃会话时阻止系统睡眠——包括合盖(lid-closed)睡眠。", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"en_or_zh": "It only ever wakes for the work — then you both sleep.", "zh_translation": "它只为活儿醒着——活儿干完，你俩一起睡。", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"en_or_zh": "the opposite of always-on wake utilities like caffeinate or Amphetamine.", "zh_translation": "它是 caffeinate、Amphetamine 这类『常开唤醒』工具的反面。", "source_url": "https://github.com/kageroumado/adrafinil"},
+    {"en_or_zh": "When that computer sleeps, your worker clocks out. A sleeping Mac quietly kills your overnight automations.", "zh_translation": "电脑一睡，你的工人就下班了。一台睡着的 Mac 会悄无声息地杀掉你的隔夜自动化任务。", "source_url": "https://www.getmasset.com/resources/blog/keep-your-mac-awake-for-ai-agents"}
+  ],
+  "entities": ["Adrafinil", "kageroumado", "Claude Code", "Codex", "Cursor", "caffeinate", "Amphetamine", "KeepingYouAwake", "pmset disablesleep", "IOPMAssertion", "MCP", "Apple Silicon", "clamshell mode"],
+  "timeline_or_competitors": "竞品/对照：caffeinate(系统自带CLI,常开,合盖只在接电时有效)；Amphetamine(App Store,常开,需手动配置和脚本才能接 agent)；KeepingYouAwake(开源常开菜单栏)；同期 agent 感知类：agents-sleep-preventer/NoSleepAgent/Macchiato/Lidless/StayUp/owly。时间线：2026-06-22 v1.1.2；2026-06 Show HN(108 分/71 评论)。",
+  "reader_takeaway": "如果你常让 Claude Code/Codex 跑长任务又想合上盖子走人，老办法(caffeinate/Amphetamine/常开)要么不抗合盖、要么得插电、要么让机器一直醒着费电发烫。Adrafinil 把『醒着』这件事和『agent 在不在干活』绑定。但这本质是一层薄薄的自动化包在 pmset disablesleep 之上——值不值得装，取决于你『隔夜跑 agent』的频率，以及你能不能接受让 OS 别睡这件事自带的电池/发热风险（作者用热保护和电量兜底）。",
+  "sources": [
+    "https://github.com/kageroumado/adrafinil",
+    "https://news.ycombinator.com/item?id=48701512",
+    "https://www.getmasset.com/resources/blog/keep-your-mac-awake-for-ai-agents",
+    "https://www.macworld.com/article/673295/how-to-use-macbook-with-lid-closed-stop-closed-mac-sleeping.html",
+    "https://github.com/CharlonTank/agents-sleep-preventer",
+    "https://github.com/newmarcel/KeepingYouAwake"
+  ],
+  "uncertainties": [
+    "HN 提交的精确日期：抓取时显示『11 hours ago / 108 points / 71 comments』，按今天 2026-06-28 推断为 6 月下旬，未拿到精确日历日。已在文中只写『2026 年 6 月』。",
+    "star 数(约159)、版本(v1.1.2)、HN 分数(108)为抓取快照值，会随时间变化，文中标注为约数/快照。",
+    "README 称 pmset disablesleep 能抗合盖；部分二手资料早期称 Apple Silicon Ventura+ 神挡睡眠——经交叉核对，SleepDisabled 内核标志在 Apple Silicon 上确能穿透合盖（无需外接显示器），README 说法成立；caffeinate 抗不住合盖(除非接电)的说法亦成立。",
+    "未独立复现 sub-50ms 延迟与 15000 行代码量(后者来自 HN 评论者口径)，按来源转述。"
+  ]
+}

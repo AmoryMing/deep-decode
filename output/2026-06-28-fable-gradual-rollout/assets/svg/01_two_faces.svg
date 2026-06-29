@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .core { fill: #2A241B; }
+    .core-txt { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .core-sub { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #D9CFBE; }
+    .box-fable { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2.5; }
+    .box-mythos { fill: #FFFFFF; stroke: #8A7E6C; stroke-width: 2; }
+    .shell { fill: #B85A3A; }
+    .shell-txt { font: 700 14px 'PingFang SC', Inter, sans-serif; fill: #FFFFFF; }
+    .name { font: 800 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .name-id { font: 500 13px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .label { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .arrow { stroke: #8A7E6C; stroke-width: 2; fill: none; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">同一个模型的两张脸：区别只在壳开不开</text>
+  <text class="desc" x="40" y="68">底层是同一份 Mythos 级权重，能力一模一样；外面那层安全分类器，是可以单独摘掉的壳</text>
+
+  <!-- 中间核心 -->
+  <rect class="core" x="320" y="100" width="160" height="64" rx="10"/>
+  <text class="core-txt" x="400" y="128" text-anchor="middle">同一份权重</text>
+  <text class="core-sub" x="400" y="150" text-anchor="middle">Mythos 级强模型</text>
+
+  <!-- 分叉箭头 -->
+  <path class="arrow" d="M 350 164 Q 280 200 230 230"/>
+  <path class="arrow" d="M 450 164 Q 520 200 570 230"/>
+
+  <!-- 左：Fable 戴壳 -->
+  <rect class="box-fable" x="60" y="230" width="320" height="220" rx="12"/>
+  <rect class="shell" x="60" y="230" width="320" height="34" rx="12"/>
+  <rect class="shell" x="60" y="248" width="320" height="16"/>
+  <text class="shell-txt" x="80" y="253">外层：安全分类器（壳）开</text>
+  <text class="name" x="80" y="304">Fable 5</text>
+  <text class="name-id" x="80" y="326">claude-fable-5</text>
+  <text class="label" x="80" y="362">对公众发布</text>
+  <text class="small" x="80" y="388">命中高风险话题，自动降级</text>
+  <text class="small" x="80" y="410">官方称：已做安全，可供大众使用</text>
+  <text class="small" x="80" y="432">安全在这里是一个开关，不是属性</text>
+
+  <!-- 右：Mythos 裸 -->
+  <rect class="box-mythos" x="420" y="230" width="320" height="220" rx="12"/>
+  <rect class="box-mythos" x="420" y="230" width="320" height="34" rx="12" fill="#EFE7D8" stroke="none"/>
+  <text class="shell-txt" x="440" y="253" fill="#5A5043">外层：安全分类器摘掉（裸）</text>
+  <text class="name" x="440" y="304">Mythos 5</text>
+  <text class="name-id" x="440" y="326" fill="#5A5043">claude-mythos-5</text>
+  <text class="label" x="440" y="362">仅限量定向发放</text>
+  <text class="small" x="440" y="388">只给 Project Glasswing 获批伙伴</text>
+  <text class="small" x="440" y="410">和少数生物研究者</text>
+  <text class="small" x="440" y="432">最强那档，设计上就不给公众</text>
+</svg>

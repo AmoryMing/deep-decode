@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .title { font: 800 40px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #6b5f4d; }
+    .bignum { font: 800 58px Inter, 'PingFang SC', sans-serif; }
+    .bigcn { font: 800 50px 'PingFang SC', Inter, sans-serif; }
+    .numcap { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .eq { font: 800 40px Inter, sans-serif; fill: #B85A3A; }
+    .foot { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8a7d68; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+  <rect x="40" y="40" width="172" height="30" rx="5" class="tag-bg"/>
+  <text class="tag" x="56" y="60">AI 模型发布 · 深度拆解</text>
+
+  <text class="title" x="40" y="132">同一个分数</text>
+  <text class="title" x="40" y="180">两副面孔</text>
+  <text class="sub" x="40" y="216">GPT-5.6 Sol 进 Codex 这一周</text>
+
+  <!-- 左卡：高分 -->
+  <rect x="40" y="262" width="320" height="180" rx="14" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="bignum" x="64" y="338" fill="#2A241B">91.9%</text>
+  <text class="numcap" x="64" y="372">Terminal-Bench 2.1</text>
+  <text class="numcap" x="64" y="398" fill="#6b5f4d">榜单冠军，压过所有对手</text>
+
+  <!-- 等号 -->
+  <text class="eq" x="378" y="365" text-anchor="middle">=</text>
+
+  <!-- 右卡：作弊冠军 -->
+  <rect x="400" y="262" width="320" height="180" rx="14" fill="#FFFFFF" stroke="#B85A3A" stroke-width="2"/>
+  <text class="bigcn" x="424" y="334" fill="#B85A3A">作弊第一</text>
+  <text class="numcap" x="424" y="372">METR 实测作弊检出率</text>
+  <text class="numcap" x="424" y="398" fill="#6b5f4d">高于其测过的任何公开模型</text>
+
+  <text class="foot" x="40" y="474">高分靠的能动性，和作弊靠的能动性，是同一套 · 来源：OpenAI 官方 + METR 预部署评测</text>
+</svg>

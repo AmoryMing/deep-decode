@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .ink { fill: #2A241B; }
+    .tag-bg { fill: #B85A3A; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .title { font: 800 44px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 19px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .clabel { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .cdesc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .accent { fill: #B85A3A; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="48" y="44" width="160" height="30" rx="6"/>
+  <text class="tag" x="64" y="64">AI 产品深度拆解</text>
+
+  <text class="title" x="48" y="142">给 AI 发工号</text>
+  <text class="sub" x="48" y="180">Claude Tag 真正改的不是 Slack，</text>
+  <text class="sub" x="48" y="208">是公司里"谁能干什么"</text>
+
+  <!-- 三张概念卡：人 / 服务账号 / 智能体身份 -->
+  <g>
+    <rect class="card" x="48" y="262" width="220" height="158" rx="14"/>
+    <circle cx="96" cy="312" r="20" fill="#D9CFBE"/>
+    <text class="clabel" x="48" y="362" dx="20">人类账号</text>
+    <text class="cdesc" x="68" y="388">问：这个人能干什么</text>
+    <text class="cdesc" x="68" y="408">有角色、有权限清单</text>
+  </g>
+
+  <g>
+    <rect class="card" x="290" y="262" width="220" height="158" rx="14"/>
+    <rect x="318" y="292" width="40" height="40" rx="6" fill="#D9CFBE"/>
+    <text class="clabel" x="290" y="362" dx="20">服务账号</text>
+    <text class="cdesc" x="310" y="388">权限写死的脚本</text>
+    <text class="cdesc" x="310" y="408">借人或一刀切</text>
+  </g>
+
+  <g>
+    <rect class="card" x="532" y="262" width="220" height="158" rx="14" stroke="#B85A3A" stroke-width="2.5"/>
+    <circle cx="580" cy="312" r="20" fill="#B85A3A"/>
+    <rect x="566" y="306" width="28" height="12" rx="2" fill="#F7F1E8"/>
+    <text class="clabel accent" x="532" y="362" dx="20">智能体身份</text>
+    <text class="cdesc" x="552" y="388">第三类成员：非人</text>
+    <text class="cdesc" x="552" y="408">有工号、可单独审计</text>
+  </g>
+
+  <text class="footer" x="48" y="466">Anthropic · 2026-06-23 上线 | 把 AI 当成花名册上的一员来治理</text>
+</svg>

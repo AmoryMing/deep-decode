@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .title { font: 800 38px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .subtitle { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #6B6256; }
+    .big-num { font: 800 72px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .num-label { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .num-sub { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A8073; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="40" y="38" width="160" height="28" rx="5"/>
+  <text class="tag" x="56" y="57">AI 论文深度拆解</text>
+
+  <text class="title" x="40" y="128">给模型全部历史</text>
+  <text class="title" x="40" y="172">它还是只考 50 分</text>
+  <text class="subtitle" x="40" y="206">美团 VitaBench 2.0 把 agent 战场从「单次任务」</text>
+  <text class="subtitle" x="40" y="230">挪到了「长期记忆 + 个性化 + 主动性」</text>
+
+  <!-- 核心数字大卡 -->
+  <rect class="card" x="40" y="270" width="350" height="170" rx="14"/>
+  <text class="big-num" x="60" y="350">0.503</text>
+  <text class="num-label" x="60" y="385">Claude-Opus-4.6 平均成功率</text>
+  <text class="num-sub" x="60" y="410">把用户 1580 天全部历史塞进上下文</text>
+  <text class="num-sub" x="60" y="428">这是作弊式上界——它什么都看得见</text>
+
+  <!-- 对照小卡 -->
+  <rect class="card" x="410" y="270" width="350" height="78" rx="14"/>
+  <text class="num-label" x="430" y="305">真考点不是「记不记得住」</text>
+  <text class="num-sub" x="430" y="331">而是给它全部信息，它也不会用</text>
+
+  <rect class="card" x="410" y="362" width="350" height="78" rx="14"/>
+  <text class="num-label" x="430" y="397">最低分维度：主动性 仅 27%</text>
+  <text class="num-sub" x="430" y="423">该问的时候不问，是系统性盲点</text>
+
+  <text class="footer" x="40" y="472">arXiv:2605.27141 | 2026-06 开源 (MIT) | 美团 LongCat 团队 联合 新国大 / 中科大 / 北邮 / 浙大</text>
+</svg>

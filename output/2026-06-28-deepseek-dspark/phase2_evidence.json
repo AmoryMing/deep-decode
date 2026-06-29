@@ -1,0 +1,41 @@
+{
+  "verified": true,
+  "core_judgment": "DSpark 不是新模型，是 DeepSeek 联合北大开源的推测解码推理加速框架——同一个 V4 权重，外挂一个加速模块，单用户生成速度提升 60%-85%。它在 DeepSeek 战略里的位置：把竞争从'谁的模型更聪明'拉到'谁把同样的智能服务得更快更便宜'，是 DeepSeek 一贯的效率优先路线在推理层的延伸，而且把这套基础设施直接开源给行业。",
+  "counter_or_blindspot": "DSpark 让 AI 回答更快，但不让 AI 更聪明——它在数学上无损保留目标模型的输出分布，只是省掉了对那些'大概率会被丢弃的 token'的昂贵算力。那些 406%-661% 的吞吐量数字只在极严格的 SLA（如要求 120 token/s）下成立，正常负载下是 51%-52%。论文的对比基线 MTP-1 是 DeepSeek 自家此前的生产基线，外部第三方独立复现尚未出现。",
+  "key_facts": [
+    {"claim": "DSpark 于 2026-06-27 由 DeepSeek 联合北京大学发布并开源", "evidence": "DeepSeek 联合北京大学正式发布 DSpark 推理加速框架，发布日期 2026 年 6 月 27 日", "source_url": "https://finance.eastmoney.com/a/202606273785453140.html"},
+    {"claim": "DSpark 不是新模型，是挂在已有 V4 checkpoint 上的推测解码模块", "evidence": "DeepSeek-V4-Pro-DSpark is not a new model. It is the same checkpoint with an additional speculative decoding module attached.", "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark"},
+    {"claim": "完整名称：Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation（置信度调度 + 半自回归生成的推测解码）", "evidence": "The full name is Confidence-Scheduled Speculative Decoding with Semi-Autoregressive Generation.", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "推测解码原理：小草稿模型一次提议一整块 token，大模型一次前向把整块验证掉，接受最长合法前缀+1 个赠送 token，数学上无损", "evidence": "A small draft model proposes a block of tokens. The full target model then verifies that block in one forward pass... accepts the longest valid prefix and appends one bonus token, preserving output quality losslessly.", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "半自回归：并行主干（DFlash 改进）一次产出全部位置的 logits，再由轻量级顺序模块逐 token 注入前缀依赖，缓解并行草稿在靠后位置接受率衰减", "evidence": "a parallel backbone (DFlash) generates base logits for all positions simultaneously, then a lightweight sequential head adds a prefix-dependent bias before sampling each token; mitigating the acceptance rate decay commonly observed at later positions in parallel draft models", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "置信度调度 + 硬件感知调度器：置信度头给每个位置打分估计 token 存活概率，负载空闲时多验证、GPU 忙时少验证；校准误差从 3-8% 降到约 1%", "evidence": "A confidence head outputs per-position scores... Sequential Temperature Scaling... reducing expected calibration error from 3-8% down to about 1%. A load-aware scheduler dynamically adjusts verification length", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "对比基线 MTP-1（DeepSeek 此前生产用的单 token 推测解码），同等吞吐下单用户生成速度 V4-Flash 提升 60%-85%，V4-Pro 提升 57%-78%", "evidence": "per-user generation runs 60-85% faster on V4-Flash and 57-78% on V4-Pro vs. MTP-1", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "吞吐量提升随 SLA 收紧而放大：V4-Flash 保 80 token/s 时吞吐 +51%，保 120 token/s 时 +661%；V4-Pro 35 token/s 时 +52%，50 token/s 时 +406%", "evidence": "V4-Flash 保证 80 token/s 时吞吐量提升 51%；要求 120 token/s 时优势达 661%；V4-Pro 35 token/s 提升 52%、50 token/s 提升 406%", "source_url": "https://www.sina.cn/news/detail/5314463070685867.html"},
+    {"claim": "接受长度比 Eagle3 提升 26-31%，比 DFlash 提升 16-18%；离线对话接受率从 45.7% 提到 95.7%，数学推理从 76.9% 提到 92.5%", "evidence": "Accepted length gains: rises 26-31% over Eagle3 and 16-18% over DFlash; Offline chat acceptance from 45.7% to 95.7%; Math reasoning from 76.9% to 92.5%", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "已在生产环境上线，使用 DSpark-5 配置（五 token 草稿块 + Markov 头）", "evidence": "DSpark ships in production on DeepSeek-V4 using DSpark-5 configuration (five-token draft block with Markov head).", "source_url": "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/"},
+    {"claim": "开源 DeepSpec 仓库（MIT 协议），含 DSpark / DFlash / Eagle3 三种草稿模型的训练代码、评估脚本、checkpoint，以及论文", "evidence": "在 GitHub 的 DeepSpec 项目中开源了 DSpark、DFlash 和 Eagle3 三种草稿模型的训练代码、评估脚本及模型检查点", "source_url": "https://finance.eastmoney.com/a/202606273785453140.html"},
+    {"claim": "底座 V4-Pro：1.6T 总参数 / 49B 激活（MoE），100 万 token 上下文，FP4+FP8 混合精度", "evidence": "Parameters: 1.6T total, 49B activated (MoE); Context Length: 1 million tokens; Precision: FP4 + FP8 Mixed", "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark"}
+  ],
+  "quotes": [
+    {"en_or_zh": "The AI race is no longer only about who can train the biggest or cleverest model. It is also about who can serve intelligence quickly, reliably, and cheaply at production scale.", "zh_translation": "AI 竞赛已经不只是比谁能训出最大或最聪明的模型，也是在比谁能在生产规模上把智能服务得更快、更稳、更便宜。", "source_url": "https://kingy.ai/blog/deepseek-dspark-speculative-decoding/"},
+    {"en_or_zh": "DeepSeek-V4-Pro-DSpark is not a new model. It is the same checkpoint with an additional speculative decoding module attached.", "zh_translation": "DeepSeek-V4-Pro-DSpark 不是一个新模型。它是同一个权重，外挂了一个推测解码模块。", "source_url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark"}
+  ],
+  "entities": ["DeepSeek（深度求索）", "北京大学", "DeepSeek-V4-Pro", "DeepSeek-V4-Flash", "DSpark", "DeepSpec（GitHub 仓库）", "DFlash（草稿模型）", "Eagle3（对比草稿模型）", "MTP-1（旧生产基线）", "推测解码 speculative decoding", "MoE 混合专家"],
+  "timeline_or_competitors": "推测解码不是 DeepSeek 发明的，是 Google/学界已有的通用加速思路（小模型猜、大模型批量验）。DSpark 的差异点：半自回归（兼顾并行草稿的高吞吐 + 串行模块建模块内依赖）+ 置信度调度（动态草稿长度，按 GPU 负载自适应）。对比对象主要是 DeepSeek 自家旧基线 MTP-1，以及学界的 Eagle3。同期效率路线对手：各家都在推 vLLM/SGLang 上的推测解码与 EAGLE 系列，DeepSeek 的差异是把它做进自家 V4 生产栈并开源训练代码。",
+  "reader_takeaway": "如果你在用 DeepSeek API 或自部署 V4，DSpark 意味着同样的钱/同样的卡能服务更多人或给更快的体验，且回答质量不变——这是成本侧的直接利好，不是能力升级。如果你在做推理优化，DeepSpec 给了可复现的草稿模型训练代码，值得拿去对自己的模型试。",
+  "sources": [
+    "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-DSpark",
+    "https://www.marktechpost.com/2026/06/27/deepseek-releases-dspark-a-speculative-decoding-framework-that-accelerates-deepseek-v4-per-user-generation-60-85-over-mtp-1/",
+    "https://finance.eastmoney.com/a/202606273785453140.html",
+    "https://www.sina.cn/news/detail/5314463070685867.html",
+    "https://kingy.ai/blog/deepseek-dspark-speculative-decoding/",
+    "https://github.com/deepseek-ai/DeepSpec",
+    "https://udn.com/news/story/7333/9592607",
+    "https://www.163.com/dy/article/L0GNM9DP0514R9OJ.html"
+  ],
+  "uncertainties": [
+    "HF model card 上 arxiv 行显示 'April 26, 2026'，但 arxiv id 2606.19348 对应 2026 年 6 月，且各家新闻一致为 6 月 27 日发布——'April' 大概率是抓取/卡片误标，正文以 6 月 27 日为准。",
+    "北大具体哪个实验室/作者署名未逐一核到一手论文，仅多家中文财经媒体一致称'联合北京大学'；HF 卡片和英文报道未提北大。",
+    "406%/661% 这类极端吞吐数字仅在严格 SLA 下成立，且对比基线是 DeepSeek 自家 MTP-1，缺独立第三方复现，引用时已标注语境。"
+  ]
+}

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .label { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .code { font: 600 13px Inter, monospace; fill: #B85A3A; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 2; }
+    .box-fail { fill: #FFFFFF; stroke: #C9BBA2; stroke-width: 2; stroke-dasharray: 6 4; }
+    .box-win { fill: #FBF0EA; stroke: #B85A3A; stroke-width: 2.5; }
+    .guard { fill: #F1E7D6; stroke: #D9CFBE; stroke-width: 1.5; }
+    .arrow { stroke: #2A241B; stroke-width: 2.5; fill: none; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="44">真正的脏活在合盖那一刻</text>
+  <text class="desc" x="40" y="70">合盖睡眠是 macOS 最硬的一道睡眠，常规手段打不过——但骗它别睡是带刺的</text>
+
+  <!-- 第一行：打不过 vs 打得过 -->
+  <rect class="box-fail" x="40" y="100" width="340" height="110" rx="12"/>
+  <text class="label" x="60" y="132" fill="#9A8C74">公开 IOPMAssertion 断言</text>
+  <text class="small" x="60" y="158">系统给程序的"举手"机制，挡得住闲置睡眠</text>
+  <text class="small" x="60" y="182" fill="#9A8C74">但 beat 不过合盖睡眠，这条路是死的</text>
+
+  <path class="arrow" d="M 392 155 L 426 155"/>
+  <polygon points="424,150 434,155 424,160" fill="#2A241B"/>
+
+  <rect class="box-win" x="445" y="100" width="315" height="110" rx="12"/>
+  <text class="label" x="465" y="132" fill="#B85A3A">pmset disablesleep（内核级标志）</text>
+  <text class="small" x="465" y="158">设内核里的 SleepDisabled，是对睡眠的否决票</text>
+  <text class="small" x="465" y="182" fill="#B85A3A">Apple 芯片上能穿透合盖，不接屏也能醒</text>
+
+  <!-- 第二行：副作用 -->
+  <text class="label" x="40" y="262">穿透合盖的代价（裸用 pmset 的坑）</text>
+  <rect class="box" x="40" y="278" width="350" height="60" rx="10"/>
+  <text class="small" x="58" y="304" fill="#B85A3A">合着盖塞包里被强行清醒，会发热</text>
+  <text class="small" x="58" y="326">屏黑了没法弹通知，不知道断言生没生效</text>
+  <rect class="box" x="410" y="278" width="350" height="60" rx="10"/>
+  <text class="small" x="428" y="304" fill="#B85A3A">内屏可能继续全亮，黑包里空烧几小时电</text>
+  <text class="small" x="428" y="326">持有进程死了 / 电量太低，仍会强制睡</text>
+
+  <!-- 第三行：它把脏活包起来 -->
+  <text class="label" x="40" y="380">Adrafinil 把这些边界条件包成"敢塞包里跑一整晚"</text>
+  <g>
+    <rect class="guard" x="40" y="398" width="172" height="90" rx="10"/>
+    <text class="small" x="56" y="426" style="font:600 12px 'PingFang SC',Inter" fill="#2A241B">温度兜底</text>
+    <text class="small" x="56" y="450">越过阈值就强制</text>
+    <text class="small" x="56" y="470">释放全部断言</text>
+  </g>
+  <g>
+    <rect class="guard" x="224" y="398" width="172" height="90" rx="10"/>
+    <text class="small" x="240" y="426" style="font:600 12px 'PingFang SC',Inter" fill="#2A241B">空闲兜底</text>
+    <text class="small" x="240" y="450">进程死 / CPU 空闲</text>
+    <text class="small" x="240" y="470">超 N 分钟自动撤</text>
+  </g>
+  <g>
+    <rect class="guard" x="408" y="398" width="172" height="90" rx="10"/>
+    <text class="small" x="424" y="426" style="font:600 12px 'PingFang SC',Inter" fill="#2A241B">合盖反馈</text>
+    <text class="small" x="424" y="450">屏黑没通知，靠</text>
+    <text class="small" x="424" y="470">一声提示音确认</text>
+  </g>
+  <g>
+    <rect class="guard" x="592" y="398" width="168" height="90" rx="10"/>
+    <text class="small" x="608" y="426" style="font:600 12px 'PingFang SC',Inter" fill="#2A241B">开盖回执</text>
+    <text class="small" x="608" y="450">离开期间跑了啥</text>
+    <text class="small" x="608" y="470">峰值温度多少</text>
+  </g>
+</svg>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 15px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .boxlabel { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .boxsub { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+    .canvas { fill: #B85A3A; }
+    .canvastext { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .canvassub { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #F2D9CC; }
+    .arrow { stroke: #B85A3A; stroke-width: 2; fill: none; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="56">六个功能，一个动作：全部收回画布</text>
+  <text class="sub" x="40" y="84">单看每样都是像样的更新；摆在一起，它们指向同一件事</text>
+
+  <!-- 左侧：六个原本散落的工具 -->
+  <g>
+    <rect class="box" x="40" y="120" width="200" height="52" rx="9"/>
+    <text class="boxlabel" x="58" y="146">After Effects</text>
+    <text class="boxsub" x="58" y="164">原本去这里做动效</text>
+
+    <rect class="box" x="40" y="184" width="200" height="52" rx="9"/>
+    <text class="boxlabel" x="58" y="210">Cursor / Lovable</text>
+    <text class="boxsub" x="58" y="228">原本去这里写代码</text>
+
+    <rect class="box" x="40" y="248" width="200" height="52" rx="9"/>
+    <text class="boxlabel" x="58" y="274">Midjourney</text>
+    <text class="boxsub" x="58" y="292">原本去这里出图</text>
+
+    <rect class="box" x="40" y="312" width="200" height="52" rx="9"/>
+    <text class="boxlabel" x="58" y="338">shader 编辑器</text>
+    <text class="boxsub" x="58" y="356">原本去这里调效果</text>
+
+    <rect class="box" x="40" y="376" width="200" height="52" rx="9"/>
+    <text class="boxlabel" x="58" y="402">手写插件</text>
+    <text class="boxsub" x="58" y="420">原本要会编程才能造</text>
+  </g>
+
+  <!-- 箭头汇聚 -->
+  <path class="arrow" d="M 248 146 C 320 146, 340 270, 410 270"/>
+  <path class="arrow" d="M 248 210 C 320 210, 340 270, 410 270"/>
+  <path class="arrow" d="M 248 274 L 410 274"/>
+  <path class="arrow" d="M 248 338 C 320 338, 340 278, 410 278"/>
+  <path class="arrow" d="M 248 402 C 320 402, 340 282, 410 282"/>
+  <polygon points="410,266 424,274 410,282" fill="#B85A3A"/>
+
+  <!-- 右侧：一块画布 -->
+  <rect class="canvas" x="448" y="150" width="312" height="252" rx="16"/>
+  <text class="canvastext" x="476" y="216">一块画布</text>
+  <text class="canvassub" x="476" y="248">动效 · 代码 · 出图 · 着色器 · 插件</text>
+  <text class="canvassub" x="476" y="270">全部和你的组件、队友并排放着</text>
+  <rect x="476" y="298" width="256" height="1.5" fill="#E0A07F"/>
+  <text class="canvassub" x="476" y="328">不再"切出去"，因为这里也有</text>
+  <text class="canvassub" x="476" y="352">少一次切换，就少一个离开的理由</text>
+  <text x="476" y="384" font="700 14px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">这是平台的打法，不是工具的打法</text>
+
+  <text class="footer" x="40" y="470">认知逻辑：散在各处的创作环节（左），汇聚到中间，落进同一份多人协作文件（右）</text>
+  <text class="footer" x="40" y="494">护城河正从"最好用的 UI 工具"挪到"唯一一处这些东西能碰头的地方"</text>
+</svg>

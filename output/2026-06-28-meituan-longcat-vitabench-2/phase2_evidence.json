@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "core_judgment": "Agent 基准的战场正从『一次性任务能不能做完』移到『跨天、跨会话能不能持续记住并主动服务一个人』。VitaBench 2.0 用 56 个真实用户、平均 1580 天的交互跨度把这件事量化，结果是连最强模型在『全上下文』作弊设置下也只到约 50% Avg@4，换成真实记忆机制还要掉——说明长期个性化和主动性是当前 agent 没解决的硬骨头，工具调用早已不是瓶颈。",
+  "counter_or_blindspot": "1) 56 个用户是人工构造的虚拟用户画像，不是真实线上日志，泛化到真实用户分布存疑；2) 任务数三个口径不一致（GitHub README 写 771 subtasks，论文/中文稿写 819 tasks，论文又说每用户至少 10 个），需注明;3) 基准三大域全是美团自家业务（外卖/到店/旅游），对非生活服务类 agent 的迁移性未知；4) '主动性'指标本身怎么客观打分（什么算该问而没问）论文给了 rubric 但细节难复核。",
+  "key_facts": [
+    {"claim": "VitaBench 2.0 是首个面向真实生活场景、长期动态用户建模的智能体评测基准", "evidence": "格隆汇/新浪财经引美团技术消息：『VitaBench 2.0 是首个真实生活场景下面向长期动态用户建模的智能体评测基准』", "source_url": "https://www.gelonghui.com/live/2521822"},
+    {"claim": "由美团 LongCat 团队联合新加坡国立大学、中国科学技术大学、北京邮电大学、浙江大学发布", "evidence": "腾讯新闻：『美团 longcat 团队联合新加坡国立大学、中国科学技术大学、北京邮电大学及浙江大学』；arXiv 作者单位列出 NUS / Meituan / USTC / BUPT / Zhejiang University", "source_url": "https://news.qq.com/rain/a/20260609A088BW00"},
+    {"claim": "规模：56 个用户、819 个任务、2000+ 动态偏好、66 个工具、平均交互跨度 1580 天", "evidence": "OpenI 与 AI工具集：『56 位虚拟用户、819 个任务、超过 2000 种随时间演变的动态偏好、66 个功能强大的可执行工具、平均交互跨度长达 1580 天』；GitHub README 另写 771 subtasks（口径差异）", "source_url": "https://openi.cn/318627.html"},
+    {"claim": "平均每位用户经历 48 次以上偏好动态调整；约 20% 交互数据掺入无关信息/探索/代理行为等『噪音』", "evidence": "OpenI：『平均每位用户经历 48 次以上的偏好动态调整』『约 20% 的交互数据中融入了无关信息、探索或代理行为等噪音』", "source_url": "https://openi.cn/318627.html"},
+    {"claim": "三大业务域：外卖配送(Delivery)、到店消费(In-store Consumption)、在线旅游(OTA)——和 1.0 同源", "evidence": "arXiv 2.0 paper: 'Domains: Delivery, In-store Consumption, Online Travel Agency'；1.0 同三域", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"claim": "三个个性化维度：偏好抽取(extraction)、偏好运用(utilization)、偏好更新(updating)；加一个主动性(proactiveness)维度", "evidence": "arXiv 2.0: 'three personalization dimensions—preference extraction from fragmented interactions, preference utilization in decision-making, and preference updating'；'Proactiveness measures whether agents recognize missing information and actively query users'", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"claim": "三种记忆设置对比：Full Context（全上下文，上界）、Agentic Memory（agent 自主维护档案）、RAG Memory（向量检索历史片段）", "evidence": "arXiv 2.0 + GitHub README: 'Full Context / Agentic Memory / RAG Memory'", "source_url": "https://github.com/meituan-longcat/VitaBench-2.0"},
+    {"claim": "评测指标三件：Avg@4（4 次独立运行均值）、Pass@4（至少 1 次成功）、Pass^4（4 次全成功），temperature 0.0", "evidence": "arXiv 2.0: 'Avg@4 / Pass@4 / Pass^4 computed from four independent runs (temperature 0.0)'", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"claim": "SOTA 表现：最强 thinking 模型 Claude-Opus-4.6 在 Full Context 下 Avg@4=0.503；最强 non-thinking 模型 DeepSeek-V4-Pro Avg@4=0.456。论文原话：即使全上下文，SOTA 也只约 0.5 Avg@4、约 0.3 Pass^4", "evidence": "arXiv 2.0: 'state-of-the-art models achieve only Avg@4 of around 0.5 and Pass^4 of around 0.3'；Claude-Opus-4.6 0.503 / DeepSeek-V4-Pro 0.456", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"claim": "主动性任务得分（27-28%）远低于个性化任务（44-50%）；开启 thinking 模式不一定更好；即使直接给真值偏好性能也卡在约 50%", "evidence": "arXiv 2.0: 'Performance on proactive tasks (27-28%) substantially lags personalization tasks (44-50%)'；'Enabling thinking modes does not consistently lead to better performance'；'even with ground-truth preferences provided, performance plateaus around 50%'", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"claim": "对比 1.0：VitaBench(1.0) 是 ICLR 2026 入选，66 工具、100 跨场景任务+300 单场景任务，最强模型跨场景仅约 30%（32.5%，Gemini-3-Flash 领先），考的是单次复杂任务的工具编排", "evidence": "vitabench.github.io + arXiv 2509.26490: 'even the most advanced models achieve only 30% success rate on cross-scenario tasks'；'100 cross-scenario / 300 single-scenario / 66 tools'；ICLR 2026", "source_url": "https://arxiv.org/abs/2509.26490"},
+    {"claim": "LongCat 是美团自研大模型/团队；LongCat-Flash 总参 560B、激活约 27B 的 MoE（Shortcut-connected MoE + 零计算专家），2025-09 开源 Chat 版", "evidence": "新浪/量子位/美团官网：王兴称美团内部大模型名 LongCat；LongCat-Flash 560B/激活27B MoE，2025-09-01 开源", "source_url": "https://www.qbitai.com/2025/09/327751.html"},
+    {"claim": "开源协议 MIT；代码 GitHub meituan-longcat/VitaBench-2.0，数据集 HuggingFace meituan-longcat/VitaBench-2.0", "evidence": "GitHub README: 'MIT License'; dataset on Hugging Face", "source_url": "https://github.com/meituan-longcat/VitaBench-2.0"}
+  ],
+  "quotes": [
+    {"en_or_zh": "Even under the Full Context setting where full interaction history is accessible, state-of-the-art models achieve only Avg@4 of around 0.5 and Pass^4 of around 0.3.", "zh_translation": "即使在能拿到全部交互历史的『全上下文』设置下，最强模型的 Avg@4 也只有约 0.5、Pass^4 约 0.3。", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"en_or_zh": "Personalization emerges as the dominant bottleneck. Even with ground-truth preferences provided, performance plateaus around 50%.", "zh_translation": "个性化是头号瓶颈——就算把正确偏好直接喂给模型，成绩也只能卡在 50% 左右。", "source_url": "https://arxiv.org/html/2605.27141v1"},
+    {"en_or_zh": "随着工具调用错误率显著降低，捕捉并应用用户偏好已成为限制智能体落地的核心瓶颈", "zh_translation": "（中文原文）", "source_url": "https://news.qq.com/rain/a/20260609A088BW00"}
+  ],
+  "entities": ["VitaBench 2.0", "VitaBench 1.0", "美团 LongCat 团队", "LongCat-Flash", "新加坡国立大学", "中国科学技术大学", "Claude-Opus-4.6", "DeepSeek-V4-Pro", "Agentic Memory", "RAG Memory"],
+  "timeline_or_competitors": "时间线：2025-09 美团开源 LongCat-Flash（560B MoE）→ 2025-10-20 发布 VitaBench(1.0)，ICLR 2026 入选 → 2026-06 上旬开源 VitaBench 2.0。竞品/同类：τ-bench(tau-bench)、AgentBench、WebArena 等 agent 基准多为单次任务；长期记忆方向有 LoCoMo、LongMemEval 但偏对话记忆问答，不带真实工具执行 + 偏好漂移 + 主动性。VitaBench 2.0 把『长期记忆 + 真实工具 agent + 主动性』三者合一。",
+  "reader_takeaway": "做 agent 的人：别再用单次任务 benchmark 自我感觉良好。如果你的 agent 要服务同一个人很久（助理、客服、推荐），真正会拉开差距的是记忆架构和『不确定时主动问』的策略，而不是再调一版工具调用。VitaBench 2.0 现成给了三种记忆设置的对照实验脚手架，可以直接拿来压测自己的记忆方案。",
+  "sources": [
+    "https://arxiv.org/html/2605.27141v1",
+    "https://github.com/meituan-longcat/VitaBench-2.0",
+    "https://news.qq.com/rain/a/20260609A088BW00",
+    "https://openi.cn/318627.html",
+    "https://www.gelonghui.com/live/2521822",
+    "https://vitabench.github.io/",
+    "https://arxiv.org/abs/2509.26490",
+    "https://finance.sina.com.cn/tech/digi/2025-10-20/doc-infupvch5238301.shtml",
+    "https://www.qbitai.com/2025/09/327751.html",
+    "http://ai.kukuwg.com/vitabench-2-0/"
+  ],
+  "uncertainties": [
+    "任务总数口径不一：GitHub README 写 771 subtasks，论文/中文稿写 819 tasks，论文正文又说每用户至少 10 个——正文采用 819（中文一手转述最一致），并注明 README 口径差异。",
+    "模型版本号（Claude-Opus-4.6 / DeepSeek-V4-Pro / GPT-5 等）由 arXiv HTML 抽取，属 2026 年模型，未逐一对官方型号名复核；榜单具体小数取自论文摘要级数据，未核对完整 leaderboard 表格每一行。",
+    "1580 天平均交互跨度、48 次偏好调整、20% 噪音比例来自二手中文转述（OpenI/AI工具集转美团技术稿），未在 arXiv HTML 正文逐字定位到同一数字，标为『美团技术稿口径』。"
+  ]
+}

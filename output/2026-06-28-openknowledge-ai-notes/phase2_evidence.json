@@ -1,0 +1,46 @@
+{
+  "verified": true,
+  "core_judgment": "OpenKnowledge（inkeep/open-knowledge）的'AI-first'不是再加一个内置模型，而是把笔记本身重做成给 agent 用的东西——纯 markdown/mdx 在 git 里当唯一真相，外加一层 MCP + skills 让你已经在用的 Claude Code / Cursor / Codex 能读懂、检索、改写整个知识库。差别在架构层：不是给老笔记软件挂个 AI 插件，而是把'编辑器'拆成'人看的 WYSIWYG 视图'和'agent 用的工具层'两半，模型自己不带，谁强用谁。",
+  "counter_or_blindspot": "1) 反讽点：HN 上有人直接质疑'用 open source 形容一个绑死 Claude/Codex 这种闭源 AI 服务的东西，应该有后果'——它开源的是编辑器外壳，真正干活的智能仍来自专有模型。2) 它自己不带模型，所以'本地优先/数据所有权'只对文件成立，对'AI 能力'不成立——一旦你用 Claude/Codex，内容就出本地了（除非你接 OpenCode/本地 harness）。3) 发布时 macOS only（Linux/Win 只有 CLI + web viewer），且营销里展示的 in-app chat 在首发时还没上。4) 同步只有 git/GitHub，大文件、非技术团队是坑，CRDT 中心化服务'在路上'。5) 二手文（PromptZone）描述的是另一套架构（内置 embedded model + Ollama/LM Studio + 语义搜索 + auto-tag），与一手仓库/官网/作者本人说法矛盾，疑似 AI 代写的失真稿，已排除。",
+  "key_facts": [
+    {"claim": "项目本体：inkeep/open-knowledge，官网 openknowledge.ai，描述 'Beautiful, AI-native markdown editor and LLM Wiki'", "evidence": "GitHub repo description + 官网 docs overview", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"claim": "GitHub 数据：1,382 stars / 57 forks / 7 open issues；许可证 GPL-3.0；主语言 TypeScript（约 97.8%）；仓库创建 2026-06-03，最近 push 2026-06-28", "evidence": "GitHub REST API repos/inkeep/open-knowledge", "source_url": "https://api.github.com/repos/inkeep/open-knowledge"},
+    {"claim": "一句话定位：'A beautiful markdown editor with integrations with Claude, Codex, and other harnesses. For knowledge bases, LLM wikis, specs, and notes. Private, local, and free.' 以及 'Think of it as Notion meets VSCode.'", "evidence": "README 原文", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"claim": "它不自带 LLM：官网 docs 明确 'The platform does not bundle its own model—it relies on external agents you already use.' 支持 Claude / Cursor / Codex / OpenCode，集成走 MCP + skills", "evidence": "openknowledge.ai docs overview 原文", "source_url": "https://openknowledge.ai/docs/get-started/overview"},
+    {"claim": "三层架构：Editor 层（WYSIWYG，支持 interactive HTML/JS、Mermaid、LaTeX、视频、PDF）+ Agent Tools 层（MCP 和 skills，帮 agent 搜索/吸收/组织/维护知识）+ Content 层（git 版本管理的纯 markdown/mdx 作为 source of truth）", "evidence": "openknowledge.ai docs overview", "source_url": "https://openknowledge.ai/docs/get-started/overview"},
+    {"claim": "WYSIWYG：'Full true WYSIWYG so that editing markdown files feels like editing a Google Doc or Notion page.' 含 file navigator / search / tabs / graph wiki link viewer", "evidence": "README", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"claim": "安装即 npm 全局包：npm install -g @inkeep/open-knowledge；ok init 会脚手架项目并接好 Claude Code / Cursor / Codex；ok start --open 起 web 编辑器", "evidence": "README quickstart", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"claim": "兼容 Obsidian vault：作者 HN 原话 'Since Obsidian is just markdown, you can just open an Obsidian vault with OpenKnowledge.' 但 dataview / 插件生态不支持", "evidence": "Show HN 作者评论", "source_url": "https://news.ycombinator.com/item?id=48675435"},
+    {"claim": "同步：'No-code team sharing and Auto-sync powered by git/GitHub under the hood.' 作者称中心化 CRDT server 选项在路上", "evidence": "README + HN 作者评论", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"claim": "Show HN 2026-06-25 由 engomez（Inkeep CEO Nick Gomez）发布，得 372 分；标题 'Show HN: OpenKnowledge – open source AI-first alternative to Obsidian/Notion'", "evidence": "HN Algolia API item 48675435", "source_url": "https://hn.algolia.com/api/v1/items/48675435"},
+    {"claim": "母公司 Inkeep：YC 出身，2026 前融 $13M 种子轮（Khosla Ventures / GreatPoint Ventures / Y Combinator 领投），主业是给团队建客服/运营 AI agent，客户含 Anthropic、Midjourney、PostHog、Postman、Clay；创始人 CEO Nick Gomez、CTO Robert Tran（均 MIT）", "evidence": "Inkeep 官网博客 + YC 公司页 + 多家科技媒体", "source_url": "https://inkeep.com/blog/inkeep-funding-announcement"},
+    {"claim": "发布时平台限制：macOS 有原生 app（DMG），Linux / Windows / Intel Mac 只有 web app + CLI（需 Node.js 24+）；作者承诺全平台桌面在路上", "evidence": "README + HN 作者回复", "source_url": "https://github.com/inkeep/open-knowledge"}
+  ],
+  "quotes": [
+    {"en_or_zh": "A beautiful markdown editor with integrations with Claude, Codex, and other harnesses. For knowledge bases, LLM wikis, specs, and notes. Private, local, and free.", "zh_translation": "一个漂亮的 markdown 编辑器，原生接好 Claude、Codex 等各种 agent。给知识库、LLM wiki、规格文档和笔记用。私有、本地、免费。", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"en_or_zh": "The platform does not bundle its own model—it relies on external agents you already use.", "zh_translation": "这个平台不自带模型——它靠你本来就在用的外部 agent。", "source_url": "https://openknowledge.ai/docs/get-started/overview"},
+    {"en_or_zh": "Think of it as Notion meets VSCode.", "zh_translation": "把它想成 Notion 撞上 VSCode。", "source_url": "https://github.com/inkeep/open-knowledge"},
+    {"en_or_zh": "Since Obsidian is just markdown, you can just open an Obsidian vault with OpenKnowledge.", "zh_translation": "Obsidian 本质就是一堆 markdown，所以你可以直接用 OpenKnowledge 打开一个 Obsidian 仓库。", "source_url": "https://news.ycombinator.com/item?id=48675435"},
+    {"en_or_zh": "there genuinely ought to be consequences for using 'open source' in the context of something like this tied to proprietary AI services.", "zh_translation": "把'开源'这个词用在一个绑死专有 AI 服务的东西上，真该付出点代价。", "source_url": "https://news.ycombinator.com/item?id=48675435"},
+    {"en_or_zh": "I just open the Obsidian folder in VS Code and BOOM, it is AI friendly.", "zh_translation": "我直接拿 VS Code 打开 Obsidian 文件夹，BOOM，它就对 AI 友好了。", "source_url": "https://news.ycombinator.com/item?id=48675435"}
+  ],
+  "entities": ["OpenKnowledge", "inkeep/open-knowledge", "Inkeep", "Nick Gomez (engomez, CEO)", "Robert Tran (CTO)", "Obsidian", "Notion", "Claude Code", "Cursor", "Codex", "OpenCode", "MCP (Model Context Protocol)", "Y Combinator", "Khosla Ventures"],
+  "timeline_or_competitors": "时间线：Inkeep YC 出身，前融 $13M 种子轮，主业团队 AI agent（客户 Anthropic/Midjourney/PostHog）；2026-06-03 建仓；2026-06-25 Show HN（372 分）；2026-06-28 仍在高频 push（1.4k star）。竞品：Obsidian（本地 markdown + 重插件生态，但 UI/协作弱、AI 靠插件）、Notion（协作/WYSIWYG 强但闭源云锁定、文件非纯 markdown）、以及'直接拿 VS Code/Cursor 打开 markdown 文件夹'这个零成本替代。OpenKnowledge 站位：Notion 的编辑体验 + Obsidian 的纯 markdown 可移植 + 为 agent 重做的工具层。",
+  "reader_takeaway": "判断'AI-first'是真架构还是营销词，看一个问题：AI 是嫁接在面向人的数据结构上，还是数据结构本身就是为 agent 设计的。OpenKnowledge 选了后者（纯 markdown + MCP/skills 工具层 + git），代价是把'要不要把内容喂给专有模型'的决定权完全甩给用户。知识工作者真正要评估的不是它好不好看，而是'我的第二大脑要不要变成 agent 可读可写的对象'——这是个会改变你怎么记笔记的决定，不只是换个软件。",
+  "sources": [
+    "https://github.com/inkeep/open-knowledge",
+    "https://openknowledge.ai/docs/get-started/overview",
+    "https://news.ycombinator.com/item?id=48675435",
+    "https://hn.algolia.com/api/v1/items/48675435",
+    "https://api.github.com/repos/inkeep/open-knowledge",
+    "https://inkeep.com/blog/inkeep-funding-announcement",
+    "https://www.ycombinator.com/companies/inkeep",
+    "https://www.promptzone.com/elena_rodriguez_f2229f9e/openknowledge-open-source-ai-note-taking-tool-5gal"
+  ],
+  "uncertainties": [
+    "二手文 PromptZone 称它内置 embedded model + 用 Ollama/LM Studio 做语义搜索/auto-tag——与一手仓库、官网、作者本人说法矛盾，疑为 AI 代写失真稿，未采用其架构描述。",
+    "in-app 'Ask AI' chat 体验：官网/营销有展示，但 HN 首发时作者承认还没上，称'数天内'上线，到 2026-06-28 是否已上未单独二次确认。",
+    "star 数取自 2026-06-28 的 API 快照（1,382），项目仍在高频迭代，数字会变。",
+    "Inkeep 是否对 OpenKnowledge 有商业化/付费云计划未明确（目前仓库声称 free）。"
+  ]
+}

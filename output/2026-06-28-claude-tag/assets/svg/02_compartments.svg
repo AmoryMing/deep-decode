@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .title { font: 700 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 400 15px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .room { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .rname { font: 700 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .ritem { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .badge { fill: #B85A3A; }
+    .blabel { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .wall { stroke: #B85A3A; stroke-width: 2; stroke-dasharray: 6 5; }
+    .note { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="title" x="48" y="56">一堆被墙隔开、各管一摊的 Claude</text>
+  <text class="sub" x="48" y="82">scoped memory：每个频道一个隔间，权限与记忆都不互通</text>
+
+  <!-- 法务隔间 -->
+  <g>
+    <rect class="room" x="48" y="120" width="225" height="220" rx="14"/>
+    <rect class="badge" x="72" y="148" width="92" height="26" rx="5"/>
+    <text class="blabel" x="86" y="166">法务频道</text>
+    <text class="rname" x="72" y="208">这里的 Claude</text>
+    <text class="ritem" x="72" y="240">· 只见合同 / 法务库</text>
+    <text class="ritem" x="72" y="266">· 碰不到工程资源</text>
+    <text class="ritem" x="72" y="292">· 记忆只留在本间</text>
+    <text class="ritem" x="72" y="318">· 私有频道独立身份</text>
+  </g>
+
+  <!-- 销售隔间 -->
+  <g>
+    <rect class="room" x="288" y="120" width="225" height="220" rx="14"/>
+    <rect class="badge" x="312" y="148" width="92" height="26" rx="5"/>
+    <text class="blabel" x="326" y="166">销售频道</text>
+    <text class="rname" x="312" y="208">这里的 Claude</text>
+    <text class="ritem" x="312" y="240">· 只见 CRM / 客户数据</text>
+    <text class="ritem" x="312" y="266">· 学到的不渗到工程</text>
+    <text class="ritem" x="312" y="292">· 默认权限按频道调</text>
+    <text class="ritem" x="312" y="318">· 独立 token 上限</text>
+  </g>
+
+  <!-- 工程隔间 -->
+  <g>
+    <rect class="room" x="528" y="120" width="225" height="220" rx="14"/>
+    <rect class="badge" x="552" y="148" width="92" height="26" rx="5"/>
+    <text class="blabel" x="566" y="166">工程频道</text>
+    <text class="rname" x="552" y="208">这里的 Claude</text>
+    <text class="ritem" x="552" y="240">· 进指定代码库</text>
+    <text class="ritem" x="552" y="266">· 用授权的 API key</text>
+    <text class="ritem" x="552" y="292">· 装本频道的 skill</text>
+    <text class="ritem" x="552" y="318">· 销售记忆进不来</text>
+  </g>
+
+  <!-- 两道墙 -->
+  <line class="wall" x1="280.5" y1="120" x2="280.5" y2="340"/>
+  <line class="wall" x1="520.5" y1="120" x2="520.5" y2="340"/>
+
+  <!-- 底部对比说明 -->
+  <rect x="48" y="372" width="705" height="74" rx="12" fill="#2A241B"/>
+  <text x="72" y="408" font="600 16px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">不是一个无所不知的全局 AI</text>
+  <text class="note" x="72" y="432" fill="#D9CFBE">代价与好处是同一件事：能被精确约束，但你必须真的去配 —— 配错就是真出事</text>
+</svg>

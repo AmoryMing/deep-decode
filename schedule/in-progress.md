@@ -32,3 +32,9 @@ updated: 2026-05-14
 | ~~2026-05-15-ai-security-real-battle~~ | ~~decode~~ | ~~default~~ | ~~已移 published.md~~ | ~~AIHOT 自动选题 — 流水线完成 5/15~~ |
 | ~~2026-05-15-tencent-agent-memory-token-61~~ | ~~decode~~ | ~~default~~ | ~~已移 published.md~~ | ~~用户题 — 邮件+xhs 已发草稿，wechat 等白名单，podcast 处理中~~ |
 | ~~2026-05-15-figure-helix02-8hour-shift~~ | ~~decode~~ | ~~default~~ | ~~已移 published.md~~ | ~~用户题 — 邮件+xhs 已发草稿，wechat 等白名单，podcast 处理中~~ |
+| 2026-06-22-cloudflare-temporary-accounts | decode | default | 出图(卡:后端全挂) | 正文✓播客✓7张batch✓ 待出图 |
+| 2026-06-22-alibaba-zvec-vector-db | decode | default | 出图(卡:后端全挂) | 正文✓播客✓7张batch✓ 待出图 |
+| 2026-06-22-viktor-ai-employee-teams | decode | default | 出图(卡:后端全挂) | 正文✓播客✓8张batch✓ 待出图 |
+| 2026-06-22-openai-enterprise-spend-controls | decode | default | 出图(卡:后端全挂) | 正文✓播客✓7张batch✓ 待出图 |
+| 2026-06-22-vercel-eve-agent-framework | decode | default | 出图(卡:后端全挂) | 正文✓播客✓7张batch✓ 待出图 |
+| (2026-06-28 批次 10 篇) | decode | default/creative | 已移 published.md | 正文+DeepSeek润色✓，待出图/播客/分发，见 published.md「当前未完结」顶部 |

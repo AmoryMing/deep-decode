@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .axis { stroke: #C9BEA8; stroke-width: 1.5; }
+    .grid { stroke: #E4D9C6; stroke-width: 1; }
+    .bar-lo { fill: #D9CFBE; }
+    .bar-hi { fill: #B85A3A; }
+    .bar-t { font: 700 16px Inter, sans-serif; fill: #FFFFFF; }
+    .bar-t-dark { font: 700 15px Inter, sans-serif; fill: #2A241B; }
+    .cat { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sla { font: 500 12.5px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .legend-t { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .note { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .small { font: 400 12.5px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="44">那串吓人的数字，要看 SLA 卡多严</text>
+  <text class="desc" x="40" y="68">SLA = 服务承诺的速度下限。卡得越严，旧方案越吃力，DSpark 的相对优势被放大得越夸张</text>
+
+  <!-- legend -->
+  <rect class="bar-lo" x="500" y="86" width="18" height="14" rx="3"/>
+  <text class="legend-t" x="524" y="98">宽松 SLA</text>
+  <rect class="bar-hi" x="620" y="86" width="18" height="14" rx="3"/>
+  <text class="legend-t" x="644" y="98">严苛 SLA</text>
+
+  <!-- chart axis. baseline y=420, top y=130. max value ~700% -->
+  <line class="axis" x1="120" y1="420" x2="760" y2="420"/>
+  <line class="axis" x1="120" y1="130" x2="120" y2="420"/>
+  <!-- gridlines at 200/400/600 (scale: 700%->290px, so 1% = 0.4143px) -->
+  <line class="grid" x1="120" y1="337" x2="760" y2="337"/>
+  <text class="small" x="78" y="341">200%</text>
+  <line class="grid" x1="120" y1="254" x2="760" y2="254"/>
+  <text class="small" x="78" y="258">400%</text>
+  <line class="grid" x1="120" y1="171" x2="760" y2="171"/>
+  <text class="small" x="78" y="175">600%</text>
+  <text class="small" x="92" y="424">0</text>
+
+  <!-- Group 1: V4-Flash. 51% -> h=21; 661% -> h=274 -->
+  <text class="cat" x="190" y="452">V4-Flash</text>
+  <rect class="bar-lo" x="170" y="399" width="70" height="21" rx="3"/>
+  <text class="bar-t-dark" x="180" y="392">+51%</text>
+  <text class="sla" x="170" y="470">80 字/秒</text>
+  <rect class="bar-hi" x="260" y="146" width="70" height="274" rx="3"/>
+  <text class="bar-t" x="268" y="290" transform="rotate(-90 268 290)">+661%</text>
+  <text class="sla" x="258" y="470">120 字/秒</text>
+
+  <!-- Group 2: V4-Pro. 52% -> h=22; 406% -> h=168 -->
+  <text class="cat" x="500" y="452">V4-Pro</text>
+  <rect class="bar-lo" x="480" y="398" width="70" height="22" rx="3"/>
+  <text class="bar-t-dark" x="490" y="391">+52%</text>
+  <text class="sla" x="480" y="470">35 字/秒</text>
+  <rect class="bar-hi" x="570" y="252" width="70" height="168" rx="3"/>
+  <text class="bar-t" x="578" y="345" transform="rotate(-90 578 345)">+406%</text>
+  <text class="sla" x="568" y="470">50 字/秒</text>
+
+  <!-- takeaway -->
+  <text class="note" x="40" y="498">翻成人话：正常负载下约 +50%。四五百、六百多只出现在临界点 —— 不是 DSpark 神了，是旧基线先崩、分母塌了</text>
+</svg>

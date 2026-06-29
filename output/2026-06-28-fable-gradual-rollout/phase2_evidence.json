@@ -1,0 +1,41 @@
+{
+  "verified": true,
+  "core_judgment": "Fable 5 的‘逐步放开’不是产能问题的委婉说法，而是一个被拆成两半的发布：能力(Mythos-class)和准入(谁拿到、什么时候、出问题就退回 Opus 4.8)被解耦。Anthropic 第一次把‘把模型变安全’做成一个可计费、可降级、可被政府一键叫停的产品层，而不是训练阶段的一次性对齐。",
+  "counter_or_blindspot": "官方口径里‘逐步’主要被解释为产能与需求不确定(‘demand very high and difficult to predict’)，但 6 月 12 日被美国政府出口指令三天内叫停证明：真正的不确定来自安全护栏会不会被攻破——亚马逊安全团队向白宫报了一个越狱漏洞，‘1000 小时无通用越狱’的红队结论被现实推翻。盲区是：Fable 的安全分类器触发条件对用户不可见、不可申诉，且‘退回 Opus 4.8’意味着用户付了 Fable 的钱却拿到弱模型的答案。",
+  "key_facts": [
+    {"claim": "模型 id 为 claude-fable-5，2026 年 6 月 9 日在 Claude API、AWS、Bedrock、Google Cloud(Vertex)、Microsoft Foundry 全面可用", "evidence": "官方平台文档明确列出 model id 与可用平台；‘Claude Fable 5 is generally available on the Claude API, Claude Platform on AWS, Amazon Bedrock, Google Cloud, and Microsoft Foundry’", "source_url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"},
+    {"claim": "Fable 5 是 Mythos 级能力被‘做安全’后的公开版；Mythos 5 不带安全分类器，只在 Project Glasswing 限量发给获批客户(及少数生物研究者)", "evidence": "‘a Mythos-class model that we’ve made safe for general use’；‘Claude Mythos 5 is restricted to Glasswing partners (with cyber safeguards lifted) and soon to select biology researchers’；docs: Mythos‘Shares Claude Fable 5’s capabilities without the safety classifiers’", "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"},
+    {"claim": "安全机制：Fable 内置分类器，命中高风险话题(网络安全、生物、化学、蒸馏)时自动改由 Claude Opus 4.8 应答；平均触发率不到 5% 的 session", "evidence": "‘the model blocks responses and falls back to Claude Opus 4.8’；‘more than 95% of Fable sessions involve no fallback at all’；docs: 拒答返回 stop_reason: \"refusal\" 的 HTTP 200，并报告是哪个分类器拒的", "source_url": "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/"},
+    {"claim": "准入按计划分层：API 与按量付费 Enterprise 当天即全量；Pro/Max/Team/席位制 Enterprise 在 6/9–6/22 免费包含，6/23 起需用 usage credits，待产能恢复再回归订阅标配", "evidence": "‘On the Claude API and consumption-based Enterprise plans, Fable 5 is fully available from today.’；‘June 9–22…included…at no extra cost’；‘Using it after that will require usage credits’；‘we aim to restore Fable 5 as a standard part of subscription plans’", "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"},
+    {"claim": "GitHub Copilot 侧 6/9 起开放给 Copilot Pro+/Max/Business/Enterprise，明示‘逐步放开’，企业/商业管理员需手动开策略(默认关)", "evidence": "‘Claude Fable 5 will be available to Copilot Pro+, Max, Business, and Enterprise users’；‘Rollout will be gradual. Check back soon if you don’t see it yet.’；‘The policy is off by default.’", "source_url": "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/"},
+    {"claim": "6 月 12 日(发布后三天)Fable 5 与 Mythos 5 被美国政府出口指令叫停；亚马逊安全团队发现并向白宫上报一个越狱漏洞触发此举", "evidence": "‘access to Claude Fable 5…was suspended on June 12, 2026 under a US government directive’；‘Amazon’s security team…flagged a jailbreak in Fable 5 to the White House’；GitHub editor’s note: ‘access to Claude Fable 5 has been suspended across all GitHub Copilot experiences’", "source_url": "https://www.infoq.com/news/2026/06/claude-5-release/"},
+    {"claim": "定价 $10/百万输入 token、$50/百万输出 token，约为 Mythos Preview 的不到一半；1M token 上下文，单次最多 128k 输出", "evidence": "docs: ‘$10 per million input tokens and $50 per million output tokens’；‘a 1M token context window by default, and up to 128k output tokens per request’", "source_url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"},
+    {"claim": "能力定位：SWE-Bench Pro 80.3%(Opus 4.8 为 69.2%、GPT 5.5 为 58.6%)；FrontierCode 29.3%(Opus 4.8 13.4%、GPT 5.5 5.7%)", "evidence": "the-decoder 引官方数据：‘Fable 5: 80.3 percent’ on SWE-Bench Pro；‘Fable 5: 29.3 percent’ on FrontierCode", "source_url": "https://the-decoder.com/anthropic-releases-claude-fable-5-and-mythos-5-with-major-gains-in-coding-and-science/"},
+    {"claim": "工程侧的硬变化：拒答不算计费(refused before output)，重试到别的模型可拿 fallback credit 退回 prompt-cache 成本；adaptive thinking 常开、原始思维链不返回；Fable/Mythos 30 天数据留存且不支持零留存", "evidence": "docs: ‘You are not billed for a request that is refused before any output is generated’；‘fallback credit refunds the prompt-cache cost’；‘Adaptive thinking is the only thinking mode’；‘The raw chain of thought is never returned’；‘30-day data retention and are not available under zero data retention’", "source_url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"}
+  ],
+  "quotes": [
+    {"en_or_zh": "Today we're launching Claude Fable 5: a Mythos-class model that we've made safe for general use.", "zh_translation": "今天我们发布 Claude Fable 5：一个被我们‘做安全’、可供大众使用的 Mythos 级模型。", "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"},
+    {"en_or_zh": "We expect demand for Fable 5 to be very high, and difficult to predict.", "zh_translation": "我们预计 Fable 5 的需求会非常高，且难以预测。", "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"},
+    {"en_or_zh": "we ran an external bug bounty that produced no universal jailbreaks in over 1,000 hours of testing.", "zh_translation": "我们办了一场外部漏洞悬赏，超过 1000 小时测试里没有产生任何通用越狱。", "source_url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"},
+    {"en_or_zh": "When Claude Fable 5 declines a request, the Messages API returns stop_reason: \"refusal\" as a successful HTTP 200 response, not an error.", "zh_translation": "当 Fable 5 拒绝一个请求时，Messages API 会以成功的 HTTP 200 返回 stop_reason: \"refusal\"，而不是报错。", "source_url": "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5"},
+    {"en_or_zh": "the Admin's hope now is that Anthropic remediates the safety issue, the export control is lifted, and Fable goes back into general release.", "zh_translation": "(白宫 AI 顾问 David Sacks)政府现在的希望是 Anthropic 修好这个安全问题、出口管制解除、Fable 回到普遍发布状态。", "source_url": "https://www.infoq.com/news/2026/06/claude-5-release/"}
+  ],
+  "entities": ["Claude Fable 5 (claude-fable-5)", "Claude Mythos 5 (claude-mythos-5)", "Claude Opus 4.8", "Claude Mythos Preview", "Project Glasswing", "Anthropic", "GitHub Copilot", "AWS Bedrock", "David Sacks (白宫 AI 顾问)", "Amazon 安全团队"],
+  "timeline_or_competitors": "时间线：6/9 Fable 5 在 API/三大云全面可用 + 订阅计划免费包含开始 + GitHub Copilot 逐步放开；6/12 被美国政府出口指令叫停(亚马逊上报越狱漏洞)；6/22 订阅免费窗口原定结束；6/23 起原定改为需 usage credits。竞品对照(官方基准)：SWE-Bench Pro Fable 80.3% vs Opus 4.8 69.2% vs GPT 5.5 58.6%；FrontierCode Fable 29.3% vs Opus 4.8 13.4% vs GPT 5.5 5.7%。",
+  "reader_takeaway": "做集成的别再把模型当一个静态 endpoint：Fable 5 把‘会拒答’‘会降级到 Opus 4.8’‘拒答不计费、重试退缓存费’变成你必须写代码处理的三类新状态。买能力的人要意识到你买的是‘能力 + 一层可被供应商和监管随时收紧的准入’，5% 的降级率和一纸出口指令都不在你的 SLA 里。",
+  "sources": [
+    "https://www.anthropic.com/news/claude-fable-5-mythos-5",
+    "https://platform.claude.com/docs/en/about-claude/models/introducing-claude-fable-5-and-claude-mythos-5",
+    "https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/",
+    "https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/",
+    "https://the-decoder.com/anthropic-releases-claude-fable-5-and-mythos-5-with-major-gains-in-coding-and-science/",
+    "https://www.infoq.com/news/2026/06/claude-5-release/",
+    "https://www.cnbc.com/2026/06/09/anthropic-mythos-claude-fable-5.html"
+  ],
+  "uncertainties": [
+    "6/23 之后订阅计划是否真的恢复为标配、或仍只在 credits 制——发布时为前瞻表述，6/12 叫停后实际执行状态未在检索范围内确认。",
+    "美国政府出口指令的确切文本、法律依据与适用范围未公开，仅有 InfoQ/白宫顾问表态的二手描述。",
+    "‘触发率不到 5%’为官方自报口径，触发的具体话题分布与误伤率无独立第三方验证。",
+    "叫停的持续时长与是否已恢复(截至检索)未确证，标记为进行中事件。"
+  ]
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="470" viewBox="0 0 800 470">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 15px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .cardh { font: 700 17px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .li { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .accentbig { font: 800 19px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="470"/>
+
+  <text class="h1" x="40" y="54">门槛塌了：从"用工具"到"造工具"</text>
+  <text class="sub" x="40" y="82">造一个插件、生成一段动效、调一个 shader，都只要一句话</text>
+
+  <!-- 左卡：过去 -->
+  <rect class="card" x="40" y="110" width="300" height="230" rx="14"/>
+  <rect x="40" y="110" width="300" height="44" rx="14" fill="#EFE6D7"/>
+  <rect x="40" y="140" width="300" height="14" fill="#EFE6D7"/>
+  <text class="cardh" x="62" y="139" fill="#8A7E6C">过去 · 工具的使用者</text>
+  <text class="li" x="62" y="186">造插件：得会写代码</text>
+  <text class="li" x="62" y="216">写 shader：得懂显卡程序</text>
+  <text class="li" x="62" y="246">做动效：切去 After Effects</text>
+  <text class="li" x="62" y="276">出图：切去 Midjourney</text>
+  <text class="li" x="62" y="312" fill="#8A7E6C">稀缺的是"会做"</text>
+
+  <!-- 中箭头 -->
+  <line x1="352" y1="225" x2="446" y2="225" stroke="#B85A3A" stroke-width="3"/>
+  <polygon points="446,215 466,225 446,235" fill="#B85A3A"/>
+  <text x="409" y="208" text-anchor="middle" font="600 13px 'PingFang SC', Inter, sans-serif" fill="#B85A3A">一句大白话</text>
+
+  <!-- 右卡：现在 -->
+  <rect class="card" x="478" y="110" width="282" height="230" rx="14"/>
+  <rect x="478" y="110" width="282" height="44" rx="14" fill="#B85A3A"/>
+  <rect x="478" y="140" width="282" height="14" fill="#B85A3A"/>
+  <text class="cardh" x="500" y="139" fill="#F7F1E8">现在 · 工具的创造者</text>
+  <text class="li" x="500" y="186">说人话：agent 现造插件</text>
+  <text class="li" x="500" y="216">描述或甩图：生成 shader</text>
+  <text class="li" x="500" y="246">动效活在画布，可复用</text>
+  <text class="li" x="500" y="276">不会写一行代码也能造工具</text>
+  <text class="accentbig" x="500" y="314">稀缺的变成"知道该做成什么样"</text>
+
+  <!-- 底部判断条 -->
+  <rect x="40" y="364" width="720" height="56" rx="10" fill="#2A241B"/>
+  <text x="62" y="390" font="600 15px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">门槛拉低了，挤进来的人变多——留在牌桌上的人凭什么？</text>
+  <text x="62" y="412" font="700 15px 'PingFang SC', Inter, sans-serif" fill="#E0A07F">答案只能是判断力。</text>
+
+  <text class="footer" x="40" y="448">Mercari 设计师：设计师的角色从"工具的使用者"变成"工具的创造者"</text>
+</svg>

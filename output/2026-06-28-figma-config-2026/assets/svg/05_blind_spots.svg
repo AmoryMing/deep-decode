@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 15px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .qn { font: 800 26px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .qh { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .qd { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="54">灯光很亮，但有四块地方是暗的</text>
+  <text class="sub" x="40" y="82">免费 beta 的甜头里，最该问的恰恰没人公布</text>
+
+  <!-- 卡1 钱 -->
+  <rect class="card" x="40" y="106" width="350" height="150" rx="14"/>
+  <text class="qn" x="62" y="148">01</text>
+  <text class="qh" x="110" y="138">钱：AI 积分怎么算</text>
+  <text class="qd" x="110" y="162">造 shader、造插件、跑生成工作流，</text>
+  <text class="qd" x="110" y="182">GA 后都要消耗积分。每次扣多少、</text>
+  <text class="qd" x="110" y="202">各套餐分多少额度——一个数字都没公布。</text>
+  <text class="qd" x="62" y="236" fill="#8A7E6C">依赖养成后，定价才会落下来</text>
+
+  <!-- 卡2 付费墙 -->
+  <rect class="card" x="410" y="106" width="350" height="150" rx="14"/>
+  <text class="qn" x="432" y="148">02</text>
+  <text class="qh" x="480" y="138">付费墙：能力锁在贵座位后</text>
+  <text class="qd" x="480" y="162">几乎所有"创造"能力都锁在</text>
+  <text class="qd" x="480" y="182">Professional 及以上的 Full seat 后面，</text>
+  <text class="qd" x="480" y="202">教育、政府、Starter 版被明确排除。</text>
+  <text class="qd" x="432" y="236" fill="#8A7E6C">最性感的能力绑最贵的座位</text>
+
+  <!-- 卡3 模型 -->
+  <rect class="card" x="40" y="270" width="350" height="150" rx="14"/>
+  <text class="qn" x="62" y="312">03</text>
+  <text class="qh" x="110" y="302">模型：agent 跑在谁家上</text>
+  <text class="qd" x="110" y="326">这关系到你的设计数据怎么被处理、</text>
+  <text class="qd" x="110" y="346">生成有多快。但底层用的是谁家的</text>
+  <text class="qd" x="110" y="366">模型，Figma 没披露。</text>
+  <text class="qd" x="62" y="400" fill="#8A7E6C">数据与速度都悬在这上面</text>
+
+  <!-- 卡4 数字 -->
+  <rect class="card" x="410" y="270" width="350" height="150" rx="14"/>
+  <text class="qn" x="432" y="312">04</text>
+  <text class="qh" x="480" y="302">数字：95% 财富 500 强存疑</text>
+  <text class="qd" x="480" y="326">"8000+ 到场、95% 财富 500 强在用"</text>
+  <text class="qd" x="480" y="346">只在单一一家二手媒体出现，官方和</text>
+  <text class="qd" x="480" y="366">其他信源都没交叉印证。</text>
+  <text class="qd" x="432" y="400" fill="#8A7E6C">当氛围参考，别当事实引用</text>
+
+  <text class="footer" x="40" y="452">写作铁律：必须有判断，判断必须有证据；没交叉印证的数字单独标注存疑</text>
+  <text class="footer" x="40" y="476">来源：explainX 等二手报道对定价缺口、付费墙、岗位影响的质疑</text>
+</svg>

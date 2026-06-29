@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .ink { fill: #2A241B; }
+    .accent { fill: #B85A3A; }
+    .tagtext { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .title { font: 800 40px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .subtitle { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .chip { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .chiprect { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="accent" x="50" y="46" width="178" height="28" rx="5"/>
+  <text class="tagtext" x="64" y="65">AI 设计工具 · 深度拆解</text>
+
+  <text class="title" x="50" y="150">代码成了设计的颜料</text>
+  <text class="title accent" x="50" y="202">Figma Config 2026</text>
+
+  <text class="subtitle" x="50" y="246">一口气发六样东西，指向同一个动作——</text>
+  <text class="subtitle" x="50" y="274">把散落在各处的创作环节，全部收回一块画布</text>
+
+  <!-- 六个能力 chips -->
+  <g>
+    <rect class="chiprect" x="50" y="318" width="150" height="44" rx="8"/>
+    <text class="chip" x="68" y="345">Code Layers</text>
+    <rect class="chiprect" x="214" y="318" width="150" height="44" rx="8"/>
+    <text class="chip" x="232" y="345">Figma Motion</text>
+    <rect class="chiprect" x="378" y="318" width="150" height="44" rx="8"/>
+    <text class="chip" x="396" y="345">shader 着色器</text>
+    <rect class="chiprect" x="50" y="376" width="150" height="44" rx="8"/>
+    <text class="chip" x="68" y="403">生成式插件</text>
+    <rect class="chiprect" x="214" y="376" width="150" height="44" rx="8"/>
+    <text class="chip" x="232" y="403">Weave 出图</text>
+    <rect class="chiprect" x="378" y="376" width="150" height="44" rx="8"/>
+    <text class="chip" x="396" y="403">Figma agent</text>
+  </g>
+
+  <!-- 右侧引语块 -->
+  <g>
+    <rect x="562" y="318" width="188" height="102" rx="10" fill="#2A241B"/>
+    <text x="582" y="352" font="600 16px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">代码不是设计的</text>
+    <text x="582" y="378" font="600 16px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">对立面，代码是</text>
+    <text x="582" y="404" font="700 16px 'PingFang SC', Inter, sans-serif" fill="#E0A07F">设计的材料</text>
+  </g>
+
+  <text class="footer" x="50" y="466">来源：Figma 官方博客 · Config 2026 Recap | 6 月 23–25 日 旧金山 Moscone</text>
+  <text class="footer" x="50" y="486">主讲：Dylan Field —— 功能是注脚，这句话才是真正的发布物</text>
+</svg>

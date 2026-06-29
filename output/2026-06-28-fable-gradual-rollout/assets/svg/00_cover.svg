@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .title { font: 800 44px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .title-accent { font: 800 44px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .subtitle { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .axis-label { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .axis-val { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .card-full { fill: #B85A3A; }
+    .card-gate { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .card-txt-w { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #FFFFFF; }
+    .card-txt-d { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="48" y="44" width="170" height="28" rx="5"/>
+  <text class="tag" x="64" y="63">AI 模型发布拆解</text>
+
+  <text class="title" x="48" y="138">Fable 5 的“逐步放开”</text>
+  <text class="title-accent" x="48" y="192">放开的不是能力，是准入</text>
+
+  <text class="subtitle" x="48" y="232">同一份权重，能力一次给满；那层安全壳的</text>
+  <text class="subtitle" x="48" y="258">松紧，才是 Anthropic 真正在调的旋钮</text>
+
+  <!-- 两条轴对比 -->
+  <!-- 能力轴：满血 -->
+  <text class="axis-label" x="48" y="318">能力</text>
+  <rect class="card-full" x="120" y="300" width="280" height="28" rx="5"/>
+  <text class="card-txt-w" x="138" y="319">一次给满 · 无 waitlist</text>
+  <text class="axis-val" x="412" y="319">满血</text>
+
+  <!-- 准入轴：捏着 -->
+  <text class="axis-label" x="48" y="368">准入</text>
+  <rect class="card-gate" x="120" y="350" width="120" height="28" rx="5"/>
+  <text class="card-txt-d" x="136" y="369">分层放量</text>
+  <rect class="card-gate" x="250" y="350" width="120" height="28" rx="5"/>
+  <text class="card-txt-d" x="266" y="369">随时收回</text>
+  <text class="axis-val" x="382" y="369">慢慢放</text>
+
+  <text class="footer" x="48" y="436">来源：Anthropic 官方发布 · Claude Platform Docs · GitHub Changelog · TechCrunch · InfoQ</text>
+  <text class="footer" x="48" y="458">2026-06-09 发布 → 06-12 被一纸出口指令叫停 → 三天，从所有平台撤干净</text>
+</svg>

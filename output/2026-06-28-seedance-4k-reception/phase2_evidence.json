@@ -1,0 +1,59 @@
+{
+  "verified": true,
+  "core_judgment": "Seedance 的『4K』是字节官方说法且是原生 4K（3840×2160 + 10-bit），但它出场的时间点暴露了真相：原生 4K 是在 6 月 23 日 FORCE 大会上与 Seedance 2.5 同日发布的，而此时字节早在 4 月 7 日就已被阿里『欢乐马』掀下 Artificial Analysis 视频榜榜首。所以 4K 不是登顶的庆功，而是一次战场切换——从『跑分赢一次』转向『把生产管线占死』。口碑的两极正卡在这条裂缝上：赞的人看到音画同步、多镜头一致性、导演级可控（一站式生产力）；骂的人看到语音错乱、字幕乱码、开门动作抽卡（仍是概率游戏）。4K 提高了交付下限，没消除随机性。",
+  "counter_or_blindspot": "1) Seedance 2.0 的原生分辨率上限说法在信源间打架：官方发布时上限 720p，4 月 21 日才加原生 1080p，6 月 23 日才加原生 4K；但 morphic / 部分营销页把『2.0 4K』当成早就存在的能力，cuty.ai 甚至说 2.0 把上限降到 720p，人人都是产品经理一篇还冒出『8K 上春晚』（其余所有信源都不支持，疑似单点错误）。2) Seedance 2.5 的 30 秒稳定性、50 参考保真度、+20% 遵循度提升都只有官方口径，截至 6 月底无任何独立盲测。3) 4K 推理成本、定价均未公开。4) 与迪士尼/华纳/派拉蒙/Netflix 的版权纠纷（C2PA 水印、角色检测、暂停海外推送）说明能力越强、与好莱坞的冲突越大，海外可用性存疑。",
+  "key_facts": [
+    {"claim": "Seedance 是字节跳动 Seed 团队的视频生成模型，已接入即梦AI、豆包、火山引擎", "evidence": "官方发布稿『Seedance 2.0 已上线即梦AI、豆包等平台』；模型 ID doubao-seedance-2-0-260128", "source_url": "https://seed.bytedance.com/zh/blog/official-launch-of-seedance-2-0"},
+    {"claim": "Seedance 2.0 发布时间线：2 月 7 日内测、2 月 10 日即梦上线、2 月 12 日全平台、4 月 14 日 API 全开放", "evidence": "实在智能时间线整理：『2026年2月7日开启内测…2月12日全平台正式发布…4月14日API全面开放』", "source_url": "https://www.ai-indeed.com/encyclopedia/20214.html"},
+    {"claim": "Seedance 2.0 原生分辨率上限随时间提升：发布时 480p/720p → 4 月 21 日加原生 1080p（比 720p 贵约 1.5 倍）→ 6 月 23 日加原生 4K", "evidence": "腾讯/新浪 4 月 21 日：『Seedance 2.0 现已支持 1080P…该能力为模型原生能力』；搜狐：『刚刚！Seedance 2.0 上线 1080P，比 720P 贵约 1.5 倍』", "source_url": "https://news.qq.com/rain/a/20260421A05LS100"},
+    {"claim": "6 月 23 日火山引擎 FORCE 大会上，Seedance 2.0 正式支持原生 4K（3840×2160）+ 10-bit 高位深，API 同日向公众开放", "evidence": "快科技/搜狐：『据火山引擎发文，Seedance 2.0 迎来重要升级，正式支持原生 4K 高分辨率视频生成。即日起，火山引擎已面向公众开放相应 API 接口』；官方表述『率先支持 4K 分辨率下的 10-bit 高位深原生直出』，强调『原生 4K…非后期算法放大』", "source_url": "https://www.sohu.com/a/1040620788_163726"},
+    {"claim": "同日 FORCE 大会发布 Seedance 2.5：单段原生 30 秒直出、最多 50 个全模态参考素材、原生 4K、+约 20% 提示词遵循度、区域级局部编辑，预计 7 月初公测", "evidence": "网易/AIbase/TheNextWeb：『Seedance 2.5 实现了 30 秒单段原生视频直出、最多支持 50 个全模态素材联合生成、保持画面一致性的局部编辑三项能力提升』；TheNextWeb 补充 10-bit 色深、+20% prompt adherence、3D 白模预览", "source_url": "https://thenextweb.com/news/bytedance-seedance-2-5-ai-video-4k-30-seconds"},
+    {"claim": "Seedance 2.5 参考素材上限 50，前代 Seedance 2.0 约 12-15 个（9 图 + 3 视频 + 3 音频）；Veo 3.1 仅 3 张参考图", "evidence": "TheNextWeb：『up to 50 multimodal inputs…up from 12 in its predecessor』『exceeds Veo's reference input capacity, accepting 50 inputs to Veo's three』；atlascloud 中文表列 2.0『十余个（最多 9 图、3 视频、3 音频）』", "source_url": "https://www.atlascloud.ai/zh/blog/guides/seedance-2-5-vs-seedance-2"},
+    {"claim": "Seedance 2.0 自 2 月起一度登顶 Artificial Analysis Video Arena（含音频赛道 Elo 约 1219，官方/媒体口径约 1269），霸榜至 4 月初", "evidence": "Artificial Analysis 榜单页：『Dreamina Seedance 2.0 720p currently leads among Text to Video models with audio output…Elo score of 1219』；cuty.ai：『从 2026 年 2 月发布到 4 月，模型一直占据 Artificial Analysis Video Arena 第一』", "source_url": "https://artificialanalysis.ai/video/leaderboard/text-to-video?open-weights=true"},
+    {"claim": "4 月 7 日前后，神秘模型 HappyHorse-1.0（欢乐马，疑出阿里淘天/张迪团队）空降 Artificial Analysis 视频榜榜首，T2V Elo 约 1347（媒体另有 1375/1389 口径），领先 Seedance 2.0 约 74-115 分，图生视频也第一", "evidence": "36氪：『一个代号为 HappyHorse-1.0 的神秘视频生成模型空降榜首…领先第二名高达 74 分』『断层式碾压』；东方财富：『4 月 7 日…HappyHorse-1.0 超越 Seedance 2.0 登顶』；atlascloud 繁体版：T2V Elo 1389、I2V Elo 1416，领先约 115 分", "source_url": "https://www.36kr.com/p/3757999597257220"},
+    {"claim": "正面口碑核心：音画同步（双分支扩散架构联合生成）、多镜头/多角色一致性、导演级可控、首次可用率官方自评 90%+、8+ 种语言音素级口型同步", "evidence": "人人都是产品经理：『从玩具级演示推向了可规模化、可盈利的工业生产力阶段』；AI内参：『在角色一致性与原生音效同步上实现了显著突破，解决了 AI 视频长久以来的“整容”与“默片”痛点』；cuty.ai：『首次可用率 90%+（ByteDance 自评）』", "source_url": "https://www.neican.ai/insights/-seedance-20--20260210084006141-0/"},
+    {"claim": "负面口碑核心：语音错乱、画面文本乱码、特定动作（如开门）反复抽卡，仍是『概率游戏』", "evidence": "36氪实测标题《字节 Seedance 2.0 实测：语音错乱、字幕乱码，AI 视频仍是概率游戏》；正文『语音就会以非常不自然的高语速把整段文本读出来』『画面之中的文本乱码更是客观存在的』『Seedance 2.0 对于开门这个动作的处理总是奇奇怪怪的』", "source_url": "https://36kr.com/p/3676072215163399"},
+    {"claim": "定价/门槛：即梦会员最低 69 元/月，免费用户每秒 8 积分、每天约 15 秒免费额度；个人创作者约每 10 秒 3 美元（人人都是产品经理估算）", "evidence": "36氪/知乎：『会员用户（至少 69 元）可直接使用…每秒耗费 8 积分…每天最多免费生成 15 秒』", "source_url": "https://www.36kr.com/p/3676072215163399"},
+    {"claim": "版权冲突：Seedance 2.0 因迪士尼、华纳、派拉蒙、Netflix 的停止侵权函（含 Tom Cruise×Brad Pitt 病毒式 deepfake、MPA/SAG-AFTRA 抗议）被迫加 C2PA 水印、角色检测，3 月中暂停海外推送，3 月底经 CapCut 恢复；2.5 在美上线时间未定", "evidence": "TheNextWeb：『following cease-and-desist letters from Disney, Warner Bros Discovery, Paramount, and Netflix…paused the global rollout in mid-March…with face-blocking filters, C2PA watermarks, and copyrighted character detection in place』", "source_url": "https://thenextweb.com/news/bytedance-seedance-2-5-ai-video-4k-30-seconds"},
+    {"claim": "Seedance 2.5 同步推出 AI 版权商业化平台，率先与周星驰等授权 IP 合作，让创作者基于授权电影模板做衍生内容", "evidence": "HK01/PCM：『同步推出全新 AI 版权商业化平台，让创作者可基于授权电影模板制作衍生内容，平台更率先与周星驰等授权内容合作』", "source_url": "https://www.pcmarket.com.hk/bytedance-seedance-2-5-ai-video-release/"},
+    {"claim": "字节分发护城河：CapCut（剪映海外）月活约 4 亿，从生成到剪辑到分发垂直整合", "evidence": "TheNextWeb：『the distribution through CapCut's 400 million monthly active users, and the vertical integration from generation to editing to sharing』", "source_url": "https://thenextweb.com/news/bytedance-seedance-2-5-ai-video-4k-30-seconds"}
+  ],
+  "quotes": [
+    {"en_or_zh": "字节 Seedance 2.0 实测：语音错乱、字幕乱码，AI 视频仍是概率游戏", "zh_translation": "（中文原标题，36氪实测）", "source_url": "https://36kr.com/p/3676072215163399"},
+    {"en_or_zh": "从玩具级演示推向了可规模化、可盈利的工业生产力阶段", "zh_translation": "（中文原文，人人都是产品经理）", "source_url": "https://www.woshipm.com/ai/6346089.html"},
+    {"en_or_zh": "The model generates at 4K natively rather than upscaling from a lower resolution, a distinction that matters for professional production pipelines.", "zh_translation": "这个模型是原生在 4K 上生成，而不是从低分辨率升采样——这个区别对专业制作管线很重要。", "source_url": "https://thenextweb.com/news/bytedance-seedance-2-5-ai-video-4k-30-seconds"},
+    {"en_or_zh": "every feature that makes the model more capable also raises the stakes of that unresolved conflict.", "zh_translation": "每一项让模型更强的功能，都同时抬高了这场（与好莱坞）未了之争的赌注。", "source_url": "https://thenextweb.com/news/bytedance-seedance-2-5-ai-video-4k-30-seconds"},
+    {"en_or_zh": "断层式碾压…领先第二名高达 74 分", "zh_translation": "（中文原文，36氪，指欢乐马登顶）", "source_url": "https://www.36kr.com/p/3757999597257220"}
+  ],
+  "entities": ["Seedance（字节跳动 Seed 团队视频生成模型）", "即梦 Dreamina", "豆包 Doubao", "火山引擎 Volcano Engine", "CapCut/剪映", "Seedance 2.0", "Seedance 2.5", "HappyHorse-1.0 欢乐马（阿里系疑似）", "Veo 3.1（Google）", "Sora（OpenAI，已关停）", "Kling（快手）", "Artificial Analysis Video Arena", "梁汝波（字节 CEO）", "谭待（火山引擎）", "影视飓风 潘天鸿 Tim"],
+  "timeline_or_competitors": "时间线：2/7 Seedance 2.0 内测 → 2/12 全平台 → 2-4 月霸榜 Artificial Analysis（Elo~1219 含音频/~1269 媒体口径）→ 4/7 欢乐马 HappyHorse-1.0 空降榜首掀翻 2.0（T2V Elo~1347-1389，领先 74-115 分）→ 4/14 API 全开放 → 4/21 加原生 1080p → 6/23 FORCE 大会：2.0 加原生 4K+10bit & 2.5 发布（30s/50 参考/+20% 遵循/7 月初公测）。竞品对照：Veo 3.1（原生 4K+音频，但参考图仅 3）、Sora（3 月关停）、Kling（综合工作流第一，本仓库 2026-05-25 篇）、Seedance（音频/参考量/导演级可控见长）。",
+  "reader_takeaway": "对设计师/视频创作者：4K 把『能不能交付到大屏/院线/广告』的下限拉高了，纹理、皮肤、织物边缘在 4K 上原生就有；但它不解决随机性——语音、口播文本、特定动作仍要抽卡，4K 只是让抽中的那条更值钱。真正的红利在『一站式管线』：脚本进，带音、带角色一致、带多镜头的 4K 序列出，中间少切工具、少外包。选模型别只看跑分（榜首一个月就易主），看它能不能稳定塞进你现有的出片流程；2.5/4K 上线后先用 50 参考素材锁风格、用区域级编辑救废镜，把抽卡变成微调。版权红线要当真：用授权模板，别拿好莱坞角色玩 deepfake。",
+  "sources": [
+    "https://seed.bytedance.com/zh/blog/official-launch-of-seedance-2-0",
+    "https://seed.bytedance.com/seedance2_0",
+    "https://thenextweb.com/news/bytedance-seedance-2-5-ai-video-4k-30-seconds",
+    "https://www.atlascloud.ai/zh/blog/guides/seedance-2-5-vs-seedance-2",
+    "https://www.atlascloud.ai/zh-TW/blog/guides/happy-horse-1-vs-seedance-2",
+    "https://36kr.com/p/3676072215163399",
+    "https://www.36kr.com/p/3757999597257220",
+    "https://www.woshipm.com/ai/6346089.html",
+    "https://www.neican.ai/insights/-seedance-20--20260210084006141-0/",
+    "https://www.cuty.ai/zh-CN/article/models/seedance-2-review",
+    "https://news.qq.com/rain/a/20260421A05LS100",
+    "https://finance.sina.com.cn/tech/shenji/2026-04-21/doc-inhvfumn5020253.shtml",
+    "https://www.sohu.com/a/1040620788_163726",
+    "https://www.ai-indeed.com/encyclopedia/20214.html",
+    "https://artificialanalysis.ai/video/leaderboard/text-to-video?open-weights=true",
+    "https://www.163.com/dy/article/L03V9AOC0519WCJG.html",
+    "https://news.aibase.com/zh/news/29094",
+    "https://www.pcmarket.com.hk/bytedance-seedance-2-5-ai-video-release/",
+    "https://wap.eastmoney.com/a/202604093699873626.html"
+  ],
+  "uncertainties": [
+    "Seedance 2.0 原生分辨率上限的演进在信源间有冲突：官方 2 月发布上限为 720p、4 月 21 日加 1080p、6 月 23 日加 4K；但 morphic 等营销页把『2.0 4K』当作早已存在，cuty.ai 称 2.0 上限是 720p，人人都是产品经理一篇出现『8K 上春晚』（其余信源均不支持，按单点错误处理，文中不采用）。",
+    "Seedance 2.5 的 30 秒稳定性、50 参考保真度、+20% 提示词遵循度均为官方口径，截至 2026-06-28 无独立第三方盲测验证。",
+    "HappyHorse-1.0 的 Elo 具体数值在媒体间不一致（1347 / 1375 / 1389，T2V），且其归属（阿里淘天/张迪团队）为媒体推测未经官方确认；文中以区间表述。",
+    "Artificial Analysis 含音频赛道 Seedance 2.0 Elo 官方/媒体多写 1269，而榜单页当前显示 1219，可能为时点差异；文中标注口径。",
+    "Seedance 2.5 在美国/海外的上线时间未公布；4K 的推理成本与正式定价未公开。"
+  ]
+}

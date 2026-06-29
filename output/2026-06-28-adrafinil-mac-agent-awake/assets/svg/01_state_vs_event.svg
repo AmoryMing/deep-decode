@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .col-title { font: 700 18px 'PingFang SC', Inter, sans-serif; }
+    .label { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .box-old { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 2; }
+    .box-new { fill: #FBF0EA; stroke: #B85A3A; stroke-width: 2; }
+    .bar-on { fill: #B85A3A; }
+    .bar-off { fill: #E4DAC8; }
+    .tick { font: 400 11px 'PingFang SC', Inter, sans-serif; fill: #9A8C74; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+
+  <text class="h1" x="40" y="44">老工具是"状态"，Adrafinil 是"事件的副产品"</text>
+  <text class="desc" x="40" y="70">同一根时间轴，醒着的方式相反：一个默认醒、一个默认睡</text>
+
+  <!-- 左：常开型 -->
+  <rect class="box-old" x="40" y="100" width="350" height="320" rx="12"/>
+  <text class="col-title" x="60" y="134" fill="#6B5E4A">常开型 · caffeinate / Amphetamine</text>
+  <text class="label" x="60" y="164">醒着 = 一种状态</text>
+  <text class="small" x="60" y="186">你手动进入，得记得手动退出</text>
+
+  <!-- 时间轴：全程醒 -->
+  <text class="small" x="60" y="230">一整天的醒睡：</text>
+  <rect class="bar-on" x="60" y="242" width="310" height="36" rx="6"/>
+  <text x="215" y="265" text-anchor="middle" style="font:600 13px 'PingFang SC',Inter" fill="#F7F1E8">全程强制醒着</text>
+  <text class="tick" x="60" y="296">开机</text>
+  <text class="tick" x="330" y="296">你忘了关</text>
+
+  <text class="label" x="60" y="340">代价</text>
+  <text class="small" x="60" y="362">• 对人是负担：你得记得关</text>
+  <text class="small" x="60" y="386">• 对电池是浪费：没活儿也醒着</text>
+
+  <!-- 右：按需型 -->
+  <rect class="box-new" x="410" y="100" width="350" height="320" rx="12"/>
+  <text class="col-title" x="430" y="134" fill="#B85A3A">按需型 · Adrafinil</text>
+  <text class="label" x="430" y="164">醒着 = 一件事的副产品</text>
+  <text class="small" x="430" y="186">绑"这一轮在不在干活"，不绑"开没开"</text>
+
+  <!-- 时间轴：只在 turn 亮 -->
+  <text class="small" x="430" y="230">一整天的醒睡：</text>
+  <rect class="bar-off" x="430" y="242" width="310" height="36" rx="6"/>
+  <rect class="bar-on" x="446" y="242" width="60" height="36" rx="6"/>
+  <rect class="bar-on" x="560" y="242" width="44" height="36" rx="6"/>
+  <rect class="bar-on" x="660" y="242" width="70" height="36" rx="6"/>
+  <text class="tick" x="446" y="296">turn</text>
+  <text class="tick" x="560" y="296">turn</text>
+  <text class="tick" x="660" y="296">turn</text>
+  <text class="small" x="430" y="320" fill="#B85A3A">亮 = agent 这一轮在跑；其余正常睡</text>
+
+  <text class="label" x="430" y="358">默认值是反的</text>
+  <text class="small" x="430" y="380">默认睡着，只在该醒的瞬间醒</text>
+  <text class="small" x="430" y="404">合盖走人跑长任务的人，要的是这个</text>
+</svg>

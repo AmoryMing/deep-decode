@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 24px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .q-box { fill: #FFFFFF; stroke: #2A241B; stroke-width: 2; }
+    .q-t { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .q-d { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .yes-box { fill: #FFFFFF; stroke: #3E8E5A; stroke-width: 2; }
+    .no-box { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2; }
+    .free-box { fill: #F0E9DC; stroke: #9A8E7C; stroke-width: 2; }
+    .res-t { font: 700 17px 'PingFang SC', Inter, sans-serif; }
+    .res-d { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #4A4339; }
+    .edge { font: 600 14px 'PingFang SC', Inter, sans-serif; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="48">掏不掏这 68 块：先做一道分类题</text>
+  <text class="desc" x="40" y="74">最稳的上手路径：先用免费版 Turbo 跑你最高频的真实任务三次，看它要不要你兜底。</text>
+
+  <!-- 顶部问题框 -->
+  <rect class="q-box" x="230" y="100" width="340" height="74" rx="10"/>
+  <text class="q-t" x="400" y="132" text-anchor="middle">你要它干的活，属于哪一类？</text>
+  <text class="q-d" x="400" y="158" text-anchor="middle">结构化可闭环 还是 要碰本地客户端／对事实负责</text>
+
+  <!-- 分叉线 -->
+  <line x1="400" y1="174" x2="400" y2="196" stroke="#2A241B" stroke-width="2"/>
+  <line x1="180" y1="196" x2="620" y2="196" stroke="#2A241B" stroke-width="2"/>
+  <line x1="180" y1="196" x2="180" y2="224" stroke="#3E8E5A" stroke-width="2"/>
+  <line x1="620" y1="196" x2="620" y2="224" stroke="#B85A3A" stroke-width="2"/>
+  <polygon points="174,222 180,232 186,222" fill="#3E8E5A"/>
+  <polygon points="614,222 620,232 626,222" fill="#B85A3A"/>
+
+  <text class="edge" x="180" y="216" text-anchor="middle" fill="#3E8E5A">结构化、可闭环、能验证</text>
+  <text class="edge" x="620" y="216" text-anchor="middle" fill="#B85A3A">要操作本地、要对事实负责</text>
+
+  <!-- 左结果：买 -->
+  <rect class="yes-box" x="50" y="236" width="300" height="150" rx="10"/>
+  <text class="res-t" x="72" y="270" fill="#3E8E5A">划算，可以买</text>
+  <text class="res-d" x="72" y="300">批量归档、抓数据填表、定时采集</text>
+  <text class="res-d" x="72" y="324">推送、网页流程、起草 PPT 与框架</text>
+  <text class="res-d" x="72" y="356" fill="#3E8E5A">越高频越回本，重度用户直接上 200／500</text>
+
+  <!-- 右结果：别放手 -->
+  <rect class="no-box" x="450" y="236" width="300" height="150" rx="10"/>
+  <text class="res-t" x="472" y="270" fill="#B85A3A">现在别指望它放手干</text>
+  <text class="res-d" x="472" y="300">它能起草，但你得守着核事实</text>
+  <text class="res-d" x="472" y="324">补配图、下结论</text>
+  <text class="res-d" x="472" y="356" fill="#B85A3A">当「把信息组织成型」的工具，别当同事</text>
+
+  <!-- 底部省钱铁律 -->
+  <rect class="free-box" x="50" y="408" width="700" height="74" rx="10"/>
+  <text class="res-t" x="72" y="440" fill="#9A8E7C">省钱铁律</text>
+  <text class="res-d" x="72" y="468">你要的是做小红书图文视频？那是免费版手机端的 Seedream 和 Seedance，跟专业版没关系，别买错</text>
+
+  <text class="footer" x="40" y="508">跑三次：稳，再升级买额度和优先权；要你全程盯着，省下这 68 块，等 Pro 的真实差距被测清楚再说</text>
+</svg>

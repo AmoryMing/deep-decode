@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .title { font: 800 44px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .subtitle { font: 500 18px 'PingFang SC', Inter, sans-serif; fill: #6B6155; }
+    .card { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .verdict { font: 700 22px 'PingFang SC', Inter, sans-serif; }
+    .vsrc { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #9A8E7C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <rect class="tag-bg" x="40" y="38" width="156" height="28" rx="5"/>
+  <text class="tag" x="56" y="57">内容工厂 · 深度拆解</text>
+
+  <text class="title" x="40" y="128">豆包专业版怎么用</text>
+  <text class="title" x="40" y="180">才不亏这 68 块</text>
+
+  <text class="subtitle" x="40" y="216">同一天、同一家媒体，给了三个相反的答案</text>
+
+  <!-- 三张相反结论卡 -->
+  <g>
+    <rect class="card" x="40" y="252" width="226" height="110" rx="10"/>
+    <text class="verdict" x="56" y="300" fill="#3E8E5A">能干活的 Agent</text>
+    <text class="vsrc" x="56" y="328">36kr 实测一</text>
+    <text class="vsrc" x="56" y="348">对标 Claude Opus</text>
+  </g>
+  <g>
+    <rect class="card" x="287" y="252" width="226" height="110" rx="10"/>
+    <text class="verdict" x="303" y="300" fill="#C99A2E">三星半</text>
+    <text class="vsrc" x="303" y="328">36kr 实测二</text>
+    <text class="vsrc" x="303" y="348">327 张图 3 分钟归档</text>
+  </g>
+  <g>
+    <rect class="card" x="534" y="252" width="226" height="110" rx="10"/>
+    <text class="verdict" x="550" y="300" fill="#B85A3A">3 个没干成</text>
+    <text class="vsrc" x="550" y="328">36kr 实测三</text>
+    <text class="vsrc" x="550" y="348">4 个办公任务</text>
+  </g>
+
+  <line x1="40" y1="404" x2="760" y2="404" stroke="#D9CFBE" stroke-width="1.5"/>
+  <text class="footer" x="40" y="438">不是谁测错了。它在某半边接近交付级，在另半边接连掉链子。</text>
+  <text class="footer" x="40" y="462">那条分界线，正是你掏钱前根本没看清的东西。</text>
+</svg>

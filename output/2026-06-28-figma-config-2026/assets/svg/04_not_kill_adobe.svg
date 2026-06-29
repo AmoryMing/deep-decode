@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 800 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 500 15px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .th { font: 700 14px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+    .feat { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .vs { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #5A5044; }
+    .ploy { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+    .footer { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="54">不是"杀死 Adobe"，是堵上你离开的理由</text>
+  <text class="sub" x="40" y="82">没有一样正面强攻，全是"你为什么要走？这里也有"</text>
+
+  <!-- 表头 -->
+  <text class="th" x="60" y="124">Figma 这次的发布</text>
+  <text class="th" x="318" y="124">对标的是谁</text>
+  <text class="th" x="540" y="124">打法</text>
+  <line x1="40" y1="134" x2="760" y2="134" stroke="#D9CFBE" stroke-width="1.5"/>
+
+  <!-- 行1 -->
+  <rect x="40" y="146" width="720" height="58" rx="9" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.2"/>
+  <text class="feat" x="60" y="181">Code Layers</text>
+  <text class="vs" x="318" y="181">Cursor / Lovable</text>
+  <text class="ploy" x="540" y="174">代码探索留在能协作的画布</text>
+  <text class="ploy" x="540" y="192">而不是闷在一人的聊天框</text>
+
+  <!-- 行2 -->
+  <rect x="40" y="212" width="720" height="58" rx="9" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.2"/>
+  <text class="feat" x="60" y="247">Figma Motion</text>
+  <text class="vs" x="318" y="247">After Effects</text>
+  <text class="ploy" x="540" y="240">产品动效不用再切出去</text>
+  <text class="ploy" x="540" y="258">AE 的合成特效仍在另一量级</text>
+
+  <!-- 行3 -->
+  <rect x="40" y="278" width="720" height="58" rx="9" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.2"/>
+  <text class="feat" x="60" y="313">Weave 画布内出图</text>
+  <text class="vs" x="318" y="313">Midjourney</text>
+  <text class="ploy" x="540" y="306">出图修图不用切去外部工具</text>
+  <text class="ploy" x="540" y="324">节点式串成一条流水线</text>
+
+  <!-- 行4 -->
+  <rect x="40" y="344" width="720" height="58" rx="9" fill="#FFFFFF" stroke="#D9CFBE" stroke-width="1.2"/>
+  <text class="feat" x="60" y="379">shader 着色器</text>
+  <text class="vs" x="318" y="379">独立 shader 编辑器</text>
+  <text class="ploy" x="540" y="372">一句话或一张图就生成</text>
+  <text class="ploy" x="540" y="390">参数化，画布上当场拖调</text>
+
+  <!-- 底部结论 -->
+  <rect x="40" y="416" width="720" height="44" rx="9" fill="#B85A3A"/>
+  <text x="60" y="444" font="700 15px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">Adobe 守着印刷/摄影/剪辑/插画——Figma 抢的是你来回切换的那些瞬间</text>
+
+  <text class="footer" x="40" y="486">Blossom Agard：与其说取代 Adobe，不如说把你切换工具的理由都吞了进来</text>
+</svg>

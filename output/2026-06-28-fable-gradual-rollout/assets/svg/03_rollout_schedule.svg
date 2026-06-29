@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .lane-label { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .lane-bg { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.2; }
+    .full { fill: #B85A3A; }
+    .free { fill: #E8C9B8; }
+    .paid { fill: #8A7E6C; }
+    .gradual { fill: #D9CFBE; }
+    .seg-txt-w { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #FFFFFF; }
+    .seg-txt-d { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .date { font: 600 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .tick { stroke: #D9CFBE; stroke-width: 1; stroke-dasharray: 3 3; }
+    .note { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #8A7E6C; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">“逐步”是一张排期表，不是技术限制</text>
+  <text class="desc" x="40" y="68">能力 6/9 当天全量；付费可控的渠道先给满，免费吃流量的订阅渠道留口子慢慢开</text>
+
+  <!-- 时间轴刻度 -->
+  <text class="date" x="200" y="100">6/9 发布</text>
+  <text class="date" x="430" y="100">6/23</text>
+  <text class="date" x="640" y="100">产能恢复后</text>
+  <line class="tick" x1="200" y1="108" x2="200" y2="430"/>
+  <line class="tick" x1="430" y1="108" x2="430" y2="430"/>
+
+  <!-- Lane 1: API / 按量 Enterprise -->
+  <text class="lane-label" x="40" y="148">API / 按量 Enterprise</text>
+  <rect class="lane-bg" x="200" y="128" width="540" height="36" rx="6"/>
+  <rect class="full" x="200" y="128" width="540" height="36" rx="6"/>
+  <text class="seg-txt-w" x="430" y="151" text-anchor="middle">当天全量 · 没有阶梯</text>
+
+  <!-- Lane 2: 订阅 (Pro/Max/Team) -->
+  <text class="lane-label" x="40" y="208">订阅 Pro / Max / Team</text>
+  <rect class="lane-bg" x="200" y="188" width="540" height="36" rx="6"/>
+  <rect class="free" x="200" y="188" width="230" height="36" rx="6"/>
+  <text class="seg-txt-d" x="315" y="211" text-anchor="middle">免费包含</text>
+  <rect class="paid" x="430" y="188" width="310" height="36"/>
+  <text class="seg-txt-w" x="585" y="211" text-anchor="middle">改扣 usage credits</text>
+
+  <!-- Lane 3: GitHub Copilot -->
+  <text class="lane-label" x="40" y="268">GitHub Copilot</text>
+  <rect class="lane-bg" x="200" y="248" width="540" height="36" rx="6"/>
+  <rect class="gradual" x="200" y="248" width="540" height="36" rx="6"/>
+  <text class="seg-txt-d" x="430" y="271" text-anchor="middle">逐步放量 · 默认关 · 管理员手动开</text>
+
+  <!-- 解读条 -->
+  <rect class="lane-bg" x="40" y="320" width="700" height="68" rx="10"/>
+  <text class="lane-label" x="60" y="348">官方理由：需求很高且难以预测</text>
+  <text class="desc" x="60" y="372">用价格信号把不可控的免费需求，压成可计费、可调度的需求——这只是台面上的一半</text>
+
+  <text class="note" x="40" y="430">真正用途要等三天后那次叫停才暴露：分层、可计费、默认关，等于装了一个随时能拽下来的总闸</text>
+</svg>

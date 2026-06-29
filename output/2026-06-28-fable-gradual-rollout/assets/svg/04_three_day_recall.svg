@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .col-title { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .box-claim { fill: #FFFFFF; stroke: #8A7E6C; stroke-width: 2; }
+    .box-real { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2.5; }
+    .bignum { font: 800 40px Inter, 'PingFang SC', sans-serif; fill: #8A7E6C; }
+    .bignum-r { font: 800 40px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .unit { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .vs { font: 800 20px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .arrow { stroke: #B85A3A; stroke-width: 3; fill: none; }
+    .punch { font: 700 17px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .punch-line { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .switch-bg { fill: #2A241B; }
+    .switch-txt { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">三天后被叫停，才暴露“逐步”的真用途</text>
+  <text class="desc" x="40" y="68">发布当天的红队结论，被现实推翻只用了三天——可回收，才是这套机制的底层目的</text>
+
+  <!-- 左：发布时的说辞 -->
+  <rect class="box-claim" x="40" y="100" width="320" height="150" rx="12"/>
+  <text class="col-title" x="60" y="132">发布当天 · 说辞</text>
+  <text class="bignum" x="60" y="186">1000+</text>
+  <text class="unit" x="200" y="178">小时</text>
+  <text class="small" x="200" y="200">外部漏洞悬赏</text>
+  <text class="small" x="60" y="226">结论：没有产生任何通用越狱</text>
+
+  <!-- 右：三天后的现实 -->
+  <rect class="box-real" x="440" y="100" width="320" height="150" rx="12"/>
+  <text class="col-title" x="460" y="132" fill="#B85A3A">三天后 · 现实</text>
+  <text class="bignum-r" x="460" y="186">3</text>
+  <text class="unit" x="500" y="178">天</text>
+  <text class="small" x="500" y="200">一个越狱漏洞</text>
+  <text class="small" x="460" y="226">亚马逊上报白宫，出口指令叫停</text>
+
+  <!-- 中间 VS / 箭头 -->
+  <text class="vs" x="400" y="182" text-anchor="middle">推翻</text>
+  <path class="arrow" d="M 365 200 L 435 200"/>
+  <polygon points="433,194 443,200 433,206" fill="#B85A3A"/>
+
+  <!-- 总闸 -->
+  <rect class="switch-bg" x="40" y="290" width="720" height="56" rx="10"/>
+  <text class="switch-txt" x="60" y="324">关键设计：分层 · 可计费 · 管理员手动开 · 默认关 = 一个随时能拽下来的总闸</text>
+
+  <!-- 撤干净 -->
+  <rect class="box" x="40" y="368" width="350" height="100" rx="12"/>
+  <text class="punch" x="60" y="402">监管要叫停</text>
+  <text class="punch-line" x="60" y="430">三天内从所有平台撤干净</text>
+  <text class="small" x="60" y="454">GitHub：所有 Copilot 场景访问已暂停</text>
+
+  <rect class="box" x="410" y="368" width="350" height="100" rx="12"/>
+  <text class="punch" x="430" y="402">逐步放开的价值</text>
+  <text class="punch-line" x="430" y="430">不在“放”，在“随时能收回”</text>
+  <text class="small" x="430" y="454">发布不再是一个动作，是能反悔的状态</text>
+</svg>

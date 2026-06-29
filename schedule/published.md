@@ -1,7 +1,7 @@
 ---
 title: 已发布进度表
 type: schedule
-updated: 2026-05-29
+updated: 2026-06-11
 ---
 
 # 已发布 — 多平台发布进度
@@ -14,6 +14,20 @@ updated: 2026-05-29
 
 | slug | 套件 | 生产完成 | 邮件 | 公众号 | 小红书 | 视频号 | 抖音 | 复盘 |
 |---|---|---|---|---|---|---|---|---|
+| 2026-06-28-claude-tag | default | 2026-06-28(正文+DeepSeek润色✓, 6信源/2一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-adrafinil-mac-agent-awake | default | 2026-06-28(正文+DeepSeek润色✓, 6信源/2一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-deepseek-dspark | default | 2026-06-28(正文+DeepSeek润色✓, 8信源/2一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-codex-5-6 | default | 2026-06-28(正文+DeepSeek润色✓, 12信源/5一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-fable-gradual-rollout | default | 2026-06-28(正文+DeepSeek润色✓, 7信源/3一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-meituan-longcat-vitabench-2 | default | 2026-06-28(正文+DeepSeek润色✓, 10信源/4一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-openknowledge-ai-notes | default | 2026-06-28(正文+DeepSeek润色✓, 8信源/5一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-figma-config-2026 | creative | 2026-06-28(正文+DeepSeek润色✓, 8信源/3一手·配图✓·动画视频✓「网页+豆包音频，待录屏」；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-doubao-pro-usage-playbook | default | 2026-06-28(正文+DeepSeek润色✓, 15信源/1一手·配图✓；待播客/分发) | | | | | | 待写 |
+| 2026-06-28-seedance-4k-reception | creative | 2026-06-28(正文+DeepSeek润色✓, 19信源/3一手·配图✓·动画视频✓「网页+豆包音频，待录屏」；待播客/分发) | | | | | | 待写 |
+| 2026-06-12-agent-autonomy-dial | default | 2026-06-12(HTML+5图SVG, 7信源综述) | 2026-06-12(draft, 5图CID) | HTML就绪·待IP白名单推送 | 2026-06-12 | — | — | 2026-06-12 |
+| 2026-06-08-spacex-ipo-roadshow | default | 2026-06-08(四件套:HTML+7图+播客10:03+视频4:5) | 2026-06-11 | 2026-06-11 | 2026-06-10 | 2026-06-11 | video.mp4就绪未发 | 待写 |
+| 2026-06-08-anthropic-agi-rsi | default | 2026-06-08(HTML+7图) | 2026-06-08(draft, 7图CID) | 2026-06-08(draft, 7图全上传) | | | | 待写 |
+| 2026-06-08-nvidia-ai-pc-chip | default | 2026-06-08(HTML+7图) | 2026-06-08(draft, 7图CID) | 2026-06-08(draft, 7图全上传) | | | | 待写 |
 | 2026-06-04-anthropic-ipo-alphabet-80b | default | 2026-06-04 | 2026-06-04(draft, 4图CID gpt-image) | | 排期06-05(4/h) | | | 待写 |
 | 2026-06-04-microsoft-self-model-vs-anthropic | default | 2026-06-04 | 2026-06-04(draft, 5图CID gpt-image) | | 06-05 11:00 | | | 待写 |
 | 2026-06-04-microsoft-openai-split | default | 2026-06-04 | 2026-06-04(draft, 5图CID gpt-image) | | 06-05 09:15 | | | 待写 |
@@ -105,7 +119,7 @@ updated: 2026-05-29
 | 2026-05-08-agents-need-control-flow | default | 2026-05-08 | | 2026-05-11(draft) | 06-04 09:45 | | | wiki/published/ |
 | 2026-04-30-microinteraction-ai-era | default | 2026-04-30 | | 2026-05-11(draft) | 06-04 10:00 | | | wiki/published/ |
 | 2026-04-30-claude-creative-connectors | default | 2026-04-30 | | 2026-05-11(draft) | 草稿就绪(本地7图) | | | wiki/published/ |
-| 2026-04-30-amap-personal-map-skill | default | 2026-04-30 | | 2026-05-11(draft) | 草稿就绪(本地8图) | | | wiki/published/ |
+| 2026-04-30-amap-personal-map-skill | default | 2026-04-30 | | 2026-05-11(draft) | 2026-06-12 | | | wiki/published/ |
 | _（迁移期：早期文章发布日期未细分到平台，统一只填一列"已发"日期，留作历史；新文章按本表逐列填写）_ | | | | | | | | |
 
 ## 历史（迁移自 wiki/topic-queue.md "已完成 最近 10 篇"，平台日期未细分）

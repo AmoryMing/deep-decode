@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A8170; }
+    .own-t { font: 700 16px 'PingFang SC', Inter, sans-serif; }
+    .label { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6B6356; }
+    .own { fill: #FBEFE9; stroke: #B85A3A; stroke-width: 2; }
+    .notown { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .chip-yes { fill: #B85A3A; }
+    .chip-no { fill: #D9CFBE; }
+    .chip-t { font: 600 12px 'PingFang SC', Inter, sans-serif; }
+  </style>
+  <rect class="bg" width="800" height="480"/>
+  <text class="h1" x="40" y="44">叫 "AI-native"，AI 却不在它自己手上</text>
+  <text class="desc" x="40" y="66">官方明说：平台不自带模型。你拥有了软件壳，没拥有那个智能</text>
+
+  <!-- 你拥有的 -->
+  <rect class="own" x="40" y="92" width="350" height="330" rx="12"/>
+  <rect class="chip-yes" x="60" y="112" width="118" height="28" rx="5"/>
+  <text class="chip-t" x="74" y="131" fill="#F7F1E8">你真正拥有</text>
+
+  <text class="label" x="60" y="172">编辑器外壳</text>
+  <text class="small" x="60" y="193">GPL-3.0 开源，几乎全 TypeScript</text>
+
+  <text class="label" x="60" y="232">你的 markdown 文件</text>
+  <text class="small" x="60" y="253">躺在自己硬盘，纯文本，谁都锁不住</text>
+
+  <text class="label" x="60" y="292">git 版本与同步</text>
+  <text class="small" x="60" y="313">想搬走随时能搬</text>
+
+  <rect x="60" y="346" width="310" height="56" rx="8" fill="#F2E2D8"/>
+  <text class="small" x="76" y="370" fill="#B85A3A">"本地优先" 在 文件 这一层</text>
+  <text class="small" x="76" y="390" fill="#B85A3A">是兑现的</text>
+
+  <!-- 你不拥有的 -->
+  <rect class="notown" x="410" y="92" width="350" height="330" rx="12"/>
+  <rect class="chip-no" x="430" y="112" width="118" height="28" rx="5"/>
+  <text class="chip-t" x="444" y="131" fill="#6B6356">交还给别人</text>
+
+  <text class="label" x="430" y="172">出力的模型</text>
+  <text class="small" x="430" y="193">Claude / Codex / Cursor，都是闭源</text>
+
+  <text class="label" x="430" y="232">真正的智力活</text>
+  <text class="small" x="430" y="253">总结、改写、维护，全靠外部 agent</text>
+
+  <text class="label" x="430" y="292">你的内容去向</text>
+  <text class="small" x="430" y="313">一旦让 AI 读，就出本地进厂商服务器</text>
+
+  <rect x="430" y="346" width="310" height="56" rx="8" fill="#F2EADC"/>
+  <text class="small" x="446" y="370" fill="#6B6356">"本地优先" 对 AI 能力</text>
+  <text class="small" x="446" y="390" fill="#6B6356">是有条件的——要换能接本地模型的 harness</text>
+
+  <text class="desc" x="40" y="456">HN 评论戳破："把'开源'用在一个绑死专有 AI 服务的东西上，真该付出点代价。"</text>
+</svg>

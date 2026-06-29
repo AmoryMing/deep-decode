@@ -1,0 +1,41 @@
+{
+  "verified": true,
+  "core_judgment": "Claude Tag 表面是『把 Claude 拉进 Slack 频道』，真正的产品突破是『智能体身份』——把权限控制从『这个用户能干什么』改写成『这个智能体在这个隔间里能干什么』。这一步把 AI 从工具变成了组织里有独立账号、独立记忆、独立审计的『同事』，企业管控逻辑随之被迫重写。",
+  "counter_or_blindspot": "把 AI 给独立身份，等于在公司里多开了一个永远在线、会主动监听（ambient 模式）全频道的账号；scoped memory 听起来干净，但记忆边界、prompt 注入、过度授权、以及对 Anthropic 的『上下文锁定』都没有被验证过。65% 这个数字是 Anthropic 自家产品团队的数字，不能外推到普通企业。",
+  "key_facts": [
+    {"claim": "Claude Tag 于 2026 年 6 月 23 日发布，面向 Claude Enterprise 和 Team 客户开放 beta。", "evidence": "Anthropic 官方发布页：Beta access for Claude Enterprise and Team customers starting immediately；多家媒体（Fortune/TechCrunch）同日报道，日期 2026-06-23。", "source_url": "https://www.anthropic.com/news/introducing-claude-tag"},
+    {"claim": "在一个 Slack 频道里，所有人面对的是同一个 Claude（单一身份），任何人都能看到它在做什么、接着上一个人的活继续推。", "evidence": "官方：'Within a given Slack channel, there's one Claude that interacts with everyone.'", "source_url": "https://www.anthropic.com/news/introducing-claude-tag"},
+    {"claim": "Claude Tag 替代原有的 Claude in Slack 应用，30 天内可迁移；运行在 Opus 4.8 上。", "evidence": "Anthropic 发布页：Replaces existing Claude in Slack app; migration available within 30 days. Works with Opus 4.8.", "source_url": "https://www.anthropic.com/news/introducing-claude-tag"},
+    {"claim": "Anthropic 自家产品团队 65% 的代码由内部版 Claude Tag 产出。", "evidence": "官方：'65% of our product team's code is created by our internal version of Claude Tag.' Fortune 转述为『approves and incorporates 65% of code changes』。", "source_url": "https://www.anthropic.com/news/introducing-claude-tag"},
+    {"claim": "Claude Tag 引入『智能体身份』模型：Claude 拥有独立于个人用户的身份、权限、工具访问，由管理员配置，可工作区级默认 + 频道级调整。", "evidence": "Help Net Security：Claude Tag operates with its own independent identity separate from individual user accounts；管理员配置默认权限/工具/连接，按频道调整。", "source_url": "https://www.helpnetsecurity.com/2026/06/24/anthropic-claude-tag-agent-identity-model/"},
+    {"claim": "记忆按频道隔离：销售频道的 Claude 不能访问工程数据，也不和工程实例共享记忆；私有频道维持独立身份，公开频道共享工作区级身份。", "evidence": "Help Net Security + 官方：sales Claudes won't access engineering data or share memories with engineering instances；private channels maintain separate identities.", "source_url": "https://www.anthropic.com/news/introducing-claude-tag"},
+    {"claim": "因为 Claude 以自己的身份行动，它的操作会出现在所连服务的审计日志里；所有任务、记忆更新、网络请求都被记录；管理员可通过停用身份一键撤销全部权限。", "evidence": "Help Net Security：actions appear in connected services' audit logs；All Claude actions are logged；revoke all permissions by disabling Claude's identity.", "source_url": "https://www.helpnetsecurity.com/2026/06/24/anthropic-claude-tag-agent-identity-model/"},
+    {"claim": "ambient（环境/主动）模式开启后，Claude 会持续跟随频道与所连工具，主动提示它认为你需要知道的信息、跟进没解决的线程。", "evidence": "官方 + TechCrunch：proactively keep you updated；flagging important updates and following up on unresolved threads.", "source_url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"},
+    {"claim": "管理员可设月度 token 消费上限（组织级 + 频道级），并查看显示所有 Claude 操作及发起人的活动日志。", "evidence": "Anthropic 发布页：set monthly token spend limits (organizational and per-channel), view activity logs showing all Claude actions and requestors.", "source_url": "https://www.anthropic.com/news/introducing-claude-tag"},
+    {"claim": "竞争背景：微软、Snowflake、Databricks、Glean 都在搭建『组织上下文层』；Ramp 2026 年 5 月 AI Index 显示 Anthropic 企业采用率 34.4%，略高于 OpenAI 的 32.3%。", "evidence": "TechCrunch 指出 broader enterprise AI land grab；Fortune 引 Ramp May 2026 AI Index：34.4% vs 32.3%.", "source_url": "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/"}
+  ],
+  "quotes": [
+    {"en_or_zh": "Agent identity replaces the question 'what can this user do?' with 'what can this agent do in this compartment?'", "zh_translation": "智能体身份把『这个用户能干什么？』这个问题，换成了『这个智能体在这个隔间里能干什么？』", "source_url": "https://www.helpnetsecurity.com/2026/06/24/anthropic-claude-tag-agent-identity-model/"},
+    {"en_or_zh": "Claude Code, Cowork, and chat are very single-player, whereas Claude Tag is built to be interactive and multiplayer.", "zh_translation": "Claude Code、Cowork、聊天都非常『单机』，而 Claude Tag 一开始就是为互动、为多人在线而造的。", "source_url": "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/"},
+    {"en_or_zh": "When Claude Tag works in a channel, everyone can see it, and everyone can jump in, engage, and steer it in the right direction.", "zh_translation": "Claude Tag 在频道里干活时，所有人都看得见，所有人都能插进来、参与、把它往对的方向掰。", "source_url": "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/"},
+    {"en_or_zh": "working with a real colleague — one that can produce work in public view, with far greater context and understanding than before", "zh_translation": "像和一个真同事共事——一个能在所有人眼前产出工作、且比以往有更多上下文与理解的同事", "source_url": "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/"}
+  ],
+  "entities": ["Anthropic", "Claude Tag", "Claude in Slack（被替代的旧应用）", "Claude Enterprise / Claude Team", "Opus 4.8", "Cat Wu（Head of Product, Claude Code & Cowork）", "Noah Zweben（Anthropic Claude Code 团队）", "ambient mode（环境/主动模式）", "agent identity（智能体身份）", "scoped memory（频道隔离记忆）"],
+  "timeline_or_competitors": "2026-06-23 发布 beta；替代 2025 年的 Claude in Slack 应用。竞品同方向：Microsoft（Copilot/组织上下文）、Glean、Snowflake、Databricks 都在搭组织上下文层；OpenAI 企业采用率 32.3% 对 Anthropic 34.4%（Ramp 2026-05）。",
+  "reader_takeaway": "如果你在管 IT/安全/平台：要把 AI 当成一类新的『非人账号』来治理——身份、权限、审计、消费上限，而不是当一个聊天框。如果你是普通团队成员：你和同事现在共用一个会记事、会主动插话的 Claude，输入会变成团队公共上下文。先想清楚哪些频道给它、给到什么权限，再 @它。",
+  "sources": [
+    "https://www.anthropic.com/news/introducing-claude-tag",
+    "https://support.claude.com/en/articles/15594475-what-is-claude-tag",
+    "https://www.helpnetsecurity.com/2026/06/24/anthropic-claude-tag-agent-identity-model/",
+    "https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/",
+    "https://fortune.com/2026/06/23/anthropic-claude-tag-virtual-employee-tool-slack/",
+    "https://www.geeky-gadgets.com/claude-tag-data-privacy-risks/",
+    "https://news.ycombinator.com/item?id=48648039"
+  ],
+  "uncertainties": [
+    "TechRadar『making AI multiplayer』那篇正文抓取失败（429/被截断），相关多人协作引语改用 Fortune 的 Cat Wu 原话替代，已交叉验证。",
+    "65% 是 Anthropic 自报的内部数字，无第三方核验；官方原文为『created by』，Fortune 转述为『approves and incorporates』，两种措辞略有出入，正文按官方原文。",
+    "具体定价/token 单价未披露，只确认了管理员可设月度 token 上限。",
+    "『同名物』检索中无与 AI 生态更相关的其他 claude-tag（GitHub 上 anthropics/claude-tag-plugins 是其配套插件市场，非独立物），故锁定 Anthropic Claude Tag。"
+  ]
+}

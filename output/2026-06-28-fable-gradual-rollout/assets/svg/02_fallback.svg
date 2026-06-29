@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .box-fable { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2.5; }
+    .box-opus { fill: #EFE7D8; stroke: #8A7E6C; stroke-width: 2; }
+    .label { font: 700 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #5A5043; }
+    .mono { font: 500 13px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .arrow-ok { stroke: #8A7E6C; stroke-width: 2.5; fill: none; }
+    .arrow-risk { stroke: #B85A3A; stroke-width: 3; fill: none; }
+    .pct { font: 800 30px Inter, 'PingFang SC', sans-serif; fill: #2A241B; }
+    .pct-r { font: 800 30px Inter, 'PingFang SC', sans-serif; fill: #B85A3A; }
+    .state-num { font: 800 18px Inter; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="44">那层壳怎么动手：命中高风险就退回 Opus 4.8</text>
+  <text class="desc" x="40" y="68">Fable 处理请求时分类器盯着话题；触发降级后，换一个更弱的脑子来答，而你付的是 Fable 的钱</text>
+
+  <!-- 请求入口 -->
+  <rect class="box" x="40" y="110" width="130" height="60" rx="10"/>
+  <text class="label" x="105" y="140" text-anchor="middle">用户请求</text>
+  <text class="small" x="105" y="160" text-anchor="middle">发给 Fable 5</text>
+
+  <!-- 分类器 -->
+  <rect class="box-fable" x="230" y="100" width="160" height="80" rx="10"/>
+  <text class="label" x="310" y="134" text-anchor="middle">安全分类器</text>
+  <text class="small" x="310" y="156" text-anchor="middle">盯着话题判风险</text>
+  <line class="arrow-ok" x1="170" y1="140" x2="226" y2="140"/>
+  <polygon points="224,135 234,140 224,145" fill="#8A7E6C"/>
+
+  <!-- 安全路径 -->
+  <rect class="box" x="460" y="100" width="160" height="80" rx="10"/>
+  <text class="label" x="540" y="134" text-anchor="middle">Fable 5 自己答</text>
+  <text class="small" x="540" y="156" text-anchor="middle">满血能力</text>
+  <line class="arrow-ok" x1="390" y1="140" x2="456" y2="140"/>
+  <polygon points="454,135 464,140 454,145" fill="#8A7E6C"/>
+  <rect class="box" x="650" y="110" width="110" height="60" rx="8" fill="#EFE7D8" stroke="none"/>
+  <text class="pct" x="705" y="146" text-anchor="middle">95%+</text>
+  <text class="small" x="705" y="164" text-anchor="middle">不触发</text>
+
+  <!-- 风险路径 -->
+  <path class="arrow-risk" d="M 310 180 L 310 250"/>
+  <polygon points="305,248 310,258 315,248" fill="#B85A3A"/>
+  <rect class="box-opus" x="170" y="258" width="280" height="76" rx="10"/>
+  <text class="label" x="190" y="288">命中：网络安全 / 生物 / 化学 / 蒸馏</text>
+  <text class="small" x="190" y="312">即拦下回应，降级交给 Claude Opus 4.8</text>
+  <rect class="box" x="470" y="268" width="120" height="56" rx="8" fill="#EFE7D8" stroke="none"/>
+  <text class="pct-r" x="530" y="304" text-anchor="middle">&lt;5%</text>
+  <text class="small" x="530" y="320" text-anchor="middle">触发率</text>
+
+  <!-- 三个新状态 -->
+  <text class="label" x="40" y="384">开发者必须写代码处理的三个新状态</text>
+  <rect class="box" x="40" y="398" width="232" height="92" rx="10"/>
+  <text class="state-num" x="58" y="426">1 拒答</text>
+  <text class="small" x="58" y="450">返回 HTTP 200 + 不是报错</text>
+  <text class="mono" x="58" y="472">stop_reason: "refusal"</text>
+
+  <rect class="box" x="284" y="398" width="232" height="92" rx="10"/>
+  <text class="state-num" x="302" y="426">2 静默降级</text>
+  <text class="small" x="302" y="450">高风险话题换成 Opus 4.8</text>
+  <text class="small" x="302" y="472">你付 Fable 价，拿 Opus 答</text>
+
+  <rect class="box" x="528" y="398" width="232" height="92" rx="10"/>
+  <text class="state-num" x="546" y="426">3 重试退费</text>
+  <text class="small" x="546" y="450">拒答在出内容前发生，不计费</text>
+  <text class="small" x="546" y="472">重试走 fallback credit 退缓存</text>
+</svg>

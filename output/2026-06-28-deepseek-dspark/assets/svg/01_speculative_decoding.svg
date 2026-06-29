@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #6A5F4D; }
+    .h2 { font: 600 16px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .label { font: 500 14px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #9A8F7C; }
+    .box-draft { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 2; }
+    .box-verify { fill: #FBEFE9; stroke: #B85A3A; stroke-width: 2; }
+    .tok { fill: #F7F1E8; stroke: #C9BEA8; stroke-width: 1.5; }
+    .tok-ok { fill: #EAD9CF; stroke: #B85A3A; stroke-width: 1.5; }
+    .tok-bad { fill: #FFFFFF; stroke: #C9BEA8; stroke-width: 1.5; stroke-dasharray: 4 3; }
+    .tok-t { font: 600 18px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .tok-t-bad { font: 600 18px 'PingFang SC', Inter, sans-serif; fill: #BBB1A0; }
+    .accent { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+  </style>
+  <rect class="bg" width="800" height="520"/>
+
+  <text class="h1" x="40" y="44">推测解码：小模型先猜，大模型批量验</text>
+  <text class="desc" x="40" y="68">瓶颈在于大模型一个字一个字往外蹦。让快的先猜一批，慢的一次性查完，就省下了等待</text>
+
+  <!-- Step 1: draft model guesses -->
+  <rect class="box-draft" x="40" y="100" width="720" height="120" rx="12"/>
+  <text class="h2" x="60" y="130">第一步 · 草稿模型一口气猜 5 个字</text>
+  <text class="small" x="60" y="152">又小又快，先蒙出后面好几个字</text>
+
+  <rect class="tok" x="430" y="120" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="450" y="156">推</text>
+  <rect class="tok" x="498" y="120" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="518" y="156">测</text>
+  <rect class="tok" x="566" y="120" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="586" y="156">解</text>
+  <rect class="tok" x="634" y="120" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="654" y="156">码</text>
+  <rect class="tok" x="702" y="120" width="40" height="58" rx="8"/>
+  <text class="tok-t" x="710" y="156">的</text>
+
+  <!-- arrow down -->
+  <line x1="400" y1="226" x2="400" y2="262" stroke="#B85A3A" stroke-width="3"/>
+  <polygon points="394,258 400,272 406,258" fill="#B85A3A"/>
+
+  <!-- Step 2: verify model checks all at once -->
+  <rect class="box-verify" x="40" y="280" width="720" height="130" rx="12"/>
+  <text class="h2" x="60" y="312">第二步 · 正式模型一次性批量检查这 5 个字</text>
+  <text class="small" x="60" y="334">又大又准。检查一批和生成一个，花的力气差不多</text>
+
+  <rect class="tok-ok" x="430" y="300" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="450" y="336">推</text>
+  <rect class="tok-ok" x="498" y="300" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="518" y="336">测</text>
+  <rect class="tok-ok" x="566" y="300" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="586" y="336">解</text>
+  <rect class="tok-ok" x="634" y="300" width="58" height="58" rx="8"/>
+  <text class="tok-t" x="654" y="336">码</text>
+  <rect class="tok-bad" x="702" y="300" width="40" height="58" rx="8"/>
+  <text class="tok-t-bad" x="710" y="336">的</text>
+
+  <text class="accent" x="430" y="384">收下对的 4 个</text>
+  <text class="small" x="600" y="384">最后那个错，掐掉重来</text>
+
+  <!-- bottom takeaway -->
+  <text class="accent" x="40" y="456">一份成本换回 4 个字 —— 草稿越常猜对，省得越多</text>
+  <text class="desc" x="40" y="484">数学可证：最终吐出来的内容和不用这招时一模一样，省的是算力，不是精度</text>
+</svg>

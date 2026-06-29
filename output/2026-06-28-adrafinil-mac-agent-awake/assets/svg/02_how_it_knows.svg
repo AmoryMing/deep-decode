@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .h1 { font: 700 22px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .desc { font: 400 14px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .label { font: 600 15px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .small { font: 400 12px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .code { font: 600 13px Inter, monospace; fill: #B85A3A; }
+    .box { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 2; }
+    .box-accent { fill: #FBF0EA; stroke: #B85A3A; stroke-width: 2; }
+    .daemon { fill: #2A241B; }
+    .way-main { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .way-side { font: 700 15px 'PingFang SC', Inter, sans-serif; fill: #6B5E4A; }
+    .arrow { stroke: #B85A3A; stroke-width: 2.5; fill: none; }
+    .arrow-grey { stroke: #9A8C74; stroke-width: 2; fill: none; stroke-dasharray: 5 4; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+
+  <text class="h1" x="40" y="44">它怎么知道 agent 在干活：一精一糙两条路</text>
+  <text class="desc" x="40" y="70">精的靠 agent 主动报告，糙的靠系统从外面观察，合起来兜住覆盖面</text>
+
+  <!-- 主路：hook -->
+  <rect class="box-accent" x="40" y="100" width="380" height="200" rx="12"/>
+  <text class="way-main" x="60" y="132">主路 · hook（agent 主动报告）</text>
+  <text class="small" x="60" y="156">接进 9 个 agent：Claude Code / Codex / Cursor 等</text>
+
+  <rect class="box" x="60" y="172" width="160" height="44" rx="6"/>
+  <text class="label" x="76" y="190" style="font:600 13px 'PingFang SC',Inter">提交提示</text>
+  <text class="code" x="76" y="208">acquire</text>
+  <rect class="box" x="60" y="226" width="160" height="44" rx="6"/>
+  <text class="label" x="76" y="244" style="font:600 13px 'PingFang SC',Inter">这一轮停了</text>
+  <text class="code" x="76" y="262">release</text>
+
+  <text class="small" x="244" y="190">引用计数</text>
+  <text class="small" x="244" y="212" fill="#B85A3A">大于零，就阻止睡眠</text>
+  <text class="small" x="244" y="234" fill="#9A8C74">归零，就放手</text>
+  <text class="small" x="244" y="270">往返 daemon 压在 50 毫秒内</text>
+
+  <!-- 备路：进程嗅探 -->
+  <rect class="box" x="40" y="320" width="380" height="140" rx="12"/>
+  <text class="way-side" x="60" y="352">备路 · 进程嗅探（系统在外面看）</text>
+  <text class="small" x="60" y="378">daemon 直接盯有没有已知 agent 二进制在跑</text>
+  <text class="small" x="60" y="402" fill="#B85A3A">优点：不接 hook、不支持 hook 的也能兜住</text>
+  <text class="small" x="60" y="426" fill="#9A8C74">代价：只看到"进程在不在"，看不到"忙不忙"</text>
+
+  <!-- 右侧 daemon + 结论 -->
+  <rect class="daemon" x="470" y="180" width="280" height="130" rx="12"/>
+  <text x="610" y="222" text-anchor="middle" style="font:700 18px 'PingFang SC',Inter" fill="#F7F1E8">daemon（常驻进程）</text>
+  <text x="610" y="252" text-anchor="middle" style="font:400 13px 'PingFang SC',Inter" fill="#D9CFBE">按 session key 做引用计数</text>
+  <text x="610" y="282" text-anchor="middle" style="font:600 14px 'PingFang SC',Inter" fill="#B85A3A">计数 &gt; 0 才阻止睡眠</text>
+
+  <path class="arrow" d="M 420 220 L 466 230"/>
+  <path class="arrow-grey" d="M 420 360 Q 460 320 466 268"/>
+
+  <rect class="box-accent" x="470" y="340" width="280" height="120" rx="12"/>
+  <text class="label" x="490" y="372">为什么这是 agent 时代特有</text>
+  <text class="small" x="490" y="398">十年前只能从外部猜：嗅探进程、读日志</text>
+  <text class="small" x="490" y="422">这代 agent 把生命周期事件做成可挂的钩子</text>
+  <text class="small" x="490" y="446" fill="#B85A3A">等于主动把内部状态喂出来</text>
+</svg>

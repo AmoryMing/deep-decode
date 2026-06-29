@@ -1,0 +1,59 @@
+{
+  "model": "deepseek-chat",
+  "sections": 9,
+  "polished": 7,
+  "unchanged": 2,
+  "skipped": 0,
+  "rejected_unsafe": 0,
+  "errors": 0,
+  "chars_before": 6840,
+  "chars_after": 6811,
+  "verdict": "ok",
+  "detail": [
+    {
+      "section": 0,
+      "prose_chars": 549,
+      "status": "polished"
+    },
+    {
+      "section": 1,
+      "prose_chars": 694,
+      "status": "polished"
+    },
+    {
+      "section": 2,
+      "prose_chars": 543,
+      "status": "polished"
+    },
+    {
+      "section": 3,
+      "prose_chars": 591,
+      "status": "unchanged"
+    },
+    {
+      "section": 4,
+      "prose_chars": 652,
+      "status": "polished"
+    },
+    {
+      "section": 5,
+      "prose_chars": 506,
+      "status": "polished"
+    },
+    {
+      "section": 6,
+      "prose_chars": 626,
+      "status": "polished"
+    },
+    {
+      "section": 7,
+      "prose_chars": 1075,
+      "status": "polished"
+    },
+    {
+      "section": 8,
+      "prose_chars": 860,
+      "status": "unchanged"
+    }
+  ]
+}

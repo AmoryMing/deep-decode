@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="460" viewBox="0 0 800 460">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .ink { fill: #2A241B; }
+    .title { font: 700 26px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .sub { font: 400 15px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .qbox { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1.5; }
+    .qbox-a { fill: #FFFFFF; stroke: #B85A3A; stroke-width: 2.5; }
+    .qlabel { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+    .qtext { font: 700 21px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .qtext-a { font: 700 21px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .arrow { stroke: #B85A3A; stroke-width: 3; fill: none; }
+    .arrowhead { fill: #B85A3A; }
+    .cite { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A7C66; }
+  </style>
+  <rect class="bg" width="800" height="460"/>
+
+  <text class="title" x="48" y="58">权限系统问的问题，换了</text>
+  <text class="sub" x="48" y="84">智能体身份带来的根本转变 —— Noah Zweben, Anthropic</text>
+
+  <!-- 旧问题 -->
+  <g>
+    <rect class="qbox" x="48" y="138" width="300" height="150" rx="14"/>
+    <text class="qlabel" x="72" y="178">过去 · 以人为单位</text>
+    <text class="qtext" x="72" y="222">这个用户</text>
+    <text class="qtext" x="72" y="254">能干什么？</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line class="arrow" x1="368" y1="213" x2="438" y2="213"/>
+  <polygon class="arrowhead" points="438,205 458,213 438,221"/>
+
+  <!-- 新问题 -->
+  <g>
+    <rect class="qbox-a" x="472" y="138" width="300" height="150" rx="14"/>
+    <text class="qlabel" x="496" y="178">现在 · 以智能体为单位</text>
+    <text class="qtext-a" x="496" y="222">这个智能体在</text>
+    <text class="qtext-a" x="496" y="254">这个隔间里能干什么？</text>
+  </g>
+
+  <!-- 底部一句话总结条 -->
+  <rect x="48" y="332" width="724" height="84" rx="12" fill="#2A241B"/>
+  <text x="72" y="372" font="600 17px 'PingFang SC', Inter, sans-serif" fill="#F7F1E8">第一次，权限清单上多出一类成员</text>
+  <text class="cite" x="72" y="398" fill="#D9CFBE">既不是人，也不是普通脚本 —— 一个有工号的非人账号</text>
+</svg>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <style>
+    .bg { fill: #F7F1E8; }
+    .tag-bg { fill: #B85A3A; }
+    .tag { font: 600 14px 'PingFang SC', Inter, sans-serif; fill: #F7F1E8; }
+    .title { font: 800 48px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .title2 { font: 800 40px 'PingFang SC', Inter, sans-serif; fill: #B85A3A; }
+    .subtitle { font: 500 19px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .footer { font: 400 13px 'PingFang SC', Inter, sans-serif; fill: #8A8170; }
+    .chip { font: 500 13px 'PingFang SC', Inter, sans-serif; fill: #2A241B; }
+    .chip-bg { fill: #FFFFFF; stroke: #D9CFBE; stroke-width: 1; }
+  </style>
+  <rect class="bg" width="800" height="500"/>
+  <rect x="0" y="0" width="10" height="500" fill="#B85A3A"/>
+
+  <rect class="tag-bg" x="48" y="48" width="172" height="30" rx="5"/>
+  <text class="tag" x="64" y="68">AI 工具深度拆解</text>
+
+  <text class="title" x="48" y="160">开源的是壳，</text>
+  <text class="title2" x="48" y="216">干活的还是别人的大脑</text>
+
+  <text class="subtitle" x="48" y="278">OpenKnowledge：把笔记本拆开重做，</text>
+  <text class="subtitle" x="48" y="306">让 AI 能直接读、直接改整套知识库</text>
+
+  <!-- 三个关键 chip -->
+  <rect class="chip-bg" x="48" y="350" width="200" height="44" rx="8"/>
+  <text class="chip" x="68" y="377">纯文本当真相</text>
+  <rect class="chip-bg" x="262" y="350" width="200" height="44" rx="8"/>
+  <text class="chip" x="282" y="377">git 做版本</text>
+  <rect class="chip-bg" x="476" y="350" width="276" height="44" rx="8"/>
+  <text class="chip" x="496" y="377">MCP 当 agent 进出口</text>
+
+  <text class="footer" x="48" y="448">inkeep/open-knowledge · 2026-06 开源 · GPL-3.0 · "Notion 撞上 VSCode"</text>
+  <text class="footer" x="48" y="470">一句话判断：AI 是嫁接在人的数据上，还是数据本身就为 agent 而生</text>
+</svg>
